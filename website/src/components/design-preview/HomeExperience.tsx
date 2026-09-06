@@ -42,14 +42,6 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
         <a className={styles.scrollCue} href="#home-services">Explore what we build <ArrowDown size={13} /></a>
       </section>
       <div className={contentStyles.legacy}><TrustStrip /></div>
-      <section id="home-services" className={contentStyles.serviceIntro} data-home-reveal>
-        <p className={styles.eyebrow}>Services</p><h2>What we can build for you</h2>
-        <p>From a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.</p>
-        <Link className={`${styles.primaryButton} action-control action-primary`} href="/services">Explore all services <ArrowUpRight size={15} /></Link>
-      </section>
-      <ServiceJourney services={content.services} />
-      <div className={contentStyles.legacy}><PlatformsShowcase /><FeaturedProjects projects={content.projects} /></div>
-      <DeliveryProcess />
       {benefits.length > 0 && <section className={`${styles.section} ${styles.benefitsSection}`} id="included">
         <Reveal><div className={styles.centerHeading}>
           <p className={styles.eyebrow}>Launch Benefits</p><h2>What&apos;s included with every project</h2>
@@ -65,6 +57,14 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
           </Reveal>)}
         </div>
       </section>}
+      <section id="home-services" className={contentStyles.serviceIntro} data-home-reveal>
+        <p className={styles.eyebrow}>Services</p><h2>What we can build for you</h2>
+        <p>From a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.</p>
+        <Link className={`${styles.primaryButton} action-control action-primary`} href="/services">Explore all services <ArrowUpRight size={15} /></Link>
+      </section>
+      <ServiceJourney services={content.services} />
+      <div className={contentStyles.legacy}><PlatformsShowcase /><FeaturedProjects projects={content.projects} /></div>
+      <DeliveryProcess />
       <section className={styles.ownership} data-scroll-scene data-nav-theme="dark">
         <OwnershipOrbit />
         <Reveal><div className={styles.ownershipCopy}><p className={styles.eyebrow}>One team, every platform</p><h2>You own your software.<br />We help it grow.</h2><p>Source code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.</p><Link className={`${styles.primaryButton} action-control action-primary`} href="/services">Explore all services <ArrowUpRight size={15} /></Link></div></Reveal>
