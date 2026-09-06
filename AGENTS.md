@@ -29,6 +29,15 @@ to a Supabase project. Apply them in the Supabase SQL editor or via `supabase db
 ## Preview origin
 Next.js `allowedDevOrigins` is derived from `BASE44_PUBLIC_HOST_SUFFIX` in
 `website/next.config.ts` so the preview proxy can access dev assets and HMR.
+- The embedded preview cannot render with `X-Frame-Options: DENY` or CSP
+  `frame-ancestors 'none'`. These are omitted ONLY in development with the Base44
+  suffix present; production and ordinary local development keep both protections.
+  `src/lib/preview-security.test.ts` covers all four mode/suffix combinations.
+- Compose restarts the web service unless explicitly stopped. The managed env file
+  is optional and last, so public fallback pages boot without external credentials
+  and any later dashboard-provided credentials reach the process.
+- No external credentials were provided during the preview repair. Successful
+  form persistence, email delivery, and authenticated operations remain unverified.
 
 ## Key files
 - `website/src/lib/env.ts` — public env parsing (returns null when Supabase unset)
@@ -48,5 +57,5 @@ Next.js `allowedDevOrigins` is derived from `BASE44_PUBLIC_HOST_SUFFIX` in
 - `SceneMotion` uses one idle-when-settled loop for visible decorative scenes and adapts navigation contrast over dark sections. `SurfaceMotion` only tilts fine-pointer, non-form cards; admin controls, forms, dialogs and touch inputs remain level. Both clean up listeners and frames.
 - `ScrollJourney` uses native scrolling with an eased horizontal track and panel rotation above 700px. Mobile, reduced-motion and no-JS stack the scenes. Delivery stages also follow native scroll on large/tall screens only; all five buttons and the no-JS description list remain available.
 - Native dialog close events can be queued during React Strict Mode cleanup. The portal ignores stale close events when its dialog has already reopened; keep this guard.
-- `npm run typecheck` and `npm run test` (106 tests) run in the web container. With Chromium installed, `node scripts/verify-presentation.mjs` checks three repeat-scroll visits, native-wheel panels, five delivery buttons, pointer tilt, links, accordion, theme persistence, menus, 16 extra routes, reduced motion and no-JS at desktop/tablet/mobile. It is read-only and never signs in or writes records. Optional `APP_URL` and `SCREENSHOT_DIR` configure it.
+- `npm run typecheck` and `npm run test` (112 tests) run in the web container. With Chromium installed, `node scripts/verify-presentation.mjs` checks three repeat-scroll visits, native-wheel panels, five delivery buttons, pointer tilt, links, accordion, theme persistence, menus, 16 extra routes, reduced motion and no-JS at desktop/tablet/mobile. It is read-only and never signs in or writes records. Optional `APP_URL` and `SCREENSHOT_DIR` configure it.
 - Wait for newly entered finite animations after scrolling before screenshots; disabling animations before the entry observer fires can capture a mid-reveal frame. Authenticated CMS editing, uploads and successful remote form submissions remain unverified without configured Supabase/staff access.

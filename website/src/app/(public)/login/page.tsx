@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { AuthCard } from "@/components/portal/AuthCard";
+import { LoginExperience } from "@/components/portal/LoginExperience";
 import { ClientLoginForm } from "@/components/portal/AuthForms";
 import { getCurrentUser } from "@/lib/auth/session";
 import { isSupabaseConfigured } from "@/lib/env";
@@ -28,11 +28,7 @@ export default async function ClientLoginPage({
       : params.error;
 
   return (
-    <AuthCard
-      eyebrow="Client portal"
-      title="Welcome back"
-      description="Sign in to manage your profile, requests, project access and verified reviews."
-    >
+    <LoginExperience>
       <ClientLoginForm
         nextPath={nextPath}
         error={error}
@@ -42,6 +38,6 @@ export default async function ClientLoginPage({
             : undefined
         }
       />
-    </AuthCard>
+    </LoginExperience>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, User } from "lucide-react";
-import { cn } from "@/lib/utils/cn";
+import navStyles from "./navigation.module.css";
 import { NAV_LINKS } from "@/lib/navigation";
 import { BRAND } from "@/lib/seo/site";
 import { Button } from "@/components/ui/Button";
@@ -125,12 +125,7 @@ export function MarketingHeader({
                     <Link
                       href={link.href}
                       aria-current={active ? "page" : undefined}
-                      className={cn(
-                        "relative whitespace-nowrap rounded-full border border-transparent px-2.5 py-1.5 text-[13px] font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-200 ease-soft focus-ring xl:px-3.5",
-                        active
-                          ? "border-brand-100 bg-gradient-to-b from-surface to-brand-50 font-semibold text-brand-700 shadow-[0_3px_10px_rgb(37_87_232/0.12),inset_0_1px_0_rgb(255_255_255/0.9)] dark:border-brand-200 dark:from-brand-100 dark:to-brand-50 dark:text-brand-400 dark:shadow-[inset_0_1px_0_rgb(255_255_255/0.06)]"
-                          : "text-ink-muted hover:-translate-y-px hover:border-line hover:bg-canvas-raised hover:text-ink hover:shadow-xs",
-                      )}
+                      className={`${navStyles.link} focus-ring`}
                     >
                       {link.label}
                     </Link>

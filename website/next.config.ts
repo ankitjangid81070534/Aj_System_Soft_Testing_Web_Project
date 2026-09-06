@@ -65,6 +65,9 @@ const adsenseConnectOrigins = [
   "https://*.adtrafficquality.google",
 ].join(" ");
 const isDevelopment = process.env.NODE_ENV !== "production";
+// Only the sandbox's development server may be embedded in the preview.
+// Production and ordinary local development retain clickjacking protection.
+const isBase44Preview = isDevelopment && Boolean(process.env.BASE44_PUBLIC_HOST_SUFFIX);
 
 const csp = [
   "default-src 'self'",
@@ -81,7 +84,7 @@ const csp = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
-  "frame-ancestors 'none'",
+  ...(isBase44Preview ? [] : ["frame-ancestors 'none'"]),
   ...(isDevelopment ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
@@ -89,7 +92,7 @@ const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  { key: "X-Frame-Options", value: "DENY" },
+  ...(isBase44Preview ? [] : [{ key: "X-Frame-Options", value: "DENY" }]),
   ...(isDevelopment
     ? []
     : [
