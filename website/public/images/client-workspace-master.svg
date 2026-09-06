@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="3000" viewBox="0 0 800 1000" fill="none">
+  <title>Connected software workspace</title>
+  <desc>Original dimensional software illustration: a porcelain code console, violet AI core, coral analytics, cyan cloud and emerald security connected above a bright sculptural platform.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="90" y1="0" x2="710" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#FAFAFF"/><stop offset=".5" stop-color="#F3F2FB"/><stop offset="1" stop-color="#E9EDF7"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="shadow"><stop stop-color="#343C6F" stop-opacity=".22"/><stop offset="1" stop-color="#343C6F" stop-opacity="0"/></radialGradient>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".52" stop-color="#FCFDFF"/><stop offset="1" stop-color="#DEE4F4"/></linearGradient>
+    <linearGradient id="edge"><stop stop-color="#CFD6EB"/><stop offset=".48" stop-color="#F3F6FF"/><stop offset="1" stop-color="#B4C0DD"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#83B4FF"/><stop offset=".42" stop-color="#387CF3"/><stop offset="1" stop-color="#244FC1"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4B5FF"/><stop offset=".45" stop-color="#9D71ED"/><stop offset="1" stop-color="#6540C0"/></linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFC5B2"/><stop offset=".48" stop-color="#F4878F"/><stop offset="1" stop-color="#D75C7C"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#BCF5F7"/><stop offset=".5" stop-color="#67CEE3"/><stop offset="1" stop-color="#3296C0"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A9F1D0"/><stop offset=".5" stop-color="#54C6A1"/><stop offset="1" stop-color="#209477"/></linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0B3"/><stop offset=".45" stop-color="#F5C265"/><stop offset="1" stop-color="#D99636"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8FAFF"/><stop offset="1" stop-color="#E8EEFF"/></linearGradient>
+  </defs>
+  <path fill="url(#canvas)" d="M0 0h800v1000H0z"/>
+  <ellipse cx="380" cy="300" rx="470" ry="470" fill="url(#light)"/>
+  <path d="M-50 710Q370 440 865 750M-50 780Q370 510 865 820" stroke="#FFF" stroke-width="2" opacity=".6"/>
+  <ellipse cx="404" cy="845" rx="330" ry="102" fill="url(#shadow)"/>
+  <!-- Sculpted pedestal, with separate upper and side planes. -->
+  <path d="M139 735Q139 712 164 700L375 596Q400 584 426 596L645 700Q669 712 669 735V762Q669 780 646 792L427 899Q403 911 378 899L162 794Q139 784 139 765Z" fill="url(#edge)"/>
+  <path d="M154 717 377 608Q400 597 423 608L651 717Q675 729 650 742L427 853Q403 865 378 853L155 744Q128 731 154 717Z" fill="url(#porcelain)" stroke="#FFF" stroke-width="3"/>
+  <path d="m190 732 196 96q16 8 34 0l193-97" stroke="#C5D0E9" stroke-width="2"/>
+  <ellipse cx="410" cy="741" rx="195" ry="55" fill="url(#shadow)"/>
+  <!-- Quiet connecting paths; every node has a distinct semantic color. -->
+  <g stroke-width="4" stroke-linecap="round"><path d="M188 520v99q0 18 18 27l106 49" stroke="#C5B0EC"/><path d="M592 554v83q0 18-20 27l-112 55" stroke="#A3D7D9"/><path d="M613 355v79" stroke="#E5BED0"/></g>
+  <!-- The central console: thick porcelain housing and a clean inset screen. -->
+  <g transform="translate(263 384) rotate(-8 143 157)">
+    <path d="M24 12h244q28 0 28 28v235q0 28-28 28H24q-24 0-24-28V40q0-28 24-28Z" fill="#A8B6D8"/>
+    <rect x="-8" width="296" height="291" rx="27" fill="url(#porcelain)" stroke="#FFF" stroke-width="3"/>
+    <rect x="11" y="19" width="258" height="217" rx="16" fill="url(#screen)" stroke="#D8E0F5" stroke-width="2"/>
+    <path d="M12 60h256" stroke="#D5DEF3" stroke-width="2"/>
+    <circle cx="31" cy="39" r="5" fill="#F099A7"/><circle cx="49" cy="39" r="5" fill="#ECC375"/><circle cx="67" cy="39" r="5" fill="#75CBB0"/>
+    <rect x="32" y="80" width="103" height="129" rx="14" fill="url(#blue)"/>
+    <path d="m65 124-15 15 15 15m36-30 15 15-15 15m-16-38-9 46" stroke="#FFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke-linecap="round" stroke-width="7"><path d="M157 94h76" stroke="#A29ADF"/><path d="M157 115h45" stroke="#C1CBE0"/><path d="M157 145h61" stroke="#9DCEDB"/><path d="M157 166h42" stroke="#C1CBE0"/><path d="M157 195h67" stroke="#E6B292"/></g>
+    <rect x="106" y="254" width="71" height="6" rx="3" fill="#BAC7E2"/>
+    <circle cx="255" cy="257" r="4" fill="#66CBB4"/>
+  </g>
+  <!-- Floating AI core. Rounded side planes produce depth without fuzzy icons. -->
+  <g transform="translate(125 280) rotate(-12 82 90)">
+    <rect x="5" y="11" width="160" height="170" rx="38" fill="#7951BC"/>
+    <rect width="160" height="170" rx="38" fill="url(#violet)" stroke="#E7D6FF" stroke-width="3"/>
+    <rect x="18" y="18" width="124" height="134" rx="26" stroke="#FFF" stroke-opacity=".32" stroke-width="2"/>
+    <path d="m80 47 10 27 28 11-28 10-10 28-10-28-28-10 28-11Z" fill="#FFF"/>
+    <circle cx="123" cy="46" r="6" fill="#F5D2FF"/>
+  </g>
+  <!-- Coral analytics module. -->
+  <g transform="translate(508 232) rotate(12 83 78)">
+    <rect x="5" y="9" width="166" height="153" rx="32" fill="#C45D80"/>
+    <rect width="166" height="153" rx="32" fill="url(#coral)" stroke="#FFDFD4" stroke-width="3"/>
+    <rect x="35" y="84" width="20" height="35" rx="7" fill="#FFF" fill-opacity=".9"/><rect x="74" y="61" width="20" height="58" rx="7" fill="#FFF" fill-opacity=".95"/><rect x="112" y="34" width="20" height="85" rx="7" fill="#FFF"/>
+  </g>
+  <!-- Cloud module. -->
+  <g transform="translate(544 451) rotate(9 84 76)">
+    <rect x="4" y="10" width="151" height="143" rx="38" fill="#479DBD"/>
+    <rect width="151" height="143" rx="38" fill="url(#cyan)" stroke="#D8FDFF" stroke-width="3"/>
+    <path d="M47 94a20 20 0 0 1-4-39 30 30 0 0 1 57-3 22 22 0 1 1 7 42Z" fill="#FFF"/>
+  </g>
+  <!-- Emerald security module. -->
+  <g transform="translate(125 590) rotate(-14 64 70)">
+    <rect x="4" y="9" width="137" height="143" rx="32" fill="#288C76"/>
+    <rect width="137" height="143" rx="32" fill="url(#green)" stroke="#CFFFE4" stroke-width="3"/>
+    <path d="m69 31 30 12v28q0 27-30 43Q39 98 39 71V43Z" stroke="#FFF" stroke-width="5" stroke-linejoin="round"/>
+    <path d="m54 71 11 11 21-24" stroke="#FFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Small amber object and porcelain orbit: restrained detail, no brand marks. -->
+  <g transform="translate(355 209) rotate(17)"><rect x="3" y="6" width="58" height="60" rx="16" fill="#CEA048"/><rect width="58" height="60" rx="16" fill="url(#amber)" stroke="#FFF0C9" stroke-width="2"/><path d="M19 30h20M29 20v20" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></g>
+  <circle cx="598" cy="739" r="32" fill="url(#violet)"/><circle cx="589" cy="729" r="8" fill="#FFF" fill-opacity=".36"/>
+  <circle cx="165" cy="218" r="10" fill="url(#coral)"/><circle cx="644" cy="173" r="6" fill="url(#cyan)"/>
+  <circle cx="283" cy="794" r="8" fill="url(#amber)"/>
+  <path d="M430 167v12m-6-6h12M97 488v12m-6-6h12M674 652v12m-6-6h12" stroke="#B5B4D9" stroke-width="2" stroke-linecap="round"/>
+</svg>

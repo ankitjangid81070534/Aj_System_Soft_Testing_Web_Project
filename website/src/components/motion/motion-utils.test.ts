@@ -22,8 +22,14 @@ describe("presentation motion safety", () => {
       expect(end.opacity).toBe(1); expect(end.transform).toContain("translate3d(0,0,0)");
     }
   });
-  it("reduces perspective/lift on compact screens", () => {
-    expect(revealFrames("fan", true)[0].transform).toContain("23px");
-    expect(revealFrames("fan", false)[0].transform).toContain("42px");
+  it("uses smaller, level entrances on compact screens", () => {
+    expect(revealFrames("fan", true)[0].transform).toContain("10px");
+    expect(revealFrames("fan", false)[0].transform).toContain("20px");
+    for (const variant of [undefined, "fan", "word"]) {
+      for (const frame of revealFrames(variant, false)) {
+        expect(frame.filter).toBeUndefined();
+        expect(frame.transform).not.toMatch(/scale|rotate|perspective/);
+      }
+    }
   });
 });

@@ -10,11 +10,11 @@ export function revealFrames(variant: string | undefined, compact: boolean): Key
     { opacity: 1, transform: "translate3d(0,0,0) scale(1) rotateY(0) rotateZ(0)" },
   ];
   if (variant === "word") return [
-    { opacity: 0, transform: "translate3d(0,.35em,0) rotateX(-12deg)", filter: "blur(5px)" },
-    { opacity: 1, transform: "translate3d(0,0,0) rotateX(0)", filter: "blur(0)" },
+    { opacity: 0.01, transform: "translate3d(0,.25em,0)" },
+    { opacity: 1, transform: "translate3d(0,0,0)" },
   ];
   return [
-    { opacity: 0, transform: `perspective(1100px) translate3d(${variant === "fan" ? "-18px" : "0"},${compact ? 23 : 42}px,0) rotateX(${compact ? 4 : 8}deg) rotateY(${variant === "fan" ? -12 : 0}deg) scale(.96)` },
-    { opacity: 1, transform: "perspective(1100px) translate3d(0,0,0) rotateX(0) rotateY(0) scale(1)" },
+    { opacity: 0.01, transform: `translate3d(${variant === "fan" && !compact ? "-8px" : "0"},${compact ? 10 : 20}px,0)` },
+    { opacity: 1, transform: "translate3d(0,0,0)" },
   ];
 }

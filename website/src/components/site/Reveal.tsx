@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/cn";
 
 /**
  * Scroll-reveal wrapper with zero hydration cost. The shared observer adds
- * an entry animation on every visit, rearmed after a full viewport exit.
+ * one entry animation per mounted element; later visits remain fully visible.
  *
  * Content is visible by default: without JavaScript, before hydration, for
  * crawlers, for reduced-motion users and in print nothing is ever hidden.

@@ -19,7 +19,7 @@ export function SurfaceMotion() {
     };
     const move = (event: PointerEvent) => {
       if (!media.matches || event.pointerType === "touch" || !(event.target instanceof Element)) return;
-      const next = event.target.closest<HTMLElement>(".card-3d, [data-tilt='on']");
+      const next = event.target.closest<HTMLElement>("[data-tilt='on']");
       if (!next || next.dataset.tilt === "off" || next.closest("dialog, [data-admin-ui]") || next.querySelector("form, input, textarea, select, table")) { reset(); return; }
       if (next !== card) { reset(); card = next; }
       point = { x: event.clientX, y: event.clientY };

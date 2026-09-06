@@ -11,7 +11,14 @@ export function LoginSurface({ children, headingId, modal = false }: { children:
   return (
     <div className={styles.card}>
       <div className={styles.art} aria-hidden="true">
-        <Image src="/images/login-sculpture.webp" alt="" fill sizes="(max-width: 700px) 90vw, 48vw" priority />
+        <Image
+          src="/images/client-workspace.webp"
+          alt=""
+          fill
+          sizes="(max-width: 700px) calc(100vw - 62px), (max-width: 1148px) calc(52vw - 64px), 535px"
+          priority={!modal}
+          loading={modal ? "eager" : undefined}
+        />
       </div>
       <div className={styles.panel}>
         <Link href="/" className={`${styles.brand} focus-ring`}>

@@ -42,7 +42,7 @@ export function TrustStrip() {
               <div className="group flex items-start gap-3.5">
                 <span
                   aria-hidden="true"
-                  className={`mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-4px_var(--glow)] transition-transform duration-300 ease-spring group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:-rotate-3 ${tone}`}
+                  className={`mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-4px_var(--glow)] transition-transform duration-300 ease-spring ${tone}`}
                   style={{ "--glow": glow } as React.CSSProperties}
                 >
                   <Icon className="h-[18px] w-[18px]" />

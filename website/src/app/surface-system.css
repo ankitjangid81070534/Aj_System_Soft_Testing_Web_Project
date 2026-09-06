@@ -20,7 +20,7 @@
 .card-3d::after { background: radial-gradient(450px circle at var(--mx,50%) var(--my,0%), #49b6c420, transparent 65%); }
 @media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
   .card-3d:not([data-tilt="off"]):not(:has(form,input,textarea,select,table)):hover {
-    transform: perspective(1100px) translate3d(0,-6px,0) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));
+    transform: translateY(-4px);
     box-shadow: var(--shadow-sculpted-hover); border-color: var(--color-brand-200);
   }
 }

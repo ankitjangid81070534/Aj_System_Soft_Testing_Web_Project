@@ -57,7 +57,7 @@ export function WhyUs() {
             <article className="group card-3d flex h-full flex-col gap-4 rounded-[1.375rem] p-6">
               <span
                 aria-hidden="true"
-                className={`relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-2px_4px_rgba(0,0,0,0.15),0_10px_22px_-6px_var(--glow)] transition-transform duration-300 ease-spring group-hover:-translate-y-1 group-hover:scale-105 group-hover:-rotate-3 ${tone}`}
+                className={`relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-2px_4px_rgba(0,0,0,0.15),0_10px_22px_-6px_var(--glow)] transition-transform duration-300 ease-spring group-hover:-translate-y-1 ${tone}`}
                 style={{ "--glow": glow } as React.CSSProperties}
               >
                 <Icon className="h-5 w-5" />
