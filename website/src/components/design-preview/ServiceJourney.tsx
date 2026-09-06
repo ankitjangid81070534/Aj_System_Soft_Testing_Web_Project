@@ -1,0 +1,40 @@
+import Link from "next/link";
+import { ArrowUpRight, Code2, Layers3 } from "lucide-react";
+import type { ServiceTeaser } from "@/lib/data/mappers";
+import styles from "./reference.module.css";
+
+export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
+  if (!services.length) return null;
+  const groups = [services.slice(0, 2), services.slice(2, 4), services.slice(4)].filter(group => group.length);
+  return (
+    <section className={styles.journey} id="capabilities" aria-label="What we can build for you">
+      <div className={styles.journeyStage}>
+        <div className={styles.journeyTrack} style={{ "--scene-count": groups.length } as React.CSSProperties}>
+          {groups.map((group, index) => (
+            <div className={styles.journeyScene} key={group[0].id}>
+              <span className={styles.sceneWord} aria-hidden="true">{["Build.", "Connect.", "Grow."][index]}</span>
+              <div className={styles.sceneInner}>
+                <div className={styles.productCard}>
+                  <div className={styles.productTop}><span><Code2 size={15} /> AJS Technology</span><i /></div>
+                  <div className={styles.productSymbol}><Layers3 size={58} strokeWidth={1} /></div>
+                  <h3>{group[0].name}</h3>
+                  <p>{group[0].category}</p>
+                  <div className={styles.codeLines} aria-hidden="true"><i /><i /><i /><i /></div>
+                  <Link href={`/services/${group[0].slug}`}>Learn more <ArrowUpRight size={15} /></Link>
+                </div>
+                <div className={styles.sceneCopy}>
+                  <p className={styles.eyebrow}>What we can build for you</p>
+                  {group.map(service => <div key={service.id}>
+                    <h2>{service.name}</h2><p>{service.shortDescription}</p>
+                    <Link href={`/services/${service.slug}`} className={styles.textLink}>Explore service <ArrowUpRight size={15} /></Link>
+                  </div>)}
+                </div>
+              </div>
+              <span className={styles.sceneIndex}>0{index + 1} / 0{groups.length}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
