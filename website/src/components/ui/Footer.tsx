@@ -5,6 +5,8 @@ import { BRAND } from "@/lib/seo/site";
 import type { SiteSettings } from "@/lib/data/settings";
 import type { PublicNavLink } from "@/lib/data/navigation";
 import styles from "./footer.module.css";
+import { SocialLinks } from "./SocialLinks";
+import { Button } from "./Button";
 
 export function Footer({
   settings,
@@ -34,9 +36,9 @@ export function Footer({
           Tell us what your business needs. We will shape the right software, a clear plan and
           a transparent estimate around your workflow.
         </p>
-        <Link href="/request-quote" className={styles.ctaButton}>
+        <Button href="/request-quote" className="mt-7" size="lg">
           Start Your Project <ArrowUpRight aria-hidden="true" size={16} />
-        </Link>
+        </Button>
       </section>
 
       <div className={styles.blueField}>
@@ -51,21 +53,7 @@ export function Footer({
                 {tagline} Custom software, SaaS platforms, web and mobile apps, desktop software
                 and industry-specific business systems.
               </p>
-              {settings?.socialLinks && settings.socialLinks.length > 0 && (
-                <div className={styles.socials} aria-label="Social links">
-                  {settings.socialLinks.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.socialLink}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              {settings?.socialLinks && <SocialLinks links={settings.socialLinks} />}
             </div>
 
             {linkGroups.map((group) => (

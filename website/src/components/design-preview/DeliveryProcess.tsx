@@ -57,8 +57,8 @@ export function DeliveryProcess() {
         <p className={styles.processIntro}>A straightforward five-step delivery process — you always know what is happening and what comes next.</p>
         <div className={styles.stepList} aria-label="Delivery stages">
           {steps.map((item, index) => (
-            <button key={item.title} className={styles.stepButton} aria-pressed={index === active} aria-controls="delivery-description" onClick={() => setActive(index)}>
-              <span>{item.title}</span><small>0{index + 1}</small>
+            <button key={item.title} className={`${styles.stepButton} action-control process-stage`} aria-pressed={index === active} aria-controls="delivery-description" onClick={() => setActive(index)}>
+              <item.Icon size={18} aria-hidden="true" /><span>{item.title}</span><small>0{index + 1}</small>
             </button>
           ))}
         </div>

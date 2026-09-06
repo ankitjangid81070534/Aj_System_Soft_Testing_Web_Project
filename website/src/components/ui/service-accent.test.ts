@@ -10,6 +10,10 @@ describe("semantic service surfaces", () => {
     ["erp-business-software", "amber"],
     ["custom-software-development", "blue"],
     ["unknown-service", "blue"],
+    ["web-application-development", "coral"],
+    ["website-development", "amber"],
+    ["ecommerce-development", "emerald"],
+    ["windows-desktop", "violet"],
   ])("assigns %s a stable %s accent", (slug, accent) => {
     expect(serviceAccent(`/services/${slug}`)).toBe(accent);
   });

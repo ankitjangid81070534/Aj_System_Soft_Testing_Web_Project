@@ -90,7 +90,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               type="button"
               onClick={() => dismiss(item.id)}
               aria-label="Dismiss notification"
-              className="shrink-0 rounded-full p-1 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
+              className="icon-control shrink-0 rounded-full p-1 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
             >
               <XCircle aria-hidden="true" className="h-4 w-4" />
             </button>

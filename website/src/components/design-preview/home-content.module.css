@@ -12,7 +12,6 @@
 .legacy > section { background: #fff; border-color: #f0ebf5; }
 .legacy h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; font-weight: 500; }
 .legacy h3 { font-weight: 500; }
-.legacy :global(.card-3d):not([class*="card-accent-"]) { background: var(--surface-sheen); border: 1px solid var(--color-line); border-radius: 20px; box-shadow: var(--shadow-sculpted); }
 
 .legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #3168b6; padding-left: 0; letter-spacing: .06em; }
 .legacy :global(.text-eyebrow) > span { display: none; }
@@ -29,5 +28,4 @@
 }
 
 :global(.dark) .legacy > section, :global(.dark) .legacy :global(.glass-strong) { background: #171120; border-color: #34273f; }
-:global(.dark) .legacy :global(.card-3d):not([class*="card-accent-"]) { background: #22192e; border-color: #3c2e49; }
 :global(.dark) .legacy { --color-brand-50: #271a39; --color-brand-100: #342348; --color-brand-200: #64487d; --color-brand-600: #b895e6; --color-brand-700: #d5b8f5; }

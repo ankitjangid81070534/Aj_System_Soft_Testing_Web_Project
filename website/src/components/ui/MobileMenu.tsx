@@ -107,7 +107,7 @@ export function MobileMenu({
           <button
             type="button"
             onClick={onPortal}
-            className="flex items-center justify-center gap-2 rounded-full border border-line bg-surface py-2.5 text-sm font-medium text-ink shadow-e1 transition-[background-color,border-color] duration-200 hover:border-brand-200 hover:bg-canvas-raised focus-ring"
+            className="action-control action-secondary flex items-center justify-center gap-2 rounded-full border border-line bg-surface py-2.5 text-sm font-medium text-ink shadow-e1 transition-[background-color,border-color] duration-200 hover:border-brand-200 hover:bg-canvas-raised focus-ring"
           >
             <User aria-hidden="true" className="h-4 w-4 text-brand-600" />
             <span>{portalAuthenticated ? "Open Account" : "Client Login"}</span>

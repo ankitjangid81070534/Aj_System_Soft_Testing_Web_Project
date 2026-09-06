@@ -145,7 +145,7 @@ export function MarketingHeader({
               onClick={() => void openPortal()}
               aria-label={authenticated ? "Open your account" : "Client portal login"}
               title={authenticated ? "Open your account" : "Client Portal & Account"}
-              className="hidden h-9 shrink-0 items-center justify-center gap-1.5 rounded-full border border-line bg-surface px-2.5 text-xs font-medium leading-none text-ink-muted shadow-[inset_0_1px_0_rgb(255_255_255/0.8),0_3px_10px_rgb(15_23_42/0.05)] transition-[color,border-color,box-shadow,transform] duration-200 ease-soft hover:-translate-y-px hover:border-brand-200 hover:text-ink hover:shadow-e2 focus-ring lg:inline-flex xl:px-3.5 dark:shadow-none"
+              className="action-control action-secondary hidden h-9 shrink-0 items-center justify-center gap-1.5 rounded-full border border-line bg-surface px-2.5 text-xs font-medium leading-none text-ink-muted shadow-[inset_0_1px_0_rgb(255_255_255/0.8),0_3px_10px_rgb(15_23_42/0.05)] transition-[color,border-color,box-shadow,transform] duration-200 ease-soft hover:-translate-y-px hover:border-brand-200 hover:text-ink hover:shadow-e2 focus-ring lg:inline-flex xl:px-3.5 dark:shadow-none"
             >
               <User aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-600" />
               <span className="hidden whitespace-nowrap xl:inline">

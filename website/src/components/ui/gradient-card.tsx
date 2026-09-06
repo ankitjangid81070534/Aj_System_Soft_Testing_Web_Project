@@ -100,7 +100,7 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
                 href={ctaHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/cta mt-6 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-ring dark:text-brand-400 dark:hover:text-brand-300"
+                className="action-control action-primary group/cta mt-6 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-ring dark:text-brand-400 dark:hover:text-brand-300"
               >
                 {ctaText}
                 <ArrowRight
@@ -111,7 +111,7 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
             ) : (
               <Link
                 href={ctaHref}
-                className="group/cta mt-6 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-ring dark:text-brand-400 dark:hover:text-brand-300"
+                className="action-control action-primary group/cta mt-6 inline-flex w-fit items-center gap-2 rounded-full text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-ring dark:text-brand-400 dark:hover:text-brand-300"
               >
                 {ctaText}
                 <ArrowRight

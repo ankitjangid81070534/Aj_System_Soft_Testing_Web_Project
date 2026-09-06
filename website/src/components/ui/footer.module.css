@@ -287,9 +287,12 @@
   }
 
   .megaBrand {
+    width: 100%;
     margin-top: 58px;
-    font-size: clamp(72px, 25vw, 112px);
-    line-height: .78;
+    font-size: clamp(60px, 19vw, 96px);
+    letter-spacing: -.07em;
+    line-height: .86;
+    text-align: center;
   }
 
   .bottomRow {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import socialStyles from "./social-links.module.css";
 import { Globe, Mail } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/BrandIcons";
@@ -36,10 +37,10 @@ export function TeamCard({
   className?: string;
 }) {
   const socials = [
-    linkedinUrl ? { href: linkedinUrl, label: `${name} on LinkedIn`, Icon: LinkedInIcon } : null,
-    githubUrl ? { href: githubUrl, label: `${name} on GitHub`, Icon: GitHubIcon } : null,
-    portfolioUrl ? { href: portfolioUrl, label: `${name}'s portfolio`, Icon: Globe } : null,
-    email ? { href: `mailto:${email}`, label: `Email ${name}`, Icon: Mail } : null,
+    linkedinUrl ? { href: linkedinUrl, label: `${name} on LinkedIn`, platform: "linkedin", Icon: LinkedInIcon } : null,
+    githubUrl ? { href: githubUrl, label: `${name} on GitHub`, platform: "github", Icon: GitHubIcon } : null,
+    portfolioUrl ? { href: portfolioUrl, label: `${name}'s portfolio`, platform: "website", Icon: Globe } : null,
+    email ? { href: `mailto:${email}`, label: `Email ${name}`, platform: "website", Icon: Mail } : null,
   ].filter((s): s is NonNullable<typeof s> => s !== null);
 
   return (
@@ -89,7 +90,7 @@ export function TeamCard({
       ) : null}
       {socials.length > 0 ? (
         <div className="relative z-10 mt-4 flex justify-center gap-1 border-t border-line pt-3">
-          {socials.map(({ href, label, Icon }) => (
+          {socials.map(({ href, label, platform, Icon }) => (
             <a
               key={label}
               href={href}
@@ -97,7 +98,8 @@ export function TeamCard({
               {...(/^https?:\/\//i.test(href)
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-muted transition-[color,background-color,transform] duration-200 ease-spring hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-600 focus-ring"
+              className={socialStyles.link}
+              data-platform={platform}
             >
               <Icon aria-hidden="true" className="h-4 w-4" />
             </a>

@@ -1,0 +1,24 @@
+.links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.link {
+  --social-color: #285abe;
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px;
+  width: 44px; height: 44px; border-radius: 50%; color: #fff;
+  border: 1px solid #ffffff50;
+  background: radial-gradient(circle at 30% 15%, #ffffff55, transparent 52%), linear-gradient(150deg, var(--social-color), color-mix(in srgb, var(--social-color), #000 24%));
+  box-shadow: inset 0 1px 2px #ffffff70, inset 0 -3px 5px #0003, 0 7px 14px -6px #07193380;
+  transition: transform 280ms ease, box-shadow 280ms ease;
+}
+.link svg { width: 21px; height: 21px; flex-shrink: 0; }
+.link[data-platform="instagram"] { --social-color: #b22b90; background: radial-gradient(circle at 28% 90%, #ffd46c, #ec613e 35%, #c92d87 60%, #6544cd 95%); }
+.link[data-platform="facebook"] { --social-color: #1864e8; }
+.link[data-platform="linkedin"] { --social-color: #0a76b5; }
+.link[data-platform="youtube"] { --social-color: #dc2626; }
+.link[data-platform="whatsapp"] { --social-color: #079b54; }
+.link[data-platform="telegram"] { --social-color: #168fc8; }
+.link[data-platform="x"], .link[data-platform="github"] { --social-color: #171720; }
+.link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .link:hover { transform: translateY(-4px) rotate(-5deg); box-shadow: inset 0 1px 2px #ffffff80, 0 10px 20px -6px color-mix(in srgb, var(--social-color), #000 25%); }
+  .link:active { transform: translateY(-1px); }
+}
+@media (prefers-reduced-motion: reduce) { .link { transition: none; } }

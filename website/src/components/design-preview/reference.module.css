@@ -36,7 +36,6 @@
 .headerFrame :global(.glass-strong) { border: 1px solid var(--color-line); border-radius: 18px; background: var(--color-surface); backdrop-filter: none; box-shadow: inset 0 1px 0 #ffffff70,0 3px 0 #20396005,0 12px 28px -20px #1d4ed835; min-height: 68px; padding: 12px 14px; margin: 8px 0; }
 .headerFrame :global(.icon-bead) { background: #fff; box-shadow: none; border: 1px solid #ded8e6; color: #352946; }
 /* Individual navigation controls are owned by navigation.module.css. */
-.headerFrame a[href="/request-quote"] { background: var(--purple); border-radius: 8px; border: 0; color: #fff; box-shadow: 0 3px 12px #7138ce20; }
 .headerFrame :global(.font-brand) { font-size: 12px; letter-spacing: -.03em; }
 .headerFrame :global(dialog) { color: var(--ink); }
 .page :global(dialog) h2 { font-size: 20px; line-height: 1.3; letter-spacing: -.02em; font-weight: 600; }
@@ -278,8 +277,6 @@
 :global(.dark) .page .hero, :global(.dark) .headerFrame, :global(.dark) .headerFrame :global(.glass-strong) { background: #171120; }
 :global(.dark) .page .heroBadge { background: #241b30; border-color: #463454; }
 :global(.dark) .page .heroDescription, :global(.dark) .page .secondaryButton { color: #d5c7e4; }
-:global(.dark) .page .benefitCard { background: #22192e; border-color: #392846; }
-:global(.dark) .page .featuredBenefit .benefitCard { background: linear-gradient(130deg,#2458b9,#307ca5); }
 :global(.dark) .page .stepButton[aria-pressed="true"] { color: #f3eaff; }
 :global(.dark) .headerFrame :global(.icon-bead), :global(.dark) .footerFrame :global(.icon-bead) { background: #241b30; color: #ddc3f8; border-color: #463454; }
 @media (prefers-reduced-motion: reduce) {

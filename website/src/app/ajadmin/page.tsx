@@ -144,7 +144,7 @@ export default async function AdminDashboardPage() {
           <Link
             key={entry.label}
             href={entry.href}
-            className="group rounded-3xl border border-line bg-surface p-5 shadow-e1 transition-all hover:-translate-y-1 hover:border-line-strong hover:shadow-e3 focus-ring"
+            className="group card-3d rounded-3xl border border-line bg-surface p-5 shadow-e1 transition-all hover:-translate-y-1 hover:border-line-strong hover:shadow-e3 focus-ring"
           >
             <div className="flex items-center justify-between">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-700">

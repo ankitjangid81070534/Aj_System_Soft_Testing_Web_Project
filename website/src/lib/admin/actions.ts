@@ -108,6 +108,8 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
     }
     if (config.key === "socials") {
       updateTag("social-links");
+      // Footer settings also cache the composed social list.
+      updateTag("site-settings");
       revalidatePath("/", "layout");
     }
     if (config.publicBase) {

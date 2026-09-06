@@ -40,7 +40,7 @@ export function ServiceCard({
         )}
         <span
           aria-hidden="true"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-muted shadow-e1 transition-[transform,color,background-color,border-color] duration-300 ease-spring group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600"
+          className="card-corner inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-muted shadow-e1 transition-[transform,color,background-color,border-color] duration-300 ease-spring group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600"
         >
           <ArrowUpRight className="h-4 w-4" />
         </span>

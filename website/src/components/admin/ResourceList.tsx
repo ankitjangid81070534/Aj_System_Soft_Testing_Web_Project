@@ -76,7 +76,7 @@ export function ResourceList({
           />
           <button
             type="submit"
-            className="h-11 shrink-0 rounded-xl border border-line bg-surface px-4 text-sm font-medium text-ink transition-colors hover:bg-canvas focus-ring"
+            className="icon-control h-11 shrink-0 rounded-xl border border-line bg-surface px-4 text-sm font-medium text-ink transition-colors hover:bg-canvas focus-ring"
           >
             <Search aria-hidden="true" className="h-4 w-4" />
             <span className="sr-only">Search</span>
@@ -175,7 +175,7 @@ export function ResourceList({
                                 <button
                                   type="submit"
                                   aria-label={`Move ${String(row[config.listColumns[0].name])} up`}
-                                  className="rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
+                                  className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
                                 >
                                   <ArrowUp aria-hidden="true" className="h-4 w-4" />
                                 </button>
@@ -187,7 +187,7 @@ export function ResourceList({
                                 <button
                                   type="submit"
                                   aria-label={`Move ${String(row[config.listColumns[0].name])} down`}
-                                  className="rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
+                                  className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
                                 >
                                   <ArrowDown aria-hidden="true" className="h-4 w-4" />
                                 </button>
@@ -200,7 +200,7 @@ export function ResourceList({
                               <input type="hidden" name="__id" value={rowId} />
                               <button
                                 type="submit"
-                                className="rounded-full border border-line px-2.5 py-1 text-xs font-medium text-ink-muted transition-colors hover:text-ink focus-ring"
+                                className="action-control action-secondary action-xs rounded-full border border-line px-2.5 py-1 text-xs font-medium text-ink-muted transition-colors hover:text-ink focus-ring"
                               >
                                 {row.is_active ? "Deactivate" : "Activate"}
                               </button>
@@ -220,7 +220,7 @@ export function ResourceList({
                               title="Restore this record?"
                               description="It will reappear in the active list."
                               confirmLabel="Restore"
-                              className="rounded-full border border-line px-2.5 py-1 text-xs font-medium text-success transition-colors hover:bg-success-soft focus-ring"
+                              className="action-control action-secondary action-xs rounded-full border border-line px-2.5 py-1 text-xs font-medium text-success transition-colors hover:bg-success-soft focus-ring"
                             />
                           ) : (
                             <Link
@@ -246,7 +246,7 @@ export function ResourceList({
                               confirmLabel={
                                 config.supports.softDelete ? "Move to trash" : "Delete permanently"
                               }
-                              className="rounded-full p-1.5 text-ink-muted transition-colors hover:bg-danger-soft hover:text-danger focus-ring"
+                              className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-danger-soft hover:text-danger focus-ring"
                             />
                           ) : null}
                         </div>
