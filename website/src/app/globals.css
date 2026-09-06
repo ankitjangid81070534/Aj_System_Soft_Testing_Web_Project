@@ -2,7 +2,7 @@
 
 /* ============================================================================
    AJ System Soft Technology — PREMIUM 3D design system (Tailwind v4 theme)
-   Direction: crisp light canvas, deep-navy ink, electric-blue brand with
+   Direction: crisp light canvas, deep-navy ink, violet brand with
    violet/cyan accents, layered soft-3D depth, liquid glass, GPU-only motion
    (transform + opacity). Everything re-themes via CSS variables — see the
    .dark overrides below. Tokens are the single source of truth.
@@ -15,18 +15,18 @@
 }
 
 @theme {
-  /* ---- Colors: primary electric blue (actions) ---- */
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dbe7ff;
-  --color-brand-200: #bcd2ff;
-  --color-brand-300: #8fb3ff;
-  --color-brand-400: #5f8bfb;
-  --color-brand-500: #3b6cf6;
-  --color-brand-600: #2557e8;
-  --color-brand-700: #1d45cf;
-  --color-brand-800: #1d3aa6;
-  --color-brand-900: #1d3483;
-  --color-brand-950: #152150;
+  /* ---- Colors: primary amethyst (actions) ---- */
+  --color-brand-50: #f7f2ff;
+  --color-brand-100: #eee3fb;
+  --color-brand-200: #dcc8f3;
+  --color-brand-300: #c2a2e8;
+  --color-brand-400: #a778de;
+  --color-brand-500: #8b50d4;
+  --color-brand-600: #7138ce;
+  --color-brand-700: #5e28b4;
+  --color-brand-800: #4e2390;
+  --color-brand-900: #401e74;
+  --color-brand-950: #281244;
 
   /* ---- Colors: premium accents (violet + cyan) ---- */
   --color-accent-50: #f3efff;
@@ -57,15 +57,15 @@
   --color-on-brand: #ffffff;
   --color-on-danger: #ffffff;
 
-  /* ---- Colors: cool neutrals (deep navy ink) ---- */
-  --color-canvas: #f5f7fb;
-  --color-canvas-raised: #eef1f7;
+  /* ---- Colors: soft neutrals (plum ink) ---- */
+  --color-canvas: #faf8fc;
+  --color-canvas-raised: #f3eef8;
   --color-surface: #ffffff;
-  --color-ink: #0b1220;
-  --color-ink-soft: #334155;
-  --color-ink-muted: #64748b;
-  --color-line: #e3e8f0;
-  --color-line-strong: #cbd3e0;
+  --color-ink: #17131e;
+  --color-ink-soft: #554c60;
+  --color-ink-muted: #776d82;
+  --color-line: #ebe4f2;
+  --color-line-strong: #d9cce5;
 
   /* ---- Colors: semantic ---- */
   --color-success: #059669;
@@ -74,8 +74,8 @@
   --color-warning-soft: #fffbeb;
   --color-danger: #dc2626;
   --color-danger-soft: #fef2f2;
-  --color-info: #2557e8;
-  --color-info-soft: #eef4ff;
+  --color-info: #7138ce;
+  --color-info-soft: #f7f2ff;
 
   /* ---- Typography: fluid display scale + eyebrow ---- */
   --text-eyebrow: 0.8125rem;
@@ -300,61 +300,11 @@
   }
 }
 
-/* Reveal-once enhancement.
-   Safety model: `.reveal` alone is fully visible. The `.reveal-pending` state
-   is ONLY ever added by RevealObserver after hydration, to elements that are
-   below the fold at that moment — so crawlers, no-JS visitors and the first
-   paint never see hidden content. A CSS fail-safe animation additionally
-   forces any element still pending after 5s back to visible, so a broken
-   observer can never leave a blank section. */
-.reveal {
-  opacity: 1;
-  transform: none;
-  transition:
-    opacity 640ms var(--ease-out-expo) var(--reveal-delay, 0ms),
-    transform 760ms var(--ease-out-expo) var(--reveal-delay, 0ms);
-}
-
-.reveal.reveal-pending {
-  opacity: 0;
-  transform: translate3d(0, 32px, 0) scale(0.985);
-  will-change: opacity, transform;
-  animation: reveal-failsafe 500ms var(--ease-out-expo) 5s both;
-}
-
-.reveal.reveal-in {
-  opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  will-change: auto;
-  animation: none;
-}
-
-@keyframes reveal-failsafe {
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-/* Mobile: a clearly visible but shorter lift so cards feel snappy while
-   thumb-scrolling; distance is tuned for ~360–430px viewports. */
-@media (max-width: 767px) {
-  .reveal {
-    transition:
-      opacity 520ms var(--ease-out-expo) var(--reveal-delay, 0ms),
-      transform 600ms var(--ease-out-expo) var(--reveal-delay, 0ms);
-  }
-  .reveal.reveal-pending {
-    transform: translate3d(0, 24px, 0) scale(0.99);
-  }
-}
-
+/* Reusable viewport-entry motion lives in RevealObserver. No pending/hidden
+   CSS state: interruption, no JS, printing and reduced motion stay readable. */
+.reveal { opacity: 1; transform: none; }
 @media print, (prefers-reduced-motion: reduce) {
-  .reveal {
-    transition: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
+  .reveal, [data-reveal], [data-home-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; transition: none !important; }
 }
 
 /* Z-index scale (no Tailwind namespace for z): header 40 · drawer/dialog 50 ·
@@ -391,17 +341,17 @@
   --color-sage-500: #34d399;
   --color-sage-700: #6ee7b7;
 
-  --color-brand-50: #0f1a33;
-  --color-brand-100: #142347;
-  --color-brand-200: #1e3568;
-  --color-brand-300: #3661b8;
-  --color-brand-400: #6b9cff;
-  --color-brand-500: #4f86ff;
-  --color-brand-600: #5c92ff; /* links/buttons on dark */
-  --color-brand-700: #7ca8ff; /* hover = brighter in dark */
-  --color-brand-800: #a3c2ff;
-  --color-brand-900: #c7dbff;
-  --color-brand-950: #e2ecff;
+  --color-brand-50: #20152e;
+  --color-brand-100: #2c1d3b;
+  --color-brand-200: #493063;
+  --color-brand-300: #6d4a91;
+  --color-brand-400: #c4a0ef;
+  --color-brand-500: #ac7ade;
+  --color-brand-600: #bb8eef; /* links/buttons on dark */
+  --color-brand-700: #d0a9fa; /* hover = brighter in dark */
+  --color-brand-800: #dfc5fb;
+  --color-brand-900: #eadcfc;
+  --color-brand-950: #f5effc;
 
   --color-accent-50: #1a1230;
   --color-accent-100: #251a45;
@@ -419,12 +369,12 @@
   --color-on-brand: #07101f; /* dark ink on the lighter filled buttons */
   --color-on-danger: #200505;
 
-  --color-canvas: #070b14;
-  --color-canvas-raised: #111827;
-  --color-surface: #0d1321;
-  --color-ink: #f4f6fb;
-  --color-ink-soft: #cbd3e1;
-  --color-ink-muted: #94a0b8;
+  --color-canvas: #0c0912;
+  --color-canvas-raised: #1b1425;
+  --color-surface: #15101e;
+  --color-ink: #f6f1fc;
+  --color-ink-soft: #d6cce2;
+  --color-ink-muted: #afa0c0;
   --color-line: rgba(255, 255, 255, 0.08);
   --color-line-strong: rgba(255, 255, 255, 0.16);
 
@@ -434,7 +384,7 @@
   --color-warning-soft: rgba(251, 191, 36, 0.12);
   --color-danger: #f87171;
   --color-danger-soft: rgba(248, 113, 113, 0.12);
-  --color-info: #7ca8ff;
+  --color-info: #d0a9fa;
   --color-info-soft: rgba(92, 146, 255, 0.12);
 
   --shadow-e1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);

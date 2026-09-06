@@ -6,6 +6,7 @@ import { isSupabaseConfigured } from "@/lib/env";
 import { roleAtLeast, ROLE_LABELS } from "@/lib/auth/permissions";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { ToastProvider } from "@/components/ui/Toast";
+import styles from "@/components/admin/admin-surface.module.css";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   if (!user) {
     return (
       <ToastProvider>
-        <div className="flex min-h-svh flex-col bg-canvas px-4 py-8">
+        <div data-admin-ui className={`${styles.auth} flex min-h-svh flex-col bg-canvas px-4 py-8`}>
           <div className="absolute top-4 right-4">
             <ThemeToggle />
           </div>

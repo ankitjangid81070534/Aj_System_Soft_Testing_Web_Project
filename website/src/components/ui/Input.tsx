@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils/cn";
 
 const baseField =
-  "w-full rounded-xl border border-line bg-surface px-3.5 text-sm text-ink " +
+  "ui-field w-full rounded-xl border border-line bg-surface px-3.5 text-sm text-ink " +
   "shadow-[inset_0_1px_2px_rgb(15_23_42/0.04)] " +
   "placeholder:text-ink-muted/70 transition-[border-color,box-shadow,background-color] duration-200 ease-soft " +
   "hover:border-line-strong " +

@@ -24,7 +24,11 @@ export function PortalLoginModal({ onClose }: { onClose: () => void }) {
     <dialog
       ref={dialogRef}
       aria-labelledby="portal-login-title"
-      onClose={onClose}
+      onClose={() => {
+        // Strict Mode reopens the dialog after effect cleanup. Ignore the queued
+        // close event from that cleanup when the current dialog is already open.
+        if (!dialogRef.current?.open) onClose();
+      }}
       onCancel={(event) => {
         event.preventDefault();
         onClose();

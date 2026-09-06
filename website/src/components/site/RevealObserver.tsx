@@ -1,104 +1,73 @@
 "use client";
 
 import { useEffect } from "react";
+import { revealFrames } from "@/components/motion/motion-utils";
 
-/**
- * One observer for every reveal wrapper. It starts only after hydration, so
- * React's server markup is never mutated before it is claimed. Elements are
- * visible by default and permanently unobserved after their first reveal.
+/** One reversible lifecycle for the entire site. Nodes stay visible by default;
+ * an entry animates once, a FULL viewport exit rearms it for the next visit.
+ * No offscreen hiding, global timeouts, scroll hijacking or one-shot unobserve.
  */
 export function RevealObserver() {
   useEffect(() => {
-    if (
-      !("IntersectionObserver" in window) ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
-    }
-
-    // Mobile viewports are short: trigger the reveal only once the element has
-    // actually entered the viewport, otherwise the animation completes while
-    // the card is still below the fold and the visitor never sees it.
-    const isCompact = window.matchMedia("(max-width: 767px)").matches;
-    const observerRootMargin = isCompact ? "0px 0px -6% 0px" : "0px 0px 8% 0px";
-    // Fraction of the viewport height an element's top must cross before the
-    // scroll fallback reveals it (1.0 = exactly the bottom edge).
-    const scrollTriggerRatio = isCompact ? 0.94 : 1.02;
-
-    const pending = new Set<HTMLElement>();
-    const reveal = (element: HTMLElement) => {
-      element.classList.remove("reveal-pending");
-      element.classList.add("reveal-in");
-      pending.delete(element);
-      observer.unobserve(element);
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          reveal(entry.target as HTMLElement);
-        }
-      },
-      { threshold: 0.04, rootMargin: observerRootMargin },
-    );
-
+    if (!("IntersectionObserver" in window) || !("animate" in Element.prototype)) return;
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const nodes = new Map<HTMLElement, { entered: boolean; animation?: Animation }>();
+    let observer: IntersectionObserver | undefined;
     const register = () => {
-      // Anything already on (or just under) the first screen is shown at once
-      // so the visible page never animates in after load.
-      const line = window.innerHeight * (isCompact ? 1.0 : 1.15);
-      const nodes = document.querySelectorAll<HTMLElement>(".reveal:not([data-reveal-bound])");
-      for (const element of nodes) {
-        element.dataset.revealBound = "true";
-        if (element.getBoundingClientRect().top <= line) {
-          element.classList.add("reveal-in");
-        } else {
-          element.classList.add("reveal-pending");
-          pending.add(element);
-          observer.observe(element);
-        }
+      if (!observer) return;
+      for (const [element, state] of nodes) {
+        if (!element.isConnected) { state.animation?.cancel(); observer.unobserve(element); nodes.delete(element); }
       }
-    };
-
-    let frame = 0;
-    const schedule = (callback: () => void) => {
-      window.cancelAnimationFrame(frame);
-      frame = window.requestAnimationFrame(callback);
-    };
-    const checkVisible = () => {
-      const lowerEdge = window.innerHeight * scrollTriggerRatio;
-      // At the end of the document nothing can scroll further into view, so
-      // any element still inside the viewport must be revealed now.
-      const atPageEnd =
-        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
-      for (const element of pending) {
-        const rect = element.getBoundingClientRect();
-        const inViewport = rect.top < window.innerHeight && rect.bottom >= -20;
-        if ((rect.top <= lowerEdge && rect.bottom >= -20) || (atPageEnd && inViewport)) {
-          reveal(element);
-        }
-      }
-    };
-    const onViewportChange = () => schedule(checkVisible);
-    const mutations = new MutationObserver(() => {
-      schedule(() => {
-        register();
-        checkVisible();
+      document.querySelectorAll<HTMLElement>(".reveal, [data-home-reveal], [data-reveal]").forEach(element => {
+        if (nodes.has(element)) return;
+        nodes.set(element, { entered: false });
+        observer!.observe(element);
       });
-    });
-    register();
+    };
+    const setup = () => {
+      observer?.disconnect();
+      nodes.forEach(state => state.animation?.cancel());
+      nodes.clear();
+      observer = undefined;
+      if (media.matches) return;
+      observer = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          const element = entry.target as HTMLElement;
+          const state = nodes.get(element);
+          if (!state) continue;
+          if (!entry.isIntersecting) {
+            state.entered = false;
+            state.animation?.cancel();
+            state.animation = undefined;
+            continue;
+          }
+          if (state.entered) continue;
+          state.entered = true;
+          // Do not move a form/card while someone is typing or using its controls.
+          if (element.contains(document.activeElement)) continue;
+          const variant = element.dataset.reveal;
+          // The CSS entrance starts before hydration; later viewport visits replay it.
+          if (variant === "orbit" && !element.dataset.revealCycle) { element.dataset.revealCycle = "1"; continue; }
+          const delay = Math.min(variant === "orbit" ? 1100 : 240, Math.max(0, parseFloat(getComputedStyle(element).getPropertyValue(variant === "orbit" ? "--entry-delay" : "--reveal-delay")) || 0));
+          state.animation = element.animate(revealFrames(variant, window.innerWidth < 701), {
+            duration: variant === "orbit" ? 1700 : variant === "word" ? 850 : 1150, delay,
+            easing: "cubic-bezier(.16,1,.3,1)", fill: "backwards",
+          });
+          element.dataset.revealCycle = String(Number(element.dataset.revealCycle || 0) + 1);
+          state.animation.onfinish = () => { state.animation = undefined; };
+        }
+      }, { threshold: 0 });
+      register();
+    };
+    setup();
+    const mutations = new MutationObserver(register);
     mutations.observe(document.body, { childList: true, subtree: true });
-    window.addEventListener("scroll", onViewportChange, { passive: true });
-    window.addEventListener("resize", onViewportChange, { passive: true });
-
+    media.addEventListener("change", setup);
     return () => {
-      window.cancelAnimationFrame(frame);
-      mutations.disconnect();
-      observer.disconnect();
-      window.removeEventListener("scroll", onViewportChange);
-      window.removeEventListener("resize", onViewportChange);
+      mutations.disconnect(); observer?.disconnect();
+      nodes.forEach(state => state.animation?.cancel()); nodes.clear();
+      media.removeEventListener("change", setup);
     };
   }, []);
-
   return null;
 }

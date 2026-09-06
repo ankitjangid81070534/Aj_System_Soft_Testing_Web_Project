@@ -8,6 +8,7 @@ import { AdminNav } from "@/components/admin/AdminNav";
 import { Drawer } from "@/components/ui/Drawer";
 import { IconButton } from "@/components/ui/IconButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import styles from "./admin-surface.module.css";
 import { signOutAction } from "@/lib/auth/actions";
 
 function AccountBlock({ email, roleLabel }: { email: string; roleLabel: string }) {
@@ -55,7 +56,7 @@ export function AdminShell({
   const pageLabel = pathname === "/ajadmin" ? "Dashboard" : section || "Admin workspace";
 
   return (
-    <div className="min-h-svh bg-canvas lg:grid lg:grid-cols-[17.5rem_minmax(0,1fr)]">
+    <div data-admin-ui className={`${styles.shell} min-h-svh bg-canvas lg:grid lg:grid-cols-[17.5rem_minmax(0,1fr)]`}>
       <aside className="sticky top-0 hidden h-svh flex-col border-r border-line bg-warm-50/95 shadow-e2 backdrop-blur-xl dark:bg-surface/95 lg:flex">
         <div className="border-b border-line px-5 py-5">
           <Link href="/ajadmin" className="inline-flex items-center gap-3 rounded-xl focus-ring">
@@ -98,7 +99,7 @@ export function AdminShell({
       <div className="min-w-0">
         <header className="sticky top-0 z-30 hidden items-center justify-between border-b border-line bg-surface/88 px-8 py-3.5 backdrop-blur-xl lg:flex xl:px-10">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-warm-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-700">
               AJS Command
             </p>
             <p className="mt-0.5 text-sm font-semibold capitalize text-ink">{pageLabel}</p>
