@@ -18,7 +18,7 @@ export function DeliveryProcess() {
   const Icon = step.Icon;
   return (
     <section className={`${styles.section} ${styles.process}`} id="delivery">
-      <div className={styles.processArt} aria-hidden="true">
+      <div className={styles.processArt} aria-hidden="true" data-home-reveal>
         <div className={styles.processRings} />
         <div className={styles.processCard} key={active}>
           <div className={styles.miniCardHeader}><span className={styles.smallIcon}><Icon size={18} /></span><span>{step.title}</span><Check size={16} /></div>
@@ -28,8 +28,10 @@ export function DeliveryProcess() {
         </div>
         <div className={styles.processBase} />
       </div>
-      <div className={styles.processCopy}>
-        <p className={styles.eyebrow}>From your requirement to a working product</p>
+      <div className={styles.processCopy} data-home-reveal>
+        <p className={styles.eyebrow}>How we work</p>
+        <h2 className={styles.processTitle}>From your requirement to a working product</h2>
+        <p className={styles.processIntro}>A straightforward five-step delivery process — you always know what is happening and what comes next.</p>
         <div className={styles.stepList} aria-label="Delivery stages">
           {steps.map((item, index) => (
             <button key={item.title} className={styles.stepButton} aria-pressed={index === active} aria-controls="delivery-description" onClick={() => setActive(index)}>
@@ -38,6 +40,7 @@ export function DeliveryProcess() {
           ))}
         </div>
         <p id="delivery-description" className={styles.stepDescription} aria-live="polite">{step.description}</p>
+        <noscript><ol>{steps.map(item => <li key={item.title}><strong>{item.title}</strong><p>{item.description}</p></li>)}</ol></noscript>
       </div>
     </section>
   );

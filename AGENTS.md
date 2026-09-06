@@ -40,3 +40,11 @@ Next.js `allowedDevOrigins` is derived from `BASE44_PUBLIC_HOST_SUFFIX` in
 - `curl -sf -H "Host: external-preview.example.com" http://localhost:3000/` → 200 with real HTML
 - Dev assets under `/_next/static/chunks/...` → 200 to the external host
 - `/ajadmin` renders a setup notice (Supabase not configured) rather than crashing
+
+## Homepage presentation
+- `/` and `/design-preview` share `components/design-preview/HomeExperience.tsx`; do not maintain separate copies. The public route still fetches the existing home/settings/benefits data and emits its original SEO metadata/JSON-LD.
+- `PublicSiteFrame` scopes the new presentation to `/` only; navigation, announcements, offers, footer and portal controls remain the original components. Original content sections are reused rather than replacing their data with preview samples.
+- `HomeMotion` animates content on intersection without hiding waiting sections. Its scoped CSS neutralizes the global reveal observer's five-second failsafe, which otherwise finishes animations before the visitor scrolls to them.
+- `ScrollJourney` uses native scrolling with an eased horizontal track above 700px; mobile, reduced-motion and no-JS use stacked scenes. Its listeners/animation frames are cleaned up on unmount. Delivery descriptions also have a no-JS fallback.
+- Native dialog close events can be queued during React Strict Mode effect cleanup. The portal ignores stale close events when its dialog has already reopened; keep this guard when editing the modal.
+- Regression checks: `docker compose -f docker-compose.base44.yml exec -T web npm run typecheck` and `npm run test` (100 tests). Check icon entry, scrolling, all five delivery buttons, mobile navigation, theme switching, portal open/close, and quote navigation; verify mobile/tablet/desktop plus reduced motion.

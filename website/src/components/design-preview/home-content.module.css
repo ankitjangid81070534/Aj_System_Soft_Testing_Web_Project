@@ -1,0 +1,37 @@
+.content { min-width: 0; }
+.heroPoints { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 8px 15px; margin: 22px 0 0; padding: 0; }
+.heroPoints li { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #81788a; }
+.heroPoints svg { color: #8957c6; }
+.serviceIntro { padding: 75px 24px 55px; text-align: center; max-width: 760px; margin: auto; scroll-margin-top: 20px; }
+.serviceIntro > p:not(:first-child) { font-size: 14px; line-height: 1.7; color: #77737e; max-width: 580px; margin: 20px auto 24px; }
+.finaleSecondary { display: inline-flex; align-items: center; gap: 8px; color: #eee2ff; border: 1px solid #be9ce75c; border-radius: 8px; font-size: 12px; padding: 11px 17px; }
+.finaleSecondary:hover { background: #ffffff15; }
+/* Restyle original sections, keeping every record, description, image and CTA. */
+.legacy { --color-brand-50: #f7f2ff; --color-brand-100: #eee3fb; --color-brand-200: #dcc8f3; --color-brand-400: #9968cf; --color-brand-500: #8550c8; --color-brand-600: #7138ce; --color-brand-700: #6330ac; --color-accent-50: #fcf9ff; }
+.legacy :global(.aurora), .legacy :global(.bg-grid), .legacy :global(.bg-dots) { display: none; }
+.legacy > section { background: #fff; border-color: #f0ebf5; }
+.legacy h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; font-weight: 500; }
+.legacy h3 { font-weight: 500; }
+.legacy :global(.card-3d) { background: linear-gradient(145deg, #fff 50%, #fbf9fd); border: 1px solid #eee8f4; border-radius: 16px; box-shadow: 0 5px 20px #6a3b9810; transform: none; }
+.legacy :global(.card-3d)::before, .legacy :global(.card-3d)::after { display: none; }
+.legacy :global(.card-3d):hover { transform: translateY(-5px); border-color: #d5bbee; box-shadow: 0 16px 32px #7138ce18; }
+.legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #8256ae; padding-left: 0; letter-spacing: .06em; }
+.legacy :global(.text-eyebrow) > span { display: none; }
+.legacy :global(.glass-strong) { background: #fff; border: 1px solid #eee8f3; box-shadow: none; backdrop-filter: none; border-radius: 14px; }
+.legacy section[aria-label="How we work"] { margin-top: 0; padding: 18px 0 0; }
+.legacy section[aria-label="How we work"] :global(.group) > span { background: #f4edfc; color: #8250bb; box-shadow: none; }
+.legacy :global(.icon-tile) { background: #f6f0fd; box-shadow: none; color: #8250bb; }
+.legacy :global(.card-3d) > span[aria-hidden="true"], .legacy :global(.card-3d) > div > span[aria-hidden="true"] { background: #f3ebfb; color: #8250bb; box-shadow: none; }
+/* The homepage observer animates entry itself: no global five-second reveal
+   failsafe can finish the animation while these sections are still offscreen. */
+.content :global(.reveal), .content :global(.reveal.reveal-pending), .content :global(.reveal.reveal-in) { opacity: 1; transform: none; transition: none; animation: none; will-change: auto; }
+@media (max-width: 700px) {
+  .heroPoints { max-width: 300px; margin: 17px auto 0; gap: 7px 12px; }
+  .heroPoints li { font-size: 11px; }
+  .legacy :global(.max-w-content) { padding-left: 24px; padding-right: 24px; }
+  .serviceIntro { padding: 60px 24px 40px; }
+}
+
+:global(.dark) .legacy > section, :global(.dark) .legacy :global(.glass-strong) { background: #171120; border-color: #34273f; }
+:global(.dark) .legacy :global(.card-3d) { background: #22192e; border-color: #3c2e49; }
+:global(.dark) .legacy { --color-brand-50: #271a39; --color-brand-100: #342348; --color-brand-200: #64487d; --color-brand-600: #b895e6; --color-brand-700: #d5b8f5; }

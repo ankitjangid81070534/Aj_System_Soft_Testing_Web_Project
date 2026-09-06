@@ -2,16 +2,15 @@ import Link from "next/link";
 import { ArrowUpRight, Code2, Layers3 } from "lucide-react";
 import type { ServiceTeaser } from "@/lib/data/mappers";
 import styles from "./reference.module.css";
+import { ScrollJourney } from "./ScrollJourney";
 
 export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
   if (!services.length) return null;
   const groups = [services.slice(0, 2), services.slice(2, 4), services.slice(4)].filter(group => group.length);
   return (
-    <section className={styles.journey} id="capabilities" aria-label="What we can build for you">
-      <div className={styles.journeyStage}>
-        <div className={styles.journeyTrack} style={{ "--scene-count": groups.length } as React.CSSProperties}>
+    <ScrollJourney count={groups.length}>
           {groups.map((group, index) => (
-            <div className={styles.journeyScene} key={group[0].id}>
+            <div className={styles.journeyScene} key={group[0].id} data-scene-index={index}>
               <span className={styles.sceneWord} aria-hidden="true">{["Build.", "Connect.", "Grow."][index]}</span>
               <div className={styles.sceneInner}>
                 <div className={styles.productCard}>
@@ -26,6 +25,7 @@ export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
                   <p className={styles.eyebrow}>What we can build for you</p>
                   {group.map(service => <div key={service.id}>
                     <h2>{service.name}</h2><p>{service.shortDescription}</p>
+                    {service.category && <small className={styles.serviceCategory}>{service.category}</small>}
                     <Link href={`/services/${service.slug}`} className={styles.textLink}>Explore service <ArrowUpRight size={15} /></Link>
                   </div>)}
                 </div>
@@ -33,8 +33,6 @@ export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
               <span className={styles.sceneIndex}>0{index + 1} / 0{groups.length}</span>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
+    </ScrollJourney>
   );
 }

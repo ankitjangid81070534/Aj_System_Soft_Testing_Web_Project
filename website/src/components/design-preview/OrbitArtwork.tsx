@@ -24,8 +24,14 @@ export function OrbitArtwork({ finale = false }: { finale?: boolean }) {
         <span key={index} className={styles.orbitPosition} style={{
           "--x": `${x}%`, "--y": `${y}%`, "--size": `${size}px`,
           "--rotation": `${rotation}deg`, "--delay": `${-index * 0.73}s`,
+          "--entry-delay": `${140 + (objects.length - 1 - index) * 100}ms`,
+          "--entry-x": `${100 + (100 - x) * 2}px`, "--entry-y": `${80 + (100 - y)}px`,
         } as CSSProperties}>
-          <span className={`${styles.orbitToken} ${styles[color]}`}><Icon strokeWidth={1.7} /></span>
+          <span className={styles.orbitEntrance} data-orbit-entry>
+            <span className={styles.orbitFloat}>
+              <span className={`${styles.orbitToken} ${styles[color]}`}><Icon strokeWidth={1.7} /></span>
+            </span>
+          </span>
         </span>
       ))}
       {Array.from({ length: 46 }, (_, index) => {
