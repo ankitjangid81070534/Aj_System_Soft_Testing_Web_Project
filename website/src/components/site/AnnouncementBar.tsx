@@ -19,7 +19,6 @@ export function AnnouncementBar({ announcement }: { announcement: Announcement }
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(false);
     } else {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
     }
   }, [announcement]);

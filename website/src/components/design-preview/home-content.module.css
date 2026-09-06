@@ -1,20 +1,20 @@
 .content { min-width: 0; }
 .heroPoints { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 8px 15px; margin: 22px 0 0; padding: 0; }
 .heroPoints li { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #81788a; }
-.heroPoints svg { color: #8957c6; }
+.heroPoints svg { color: #21857f; }
 .serviceIntro { padding: 75px 24px 55px; text-align: center; max-width: 760px; margin: auto; scroll-margin-top: 20px; }
 .serviceIntro > p:not(:first-child) { font-size: 14px; line-height: 1.7; color: #77737e; max-width: 580px; margin: 20px auto 24px; }
 .finaleSecondary { display: inline-flex; align-items: center; gap: 8px; color: #eee2ff; border: 1px solid #be9ce75c; border-radius: 8px; font-size: 12px; padding: 11px 17px; }
 .finaleSecondary:hover { background: #ffffff15; }
 /* Restyle original sections, keeping every record, description, image and CTA. */
-.legacy { --color-brand-50: #f7f2ff; --color-brand-100: #eee3fb; --color-brand-200: #dcc8f3; --color-brand-400: #9968cf; --color-brand-500: #8550c8; --color-brand-600: #7138ce; --color-brand-700: #6330ac; --color-accent-50: #fcf9ff; }
+.legacy { --color-accent-50: #f2f8ff; }
 .legacy :global(.aurora), .legacy :global(.bg-grid), .legacy :global(.bg-dots) { display: none; }
 .legacy > section { background: #fff; border-color: #f0ebf5; }
 .legacy h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; font-weight: 500; }
 .legacy h3 { font-weight: 500; }
 .legacy :global(.card-3d) { background: var(--surface-sheen); border: 1px solid var(--color-line); border-radius: 20px; box-shadow: var(--shadow-sculpted); }
 
-.legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #8256ae; padding-left: 0; letter-spacing: .06em; }
+.legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #3168b6; padding-left: 0; letter-spacing: .06em; }
 .legacy :global(.text-eyebrow) > span { display: none; }
 .legacy :global(.glass-strong) { background: #fff; border: 1px solid #eee8f3; box-shadow: none; backdrop-filter: none; border-radius: 14px; }
 .legacy section[aria-label="How we work"] { margin-top: 0; padding: 18px 0 0; }

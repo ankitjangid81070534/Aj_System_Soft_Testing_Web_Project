@@ -1,0 +1,21 @@
+/* Sculpted controls only: routing, menu semantics and focus behavior stay native. */
+.link.link {
+  --nav-hue: 218;
+  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+  border: 1px solid hsl(var(--nav-hue) 65% 88% / .7); border-radius: 11px;
+  background: linear-gradient(155deg, var(--color-surface), hsl(var(--nav-hue) 75% 96%));
+  color: #36445a; padding: 8px 9px; font-size: 11px; font-weight: 500;
+  box-shadow: inset 0 1px 0 #fff, 0 2px 0 hsl(var(--nav-hue) 40% 82% / .65), 0 5px 12px hsl(var(--nav-hue) 60% 40% / .05);
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms ease, color 280ms ease;
+}
+.link::before { content: ""; width: 4px; height: 4px; flex-shrink: 0; border-radius: 50%; background: hsl(var(--nav-hue) 65% 48%); box-shadow: 0 0 7px hsl(var(--nav-hue) 75% 55% / .3); }
+li:nth-child(3n + 2) > .link { --nav-hue: 172; }
+li:nth-child(3n) > .link { --nav-hue: 27; }
+.link.link[aria-current="page"] { background: linear-gradient(145deg,#3b82f6,#1d4ed8); color: #fff; border-color: #729fff; box-shadow: inset 0 1px 0 #ffffff65,0 3px 0 #173c99,0 8px 18px #2563eb24; }
+.link[aria-current="page"]::before { background: #b8fff1; box-shadow: 0 0 7px #b8fff180; }
+@media (hover:hover) and (pointer:fine) { .link.link:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 #ffffff90,0 3px 0 hsl(var(--nav-hue) 45% 75% / .6),0 10px 20px hsl(var(--nav-hue) 65% 45% / .15); } }
+.link.link:active { transform: translateY(1px); }
+.mobile.mobile { width: 100%; padding: 13px 15px; font-size: 14px; border-radius: 13px; margin-bottom: 5px; }
+:global(.dark) .link.link, :global([data-scene-tone="dark"]) .link.link { color: #e1ebfa; border-color: #ffffff17; background: linear-gradient(155deg,#24334a,#182333); box-shadow: inset 0 1px 0 #ffffff0d,0 2px 0 #080f1d,0 5px 12px #0002; }
+:global(.dark) .link.link[aria-current="page"], :global([data-scene-tone="dark"]) .link.link[aria-current="page"] { background: linear-gradient(145deg,#315ec5,#21438f); color: #fff; border-color: #5985dc; }
+@media (prefers-reduced-motion:reduce) { .link.link { transition: none; }.link.link:hover,.link.link:active { transform: none; } }

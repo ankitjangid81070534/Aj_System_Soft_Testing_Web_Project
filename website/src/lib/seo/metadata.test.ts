@@ -38,6 +38,17 @@ describe("buildMetadata", () => {
     expect(metadata.robots).toEqual({ index: false, follow: false });
   });
 
+  it("preserves article dates and authors without unsafe casts", () => {
+    const article = { publishedTime: "2026-09-06", modifiedTime: "2026-09-07", authors: ["AJS Technology"] };
+    const metadata = buildMetadata({ description: "Article", path: "/blog/example", type: "article", article });
+    expect(metadata.openGraph).toMatchObject({ type: "article", ...article });
+  });
+
+  it("does not attach article-only fields to website metadata", () => {
+    const metadata = buildMetadata({ description: "Page", path: "/about", article: { publishedTime: "2026-09-06" } });
+    expect(metadata.openGraph).not.toHaveProperty("publishedTime");
+  });
+
   it("leaves robots undefined for public pages", () => {
     const metadata = buildMetadata({ description: "d", path: "/about" });
     expect(metadata.robots).toBeUndefined();

@@ -35,6 +35,7 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
     
   const openGraph: Metadata["openGraph"] = {
     type: input.type ?? "website",
+    ...(input.type === "article" ? input.article : {}),
     siteName: BRAND.primaryName,
     locale: BRAND.locale,
     alternateLocale: ["en_US", "en_GB"],
@@ -50,13 +51,6 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
       },
     ],
   };
-
-  // Conditionally add article metadata if type is article
-  if (input.type === "article" && input.article && openGraph) {
-    (openGraph as any).publishedTime = input.article.publishedTime;
-    (openGraph as any).modifiedTime = input.article.modifiedTime;
-    (openGraph as any).authors = input.article.authors;
-  }
 
   return {
     title: resolvedTitle,

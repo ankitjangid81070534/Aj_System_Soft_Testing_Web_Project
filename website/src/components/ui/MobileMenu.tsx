@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import navStyles from "./navigation.module.css";
 import { useEffect, useRef } from "react";
 import { X, User } from "lucide-react";
 import { NAV_LINKS } from "@/lib/navigation";
@@ -34,6 +36,7 @@ export function MobileMenu({
   ctaHref?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -49,7 +52,7 @@ export function MobileMenu({
     <dialog
       ref={dialogRef}
       id="mobile-menu"
-      onClose={onClose}
+      onClose={() => { if (!dialogRef.current?.open) onClose(); }}
       onClick={(event) => {
         if (event.target instanceof HTMLDialogElement) onClose();
       }}
@@ -87,7 +90,8 @@ export function MobileMenu({
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className="group flex items-center justify-between rounded-xl border border-transparent px-4 py-3 text-[15px] font-medium text-ink transition-[background-color,border-color,transform] duration-200 ease-soft hover:translate-x-0.5 hover:border-line hover:bg-canvas-raised focus-ring"
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={`${navStyles.link} ${navStyles.mobile} focus-ring`}
                 >
                   {link.label}
                   <span

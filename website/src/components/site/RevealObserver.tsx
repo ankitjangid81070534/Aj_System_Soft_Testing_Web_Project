@@ -5,23 +5,26 @@ import { revealFrames } from "@/components/motion/motion-utils";
 
 /** One reversible lifecycle for the entire site. Nodes stay visible by default;
  * an entry animates once, a FULL viewport exit rearms it for the next visit.
- * No offscreen hiding, global timeouts, scroll hijacking or one-shot unobserve.
+ * Orbit entrances observe their stationary slot, never their animated bounds.
  */
 export function RevealObserver() {
   useEffect(() => {
     if (!("IntersectionObserver" in window) || !("animate" in Element.prototype)) return;
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const nodes = new Map<HTMLElement, { entered: boolean; animation?: Animation }>();
+    const nodes = new Map<HTMLElement, { element: HTMLElement; entered: boolean; animation?: Animation }>();
     let observer: IntersectionObserver | undefined;
     const register = () => {
       if (!observer) return;
-      for (const [element, state] of nodes) {
-        if (!element.isConnected) { state.animation?.cancel(); observer.unobserve(element); nodes.delete(element); }
+      for (const [target, state] of nodes) {
+        if (!state.element.isConnected) { state.animation?.cancel(); observer.unobserve(target); nodes.delete(target); }
       }
       document.querySelectorAll<HTMLElement>(".reveal, [data-home-reveal], [data-reveal]").forEach(element => {
-        if (nodes.has(element)) return;
-        nodes.set(element, { entered: false });
-        observer!.observe(element);
+        // An entrance translates far outside the viewport. Observing that moving
+        // element makes its own animation cancel/rearm itself every few frames.
+        const target = element.dataset.reveal === "orbit" ? element.parentElement ?? element : element;
+        if (nodes.has(target)) return;
+        nodes.set(target, { element, entered: false });
+        observer!.observe(target);
       });
     };
     const setup = () => {
@@ -32,9 +35,9 @@ export function RevealObserver() {
       if (media.matches) return;
       observer = new IntersectionObserver(entries => {
         for (const entry of entries) {
-          const element = entry.target as HTMLElement;
-          const state = nodes.get(element);
+          const state = nodes.get(entry.target as HTMLElement);
           if (!state) continue;
+          const { element } = state;
           if (!entry.isIntersecting) {
             state.entered = false;
             state.animation?.cancel();

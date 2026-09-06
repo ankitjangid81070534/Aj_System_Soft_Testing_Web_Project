@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useActionState, useEffect, useState } from "react";
-import { ArrowRight, CheckCircle2, KeyRound, Loader2, Mail, UserRound } from "lucide-react";
+import { ArrowRight, CheckCircle2, Loader2, Mail, UserRound } from "lucide-react";
 import {
   clientLoginAction,
   clientSignupAction,
@@ -15,6 +15,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { siteUrl } from "@/lib/env";
 import { Button } from "@/components/ui/Button";
 import { Field, Input } from "@/components/ui/Input";
+import { LoginPasswordField } from "./LoginPasswordField";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
 
 const initialState: PortalActionState = { status: "idle" };
@@ -195,11 +196,11 @@ function GoogleButton({ label }: { label: string }) {
   );
 }
 
-function Divider() {
+function Divider({ label = "or continue with email" }: { label?: string }) {
   return (
-    <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.12em] text-ink-muted">
+    <div data-login-divider className="flex items-center gap-3 text-[11px] uppercase tracking-[0.12em] text-ink-muted">
       <span className="h-px flex-1 bg-line" />
-      or continue with email
+      {label}
       <span className="h-px flex-1 bg-line" />
     </div>
   );
@@ -217,9 +218,7 @@ export function ClientLoginForm({
   const [state, action, pending] = useActionState(clientLoginAction, initialState);
 
   return (
-    <div className="space-y-5">
-      <GoogleButton label="Continue with Google" />
-      <Divider />
+    <div className="space-y-5" data-client-login>
       <form action={action} className="space-y-4">
         <input type="hidden" name="next" value={nextPath} />
         <Field label="Email address" htmlFor="client-email" required>
@@ -239,23 +238,7 @@ export function ClientLoginForm({
             />
           </div>
         </Field>
-        <Field label="Password" htmlFor="client-password" required>
-          <div className="relative">
-            <KeyRound
-              aria-hidden="true"
-              className="pointer-events-none absolute left-3.5 top-3.5 h-4 w-4 text-ink-muted"
-            />
-            <Input
-              id="client-password"
-              name="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              minLength={8}
-              className="pl-10"
-            />
-          </div>
-        </Field>
+        <LoginPasswordField />
         <div className="flex justify-end">
           <Link
             href="/forgot-password"
@@ -269,6 +252,8 @@ export function ClientLoginForm({
         <Feedback state={state} />
         <SubmitButton pending={pending} idle="Sign in to client portal" busy="Signing in…" />
       </form>
+      <Divider label="or" />
+      <GoogleButton label="Continue with Google" />
       <p className="text-center text-sm text-ink-muted">
         New here?{" "}
         <Link
