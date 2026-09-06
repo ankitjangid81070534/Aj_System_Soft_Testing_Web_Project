@@ -99,6 +99,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Allow the Base44 preview origin to access dev assets/HMR. The suffix
+  // changes whenever the environment is recreated, so derive it from env.
+  ...(process.env.BASE44_PUBLIC_HOST_SUFFIX
+    ? { allowedDevOrigins: [`3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`] }
+    : {}),
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**.supabase.co" },
