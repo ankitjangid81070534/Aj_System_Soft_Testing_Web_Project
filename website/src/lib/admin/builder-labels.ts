@@ -1,0 +1,16 @@
+export const SECTION_LABELS: Record<string, string> = {
+  hero: "Hero",
+  trust_strip: "Trust strip",
+  services_overview: "Services overview",
+  platforms: "Platforms we build for",
+  featured_projects: "Featured projects",
+  process: "Development process",
+  industries: "Industries",
+  tech_capabilities: "Technology capabilities",
+  why_us: "Why choose us",
+  testimonials: "Testimonials",
+  team: "Team",
+  gallery: "Gallery",
+  faq: "FAQ",
+  cta: "Final CTA",
+};

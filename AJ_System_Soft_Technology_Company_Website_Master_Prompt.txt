@@ -1,0 +1,2282 @@
+# AJ SYSTEM SOFT TECHNOLOGY — COMPLETE COMPANY WEBSITE MASTER PROMPT
+## Premium soft-3D company website + Supabase CMS + /ajadmin + SEO + deployment
+
+======================================================================
+HOW TO USE THIS FILE
+======================================================================
+
+This prompt is designed for Claude Code, Codex, Cursor, Windsurf, Gemini, Antigravity, or another capable coding AI.
+
+Use it in this exact order:
+
+1. Paste **MASTER PROJECT CONTEXT** first.
+2. Let the AI inspect the repository and acknowledge the requirements.
+3. Paste **PHASE 0**.
+4. Continue one phase at a time only after the previous phase is complete.
+5. After every phase require:
+   - changed files
+   - what was implemented
+   - build result
+   - type-check result
+   - lint result
+   - tests run
+   - known issues
+6. If any new error exists, fix it before continuing.
+7. Never allow the AI to replace real logic with mock data or delete working features.
+8. Do not attempt the entire project in one uncontrolled rewrite.
+
+======================================================================
+BRAND IDENTITY
+======================================================================
+
+PRIMARY COMPANY NAME:
+AJ System Soft Technology
+
+SHORT BRAND:
+AJS Technology
+
+ALTERNATE SEARCH/IDENTITY NAMES:
+Ankit Jangid System Technology
+Ankit System Technology
+
+Use the correct spelling **Technology** everywhere.
+
+SEO brand rule:
+- Use "AJ System Soft Technology" as the main Organization name.
+- Use "AJS Technology" naturally as the short brand.
+- Use "Ankit Jangid System Technology" and "Ankit System Technology" naturally in the About/company identity area and Organization structured data using `alternateName`.
+- Do NOT repeat all aliases on every page.
+- Do NOT create duplicate thin pages for each name.
+- Do NOT keyword-stuff.
+
+======================================================================
+COMPANY POSITIONING
+======================================================================
+
+AJ System Soft Technology builds software according to client requirements.
+
+Core message:
+**"Software built around your requirements."**
+
+The company may build:
+- Custom software
+- SaaS platforms
+- Business websites
+- Web applications
+- Ecommerce / marketplace platforms
+- Android apps
+- iOS apps
+- Cross-platform mobile apps
+- Windows desktop / EXE applications
+- ERP
+- CRM
+- Hospital management software
+- Clinic software
+- Pharmacy software
+- Retail / shop software
+- POS / billing systems
+- Inventory / stock systems
+- Hotel software
+- Admin panels
+- Dashboards
+- Reporting systems
+- Cloud applications
+- APIs and integrations
+- Business automation
+- Existing software modernization
+- Deployment, maintenance and support
+
+Primary website objective:
+A visitor should quickly understand what we build, see our real team and real client work, trust our capability, and contact us to start a software project.
+
+Never invent:
+- fake client names
+- fake ratings
+- fake awards
+- fake testimonials
+- fake employee counts
+- fake years of experience
+- fake project results
+
+======================================================================
+VISUAL / UI DIRECTION
+======================================================================
+
+Use an ORIGINAL premium visual language based on the previously approved TVC0 Store direction:
+
+- floating rounded navigation
+- bright white / soft-gray canvas
+- modern near-black typography
+- elegant blue accent
+- premium rounded white cards
+- subtle glass/translucency
+- controlled blur
+- soft layered shadows
+- refined soft-3D depth
+- layered software/device previews
+- generous but controlled whitespace
+- smooth microinteractions
+- subtle scroll reveals
+- professional project media frames
+- cinematic but business-focused presentation
+- beautiful responsive typography
+- polished desktop/tablet/mobile experience
+
+Do NOT clone Warmwind or any other website.
+Do NOT copy logos, wording, photos, proprietary media or exact layouts.
+
+The website must feel:
+Premium
+Modern
+Professional
+Fast
+Trustworthy
+Original
+Enterprise-ready
+Human
+Soft
+Clean
+Highly customizable
+
+Avoid:
+- neon gaming visuals
+- excessive gradients
+- constant animation
+- heavy WebGL
+- template-looking admin dashboards
+- giant fonts that hurt mobile UX
+- slow hero videos
+- heavy blur animation
+- unnecessary client-side JavaScript
+
+Typography:
+Use one optimized modern variable sans-serif such as Geist Sans or Manrope, or an equivalent production-safe font.
+Keep font loading lightweight.
+
+======================================================================
+TECH STACK
+======================================================================
+
+If this is a NEW project, prefer:
+
+- Latest stable Next.js available at implementation time
+- Latest stable compatible React
+- TypeScript strict mode
+- App Router / server-first architecture
+- Server Components by default
+- Tailwind CSS or a strongly structured CSS token system
+- Supabase:
+  - PostgreSQL
+  - Auth
+  - Storage
+  - Row Level Security
+- Zod or equivalent server validation
+- Accessible headless primitives only where useful
+- Lucide or another lightweight icon library
+- Motion library only when CSS is insufficient
+- CSS-based 3D by default
+- Three.js/R3F only for an isolated, lazy-loaded visual if it materially improves the design
+
+If this is an EXISTING project:
+First inspect it.
+Do not force a framework migration unless there is a strong technical reason.
+
+Hosting must remain practical through GitHub on:
+- Vercel
+- Netlify
+- Cloudflare-compatible deployment where supported by the selected framework/runtime
+- local development
+
+Avoid unnecessary vendor lock-in.
+
+======================================================================
+PUBLIC ROUTES
+======================================================================
+
+Required:
+
+/
+Home / Landing page
+
+/services
+Services
+
+/services/[slug]
+Individual SEO service pages
+
+/projects
+Portfolio / case studies
+
+/projects/[slug]
+Detailed client/project case study
+
+/about
+Company/about page
+
+/team
+Team page
+
+/contact
+Contact page
+
+/request-quote
+Project inquiry / quote form
+
+/blog
+Insights / blog
+
+/blog/[slug]
+Article page
+
+/privacy
+Privacy Policy
+
+/terms
+Terms & Conditions
+
+/cookie-policy
+Only if actual cookie/analytics usage requires it
+
+/refund-policy
+Only if actual payment/refund flows require it
+
+/security
+Optional professional security/practices page
+
+/ajadmin
+Protected admin application
+
+/ajadmin/login
+Admin login
+
+Also create:
+- sitemap.xml
+- robots.txt
+- favicon
+- social/default OG image support
+- 404
+- loading states
+- global error states
+
+======================================================================
+HOME PAGE CONTENT ORDER
+======================================================================
+
+Build a polished landing page containing:
+
+1. Floating premium header/navigation
+2. Hero
+3. Capability/trust strip
+4. Services overview
+5. "What we build" multi-platform showcase
+6. Featured client projects / case studies
+7. Development process
+8. Industries served
+9. Technology/capabilities
+10. Why choose AJ System Soft Technology
+11. Real testimonials only when real data exists
+12. Team section with professional team photos near the lower part of the landing page
+13. Optional gallery
+14. Strong project inquiry CTA
+15. Contact/quote area
+16. Professional footer
+
+Hero copy direction:
+"Software built around your requirements."
+or
+"From your requirement to a complete digital product."
+
+Hero supporting copy should naturally explain:
+AJ System Soft Technology designs and builds websites, SaaS platforms, mobile apps, desktop software and industry-specific business systems based on client requirements.
+
+CTA:
+Start Your Project
+Request a Consultation
+View Projects
+
+Hero visual:
+Create an original layered soft-3D composition showing several product types:
+- dashboard
+- mobile screen
+- desktop software window
+- SaaS screen
+- ecommerce/product screen
+
+Do not use unauthorized third-party/client branding.
+
+======================================================================
+CONTENT MODELS
+======================================================================
+
+CLIENT / PROJECT FIELDS:
+- id
+- client_name
+- client_logo
+- industry
+- location
+- public_client_permission
+- project_name
+- slug
+- short_summary
+- overview
+- problem
+- solution
+- key_features
+- platform_type
+- technology_stack
+- database
+- integrations
+- duration
+- project_year
+- project_status
+- cover_image
+- screenshots/gallery
+- optional video
+- impact/results only if real
+- testimonial only if real
+- testimonial person/role
+- public URL if allowed
+- featured
+- sort_order
+- public/private
+- active/inactive
+- draft/published
+- SEO title
+- SEO description
+- OG image
+- timestamps
+
+TEAM FIELDS:
+- name
+- role
+- short_bio
+- long_bio optional
+- profile_photo
+- optional gallery
+- skills
+- public social links
+- LinkedIn
+- GitHub
+- portfolio
+- public_email flag
+- featured
+- active/inactive
+- public/private
+- sort_order
+- timestamps
+
+SERVICE FIELDS:
+- name
+- slug
+- short_description
+- long_description
+- icon
+- cover_visual
+- category
+- features
+- deliverables
+- platforms
+- technology examples
+- industries
+- process steps
+- FAQ
+- CTA
+- featured
+- active/inactive
+- sort_order
+- SEO title
+- SEO description
+- OG image
+- timestamps
+
+======================================================================
+/ajadmin REQUIREMENTS
+======================================================================
+
+/ajadmin must be a real protected CMS.
+
+Do NOT rely on the URL being hard to guess.
+Use real authentication + authorization + Supabase RLS.
+
+ADMIN DASHBOARD:
+- content overview
+- project count
+- client count
+- service count
+- team count
+- drafts/published
+- latest inquiries
+- quote requests
+- content status
+- quick actions
+- media/storage overview
+
+BRAND SETTINGS:
+- primary brand name
+- short brand
+- alternate names
+- logo
+- favicon
+- tagline
+- company description
+- phone
+- WhatsApp
+- email
+- support email
+- address
+- map link
+- social links
+- business hours
+- footer
+- copyright
+- default OG image
+- theme/accent preset
+- global CTA
+
+HOME PAGE BUILDER:
+Admin can manage:
+- hero
+- hero media
+- CTA
+- trust items
+- services
+- section headings
+- projects
+- industries
+- stats
+- process
+- technologies
+- testimonials
+- team
+- gallery
+- FAQ
+- final CTA
+- section order
+- visibility
+- draft/publish
+
+Use SAFE structured section types.
+Do NOT allow unrestricted executable JavaScript from admin.
+
+FULL CRUD:
+- Clients
+- Projects
+- Team
+- Services
+- Testimonials
+- Blog
+- Media
+- Leads/Inquiries
+- Quote requests
+- Optional appointment requests
+- Optional payment links
+- SEO metadata
+- Users/Roles
+
+Each applicable module must support:
+create
+edit
+draft
+publish
+unpublish
+activate
+deactivate
+reorder
+soft delete where appropriate
+restore where practical
+search
+filter
+pagination
+preview
+
+ROLES:
+- Super Admin
+- Admin
+- Editor
+
+Optional:
+- Content Manager
+- Lead/Sales Manager
+
+All permissions must also be enforced server-side.
+
+AUDIT LOG:
+Record:
+- user
+- action
+- entity
+- entity id
+- timestamp
+- safe summary
+
+Never log passwords/secrets.
+
+======================================================================
+SUPABASE
+======================================================================
+
+Use migrations and typed access.
+
+Suggested tables:
+
+profiles
+roles
+permissions
+role_permissions
+user_roles
+
+site_settings
+navigation_items
+page_sections
+seo_metadata
+
+services
+service_faqs
+
+clients
+projects
+project_features
+project_technologies
+project_media
+
+team_members
+team_member_skills
+team_media
+
+testimonials
+
+blog_posts
+blog_categories
+blog_tags
+blog_post_tags
+
+contact_submissions
+quote_requests
+appointment_requests
+
+payment_links
+media_assets
+audit_logs
+
+Optional:
+content_revisions
+redirects
+
+Use:
+- primary keys
+- timestamps
+- created_by / updated_by where useful
+- unique slugs
+- indexes
+- foreign keys
+- safe cascades
+- status fields
+- draft/published
+- active/inactive
+- public/private
+
+Storage buckets may include:
+public-site
+project-media
+team-media
+client-media
+blog-media
+private-media
+
+Private/confidential media must not become public accidentally.
+
+Never expose the Supabase service-role key to the browser.
+
+Anonymous public reads:
+only published + active + public content.
+
+Admin writes:
+authenticated, authorized and protected by RLS/server checks.
+
+======================================================================
+SEO / GOOGLE SEARCH REQUIREMENTS
+======================================================================
+
+GOAL:
+Make the website technically ready to be crawled, indexed and understood by Google.
+
+Important:
+No developer can guarantee immediate indexing or a specific Google ranking.
+
+Primary brand:
+AJ System Soft Technology
+
+Secondary brand:
+AJS Technology
+
+Alternate names:
+Ankit Jangid System Technology
+Ankit System Technology
+
+Use naturally relevant service topics:
+- custom software development
+- SaaS development
+- web application development
+- website development
+- Android app development
+- iOS app development
+- desktop software development
+- ERP software development
+- hospital software
+- pharmacy software
+- retail POS
+- inventory management software
+- ecommerce development
+- business automation
+
+Never keyword-stuff.
+
+Technical SEO:
+- server-render core public content
+- unique title per page
+- unique description
+- one clear H1
+- canonical
+- sitemap.xml
+- robots.txt
+- clean URLs
+- stable slugs
+- semantic headings
+- descriptive alt text
+- breadcrumbs
+- Organization JSON-LD
+- WebSite JSON-LD where appropriate
+- BreadcrumbList
+- Article/BlogPosting schema for blog
+- Service schema only where semantically valid
+- OG/Twitter metadata
+- branded favicon
+- internal linking
+- redirect support
+- custom 404
+- no duplicate thin pages
+- noindex admin/login/previews/private pages
+- never accidentally noindex the public site
+- hreflang only for real multilingual content
+
+Organization structured-data direction:
+name = AJ System Soft Technology
+alternateName =
+AJS Technology
+Ankit Jangid System Technology
+Ankit System Technology
+
+Only include real social profiles in sameAs.
+
+POST-LAUNCH:
+- verify production domain in Google Search Console
+- submit sitemap
+- URL inspect important pages
+- request indexing for important new pages
+- monitor Page Indexing
+- monitor Core Web Vitals
+- monitor Enhancements
+- fix crawl/index problems
+- create/maintain a legitimate Google Business Profile only if a real eligible business location exists
+
+======================================================================
+PERFORMANCE
+======================================================================
+
+Target a superfast experience.
+
+Aim for:
+- Core Web Vitals green where realistic
+- LCP roughly <= 2.5s
+- CLS <= 0.1
+- INP roughly <= 200ms
+- strong Lighthouse results without faking numbers
+
+Rules:
+- Server Components by default
+- minimal hydration
+- route splitting
+- lazy below-fold content
+- responsive images
+- AVIF/WebP where appropriate
+- fixed image dimensions/aspect ratio
+- optimize hero
+- do not use huge autoplay hero video
+- preload only critical assets
+- one lightweight variable font
+- CSS animation first
+- lazy-load maps/charts/3D
+- pause offscreen animation
+- no repeated heavy blur animation
+- minimal third-party scripts
+- deferred analytics
+- caching
+- avoid API waterfalls
+- deduplicate requests
+- efficient Supabase queries
+- server-side pagination
+- optimize indexes
+- remove unused dependencies
+
+If 3D hurts speed, replace it with CSS depth.
+
+======================================================================
+ACCESSIBILITY + SECURITY
+======================================================================
+
+ACCESSIBILITY:
+Target WCAG 2.2 AA.
+
+Use:
+- semantic HTML
+- correct headings
+- keyboard navigation
+- visible focus
+- labels
+- accessible errors
+- focus management
+- adequate contrast
+- reduced motion
+- screen reader labels
+- touch-friendly controls
+- accessible admin tables
+
+SECURITY:
+- Supabase Auth
+- RLS
+- server-side role checks
+- secure sessions
+- server-side validation
+- safe file upload validation
+- sanitize/validate rich content
+- no service-role key client-side
+- no secrets in Git
+- .env.example placeholders only
+- safe production errors
+- rate-limit public submission endpoints where possible
+- no admin authorization by UI hiding only
+- confirm destructive actions
+- audit important admin changes
+
+======================================================================
+LEAD / QUOTE CONVERSION
+======================================================================
+
+"Start Your Project" should be a major CTA.
+
+Quote form may support:
+- full name
+- company/business
+- email
+- phone
+- WhatsApp optional
+- location
+- project type
+- platform
+- industry
+- budget range optional
+- timeline optional
+- requirements
+- attachment optional
+- preferred contact method
+- consent if required
+
+Do not make the first contact form unnecessarily huge.
+Use good UX, clear validation and a success state.
+
+Optional appointment/consultation booking can be added later.
+
+Optional payment module:
+Initially allow admin-managed secure external payment links:
+- title
+- description
+- amount label if applicable
+- secure URL
+- active/inactive
+- expiration
+- related client/project
+
+Do NOT collect raw card data.
+If a real gateway is later selected, integrate it server-side using its official security model.
+
+
+======================================================================
+MASTER PROJECT CONTEXT — COPY FIRST
+======================================================================
+
+------------------------- START COPY: MASTER PROJECT CONTEXT -------------------------
+
+Build or upgrade my official technology-company website.
+
+PRIMARY COMPANY NAME:
+AJ System Soft Technology
+
+SHORT NAME:
+AJS Technology
+
+ALTERNATE COMPANY SEARCH NAMES:
+Ankit Jangid System Technology
+Ankit System Technology
+
+Use the correct spelling "Technology".
+
+BUSINESS:
+We build software according to client requirements. Our work includes custom software, complete SaaS products, websites, web apps, ecommerce, Android apps, iOS apps, cross-platform apps, Windows desktop/EXE software, ERP, CRM, hospital software, clinic software, pharmacy software, shop/retail/POS software, inventory systems, hotel software, dashboards, admin panels, cloud systems, APIs, integrations, automation and other custom business software.
+
+PRIMARY WEBSITE GOAL:
+A visitor should understand what we build, see our real team, see our real client projects/case studies, trust our capability and contact us to start a software project.
+
+VISUAL DIRECTION:
+Use an original premium modern soft-3D interface based on my previously approved TVC0 Store UI direction:
+- floating rounded navigation
+- light neutral canvas
+- white rounded cards
+- elegant modern typography
+- subtle blue accent
+- soft shadows
+- controlled glass/blur
+- layered software/device previews
+- excellent whitespace
+- subtle motion
+- professional desktop and mobile UI
+
+Do NOT clone Warmwind or any other site.
+Do NOT copy another company's branding/content/assets.
+
+PUBLIC WEBSITE:
+Home
+Services
+Service details
+Projects
+Project details
+About
+Team
+Contact
+Request Quote
+Blog
+Blog posts
+Privacy
+Terms
+other required legal/SEO pages
+
+HOME PAGE:
+Hero with company name/value proposition.
+Services.
+Platforms we build for.
+Featured client projects with details.
+Development process.
+Industries.
+Technology capabilities.
+Why choose us.
+Real testimonials if available.
+Professional team photos near the lower part of the landing page.
+Strong contact/project CTA.
+
+ADMIN:
+Create a protected /ajadmin application.
+
+Admin must be able to manage:
+- brand
+- logos
+- contact details
+- social links
+- entire home page structured sections
+- section order and visibility
+- services
+- clients
+- client details
+- projects
+- project details
+- project screenshots/media
+- public/private project status
+- active/deactive
+- draft/published
+- team members
+- team photos
+- testimonials
+- blog
+- media
+- leads/inquiries
+- quote requests
+- optional appointments
+- optional public payment links
+- page SEO metadata
+- users/roles
+- audit logs
+
+Use full CRUD where appropriate.
+
+DATABASE:
+Use Supabase safely for PostgreSQL, Auth and Storage.
+Use RLS.
+Never expose the service role key in the browser.
+
+SEO:
+Make the website technically ready for Google Search.
+
+Primary organization name:
+AJ System Soft Technology
+
+alternateName:
+AJS Technology
+Ankit Jangid System Technology
+Ankit System Technology
+
+Create:
+- unique metadata
+- canonical
+- sitemap
+- robots
+- Organization JSON-LD
+- breadcrumbs
+- article schema
+- service schema only where valid
+- clean URLs
+- internal linking
+- Search Console readiness
+- admin noindex
+
+Do not keyword stuff.
+Do not guarantee ranking.
+
+PERFORMANCE:
+The site must load extremely fast.
+Prefer server-rendered content.
+Minimize JS.
+Optimize images/fonts.
+Lazy-load below fold.
+Keep animations GPU-friendly.
+Use CSS depth instead of heavy WebGL where possible.
+Target excellent Core Web Vitals.
+
+RESPONSIVE:
+The public website and /ajadmin must work professionally on:
+320
+360
+390
+430
+768
+1024
+1280
+1440
+1600+
+
+ACCESSIBILITY:
+Target WCAG 2.2 AA.
+
+DEPLOYMENT:
+Keep the architecture suitable for GitHub-based deployment to Vercel, Netlify or a Cloudflare-compatible deployment path where supported.
+
+FUTURE CUSTOMIZATION:
+Build reusable components, CSS/design tokens, typed data models, migrations and documentation so the website can be safely changed later without a full rewrite.
+
+IMPORTANT EXECUTION RULE:
+Do not attempt the entire project in one uncontrolled change.
+Work phase by phase.
+After every phase:
+- list changed files
+- run build
+- run type-check
+- run lint
+- run relevant tests
+- fix all new errors
+- wait for my next phase
+
+Do not remove working functionality.
+Do not replace real backend logic with mock data.
+Do not invent client/company facts.
+Do not expose secrets.
+Do not declare completion while build/tests fail.
+
+Acknowledge this project context, inspect the repository, and wait for PHASE 0.
+
+-------------------------- END COPY: MASTER PROJECT CONTEXT --------------------------
+
+======================================================================
+PHASE 0 — REPOSITORY AUDIT + SAFE PLAN
+======================================================================
+
+------------------------- START COPY: PHASE 0 -------------------------
+
+Act as a senior software architect, product designer, UX engineer, SEO architect, Supabase architect, security engineer and performance engineer.
+
+Before changing production code:
+
+1. Inspect the complete repository.
+2. Identify:
+   framework, runtime, package manager, routing, styling, shared components, auth, database, APIs, environment handling, deployment configuration, existing pages and broken/incomplete areas.
+3. If the repository is new/empty, propose a clean production architecture.
+4. Identify which parts of my approved TVC0 Store premium soft-3D UI can be safely reused as design primitives.
+5. Do not delete working functionality.
+6. Do not change database/API contracts yet.
+7. Create a public route map.
+8. Create the /ajadmin route map.
+9. Create the Supabase schema plan.
+10. Create the auth/RLS/storage plan.
+11. Create the content/CMS plan.
+12. Create the SEO architecture.
+13. Create the performance strategy.
+14. Create the Vercel/Netlify/Cloudflare-compatible deployment strategy.
+15. List technical risks.
+16. Do not claim guaranteed Google rankings.
+17. Do not perform the full redesign yet.
+
+Return:
+- architecture summary
+- repository map
+- recommended folders
+- public routes
+- admin routes
+- database schema plan
+- storage plan
+- security plan
+- SEO plan
+- design-system plan
+- performance plan
+- deployment plan
+- exact next-phase order
+- likely files to create/change
+
+STOP and wait for PHASE 1.
+
+-------------------------- END COPY: PHASE 0 --------------------------
+
+======================================================================
+PHASE 1 — PRODUCTION ARCHITECTURE / SCAFFOLD
+======================================================================
+
+------------------------- START COPY: PHASE 1 -------------------------
+
+Implement the approved architecture from Phase 0.
+
+Requirements:
+
+1. Use the latest stable compatible stack.
+2. For a new Next.js build:
+   - TypeScript strict
+   - App Router
+   - server-first
+   - clean route groups
+   - reusable components
+3. Create:
+   - marketing/public layout
+   - protected admin layout foundation
+   - loading UI
+   - error boundaries
+   - 404
+   - metadata foundation
+   - environment validation
+4. Create organized folders for:
+   components
+   design system
+   public sections
+   admin modules
+   auth
+   Supabase
+   server data access
+   SEO
+   validation
+   types
+   utilities
+5. Add .env.example with placeholders only.
+6. Never place real secrets in source code.
+7. Add lint/type-check/format/test scripts appropriate to the stack.
+8. Keep deployment portable.
+9. Do not build every page yet.
+
+Before stopping:
+- run production build
+- type-check
+- lint
+- relevant tests
+- fix all errors introduced in this phase
+- report changed files
+
+-------------------------- END COPY: PHASE 1 --------------------------
+
+======================================================================
+PHASE 2 — SUPABASE + AUTH + RLS + STORAGE
+======================================================================
+
+------------------------- START COPY: PHASE 2 -------------------------
+
+Implement Supabase safely.
+
+Build:
+
+1. SQL migrations for the approved schema.
+2. Typed database access.
+3. Profiles, roles and permissions.
+4. Roles:
+   Super Admin
+   Admin
+   Editor
+5. Secure /ajadmin authentication.
+6. Server-side authorization.
+7. Row Level Security policies.
+8. Storage buckets/policies for:
+   public site media
+   client media
+   project media
+   team media
+   blog media
+   private/confidential media
+9. Public anonymous users may read only published + active + public records.
+10. Confidential client/project data remains private.
+11. Validate all writes.
+12. Keep Supabase service-role key server-only.
+13. Add audit-log foundation.
+14. Create development seed content only if clearly marked demo.
+15. Never seed fake testimonials/results as production facts.
+16. Document a safe first-Super-Admin bootstrap process without hardcoding credentials.
+
+Test:
+- public user cannot access admin data
+- public user cannot read private project/media data
+- editor permissions work
+- admin permissions work
+- super admin permissions work
+- unauthorized /ajadmin access is blocked
+
+Run migrations/build/type-check/lint/tests before stopping.
+
+-------------------------- END COPY: PHASE 2 --------------------------
+
+======================================================================
+PHASE 3 — DESIGN SYSTEM + GLOBAL SHELL
+======================================================================
+
+------------------------- START COPY: PHASE 3 -------------------------
+
+Create the AJ System Soft Technology premium design system.
+
+Visual direction:
+- original soft-3D
+- floating rounded header
+- light soft-gray background
+- white surfaces
+- modern near-black type
+- premium blue accent
+- soft elevation
+- restrained glass
+- excellent whitespace
+- business-professional visual hierarchy
+
+Create tokens:
+- colors
+- semantic colors
+- typography
+- spacing
+- radius
+- shadows
+- z-index
+- focus
+- duration
+- easing
+- breakpoints
+- max-width containers
+
+Create reusable components:
+- Button
+- IconButton
+- Input
+- Textarea
+- Select/Combobox
+- Card
+- SectionHeader
+- Badge
+- StatusPill
+- ProjectCard
+- ServiceCard
+- TeamCard
+- MediaFrame
+- Tabs
+- Accordion
+- Dialog
+- Drawer
+- Toast
+- Skeleton
+- EmptyState
+- ErrorState
+- MarketingHeader
+- MobileMenu
+- Footer
+- CTA
+
+Floating header:
+- sticky
+- rounded desktop pill
+- compact-on-scroll
+- no layout shift
+- responsive
+- keyboard accessible
+- mobile-specific navigation
+
+Use CSS-based depth first.
+Do not add a heavy 3D engine for normal UI.
+
+Run build/type-check/lint and responsive smoke tests.
+
+-------------------------- END COPY: PHASE 3 --------------------------
+
+======================================================================
+PHASE 4 — COMPLETE LANDING PAGE
+======================================================================
+
+------------------------- START COPY: PHASE 4 -------------------------
+
+Build the complete landing page for AJ System Soft Technology.
+
+Required order:
+
+1. floating premium header
+2. hero
+3. capability/trust strip
+4. services overview
+5. multi-platform "What we build"
+6. featured client projects
+7. development process
+8. industries
+9. technology/capability section
+10. why choose us
+11. real testimonials if they exist
+12. professional team section near the lower part of the page
+13. optional company/team gallery
+14. strong project inquiry CTA
+15. professional footer
+
+Hero:
+Primary message should communicate:
+"Software built around your requirements."
+
+Mention naturally:
+- websites/web apps
+- SaaS
+- Android/iOS
+- desktop/EXE
+- ERP/business systems
+- industry-specific software
+
+Create a lightweight original soft-3D hero showing layered product/device/software interfaces.
+
+Motion:
+- subtle entry
+- gentle scroll reveal
+- small hover lift
+- restrained perspective
+- reduced-motion support
+
+Do not use huge autoplay video.
+Do not delay interaction for animation.
+
+Read CMS-driven data from Supabase where appropriate.
+Handle missing optional content gracefully.
+
+Make desktop/tablet/mobile equally polished.
+
+Run build/type-check/lint and verify no horizontal overflow.
+
+-------------------------- END COPY: PHASE 4 --------------------------
+
+======================================================================
+PHASE 5 — SERVICES + INDUSTRIES
+======================================================================
+
+------------------------- START COPY: PHASE 5 -------------------------
+
+Build:
+
+/services
+/services/[slug]
+
+Initial editable service categories can include:
+- Custom Software Development
+- SaaS Development
+- Web Application Development
+- Website Development
+- Ecommerce Development
+- Android App Development
+- iOS App Development
+- Desktop Software Development
+- ERP & Business Software
+- Hospital & Clinic Software
+- Pharmacy Software
+- Retail POS & Inventory
+- Hotel Management Software
+- API & System Integrations
+- Cloud Deployment & Maintenance
+
+Every service page should include:
+- unique H1
+- useful summary
+- business problems solved
+- deliverables
+- supported platforms
+- typical capabilities/features
+- process
+- relevant projects
+- FAQ
+- CTA
+- breadcrumb
+- unique metadata
+- internal links
+
+Content must be useful and natural.
+Do not keyword-stuff.
+All service content must be manageable from /ajadmin.
+
+Run build/type-check/lint/SEO sanity checks.
+
+-------------------------- END COPY: PHASE 5 --------------------------
+
+======================================================================
+PHASE 6 — CLIENTS + PROJECTS + CASE STUDIES
+======================================================================
+
+------------------------- START COPY: PHASE 6 -------------------------
+
+Build the complete portfolio system:
+
+/projects
+/projects/[slug]
+
+Features:
+- featured projects
+- filters by platform/category/industry where data exists
+- premium project cards
+- responsive project media
+- project case-study pages
+
+Case study layout:
+- cover
+- client/project overview
+- challenge/problem
+- solution
+- key features
+- platform
+- technology stack
+- screenshots/gallery
+- optional video
+- results only if real
+- testimonial only if real
+- related projects
+- project inquiry CTA
+
+Public rules:
+- only published + active + public projects
+- confidential work stays private
+- client/logo/media visibility follows permission flags
+
+Use the complete project data model from the master requirements.
+
+Optimize all media.
+Create professional soft-3D application frames around screenshots without hurting readability.
+
+Run build/type-check/lint.
+
+-------------------------- END COPY: PHASE 6 --------------------------
+
+======================================================================
+PHASE 7 — ABOUT + TEAM + GALLERY
+======================================================================
+
+------------------------- START COPY: PHASE 7 -------------------------
+
+Build:
+
+/about
+/team
+
+ABOUT:
+- company introduction
+- primary name: AJ System Soft Technology
+- short name: AJS Technology
+- alternate names used naturally where appropriate
+- custom-requirement approach
+- capabilities
+- platforms
+- delivery process
+- company principles
+- CTA
+
+TEAM:
+- professional responsive photo gallery
+- role
+- short bio
+- skills if public
+- public social/profile links
+
+HOME PAGE:
+Add a strong Team section near the lower part of the landing page.
+
+GALLERY:
+Support optional company/team/workspace/event/project-safe images through CMS.
+
+Do not invent people, employee counts or qualifications.
+
+Run build/type-check/lint.
+
+-------------------------- END COPY: PHASE 7 --------------------------
+
+======================================================================
+PHASE 8 — CONTACT + REQUEST QUOTE + LEAD SYSTEM
+======================================================================
+
+------------------------- START COPY: PHASE 8 -------------------------
+
+Build:
+
+/contact
+/request-quote
+
+Quote form:
+- full name
+- company/business
+- email
+- phone
+- WhatsApp optional
+- location
+- project type
+- target platform
+- industry
+- budget range optional
+- timeline optional
+- project requirements
+- optional attachment
+- preferred contact method
+- consent where legally required
+
+UX:
+- clean
+- accessible
+- not unnecessarily long
+- strong validation
+- preserve data on recoverable failure
+- success state
+- error state
+- duplicate-submit protection
+- spam/rate-limit strategy
+
+Save submissions securely through server-side validation to Supabase.
+
+Create /ajadmin lead inbox:
+- new
+- contacted
+- qualified
+- proposal sent
+- won
+- lost
+- spam
+
+Support:
+- notes
+- filters
+- search
+- timestamps
+- optional assignment
+
+Add optional consultation/appointment-request model.
+
+Show WhatsApp CTA only when configured.
+
+Run security/build/type-check/lint tests.
+
+-------------------------- END COPY: PHASE 8 --------------------------
+
+======================================================================
+PHASE 9 — COMPLETE /ajadmin CMS
+======================================================================
+
+------------------------- START COPY: PHASE 9 -------------------------
+
+Build a production-quality /ajadmin application.
+
+Modules:
+
+1. Dashboard
+2. Brand / Website Settings
+3. Home Page Builder
+4. Navigation
+5. Services
+6. Clients
+7. Projects
+8. Team
+9. Testimonials
+10. Blog
+11. Media Library
+12. Contact Submissions
+13. Quote Requests
+14. Appointment Requests
+15. Optional Payment Links
+16. SEO Manager
+17. Users & Roles
+18. Audit Logs
+19. Redirect Manager if implemented
+
+CRUD:
+- create
+- edit
+- save draft
+- publish
+- unpublish
+- active/deactivate
+- reorder
+- preview
+- search
+- filter
+- pagination
+- soft delete where appropriate
+- restore where practical
+
+Home Page Builder:
+Use validated predefined section types.
+Admin can:
+- edit content
+- edit media
+- toggle visibility
+- reorder sections
+- choose approved layout variants
+- choose controlled theme/accent presets
+
+Do NOT allow unrestricted executable HTML/JavaScript injection.
+
+Admin UX:
+- modern
+- responsive
+- fast
+- accessible
+- unsaved-change protection
+- clear validation
+- confirmation before destructive actions
+- success/error toasts
+- loading/empty/error states
+
+Verify permission enforcement server-side.
+
+Run full build/type-check/lint/tests.
+
+-------------------------- END COPY: PHASE 9 --------------------------
+
+======================================================================
+PHASE 10 — BLOG / INSIGHTS
+======================================================================
+
+------------------------- START COPY: PHASE 10 -------------------------
+
+Build:
+
+/blog
+/blog/[slug]
+
+Features:
+- categories
+- tags
+- author
+- featured image
+- rich content
+- code blocks if needed
+- table of contents for long posts
+- related posts
+- share metadata
+- RSS if practical
+
+Admin:
+- create/edit
+- draft
+- publish
+- optional schedule
+- SEO metadata
+- OG image
+- preview
+
+SEO:
+- Article/BlogPosting structured data
+- breadcrumb
+- canonical
+- unique title/description
+- real author/date
+- no fake publishing dates
+- no spammy auto-generated content
+
+Content architecture can support useful subjects:
+- custom software planning
+- SaaS development
+- web vs mobile decisions
+- ERP digitization
+- hospital/pharmacy software concepts
+- POS/inventory automation
+- security and maintenance
+- project planning
+- software modernization
+- case-study learnings
+
+Run build/type-check/lint/metadata checks.
+
+-------------------------- END COPY: PHASE 10 --------------------------
+
+======================================================================
+PHASE 11 — TECHNICAL SEO + GOOGLE SEARCH READINESS
+======================================================================
+
+------------------------- START COPY: PHASE 11 -------------------------
+
+Perform a dedicated technical SEO implementation.
+
+BRAND:
+Primary: AJ System Soft Technology
+Short: AJS Technology
+Alternate:
+Ankit Jangid System Technology
+Ankit System Technology
+
+Implement:
+
+1. unique metadata per public page
+2. metadata title template
+3. unique descriptions
+4. canonical URLs
+5. sitemap.xml
+6. robots.txt
+7. OG/Twitter metadata
+8. Organization JSON-LD
+9. Organization alternateName values
+10. WebSite structured data where appropriate
+11. BreadcrumbList
+12. Article/BlogPosting for blog
+13. Service structured data only where valid
+14. semantic headings
+15. descriptive internal links
+16. descriptive alt text
+17. stable clean slugs
+18. redirect support for changed slugs
+19. branded 404
+20. noindex:
+    /ajadmin
+    /ajadmin/login
+    preview/private/internal pages
+21. verify all intended public pages are indexable
+22. verify robots does not accidentally block public assets/pages
+23. ensure core public content is server-rendered/discoverable
+24. Google Search Console verification support
+25. post-launch Search Console guide
+26. SEO audit report
+
+Suggested homepage title direction:
+"AJ System Soft Technology | Custom Software, SaaS, Web & App Development"
+
+Do not force every service keyword into every title.
+Do not guarantee rankings.
+
+Run:
+- sitemap check
+- robots check
+- canonical check
+- metadata check
+- structured-data sanity check
+- build
+
+-------------------------- END COPY: PHASE 11 --------------------------
+
+======================================================================
+PHASE 12 — PERFORMANCE ENGINEERING
+======================================================================
+
+------------------------- START COPY: PHASE 12 -------------------------
+
+Perform a full performance pass.
+
+Audit:
+- JavaScript bundle
+- client component count
+- hydration
+- fonts
+- images
+- hero media
+- third-party scripts
+- animation packages
+- any 3D
+- API waterfalls
+- repeated Supabase queries
+- database indexes
+- admin data grids
+- large lists
+- loading behavior
+
+Optimize:
+- Server Components where possible
+- code splitting
+- dynamic imports
+- responsive images
+- AVIF/WebP
+- stable image dimensions
+- font optimization
+- caching
+- request deduplication
+- optimized Supabase select columns
+- server pagination
+- lazy below-fold media
+- lazy admin-heavy components
+- do not ship admin code in public bundle unnecessarily
+- remove unused dependencies
+- tree-shake icons
+- CSS animation first
+
+3D rule:
+If any effect damages LCP/INP, simplify or replace it with CSS-only depth.
+
+Produce real measurements if tooling is available.
+Do not invent performance numbers.
+
+Run production build and report findings.
+
+-------------------------- END COPY: PHASE 12 --------------------------
+
+======================================================================
+PHASE 13 — ACCESSIBILITY + SECURITY HARDENING
+======================================================================
+
+------------------------- START COPY: PHASE 13 -------------------------
+
+Perform a complete accessibility and security pass.
+
+ACCESSIBILITY:
+- WCAG 2.2 AA
+- keyboard navigation
+- visible focus
+- logical tab order
+- screen-reader labels
+- form labels
+- validation announcements
+- modal/drawer focus management
+- contrast
+- reduced motion
+- heading hierarchy
+- touch target sizing
+- accessible tables
+- skip-to-content
+
+SECURITY:
+- verify RLS
+- verify admin authorization
+- verify private media
+- verify service-role key is server-only
+- validate all public writes server-side
+- validate uploads
+- safe rich-content rendering
+- safe external links
+- rate-limit strategy
+- production-safe error messages
+- no stack traces
+- no sensitive logs
+- no secrets in Git
+- audit destructive/admin operations
+
+Check dependency security with available package tooling.
+
+Fix all high-impact issues.
+
+Run tests/build/type-check/lint.
+
+-------------------------- END COPY: PHASE 13 --------------------------
+
+======================================================================
+PHASE 14 — DEPLOYMENT PORTABILITY
+======================================================================
+
+------------------------- START COPY: PHASE 14 -------------------------
+
+Prepare production deployment.
+
+The project should be GitHub-friendly and deployable to:
+
+- Vercel
+- Netlify
+- Cloudflare-compatible runtime/path where supported
+
+Requirements:
+- environment variable documentation
+- Supabase production setup
+- build command
+- runtime requirements
+- migrations process
+- redirects
+- security headers
+- caching headers
+- image/domain configuration
+- README deployment guide
+- backup/restore guidance
+- no hard-coded provider secrets
+- keep core business logic portable
+
+Security header strategy should consider:
+- Content-Security-Policy where practical
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+- frame protection
+
+Do not deploy a CSP that breaks required services.
+Document required origins.
+
+Confirm /ajadmin remains protected in production.
+
+Run production build in the deployment configuration.
+
+-------------------------- END COPY: PHASE 14 --------------------------
+
+======================================================================
+PHASE 15 — RESPONSIVE VISUAL QA
+======================================================================
+
+------------------------- START COPY: PHASE 15 -------------------------
+
+Perform a full responsive visual QA pass.
+
+Test:
+320
+360
+390
+430
+768
+1024
+1280
+1440
+1600+
+
+Check every public route and /ajadmin.
+
+Fix:
+- horizontal overflow
+- text clipping
+- floating nav behavior
+- mobile navigation
+- forms
+- project cards
+- galleries
+- team cards
+- service pages
+- tables
+- admin sidebar/header
+- dialogs
+- drawers
+- media uploader
+- breadcrumbs
+- footer
+- long client/project/service names
+- loading states
+- error states
+- empty states
+- mobile safe areas
+
+Mobile must be intentionally designed, not simply scaled down.
+
+Ensure:
+- correct touch targets
+- sticky elements do not cover content
+- image ratios remain professional
+- typography remains attractive
+- animations stay smooth
+- reduced motion still works
+
+Run build again.
+
+-------------------------- END COPY: PHASE 15 --------------------------
+
+======================================================================
+PHASE 16 — END-TO-END RELEASE QA
+======================================================================
+
+------------------------- START COPY: PHASE 16 -------------------------
+
+Do not declare production-ready until these flows are tested.
+
+PUBLIC:
+- Home
+- Services
+- Service detail
+- Projects
+- Project detail
+- About
+- Team
+- Contact
+- Request Quote
+- Blog
+- Blog detail
+- Legal pages
+- 404
+
+FORMS:
+- validation
+- success
+- failure
+- duplicate protection
+- attachment upload if enabled
+
+ADMIN:
+- login
+- logout
+- permissions
+- brand settings
+- home editor
+- services CRUD
+- clients CRUD
+- projects CRUD
+- team CRUD
+- testimonials
+- blog CRUD
+- media
+- lead status
+- SEO editor
+- publish/unpublish
+- active/deactivate
+- delete/restore where supported
+- audit log
+
+SEO:
+- sitemap
+- robots
+- metadata
+- canonical
+- structured data
+- noindex admin
+- public pages indexable
+
+SECURITY:
+- public cannot access admin data
+- editor cannot perform restricted admin actions
+- private media remains private
+
+PERFORMANCE:
+- no obvious jank
+- no excessive hydration
+- no giant media
+- no console errors
+
+RELEASE GATE:
+- production build passes
+- type-check passes
+- lint passes
+- relevant tests pass
+- no production-critical TODOs
+- no lorem ipsum on final public pages
+- no fake company/client claims
+
+Return a release report and only real remaining limitations.
+
+-------------------------- END COPY: PHASE 16 --------------------------
+
+======================================================================
+PHASE 17 — POST-LAUNCH GOOGLE / SEARCH CONSOLE
+======================================================================
+
+------------------------- START COPY: PHASE 17 -------------------------
+
+The website is now deployed on the real production domain.
+
+Perform the post-launch SEO readiness checklist:
+
+1. Confirm the final canonical production domain.
+2. Confirm HTTPS.
+3. Confirm Home returns HTTP 200.
+4. Confirm important public routes return 200.
+5. Confirm sitemap is reachable.
+6. Confirm robots.txt is reachable.
+7. Confirm robots allows public pages.
+8. Confirm /ajadmin is noindex.
+9. Confirm canonicals are production URLs, not localhost/staging.
+10. Confirm Organization structured data includes the correct primary/alternate brand identity.
+11. Confirm real logo/contact/social data.
+12. Prepare Google Search Console verification.
+13. Document:
+    - add domain/property
+    - verify ownership
+    - submit sitemap
+    - use URL Inspection
+    - request indexing for important new pages
+14. Check:
+    - Page Indexing
+    - Core Web Vitals
+    - Enhancements
+    - Manual Actions
+    - Security Issues
+15. Do not guarantee ranking or immediate indexing.
+16. Recommend content improvements based on real gaps, not keyword spam.
+
+Return a post-launch SEO report.
+
+-------------------------- END COPY: PHASE 17 --------------------------
+
+======================================================================
+PHASE 18 — FUTURE CUSTOMIZATION / MAINTENANCE GUIDE
+======================================================================
+
+------------------------- START COPY: PHASE 18 -------------------------
+
+Make the project easy to maintain and customize in the future with any competent coding AI or developer.
+
+Create documentation covering:
+
+- project architecture
+- design tokens
+- reusable UI components
+- public content data flow
+- Supabase tables
+- migrations
+- RLS
+- storage
+- /ajadmin modules
+- how to add a service
+- how to add a project field
+- how to create a safe new page-section type
+- how SEO metadata works
+- how sitemap/robots work
+- how deployment works
+- how to change brand color safely
+- how to change typography safely
+- how to add a payment gateway later
+- how to add email notifications later
+- how to add analytics later
+- how to add multilingual support later
+- backup and migration practices
+
+Create a clear README.
+
+Remove:
+- obsolete code
+- unused styles
+- unused dependencies
+- duplicated components
+
+Do not make the architecture dependent on one AI product.
+
+Run final production build and report final status.
+
+-------------------------- END COPY: PHASE 18 --------------------------
+
+======================================================================
+OPTIONAL PHASE — REAL EMAIL NOTIFICATIONS
+======================================================================
+
+------------------------- START COPY: OPTIONAL EMAIL PHASE -------------------------
+
+Add production email notifications after the core website is stable.
+
+Requirements:
+- choose an actual email provider explicitly
+- keep credentials server-only
+- notify admin of contact/quote requests
+- send visitor confirmation
+- prevent email/header injection
+- rate limit
+- branded templates
+- configurable recipient
+- safe delivery status logging
+- handle provider failures correctly
+
+Never fake successful delivery.
+
+-------------------------- END COPY: OPTIONAL EMAIL PHASE --------------------------
+
+======================================================================
+OPTIONAL PHASE — PAYMENT GATEWAY
+======================================================================
+
+------------------------- START COPY: OPTIONAL PAYMENT PHASE -------------------------
+
+Integrate a real gateway only after I specify the provider.
+
+Examples may include Razorpay, Stripe or another supported provider.
+
+Requirements:
+- official server-side integration
+- webhook signature verification
+- idempotency
+- reconciliation/status handling
+- no raw card storage
+- no client-exposed secret keys
+- save necessary transaction references/status only
+- role-protected admin payment view
+- applicable terms/privacy/refund content
+- sandbox/test mode before production
+
+Never mark a payment successful only because the browser says it succeeded.
+
+-------------------------- END COPY: OPTIONAL PAYMENT PHASE --------------------------
+
+======================================================================
+OPTIONAL PHASE — ANALYTICS
+======================================================================
+
+------------------------- START COPY: OPTIONAL ANALYTICS PHASE -------------------------
+
+Add privacy-conscious analytics.
+
+Requirements:
+- explicitly choose provider
+- defer loading
+- respect consent requirements
+- protect Core Web Vitals
+- track useful non-sensitive events:
+  start_project_click
+  quote_form_start
+  quote_form_submit
+  project_view
+  service_view
+  contact_click
+- never send sensitive form content to analytics
+- document cookie/privacy implications
+
+-------------------------- END COPY: OPTIONAL ANALYTICS PHASE --------------------------
+
+======================================================================
+EXACT COPY ORDER
+======================================================================
+
+MASTER PROJECT CONTEXT
+↓
+PHASE 0 — Audit / Plan
+↓
+PHASE 1 — Production Architecture
+↓
+PHASE 2 — Supabase / Auth / RLS / Storage
+↓
+PHASE 3 — Design System
+↓
+PHASE 4 — Landing Page
+↓
+PHASE 5 — Services
+↓
+PHASE 6 — Projects / Clients
+↓
+PHASE 7 — About / Team / Gallery
+↓
+PHASE 8 — Contact / Quote / Leads
+↓
+PHASE 9 — /ajadmin CMS
+↓
+PHASE 10 — Blog
+↓
+PHASE 11 — SEO
+↓
+PHASE 12 — Performance
+↓
+PHASE 13 — Accessibility / Security
+↓
+PHASE 14 — Deployment
+↓
+PHASE 15 — Responsive Visual QA
+↓
+PHASE 16 — Release QA
+↓
+DEPLOY TO THE REAL DOMAIN
+↓
+PHASE 17 — Google Search Console / Index Readiness
+↓
+PHASE 18 — Future Customization Documentation
+
+Optional after core release:
+- Email
+- Payment Gateway
+- Analytics
+
+======================================================================
+FINAL ACCEPTANCE CHECKLIST
+======================================================================
+
+BRAND
+[ ] Primary name: AJ System Soft Technology
+[ ] Short name: AJS Technology
+[ ] Alternate names used naturally
+[ ] Correct spelling "Technology"
+
+PUBLIC WEBSITE
+[ ] Premium landing page
+[ ] Services
+[ ] Service details
+[ ] Projects
+[ ] Project case studies
+[ ] About
+[ ] Team
+[ ] Team photos near lower landing page
+[ ] Gallery
+[ ] Contact
+[ ] Quote request
+[ ] Blog
+[ ] Legal pages
+[ ] Professional footer
+[ ] Strong project CTA
+
+ADMIN
+[ ] /ajadmin protected
+[ ] Brand editor
+[ ] Home page editor
+[ ] Section visibility/order
+[ ] Services CRUD
+[ ] Clients CRUD
+[ ] Projects CRUD
+[ ] Team CRUD
+[ ] Testimonials
+[ ] Blog
+[ ] Media
+[ ] Leads
+[ ] SEO editor
+[ ] Users/roles
+[ ] Audit logs
+[ ] Active/deactivate
+[ ] Draft/publish
+[ ] Reorder
+[ ] Public/private visibility
+
+SUPABASE
+[ ] Migrations
+[ ] RLS
+[ ] Auth
+[ ] Storage
+[ ] typed access
+[ ] no service-role key in browser
+[ ] confidential media protected
+
+SEO
+[ ] Unique titles
+[ ] descriptions
+[ ] canonical
+[ ] sitemap
+[ ] robots
+[ ] Organization schema
+[ ] alternateName
+[ ] breadcrumbs
+[ ] article schema
+[ ] clean URLs
+[ ] internal linking
+[ ] /ajadmin noindex
+[ ] Search Console launch guide
+
+PERFORMANCE
+[ ] Optimized images
+[ ] optimized font
+[ ] low JS
+[ ] server-rendered public content
+[ ] lazy below-fold media
+[ ] no heavy first-load 3D
+[ ] no layout shift
+[ ] smooth interactions
+[ ] efficient Supabase queries
+[ ] production build optimized
+
+QUALITY
+[ ] Responsive
+[ ] accessible
+[ ] secure
+[ ] original design
+[ ] no fake claims
+[ ] no console errors
+[ ] no build errors
+[ ] no TypeScript errors
+[ ] lint passes
+[ ] relevant tests pass
+[ ] deployment docs
+[ ] future customization docs
+
+======================================================================
+END OF AJ SYSTEM SOFT TECHNOLOGY MASTER PROMPT
+======================================================================

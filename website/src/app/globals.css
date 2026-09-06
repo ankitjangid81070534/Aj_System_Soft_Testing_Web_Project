@@ -1,0 +1,884 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   AJ System Soft Technology — PREMIUM 3D design system (Tailwind v4 theme)
+   Direction: crisp light canvas, deep-navy ink, electric-blue brand with
+   violet/cyan accents, layered soft-3D depth, liquid glass, GPU-only motion
+   (transform + opacity). Everything re-themes via CSS variables — see the
+   .dark overrides below. Tokens are the single source of truth.
+   ========================================================================== */
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  /* ---- Colors: primary electric blue (actions) ---- */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7ff;
+  --color-brand-200: #bcd2ff;
+  --color-brand-300: #8fb3ff;
+  --color-brand-400: #5f8bfb;
+  --color-brand-500: #3b6cf6;
+  --color-brand-600: #2557e8;
+  --color-brand-700: #1d45cf;
+  --color-brand-800: #1d3aa6;
+  --color-brand-900: #1d3483;
+  --color-brand-950: #152150;
+
+  /* ---- Colors: premium accents (violet + cyan) ---- */
+  --color-accent-50: #f3efff;
+  --color-accent-100: #e7dfff;
+  --color-accent-300: #c0a9ff;
+  --color-accent-500: #7c3aed;
+  --color-accent-600: #6d28d9;
+  --color-accent-700: #5b21b6;
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+
+  /* Legacy warm / sage supporting tones (kept for compatibility, tuned cooler) */
+  --color-warm-50: #fff7ed;
+  --color-warm-100: #ffedd5;
+  --color-warm-300: #fdba74;
+  --color-warm-500: #f97316;
+  --color-warm-700: #c2410c;
+  --color-sage-50: #ecfdf5;
+  --color-sage-100: #d1fae5;
+  --color-sage-500: #10b981;
+  --color-sage-700: #047857;
+
+  /* Content color on filled brand/danger surfaces (flips in dark theme) */
+  --color-on-brand: #ffffff;
+  --color-on-danger: #ffffff;
+
+  /* ---- Colors: cool neutrals (deep navy ink) ---- */
+  --color-canvas: #f5f7fb;
+  --color-canvas-raised: #eef1f7;
+  --color-surface: #ffffff;
+  --color-ink: #0b1220;
+  --color-ink-soft: #334155;
+  --color-ink-muted: #64748b;
+  --color-line: #e3e8f0;
+  --color-line-strong: #cbd3e0;
+
+  /* ---- Colors: semantic ---- */
+  --color-success: #059669;
+  --color-success-soft: #ecfdf5;
+  --color-warning: #b45309;
+  --color-warning-soft: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fef2f2;
+  --color-info: #2557e8;
+  --color-info-soft: #eef4ff;
+
+  /* ---- Typography: fluid display scale + eyebrow ---- */
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --text-display-sm: clamp(1.75rem, 1.2rem + 1.8vw, 2.375rem);
+  --text-display-sm--line-height: 1.12;
+  --text-display-md: clamp(2.125rem, 1.4rem + 2.6vw, 3rem);
+  --text-display-md--line-height: 1.08;
+  --text-display-lg: clamp(2.5rem, 1.6rem + 3.8vw, 4.25rem);
+  --text-display-lg--line-height: 1.05;
+  --text-display-xl: clamp(2.8rem, 1.8rem + 4.4vw, 4.75rem);
+  --text-display-xl--line-height: 1.02;
+
+  /* ---- Shadows: layered soft elevation + soft-3D (cool navy tint) ---- */
+  --shadow-e1:
+    0 1px 2px rgb(15 23 42 / 0.05), 0 3px 10px rgb(15 23 42 / 0.04),
+    inset 0 1px 0 rgb(255 255 255 / 0.8);
+  --shadow-e2:
+    0 2px 5px rgb(15 23 42 / 0.06), 0 10px 24px rgb(15 23 42 / 0.07),
+    inset 0 1px 0 rgb(255 255 255 / 0.85);
+  --shadow-e3:
+    0 4px 10px rgb(15 23 42 / 0.07), 0 18px 42px rgb(15 23 42 / 0.1),
+    inset 0 1px 0 rgb(255 255 255 / 0.88);
+  --shadow-e4:
+    0 8px 18px rgb(15 23 42 / 0.08), 0 30px 64px rgb(15 23 42 / 0.13),
+    inset 0 1px 0 rgb(255 255 255 / 0.9);
+  --shadow-3d:
+    0 2px 5px rgb(15 23 42 / 0.06), 0 14px 30px rgb(15 23 42 / 0.09),
+    0 34px 70px rgb(37 87 232 / 0.1), inset 0 1px 0 rgb(255 255 255 / 0.9);
+  --shadow-float:
+    0 8px 22px rgb(15 23 42 / 0.09), 0 32px 64px rgb(15 23 42 / 0.13),
+    0 0 0 1px rgb(37 87 232 / 0.06), inset 0 1px 0 rgb(255 255 255 / 0.92);
+  --shadow-glow: 0 0 0 1px rgb(37 87 232 / 0.18), 0 12px 40px -8px rgb(37 87 232 / 0.35);
+  --shadow-glow-accent:
+    0 0 0 1px rgb(124 58 237 / 0.18), 0 12px 40px -8px rgb(124 58 237 / 0.35);
+  --shadow-btn:
+    inset 0 1px 0 rgb(255 255 255 / 0.35), 0 1px 2px rgb(15 23 42 / 0.12),
+    0 10px 24px -6px rgb(37 87 232 / 0.45);
+
+  /* ---- Easing ---- */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.3, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---- Max-width containers ---- */
+  --container-narrow: 48rem; /* 768px  — prose/legal */
+  --container-content: 76rem; /* 1216px — default page container */
+  --container-wide: 88rem; /* 1408px — full-width showcases */
+
+  /* ---- Motion ---- */
+  --animate-panel-in: panel-in 240ms var(--ease-soft);
+  --animate-drawer-in: drawer-in 280ms var(--ease-soft);
+  --animate-float-slow: float-slow 7s ease-in-out infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-gradient-x: gradient-x 8s ease infinite;
+  --animate-spin-slow: spin 28s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.4s var(--ease-soft) infinite;
+}
+
+/* ---- Keyframes (transform/opacity only — GPU friendly) ---- */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes aurora {
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-2%, 4%, 0) scale(1.02);
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* AI Methods share-link banner: countdown bar shrinking to zero over the
+   redirect delay. Paired with the JS timer so both finish together. */
+@keyframes ai-redirect-bar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ---- Hero entrance + floating "breathing" badges (CSS-only, no JS) ---- */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-float-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, -10px);
+  }
+}
+
+@keyframes hero-float-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-2px, 10px);
+  }
+}
+
+@keyframes hero-float-c {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1px, -12px);
+  }
+}
+
+/* Hero entrance runs on every viewport (it is a one-shot, GPU-only
+   transform/opacity animation). The looping float badges stay desktop-only
+   to keep the mobile main thread free. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    animation: hero-rise 760ms var(--ease-out-expo) both;
+  }
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .hero-float-a {
+    animation: hero-float-a 5s ease-in-out infinite;
+  }
+
+  .hero-float-b {
+    animation: hero-float-b 5.5s ease-in-out infinite;
+  }
+
+  .hero-float-c {
+    animation: hero-float-c 4.8s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Reveal-once enhancement.
+   Safety model: `.reveal` alone is fully visible. The `.reveal-pending` state
+   is ONLY ever added by RevealObserver after hydration, to elements that are
+   below the fold at that moment — so crawlers, no-JS visitors and the first
+   paint never see hidden content. A CSS fail-safe animation additionally
+   forces any element still pending after 5s back to visible, so a broken
+   observer can never leave a blank section. */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 640ms var(--ease-out-expo) var(--reveal-delay, 0ms),
+    transform 760ms var(--ease-out-expo) var(--reveal-delay, 0ms);
+}
+
+.reveal.reveal-pending {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0) scale(0.985);
+  will-change: opacity, transform;
+  animation: reveal-failsafe 500ms var(--ease-out-expo) 5s both;
+}
+
+.reveal.reveal-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
+  animation: none;
+}
+
+@keyframes reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Mobile: a clearly visible but shorter lift so cards feel snappy while
+   thumb-scrolling; distance is tuned for ~360–430px viewports. */
+@media (max-width: 767px) {
+  .reveal {
+    transition:
+      opacity 520ms var(--ease-out-expo) var(--reveal-delay, 0ms),
+      transform 600ms var(--ease-out-expo) var(--reveal-delay, 0ms);
+  }
+  .reveal.reveal-pending {
+    transform: translate3d(0, 24px, 0) scale(0.99);
+  }
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Z-index scale (no Tailwind namespace for z): header 40 · drawer/dialog 50 ·
+   toast 60 · skip-link 70 */
+
+:root {
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+  --duration-slow: 360ms;
+  --focus-ring: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-brand-500);
+  --glass: rgb(255 255 255 / 0.72);
+  --glass-strong: rgb(255 255 255 / 0.86);
+  --glass-border: rgb(255 255 255 / 0.85);
+  --grid-line: rgb(15 23 42 / 0.055);
+  --aurora-a: rgb(59 108 246 / 0.28);
+  --aurora-b: rgb(124 58 237 / 0.22);
+  --aurora-c: rgb(6 182 212 / 0.22);
+  color-scheme: light;
+}
+
+/* ============================================================================
+   DARK THEME — elegant deep navy, never pure black. Overriding the same
+   variables the utilities reference re-themes the entire site. The brand ramp
+   inverts direction so semantic intent (600 = interactive) keeps working.
+   ========================================================================== */
+.dark {
+  --color-warm-50: #1f1710;
+  --color-warm-100: #2c2016;
+  --color-warm-300: #7c4a1f;
+  --color-warm-500: #fb923c;
+  --color-warm-700: #fdba74;
+  --color-sage-50: #0f1f18;
+  --color-sage-100: #163226;
+  --color-sage-500: #34d399;
+  --color-sage-700: #6ee7b7;
+
+  --color-brand-50: #0f1a33;
+  --color-brand-100: #142347;
+  --color-brand-200: #1e3568;
+  --color-brand-300: #3661b8;
+  --color-brand-400: #6b9cff;
+  --color-brand-500: #4f86ff;
+  --color-brand-600: #5c92ff; /* links/buttons on dark */
+  --color-brand-700: #7ca8ff; /* hover = brighter in dark */
+  --color-brand-800: #a3c2ff;
+  --color-brand-900: #c7dbff;
+  --color-brand-950: #e2ecff;
+
+  --color-accent-50: #1a1230;
+  --color-accent-100: #251a45;
+  --color-accent-300: #6d4bc4;
+  --color-accent-500: #a78bfa;
+  --color-accent-600: #b79cff;
+  --color-accent-700: #c9b5ff;
+  --color-cyan-50: #0a1f26;
+  --color-cyan-100: #0f2f3a;
+  --color-cyan-300: #1c7a90;
+  --color-cyan-500: #22d3ee;
+  --color-cyan-600: #4ee0f5;
+  --color-cyan-700: #7feafb;
+
+  --color-on-brand: #07101f; /* dark ink on the lighter filled buttons */
+  --color-on-danger: #200505;
+
+  --color-canvas: #070b14;
+  --color-canvas-raised: #111827;
+  --color-surface: #0d1321;
+  --color-ink: #f4f6fb;
+  --color-ink-soft: #cbd3e1;
+  --color-ink-muted: #94a0b8;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.16);
+
+  --color-success: #34d399;
+  --color-success-soft: rgba(52, 211, 153, 0.12);
+  --color-warning: #fbbf24;
+  --color-warning-soft: rgba(251, 191, 36, 0.12);
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.12);
+  --color-info: #7ca8ff;
+  --color-info-soft: rgba(92, 146, 255, 0.12);
+
+  --shadow-e1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+  --shadow-e2: 0 2px 4px rgb(0 0 0 / 0.4), 0 8px 20px rgb(0 0 0 / 0.35);
+  --shadow-e3: 0 4px 8px rgb(0 0 0 / 0.45), 0 16px 36px rgb(0 0 0 / 0.4);
+  --shadow-e4: 0 8px 16px rgb(0 0 0 / 0.5), 0 28px 56px rgb(0 0 0 / 0.5);
+  --shadow-3d:
+    0 2px 4px rgb(0 0 0 / 0.4), 0 12px 28px rgb(0 0 0 / 0.45), 0 32px 64px rgb(79 134 255 / 0.12),
+    inset 0 1px 0 rgb(255 255 255 / 0.06);
+  --shadow-float:
+    0 8px 22px rgb(0 0 0 / 0.45), 0 32px 64px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.06),
+    inset 0 1px 0 rgb(255 255 255 / 0.08);
+  --shadow-glow: 0 0 0 1px rgb(92 146 255 / 0.25), 0 12px 40px -8px rgb(92 146 255 / 0.45);
+  --shadow-glow-accent:
+    0 0 0 1px rgb(167 139 250 / 0.25), 0 12px 40px -8px rgb(167 139 250 / 0.45);
+  --shadow-btn:
+    inset 0 1px 0 rgb(255 255 255 / 0.25), 0 1px 2px rgb(0 0 0 / 0.4),
+    0 10px 24px -6px rgb(92 146 255 / 0.45);
+
+  --focus-ring: 0 0 0 2px var(--color-canvas), 0 0 0 4px var(--color-brand-500);
+  --glass: rgb(13 19 33 / 0.62);
+  --glass-strong: rgb(13 19 33 / 0.82);
+  --glass-border: rgb(255 255 255 / 0.1);
+  --grid-line: rgb(255 255 255 / 0.05);
+  --aurora-a: rgb(79 134 255 / 0.22);
+  --aurora-b: rgb(167 139 250 / 0.16);
+  --aurora-c: rgb(34 211 238 / 0.14);
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* Decorative aurora blobs and the trust-strip marquee intentionally extend
+   past the viewport edge. Clipping on <html> (not just <body>) is what stops
+   the viewport itself from gaining a horizontal scrollbar; `clip` keeps
+   position: sticky working, unlike `hidden`. */
+html {
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  overflow-x: clip;
+  transition: background-color 240ms var(--ease-soft);
+}
+
+::selection {
+  background-color: var(--color-brand-100);
+  color: var(--color-ink);
+}
+
+/* Slim, theme-aware scrollbar (WebKit + Firefox) */
+@media (min-width: 768px) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* ---- Reusable composed utilities ---- */
+
+@utility focus-ring {
+  outline: none;
+  &:focus-visible {
+    box-shadow: var(--focus-ring);
+  }
+}
+
+@utility card-lift {
+  transition:
+    transform var(--duration-normal) var(--ease-soft),
+    box-shadow var(--duration-normal) var(--ease-soft),
+    border-color var(--duration-normal) var(--ease-soft);
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-e4);
+    border-color: var(--color-line-strong);
+  }
+}
+
+/* Showcase/hero panel cards — stronger lift for feature cards */
+@utility card-lift-lg {
+  transition:
+    transform 280ms var(--ease-soft),
+    box-shadow 280ms var(--ease-soft);
+  &:hover {
+    transform: translateY(-6px) scale(1.005);
+    box-shadow: var(--shadow-float);
+  }
+}
+
+/* Soft-3D card: gradient hairline border, specular top edge, hover lift +
+   brand glow. Pure CSS — no runtime cost. */
+@utility card-3d {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-e1);
+  transition:
+    transform 320ms var(--ease-soft),
+    box-shadow 320ms var(--ease-soft),
+    border-color 320ms var(--ease-soft);
+  transform: translateZ(0);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgb(255 255 255 / 0.9),
+      rgb(255 255 255 / 0) 35%,
+      rgb(255 255 255 / 0) 65%,
+      var(--color-brand-100)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 0%),
+      var(--aurora-a),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 360ms var(--ease-soft);
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-6px) translateZ(0);
+      box-shadow: var(--shadow-float);
+      border-color: var(--color-brand-200);
+    }
+    &:hover::after {
+      opacity: 0.55;
+    }
+  }
+}
+
+.dark .card-3d::before {
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.18),
+    rgb(255 255 255 / 0) 35%,
+    rgb(255 255 255 / 0) 65%,
+    rgb(92 146 255 / 0.35)
+  );
+}
+
+/* Interactive 3D tilt on hover (desktop pointers only) */
+@utility tilt-3d {
+  transform-style: preserve-3d;
+  transition: transform 420ms var(--ease-soft);
+  @media (hover: hover) and (min-width: 1024px) {
+    &:hover {
+      transform: perspective(1200px) rotateX(2deg) rotateY(-3deg) translateY(-6px);
+    }
+  }
+}
+
+/* Liquid glass surface */
+@utility glass {
+  background-color: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.6),
+    0 1px 2px rgb(15 23 42 / 0.05),
+    0 12px 32px rgb(15 23 42 / 0.08);
+}
+
+.dark .glass {
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 1px 2px rgb(0 0 0 / 0.4),
+    0 12px 32px rgb(0 0 0 / 0.4);
+}
+
+@utility glass-strong {
+  background-color: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+}
+
+/* Brand gradients */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-brand-600) 0%,
+    var(--color-brand-500) 45%,
+    var(--color-accent-500) 100%
+  );
+}
+
+@utility bg-brand-gradient-soft {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-brand-50) 0%,
+    var(--color-surface) 50%,
+    var(--color-accent-50) 100%
+  );
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(
+    92deg,
+    var(--color-brand-600) 0%,
+    var(--color-brand-500) 40%,
+    var(--color-accent-500) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility text-gradient-animated {
+  background-image: linear-gradient(
+    92deg,
+    var(--color-brand-600),
+    var(--color-accent-500),
+    var(--color-cyan-500),
+    var(--color-brand-600)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-x 9s ease infinite;
+}
+
+/* Subtle engineering grid + radial fade — section background texture */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 100%);
+}
+
+@utility bg-dots {
+  background-image: radial-gradient(var(--grid-line) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Aurora blobs — place 2–3 inside a relative section */
+@utility aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+  animation: aurora 18s ease-in-out infinite alternate;
+}
+
+@utility aurora-a {
+  background: var(--aurora-a);
+}
+@utility aurora-b {
+  background: var(--aurora-b);
+  animation-delay: -6s;
+}
+@utility aurora-c {
+  background: var(--aurora-c);
+  animation-delay: -12s;
+}
+
+/* Icon tile — 3D bead with inner light */
+@utility icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  color: var(--color-brand-600);
+  background: linear-gradient(160deg, var(--color-surface), var(--color-brand-50));
+  border: 1px solid var(--color-brand-100);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    inset 0 -1px 0 rgb(37 87 232 / 0.06),
+    0 4px 12px rgb(37 87 232 / 0.1);
+  transition:
+    transform 320ms var(--ease-spring),
+    box-shadow 320ms var(--ease-soft);
+}
+
+.group:hover .icon-tile {
+  transform: translateY(-2px) scale(1.06) rotate(-3deg);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    0 10px 24px rgb(37 87 232 / 0.22);
+}
+
+.dark .icon-tile {
+  background: linear-gradient(160deg, var(--color-canvas-raised), var(--color-brand-50));
+  border-color: var(--color-brand-200);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 4px 12px rgb(0 0 0 / 0.35);
+}
+
+/* Filled gradient icon bead (white icon) */
+@utility icon-bead {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  color: #fff;
+  background: linear-gradient(145deg, var(--color-brand-500), var(--color-brand-700));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.35),
+    inset 0 -2px 4px rgb(0 0 0 / 0.15),
+    0 8px 18px -4px rgb(37 87 232 / 0.5);
+}
+
+/* Sheen sweep on hover for primary buttons/cards */
+@utility shine {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -40% auto -40% -60%;
+    width: 45%;
+    background: linear-gradient(
+      100deg,
+      rgb(255 255 255 / 0) 0%,
+      rgb(255 255 255 / 0.45) 50%,
+      rgb(255 255 255 / 0) 100%
+    );
+    transform: skewX(-20deg) translateX(-20%);
+    transition: transform 700ms var(--ease-soft);
+    pointer-events: none;
+  }
+  @media (hover: hover) {
+    &:hover::after {
+      transform: skewX(-20deg) translateX(420%);
+    }
+  }
+}
+
+/* Hero noise grain — CSS-only subtle texture, no image required */
+@utility hero-grain {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    border-radius: inherit;
+  }
+}
+
+/* Section divider — soft gradient hairline */
+@utility divider-glow {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-brand-300),
+    var(--color-accent-300),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+/* Marquee track (pairs with a duplicated child list) */
+@utility marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Skeleton shimmer: a restrained sheen sweep (frozen by reduced-motion). */
+.skeleton-shimmer {
+  background-image: linear-gradient(
+    110deg,
+    var(--color-canvas-raised) 40%,
+    var(--color-surface) 50%,
+    var(--color-canvas-raised) 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+dialog::backdrop {
+  background: rgb(7 11 20 / 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ---- Reduced motion: calm everything down (and skip delays, so delayed
+   entrances never hold content invisible) ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

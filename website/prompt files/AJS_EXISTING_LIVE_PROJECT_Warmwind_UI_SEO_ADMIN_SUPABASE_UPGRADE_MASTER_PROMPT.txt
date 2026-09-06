@@ -1,0 +1,1956 @@
+# AJ SYSTEM SOFT TECHNOLOGY — EXISTING LIVE PROJECT SAFE UPGRADE MASTER PROMPT
+## Warmwind-quality UI/UX + Supabase/Auth/Admin + Client Portal + Reviews + Advanced SEO + Search Console + AdSense/Google Ads Readiness
+
+======================================================================
+CRITICAL MODE — THIS IS AN EXISTING LIVE PROJECT
+======================================================================
+
+Production website:
+https://ajsystemsoft.in/
+
+Brand:
+AJ System Soft Technology
+Short brand: AJS Technology
+Alternate names: Ankit Jangid System Technology, Ankit System Technology
+
+Existing infrastructure already exists and must be preserved:
+- GitHub repository
+- Vercel deployment
+- Supabase project/database/auth/storage
+- current public website
+- current /ajadmin area
+- current Search Console verification/request setup
+
+DO NOT rebuild from zero.
+DO NOT delete the working project.
+DO NOT destroy or reset Supabase data.
+DO NOT disconnect GitHub, Vercel, Supabase or the production domain.
+DO NOT replace real backend logic with demo/mock data.
+DO NOT disable RLS just to make a feature work.
+DO NOT expose secrets.
+DO NOT force-push Git.
+
+The goal is a SAFE professional upgrade of the current production project.
+
+======================================================================
+MAIN OBJECTIVES
+======================================================================
+
+1. Audit every existing part before editing.
+2. Dramatically redesign the public website to the approved Warmwind-inspired visual quality.
+3. Keep the design ORIGINAL for AJ System Soft Technology.
+4. Fix the current /ajadmin login/sidebar security/UX issue.
+5. Change visible admin login to Username + Password safely while Supabase Auth continues to own password authentication.
+6. Audit all admin modules and make them fully working/manageable.
+7. Audit Supabase connection, migrations, RLS, storage and persistence.
+8. Add client login/signup with email/password and Google OAuth.
+9. Add client profile/password recovery/account experience.
+10. Add verified-real-client reviews with admin moderation.
+11. Ensure Contact submissions appear client-wise in admin.
+12. Ensure Request Quote submissions appear client-wise in admin.
+13. Perform an advanced SEO upgrade while preserving existing Search Console verification.
+14. Make the site technically ready for Google crawling/indexing without claiming guaranteed indexing/ranking.
+15. Make the website ready for a legitimate AdSense review without promising approval.
+16. Optionally prepare Google Ads/GA4 conversion events safely.
+17. Preserve GitHub/Vercel/Supabase production stability.
+18. Keep the final site superfast and responsive.
+
+======================================================================
+CURRENT SCREENSHOT AUDIT — DO NOT IGNORE
+======================================================================
+
+The current public UI is NOT at the requested reference quality.
+
+Observed public homepage problems:
+- generic light-blue SaaS-style hero background;
+- oversized basic centered heading;
+- strong blue underline/accent not matching the desired reference language;
+- normal template-like navigation rather than a refined floating product header;
+- insufficient layered visual depth;
+- insufficient product/device/project framing;
+- limited premium soft-3D composition;
+- page feels like a generic modern template instead of a distinctive high-end software company site.
+
+Current admin login screenshot problem:
+- admin sidebar/menu is visible before authentication;
+- protected section names are visible to unauthenticated users;
+- login form is embedded in the admin shell;
+- current login asks for Email + Password instead of the requested Username + Password.
+
+THE AI MUST NOT SAY THE CURRENT UI IS “GOOD ENOUGH”.
+It is not the target quality.
+
+======================================================================
+REFERENCE QUALITY LOCK — WARMwind INSPIRED, NOT A CLONE
+======================================================================
+
+Primary visual reference:
+https://warmwind.com/
+
+When browser/internet access is available, study the live site carefully:
+- floating pill navigation;
+- sticky/compact scroll behavior;
+- soft white/neutral canvas;
+- spacious vertical rhythm;
+- subtle low-contrast borders;
+- rounded premium cards;
+- diffuse soft shadows;
+- translucent/glass surfaces used sparingly;
+- clean typography;
+- restrained blue accents;
+- layered product/device screenshots;
+- soft 3D depth;
+- scroll reveals;
+- gentle parallax;
+- premium account/settings patterns;
+- clean footer organization;
+- responsive behavior.
+
+Do NOT copy:
+- Warmwind logo;
+- name;
+- copy/text;
+- photos/videos;
+- proprietary media;
+- exact layout;
+- exact section order;
+- pixel-identical design.
+
+Copy the DESIGN PRINCIPLES only and create an original AJ System Soft Technology identity.
+
+======================================================================
+STRICT VISUAL SPECIFICATION
+======================================================================
+
+CANVAS
+- soft neutral #F5F6F7 / #F7F7F8 style background;
+- white elevated surfaces;
+- no large flat pale-blue hero block like the current screenshot;
+- only faint ambient gradients/glows;
+- blue is an accent, not the page background.
+
+CONTENT WIDTH
+- primary content max-width approximately 1080–1180px;
+- cinematic visual sections can reach approximately 1240px;
+- consistent gutters and large controlled vertical whitespace.
+
+FLOATING HEADER — DESKTOP
+- centered sticky/floating container;
+- rounded/pill-like outer geometry;
+- roughly 78–90% viewport width depending screen;
+- max-width approximately 1080–1180px;
+- top gap roughly 12–20px;
+- translucent/white surface;
+- subtle border;
+- diffuse shadow;
+- controlled backdrop blur;
+- compact navigation labels;
+- primary CTA on the right;
+- gentle compact/shadow change after scrolling;
+- no layout shift.
+
+MOBILE HEADER
+- compact floating bar;
+- brand/short brand;
+- menu button;
+- premium drawer/bottom sheet;
+- no tiny compressed desktop navigation.
+
+HERO
+REMOVE the current generic pale-blue visual style.
+
+Create:
+- large clean whitespace;
+- small floating company/status pill;
+- elegant dark headline;
+- minimal blue emphasis on important words only;
+- NO thick blue underline;
+- concise supporting text;
+- primary CTA + secondary CTA;
+- layered software/project/device frames;
+- cards placed at multiple depths;
+- soft perspective;
+- gentle pointer parallax only on capable devices;
+- soft light/reflection overlays;
+- no heavy WebGL above the fold.
+
+SOFT 3D SYSTEM
+Use:
+- CSS perspective;
+- transform;
+- layered cards;
+- offset depth;
+- edge highlights;
+- soft shadows;
+- subtle reflection gradients;
+- browser/device frames;
+- controlled blur/glow.
+
+Do NOT use:
+- spinning objects;
+- game-like 3D;
+- excessive particles;
+- massive Three.js bundles for decorative UI.
+
+MOTION SYSTEM
+- microinteraction: 140–220ms;
+- menu/dialog: 220–360ms;
+- section reveal: 420–700ms;
+- card hover lift: 2–6px;
+- scale only around 1.01–1.025 where useful;
+- staggered reveals;
+- opacity + translate preferred;
+- subtle mask/clip reveals only for selected showcase sections;
+- reduced-motion support mandatory.
+
+Use transform/opacity/IntersectionObserver first.
+Avoid repeated heavy blur/layout animations.
+
+PUBLIC SECTION QUALITY
+Create premium original versions of:
+1. Hero
+2. What We Build / multi-platform constellation
+3. Services
+4. Featured Client Projects
+5. Project/workflow process
+6. Industries
+7. Rich project/media showcases
+8. Why Choose Us
+9. Real approved reviews only
+10. Team
+11. Blog/Insights preview
+12. Final project CTA
+13. Premium footer
+
+PROJECT SHOWCASE
+Do not rely only on plain rectangular cards.
+Use:
+- browser-window frames;
+- desktop app windows;
+- laptop-like frames;
+- phone frames;
+- layered screenshot scenes;
+- alternating case-study panels;
+- real metrics only when real.
+
+FOOTER
+- wide clean neutral surface;
+- strong AJS/AJ System Soft Technology branding;
+- Services;
+- Projects;
+- Company;
+- Contact;
+- Reviews;
+- Privacy;
+- Terms;
+- Cookie/Privacy choices when applicable;
+- social links;
+- copyright.
+
+======================================================================
+VISUAL REJECTION CRITERIA
+======================================================================
+
+Do NOT approve the redesign if any of these remain:
+- generic full-width blue/pale-blue SaaS hero;
+- thick blue hero underline;
+- generic Bootstrap/admin-template feel;
+- only flat cards with no visual hierarchy;
+- no floating premium header;
+- no meaningful motion system;
+- no layered device/project visual depth;
+- mobile simply shrinking desktop;
+- inconsistent radius/shadows/spacing;
+- visible admin navigation before authentication;
+- excessive animation/jank;
+- UI still substantially resembles the current screenshots with only minor colors changed.
+
+======================================================================
+VISUAL QA LOOP
+======================================================================
+
+After every visual phase:
+1. Run locally.
+2. Capture screenshots at 1366x768, 1440x900 and 390x844.
+3. Compare to Warmwind design principles and provided reference screenshots.
+4. Check header proportions, whitespace, hero depth, surface softness, media framing, typography and mobile behavior.
+5. Iterate if it still looks generic.
+6. Do not stop after the first attempt if reference quality has not been reached.
+
+======================================================================
+BRAND / GOOGLE SITE NAME
+======================================================================
+
+Primary organization:
+AJ System Soft Technology
+
+Short brand:
+AJS Technology
+
+Alternate names:
+Ankit Jangid System Technology
+Ankit System Technology
+
+Use “Technology” spelling correctly.
+
+Do not spam alternate names.
+
+Use consistent site identity across:
+- homepage visible brand;
+- title;
+- logo alt/name;
+- WebSite JSON-LD;
+- Organization JSON-LD;
+- og:site_name;
+- footer.
+
+WebSite structured data should define the preferred site name and a sensible alternateName.
+Organization structured data may contain valid alternate names naturally.
+Use only real social URLs in sameAs.
+
+======================================================================
+ADVANCED SEO / SEARCH CONSOLE
+======================================================================
+
+Search Console verification/request work already exists.
+PRESERVE the current verification method unless there is a proven reason to change it.
+
+IMPORTANT:
+Search Console ownership verification being green does NOT guarantee every page is indexed.
+Indexing and ranking are controlled by Google.
+Do not promise guaranteed success or first-page ranking.
+
+Perform an advanced technical SEO audit.
+
+CHECK:
+- canonical production domain;
+- HTTP -> HTTPS;
+- www/non-www consistency;
+- trailing slash consistency;
+- duplicate URLs;
+- redirects;
+- self-referencing canonical tags;
+- sitemap.xml;
+- robots.txt;
+- sitemap canonical URLs only;
+- absolute sitemap URLs;
+- real lastmod from updated content;
+- accidental noindex;
+- accidental robots blocking;
+- soft 404s;
+- broken links;
+- query parameter duplicates;
+- server-rendered important content;
+- titles;
+- meta descriptions;
+- H1 hierarchy;
+- image alt text;
+- breadcrumbs;
+- structured data;
+- page speed;
+- mobile usability;
+- dynamic service/project/blog indexability;
+- preview/staging noindex;
+- /ajadmin noindex;
+- /account and auth pages noindex.
+
+CREATE/UPGRADE:
+- robots.txt;
+- sitemap.xml;
+- metadataBase;
+- dynamic metadata;
+- canonical metadata;
+- Open Graph;
+- social images;
+- WebSite JSON-LD;
+- Organization JSON-LD;
+- BreadcrumbList;
+- Article/BlogPosting where applicable;
+- Service schema only where semantically valid;
+- favicon/icon set;
+- clean 404;
+- redirect manager/map;
+- sitemap generated from published/active/public Supabase content.
+
+CONTENT SEO
+- substantial original service descriptions;
+- useful case studies;
+- useful About page;
+- original Blog/Insights content;
+- no thin SEO pages;
+- no spun duplicate location pages;
+- no mass AI spam pages.
+
+ADMIN SEO HEALTH
+Create a professional admin SEO Health screen that can flag:
+- missing title;
+- missing description;
+- missing H1 where detectable;
+- missing canonical;
+- noindex;
+- missing sitemap inclusion;
+- missing OG image;
+- missing alt text;
+- duplicate title;
+- thin content warning;
+- missing structured data.
+
+Do not display fake “Indexed by Google” status unless Search Console API is actually integrated.
+Otherwise show “Check in Search Console”.
+
+======================================================================
+ADS TERMINOLOGY
+======================================================================
+
+GOOGLE ADS:
+Used to run paid campaigns to acquire visitors/leads.
+
+GOOGLE ADSENSE:
+Used to display Google ads on an eligible website for publisher monetization.
+
+Because the requirement is to apply so ads can display on the website, implement ADSENSE READINESS.
+Also optionally prepare Google Ads/GA4 conversion events.
+
+Do NOT promise AdSense approval.
+
+======================================================================
+ADSENSE READINESS
+======================================================================
+
+Prepare the site for a legitimate AdSense review.
+
+Quality requirements:
+- fully launched site;
+- no under-construction pages;
+- no lorem ipsum;
+- unique useful content;
+- clear navigation;
+- clear About;
+- clear Contact;
+- Privacy Policy;
+- Terms;
+- Cookie Policy/consent where applicable;
+- no scraped/copyright-infringing content;
+- no pages created mainly for ads;
+- no broken pages;
+- strong mobile UX.
+
+Do NOT render AdSense on:
+- /ajadmin/**;
+- admin login;
+- /login /signup /forgot-password /update-password;
+- /account/**;
+- private communications;
+- empty/error pages;
+- inappropriate form-only/private screens.
+
+Create a disabled-by-default ads architecture:
+- AdSenseScript;
+- AdSlot;
+- responsive placements;
+- consent-aware loading;
+- layout-space reservation to reduce CLS;
+- env/admin configuration.
+
+Suggested configuration names, adapt to current conventions:
+NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT
+NEXT_PUBLIC_GOOGLE_ADSENSE_ENABLED
+
+Do not invent a publisher ID.
+
+ADS.TXT
+Prepare support for ads.txt.
+Only generate the real line after a real AdSense publisher ID/instruction exists.
+
+Do not disguise ads as navigation/content.
+Do not position ads to encourage accidental clicks.
+Do not overload the site with ad slots.
+
+======================================================================
+OPTIONAL GOOGLE ADS / GA4 CONVERSION READINESS
+======================================================================
+
+Prepare safe events:
+- start_project_click
+- contact_form_submit_success
+- quote_request_submit_success
+- signup_success
+- phone_click
+- whatsapp_click
+
+Do not send raw PII or sensitive project details:
+- name;
+- email;
+- phone;
+- passwords;
+- message text;
+- detailed requirements.
+
+Keep tracking IDs configurable and avoid duplicate tags.
+
+======================================================================
+SUPABASE FULL CONNECTION AUDIT
+======================================================================
+
+The Supabase/Vercel connection already exists.
+Audit it safely.
+
+CHECK:
+- project URL;
+- publishable/anon key usage;
+- service-role server-only usage;
+- browser/client creation;
+- server/SSR creation;
+- cookie/session refresh;
+- env mapping in Vercel;
+- local env;
+- Preview/Production env;
+- migrations;
+- generated DB types;
+- RLS;
+- indexes;
+- storage buckets/policies;
+- auth provider settings;
+- redirect URLs;
+- query errors;
+- deployment logs.
+
+Never expose secret values in reports.
+
+VERIFY PERSISTENCE WITH CONTROLLED TESTS:
+- Contact submission;
+- Request Quote;
+- user profile;
+- review;
+- admin service/project/team CRUD;
+- media upload.
+
+Verify the expected Supabase rows/files and remove unnecessary test data afterward.
+
+Create a safe admin System Health view showing only non-secret status:
+- Supabase reachable;
+- Auth configured;
+- Storage configured;
+- required tables present;
+- migration/app version.
+
+======================================================================
+ADMIN AUTH — USERNAME + PASSWORD
+======================================================================
+
+Current UI uses Email + Password.
+Change visible admin login to:
+USERNAME
+PASSWORD
+
+Supabase Auth must remain the password authority.
+Do NOT store passwords in Postgres profile/admin tables.
+
+Supabase password auth natively uses email+password or phone+password.
+Therefore build a secure SERVER-SIDE username resolver.
+
+Create/adapt a secure admin account mapping:
+- user_id UUID -> auth.users.id;
+- username case-insensitive unique;
+- normalized username;
+- active state;
+- role relationship;
+- timestamps.
+
+If equivalent profile/role tables already exist, integrate with them instead of creating duplicate RBAC systems.
+
+LOGIN FLOW:
+1. /ajadmin opened unauthenticated.
+2. Show ONLY standalone /ajadmin/login.
+3. No admin sidebar/menu/options.
+4. User enters username + password.
+5. Server action normalizes username and rate-limits.
+6. Server-only privileged lookup resolves linked Auth identity.
+7. Internally use Supabase Auth signInWithPassword with the linked auth credential identity.
+8. Verify admin account active and authorized role.
+9. Generic error for invalid credentials.
+10. On success render/redirect to protected admin shell.
+
+Deep routes:
+/ajadmin/team unauthenticated -> /ajadmin/login?next=/ajadmin/team
+
+Validate `next` to prevent open redirect.
+
+Test:
+- wrong username;
+- wrong password;
+- inactive admin;
+- normal client user;
+- valid admin;
+- expired session;
+- logout.
+
+======================================================================
+SUPABASE ADMIN MIGRATION / QUERY FILES
+======================================================================
+
+Create safe files under the current repository conventions, for example:
+
+supabase/migrations/<timestamp>_admin_username_auth.sql
+supabase/admin/create_admin.sql
+supabase/admin/README.md
+scripts/create-admin.ts   (recommended)
+
+The migration must adapt to existing tables.
+Do not blindly duplicate roles/profiles.
+
+Reference outcome only — adapt safely:
+
+create extension if not exists citext;
+
+create table if not exists public.admin_accounts (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  username citext not null unique,
+  active boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.admin_accounts enable row level security;
+
+Policies MUST match current RBAC.
+Do not add an insecure public `using (true)` policy.
+
+ADMIN CREATION METHOD A:
+1. Create/invite an Auth user through Supabase Authentication.
+2. Set password/invite through Supabase Auth.
+3. Copy user UUID.
+4. Run an idempotent mapping query for username/role/active.
+
+ADMIN CREATION METHOD B:
+Create a server/local bootstrap script using SERVICE ROLE securely:
+- creates/invites Auth user;
+- maps username;
+- maps role;
+- never commits password;
+- preferably uses invite/password setup flow.
+
+NEVER create:
+password text
+inside public/admin tables.
+
+README must include exact safe steps.
+
+======================================================================
+CLIENT LOGIN / SIGNUP / GOOGLE AUTH
+======================================================================
+
+Add a public client auth system separate from admin.
+
+Routes:
+/login
+/signup
+/forgot-password
+/auth/callback
+/update-password
+/account
+/account/profile
+/account/requests
+/account/reviews
+
+Header:
+Add tasteful Login / Sign Up or an Account control.
+
+Support:
+- email/password signup;
+- email verification;
+- email/password login;
+- Google OAuth using Supabase;
+- logout;
+- forgot-password email;
+- secure update-password flow;
+- profile editing.
+
+Google OAuth:
+Audit/configure:
+- Supabase Google provider;
+- Google Cloud OAuth setup;
+- production redirect URL;
+- localhost redirect URL;
+- Supabase Site URL;
+- redirect allow list;
+- SSR/PKCE callback flow for current Next.js architecture.
+
+Do not expose OAuth secret.
+
+PROFILE:
+- avatar;
+- name;
+- email;
+- phone optional;
+- company optional;
+- joined date;
+- auth provider;
+- own Contact/Quote history where appropriate;
+- own review history.
+
+PASSWORD RECOVERY:
+Use Supabase recovery email.
+Use generic success messages that do not reveal whether an account exists.
+Allow secure update after recovery callback.
+
+Google-only account UX must not show misleading password controls if password auth is not configured for that identity.
+
+Private account pages:
+- RLS own-data only;
+- noindex;
+- no AdSense.
+
+======================================================================
+CLIENT PROFILE DATA
+======================================================================
+
+Use/adapt existing profile table safely.
+
+Suggested fields:
+- id UUID = auth.users.id
+- full_name
+- avatar_url
+- phone
+- company_name
+- account_type
+- client_status
+- active
+- created_at
+- updated_at
+
+client_status values may include:
+- registered
+- verified_client
+- inactive
+
+Do NOT mark every signup as verified_client automatically.
+
+======================================================================
+REAL VERIFIED CLIENT REVIEWS
+======================================================================
+
+Add a Reviews system.
+
+Public route:
+/reviews
+
+Account:
+/account/reviews
+
+Admin:
+/ajadmin/reviews
+
+Footer:
+Reviews link.
+
+Only VERIFIED REAL CLIENTS can submit a review.
+
+Eligibility must be server-side and based on one of:
+- client_status = verified_client;
+- linked real client/project/won quote;
+- explicit admin approval.
+
+Normal signup alone is not enough.
+
+Suggested review model, adapt to existing schema:
+- id
+- user_id
+- client_id optional
+- project_id optional
+- rating 1..5
+- title optional
+- review_text
+- status pending/approved/rejected
+- admin_response optional
+- created_at
+- updated_at
+
+Rules:
+- authenticated;
+- verified eligibility;
+- rate-limited;
+- output escaped;
+- min/max text validation;
+- moderation;
+- public only approved;
+- one review per relevant project/user where appropriate.
+
+Homepage shows approved real reviews only.
+If none exist, hide the section gracefully.
+Never generate fake testimonials.
+
+Do not add self-serving aggregateRating rich-result markup unless current Google guidance clearly supports the exact entity/use case.
+
+======================================================================
+CONTACT SUBMISSIONS -> ADMIN CLIENT-WISE
+======================================================================
+
+Audit and fix Contact end-to-end.
+
+On submit:
+- validate server-side;
+- persist in Supabase;
+- attach user_id if logged in;
+- guest submission can remain allowed if desired;
+- store submitted fields;
+- status = new;
+- timestamps;
+- spam/rate-limit protection;
+- success/error UX.
+
+Suggested fields:
+- id
+- user_id nullable
+- full_name
+- email
+- phone
+- company
+- subject
+- message
+- status
+- source_page
+- created_at
+- updated_at
+
+Admin route:
+/ajadmin/leads or /ajadmin/contact-submissions
+
+Admin shows:
+- client/user avatar;
+- name;
+- email;
+- phone;
+- company;
+- logged-in/guest;
+- message summary;
+- date;
+- status;
+- full detail;
+- internal notes;
+- search/filter/pagination;
+- optional assignment.
+
+Client detail/timeline should combine profile + contact messages + quote requests + reviews + related projects when available.
+
+======================================================================
+REQUEST A QUOTE -> ADMIN CLIENT-WISE
+======================================================================
+
+Audit and fix Request a Quote.
+
+Store:
+- user_id nullable
+- full_name
+- email
+- phone
+- WhatsApp
+- company
+- location
+- project_type
+- platform
+- industry
+- budget_range
+- timeline
+- project_summary
+- detailed_requirements
+- safe attachment
+- preferred_contact_method
+- status
+- timestamps
+
+Admin:
+/ajadmin/quotes
+
+Statuses:
+new
+reviewing
+contacted
+qualified
+proposal_preparing
+proposal_sent
+won
+lost
+spam
+
+Show client-wise detail, attachments, notes and timeline/history.
+
+Logged-in client may see their own requests in /account/requests.
+RLS must enforce own rows.
+
+======================================================================
+ADMIN MANAGEMENT SYSTEM AUDIT
+======================================================================
+
+Do not assume a visible menu means a working module.
+Audit actual functionality.
+
+Required modules:
+
+OVERVIEW
+- Dashboard
+
+CONTENT
+- Services
+- Projects
+- Clients
+- Team
+- Reviews/Testimonials
+- Blog Posts
+- Categories
+- Tags
+
+SITE SETUP
+- Home Builder
+- Brand & Settings
+- Navigation
+- Media Library
+- SEO Manager
+- Redirects
+
+LEADS/CRM
+- Contact submissions
+- Quote requests
+- Appointments if used
+- Client profiles
+- Reviews moderation
+
+AUTH/SECURITY
+- Admin users
+- Roles/permissions
+- Audit logs
+
+MONETIZATION
+- AdSense readiness/settings
+- ad placement toggles only after configuration
+- optional Google Ads/Analytics IDs
+
+SYSTEM
+- Supabase health
+- migration/app health
+- SEO health
+
+For every module verify:
+- list;
+- search;
+- filter;
+- pagination;
+- create;
+- edit;
+- validation;
+- media;
+- save;
+- loading/error;
+- active/deactivate;
+- draft/publish;
+- public/private;
+- delete/soft delete;
+- restore;
+- reorder;
+- permissions;
+- responsive UI.
+
+Hide or implement dead menu items.
+
+======================================================================
+ADMIN UI REDESIGN
+======================================================================
+
+Use the same premium AJS design language but prioritize productivity.
+
+- soft neutral canvas;
+- elevated white workspace;
+- compact sidebar AFTER auth;
+- compact topbar;
+- pill tabs;
+- dense readable tables;
+- subtle shadows;
+- clear status pills;
+- blue primary action;
+- drawers for edit when useful;
+- responsive mobile drawer;
+- no giant wasteful cards.
+
+LOGIN PAGE:
+Standalone centered premium card.
+Brand.
+Username.
+Password.
+Sign In.
+No sidebar.
+No protected menu names.
+
+======================================================================
+HOME BUILDER
+======================================================================
+
+Upgrade Home Builder to manage safe structured sections:
+- hero;
+- capability strip;
+- what we build;
+- services;
+- projects;
+- process;
+- industries;
+- capabilities;
+- reviews;
+- team;
+- gallery;
+- blog preview;
+- final CTA.
+
+Allow:
+- edit;
+- media;
+- reorder;
+- visible/hidden;
+- approved layout variants;
+- preview.
+
+Draft preview must be protected/noindex.
+No arbitrary executable JS.
+
+======================================================================
+MEDIA SYSTEM
+======================================================================
+
+Audit Supabase Storage.
+
+Media Library should support:
+- upload;
+- title;
+- alt text;
+- caption;
+- dimensions;
+- file size/type;
+- category/folder;
+- usage reference where practical;
+- safe delete;
+- public/private;
+- optimized rendering.
+
+Use responsive image sizes and stable aspect ratios.
+Avoid massive homepage images.
+
+======================================================================
+SECURITY
+======================================================================
+
+Mandatory:
+- RLS for user/private/admin data;
+- server role checks;
+- route guards;
+- session refresh;
+- inactive-user/admin checks;
+- rate limits on login/signup/reset/contact/quote/reviews;
+- upload MIME/size validation;
+- server validation;
+- output encoding;
+- no secrets client-side;
+- no sensitive logs;
+- production-safe errors;
+- security headers;
+- carefully designed CSP;
+- open-redirect prevention;
+- safe callback/redirect allow list;
+- audit destructive operations.
+
+Do not break required Google OAuth/AdSense domains with CSP; allow only verified required origins.
+
+======================================================================
+SUPERFAST PERFORMANCE
+======================================================================
+
+Target:
+- green Core Web Vitals where realistic;
+- LCP about <=2.5s practical;
+- CLS <=0.1;
+- INP about <=200ms practical.
+
+Audit:
+- bundle;
+- hydration;
+- use client usage;
+- images;
+- fonts;
+- icons;
+- animations;
+- Supabase waterfalls;
+- third-party Google scripts;
+- admin tables.
+
+Optimize:
+- Server Components where current architecture supports them;
+- static/ISR/public caching where appropriate;
+- revalidation after CMS publish;
+- route splitting;
+- dynamic import;
+- image optimization;
+- one variable font;
+- tree-shaken icons;
+- admin/public bundle separation;
+- lazy 3D;
+- no layout-thrashing scroll listeners;
+- efficient Supabase queries/indexes.
+
+Do not fake Lighthouse scores.
+
+======================================================================
+GITHUB / VERCEL / DEPLOYMENT SAFETY
+======================================================================
+
+Existing connections must remain intact.
+
+Audit:
+- Git production branch;
+- Vercel project;
+- framework/build config;
+- env variable names;
+- Production/Preview/Development scopes;
+- Node/runtime;
+- Supabase redirect URLs;
+- Google OAuth callback URLs;
+- canonical domain;
+- preview deployment indexing.
+
+Git rules:
+- no force push;
+- no secrets;
+- preserve history;
+- logical commits;
+- build before production merge/deploy.
+
+Preview deployments should be noindex where appropriate.
+
+After production deployment test:
+- public routes;
+- auth;
+- Google OAuth;
+- admin username login;
+- Contact -> DB -> admin;
+- Quote -> DB -> admin;
+- Review moderation;
+- sitemap;
+- robots;
+- schema.
+
+======================================================================
+PHASE RULE
+======================================================================
+
+Execute ONE PHASE AT A TIME.
+
+After each phase:
+1. list files inspected;
+2. list files created;
+3. list files changed;
+4. list DB migrations;
+5. explain changes;
+6. run production build;
+7. run typecheck;
+8. run lint;
+9. run relevant tests;
+10. run browser smoke test if possible;
+11. fix every new error;
+12. separate pre-existing issues;
+13. capture screenshots for visual phases;
+14. STOP and wait for approval.
+
+======================================================================
+MASTER CONTEXT — COPY FIRST
+======================================================================
+
+------------------------- START COPY: MASTER CONTEXT -------------------------
+
+This is my EXISTING LIVE production project.
+
+Website:
+https://ajsystemsoft.in/
+
+Brand:
+AJ System Soft Technology
+
+Short brand:
+AJS Technology
+
+Alternate names:
+Ankit Jangid System Technology
+Ankit System Technology
+
+GitHub, Vercel and Supabase are already connected.
+Do not rebuild from zero.
+Do not delete current data or production connections.
+
+The current public UI is NOT acceptable as the final design.
+The current pale-blue hero and basic navbar feel like a generic SaaS template.
+
+Reference:
+https://warmwind.com/
+
+Study its visual principles carefully:
+floating pill navigation,
+soft white/neutral canvas,
+beautiful whitespace,
+rounded premium surfaces,
+soft shadows,
+controlled glass,
+layered project/device screens,
+soft 3D,
+gentle scroll animation,
+high-end typography,
+minimal blue accent,
+premium footer/account patterns.
+
+Create an ORIGINAL AJ System Soft Technology design.
+Do not copy Warmwind content/logo/assets.
+
+Current admin issue:
+/ajadmin login shows sidebar/menu before login.
+Fix this completely.
+Unauthenticated admin users should see only a clean standalone login page.
+
+Change admin visible login from Email + Password to Username + Password safely.
+Supabase Auth must continue to own passwords.
+Create server-side username resolution and migration/query/scripts inside the Supabase project.
+Never store plaintext passwords in database tables.
+
+Add client auth:
+email/password signup/login,
+Google OAuth,
+forgot/reset password,
+profile,
+avatar,
+request history,
+review history.
+
+Only verified real clients may submit public reviews.
+Reviews require admin moderation.
+Add Reviews in footer/account/admin.
+Never create fake reviews.
+
+Contact submissions must save to Supabase and appear client-wise in admin.
+Quote requests must save to Supabase and appear client-wise in admin.
+
+Audit all Supabase tables/RLS/storage/migrations and verify actual persistence.
+
+Search Console verification is already done/requested.
+Preserve it and perform advanced technical/content SEO.
+Do not promise guaranteed indexing or ranking.
+
+Prepare the site for legitimate Google AdSense review.
+Do not promise approval.
+Do not render ads on admin/private/auth/account pages.
+Also prepare optional Google Ads/GA4 conversion events without sending sensitive personal data.
+
+Keep the premium redesign extremely fast.
+
+Work phase-by-phase only.
+After every phase run build/typecheck/lint/tests and STOP for approval.
+
+Acknowledge this context, inspect the repository and WAIT for PHASE 0.
+
+-------------------------- END COPY: MASTER CONTEXT --------------------------
+
+======================================================================
+PHASE 0 — COMPLETE AUDIT, NO MAJOR REWRITE
+======================================================================
+
+------------------------- START COPY: PHASE 0 -------------------------
+
+Perform a complete SAFE audit of the existing live project.
+Do not redesign or run destructive migrations yet.
+
+Audit:
+
+A. Repository
+framework/version, React, package manager, dependencies, routes, layouts, middleware, APIs/server actions, components, styling, env validation, Git/Vercel config.
+
+B. Public UI
+header, hero, sections, services, projects, about, team, contact, quote, blog, footer, responsive behavior.
+
+C. Admin
+/ajadmin routing, login/sidebar leak, guards, menus, CRUD completeness, media, home builder, SEO, leads, permissions.
+
+D. Supabase
+clients, env usage, schema, migrations, indexes, RLS, roles, storage, triggers, generated types, auth, redirects.
+
+E. SEO
+metadata, canonical, sitemap, robots, JSON-LD, site name, noindex, dynamic routes, redirects, preview behavior.
+
+F. Performance
+bundle, hydration, images, fonts, animation, scripts, data waterfalls.
+
+G. Security
+secret exposure, RLS gaps, guards, uploads, validation, rate limiting, open redirects.
+
+H. Google/Ads
+Search Console verification implementation, analytics/tags, any existing AdSense code, legal/content readiness.
+
+Return table:
+AREA | CURRENT STATE | ISSUE | RISK | REQUIRED FIX | PHASE
+
+Create safe implementation order.
+Do not change production data.
+STOP.
+
+-------------------------- END COPY: PHASE 0 --------------------------
+
+======================================================================
+PHASE 1 — SAFE BASELINE / BACKUP / BUILD HEALTH
+======================================================================
+
+------------------------- START COPY: PHASE 1 -------------------------
+
+Establish a safe baseline before major changes.
+
+- understand Git working state;
+- use a safe branch strategy;
+- preserve history;
+- record current build/typecheck/lint/test status;
+- fix only baseline blockers;
+- verify .gitignore;
+- ensure secrets are not committed;
+- verify env NAMES only;
+- verify Vercel Production/Preview configuration;
+- verify Supabase connection;
+- document current migration/schema state safely;
+- create migration safety notes;
+- capture baseline screenshots: homepage desktop/mobile and /ajadmin/login.
+
+Run build/typecheck/lint/tests.
+Return baseline report.
+STOP.
+
+-------------------------- END COPY: PHASE 1 --------------------------
+
+======================================================================
+PHASE 2 — DESIGN SYSTEM REBUILD
+======================================================================
+
+------------------------- START COPY: PHASE 2 -------------------------
+
+Rebuild the visual foundation while preserving working application logic.
+
+Replace the generic blue-template design language.
+
+Create/refine tokens:
+canvas, surfaces, text, accent, semantic states, spacing, radius, shadows, borders, containers, type scale, motion, focus.
+
+Create/refactor:
+MarketingHeader, MobileMenu, Button, IconButton, Card, MediaFrame, ProjectFrame, ServiceCard, TeamCard, ReviewCard, Section, SectionHeader, StatusPill, Tabs, Accordion, Drawer, Dialog, Toast, Skeleton and forms.
+
+Header must become a floating premium pill/container with compact-on-scroll behavior.
+
+Do not redesign every page yet.
+Validate desktop/mobile/reduced-motion/focus.
+Capture screenshots.
+If it remains generic, iterate.
+
+Run build/typecheck/lint.
+STOP.
+
+-------------------------- END COPY: PHASE 2 --------------------------
+
+======================================================================
+PHASE 3 — HOME PAGE FULL PREMIUM REDESIGN
+======================================================================
+
+------------------------- START COPY: PHASE 3 -------------------------
+
+Redesign the homepage completely using the approved reference principles.
+
+REMOVE the existing pale-blue generic hero styling.
+
+Build:
+1. floating header
+2. premium neutral hero
+3. layered what-we-build software/device constellation
+4. services
+5. featured projects
+6. process
+7. industries/capabilities
+8. rich project media frames
+9. why choose us
+10. approved real reviews only
+11. team
+12. blog preview
+13. final CTA
+14. premium footer
+
+Hero:
+small floating brand badge,
+dark refined headline,
+restrained blue emphasis,
+no thick underline,
+2 CTAs,
+layered app/device cards,
+soft perspective,
+subtle parallax,
+lightweight implementation.
+
+Use actual published Supabase content where available.
+No fake clients/reviews/metrics.
+
+Capture 1366x768, 1440x900 and 390x844 screenshots.
+Compare against reference principles and iterate until the old generic look is gone.
+
+Run build/typecheck/lint.
+STOP.
+
+-------------------------- END COPY: PHASE 3 --------------------------
+
+======================================================================
+PHASE 4 — ALL PUBLIC PAGES REDESIGN
+======================================================================
+
+------------------------- START COPY: PHASE 4 -------------------------
+
+Apply the premium design system consistently to all public pages:
+/services
+/services/[slug]
+/projects
+/projects/[slug]
+/about
+/team
+/contact
+/request-quote
+/blog
+/blog/[slug]
+/reviews
+/privacy
+/terms
+/cookie-policy if used.
+
+Use premium internal heroes, breadcrumbs, project frames, cards, responsive forms, loading/empty/error states and restrained motion.
+
+Do not over-animate Contact/Quote/legal pages.
+Run responsive screenshots/build/typecheck/lint.
+STOP.
+
+-------------------------- END COPY: PHASE 4 --------------------------
+
+======================================================================
+PHASE 5 — SUPABASE RELIABILITY / DATA PERSISTENCE
+======================================================================
+
+------------------------- START COPY: PHASE 5 -------------------------
+
+Audit and harden the existing Supabase integration.
+
+- schema;
+- migrations;
+- RLS;
+- auth;
+- storage;
+- SSR/browser clients;
+- cookies/sessions;
+- Vercel env integration;
+- generated types;
+- indexes;
+- duplicate/outdated structures.
+
+Use additive safe migrations.
+Do not drop existing data blindly.
+
+Perform controlled persistence tests for public reads, admin CRUD, Contact, Quote and storage.
+Verify DB rows/files and clean unnecessary tests.
+
+Create a non-secret System Health admin screen.
+
+Run build/typecheck/lint/tests.
+STOP.
+
+-------------------------- END COPY: PHASE 5 --------------------------
+
+======================================================================
+PHASE 6 — ADMIN USERNAME LOGIN + LOGIN SHELL FIX
+======================================================================
+
+------------------------- START COPY: PHASE 6 -------------------------
+
+Fix admin authentication.
+
+Unauthenticated /ajadmin:
+standalone login only.
+NO sidebar/menu/options.
+
+Visible fields:
+Username
+Password
+
+Implement secure server-side username -> Supabase Auth identity resolution.
+Keep password inside Supabase Auth only.
+
+Create/adapt:
+supabase/migrations/<timestamp>_admin_username_auth.sql
+supabase/admin/create_admin.sql
+supabase/admin/README.md
+scripts/create-admin.ts if appropriate.
+
+Migration/query must integrate with existing profiles/roles.
+No duplicate RBAC if existing system works.
+No password column.
+
+README must explain safe admin creation through Supabase Auth + username/role mapping.
+
+Guard all admin routes.
+Validate `next` redirects.
+Rate limit.
+Generic invalid credential errors.
+
+Test wrong username/password, inactive admin, normal client, valid admin, logout/session expiry.
+
+Run build/typecheck/lint/tests.
+STOP.
+
+-------------------------- END COPY: PHASE 6 --------------------------
+
+======================================================================
+PHASE 7 — ADMIN MANAGEMENT UI/CRUD AUDIT
+======================================================================
+
+------------------------- START COPY: PHASE 7 -------------------------
+
+Redesign authenticated /ajadmin for professional productivity.
+
+Audit and make fully functional:
+Dashboard, Services, Projects, Clients, Team, Reviews/Testimonials, Blog, Categories, Tags, Home Builder, Brand Settings, Navigation, Media, Leads, Quotes, SEO, Users/Roles, Audit, System Health.
+
+For each module verify CRUD, search, filters, pagination, validation, active/deactivate, draft/publish, visibility, delete/restore, reorder and permissions.
+
+Hide or fix dead items.
+
+Use compact premium sidebar/topbar/tables/forms.
+No excessive decorative 3D in admin.
+
+Run build/typecheck/lint/screenshots/tests.
+STOP.
+
+-------------------------- END COPY: PHASE 7 --------------------------
+
+======================================================================
+PHASE 8 — CLIENT AUTH + GOOGLE LOGIN + PROFILE
+======================================================================
+
+------------------------- START COPY: PHASE 8 -------------------------
+
+Implement client auth separate from admin.
+
+Routes:
+/login
+/signup
+/forgot-password
+/auth/callback
+/update-password
+/account
+/account/profile
+/account/requests
+/account/reviews
+
+Support email/password, email verification, Google OAuth, logout, recovery email, update password and profile.
+
+Audit Google provider, Supabase Site URL and redirect allow list.
+Use SSR/PKCE flow suitable for current Next architecture.
+
+Profile:
+avatar, name, email, optional phone/company, provider, own request/review history.
+
+Use RLS for own data only.
+Noindex private/auth pages.
+No AdSense on private/auth pages.
+
+Run full auth tests/build/typecheck/lint.
+STOP.
+
+-------------------------- END COPY: PHASE 8 --------------------------
+
+======================================================================
+PHASE 9 — CONTACT + QUOTE -> CLIENT-WISE ADMIN CRM
+======================================================================
+
+------------------------- START COPY: PHASE 9 -------------------------
+
+Upgrade Contact and Request Quote end-to-end.
+
+Both must:
+- server validate;
+- save to Supabase;
+- attach user_id if logged in;
+- safely support guest if desired;
+- prevent double submit/spam;
+- show success/error state.
+
+Admin:
+/ajadmin/leads
+/ajadmin/quotes
+optional /ajadmin/clients/[id]
+
+Show client-wise profile, Contact messages, Quote requests, Reviews and linked projects in a timeline where practical.
+
+Add statuses, notes, search, filtering, pagination and optional assignment.
+
+Logged-in client may see own request history.
+Enforce RLS.
+
+Run persistence/security/build tests.
+STOP.
+
+-------------------------- END COPY: PHASE 9 --------------------------
+
+======================================================================
+PHASE 10 — VERIFIED REAL CLIENT REVIEWS
+======================================================================
+
+------------------------- START COPY: PHASE 10 -------------------------
+
+Build real-client reviews.
+
+Only verified real clients are eligible.
+Normal signup alone is not eligible.
+
+Eligibility can be based on verified_client status, linked real project/won business record or explicit admin approval.
+
+Create/adapt reviews table with user/client/project/rating/text/status/admin response/timestamps.
+
+Routes:
+/reviews
+/account/reviews
+/ajadmin/reviews
+
+Flow:
+submit -> pending -> admin moderation -> approved public.
+
+Footer gets Reviews link.
+Homepage shows only approved real reviews.
+If none exist, hide section.
+No fake reviews.
+No invalid self-serving aggregate rating SEO markup.
+
+Run RLS/security/build tests.
+STOP.
+
+-------------------------- END COPY: PHASE 10 --------------------------
+
+======================================================================
+PHASE 11 — HOME BUILDER / FULL CMS CUSTOMIZATION
+======================================================================
+
+------------------------- START COPY: PHASE 11 -------------------------
+
+Upgrade Home Builder so the owner can manage hero, media, trust strip, what-we-build, services, projects, process, industries, capabilities, reviews, team, gallery, blog preview, CTA and section order/visibility.
+
+Brand settings manage name, short brand, aliases, logo, favicon, contacts, social links, footer, OG image and controlled design presets.
+
+Add responsive protected draft preview.
+No arbitrary executable JS.
+
+Run build/typecheck/lint/tests.
+STOP.
+
+-------------------------- END COPY: PHASE 11 --------------------------
+
+======================================================================
+PHASE 12 — ADVANCED SEO / SEARCH CONSOLE READINESS
+======================================================================
+
+------------------------- START COPY: PHASE 12 -------------------------
+
+Perform complete technical/content SEO upgrade while preserving existing Search Console verification.
+
+Verify redirects, canonicals, metadata, H1, sitemap, robots, noindex rules, dynamic routes, schema, alt, links, breadcrumbs, 404, preview noindex, admin/account noindex and content quality.
+
+Implement/refine WebSite, Organization, BreadcrumbList, BlogPosting and valid Service schema.
+
+Use AJ System Soft Technology consistently with AJS Technology/alternate names naturally.
+
+Create admin SEO Health.
+
+Create post-deploy Search Console checklist: URL Inspection, Test Live URL, sitemap, Page Indexing, Core Web Vitals, Enhancements.
+
+Do not claim indexing until Google reports it.
+
+Run SEO/build checks.
+STOP.
+
+-------------------------- END COPY: PHASE 12 --------------------------
+
+======================================================================
+PHASE 13 — ADSENSE READINESS
+======================================================================
+
+------------------------- START COPY: PHASE 13 -------------------------
+
+Perform legitimate AdSense readiness work.
+Do not promise approval.
+
+Ensure full original content, clear navigation, About, Contact, Privacy, Terms, Cookie/consent where applicable, no under-construction/thin/broken pages and moderated user reviews.
+
+Create disabled-by-default AdSenseScript/AdSlot architecture.
+Do not render ads in admin/auth/account/private/form-only inappropriate pages.
+Reserve ad slot layout space to limit CLS.
+Prepare ads.txt only after real publisher ID exists.
+
+Add admin configuration/readiness checklist if appropriate.
+
+Run legal/navigation/performance/build checks.
+STOP.
+
+-------------------------- END COPY: PHASE 13 --------------------------
+
+======================================================================
+PHASE 14 — OPTIONAL GOOGLE ADS / GA4 CONVERSIONS
+======================================================================
+
+------------------------- START COPY: PHASE 14 -------------------------
+
+Prepare optional consent-aware Google Ads/GA4 events:
+start_project_click, contact_form_submit_success, quote_request_submit_success, signup_success, phone_click, whatsapp_click.
+
+Never send PII/private requirements/passwords.
+Avoid duplicate tags.
+Keep IDs configurable.
+
+Run performance/build checks.
+STOP.
+
+-------------------------- END COPY: PHASE 14 --------------------------
+
+======================================================================
+PHASE 15 — SECURITY HARDENING
+======================================================================
+
+------------------------- START COPY: PHASE 15 -------------------------
+
+Audit/fix RLS, roles, admin/account guards, rate limits, reset flow, forms, reviews, uploads, signed URLs, secrets, CSP/security headers, open redirects, XSS/injection, error leakage and audit logs.
+
+Verify admin username lookup is server-only and client data isolation is enforced.
+
+Run tests/build/typecheck/lint.
+STOP.
+
+-------------------------- END COPY: PHASE 15 --------------------------
+
+======================================================================
+PHASE 16 — PERFORMANCE / CORE WEB VITALS
+======================================================================
+
+------------------------- START COPY: PHASE 16 -------------------------
+
+Measure and optimize LCP, CLS, INP, bundle, images, hero, fonts, scripts, animation, Supabase queries, caching, admin pagination and AdSense slot layout.
+
+The premium redesign must remain fast.
+Simplify any visual effect that hurts performance.
+Do not invent metrics.
+
+Run production build.
+STOP.
+
+-------------------------- END COPY: PHASE 16 --------------------------
+
+======================================================================
+PHASE 17 — RESPONSIVE + ACCESSIBILITY QA
+======================================================================
+
+------------------------- START COPY: PHASE 17 -------------------------
+
+Test 320, 360, 390, 430, 768, 1024, 1280, 1366, 1440 and 1600+.
+
+Test all public, account and admin screens.
+
+WCAG 2.2 AA: keyboard, focus, labels, errors, contrast, reduced motion, dialogs, tables, touch targets.
+
+Capture screenshots.
+If homepage still resembles the old generic screenshot, iterate and do not approve.
+
+Run build.
+STOP.
+
+-------------------------- END COPY: PHASE 17 --------------------------
+
+======================================================================
+PHASE 18 — SAFE VERCEL PRODUCTION RELEASE
+======================================================================
+
+------------------------- START COPY: PHASE 18 -------------------------
+
+Before deploy verify build/typecheck/lint/tests, migrations, env names, OAuth callbacks, secrets and Search Console verification preservation.
+
+Deploy through existing GitHub/Vercel workflow.
+
+Post-deploy test:
+public routes, client auth, Google OAuth, admin username login, admin CRUD, Contact -> Supabase -> admin, Quote -> Supabase -> admin, Review moderation, profile update, robots, sitemap, canonical and structured data.
+
+Return production smoke-test report.
+STOP.
+
+-------------------------- END COPY: PHASE 18 --------------------------
+
+======================================================================
+PHASE 19 — SEARCH CONSOLE POST-DEPLOY VALIDATION
+======================================================================
+
+------------------------- START COPY: PHASE 19 -------------------------
+
+Validate the production domain after deployment.
+
+Check HTTPS/200, robots, sitemap, production canonicals, indexable public pages, noindex admin/account, structured data, site-name signals and no preview canonicals.
+
+Give exact manual steps:
+Search Console -> URL Inspection -> Test Live URL -> Request Indexing when appropriate -> Sitemaps -> Page Indexing -> Core Web Vitals -> Enhancements.
+
+State clearly that verified ownership does not guarantee immediate indexing.
+
+Return CHECK | RESULT | ACTION table.
+STOP.
+
+-------------------------- END COPY: PHASE 19 --------------------------
+
+======================================================================
+PHASE 20 — ADSENSE APPLICATION PRE-FLIGHT
+======================================================================
+
+------------------------- START COPY: PHASE 20 -------------------------
+
+Perform a final AdSense pre-flight review.
+
+Check site live/owned, code placement capability, content depth, navigation, About, Contact, Privacy, Terms, cookie/consent, copyright, reviews moderation, mobile UX, performance, broken links, AdSense integration readiness and ads.txt readiness.
+
+If real publisher ID is missing, keep ad code disabled.
+
+Return every item as READY / NEEDS FIX / BLOCKER.
+Do not promise approval.
+STOP.
+
+-------------------------- END COPY: PHASE 20 --------------------------
+
+======================================================================
+FINAL ACCEPTANCE GATE
+======================================================================
+
+Do not call the project complete until ALL are true:
+
+VISUAL
+[ ] old generic pale-blue hero gone
+[ ] floating premium header
+[ ] original AJS brand system
+[ ] Warmwind-quality spacing/depth principles
+[ ] layered project/device scenes
+[ ] soft 3D
+[ ] restrained animation
+[ ] polished mobile
+[ ] premium footer
+[ ] screenshot comparison passed
+
+ADMIN AUTH
+[ ] unauthenticated /ajadmin shows login only
+[ ] no sidebar before login
+[ ] username/password visible UI
+[ ] server-side username resolution
+[ ] Supabase Auth owns passwords
+[ ] no plaintext password column
+[ ] inactive/non-admin blocked
+[ ] safe next redirect
+[ ] rate limiting
+
+ADMIN CMS
+[ ] Dashboard
+[ ] Services
+[ ] Projects
+[ ] Clients
+[ ] Team
+[ ] Reviews
+[ ] Blog
+[ ] Categories/Tags
+[ ] Home Builder
+[ ] Brand Settings
+[ ] Navigation
+[ ] Media
+[ ] Leads
+[ ] Quotes
+[ ] SEO
+[ ] Users/Roles
+[ ] Audit
+[ ] CRUD/search/filter/pagination
+[ ] state/visibility/permissions
+
+SUPABASE
+[ ] production connection verified
+[ ] server/browser clients correct
+[ ] service role server-only
+[ ] RLS
+[ ] migrations
+[ ] indexes
+[ ] storage policies
+[ ] generated types
+[ ] persistence tests pass
+
+CLIENT AUTH
+[ ] signup
+[ ] email login
+[ ] Google OAuth
+[ ] email verification
+[ ] forgot/reset
+[ ] profile/avatar
+[ ] request history
+[ ] review history
+[ ] own-data RLS
+
+REVIEWS
+[ ] verified real client only
+[ ] pending moderation
+[ ] approve/reject
+[ ] public approved only
+[ ] Reviews footer link
+[ ] no fake reviews
+
+CONTACT / QUOTE
+[ ] save to Supabase
+[ ] client-wise admin view
+[ ] statuses/notes
+[ ] logged-in user relation
+[ ] RLS
+
+SEO
+[ ] metadata
+[ ] canonicals
+[ ] sitemap
+[ ] robots
+[ ] WebSite schema
+[ ] Organization schema
+[ ] alternateName
+[ ] breadcrumbs
+[ ] blog schema
+[ ] internal links
+[ ] redirects
+[ ] admin/account noindex
+[ ] Search Console verification preserved
+[ ] SEO Health tool
+
+ADSENSE
+[ ] original content
+[ ] clear navigation
+[ ] About/Contact/Privacy/Terms
+[ ] consent/cookie where applicable
+[ ] no ads on admin/auth/account/private pages
+[ ] disabled until configured
+[ ] ads.txt ready after real publisher ID
+[ ] CLS-safe placement architecture
+[ ] no approval promise
+
+PERFORMANCE / RELEASE
+[ ] production build passes
+[ ] typecheck passes
+[ ] lint passes
+[ ] tests pass
+[ ] no new console errors
+[ ] optimized images/fonts
+[ ] minimal JS
+[ ] no heavy first-load 3D
+[ ] Vercel stable
+[ ] GitHub history safe
+[ ] Supabase stable
+[ ] production smoke test passes
+
+======================================================================
+END OF MASTER PROMPT
+======================================================================

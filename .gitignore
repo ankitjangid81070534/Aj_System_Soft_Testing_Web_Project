@@ -1,0 +1,35 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+coverage/
+
+# Environment — never commit real values
+.env
+.env.*
+!.env.example
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Deploy platforms
+.vercel
+.netlify
+
+# Local offline backups (RAR snapshots live on disk, not in the repo)
+Ajsystemsoft_backup/
+New Text Document.txt
+*.tmp
+*.rar
+*.zip
+ajstech-main/
+
+# Never ship local tooling binaries
+website/prompt files/*.exe
+
+# Sandbox-only PM2 config
+ecosystem.config.cjs
+*.tar.gz
