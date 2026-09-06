@@ -25,6 +25,13 @@ export function ScrollJourney({ children, count }: { children: ReactNode; count:
       current += (target - current) * (1 - Math.exp(-dt / 110));
       if (Math.abs(target - current) < 0.1) current = target;
       track.style.transform = `translate3d(${current}px,0,0)`;
+      const progress = -current / Math.max(1, track.scrollWidth - section.clientWidth);
+      section.style.setProperty("--journey-progress", String(progress));
+      Array.from(track.children).forEach((scene, index) => {
+        const phase = Math.max(-1, Math.min(1, index - progress * (count - 1)));
+        (scene as HTMLElement).style.setProperty("--scene-phase", String(phase));
+        (scene as HTMLElement).style.setProperty("--scene-distance", String(Math.abs(phase)));
+      });
       frame = current !== target ? requestAnimationFrame(tick) : 0;
     };
     const update = () => {
@@ -48,7 +55,7 @@ export function ScrollJourney({ children, count }: { children: ReactNode; count:
       update();
     };
     const onFocus = (event: FocusEvent) => {
-      if (!enabled || !(event.target instanceof Element)) return;
+      if (!enabled || !(event.target instanceof Element) || !event.target.matches(":focus-visible")) return;
       const scene = event.target.closest<HTMLElement>("[data-scene-index]");
       if (!scene) return;
       const index = Number(scene.dataset.sceneIndex);
@@ -71,13 +78,19 @@ export function ScrollJourney({ children, count }: { children: ReactNode; count:
       media.removeEventListener("change", configure);
       section.removeEventListener("focusin", onFocus);
       delete section.dataset.motion;
+      section.style.removeProperty("--journey-progress");
+      Array.from(track.children).forEach(scene => {
+        (scene as HTMLElement).style.removeProperty("--scene-phase");
+        (scene as HTMLElement).style.removeProperty("--scene-distance");
+      });
       track.style.removeProperty("transform");
     };
   }, [count]);
   return (
-    <section ref={sectionRef} className={styles.journey} id="capabilities" aria-label="What we can build for you" style={{ "--scene-count": count } as CSSProperties}>
+    <section ref={sectionRef} className={styles.journey} id="capabilities" aria-label="What we can build for you" data-scroll-scene data-nav-theme="dark" style={{ "--scene-count": count } as CSSProperties}>
       <div className={styles.journeyStage}>
         <div ref={trackRef} className={styles.journeyTrack} data-journey-track>{children}</div>
+        <div className={styles.journeyProgress} aria-hidden="true"><span /></div>
       </div>
     </section>
   );

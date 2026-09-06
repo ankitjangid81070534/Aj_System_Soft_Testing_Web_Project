@@ -12,19 +12,15 @@
 .legacy > section { background: #fff; border-color: #f0ebf5; }
 .legacy h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; font-weight: 500; }
 .legacy h3 { font-weight: 500; }
-.legacy :global(.card-3d) { background: linear-gradient(145deg, #fff 50%, #fbf9fd); border: 1px solid #eee8f4; border-radius: 16px; box-shadow: 0 5px 20px #6a3b9810; transform: none; }
-.legacy :global(.card-3d)::before, .legacy :global(.card-3d)::after { display: none; }
-.legacy :global(.card-3d):hover { transform: translateY(-5px); border-color: #d5bbee; box-shadow: 0 16px 32px #7138ce18; }
+.legacy :global(.card-3d) { background: var(--surface-sheen); border: 1px solid var(--color-line); border-radius: 20px; box-shadow: var(--shadow-sculpted); }
+
 .legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #8256ae; padding-left: 0; letter-spacing: .06em; }
 .legacy :global(.text-eyebrow) > span { display: none; }
 .legacy :global(.glass-strong) { background: #fff; border: 1px solid #eee8f3; box-shadow: none; backdrop-filter: none; border-radius: 14px; }
 .legacy section[aria-label="How we work"] { margin-top: 0; padding: 18px 0 0; }
 .legacy section[aria-label="How we work"] :global(.group) > span { background: #f4edfc; color: #8250bb; box-shadow: none; }
-.legacy :global(.icon-tile) { background: #f6f0fd; box-shadow: none; color: #8250bb; }
-.legacy :global(.card-3d) > span[aria-hidden="true"], .legacy :global(.card-3d) > div > span[aria-hidden="true"] { background: #f3ebfb; color: #8250bb; box-shadow: none; }
-/* The homepage observer animates entry itself: no global five-second reveal
-   failsafe can finish the animation while these sections are still offscreen. */
-.content :global(.reveal), .content :global(.reveal.reveal-pending), .content :global(.reveal.reveal-in) { opacity: 1; transform: none; transition: none; animation: none; will-change: auto; }
+
+.legacy :global(.card-3d) > span[aria-hidden="true"], .legacy :global(.card-3d) > div > span[aria-hidden="true"] { color: var(--color-brand-600); }
 @media (max-width: 700px) {
   .heroPoints { max-width: 300px; margin: 17px auto 0; gap: 7px 12px; }
   .heroPoints li { font-size: 11px; }

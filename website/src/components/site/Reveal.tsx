@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/cn";
 
 /**
  * Scroll-reveal wrapper with zero hydration cost. The shared observer adds
- * `reveal-in` once and then unobserves the element.
+ * an entry animation on every visit, rearmed after a full viewport exit.
  *
  * Content is visible by default: without JavaScript, before hydration, for
  * crawlers, for reduced-motion users and in print nothing is ever hidden.
@@ -13,14 +13,17 @@ export function Reveal({
   children,
   delay = 0,
   className,
+  variant,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  variant?: "fan" | "rise";
 }) {
   return (
     <div
       className={cn("reveal", className)}
+      data-reveal={variant}
       style={
         delay
           ? ({ "--reveal-delay": `${Math.min(Math.max(delay, 0), 160)}ms` } as CSSProperties)

@@ -1,0 +1,29 @@
+.shell, .auth { background: var(--color-canvas); color: var(--color-ink); }
+.auth { position: relative; isolation: isolate; background: radial-gradient(ellipse at 14% 8%, #c7a1fa26, transparent 50%), radial-gradient(ellipse at 90% 90%, #b9a0e826, transparent 45%), var(--color-canvas); }
+.auth::before { content: ""; position: absolute; width: min(60vw,650px); aspect-ratio: 1; border: 1px solid #ac83d71c; border-radius: 50%; top: -30%; left: -15%; box-shadow: 0 0 0 55px #ab83d706, 0 0 0 110px #ab83d706; pointer-events: none; z-index: -1; }
+.auth main > section > div { border-radius: 24px; box-shadow: var(--shadow-sculpted), 0 35px 90px -40px #70439735; }
+.shell > aside {
+  --color-ink: #f8f1ff; --color-ink-muted: #b5a3ca; --color-ink-soft: #dbcee9;
+  --color-surface: #261b35; --color-canvas: #1c1427; --color-canvas-raised: #32213e;
+  --color-line: #ffffff12; --color-line-strong: #ffffff25;
+  --color-brand-50: #382248; --color-brand-100: #402653; --color-brand-200: #6b4891;
+  --color-brand-400: #c8a2f8; --color-brand-600: #c8a2f8; --color-brand-700: #dec5ff;
+  --color-warm-50: #21162e; --color-warm-700: #c8a2f8;
+  background: radial-gradient(ellipse at 0 0,#62399140,transparent 65%), #171020;
+  border-right: 1px solid #e2d3f11a; box-shadow: 8px 0 35px #3420470c;
+}
+.shell > aside nav a { border-radius: 12px; transition: background 250ms ease,color 250ms ease,box-shadow 250ms ease; }
+.shell > aside nav a[aria-current="page"] { background: linear-gradient(110deg,#7348ab,#513376); color: #fff; border-color: #b38cd744; box-shadow: inset 0 1px 0 #ffffff1f,0 6px 16px #0002; }
+.shell > div > header { background: color-mix(in srgb,var(--color-surface),transparent 7%); box-shadow: 0 1px 15px #58367c05; }
+.shell main > section > div[class*="border"], .shell main :global(.rounded-3xl.border), .shell main :global(.rounded-2xl.border) { box-shadow: var(--shadow-sculpted); border-color: var(--color-line); }
+.shell main :is(h1,h2) { letter-spacing: -.04em; }
+.shell main h1 { font-weight: 500; }
+.shell table { border-collapse: separate; border-spacing: 0; }
+.shell thead { background: var(--color-brand-50); color: var(--color-brand-700); }
+.shell th { font-size: 11px; letter-spacing: .055em; font-weight: 600; }
+.shell tbody tr { transition: background 200ms ease; }
+.shell tbody tr:hover { background: color-mix(in srgb,var(--color-brand-50),transparent 35%); }
+.shell :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea), .auth :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea) { border-radius: 11px; border-color: var(--color-line); }
+.shell :is(input,select,textarea):focus-visible, .auth :is(input,select,textarea):focus-visible { outline-color: var(--color-brand-500); }
+.shell button[type="submit"], .auth button[type="submit"] { border-radius: 11px; }
+@media (max-width:700px) { .shell main { padding-inline: 16px; } .shell :is(input,select,textarea), .auth :is(input,select,textarea) { font-size: 16px; } }

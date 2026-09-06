@@ -6,7 +6,7 @@ type Variant = "primary" | "secondary" | "outline" | "ghost" | "danger";
 type Size = "xs" | "sm" | "md" | "lg";
 
 const base =
-  "relative inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold select-none " +
+  "action-control relative inline-flex items-center justify-center whitespace-nowrap rounded-xl font-medium select-none " +
   "transition-[transform,box-shadow,background-color,border-color,color] duration-200 ease-soft focus-ring " +
   "disabled:pointer-events-none disabled:opacity-50";
 

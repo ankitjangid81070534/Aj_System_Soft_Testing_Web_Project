@@ -3,7 +3,10 @@ import type { ReactNode } from "react";
 import { GeistSans } from "geist/font/sans";
 import { buildRootMetadata } from "@/lib/seo/metadata";
 import { RevealObserver } from "@/components/site/RevealObserver";
+import { SceneMotion } from "@/components/motion/SceneMotion";
+import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import "./globals.css";
+import "./surface-system.css";
 
 export const metadata: Metadata = buildRootMetadata();
 
@@ -36,6 +39,8 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         {children}
         <RevealObserver />
+        <SceneMotion />
+        <SurfaceMotion />
       </body>
     </html>
   );

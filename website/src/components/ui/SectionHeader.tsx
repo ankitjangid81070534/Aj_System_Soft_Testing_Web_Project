@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { MotionWords } from "@/components/motion/MotionWords";
 import { cn } from "@/lib/utils/cn";
 
 type HeadingLevel = "h1" | "h2" | "h3";
@@ -21,8 +22,8 @@ export function SectionHeader({
   children?: ReactNode;
 }) {
   const headingSize: Record<HeadingLevel, string> = {
-    h1: "text-display-md font-bold",
-    h2: "text-display-sm font-bold",
+    h1: "text-display-md font-medium",
+    h2: "text-display-sm font-medium",
     h3: "text-xl font-semibold",
   };
   return (
@@ -43,7 +44,7 @@ export function SectionHeader({
         </p>
       ) : null}
       <Tag className={cn(headingSize[Tag], "tracking-[-0.02em] text-ink text-balance")}>
-        {title}
+        {typeof title === "string" ? <MotionWords text={title} /> : title}
       </Tag>
       {description ? (
         <p

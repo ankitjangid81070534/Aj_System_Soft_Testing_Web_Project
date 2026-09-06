@@ -27,15 +27,15 @@ export function OrbitArtwork({ finale = false }: { finale?: boolean }) {
           "--entry-delay": `${140 + (objects.length - 1 - index) * 100}ms`,
           "--entry-x": `${100 + (100 - x) * 2}px`, "--entry-y": `${80 + (100 - y)}px`,
         } as CSSProperties}>
-          <span className={styles.orbitEntrance} data-orbit-entry>
+          <span className={styles.orbitEntrance} data-orbit-entry data-reveal="orbit">
             <span className={styles.orbitFloat}>
               <span className={`${styles.orbitToken} ${styles[color]}`}><Icon strokeWidth={1.7} /></span>
             </span>
           </span>
         </span>
       ))}
-      {Array.from({ length: 46 }, (_, index) => {
-        const angle = (index / 45) * Math.PI;
+      {Array.from({ length: 76 }, (_, index) => {
+        const angle = (index / 75) * Math.PI;
         return <i key={index} className={styles.particle} style={{
           left: `${50 + Math.cos(angle) * (43 + (index % 4) * 2)}%`,
           top: `${18 + Math.sin(angle) * (57 + (index % 5) * 4)}%`,

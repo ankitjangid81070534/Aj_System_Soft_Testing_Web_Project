@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Check, ClipboardList, Code2, Rocket, ShieldCheck, Wrench } from "lucide-react";
 import styles from "./reference.module.css";
 
@@ -14,13 +14,36 @@ const steps = [
 
 export function DeliveryProcess() {
   const [active, setActive] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const media = matchMedia("(min-width: 1000px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)");
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      if (!media.matches) return;
+      const top = section.getBoundingClientRect().top;
+      const distance = Math.max(1, section.offsetHeight - innerHeight + 80);
+      const progress = Math.min(1, Math.max(0, (80 - top) / distance));
+      setActive(Math.round(progress * (steps.length - 1)));
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+    const configure = () => { section.dataset.processPin = String(media.matches); schedule(); };
+    configure();
+    addEventListener("scroll", schedule, { passive: true }); addEventListener("resize", schedule);
+    media.addEventListener("change", configure);
+    return () => { cancelAnimationFrame(frame); delete section.dataset.processPin; removeEventListener("scroll", schedule); removeEventListener("resize", schedule); media.removeEventListener("change", configure); };
+  }, []);
   const step = steps[active];
   const Icon = step.Icon;
   return (
-    <section className={`${styles.section} ${styles.process}`} id="delivery">
+    <section ref={sectionRef} className={styles.processJourney} id="delivery" data-scroll-scene>
+      <div className={`${styles.section} ${styles.process}`}>
       <div className={styles.processArt} aria-hidden="true" data-home-reveal>
         <div className={styles.processRings} />
-        <div className={styles.processCard} key={active}>
+        <div className={styles.processFloor} /><span className={styles.processSatellite}><Code2 size={23} /></span><span className={styles.processSatelliteTwo}><ShieldCheck size={25} /></span>
+        <div className={styles.processCard} key={active} data-process-card>
           <div className={styles.miniCardHeader}><span className={styles.smallIcon}><Icon size={18} /></span><span>{step.title}</span><Check size={16} /></div>
           <div className={styles.wireframe}><span /><span /><span /><span /></div>
           <div className={styles.progressTrack}><span style={{ width: `${(active + 1) * 20}%` }} /></div>
@@ -41,6 +64,7 @@ export function DeliveryProcess() {
         </div>
         <p id="delivery-description" className={styles.stepDescription} aria-live="polite">{step.description}</p>
         <noscript><ol>{steps.map(item => <li key={item.title}><strong>{item.title}</strong><p>{item.description}</p></li>)}</ol></noscript>
+      </div>
       </div>
     </section>
   );

@@ -16,7 +16,8 @@ import { BRAND } from "@/lib/seo/site";
 import { OrbitArtwork } from "./OrbitArtwork";
 import { DeliveryProcess } from "./DeliveryProcess";
 import { ServiceJourney } from "./ServiceJourney";
-import { HomeMotion } from "./HomeMotion";
+import { MotionWords } from "@/components/motion/MotionWords";
+import { OwnershipOrbit, CosmicBackdrop } from "./SculpturalScenes";
 import styles from "./reference.module.css";
 import contentStyles from "./home-content.module.css";
 
@@ -26,12 +27,11 @@ import contentStyles from "./home-content.module.css";
 export function HomeExperience({ content, benefits }: { content: HomeContent; benefits: LaunchBenefit[] }) {
   return (
     <div data-home-experience className={contentStyles.content}>
-      <HomeMotion />
-      <section className={styles.hero}>
+      <section className={styles.hero} data-scroll-scene>
         <OrbitArtwork />
         <div className={styles.heroCopy}>
           <p className={styles.heroBadge}><Sparkles size={13} />{BRAND.primaryName} — available for new projects</p>
-          <h1>Software built around<br />your requirements.</h1>
+          <h1><MotionWords text="Software built around" /><br /><MotionWords text="your requirements." /></h1>
           <p className={styles.heroDescription}>Custom software, web platforms, SaaS, Android &amp; iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.</p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryButton} href="/request-quote">Start Your Project <ArrowUpRight size={15} /></Link>
@@ -56,8 +56,8 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
           <p>Our service goes beyond just writing code. Every custom software project includes these benefits by default.</p>
         </div></Reveal>
         <div className={styles.benefitBento}>
-          {benefits.map((benefit, index) => <Reveal key={benefit.id} delay={index * 45} className={`${styles.benefitCell} ${index === 1 ? styles.featuredBenefit : ""}`}>
-            <article className={styles.benefitCard}>
+          {benefits.map((benefit, index) => <Reveal key={benefit.id} variant="fan" delay={index * 45} className={`${styles.benefitCell} ${index === 1 ? styles.featuredBenefit : ""}`}>
+            <article className={styles.benefitCard} data-tilt="on">
               <span className={styles.benefitIcon}>{index % 2 ? <Layers3 size={22} /> : <ShieldCheck size={22} />}</span>
               <h3>{benefit.title}</h3><p>{benefit.description}</p>
               {index === 1 && <span className={styles.benefitSculpture} aria-hidden="true"><Code2 size={54} strokeWidth={1.2} /></span>}
@@ -65,12 +65,8 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
           </Reveal>)}
         </div>
       </section>}
-      <section className={styles.ownership}>
-        <div className={styles.floatingCards} aria-hidden="true" data-home-reveal>
-          <div><Code2 /><span>Requirements-first</span><div className={styles.codeLines}><i /><i /><i /></div></div>
-          <div><Layers3 /><span>Web · SaaS · Apps</span><div className={styles.miniBars}><i /><i /><i /><i /><i /></div></div>
-          <div><ShieldCheck /><span>You own the source code</span><div className={styles.codeLines}><i /><i /><i /><i /></div></div>
-        </div>
+      <section className={styles.ownership} data-scroll-scene data-nav-theme="dark">
+        <OwnershipOrbit />
         <Reveal><div className={styles.ownershipCopy}><p className={styles.eyebrow}>One team, every platform</p><h2>You own your software.<br />We help it grow.</h2><p>Source code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.</p><Link className={styles.primaryButton} href="/services">Explore all services <ArrowUpRight size={15} /></Link></div></Reveal>
       </section>
       <div className={contentStyles.legacy}>
@@ -78,10 +74,10 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
         <TestimonialsSection testimonials={content.testimonials} /><TeamSection members={content.team} />
         <BlogPreviewSection posts={content.posts} />
       </div>
-      <section className={styles.finale}>
-        <OrbitArtwork finale />
+      <section className={styles.finale} data-scroll-scene data-nav-theme="dark">
+        <CosmicBackdrop />
         <div className={styles.finaleCopy} data-home-reveal>
-          <p className={styles.eyebrow}>Start a project</p><h2>Ready to build software around your requirements?</h2>
+          <p className={styles.eyebrow}>Start a project</p><h2><MotionWords text="Ready to build software around your requirements?" /></h2>
           <p>Tell us what you need — we will propose the right platform, a clear plan and a transparent estimate.</p>
           <div className={styles.heroActions}><Link className={styles.primaryButton} href="/request-quote">Start Your Project <ArrowUpRight size={15} /></Link><Link className={contentStyles.finaleSecondary} href="/contact">Request a Consultation <ArrowUpRight size={15} /></Link></div>
         </div>

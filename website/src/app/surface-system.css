@@ -1,0 +1,53 @@
+/* Shared reference-inspired surfaces. Content, layouts and form semantics stay
+   in their original components; public pages and the CMS share these tokens. */
+:root {
+  --surface-sheen: linear-gradient(145deg, #fff 35%, #faf7ff 100%);
+  --shadow-sculpted: inset 0 1px 0 #fff, inset 0 -1px 0 #d9cbed70, 0 2px 5px #44226806, 0 14px 36px -18px #63379b35;
+  --shadow-sculpted-hover: inset 0 1px 0 #fff, 0 3px 8px #44226808, 0 25px 55px -18px #63379b45;
+}
+.dark { --surface-sheen: linear-gradient(145deg, #20182d 10%, #15101f); --shadow-sculpted: inset 0 1px 0 #ffffff0c, 0 14px 36px -18px #0008; --shadow-sculpted-hover: inset 0 1px 0 #ffffff18, 0 25px 55px -18px #000b; }
+.motion-word { display: inline-block; transform-origin: center bottom; }
+.motion-words { perspective: 1100px; }
+.site-shell { background: var(--color-surface); }
+.site-shell main { min-width: 0; }
+.site-shell main > :is(section, div) { scroll-margin-top: 96px; }
+.card-3d {
+  background: var(--surface-sheen); border-color: var(--color-line); border-radius: 20px;
+  box-shadow: var(--shadow-sculpted); transform-origin: center center;
+  transition: transform 650ms cubic-bezier(.16,1,.3,1), box-shadow 650ms ease, border-color 400ms ease;
+}
+.card-3d::before { opacity: .55; }
+.card-3d::after { background: radial-gradient(450px circle at var(--mx,50%) var(--my,0%), #b187ed20, transparent 65%); }
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .card-3d:not([data-tilt="off"]):not(:has(form,input,textarea,select,table)):hover {
+    transform: perspective(1100px) translate3d(0,-6px,0) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));
+    box-shadow: var(--shadow-sculpted-hover); border-color: var(--color-brand-200);
+  }
+}
+.action-control { border-radius: 11px; font-weight: 500; transition-duration: 380ms; }
+.action-control:not(:disabled):active { transform: translateY(1px) scale(.985); }
+.action-control.bg-brand-gradient { background-image: linear-gradient(160deg, var(--color-brand-500), var(--color-brand-700)); box-shadow: inset 0 1px 0 #ffffff4d, 0 3px 0 color-mix(in srgb,var(--color-brand-800),transparent 35%), 0 10px 22px -10px #7138ce70; }
+.action-control.bg-brand-gradient:hover { box-shadow: inset 0 1px 0 #ffffff60, 0 3px 0 color-mix(in srgb,var(--color-brand-800),transparent 35%), 0 17px 28px -12px #7138ce80; }
+.action-control:disabled { transform: none; }
+.icon-tile { background: linear-gradient(145deg, #fcfaff, #e7d7fa); color: #8550c7; border: 1px solid #eadcf8; box-shadow: inset 0 2px 2px #fff, inset -2px -3px 4px #ae81d126, 2px 3px 0 #d5bae93d, 4px 8px 16px #75479514; }
+.icon-bead { box-shadow: inset 0 1px 2px #ffffff70, inset -2px -3px 4px #40216135, 0 5px 12px -4px #7138ce65; }
+.dark .icon-tile { color: #c5a0f0; background: linear-gradient(145deg,#39254e,#251b33); border-color: #594073; }
+.ui-field { border-radius: 12px; background-color: var(--color-surface); box-shadow: inset 0 2px 4px #51316e05, 0 1px 0 #ffffff90; transition-duration: 300ms; }
+.dark .ui-field { box-shadow: inset 0 1px 0 #ffffff05; }
+.ui-field:not([aria-invalid="true"]):focus-visible { border-color: var(--color-brand-500); box-shadow: 0 0 0 4px color-mix(in srgb,var(--color-brand-400),transparent 86%); }
+dialog { border-radius: 22px; border-color: var(--color-line); box-shadow: 0 35px 110px #2a173650, inset 0 1px 0 #ffffff50; }
+dialog::backdrop { background: #130c225c; backdrop-filter: blur(7px); }
+[role="tablist"] { background: var(--color-canvas-raised); border-color: var(--color-line); border-radius: 13px; }
+[role="tab"][aria-selected="true"] { box-shadow: var(--shadow-e1); }
+.site-shell details { border-color: var(--color-line); }
+.site-shell details[open] { box-shadow: var(--shadow-sculpted); }
+.site-shell :is(a,button,input,textarea,select):focus-visible { outline-color: var(--color-brand-500); }
+@media (max-width:700px) {
+  .card-3d { border-radius: 17px; }
+  .action-control { min-height: 42px; }
+  .ui-field { font-size: 16px; } /* avoids iOS focus zoom */
+}
+@media (prefers-reduced-motion:reduce) {
+  .card-3d, [data-tilt], .motion-word, [data-reveal] { animation: none !important; transition: none !important; }
+  .card-3d:hover, .action-control:active { transform: none !important; }
+}
