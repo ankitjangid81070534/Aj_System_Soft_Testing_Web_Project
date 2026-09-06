@@ -33,3 +33,4 @@ Post-launch SEO: [`docs/PHASE-11-SEARCH-CONSOLE.md`](docs/PHASE-11-SEARCH-CONSOL
 - The Supabase service-role key is server-only and never ships to the browser.
 - Public data is protected by Supabase RLS: anonymous reads see only published + active + public records.
 - `/ajadmin` is protected by real authentication (edge gate + server-side role checks + RLS), never by obscurity.
+# Aj_System_Soft_Testing_Web_Project
