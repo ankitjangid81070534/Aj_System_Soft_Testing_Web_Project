@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
+import { serviceAccent } from "./service-accent";
 
 export function ServiceCard({
   title,
@@ -25,6 +26,7 @@ export function ServiceCard({
       href={href}
       className={cn(
         "group card-3d flex h-full flex-col gap-4 rounded-[1.375rem] p-5 focus-ring sm:p-6",
+        `card-accent-${serviceAccent(href)}`,
         className,
       )}
     >
@@ -38,7 +40,7 @@ export function ServiceCard({
         )}
         <span
           aria-hidden="true"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-muted shadow-e1 transition-[transform,color,background-color,border-color] duration-300 ease-spring group-hover:-rotate-12 group-hover:scale-110 group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-muted shadow-e1 transition-[transform,color,background-color,border-color] duration-300 ease-spring group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600"
         >
           <ArrowUpRight className="h-4 w-4" />
         </span>

@@ -31,7 +31,7 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
         <OrbitArtwork />
         <div className={styles.heroCopy}>
           <p className={styles.heroBadge}><Sparkles size={13} />{BRAND.primaryName} — available for new projects</p>
-          <h1><MotionWords text="Software built around" /><br /><MotionWords text="your requirements." /></h1>
+          <h1>Software built around<br />your requirements.</h1>
           <p className={styles.heroDescription}>Custom software, web platforms, SaaS, Android &amp; iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.</p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryButton} href="/request-quote">Start Your Project <ArrowUpRight size={15} /></Link>
@@ -57,7 +57,7 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
         </div></Reveal>
         <div className={styles.benefitBento}>
           {benefits.map((benefit, index) => <Reveal key={benefit.id} variant="fan" delay={index * 45} className={`${styles.benefitCell} ${index === 1 ? styles.featuredBenefit : ""}`}>
-            <article className={styles.benefitCard} data-tilt="on">
+            <article className={styles.benefitCard}>
               <span className={styles.benefitIcon}>{index % 2 ? <Layers3 size={22} /> : <ShieldCheck size={22} />}</span>
               <h3>{benefit.title}</h3><p>{benefit.description}</p>
               {index === 1 && <span className={styles.benefitSculpture} aria-hidden="true"><Code2 size={54} strokeWidth={1.2} /></span>}

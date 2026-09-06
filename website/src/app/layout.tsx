@@ -7,6 +7,7 @@ import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import "./globals.css";
 import "./surface-system.css";
+import "./accent-surfaces.css";
 
 export const metadata: Metadata = buildRootMetadata();
 

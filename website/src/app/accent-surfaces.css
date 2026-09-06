@@ -1,0 +1,28 @@
+/* Selective semantic accents. Gradients/shadows decorate surfaces, never glyphs.
+   No animation/filter layer touches the actual card content. */
+.card-accent-blue { --card-accent: #2862d9; --card-accent-light: #91b8ff; }
+.card-accent-violet { --card-accent: #7843c5; --card-accent-light: #c9a6ff; }
+.card-accent-amber { --card-accent: #a96014; --card-accent-light: #f4c477; }
+.card-accent-coral { --card-accent: #c23e60; --card-accent-light: #ffb1bf; }
+.card-accent-emerald { --card-accent: #14795c; --card-accent-light: #85d8b5; }
+.card-accent-cyan { --card-accent: #08758c; --card-accent-light: #84d5e8; }
+.card-3d[class*="card-accent-"] {
+  background: linear-gradient(150deg, var(--color-surface) 55%, color-mix(in srgb, var(--card-accent) 7%, var(--color-surface)));
+  border-color: color-mix(in srgb, var(--card-accent) 19%, var(--color-line));
+  box-shadow: inset 0 1px 0 #ffffff75, 0 2px 5px #19264406, 0 16px 32px -24px color-mix(in srgb, var(--card-accent) 48%, transparent);
+}
+.card-3d[class*="card-accent-"]::after { background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--card-accent) 13%, transparent), transparent 70%); }
+.card-3d[class*="card-accent-"] .icon-tile {
+  color: var(--card-accent);
+  background: linear-gradient(145deg, var(--color-surface), color-mix(in srgb, var(--card-accent) 12%, var(--color-surface)));
+  border-color: color-mix(in srgb, var(--card-accent) 20%, var(--color-line));
+  box-shadow: inset 0 1px 0 #ffffff80, 0 7px 14px -9px var(--card-accent);
+}
+.dark .card-3d[class*="card-accent-"] .icon-tile { color: var(--card-accent-light); }
+.icon-tile > svg { display: block; flex-shrink: 0; filter: none; opacity: 1; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card-3d[class*="card-accent-"]:hover {
+    border-color: color-mix(in srgb, var(--card-accent) 38%, var(--color-line));
+    box-shadow: inset 0 1px 0 #ffffff75, 0 3px 8px #19264408, 0 22px 38px -24px color-mix(in srgb, var(--card-accent) 50%, transparent);
+  }
+}

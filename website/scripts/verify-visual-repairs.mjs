@@ -1,4 +1,4 @@
-/** Read-only regression checks for orbit replay, sculpted navigation and login.
+/** Read-only regression checks for stable orbit motion, sculpted navigation and login.
  * Run after `npx playwright install --with-deps chromium`.
  * APP_URL and SCREENSHOT_DIR are optional. Never authenticates or saves records.
  */
@@ -26,7 +26,7 @@ try {
     const page = await context.newPage();
     const errors = [];
     page.on("pageerror", error => errors.push(error.message));
-    await page.goto(base, { waitUntil: "networkidle" });
+    await page.goto(base, { waitUntil: "domcontentloaded" });
     await page.locator("[data-orbit-entry][data-reveal-cycle]").first().waitFor({state:"attached"});
     const icons = page.locator("[data-orbit-entry]").first();
     const initial = Number(await icons.getAttribute("data-reveal-cycle"));
@@ -35,7 +35,7 @@ try {
     await page.waitForFunction(() => scrollY > 1000);
     await page.mouse.wheel(0,-10000);
     await page.waitForFunction(() => scrollY < 2);
-    await page.waitForFunction(initial => Number(document.querySelector('[data-orbit-entry]').dataset.revealCycle) > initial,initial);
+    assert.equal(Number(await icons.getAttribute('data-reveal-cycle')), initial);
     // Finish every entrance, then sample across an entire floating-motion cycle.
     await page.evaluate(async () => {
       await Promise.all([...document.querySelectorAll('[data-orbit-entry]')].flatMap(e => e.getAnimations()).map(a => a.finished.catch(() => {})));
@@ -53,7 +53,7 @@ try {
       return { stable, visible };
     });
     assert(stability.stable && stability.visible, `${name}: icons restart or blink while stationary`);
-    results.push(`${name}: native scroll replay + full floating cycle without blinking PASS`);
+    results.push(`${name}: native scroll return + full floating cycle without restarting/blinking PASS`);
     await noOverflow(page);
     await capture(page,`${name}-home`);
 
@@ -120,14 +120,14 @@ try {
     assert(await page.evaluate(()=>!document.documentElement.classList.contains('dark')));
     results.push(`${name}: reveal/conceal + required validation + artwork + theme persistence PASS`);
 
-    await page.goto(`${base}/contact`,{waitUntil:'networkidle'});
+    await page.goto(`${base}/contact`,{waitUntil:'domcontentloaded'});
     await page.getByRole('button',{name:'Send message',exact:true}).click();
     assert(await page.locator('main form').first().evaluate(e=>!e.checkValidity() && e.contains(document.activeElement)));
     await page.getByRole('button',{name:'Request a consultation',exact:true}).click();
     assert(await page.locator('main form').nth(1).evaluate(e=>!e.checkValidity() && e.contains(document.activeElement)));
     await noOverflow(page);
     results.push(`${name}: contact/consultation required-field validation PASS (no submissions)`);
-    await page.goto(`${base}/ajadmin`,{waitUntil:'networkidle'});
+    await page.goto(`${base}/ajadmin`,{waitUntil:'domcontentloaded'});
     assert((await page.locator('main').innerText()).includes('Supabase'));
     await noOverflow(page);
     await capture(page,`${name}-admin`);

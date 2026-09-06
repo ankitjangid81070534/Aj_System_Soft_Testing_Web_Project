@@ -95,7 +95,7 @@ export function TechCapabilities() {
                 <div className="relative z-10 flex items-center gap-3">
                   <span
                     aria-hidden="true"
-                    className={`inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-4px_var(--glow)] transition-transform duration-300 ease-spring group-hover:-rotate-6 group-hover:scale-105 ${tone}`}
+                    className={`inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-4px_var(--glow)] transition-transform duration-300 ease-spring ${tone}`}
                     style={{ "--glow": glow } as React.CSSProperties}
                   >
                     <Icon className="h-4.5 w-4.5" />

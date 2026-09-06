@@ -46,13 +46,18 @@ try {
     await screenshot(page,`${name}-home`);
 
     const fan = page.locator('#included [data-reveal="fan"]').first();
+    await fan.scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.querySelector('#included [data-reveal="fan"]').dataset.revealCycle === '1');
+    await fan.evaluate(async e => { await Promise.all(e.getAnimations().map(a => a.finished.catch(() => {}))); });
     for (let visit = 1; visit <= 3; visit++) {
       await instantTop(page);
-      const before = Number(await fan.getAttribute("data-reveal-cycle") || 0);
       await fan.scrollIntoViewIfNeeded();
-      await page.waitForFunction(before => Number(document.querySelector('#included [data-reveal="fan"]').dataset.revealCycle) > before, before);
+      await fan.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      assert.equal(await fan.getAttribute('data-reveal-cycle'), '1');
+      assert.equal(await fan.evaluate(e => getComputedStyle(e).opacity), '1');
+      assert.equal(await fan.evaluate(e => e.getAnimations().length), 0);
     }
-    results.push(`${name}: three complete scroll/re-entry cycles PASS`);
+    results.push(`${name}: three return visits stay visible without replay PASS`);
 
     const track = page.locator("[data-journey-track]");
     if (width > 700) {
@@ -85,8 +90,9 @@ try {
     const first = page.locator('main a[href^="/services/"]').first();
     if (width > 700) {
       await first.hover({ position: { x: 35, y: 40 } });
-      await page.waitForFunction(() => document.querySelector('main a[href^="/services/"]').style.getPropertyValue("--tilt-x") !== "");
-      results.push(`${name}: real pointer tilt PASS`);
+      assert.equal(await first.evaluate(e => e.style.getPropertyValue('--tilt-x')), '');
+      assert.notEqual(await first.evaluate(e => getComputedStyle(e).transform), 'none');
+      results.push(`${name}: ordinary card lifts without pointer tilt PASS`);
     }
     const destination = await first.getAttribute("href");
     await first.click();
@@ -141,7 +147,7 @@ try {
     assert.notEqual(await section.getAttribute("data-motion"),"horizontal");
     assert.equal(await page.locator("main h1").evaluate(e => getComputedStyle(e).opacity),"1");
     if (mode === "no-js") assert.equal(await page.locator("#delivery noscript li").count(),5);
-    else assert.equal(await page.locator("[data-reveal-cycle]").count(),0);
+    else assert.equal(await page.locator('[data-reveal-cycle]').evaluateAll(nodes => nodes.some(e => e.getAnimations().length > 0)), false);
     await noOverflow(page);
     results.push(`${mode}: content visible and scenes stacked PASS`);
     await context.close();
