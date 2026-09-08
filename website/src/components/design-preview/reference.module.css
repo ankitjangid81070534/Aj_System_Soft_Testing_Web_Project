@@ -331,6 +331,46 @@
 @media(max-width:700px) { .benefitBento { gap: 14px; }.benefitCard p { font-size: 13px; }.ownership { min-height: 660px; }.finale { min-height: 720px; }.finaleCopy { padding: 235px 24px 65px; }.processArt { min-height: 380px; }.processCard { max-width: 290px; } }
 @media(prefers-reduced-motion:reduce) { .hero .orbit { transform: none; }.processCard { animation: none; }.benefitCard:hover { transform: none; }.stepButton[aria-pressed="true"] { transform: none; } }
 
+/* Fill the tablet/compact-window gap without changing phone or desktop rules. */
+@media (min-width: 701px) and (max-width: 1023px) {
+  .headerFrame :global(.font-brand) { font-size: 14px; }
+  .section { width: 100%; padding: 64px 32px; }
+  .heroCopy { width: calc(100% - 64px); padding-top: 64px; }
+  .hero h1 { font-size: clamp(48px, 6.2vw, 64px); }
+  .heroBadge { font-size: 13px; padding: 8px 14px; }
+  .heroDescription { max-width: 620px; font-size: 16px; line-height: 1.65; }
+  .primaryButton, .secondaryButton { font-size: 15px; padding-block: 12px; }
+  .eyebrow, .scrollCue { font-size: 13px; }
+  .centerHeading { max-width: 700px; margin-bottom: 36px; }
+  .centerHeading > p:not(.eyebrow) { max-width: 600px; font-size: 16px; }
+  .benefitBento { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .benefitCell:nth-child(3n+2) { margin-top: 0; }
+  .benefitCard { padding: 26px; min-height: 270px; }
+  .benefitCard h3 { max-width: none; font-size: 22px; }
+  .benefitCard p { font-size: 16px; }
+  .process { gap: 32px; }
+  .processIntro, .stepDescription { font-size: 16px; }
+  .miniCardHeader { font-size: 13px; }
+  .miniCardFooter, .stepButton small { font-size: 12px; }
+  .sceneInner { padding-inline: 32px; gap: 32px; }
+  .sceneCopy h2 { font-size: 27px; }
+  .sceneCopy p:not(.eyebrow) { font-size: 16px; }
+  .serviceCategory, .textLink, .productTop { font-size: 13px; }
+  .productCard h3 { font-size: 22px; }
+  .productCard > p, .productCard > a { font-size: 15px; line-height: 1.55; }
+  .ownershipCopy > p:not(.eyebrow), .finaleCopy > p:not(.eyebrow) { max-width: 560px; font-size: 16px; }
+}
+@media (min-width: 701px) and (max-width: 850px) {
+  .process { grid-template-columns: 1fr; }
+  .processArt { min-height: 360px; }
+  .processCard { max-width: 340px; }
+}
+@media (min-width: 701px) and (max-width: 1023px) and (max-height: 700px) {
+  .journey[data-motion="horizontal"] .sceneInner { padding: 28px 32px; gap: 28px; }
+  .journey[data-motion="horizontal"] .productSymbol { height: 65px; }
+  .journey[data-motion="horizontal"] .sceneCopy > div + div { margin-top: 18px; }
+}
+
 /* Desktop composition grows with the viewport, not browser zoom. Keep the
    existing touch layouts and native scroll/animation geometry unchanged. */
 @media (min-width: 1024px) {

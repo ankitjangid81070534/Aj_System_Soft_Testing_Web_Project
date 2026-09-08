@@ -1,5 +1,5 @@
 /* Presentation only: frequency, dismiss handling and offer links stay intact. */
-@media (min-width: 1024px) {
+@media (min-width: 701px) {
   .dialog.dialog {
     width: min(640px, calc(100vw - 64px));
     max-width: 640px;

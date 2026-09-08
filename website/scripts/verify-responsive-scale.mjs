@@ -5,7 +5,7 @@ import { chromium } from 'playwright';
 const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
 const origin = process.env.APP_URL || 'http://localhost:3000';
 try {
-  for (const [width, height] of [[360,800],[393,852],[768,1024],[1024,768],[1280,800],[1440,900],[1920,1080],[2560,1440]]) {
+  for (const [width, height] of [[360,800],[393,852],[701,800],[768,1024],[900,600],[1004,554],[1023,768],[1024,768],[1280,800],[1440,900],[1920,1080],[2560,1440]]) {
     const page = await browser.newPage({ viewport: {width,height}, reducedMotion: 'reduce' });
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
@@ -39,8 +39,8 @@ try {
     assert(!metrics.headerOverlap, `header overlap at ${width}`);
     assert(metrics.order && metrics.benefitCount===6, `benefits changed at ${width}`);
     assert(!metrics.benefitOverflow, `benefit text overflow at ${width}`);
-    if(width>=1024) {
-      assert(metrics.cardBodySize>=16, `desktop body too small at ${width}`);
+    if(width>=701) {
+      assert(metrics.cardBodySize>=16, `tablet/desktop body too small at ${width}`);
       assert(metrics.hero.height <= metrics.heroLineHeight*2+2, `hero exceeds two lines at ${width}`);
     }
     if(width>=1440) assert(metrics.navFont>=14, `navigation too small at ${width}`);

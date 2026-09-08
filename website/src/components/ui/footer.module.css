@@ -301,6 +301,15 @@
   }
 }
 
+@media (min-width: 701px) and (max-width: 1023px) {
+  .footerGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .brandBlock { grid-column: 1 / -1; }
+  .brandCopy, .linkList a { font-size: 16px; }
+  .brandCopy { max-width: 540px; }
+  .linkGroupTitle, .bottomRow { font-size: 12px; }
+  .ctaText { max-width: 600px; font-size: 16px; }
+}
+
 @media (min-width: 1024px) {
   .footerInner { width: min(1480px, 86%); }
   .footerGrid { gap: clamp(28px, 3vw, 60px); }
