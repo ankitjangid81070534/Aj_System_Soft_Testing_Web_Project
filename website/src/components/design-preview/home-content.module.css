@@ -1,4 +1,18 @@
 .content { min-width: 0; }
+
+/* Wider desktop grids with readable copy; no changes to mobile card columns. */
+@media (min-width: 1024px) {
+  .content .legacy :global(.max-w-content) { max-width: 1600px; width: 92%; padding-inline: clamp(24px, 3vw, 60px); }
+  .content .legacy :global(.card-3d) { padding: clamp(24px, 2vw, 36px); }
+  .content .legacy :global(.card-3d) h3 { font-size: clamp(20px, 1.45vw, 26px); line-height: 1.3; }
+  .content .legacy :global(.card-3d) p { font-size: clamp(16px, 1vw, 18px); line-height: 1.65; }
+  .content .legacy h2 { font-size: clamp(38px, 3vw, 56px); }
+  .content .heroPoints li { font-size: 14px; }
+  .content .serviceIntro { max-width: 960px; }
+  .content .serviceIntro > p:not(:first-child) { max-width: 740px; font-size: 18px; }
+  .content :global(.action-control) { font-size: 16px; min-height: 48px; }
+  .content .finaleSecondary { font-size: 16px; }
+}
 .heroPoints { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 8px 15px; margin: 22px 0 0; padding: 0; }
 .heroPoints li { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #81788a; }
 .heroPoints svg { color: #21857f; }

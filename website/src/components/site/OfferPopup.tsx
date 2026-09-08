@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { Offer } from "@/lib/data/growth";
 import { Dialog } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
+import styles from "./offer-popup.module.css";
 
 export function OfferPopup({ offer }: { offer: Offer }) {
   const [open, setOpen] = useState(false);
@@ -63,6 +64,7 @@ export function OfferPopup({ offer }: { offer: Offer }) {
 
   return (
     <Dialog
+      className={styles.dialog}
       open={open}
       onClose={handleClose}
       title={offer.title}

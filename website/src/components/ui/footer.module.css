@@ -301,6 +301,16 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .footerInner { width: min(1480px, 86%); }
+  .footerGrid { gap: clamp(28px, 3vw, 60px); }
+  .brandCopy { max-width: 360px; font-size: 16px; }
+  .linkGroupTitle { font-size: 13px; }
+  .linkList a { font-size: 16px; }
+  .bottomRow { font-size: 13px; }
+  .ctaText { max-width: 680px; font-size: 18px; }
+}
+
 :global(.dark) .footer {
   background: #ffffff;
   color: #111318;
