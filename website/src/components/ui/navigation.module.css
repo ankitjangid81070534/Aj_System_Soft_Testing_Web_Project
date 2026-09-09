@@ -16,6 +16,9 @@ li:nth-child(3n) > .link { --nav-hue: 27; }
 @media (hover:hover) and (pointer:fine) { .link.link:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 #ffffff90,0 3px 0 hsl(var(--nav-hue) 45% 75% / .6),0 10px 20px hsl(var(--nav-hue) 65% 45% / .15); } }
 .link.link:active { transform: translateY(1px); }
 .mobile.mobile { width: 100%; padding: 13px 15px; font-size: 14px; border-radius: 13px; margin-bottom: 5px; }
+@media (min-width: 1440px) {
+  .link.link { font-size: 14px; padding: 11px 12px; }
+}
 :global(.dark) .link.link, :global([data-scene-tone="dark"]) .link.link { color: #e1ebfa; border-color: #ffffff17; background: linear-gradient(155deg,#24334a,#182333); box-shadow: inset 0 1px 0 #ffffff0d,0 2px 0 #080f1d,0 5px 12px #0002; }
 :global(.dark) .link.link[aria-current="page"], :global([data-scene-tone="dark"]) .link.link[aria-current="page"] { background: linear-gradient(145deg,#315ec5,#21438f); color: #fff; border-color: #5985dc; }
 @media (prefers-reduced-motion:reduce) { .link.link { transition: none; }.link.link:hover,.link.link:active { transform: none; } }

@@ -287,15 +287,37 @@
   }
 
   .megaBrand {
+    width: 100%;
     margin-top: 58px;
-    font-size: clamp(72px, 25vw, 112px);
-    line-height: .78;
+    font-size: clamp(60px, 19vw, 96px);
+    letter-spacing: -.07em;
+    line-height: .86;
+    text-align: center;
   }
 
   .bottomRow {
     flex-direction: column;
     margin-top: 36px;
   }
+}
+
+@media (min-width: 701px) and (max-width: 1023px) {
+  .footerGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .brandBlock { grid-column: 1 / -1; }
+  .brandCopy, .linkList a { font-size: 16px; }
+  .brandCopy { max-width: 540px; }
+  .linkGroupTitle, .bottomRow { font-size: 12px; }
+  .ctaText { max-width: 600px; font-size: 16px; }
+}
+
+@media (min-width: 1024px) {
+  .footerInner { width: min(1480px, 86%); }
+  .footerGrid { gap: clamp(28px, 3vw, 60px); }
+  .brandCopy { max-width: 360px; font-size: 16px; }
+  .linkGroupTitle { font-size: 13px; }
+  .linkList a { font-size: 16px; }
+  .bottomRow { font-size: 13px; }
+  .ctaText { max-width: 680px; font-size: 18px; }
 }
 
 :global(.dark) .footer {

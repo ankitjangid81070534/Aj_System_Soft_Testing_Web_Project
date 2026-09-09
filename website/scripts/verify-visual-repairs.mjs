@@ -41,7 +41,9 @@ try {
       await Promise.all([...document.querySelectorAll('[data-orbit-entry]')].flatMap(e => e.getAnimations()).map(a => a.finished.catch(() => {})));
     });
     const stability = await page.evaluate(async () => {
-      const icons = [...document.querySelectorAll('[data-orbit-entry]')];
+      // Mobile intentionally hides decorative orbit positions. Their entrance
+      // opacity is not evidence of a visible blink; still check every painted icon.
+      const icons = [...document.querySelectorAll('[data-orbit-entry]')].filter(e => e.getClientRects().length > 0);
       const before = icons.map(e => e.dataset.revealCycle);
       let stable = true;
       let visible = true;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Code2, Layers3 } from "lucide-react";
 import type { ServiceTeaser } from "@/lib/data/mappers";
 import styles from "./reference.module.css";
+import { serviceAccent } from "@/components/ui/service-accent";
 import { ScrollJourney } from "./ScrollJourney";
 
 export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
@@ -13,7 +14,7 @@ export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
             <div className={styles.journeyScene} key={group[0].id} data-scene-index={index}>
               <span className={styles.sceneWord} aria-hidden="true">{["Build.", "Connect.", "Grow."][index]}</span>
               <div className={styles.sceneInner}>
-                <div className={styles.productCard} data-tilt="on">
+                <div className={`${styles.productCard} reference-card card-accent-${serviceAccent(group[0].slug)}`} data-tilt="on">
                   <div className={styles.productTop}><span><Code2 size={15} /> AJS Technology</span><i /></div>
                   <div className={styles.productSymbol}><Layers3 size={58} strokeWidth={1} /></div>
                   <h3>{group[0].name}</h3>

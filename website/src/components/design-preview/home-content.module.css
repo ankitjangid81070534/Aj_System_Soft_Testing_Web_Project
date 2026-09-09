@@ -1,4 +1,30 @@
 .content { min-width: 0; }
+
+/* Tablet copy must not fall back to the compact 11–13px presentation. */
+@media (min-width: 701px) and (max-width: 1023px) {
+  .content .legacy :global(.max-w-content) { padding-inline: 32px; }
+  .content .legacy :global(.card-3d) h3 { font-size: 21px; line-height: 1.3; }
+  .content .legacy :global(.card-3d) p { font-size: 16px; line-height: 1.65; }
+  .content .heroPoints li { font-size: 13px; }
+  .content .serviceIntro { max-width: 800px; padding: 56px 32px 40px; }
+  .content .serviceIntro > p:not(:first-child) { max-width: 640px; font-size: 16px; }
+  .content :global(.action-control) { font-size: 15px; min-height: 46px; }
+  .content .finaleSecondary { font-size: 15px; }
+}
+
+/* Wider desktop grids with readable copy; no changes to mobile card columns. */
+@media (min-width: 1024px) {
+  .content .legacy :global(.max-w-content) { max-width: 1600px; width: 92%; padding-inline: clamp(24px, 3vw, 60px); }
+  .content .legacy :global(.card-3d) { padding: clamp(24px, 2vw, 36px); }
+  .content .legacy :global(.card-3d) h3 { font-size: clamp(20px, 1.45vw, 26px); line-height: 1.3; }
+  .content .legacy :global(.card-3d) p { font-size: clamp(16px, 1vw, 18px); line-height: 1.65; }
+  .content .legacy h2 { font-size: clamp(38px, 3vw, 56px); }
+  .content .heroPoints li { font-size: 14px; }
+  .content .serviceIntro { max-width: 960px; }
+  .content .serviceIntro > p:not(:first-child) { max-width: 740px; font-size: 18px; }
+  .content :global(.action-control) { font-size: 16px; min-height: 48px; }
+  .content .finaleSecondary { font-size: 16px; }
+}
 .heroPoints { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 8px 15px; margin: 22px 0 0; padding: 0; }
 .heroPoints li { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #81788a; }
 .heroPoints svg { color: #21857f; }
@@ -12,7 +38,6 @@
 .legacy > section { background: #fff; border-color: #f0ebf5; }
 .legacy h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; font-weight: 500; }
 .legacy h3 { font-weight: 500; }
-.legacy :global(.card-3d):not([class*="card-accent-"]) { background: var(--surface-sheen); border: 1px solid var(--color-line); border-radius: 20px; box-shadow: var(--shadow-sculpted); }
 
 .legacy :global(.text-eyebrow) { background: none; border: 0; box-shadow: none; color: #3168b6; padding-left: 0; letter-spacing: .06em; }
 .legacy :global(.text-eyebrow) > span { display: none; }
@@ -29,5 +54,4 @@
 }
 
 :global(.dark) .legacy > section, :global(.dark) .legacy :global(.glass-strong) { background: #171120; border-color: #34273f; }
-:global(.dark) .legacy :global(.card-3d):not([class*="card-accent-"]) { background: #22192e; border-color: #3c2e49; }
 :global(.dark) .legacy { --color-brand-50: #271a39; --color-brand-100: #342348; --color-brand-200: #64487d; --color-brand-600: #b895e6; --color-brand-700: #d5b8f5; }

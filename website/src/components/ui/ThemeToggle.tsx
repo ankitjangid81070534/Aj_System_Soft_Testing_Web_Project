@@ -50,7 +50,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       title={mounted && dark ? "Switch to light theme" : "Switch to dark theme"}
       className={
         className ??
-        "inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-muted transition-colors duration-200 ease-soft hover:bg-canvas-raised hover:text-ink focus-ring"
+        "icon-control inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-muted transition-colors duration-200 ease-soft hover:bg-canvas-raised hover:text-ink focus-ring"
       }
     >
       {mounted && dark ? (

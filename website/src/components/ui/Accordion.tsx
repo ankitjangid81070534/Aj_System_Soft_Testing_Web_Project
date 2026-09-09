@@ -38,7 +38,7 @@ export function Accordion({ items, className }: { items: AccordionItem[]; classN
                 aria-controls={`${baseId}-panel-${item.id}`}
                 onClick={() => setOpenId(open ? null : item.id)}
                 className={cn(
-                  "flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-ink",
+                  "action-control action-secondary disclosure-control flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-ink",
                   "transition-colors duration-150 hover:bg-canvas/60 focus-ring sm:text-base",
                 )}
               >

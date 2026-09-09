@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
+import { ActionIcon } from "./ActionIcon";
 
 type Variant = "primary" | "secondary" | "outline" | "ghost" | "danger";
 type Size = "xs" | "sm" | "md" | "lg";
@@ -61,7 +62,7 @@ type ButtonAsLink = CommonProps &
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 function classes(variant: Variant = "primary", size: Size = "md", className?: string): string {
-  return cn(base, variants[variant], sizes[size], className);
+  return cn(base, `action-${variant}`, `action-${size}`, variants[variant], sizes[size], className);
 }
 
 /**
@@ -77,16 +78,16 @@ export function Button(props: ButtonProps) {
         <a
           href={href}
           target="_blank"
-          rel="noopener noreferrer"
           className={classes(variant, size, className)}
           {...rest}
+          rel="noopener noreferrer"
         >
           {loading ? (
             <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-current">
               <Spinner className="w-5 h-5" />
             </span>
           ) : null}
-          <span className={cn("inline-flex items-center gap-2", loading && "opacity-0")}>{children}</span>
+          <span className={cn("action-content inline-flex items-center gap-2", loading && "opacity-0")}>{typeof children === "string" && <ActionIcon label={children} />}{children}</span>
         </a>
       );
     }
@@ -103,19 +104,19 @@ export function Button(props: ButtonProps) {
             <Spinner className="w-5 h-5" />
           </span>
         ) : null}
-        <span className={cn("inline-flex items-center gap-2", loading && "opacity-0")}>{children}</span>
+        <span className={cn("action-content inline-flex items-center gap-2", loading && "opacity-0")}>{typeof children === "string" && <ActionIcon label={children} />}{children}</span>
       </Link>
     );
   }
   const { variant, size, className, loading, children, disabled, ...rest } = props;
   return (
-    <button className={classes(variant, size, className)} disabled={loading || disabled} {...rest}>
+    <button className={classes(variant, size, className)} disabled={loading || disabled} aria-busy={loading || undefined} {...rest}>
       {loading ? (
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-current">
           <Spinner className="w-5 h-5" />
         </span>
       ) : null}
-      <span className={cn("inline-flex items-center gap-2", loading && "opacity-0")}>{children}</span>
+      <span className={cn("action-content inline-flex items-center gap-2", loading && "opacity-0")}>{typeof children === "string" && <ActionIcon label={children} />}{children}</span>
     </button>
   );
 }

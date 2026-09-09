@@ -180,7 +180,7 @@ function GoogleButton({ label }: { label: string }) {
         type="button"
         onClick={startGoogleOAuth}
         disabled={pending}
-        className="flex h-11 w-full items-center justify-center gap-3 rounded-full border border-line bg-surface text-sm font-medium text-ink shadow-e1 transition-all hover:border-line-strong hover:shadow-e2 focus-ring disabled:opacity-60"
+        className="action-control action-secondary flex h-11 w-full items-center justify-center gap-3 rounded-full border border-line bg-surface text-sm font-medium text-ink shadow-e1 transition-all hover:border-line-strong hover:shadow-e2 focus-ring disabled:opacity-60"
       >
         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#EA4335] text-xs font-bold text-white">
           {pending ? <Loader2 className="h-3 w-3 animate-spin" /> : "G"}

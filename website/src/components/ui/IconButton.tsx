@@ -21,7 +21,7 @@ export function IconButton({ size = "md", className, type, ...props }: IconButto
     <button
       type={type ?? "button"}
       className={cn(
-        "inline-flex shrink-0 items-center justify-center rounded-full text-ink-muted",
+        "icon-control inline-flex shrink-0 items-center justify-center rounded-full text-ink-muted",
         "transition-colors duration-200 ease-soft hover:bg-canvas-raised hover:text-ink focus-ring",
         sizes[size],
         className,

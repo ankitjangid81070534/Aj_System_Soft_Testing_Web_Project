@@ -32,7 +32,7 @@ function SignOutButton() {
     <form action={signOutAction}>
       <button
         type="submit"
-        className="flex w-full items-center justify-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-canvas-raised focus-ring"
+        className="action-control action-secondary flex w-full items-center justify-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-canvas-raised focus-ring"
       >
         <LogOut aria-hidden="true" className="h-4 w-4" />
         Sign out

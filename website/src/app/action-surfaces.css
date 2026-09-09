@@ -1,0 +1,51 @@
+/* Tactile pill actions. Explicit control classes keep inputs, navigation links,
+   disclosure rows and hit areas intact. No continuously running glow effects. */
+.action-control.action-control {
+  --action-color: #2499dd; --action-light: #57c8ff;
+  --color-ink: #151923; --color-ink-muted: #4d5666;
+  gap: 10px; border: 1px solid #e3e7ef; border-radius: 999px;
+  color: #151923; background: linear-gradient(155deg, #ffffff, #f8faff);
+  box-shadow: inset 0 1px 1px #ffffff, 0 7px 18px -12px #15284f66, 0 2px 5px #14213d12;
+  padding-inline: 8px 18px; min-height: 44px;
+  font-weight: 600; line-height: 1.3; text-decoration: none;
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+.action-control:not(.action-danger):has(.action-glyph[data-tone="success"]) { --action-color: #1caf78; --action-light: #9ff7bc; }
+.action-control.disclosure-control { white-space: normal; border-radius: 16px; padding: 12px 16px; justify-content: flex-start; }
+.action-control.disclosure-control[aria-expanded="true"] { border-color: #ac84e0; }
+.action-control.process-stage { padding: 7px 16px 7px 8px; font-size: clamp(13px, 1.25vw, 17px); letter-spacing: -.02em; white-space: normal; text-align: left; }
+.action-control.process-stage > span { flex: 1; }
+.action-control.process-stage > small { color: #b2becf; }
+.action-control.process-stage[aria-pressed="true"] { --action-color: #1caf78; --action-light: #9ff7bc; border-color: #46c99a; box-shadow: inset 0 1px 1px #ffffff30, 0 0 0 2px #46c99a26; }
+.action-control.action-secondary, .action-control.action-outline { --action-color: #8852d5; --action-light: #d5a5ff; }
+.action-control.action-danger { --action-color: #c73051; --action-light: #ffadc0; border-color: #e56b8050; }
+.action-control.action-ghost { --action-color: #53657d; --action-light: #d2deef; background: linear-gradient(150deg,#394251,#252c38); }
+.action-control.action-xs { min-height: 34px; padding-inline: 5px 12px; }
+.action-control.action-sm { min-height: 38px; padding-inline: 5px 14px; }
+.action-content { min-width: 0; }
+.action-control > svg, .action-content > svg {
+  flex-shrink: 0; width: 32px; height: 32px; padding: 7px; box-sizing: border-box;
+  border-radius: 13px; color: var(--action-light); stroke-width: 2;
+  border: 1px solid color-mix(in srgb,var(--action-light),transparent 40%);
+  background: radial-gradient(ellipse at 30% 0%,color-mix(in srgb,var(--action-color),#fff 18%),transparent 75%), linear-gradient(145deg,color-mix(in srgb,var(--action-color),#111 35%),color-mix(in srgb,var(--action-color),#080c15 70%));
+  box-shadow: inset 0 1px 2px #ffffff60, inset 0 -2px 4px #0004, 0 0 10px -3px var(--action-color);
+  order: -1;
+}
+.action-control.action-xs .action-content > svg { width: 25px; height: 25px; padding: 5px; border-radius: 10px; }
+.action-control.action-sm .action-content > svg { width: 28px; height: 28px; padding: 6px; border-radius: 11px; }
+.action-control.shine::after { display: none; }
+.action-control:focus-visible, .icon-control:focus-visible { outline: 3px solid #389ce0; outline-offset: 4px; }
+.action-control.action-control:disabled, .icon-control:disabled { opacity: .5; transform: none; box-shadow: none; cursor: not-allowed; }
+.icon-control.icon-control {
+  color: #eaf4ff; border: 1px solid #8094ad65; border-radius: 50%;
+  background: radial-gradient(ellipse at 30% 0%,#60758d,#263343 70%);
+  box-shadow: inset 0 1px 2px #ffffff60, inset 0 -2px 3px #0004, 0 5px 12px -8px #09162690;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .action-control.action-control:not(:disabled):hover { color: #101722; background: #fff; transform: translateY(-2px); border-color: color-mix(in srgb,var(--action-color),#dce4f0 45%); box-shadow: inset 0 1px 1px #fff,0 12px 26px -15px var(--action-color),0 3px 8px #14213d18; }
+  .icon-control:not(:disabled):hover { color: #fff; transform: translateY(-2px); box-shadow: inset 0 1px 2px #ffffff70,0 7px 14px -8px #2499ddaa; }
+}
+.action-control.action-control:not(:disabled):active { transform: translateY(1px); }
+@media (max-width:700px) { .action-control.action-control, .icon-control.icon-control { min-height: 44px; } .icon-control.icon-control { min-width: 44px; } }
+@media (prefers-reduced-motion:reduce) { .action-control.action-control, .icon-control.icon-control { transition: none; } .action-control.action-control:active { transform: none; } }

@@ -47,7 +47,7 @@ export function ConfirmButton({
         onClick={() => setOpen(true)}
         className={
           className ??
-          "rounded-full border border-line px-3 py-1 text-xs font-medium text-danger transition-colors hover:bg-danger-soft focus-ring"
+          "action-control action-danger action-xs rounded-full border border-line px-3 py-1 text-xs font-medium text-danger transition-colors hover:bg-danger-soft focus-ring"
         }
       >
         {label}
