@@ -20,6 +20,7 @@ import { MotionWords } from "@/components/motion/MotionWords";
 import { OwnershipOrbit, CosmicBackdrop } from "./SculpturalScenes";
 import styles from "./reference.module.css";
 import contentStyles from "./home-content.module.css";
+import pearlStyles from "./pearl-benefits.module.css";
 
 /** Shared by the live homepage and preview: public data is fetched by the route.
  * Original section components retain complete descriptions, media and links.
@@ -47,12 +48,12 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
           <p className={styles.eyebrow}>Launch Benefits</p><h2>What&apos;s included with every project</h2>
           <p>Our service goes beyond just writing code. Every custom software project includes these benefits by default.</p>
         </div></Reveal>
-        <div className={styles.benefitBento}>
-          {benefits.map((benefit, index) => <Reveal key={benefit.id} variant="fan" delay={index * 45} className={`${styles.benefitCell} ${index === 1 ? styles.featuredBenefit : ""}`}>
-            <article className={`${styles.benefitCard} reference-card`}>
-              <span className={styles.benefitIcon}>{index % 2 ? <Layers3 size={22} /> : <ShieldCheck size={22} />}</span>
+        <div className={`${styles.benefitBento} ${pearlStyles.benefits}`}>
+          {benefits.map((benefit, index) => <Reveal key={benefit.id} variant="fan" delay={index * 45} className={`${styles.benefitCell} ${pearlStyles.cell} ${index === 1 ? styles.featuredBenefit : ""}`}>
+            <article className={`${styles.benefitCard} ${pearlStyles.benefit} reference-card`}>
+              <span className={`${styles.benefitIcon} ${pearlStyles.icon}`}>{index % 2 ? <Layers3 size={22} /> : <ShieldCheck size={22} />}</span>
               <h3>{benefit.title}</h3><p>{benefit.description}</p>
-              {index === 1 && <span className={styles.benefitSculpture} aria-hidden="true"><Code2 size={54} strokeWidth={1.2} /></span>}
+              {index === 1 && <span className={`${styles.benefitSculpture} ${pearlStyles.sculpture}`} aria-hidden="true"><Code2 size={54} strokeWidth={1.2} /></span>}
             </article>
           </Reveal>)}
         </div>
