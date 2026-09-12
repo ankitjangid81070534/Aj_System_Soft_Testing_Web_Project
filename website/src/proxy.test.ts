@@ -59,6 +59,30 @@ describe("configured redirect and session routing (mocked provider)", () => {
       expect(unstable_doesProxyMatch({ config, nextConfig: {}, url: path })).toBe(false);
     }
   });
+  it.each(["/", "/projects", "/blog", "/login"])("does not log an auth warning for unconfigured public route %s", async path => {
+    mocks.configured = false;
+    const warning = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const { proxy } = await import("./proxy");
+      expect((await proxy(new NextRequest(`https://site.example${path}`))).status).toBe(200);
+      expect(warning).not.toHaveBeenCalled();
+      expect(mocks.client).not.toHaveBeenCalled();
+    } finally {
+      warning.mockRestore();
+    }
+  });
+  it.each(["/ajadmin", "/account"])("retains the missing-auth warning for protected route %s", async path => {
+    mocks.configured = false;
+    const warning = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const { proxy } = await import("./proxy");
+      expect((await proxy(new NextRequest(`https://site.example${path}`))).status).toBe(200);
+      expect(warning).toHaveBeenCalledWith("[auth] Supabase not configured — session checks unavailable for this protected route.");
+      expect(mocks.client).not.toHaveBeenCalled();
+    } finally {
+      warning.mockRestore();
+    }
+  });
   it("keeps public fallback pages available without configuration", async () => {
     mocks.configured = false;
     const { proxy } = await import("./proxy");

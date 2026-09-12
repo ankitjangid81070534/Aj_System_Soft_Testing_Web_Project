@@ -22,6 +22,7 @@ back to real capability copy (no invented facts).
 docker compose -f docker-compose.base44.yml up -d
 ```
 - Web entry point: **host port 3000** (mapped to Next.js dev server).
+- Missing-Supabase proxy warnings are scoped to admin/client routes; public fallback pages and the `/` healthcheck do not require auth configuration. Verify with `npm test -- src/proxy.test.ts`. For curl RSC checks, follow redirects (`-L -H 'RSC: 1'`): Next may normalize the request to `?_rsc` before returning `text/x-component`.
 - The compose uses `node:22-bookworm-slim`, bind-mounts `website/` at `/app`, and runs
   `npm install && npm run dev` with Turbopack. Edits hot-reload live.
 - `node_modules` lives in a named volume (`web_node_modules`) to avoid host conflicts.
