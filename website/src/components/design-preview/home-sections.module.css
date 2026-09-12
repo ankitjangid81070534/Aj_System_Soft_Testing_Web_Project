@@ -1,0 +1,124 @@
+/* Phase 5: homepage presentation only. Section order, data, motion and links
+   remain with their original components; the accepted hero/nav are excluded. */
+.sections {
+  --section-ink: #201a2c;
+  --section-muted: #574f64;
+  --section-paper: #ffffff;
+  --section-wash: #f6f4fa;
+  --section-line: #e2dce9;
+  --section-label: #3d5caf;
+}
+:global(.dark) .sections {
+  --section-ink: #f3eefb;
+  --section-muted: #d0c6dd;
+  --section-paper: #211a2c;
+  --section-wash: #191321;
+  --section-line: #40344f;
+  --section-label: #b5cbff;
+}
+.sections :global([data-section-heading]) { gap: 16px; }
+.sections :global([data-section-heading]) h2 {
+  max-width: 24ch;
+  color: var(--section-ink);
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -.04em;
+}
+.sections :global([data-section-heading]) > p:last-child:not(:first-child) {
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--section-muted);
+}
+.sections :global([data-section-heading] .text-eyebrow) { color: var(--section-label); }
+.sections :global([data-section-grid]) { gap: 20px; }
+
+/* A quiet platform gallery: jewel icons and colored, sculpted paper faces. */
+.sections :global(section[data-home-section="platforms"]) { background: var(--section-wash); border-color: var(--section-line); }
+.sections :global([data-home-section="platforms"] [data-section-heading]) { text-align: left; align-items: flex-start; }
+.sections :global([data-home-section="platforms"] [data-section-heading]) > p { margin-inline: 0; }
+.sections :global(:is([data-home-section="platforms"], [data-home-section="industries"], [data-home-section="principles"]) .card-3d) {
+  --color-ink: var(--section-ink);
+  --color-ink-muted: var(--section-muted);
+  --color-ink-soft: var(--section-muted);
+  color: var(--section-ink);
+  background: linear-gradient(145deg, var(--section-paper) 20%, color-mix(in srgb, var(--card-light) 12%, var(--section-paper)));
+  border-color: color-mix(in srgb, var(--card-accent) 22%, var(--section-line));
+  box-shadow: var(--shadow-sculpted);
+}
+.sections :global(:is([data-home-section="platforms"], [data-home-section="industries"], [data-home-section="principles"]) .card-3d) :is(h3, p) {
+  color: var(--section-ink);
+  text-shadow: none;
+  opacity: 1;
+}
+.sections :global([data-home-section="platforms"] .card-3d) h3,
+.sections :global([data-home-section="principles"] .card-3d) h3 { font-size: 21px; font-weight: 600; line-height: 1.3; letter-spacing: -.025em; }
+.sections :global([data-home-section="platforms"] .card-3d) p,
+.sections :global([data-home-section="principles"] .card-3d) p { color: var(--section-muted); font-size: 16px; line-height: 1.65; }
+
+/* Industry finding aid, not clickable filters or invented landing pages. */
+.sections :global([data-home-section="industries"] [data-section-grid]) { gap: 14px; }
+.sections :global([data-home-section="industries"] .card-3d) { min-height: 90px; padding: 20px; border-radius: var(--radius-card-compact); }
+.sections :global([data-home-section="industries"] .card-3d) p { font-size: 15px; line-height: 1.5; font-weight: 600; }
+.sections :global([data-home-section="industries"] .icon-tile) { background: var(--card-accent); border-color: transparent; box-shadow: var(--shadow-tile); }
+
+/* A technical matrix contrasts with the light gallery and compact industry tiles. */
+.sections :global(section[data-home-section="technology"]) {
+  --section-ink: #f2f6ff;
+  --section-muted: #c5d0e5;
+  --section-label: #a8c9ff;
+  --color-ink-soft: #d9e4f8;
+  --color-canvas: #172035;
+  --color-surface: #202c43;
+  --color-line: #40516d;
+  background: #121b2c;
+  border-color: #35435c;
+}
+.sections :global([data-home-section="technology"] .card-3d) {
+  --color-canvas: #172035;
+  --color-line: #40516d;
+  --color-ink-soft: #d9e4f8;
+  --color-brand-50: #243653;
+  --color-brand-100: #5b7198;
+  background: #202c43;
+  border: 1px solid #40516d;
+  border-top: 3px solid var(--card-light);
+  box-shadow: inset 0 1px 0 #ffffff0a, 0 12px 24px -20px #000000;
+  padding: 24px;
+}
+.sections :global([data-home-section="technology"] .card-3d) h3 { font-size: 19px; line-height: 1.35; color: #f2f6ff; }
+.sections :global([data-home-section="technology"] .card-3d) li { font-size: 13px; line-height: 1.5; padding: 6px 10px; }
+.sections :global([data-home-section="principles"] .card-3d) { border-left: 4px solid var(--card-accent); }
+
+/* Improve the existing storytelling copy, without changing its scroll mechanics. */
+.sections :global([data-service-copy]) > div > p { font-size: 16px; line-height: 1.7; color: #d1c5e2; }
+.sections :global([data-service-copy]) a { min-height: 44px; font-size: 14px; align-items: center; }
+.sections :global([data-section-copy]) > p:not(:first-child),
+.sections :global(#home-services) > p:not(:first-child) { font-size: 16px; line-height: 1.7; }
+.sections :global(#home-services) > p:not(:first-child),
+.sections :global([data-home-section="delivery"] [data-section-copy]) > p:not(:first-child) { color: var(--section-muted); }
+.sections :global([data-home-section="ownership"] [data-section-copy]) > p:not(:first-child),
+.sections :global([data-home-section="enquiry"] [data-section-copy]) > p:not(:first-child) { color: #ded2ed; max-width: 58ch; }
+
+@media (min-width: 701px) {
+  .sections :global([data-home-section="industries"] [data-section-grid]),
+  .sections :global([data-home-section="principles"] [data-section-grid]),
+  .sections :global([data-home-section="technology"] [data-section-grid]) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1200px) {
+  .sections :global([data-home-section="platforms"] > .max-w-content) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px; align-items: start; }
+  .sections :global([data-home-section="platforms"] [data-section-grid]) { margin-top: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sections :global([data-home-section="industries"] [data-section-grid]),
+  .sections :global([data-home-section="technology"] [data-section-grid]) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .sections :global([data-section-heading]) h2 { font-size: 30px; }
+  .sections :global([data-section-heading]) > p:last-child:not(:first-child),
+  .sections :global([data-home-section="platforms"] .card-3d) p,
+  .sections :global([data-home-section="principles"] .card-3d) p,
+  .sections :global([data-service-copy]) > div > p,
+  .sections :global([data-section-copy]) > p:not(:first-child) { font-size: 14px; }
+  .sections :global([data-home-section="industries"] [data-section-grid]) { grid-template-columns: minmax(0, 1fr); }
+  .sections :global([data-home-section="industries"] .card-3d) { min-height: 76px; }
+}

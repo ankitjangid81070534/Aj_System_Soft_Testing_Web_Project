@@ -11,7 +11,7 @@ export function TestimonialsSection({ testimonials }: { testimonials: Testimonia
   if (testimonials.length === 0) return null;
 
   return (
-    <section className="relative isolate overflow-hidden border-y border-line bg-surface">
+    <section data-home-section="reviews" className="relative isolate overflow-hidden border-y border-line bg-surface">
       <div aria-hidden="true" className="bg-dots absolute inset-0 -z-10 opacity-60" />
       <div
         aria-hidden="true"

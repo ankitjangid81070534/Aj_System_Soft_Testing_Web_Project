@@ -17,7 +17,10 @@
 15. [Phase 4 hero, navigation and conversion checks](PHASE_4_NAVBAR_HERO.md)
 16. [Phase 4 before/after and current tablet screenshots](evidence/phase-4/SCREENSHOTS.md)
 
-Phase 4 is complete and stopped before Phase 5. It preserves the accepted navigation and homepage sequence; authenticated integration checks remain deferred.
+17. [Phase 5 homepage presentation and checks](PHASE_5_HOMEPAGE_SECTIONS.md)
+18. [Phase 5 section screenshots](evidence/phase-5/SCREENSHOTS.md)
+
+Phase 5 is complete and stopped before Phase 6. It retains the current homepage sequence and accepted hero/navigation while refining section presentation; material reorder approval was not received, and authenticated integration checks remain deferred.
 
 The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 

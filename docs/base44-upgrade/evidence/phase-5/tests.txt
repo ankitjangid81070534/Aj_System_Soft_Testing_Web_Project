@@ -1,0 +1,47 @@
+
+> website@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+ ✓ src/components/design-preview/HomeHero.test.ts (17 tests) 245ms
+ ✓ src/components/ui/phase4-navigation.test.ts (5 tests) 126ms
+ ✓ src/proxy.test.ts (10 tests) 102ms
+ ✓ src/lib/admin/actions-authorization.test.ts (12 tests) 65ms
+ ✓ src/components/design-preview/HomeExperience.test.ts (13 tests) 574ms
+ ✓ src/lib/admin/builder-authorization.test.ts (7 tests) 43ms
+ ✓ src/components/ui/reference-ui.test.ts (16 tests) 26ms
+ ✓ src/app/ajadmin/dashboard-access.test.ts (6 tests) 57ms
+ ✓ src/lib/admin/resources.test.ts (6 tests) 35ms
+ ✓ src/components/ui/foundation.test.ts (29 tests) 39ms
+ ✓ src/lib/validation/leads.test.ts (14 tests) 39ms
+ ✓ src/lib/preview-security.test.ts (4 tests) 23ms
+ ✓ src/lib/validation/portal.test.ts (7 tests) 13ms
+ ✓ src/lib/validation/sections.test.ts (5 tests) 9ms
+ ✓ src/lib/data/services.test.ts (5 tests) 10ms
+ ✓ src/lib/data/projects.test.ts (5 tests) 25ms
+ ✓ src/components/motion/motion-utils.test.ts (6 tests) 6ms
+ ✓ src/components/ui/service-accent.test.ts (11 tests) 10ms
+ ✓ src/lib/env.test.ts (9 tests) 8ms
+ ✓ src/lib/validation/auth.test.ts (7 tests) 11ms
+ ✓ src/lib/data/ai-methods.test.ts (4 tests) 7ms
+ ✓ src/lib/seo/metadata.test.ts (8 tests) 7ms
+ ✓ src/lib/seo/jsonld.test.ts (8 tests) 7ms
+ ✓ src/lib/bottom-navigation.test.ts (3 tests) 6ms
+ ✓ src/lib/auth/permissions.test.ts (6 tests) 5ms
+ ✓ src/lib/data/mappers.test.ts (6 tests) 7ms
+ ✓ src/lib/data/cta.test.ts (3 tests) 5ms
+ ✓ src/components/site/Markdown.test.ts (4 tests) 8ms
+ ✓ src/types/database.test.ts (3 tests) 10ms
+ ✓ src/lib/admin/mutation-result.test.ts (3 tests) 5ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 4ms
+
+ Test Files  31 passed (31)
+      Tests  245 passed (245)
+   Start at  13:15:55
+   Duration  4.36s (transform 1.57s, setup 0ms, import 6.19s, tests 1.54s, environment 4ms)
+

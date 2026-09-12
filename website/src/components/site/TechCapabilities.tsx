@@ -52,7 +52,7 @@ const MARQUEE = [
 
 export function TechCapabilities() {
   return (
-    <section className="relative isolate overflow-hidden border-y border-line bg-surface">
+    <section data-home-section="technology" className="relative isolate overflow-hidden border-y border-line bg-surface">
       <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-80" />
       <div
         aria-hidden="true"
@@ -88,7 +88,7 @@ export function TechCapabilities() {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div data-section-grid className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {GROUPS.map(({ Icon, title, items, tone, glow }, index) => (
             <Reveal key={title} delay={index * 50} className="h-full">
               <div className="group card-3d flex h-full flex-col gap-4 rounded-[1.375rem] p-5">

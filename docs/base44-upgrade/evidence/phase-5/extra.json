@@ -1,0 +1,112 @@
+[
+  {
+    "name": "small-phone",
+    "width": 320,
+    "height": 740,
+    "motion": "reduce",
+    "overflow": false,
+    "hero": true,
+    "platformGrid": "272px",
+    "industryGrid": "272px",
+    "technologyGrid": "272px",
+    "principlesGrid": "272px",
+    "serviceCopy": [
+      {
+        "height": 493.46875,
+        "sceneHeight": 1089.96875
+      },
+      {
+        "height": 466.171875,
+        "sceneHeight": 1035.671875
+      },
+      {
+        "height": 493.46875,
+        "sceneHeight": 1089.96875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "motion": "reduce",
+    "overflow": false,
+    "hero": true,
+    "platformGrid": "342px",
+    "industryGrid": "342px",
+    "technologyGrid": "342px",
+    "principlesGrid": "342px",
+    "serviceCopy": [
+      {
+        "height": 469.671875,
+        "sceneHeight": 1066.171875
+      },
+      {
+        "height": 438.875,
+        "sceneHeight": 1008.375
+      },
+      {
+        "height": 391.28125,
+        "sceneHeight": 960.78125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "motion": "reduce",
+    "overflow": false,
+    "hero": true,
+    "platformGrid": "389.469px 389.484px",
+    "industryGrid": "299.094px 299.109px 299.109px 299.109px",
+    "technologyGrid": "294.594px 294.609px 294.609px 294.609px",
+    "principlesGrid": "609.203px 609.219px",
+    "serviceCopy": [
+      {
+        "height": 452.34375,
+        "sceneHeight": 712.34375
+      },
+      {
+        "height": 452.34375,
+        "sceneHeight": 712.34375
+      },
+      {
+        "height": 452.34375,
+        "sceneHeight": 712.34375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "desktop-motion",
+    "width": 1440,
+    "height": 1000,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": true,
+    "platformGrid": "389.469px 389.484px",
+    "industryGrid": "299.094px 299.109px 299.109px 299.109px",
+    "technologyGrid": "294.594px 294.609px 294.609px 294.609px",
+    "principlesGrid": "609.203px 609.219px",
+    "serviceCopy": [
+      {
+        "height": 452.34375,
+        "sceneHeight": 1000
+      },
+      {
+        "height": 452.34375,
+        "sceneHeight": 1000
+      },
+      {
+        "height": 452.34375,
+        "sceneHeight": 1000
+      }
+    ],
+    "scrollGestureChangedStage": true,
+    "pinned": "true",
+    "errors": []
+  }
+]

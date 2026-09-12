@@ -1,0 +1,54 @@
+[
+  {
+    "view": "phone",
+    "width": 390,
+    "height": 844,
+    "textPreserved": true,
+    "linksPreserved": true,
+    "headingsPreserved": true,
+    "heroPreserved": true,
+    "navPreserved": true,
+    "sectionsPreserved": true,
+    "noOverflow": true,
+    "noPageExceptions": true
+  },
+  {
+    "view": "tablet",
+    "width": 919,
+    "height": 1024,
+    "textPreserved": true,
+    "linksPreserved": true,
+    "headingsPreserved": true,
+    "heroPreserved": true,
+    "navPreserved": true,
+    "sectionsPreserved": true,
+    "noOverflow": true,
+    "noPageExceptions": true
+  },
+  {
+    "view": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "textPreserved": true,
+    "linksPreserved": true,
+    "headingsPreserved": true,
+    "heroPreserved": true,
+    "navPreserved": true,
+    "sectionsPreserved": true,
+    "noOverflow": true,
+    "noPageExceptions": true
+  },
+  {
+    "view": "tablet-dark",
+    "width": 919,
+    "height": 1024,
+    "textPreserved": true,
+    "linksPreserved": true,
+    "headingsPreserved": true,
+    "heroPreserved": true,
+    "navPreserved": true,
+    "sectionsPreserved": true,
+    "noOverflow": true,
+    "noPageExceptions": true
+  }
+]

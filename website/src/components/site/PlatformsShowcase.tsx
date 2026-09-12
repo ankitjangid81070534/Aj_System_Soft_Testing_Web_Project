@@ -61,7 +61,7 @@ const PLATFORMS = [
 
 export function PlatformsShowcase() {
   return (
-    <section className="relative isolate overflow-hidden border-y border-line bg-surface">
+    <section data-home-section="platforms" className="relative isolate overflow-hidden border-y border-line bg-surface">
       <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-80" />
       <div
         aria-hidden="true"
@@ -80,7 +80,7 @@ export function PlatformsShowcase() {
             align="center"
           />
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div data-section-grid className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PLATFORMS.map(({ Icon, title, description, tone, glow, accent }, index) => (
             <Reveal key={title} delay={index * 50} className="h-full">
               <article className={`group card-3d card-accent-${accent} flex h-full flex-col gap-4 rounded-[1.375rem] p-6`}>
