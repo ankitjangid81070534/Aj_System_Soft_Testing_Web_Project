@@ -51,6 +51,12 @@ Five configurations: 320×740, 390×844, 919×499, 1440×1000, and dark 919×900
 - Hosted auth/client/admin success, roles/RLS/storage/CRUD, lead persistence/email, Home Builder composition and hosted schema remain deferred. The owner declined credentials; none were requested or generated.
 - No whole-site accessibility certification, field performance measurement, production domain/release or deployment claims.
 
+## Continuation review — 2026-09-12
+
+At HEAD `a7d0d0decd`, the owner's next `continue next phase safly` request resumed this unfinished gate. The source-mounted development service is healthy and the homepage returns HTTP 200. In the actual preview, `/services` eventually rendered the expected H1 with populated main content and no console errors, failed requests or error overlay; the initial navigation-helper failure is not credited as a passing gesture.
+
+The requested screenshot returned `iframe_hidden`: the preview surface is hidden or zero-size. Visual verification remains **pending**, with no retry or app-source workaround. The owner must open the preview panel for the remaining visual review. No application code, secrets, schema, business records or auth behavior changed; prior tests/build were not rerun. Phase 8 remains unstarted.
+
 ## Next safe step
 
 Finish visual review of the corrected service hero plus article/Contact layouts at phone, current tablet and desktop sizes. Preserve the unchanged navbar/dock. Phase 7 is not fully signed off yet; **do not start Phase 8 automatically**. Data-backed checks remain separate owner-dependent release gates.

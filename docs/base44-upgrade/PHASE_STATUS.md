@@ -18,6 +18,15 @@ Completed: Phase 0 baseline with limits, Phase 2 planning, Phase 3 foundation, P
 
 Before continuing, read this file, MASTER_PROJECT_UNDERSTANDING, REGRESSION_BASELINE, MASTER_UPGRADE_PLAN, PHASE_2_INFORMATION_ARCHITECTURE and PHASE_7_PUBLIC_PAGES.
 
+## Continuation check — 2026-09-12
+
+The owner requested `continue next phase safly` again at HEAD `a7d0d0decd`. Resumed the next unfinished gate (Phase 7 visual review), not Phase 8 implementation.
+
+- Existing source-mounted development service remains healthy; homepage HTTP 200.
+- `/services` eventually rendered its expected H1 in the actual preview, with nonempty main content, no console errors, failed requests or error overlay. The navigation helper initially reported failure; that gesture is not counted as a pass.
+- Visual review remains **NOT automatically verified**: screenshot returned `iframe_hidden` (preview panel hidden or zero-size). No screenshot retry, app workaround, source change, credentials request or data write was made.
+- Open the preview panel to finish the pending visual review. Previous tests/build below are retained historical evidence, not newly rerun checks. Phase 8 remains unstarted.
+
 ## Phase 7 result
 
 See [PHASE_7_PUBLIC_PAGES](PHASE_7_PUBLIC_PAGES.md).
