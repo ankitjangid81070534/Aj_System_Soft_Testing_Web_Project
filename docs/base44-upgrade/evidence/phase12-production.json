@@ -1,0 +1,47 @@
+{
+  "scope": "Isolated production build in sandbox; NOT deployment",
+  "results": [
+    {
+      "path": "/services/custom-software-development",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/erp-business-software",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/cloud-deployment-maintenance",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "status": 200,
+      "updated_content_server_rendered": true,
+      "h1_count": 1,
+      "preview_noindex": true
+    }
+  ]
+}

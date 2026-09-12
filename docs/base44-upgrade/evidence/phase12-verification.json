@@ -1,0 +1,30 @@
+{
+  "original_service_fields_and_faqs_preserved": true,
+  "original_article_text_and_metadata_preserved": true,
+  "content_source_digests": {
+    "website/src/lib/data/services-fallback.ts": "b19dfc7146134960cb67ee440ce7b7cde7f4f43a984c44cf69ad2e9a2fc03c78",
+    "website/src/lib/data/blog-fallback.ts": "4f56ca92b125536fab9c72d313fb405a2f4d56a84cf2659327ed8afcc0a1b722"
+  },
+  "browser_assertion_counts": {
+    "article_body_link": 36,
+    "contents_link_target": 27,
+    "faq_open_answer_close": 21,
+    "render_and_horizontal_fit": 18
+  },
+  "verified_at_utc": "2026-09-12T21:48:06.486950+00:00",
+  "starting_head": "db04052b0aa8ac720ac9e69699db272f16b34898",
+  "unit_tests": {
+    "files": 45,
+    "tests": 392,
+    "result": "PASS"
+  },
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "isolated_production_build": "PASS",
+  "research_corpus": "Unchanged: 5000 candidates; all source excerpts still valid. Phase 11 source digests describe the earlier source revision; current digests are above.",
+  "application_business_writes": 0,
+  "existing_adsense_pings": 3,
+  "preview_verification": "NOT AUTOMATICALLY VERIFIED: iframe_unavailable then No browser tab available",
+  "visual_review": "NOT VERIFIED: preview unavailable; independent captures taken but not visually reviewed. DOM fit assertions are not visual sign-off",
+  "cms_auth_production": "CMS overrides/permissions untouched; no remote data writes or authenticated tests; sandbox production smoke is not a deployment"
+}

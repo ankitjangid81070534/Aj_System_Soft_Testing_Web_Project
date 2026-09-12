@@ -1,6 +1,13 @@
 # Base44 Dev Environment
 
-## Current Phase 11 recovery checkpoint (2026-09-12)
+## Current Phase 12 content checkpoint (2026-09-12)
+- Read current `PHASE_STATUS.md` and `PHASE_12_CONTENT_SEO.md`. Owner explicitly EXCLUDED navbar work; the older Privacy/Disclaimer navigation task is superseded, not queued for automatic execution. Stop before Phase 13 pending continuation.
+- Existing default content only: seven buyer FAQs across three services, plus three expanded guides with contextual existing-route links. CMS precedence and loaders are unchanged; managed records are not overwritten. Original copy/metadata/dates are preserved. No nav/layout/CSS/auth/API/config/schema/dependency changes.
+- Fresh 392 tests / 45 files, typecheck, lint, isolated production build, 102 independent Chromium assertions at 390/919/1440px and six production-built route checks pass. See `evidence/phase12-*.json`. Iframe unavailable/no tab means user-preview and visual review are NOT passed; independent DOM fit is not screenshot sign-off.
+- All 5,000 research rows and source excerpts are unchanged. Phase 11 source digests describe the old snapshot; current content digests are in Phase 12 evidence. Do not rewrite historical verification to imply a fresh test.
+- The browser's existing AdSense POST pings are not application/database mutations. Record them, do not disable ads or mislabel them as CRUD writes. Earlier private gates remain deferred. Owner requests a PR alongside each completed phase; use the managed branch workflow.
+
+## Historical Phase 11 recovery checkpoint (2026-09-12)
 - Read the top of `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_11_RECOVERY.md` first. Earlier completion notes missed taxonomy gaps: recovery added 23 overlapping master research groups, 15 evidence-backed candidate replacements and the existing Disclaimer map entry. Still exactly 5,000 candidates: en 1,680 / hi 1,660 / hi-Latn 1,660; now 19 owners / 32 mapped public pages. Demand remains unknown.
 - The corpus digest, source checks and 32 current local responses are in `evidence/phase11-corpus-verification.json`; revalidate it after CSV edits. Fresh 384 tests / 44 files, typecheck, lint and isolated copied-source production build pass. Browser returned no tab; private gates remain deferred, not passed.
 - Fresh main `f53d765` is tree-identical to pre-edit `7fc7b45`; every fetched branch is included in main. No unique work needs combining. Use managed branch → PR → main, never direct main writes, mass deletion or redundant merges. The owner requests a PR alongside each completed phase.

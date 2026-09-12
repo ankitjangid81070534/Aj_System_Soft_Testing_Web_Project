@@ -1,5 +1,9 @@
 # SEO keyword map — Phase 11 research-only recommendations
 
+## Phase 12 implementation note (2026-09-12)
+
+See [PHASE_12_CONTENT_SEO.md](PHASE_12_CONTENT_SEO.md): existing custom-software/ERP/maintenance FAQs and the three existing guides now address selected buyer questions with contextual links. No new URLs, keyword-primary changes, research-corpus edits or CMS writes. Metadata/primary ownership remain unchanged. The evidence below is the Phase 11 research baseline; current source digests and verification are in Phase 12 evidence. The owner explicitly excluded navbar work; the earlier Privacy/Disclaimer navigation request was **not implemented** and must not be resumed automatically.
+
 ## Evidence and publication boundary
 
 - CSV: [seo-keywords-5000.csv](seo-keywords-5000.csv), exactly **5,000 distinct research candidates**, not 5,000 observed searches. Search volume, difficulty, impressions, clicks and ranking potential are unknown. No Search Console export or authorized connector was available; a site-verification token would not itself grant query-data access.

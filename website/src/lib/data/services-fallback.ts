@@ -69,6 +69,21 @@ export const FALLBACK_SERVICES: ServiceDetail[] = [
         answer:
           "You do. Source code, documentation and credentials are handed over — you are never locked into working with us.",
       },
+      {
+        question: "What should we prepare before requesting an estimate?",
+        answer:
+          "Describe the current workflow, who will use the software, the must-have tasks and the systems it needs to connect to. Include expected user numbers, device or offline needs and any target deadline. Share anonymised examples rather than passwords or customer records. These inputs help separate the first release from later additions; the written scope should make assumptions and exclusions clear.",
+      },
+      {
+        question: "What should the handover checklist cover?",
+        answer:
+          "Agree a checklist for the source repository, deployment instructions, user documentation and access to hosting and connected services. Record who owns each account, which third-party subscriptions or licences remain payable, and the agreed support window. Ask how access will be transferred securely; ownership of custom code does not remove third-party licence obligations.",
+      },
+      {
+        question: "When might a ready-made tool be the better choice?",
+        answer:
+          "Compare a packaged tool against your actual workflow before commissioning a build. If its configuration, permissions, exports and integrations meet your needs, custom development may not be necessary. A bespoke system is worth discussing when important requirements remain unmet. Compare migration, training, maintenance and ongoing costs as well as the initial price; neither option is automatically cheaper.",
+      },
     ],
     seoTitle: "Custom Software Development Company in India",
     seoDescription:
@@ -549,6 +564,16 @@ export const FALLBACK_SERVICES: ServiceDetail[] = [
         answer:
           "We map your current records, clean them together with your team and migrate with verification counts before go-live.",
       },
+      {
+        question: "What needs to be agreed before migrating our records?",
+        answer:
+          "Identify the source of truth for items, customers, suppliers and opening balances. Nominate someone in your team to explain duplicates, units and missing values. Agree which records will move, what needs cleaning, how a trial import will be checked and when changes to the old system will stop. The final cutover and recovery plan should be agreed before live operations depend on the new system.",
+      },
+      {
+        question: "How should we accept a module before adding the next one?",
+        answer:
+          "Choose a small set of real operational tasks and expected results with the staff who perform them. For example, check stock after a sale and return, verify who may approve a purchase, and reconcile an agreed report to its source records. Record unresolved issues and who signs off. These are acceptance examples to adapt to your scope, not a promise that every module or workflow is included.",
+      },
     ],
     seoTitle: "ERP & CRM Software Development Company in India",
     seoDescription:
@@ -907,6 +932,16 @@ export const FALLBACK_SERVICES: ServiceDetail[] = [
         question: "How quickly do you respond to an outage?",
         answer:
           "Monitoring alerts us immediately; the response time is defined in the maintenance agreement you choose.",
+      },
+      {
+        question: "What should the maintenance agreement make explicit?",
+        answer:
+          "List the applications and environments covered, support hours, contact and escalation paths, and how incident severity is assessed. Separate the time to acknowledge an issue from the time to resolve it. Clarify whether feature requests, third-party outages, hosting charges and major upgrades are included or separately scoped. Do not assume round-the-clock coverage or a particular uptime guarantee unless it is agreed in writing.",
+      },
+      {
+        question: "What should we ask about backups and recovery?",
+        answer:
+          "Ask which data and files are backed up, how often, how long copies are retained and who can access them. Agree where a restore is tested and how the result is checked. Define acceptable data loss and recovery time for your workload, along with who authorises a restore. A successful backup job alone does not demonstrate that the full application can be recovered.",
       },
     ],
     seoTitle: "Cloud Application Modernization & Maintenance in India",
