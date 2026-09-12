@@ -1,5 +1,5 @@
 .shell, .auth { background: var(--color-canvas); color: var(--color-ink); }
-.auth { position: relative; isolation: isolate; background: radial-gradient(ellipse at 14% 8%,#80bfff24,transparent 50%),radial-gradient(ellipse at 90% 90%,#69d3c822,transparent 45%),var(--color-canvas); }
+.auth { position: relative; isolation: isolate; overflow-x: clip; background: radial-gradient(ellipse at 14% 8%,#80bfff24,transparent 50%),radial-gradient(ellipse at 90% 90%,#69d3c822,transparent 45%),var(--color-canvas); }
 .auth::before { content: ""; position: absolute; width: min(60vw,650px); aspect-ratio: 1; border: 1px solid #5386b71c; border-radius: 50%; top: -30%; left: -15%; box-shadow: 0 0 0 55px #5386b706,0 0 0 110px #5386b706; pointer-events: none; z-index: -1; }
 .auth main > div { width: 100%; }
 .auth main > div > section { position: relative; border-radius: 26px; border-color: var(--color-line); background: var(--surface-sheen); box-shadow: var(--shadow-sculpted),0 35px 90px -40px #285d9835; }

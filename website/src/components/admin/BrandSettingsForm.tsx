@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { Field, Input, Textarea } from "@/components/ui/Input";
+import { AdminFeedback } from "@/components/admin/AdminFeedback";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
 import { useToast } from "@/components/ui/Toast";
 import { updateSettingsAction, type SettingsState } from "@/lib/admin/settings-actions";
@@ -34,7 +35,7 @@ function ErrorText({ id, message }: { id: string; message?: string }) {
 }
 
 export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues }) {
-  const [state, formAction] = useActionState(updateSettingsAction, initialState);
+  const [state, formAction, pending] = useActionState(updateSettingsAction, initialState);
   const dirtyRef = useRef(false);
   const { toast } = useToast();
   const error = (name: keyof BrandSettingsValues) =>
@@ -65,10 +66,11 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
   return (
     <form
       action={formAction}
+      aria-busy={pending}
       onChange={() => {
         dirtyRef.current = true;
       }}
-      className="mt-5 grid max-w-4xl gap-4 rounded-2xl border border-line bg-surface p-6 shadow-e2 sm:grid-cols-2"
+      className="mt-5 grid max-w-4xl gap-4 rounded-2xl border border-line bg-surface p-4 shadow-e2 sm:grid-cols-2 sm:p-6"
     >
       <Field label="Brand name" htmlFor="s-brand_name">
         <Input
@@ -78,6 +80,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={120}
           {...inputA11y("brand_name")}
         />
+        <ErrorText id="s-brand_name-error" message={error("brand_name")} />
       </Field>
       <Field label="Short brand name" htmlFor="s-brand_short_name">
         <Input
@@ -87,6 +90,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={60}
           {...inputA11y("brand_short_name")}
         />
+        <ErrorText id="s-brand_short_name-error" message={error("brand_short_name")} />
       </Field>
       <Field label="Tagline" htmlFor="s-tagline">
         <Input
@@ -96,6 +100,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={200}
           {...inputA11y("tagline")}
         />
+        <ErrorText id="s-tagline-error" message={error("tagline")} />
       </Field>
       <Field label="Business hours" htmlFor="s-business_hours">
         <Input
@@ -105,6 +110,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={160}
           {...inputA11y("business_hours")}
         />
+        <ErrorText id="s-business_hours-error" message={error("business_hours")} />
       </Field>
       <Field label="Contact email" htmlFor="s-contact_email">
         <Input
@@ -136,6 +142,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={20}
           {...inputA11y("phone")}
         />
+        <ErrorText id="s-phone-error" message={error("phone")} />
       </Field>
       <Field
         label="WhatsApp number"
@@ -149,6 +156,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={20}
           {...inputA11y("whatsapp")}
         />
+        <ErrorText id="s-whatsapp-error" message={error("whatsapp")} />
       </Field>
       <Field label="Address line" htmlFor="s-address_line">
         <Input
@@ -158,6 +166,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={300}
           {...inputA11y("address_line")}
         />
+        <ErrorText id="s-address_line-error" message={error("address_line")} />
       </Field>
       <Field label="Map link" htmlFor="s-map_url">
         <Input
@@ -177,6 +186,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={60}
           {...inputA11y("global_cta_label")}
         />
+        <ErrorText id="s-global_cta_label-error" message={error("global_cta_label")} />
       </Field>
       <Field label="Global CTA link" htmlFor="s-global_cta_href">
         <Input
@@ -198,6 +208,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
             maxLength={1000}
             {...inputA11y("company_description")}
           />
+          <ErrorText id="s-company_description-error" message={error("company_description")} />
         </Field>
       </div>
       <Field label="Company legal name" htmlFor="s-company_legal_name">
@@ -208,19 +219,11 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
           maxLength={120}
           {...inputA11y("company_legal_name")}
         />
+        <ErrorText id="s-company_legal_name-error" message={error("company_legal_name")} />
       </Field>
       <div className="flex flex-wrap items-center gap-3 sm:col-span-2">
         <AdminSubmitButton idleLabel="Save settings" pendingLabel="Saving settings…" />
-        {state.ok === true ? (
-          <p role="status" className="text-sm text-success">
-            {state.message}
-          </p>
-        ) : null}
-        {state.ok === false ? (
-          <p role="alert" className="text-sm text-danger">
-            {state.message}
-          </p>
-        ) : null}
+        <AdminFeedback state={state} />
       </div>
     </form>
   );

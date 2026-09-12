@@ -1,10 +1,14 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 8 — AUTH / CLIENT PORTAL UI + UX — UI IMPLEMENTED; AUTHENTICATED VERIFICATION DEFERRED
-LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 remains INCOMPLETE / DEFERRED
-NEXT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA; requires fresh authorization acknowledging the remaining Phase 8 checks
-LAST_COMMIT_HASH: 54ba811ed5e1b7eb8b05ddba710003abdd583629
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Fresh isolated default production build passes at the recovery HEAD; no deployment or release sign-off.
+CURRENT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA — IN PROGRESS; PAUSED FOR CONCURRENT WORKSPACE EDITS
+LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 and Phase 8 authenticated gates remain INCOMPLETE / DEFERRED
+NEXT_PHASE: Finish Phase 9 safely after workspace reconciliation; Phase 10 NOT authorized
+LAST_COMMIT_HASH: 3da085dba4f7a0723d1a92d7850443ca7392d348
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Phase 9 combined tree is not production-build/regression certified.
+
+## Current safety pause — overrides historical execution gates below
+
+Owner authorized `CONTINUE NEXT PHASE SAFLY` after declining credentials again. Phase 9 began, but simultaneous edits of the same admin files appeared from an unidentified writer. See [PHASE_9_CONCURRENCY_PAUSE](PHASE_9_CONCURRENCY_PAUSE.md). Do not overwrite the other edits or mark this phase complete. Fresh typecheck, whitespace and admin-login HTTP response pass; current preview has a hydration mismatch error, no failed requests/overlay and nonempty main. No fresh gesture, responsive visual, persistence or production-build sign-off. Await a single-writer decision before continuing; Phase 10 must not begin. Other phase/test/file sections below are retained historical evidence, not Phase 9 passes. The hash above is the verified pre-edit Phase 9 HEAD, not a fabricated post-turn commit.
 
 The hash is the actual pre-edit HEAD for cross-chat recovery, not a post-turn commit. At recovery start, fetched main and system-upgrade-init were identical at this merge of PR #7; all other fetched branch tips were ancestors, so there is no unmerged unique work to combine. No branch switch/deletion, direct main push, manual commit or deployment was performed. Base44 commits/pushes at turn end; the owner explicitly requests PR creation for this work and alongside future completed phases, not automatic merging of newly opened PRs.
 

@@ -79,6 +79,17 @@ const NAV_GROUPS = [
   },
 ] as const;
 
+export function adminPageLabel(pathname: string): string {
+  const item = NAV_GROUPS.flatMap((group) => [...group.items]).find(
+    (entry) =>
+      pathname === entry.href ||
+      (entry.href !== "/ajadmin" && pathname.startsWith(`${entry.href}/`)),
+  );
+  if (!item) return "Admin workspace";
+  if (pathname === item.href) return item.label;
+  return `${item.label} — ${pathname.endsWith("/new") ? "New" : "Details"}`;
+}
+
 export function AdminNav({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
 
@@ -92,7 +103,9 @@ export function AdminNav({ onNavigate }: { onNavigate?: () => void }) {
           <ul className="mt-2 flex flex-col gap-0.5">
             {group.items.map((item) => {
               const active =
-                item.href === "/ajadmin" ? pathname === "/ajadmin" : pathname.startsWith(item.href);
+                item.href === "/ajadmin"
+                  ? pathname === "/ajadmin"
+                  : pathname.startsWith(`${item.href}/`);
               return (
                 <li key={item.href}>
                   <Link
@@ -100,7 +113,7 @@ export function AdminNav({ onNavigate }: { onNavigate?: () => void }) {
                     onClick={onNavigate}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm font-medium transition-colors focus-ring",
+                      "flex min-h-11 items-center gap-2.5 rounded-xl px-3 py-2 text-sm font-medium transition-colors focus-ring",
                       active
                         ? "border border-brand-100 bg-gradient-to-b from-white to-brand-50 text-brand-700 shadow-e2 dark:border-brand-800 dark:from-brand-950/70 dark:to-brand-950/40 dark:text-brand-400"
                         : "border border-transparent text-ink-soft hover:border-line hover:bg-surface/75 hover:text-ink",

@@ -18,6 +18,7 @@ import {
   databaseFailureForCode,
   validationFailure,
   type AdminMutationFailure,
+  type AdminMutationResult,
   type AdminMutationState,
 } from "@/lib/admin/mutation-result";
 
@@ -373,19 +374,19 @@ export async function upsertResourceAction(
   return { ok: true, message: `${config.singular} saved.`, data: { id } };
 }
 
-export async function setResourceStatusAction(formData: FormData): Promise<void> {
+export async function setResourceStatusAction(formData: FormData): Promise<AdminMutationResult> {
   const resourceKey = formString(formData, "__resource");
   const id = formString(formData, "__id");
   const status = formString(formData, "status");
-  if (!resourceKey || !id || (status !== "draft" && status !== "published")) return;
+  if (!resourceKey || !id || (status !== "draft" && status !== "published")) return validationFailure("Invalid publication request.");
   const config = getResourceConfig(resourceKey);
-  if (!config || !config.supports.publish) return;
+  if (!config || !config.supports.publish) return validationFailure("This action is not supported for this resource.");
 
   const auth = await authorize(`${config.capability}:publish` as Capability);
-  if (!auth.ok) return;
+  if (!auth.ok) return auth.result;
 
   const row = await getResourceRow(config, id);
-  if (!row) return;
+  if (!row) return { ok: false, code: "CONFLICT", message: "This record is no longer available. Refresh the list." };
 
   const admin = createSupabaseAdminLooseClient();
   const payload = { status, ...actorPayload(config, auth.user.id) };
@@ -396,30 +397,30 @@ export async function setResourceStatusAction(formData: FormData): Promise<void>
     .select("id")
     .limit(1);
   if (error || !data || data.length === 0) {
-    databaseFailure(`publish ${config.key}`, error, {
+    return databaseFailure(`publish ${config.key}`, error, {
       resource: config.key,
       table: config.table,
       rowId: id,
       actorId: auth.user.id,
       payload,
     });
-    return;
   }
   refreshResource(config, typeof row.slug === "string" ? row.slug : undefined);
+  return { ok: true, message: "Publication status updated." };
 }
 
-export async function toggleResourceActiveAction(formData: FormData): Promise<void> {
+export async function toggleResourceActiveAction(formData: FormData): Promise<AdminMutationResult> {
   const resourceKey = formString(formData, "__resource");
   const id = formString(formData, "__id");
-  if (!resourceKey || !id) return;
+  if (!resourceKey || !id) return validationFailure("Missing resource or record.");
   const config = getResourceConfig(resourceKey);
-  if (!config || !config.supports.activate) return;
+  if (!config || !config.supports.activate) return validationFailure("This action is not supported for this resource.");
 
   const auth = await authorize(`${config.capability}:write` as Capability);
-  if (!auth.ok) return;
+  if (!auth.ok) return auth.result;
 
   const row = await getResourceRow(config, id);
-  if (!row) return;
+  if (!row) return { ok: false, code: "CONFLICT", message: "This record is no longer available. Refresh the list." };
   const admin = createSupabaseAdminLooseClient();
   const payload = { is_active: !row.is_active, ...actorPayload(config, auth.user.id) };
   const { data, error } = await admin
@@ -429,30 +430,30 @@ export async function toggleResourceActiveAction(formData: FormData): Promise<vo
     .select("id")
     .limit(1);
   if (error || !data || data.length === 0) {
-    databaseFailure(`toggle ${config.key}`, error, {
+    return databaseFailure(`toggle ${config.key}`, error, {
       resource: config.key,
       table: config.table,
       rowId: id,
       actorId: auth.user.id,
       payload,
     });
-    return;
   }
   refreshResource(config, typeof row.slug === "string" ? row.slug : undefined);
+  return { ok: true, message: "Active status updated." };
 }
 
-export async function deleteResourceAction(formData: FormData): Promise<void> {
+export async function deleteResourceAction(formData: FormData): Promise<AdminMutationResult> {
   const resourceKey = formString(formData, "__resource");
   const id = formString(formData, "__id");
-  if (!resourceKey || !id) return;
+  if (!resourceKey || !id) return validationFailure("Missing resource or record.");
   const config = getResourceConfig(resourceKey);
-  if (!config) return;
+  if (!config) return validationFailure("Unknown resource.");
 
   const auth = await authorize(`${config.capability}:write` as Capability);
-  if (!auth.ok) return;
+  if (!auth.ok) return auth.result;
 
   const row = await getResourceRow(config, id);
-  if (!row) return;
+  if (!row) return { ok: false, code: "CONFLICT", message: "This record is no longer available. Refresh the list." };
 
   const admin = createSupabaseAdminLooseClient();
   let data: unknown[] | null = null;
@@ -470,30 +471,30 @@ export async function deleteResourceAction(formData: FormData): Promise<void> {
     ({ data, error } = await admin.from(config.table).delete().eq("id", id).select("id").limit(1));
   }
   if (error || !data || data.length === 0) {
-    databaseFailure(`delete ${config.key}`, error, {
+    return databaseFailure(`delete ${config.key}`, error, {
       resource: config.key,
       table: config.table,
       rowId: id,
       actorId: auth.user.id,
       payload,
     });
-    return;
   }
   refreshResource(config, typeof row.slug === "string" ? row.slug : undefined);
+  return { ok: true, message: "Record removed." };
 }
 
-export async function restoreResourceAction(formData: FormData): Promise<void> {
+export async function restoreResourceAction(formData: FormData): Promise<AdminMutationResult> {
   const resourceKey = formString(formData, "__resource");
   const id = formString(formData, "__id");
-  if (!resourceKey || !id) return;
+  if (!resourceKey || !id) return validationFailure("Missing resource or record.");
   const config = getResourceConfig(resourceKey);
-  if (!config || !config.supports.softDelete) return;
+  if (!config || !config.supports.softDelete) return validationFailure("This action is not supported for this resource.");
 
   const auth = await authorize(`${config.capability}:write` as Capability);
-  if (!auth.ok) return;
+  if (!auth.ok) return auth.result;
 
   const row = await getResourceRow(config, id);
-  if (!row) return;
+  if (!row) return { ok: false, code: "CONFLICT", message: "This record is no longer available. Refresh the list." };
 
   const admin = createSupabaseAdminLooseClient();
   const payload = { deleted_at: null, ...actorPayload(config, auth.user.id) };
@@ -504,44 +505,44 @@ export async function restoreResourceAction(formData: FormData): Promise<void> {
     .select("id")
     .limit(1);
   if (error || !data || data.length === 0) {
-    databaseFailure(`restore ${config.key}`, error, {
+    return databaseFailure(`restore ${config.key}`, error, {
       resource: config.key,
       table: config.table,
       rowId: id,
       actorId: auth.user.id,
       payload,
     });
-    return;
   }
   refreshResource(config, typeof row.slug === "string" ? row.slug : undefined);
+  return { ok: true, message: "Record restored." };
 }
 
-export async function reorderResourceAction(formData: FormData): Promise<void> {
+export async function reorderResourceAction(formData: FormData): Promise<AdminMutationResult> {
   const resourceKey = formString(formData, "__resource");
   const id = formString(formData, "__id");
   const direction = formString(formData, "direction");
-  if (!resourceKey || !id || (direction !== "up" && direction !== "down")) return;
+  if (!resourceKey || !id || (direction !== "up" && direction !== "down")) return validationFailure("Invalid reorder request.");
   const config = getResourceConfig(resourceKey);
-  if (!config || !config.supports.reorder) return;
+  if (!config || !config.supports.reorder) return validationFailure("This action is not supported for this resource.");
 
   const auth = await authorize(`${config.capability}:write` as Capability);
-  if (!auth.ok) return;
+  if (!auth.ok) return auth.result;
 
   const row = await getResourceRow(config, id);
-  if (!row) return;
+  if (!row) return { ok: false, code: "CONFLICT", message: "This record is no longer available. Refresh the list." };
   const neighborId = await getAdjacentRowId(config, row, direction);
-  if (!neighborId) return;
+  if (!neighborId) return { ok: true, message: "Already at the edge of this list. No change made." };
 
   const admin = createSupabaseAdminLooseClient();
   const column = config.defaultOrder.column;
   const current = row[column];
-  const { data: neighborData } = await admin
+  const { data: neighborData, error: neighborError } = await admin
     .from(config.table)
     .select(column)
     .eq("id", neighborId)
     .limit(1);
   const neighbor = (neighborData ?? []) as unknown as AdminRow[];
-  if (neighbor.length === 0) return;
+  if (neighborError || neighbor.length === 0) return { ok: false, code: "CONFLICT", message: "The adjacent record could not be loaded. Refresh the list." };
   const neighborValue = neighbor[0][column];
   // Swap the ordering values.
   const firstPayload = { [column]: neighborValue, ...actorPayload(config, auth.user.id) };
@@ -552,14 +553,13 @@ export async function reorderResourceAction(formData: FormData): Promise<void> {
     .select("id")
     .limit(1);
   if (firstError || !firstData || firstData.length === 0) {
-    databaseFailure(`reorder ${config.key}`, firstError, {
+    return databaseFailure(`reorder ${config.key}`, firstError, {
       resource: config.key,
       table: config.table,
       rowId: id,
       actorId: auth.user.id,
       payload: firstPayload,
     });
-    return;
   }
   const secondPayload = { [column]: current, ...actorPayload(config, auth.user.id) };
   const { data: secondData, error: secondError } = await admin
@@ -582,14 +582,14 @@ export async function reorderResourceAction(formData: FormData): Promise<void> {
         rowId: id,
       });
     }
-    databaseFailure(`reorder neighbor ${config.key}`, secondError, {
+    return databaseFailure(`reorder neighbor ${config.key}`, secondError, {
       resource: config.key,
       table: config.table,
       rowId: neighborId,
       actorId: auth.user.id,
       payload: secondPayload,
     });
-    return;
   }
   refreshResource(config, typeof row.slug === "string" ? row.slug : undefined);
+  return { ok: true, message: "Order updated." };
 }
