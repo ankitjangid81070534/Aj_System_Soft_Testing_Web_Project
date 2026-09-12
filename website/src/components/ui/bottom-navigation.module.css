@@ -148,7 +148,7 @@
 }
 /* Desktop translation of the mobile dock, without changing phone geometry. */
 @media (min-width: 1024px) {
-  .brandBar { height: 176px; visibility: hidden; pointer-events: none; }
+  .brandBar { height: 100px; visibility: hidden; pointer-events: none; }
   .dock, .panel, :global(.dark) .dock, :global(.dark) .panel {
     --dock-ink: #17131e;
     --dock-muted: #554c60;
@@ -158,14 +158,14 @@
     --dock-surface: #fff;
   }
   .dock, :global(.dark) .dock {
-    inset: 24px 0 auto;
-    width: min(1320px, calc(100% - 48px));
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    max-width: calc(100% - 48px);
-    min-height: 132px;
-    gap: 14px 24px;
-    padding: 14px 26px;
+    inset: 16px 0 auto;
+    width: min(1440px, calc(100% - 32px));
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: calc(100% - 32px);
+    min-height: 64px;
+    gap: 12px;
+    padding: 10px 16px;
     border: 1px solid #ffffffed;
     border-radius: 26px;
     background: linear-gradient(120deg, #fffffffa, #faf8fcf5);
@@ -173,26 +173,28 @@
     box-shadow: inset 0 2px 1px #fff, 0 0 24px #ffffff80, 0 12px 40px #22222212, 0 3px 10px #7c3aed14;
     transition: padding .6s cubic-bezier(.16,1,.3,1), min-height .6s cubic-bezier(.16,1,.3,1), background .6s, box-shadow .6s;
   }
-  .dock[data-scrolled="true"] { min-height: 120px; padding-block: 8px; background: #fffffff5; box-shadow: inset 0 1px #f0f0f0, 0 12px 36px #22222218; }
-  .dockBrand { display: flex; align-items: center; flex: 0 1 215px; min-width: 44px; gap: 12px; color: var(--dock-ink); text-decoration: none; }
-  .dockMark { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border: 1px solid var(--dock-line); border-radius: 14px; color: var(--dock-accent); background: linear-gradient(135deg, var(--dock-line), #fff); font-size: 17px; font-weight: 650; letter-spacing: -.05em; }
+  .dock[data-scrolled="true"] { min-height: 60px; padding-block: 8px; background: #fffffff5; box-shadow: inset 0 1px #f0f0f0, 0 12px 36px #22222218; }
+  .dockBrand { display: flex; align-items: center; flex: 0 0 auto; min-width: 34px; gap: 9px; color: var(--dock-ink); text-decoration: none; }
+  .dockMark { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 34px; height: 34px; border: 1px solid var(--dock-line); border-radius: 14px; color: var(--dock-accent); background: linear-gradient(135deg, var(--dock-line), #fff); font-size: 17px; font-weight: 650; letter-spacing: -.05em; }
   .dockMark > span { position: absolute; right: -3px; bottom: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--dock-accent); box-shadow: 0 0 0 3px #ffffff; }
-  .dockBrandCopy { max-width: 160px; font-size: 12px; font-weight: 550; line-height: 1.4; letter-spacing: -.015em; overflow-wrap: anywhere; }
-  .dockBrandCopy small { display: block; margin-top: 5px; font-size: 8px; font-weight: 500; letter-spacing: .14em; color: var(--dock-accent); }
+  .dockBrandCopy { max-width: 135px; font-size: 11px; font-weight: 550; line-height: 1.4; letter-spacing: -.015em; overflow-wrap: anywhere; }
+  .dockBrandCopy small { display: none; margin-top: 5px; font-size: 8px; font-weight: 500; letter-spacing: .14em; color: var(--dock-accent); }
   .linkGroup { display: none; }
-  .desktopLinks { display: grid; grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); align-items: center; gap: 6px; min-width: 0; padding-top: 10px; border-top: 1px solid var(--dock-line); }
-  .dock .item, .dock .more { position: relative; flex: 1 1 0; flex-direction: row; min-height: 46px; padding: 9px 12px; gap: 8px; border: 1px solid transparent; border-radius: 999px; font-size: clamp(12px, 1vw, 15px); font-weight: 500; line-height: 1.4; color: var(--dock-muted); transition: color 220ms, background 220ms, border-color 220ms; }
-  .item > svg { flex-shrink: 0; width: 18px; height: 18px; }
+  .desktopLinks { display: flex; flex: 1 1 auto; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 2px; min-width: 0; }
+  .desktopLinks .item > span { white-space: nowrap; overflow-wrap: normal; }
+  .dock .item, .dock .more { position: relative; flex: 0 0 auto; flex-direction: row; min-height: 40px; padding: 8px 9px; gap: 6px; border: 1px solid transparent; border-radius: 999px; font-size: 13px; font-weight: 500; line-height: 1.4; color: var(--dock-muted); transition: color 220ms, background 220ms, border-color 220ms; }
+  .item > svg { flex-shrink: 0; width: 16px; height: 16px; }
   .dock .item[aria-current="page"] { color: var(--dock-accent); background: var(--dock-soft); border-color: var(--dock-line); font-weight: 600; }
   .item[aria-current="page"] > svg { stroke-width: 1.8; }
-  .dockActions { grid-column: 2; grid-row: 1; display: flex; align-items: center; flex-shrink: 0; gap: 14px; padding-left: 16px; border-left: 1px solid #e7e7e7; }
-  .accountTrigger { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--dock-line); border-radius: 12px; background: #fff; color: var(--dock-accent); font-size: 13px; font-weight: 550; cursor: pointer; }
-  .searchTrigger { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; min-width: 40px; border: 0; border-radius: 10px; background: transparent; color: var(--dock-muted); cursor: pointer; }
-  .searchTrigger kbd { padding: 3px 5px; border: 1px solid #e4e4e4; border-radius: 5px; font-family: inherit; font-size: 10px; line-height: 1.2; white-space: nowrap; }
-  .desktopCta { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; max-width: 190px; padding: 10px 15px; border: 1px solid var(--dock-line); border-radius: 12px; background: var(--dock-soft); color: var(--dock-accent); font-size: 13px; font-weight: 550; line-height: 1.4; text-align: center; text-decoration: none; transition: color 220ms, background 220ms, border-color 220ms; }
+  .dockActions { display: flex; align-items: center; flex-shrink: 0; gap: 6px; padding-left: 10px; border-left: 1px solid #e7e7e7; }
+  .accountTrigger { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 8px 10px; border: 1px solid var(--dock-line); border-radius: 12px; background: #fff; color: var(--dock-accent); font-size: 13px; font-weight: 550; cursor: pointer; }
+  .searchTrigger { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; min-width: 32px; border: 0; border-radius: 10px; background: transparent; color: var(--dock-muted); cursor: pointer; }
+  .searchTrigger kbd { display: none; padding: 3px 5px; border: 1px solid #e4e4e4; border-radius: 5px; font-family: inherit; font-size: 10px; line-height: 1.2; white-space: nowrap; }
+  .desktopCta { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; max-width: 190px; padding: 8px 10px; border: 1px solid var(--dock-line); border-radius: 12px; background: var(--dock-soft); color: var(--dock-accent); font-size: 13px; font-weight: 550; line-height: 1.4; text-align: center; text-decoration: none; transition: color 220ms, background 220ms, border-color 220ms; }
   .desktopCta svg { flex-shrink: 0; }
+  .accountTrigger, .desktopCta { white-space: nowrap; font-size: 12px; }
   .dock :is(a, button):focus-visible, .panel :is(a, button, input):focus-visible { outline-color: var(--dock-accent); }
-  .panel { inset: 188px 0 auto; width: min(960px, calc(100% - 48px)); max-height: calc(100dvh - 212px); border-color: #ffffffed; border-radius: 26px; background: #fffffff5; backdrop-filter: blur(20px); transform: translateY(-12px) scale(.98); }
+  .panel { inset: 100px 0 auto; width: min(960px, calc(100% - 48px)); max-height: calc(100dvh - 124px); border-color: #ffffffed; border-radius: 26px; background: #fffffff5; backdrop-filter: blur(20px); transform: translateY(-12px) scale(.98); }
   .panel, :global(.dark) .panel { box-shadow: inset 0 1px #fff, 0 24px 80px #22222220; }
   .panel::backdrop { background: #32323220; backdrop-filter: blur(12px); }
   .panelInner { padding: 32px; }
@@ -213,13 +215,19 @@
   .theme { font-size: 14px; }
   .theme button { color: var(--dock-ink); }
   .panel .cta { margin-top: 24px; }
-  :global(html) { scroll-padding-top: 180px; scroll-padding-bottom: 24px; }
+  :global(html) { scroll-padding-top: 100px; scroll-padding-bottom: 24px; }
   @starting-style { .panel[open] { transform: translateY(-12px) scale(.98); } }
 }
-@media (min-width: 1024px) and (max-width: 1399px) {
-  .dock { padding-inline: 18px; }
-  .dock .item { padding-inline: 8px; gap: 6px; }
-  .dockActions { gap: 10px; }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .dockBrandCopy { display: none; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .dock { gap: 8px; padding-inline: 12px; }
+  .desktopLinks .item > svg { display: none; }
+  .dock .item { padding-inline: 8px; }
+}
+@media (min-width: 1600px) {
+  .searchTrigger kbd { display: inline; }
 }
 @media (min-width: 1024px) and (max-height: 600px) {
   .panel { inset-block: 16px auto; max-height: calc(100dvh - 32px); }
