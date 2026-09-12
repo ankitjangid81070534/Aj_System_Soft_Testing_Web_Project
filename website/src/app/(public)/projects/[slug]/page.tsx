@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ExternalLink, PlayCircle, Quote } from "lucide-react";
-import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { PageHero } from "@/components/site/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -95,60 +95,50 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
 
       <article>
-        <header className="border-b border-line bg-surface">
-          <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
-            <Breadcrumbs
-              items={[
-                { name: "Home", href: "/" },
-                { name: "Projects", href: "/projects" },
-                { name: project.name, href: `/projects/${project.slug}` },
-              ]}
-            />
-            <div className="mt-6 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
-              <div className="flex max-w-3xl flex-col gap-4">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge tone="brand">
-                    {project.status === "published" ? "Case study" : project.status}
-                  </Badge>
-                  {project.isFeatured ? <Badge tone="success">Featured</Badge> : null}
-                  {project.platformType ? <Badge>{project.platformType}</Badge> : null}
-                  {project.industry ? <Badge>{project.industry}</Badge> : null}
-                </div>
-                <h1 className="text-display-md font-semibold tracking-tight text-balance text-ink">
-                  {project.name}
-                </h1>
-                <p className="text-base text-ink-muted sm:text-lg">{project.summary}</p>
-                <div className="flex flex-wrap gap-3 pt-1">
-                  <Button href="/request-quote">Start a similar project</Button>
-                  {project.publicUrl ? (
-                    <Button href={project.publicUrl} variant="secondary" target="_blank">
-                      Visit live product
-                      <ExternalLink aria-hidden="true" className="h-4 w-4" />
-                    </Button>
-                  ) : null}
-                </div>
-              </div>
-
-              <aside className="rounded-2xl border border-line bg-canvas p-5">
-                <h2 className="text-sm font-semibold text-ink">Project overview</h2>
-                <dl className="mt-2">
-                  <MetaRow
-                    label="Client"
-                    value={project.clientName ?? "Confidential — withheld at the client's request"}
-                  />
-                  <MetaRow label="Industry" value={project.industry} />
-                  <MetaRow label="Platform" value={project.platformType} />
-                  <MetaRow label="Duration" value={project.duration} />
-                  <MetaRow
-                    label="Year"
-                    value={project.projectYear ? String(project.projectYear) : null}
-                  />
-                  <MetaRow label="Status" value={project.projectStatus} />
-                </dl>
-              </aside>
+        <PageHero
+          crumbs={crumbs.map((crumb) => ({ name: crumb.name, href: crumb.path }))}
+          beforeTitle={
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge tone="brand">
+                {project.status === "published" ? "Case study" : project.status}
+              </Badge>
+              {project.isFeatured ? <Badge tone="success">Featured</Badge> : null}
+              {project.platformType ? <Badge>{project.platformType}</Badge> : null}
+              {project.industry ? <Badge>{project.industry}</Badge> : null}
             </div>
+          }
+          title={project.name}
+          description={project.summary}
+          aside={
+            <aside className="rounded-2xl border border-line bg-canvas p-5">
+              <h2 className="text-sm font-semibold text-ink">Project overview</h2>
+              <dl className="mt-2">
+                <MetaRow
+                  label="Client"
+                  value={project.clientName ?? "Confidential — withheld at the client's request"}
+                />
+                <MetaRow label="Industry" value={project.industry} />
+                <MetaRow label="Platform" value={project.platformType} />
+                <MetaRow label="Duration" value={project.duration} />
+                <MetaRow
+                  label="Year"
+                  value={project.projectYear ? String(project.projectYear) : null}
+                />
+                <MetaRow label="Status" value={project.projectStatus} />
+              </dl>
+            </aside>
+          }
+        >
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Button href="/request-quote">Start a similar project</Button>
+            {project.publicUrl ? (
+              <Button href={project.publicUrl} variant="secondary" target="_blank">
+                Visit live product
+                <ExternalLink aria-hidden="true" className="h-4 w-4" />
+              </Button>
+            ) : null}
           </div>
-        </header>
+        </PageHero>
 
         {project.coverUrl ? (
           <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">

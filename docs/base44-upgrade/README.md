@@ -23,7 +23,10 @@
 19. [Phase 6 motion and scroll safety](PHASE_6_MOTION.md)
 20. [Phase 6 evidence](evidence/phase-6/SCREENSHOTS.md)
 
-Phase 6 is complete and stopped before Phase 7. Motion, keyboard access and short-screen scrolling are refined; current content/order and accepted navigation/hero layout remain preserved. Material reorder approval was not received, and authenticated integration checks remain deferred.
+21. [Phase 7 public pages and pending visual sign-off](PHASE_7_PUBLIC_PAGES.md)
+22. [Phase 7 verification evidence](evidence/phase-7/SCREENSHOTS.md)
+
+Phase 7 is implemented, with final post-fix visual sign-off pending; STOPPED before Phase 8. Public-page hierarchy and responsive article navigation are refined. Accepted homepage/navigation and business behavior remain preserved; material reorder approval was not received, and integration checks remain deferred.
 
 The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 

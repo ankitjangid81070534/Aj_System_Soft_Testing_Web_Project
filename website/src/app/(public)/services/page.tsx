@@ -43,7 +43,7 @@ export default async function ServicesPage() {
               <a
                 key={category}
                 href={`#${categoryId(category)}`}
-                className="rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-medium text-ink-soft shadow-e1 transition-[transform,border-color,color,box-shadow] duration-200 ease-soft hover:-translate-y-0.5 hover:border-brand-200 hover:text-brand-700 hover:shadow-e2 focus-ring dark:hover:text-brand-400"
+                className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-medium text-ink-soft shadow-e1 transition-[transform,border-color,color,box-shadow] duration-200 ease-soft hover:-translate-y-0.5 hover:border-brand-200 hover:text-brand-700 hover:shadow-e2 focus-ring dark:hover:text-brand-400"
               >
                 {category}
               </a>

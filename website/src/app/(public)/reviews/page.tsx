@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, MessageSquarePlus, Star } from "lucide-react";
-import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { PageHero } from "@/components/site/PageHero";
 import { ReviewCard } from "@/components/ui/ReviewCard";
 import { Button } from "@/components/ui/Button";
 import { CTA } from "@/components/ui/CTA";
@@ -82,35 +81,28 @@ export default async function ReviewsPage() {
         ])}
       />
 
-      <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
-        <Breadcrumbs
-          items={[
-            { name: "Home", href: "/" },
-            { name: "Verified Reviews", href: "/reviews" },
-          ]}
-        />
-
-        <div className="mt-6 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeader
-            as="h1"
-            eyebrow="Verified Client Feedback"
-            title="Real reviews from real software projects"
-            description="All reviews on this page are submitted exclusively by verified clients of AJ System Soft Technology and moderated for authenticity."
-          />
-
-          <div className="flex shrink-0 items-center gap-3">
-            <Link
-              href="/login"
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-canvas-raised focus-ring"
-            >
-              <MessageSquarePlus aria-hidden="true" className="h-4 w-4 text-brand-600" />
-              <span>Submit Review</span>
-            </Link>
-          </div>
+      <PageHero
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Verified Reviews", href: "/reviews" },
+        ]}
+        eyebrow="Verified Client Feedback"
+        title="Real reviews from real software projects"
+        description="All reviews on this page are submitted exclusively by verified clients of AJ System Soft Technology and moderated for authenticity."
+      >
+        <div className="flex flex-wrap gap-3 pt-1">
+          <Link
+            href="/login"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-canvas-raised focus-ring"
+          >
+            <MessageSquarePlus aria-hidden="true" className="h-4 w-4 text-brand-600" />
+            <span>Submit Review</span>
+          </Link>
         </div>
-
+      </PageHero>
+      <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
         {/* Transparency / Verification Notice */}
-        <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-brand-100 bg-brand-50/60 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-brand-900/60 dark:bg-brand-950/40">
+        <div className="flex flex-col gap-3 rounded-2xl border border-brand-100 bg-brand-50/60 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-brand-900/60 dark:bg-brand-950/40">
           <div className="flex items-center gap-2.5 text-xs text-brand-800 dark:text-brand-300">
             <ShieldCheck aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-600" />
             <span>
@@ -150,9 +142,9 @@ export default async function ReviewsPage() {
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-100 bg-brand-50 text-brand-600">
               <ShieldCheck aria-hidden="true" className="h-6 w-6" />
             </div>
-            <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
+            <h2 className="mt-4 text-lg font-semibold tracking-tight text-ink">
               Verified reviews moderation in progress
-            </h3>
+            </h2>
             <p className="mx-auto mt-2 max-w-md text-sm text-ink-muted leading-relaxed">
               We publish reviews solely from verified clients upon completion of their milestone
               deliveries. Check back soon or request references directly.

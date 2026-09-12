@@ -24,9 +24,9 @@ function ChipGroup({
           <Link
             key={value}
             href={buildFilterHref(current, paramKey, value)}
-            aria-pressed={isActive}
+            aria-current={isActive ? "true" : undefined}
             className={cn(
-              "rounded-full border px-3.5 py-1.5 text-sm transition-colors duration-150 ease-soft focus-ring",
+              "inline-flex min-h-11 items-center rounded-full border px-3.5 py-1.5 text-sm transition-colors duration-150 ease-soft focus-ring",
               isActive
                 ? "border-brand-600 bg-brand-600 text-on-brand shadow-e2"
                 : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink",

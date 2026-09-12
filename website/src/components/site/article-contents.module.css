@@ -1,0 +1,55 @@
+.contents {
+  min-width: 0;
+  order: -1;
+}
+.panel {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card-compact);
+  background: var(--color-surface);
+  padding: 1rem;
+  box-shadow: var(--shadow-e1);
+}
+.panel summary {
+  min-height: 44px;
+  align-content: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  color: var(--color-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.panel ul {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.panel a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.panel a:hover {
+  background: var(--color-canvas-raised);
+  color: var(--color-ink);
+}
+.nested {
+  padding-left: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .contents {
+    order: 0;
+  }
+  .panel {
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100dvh - 7rem);
+    overflow-y: auto;
+  }
+}

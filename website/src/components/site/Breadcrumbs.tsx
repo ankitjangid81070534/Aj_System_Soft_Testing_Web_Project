@@ -15,7 +15,7 @@ export function Breadcrumbs({ items, className }: { items: Crumb[]; className?: 
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
-            <li key={item.href} className="flex items-center gap-1.5">
+            <li key={item.href} className="flex min-w-0 items-center gap-1.5 [overflow-wrap:anywhere]">
               {isLast ? (
                 <span aria-current="page" className="font-medium text-ink">
                   {item.name}
