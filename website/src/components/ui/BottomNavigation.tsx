@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ArrowUpRight, BriefcaseBusiness, CircleHelp, Cpu, House, Info,
   LayoutGrid, MessageCircle, Plus, Search, Sparkles, Star, User, Users, X,
@@ -10,6 +10,7 @@ import {
 import type { PublicNavLink } from "@/lib/data/navigation";
 import { Button } from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
+import { NavBar, type NavItem } from "./tubelight-navbar";
 import { isNavigationActive, splitNavigation } from "@/lib/bottom-navigation";
 import styles from "./bottom-navigation.module.css";
 
@@ -98,13 +99,36 @@ export function BottomNavigation({
     };
   }, [open]);
 
-  function renderLink(link: PublicNavLink) {
-    const Icon = icons[link.href] ?? CircleHelp;
+  const toNavItem = (link: PublicNavLink): NavItem => ({
+    name: link.label, url: link.href, icon: icons[link.href] ?? CircleHelp,
+  });
+  const tubelightItems = [
+    ...primary.slice(0, 2).map(toNavItem),
+    { name: "More", url: "#more-navigation", icon: Plus },
+    ...primary.slice(2).map(toNavItem),
+  ];
+  const activeUrl = moreActive ? "#more-navigation"
+    : primary.find(link => isNavigationActive(pathname, link.href))?.href ?? null;
+
+  function renderNavItem(item: NavItem, isActive: boolean, lamp: ReactNode) {
+    if (item.url === "#more-navigation") {
+      return (
+        <button ref={moreRef} type="button" className={styles.more} onClick={onOpen}
+          aria-label="More navigation options" aria-haspopup="dialog" aria-expanded={open}
+          aria-controls="more-navigation" data-active={moreActive || undefined}>
+          <span className={styles.moreOrb}><Plus aria-hidden="true" strokeWidth={1.8} /></span>
+          <span>More</span>
+          {lamp}
+        </button>
+      );
+    }
+    const Icon = item.icon;
     return (
-      <Link key={link.href} href={link.href} className={styles.item}
-        aria-current={isNavigationActive(pathname, link.href) ? "page" : undefined}>
+      <Link href={item.url} className={styles.item}
+        aria-current={isActive ? "page" : undefined}>
         <Icon aria-hidden="true" strokeWidth={1.65} />
-        <span>{link.label}</span>
+        <span>{item.name}</span>
+        {lamp}
       </Link>
     );
   }
@@ -116,16 +140,8 @@ export function BottomNavigation({
           <span className={styles.dockMark} aria-hidden="true">AJ<span /></span>
           <span className={styles.dockBrandCopy}>{brandName}<small>DESIGN. BUILD. EVOLVE.</small></span>
         </Link>
-        <div className={styles.linkGroup}>
-          {primary.slice(0, 2).map(renderLink)}
-          <button ref={moreRef} type="button" className={styles.more} onClick={onOpen}
-            aria-label="More navigation options" aria-haspopup="dialog" aria-expanded={open}
-            aria-controls="more-navigation" data-active={moreActive || undefined}>
-            <span className={styles.moreOrb}><Plus aria-hidden="true" strokeWidth={1.8} /></span>
-            <span>More</span>
-          </button>
-          {primary.slice(2).map(renderLink)}
-        </div>
+        <NavBar items={tubelightItems} activeUrl={activeUrl} embedded
+          className={styles.linkGroup} renderItem={renderNavItem} />
         <div className={styles.dockActions}>
           <button type="button" className={styles.searchTrigger} onClick={openSearch}
             aria-label="Search navigation" title="Search pages (Ctrl K / ⌘ K)" aria-keyshortcuts="Meta+K Control+K" aria-haspopup="dialog" aria-controls="more-navigation" aria-expanded={open}>
