@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Phase-gated upgrade program (2026-09-12)
+- The new owner-supplied 0–17 upgrade program is tracked in `docs/base44-upgrade/PHASE_STATUS.md`; read it, `MASTER_PROJECT_UNDERSTANDING.md`, `REGRESSION_BASELINE.md` and `MASTER_UPGRADE_PLAN.md` before continuing.
+- Phase 0 added documentation/baselines only. Phase 1 is NOT started and requires the exact command `START NEXT PHASE SAFELY`; older numbered reports are not this program's phase state.
+- Real Supabase/auth/admin persistence remains blocked by absent configuration. The default isolated production build passed; optional webpack build failed on existing CSS-module global selectors. Keep these outcomes separate.
+- Preserve the accepted compact one-row desktop navbar, visible left brand/centered eight links, and unchanged mobile dock. Do not redesign during the Phase 1 functional audit.
+
 ## What this is
 A Next.js 16 (App Router, Turbopack) company website for AJ System Soft Technology.
 The app lives in `website/`. It uses **Supabase** (Postgres + Auth + Storage) as its

@@ -1,0 +1,7275 @@
+{
+  "summary": {
+    "commit": "421447d827a2f5ec60acd2cc05e830b3acbbc92f",
+    "trackedFiles": 337,
+    "sourceModules": 239,
+    "pageFiles": 38,
+    "routeHandlerFiles": 3,
+    "clientModules": 36,
+    "serverActionModules": 10,
+    "ddlTables": [
+      "admin_usernames",
+      "agreement_acceptances",
+      "agreement_versions",
+      "agreements",
+      "announcements",
+      "appointment_requests",
+      "audit_logs",
+      "blog_categories",
+      "blog_post_tags",
+      "blog_posts",
+      "blog_tags",
+      "client_messages",
+      "client_portal_documents",
+      "clients",
+      "contact_submissions",
+      "launch_benefits",
+      "media_assets",
+      "navigation_items",
+      "offers",
+      "page_sections",
+      "payment_links",
+      "profiles",
+      "project_media",
+      "projects",
+      "quote_requests",
+      "redirects",
+      "seo_metadata",
+      "service_faqs",
+      "services",
+      "site_settings",
+      "social_links",
+      "team_members",
+      "testimonials",
+      "user_addresses"
+    ],
+    "literalRlsEnableTables": [
+      "admin_usernames",
+      "agreement_acceptances",
+      "agreement_versions",
+      "agreements",
+      "announcements",
+      "appointment_requests",
+      "audit_logs",
+      "blog_categories",
+      "blog_post_tags",
+      "blog_posts",
+      "blog_tags",
+      "client_messages",
+      "client_portal_documents",
+      "clients",
+      "contact_submissions",
+      "launch_benefits",
+      "media_assets",
+      "navigation_items",
+      "offers",
+      "page_sections",
+      "payment_links",
+      "profiles",
+      "project_media",
+      "projects",
+      "quote_requests",
+      "redirects",
+      "seo_metadata",
+      "service_faqs",
+      "services",
+      "site_settings",
+      "social_links",
+      "team_members",
+      "testimonials",
+      "user_addresses"
+    ],
+    "literalTableOrStorageRefsWithoutDdl": [
+      "ai_methods",
+      "lead-attachments",
+      "profile-avatars"
+    ],
+    "inventoryCoverage": "Every tracked file read for inventory/hash; static source import/export/table indexing. This is not a claim of exhaustive manual line-by-line semantic review, dynamic authorization verification or proof of absence of defects."
+  },
+  "files": [
+    {
+      "path": ".base44/environment.json",
+      "bytes": 1447,
+      "sha256": "3231d4791cd79fdd5ab4f7f3fb0b07f81f42baabeba7aedc70f8813ef1141ecd",
+      "lines": 37
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 472,
+      "sha256": "0264fc9489edf409affefba2b844d2355accd1412d1dcf3979dda0a15757fea4",
+      "lines": 34
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 14434,
+      "sha256": "93da7d7234bc86ac33f35f5f528f70902472b8fe8fdb8a432efcd787daa6074c",
+      "lines": 78
+    },
+    {
+      "path": "AJ_System_Soft_Technology_Company_Website_Master_Prompt.txt",
+      "bytes": 52793,
+      "sha256": "5ff06d521ed3fe3b99a20d1f1ba22b9846dc58bc17b32470cb171b652d8d19f8",
+      "lines": 2282
+    },
+    {
+      "path": "README.md",
+      "bytes": 1586,
+      "sha256": "ac31c5d47c9793978a2b6d06fd4115040aa5f5bb8e20e80690cef11231900343",
+      "lines": 36
+    },
+    {
+      "path": "docker-compose.base44.yml",
+      "bytes": 782,
+      "sha256": "37a1f0bd18eb61deeda3a3aad82d33aa3f7dd4f6da5bc383a154492cce021486",
+      "lines": 27
+    },
+    {
+      "path": "docs/CLIENT-PORTAL-AND-ADMIN-AUTH-UPGRADE.md",
+      "bytes": 3673,
+      "sha256": "cc10cb4162e39edb425ff90042f1274164bb20503d56de1d86fe048b85fafd49",
+      "lines": 62
+    },
+    {
+      "path": "docs/MAINTENANCE.md",
+      "bytes": 15687,
+      "sha256": "3e642fbdfd3ca14a2e66d10b5f3904715b3d66da758915f3057d0aba608accfe",
+      "lines": 283
+    },
+    {
+      "path": "docs/PHASE-0-ARCHITECTURE-PLAN.md",
+      "bytes": 19082,
+      "sha256": "940bf38e6f0ee7c2fe5b7e62794bd90319925c78d582fb8077a38923c3621280",
+      "lines": 246
+    },
+    {
+      "path": "docs/PHASE-11-SEARCH-CONSOLE.md",
+      "bytes": 2188,
+      "sha256": "84dde3d845a2bc6a163e4c8d213437ac2176e9e47874ab0d87c4ed0461e31a15",
+      "lines": 49
+    },
+    {
+      "path": "docs/PHASE-11-SEO-AUDIT.md",
+      "bytes": 4417,
+      "sha256": "dab108d3523fcfdbbac027a197bc216e7807d12dc18c64ae3e2697836277229d",
+      "lines": 61
+    },
+    {
+      "path": "docs/PHASE-12-PERFORMANCE.md",
+      "bytes": 3847,
+      "sha256": "6a2ca87cb79580d465d9a2460845a8edbe9c443d8f25c5a45c97ff21fa8d0330",
+      "lines": 58
+    },
+    {
+      "path": "docs/PHASE-13-A11Y-SECURITY.md",
+      "bytes": 5187,
+      "sha256": "9798134aa46cb40c73b0b6d9680871ab85e1addd548a2a6ba5478a7590262582",
+      "lines": 54
+    },
+    {
+      "path": "docs/PHASE-16-RELEASE-REPORT.md",
+      "bytes": 4824,
+      "sha256": "e7ff9ebf1a2f31b808f521b44e023ff36453ac13f33434cc10f7fe742b8a7275",
+      "lines": 79
+    },
+    {
+      "path": "docs/PHASE-17-POST-LAUNCH-SEO.md",
+      "bytes": 3584,
+      "sha256": "4cdebb9d02f2846af628064f1abe2526e03e25cfdec327fcbff9200decf5b275",
+      "lines": 66
+    },
+    {
+      "path": "docs/PHASE-18-SEO-ADSENSE-UX-HARDENING.md",
+      "bytes": 5421,
+      "sha256": "c3b43593db00816803996740b8eb8e163cf176fa13b030e830301632597dfb2b",
+      "lines": 44
+    },
+    {
+      "path": "docs/PHASE-2-SUPABASE-SETUP.md",
+      "bytes": 4428,
+      "sha256": "c1eeb9b3f3bb4c2f1a19d06ba04a5d19e3e28a7a282d64aa32e527be377dcafa",
+      "lines": 104
+    },
+    {
+      "path": "docs/UI-REDESIGN-PHASE-0.md",
+      "bytes": 5226,
+      "sha256": "80e51bb40c94112b4137762572e3a8f9c6cfb2f594fc376f42b1fbcef1d8cda7",
+      "lines": 78
+    },
+    {
+      "path": "docs/UI-UPGRADE-PREMIUM-3D.md",
+      "bytes": 1918,
+      "sha256": "57ba1ec6f21a724ee73c320a2f468dd42e88cd52366fb0a464a03656b1cf11ef",
+      "lines": 28
+    },
+    {
+      "path": "docs/VISUAL-REPAIR-2026-09.md",
+      "bytes": 3537,
+      "sha256": "b94e9d26a4bcc8033e770ab3999c246bac8a744628a3a89d6c56cc99dd66ea35",
+      "lines": 26
+    },
+    {
+      "path": "docs/premium-finishing-audit.md",
+      "bytes": 10664,
+      "sha256": "1f1750b433662798e91277876ac4dfeaaa1b03eaeeb01acd977b3a049d26aaa0",
+      "lines": 75
+    },
+    {
+      "path": "gitignore.txt",
+      "bytes": 444,
+      "sha256": "80d8e2ff5489b84d56a3e9f5bcb963c530e24c45077ef36c5ca8e4ef88415ef9",
+      "lines": 32
+    },
+    {
+      "path": "website/.gitignore",
+      "bytes": 501,
+      "sha256": "3b288c36492a3d87d8e94abab246d68c3a582469a246f476488052c4e83b6c4a",
+      "lines": 43
+    },
+    {
+      "path": "website/.prettierignore",
+      "bytes": 70,
+      "sha256": "92f5ac83b8a5a95df6a1507ea37f5a056e6673390a8d27c7a2fd45c79a5bdf05",
+      "lines": 7
+    },
+    {
+      "path": "website/.prettierrc.json",
+      "bytes": 50,
+      "sha256": "b17108bcb72f69e0f37b6e5a9f3043acae5ae392348a554c5445ade19d21570f",
+      "lines": 4
+    },
+    {
+      "path": "website/AGENTS.md",
+      "bytes": 678,
+      "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb",
+      "lines": 9
+    },
+    {
+      "path": "website/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "lines": 1
+    },
+    {
+      "path": "website/README.md",
+      "bytes": 8117,
+      "sha256": "fc4523870c9b993c0ba3d8061392443998ef11234cfe69fb1b8eb8109b668660",
+      "lines": 156
+    },
+    {
+      "path": "website/components.json",
+      "bytes": 431,
+      "sha256": "831fdce06c6c25c7f67d23b737f27184bca9e4a0ff5c0a60175a6a58edbe4c7e",
+      "lines": 21
+    },
+    {
+      "path": "website/docs/reference-motion.md",
+      "bytes": 4729,
+      "sha256": "67a513e0ace8a331867ca88fdc9ce221316ccef90fd1be5f0c1275e13ecec83a",
+      "lines": 72
+    },
+    {
+      "path": "website/docs/seo/keyword-map.md",
+      "bytes": 13649,
+      "sha256": "be2e2657aee1d8df9d26f5c2ae60d49860b40b3edaa9b8235250fbad04b42178",
+      "lines": 67
+    },
+    {
+      "path": "website/eslint.config.mjs",
+      "bytes": 465,
+      "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "lines": 18
+    },
+    {
+      "path": "website/netlify.toml",
+      "bytes": 182,
+      "sha256": "5ed92b1f26a382a9f4f4e61704f74deca7ec85770c3d7404c8c9380bd70a81de",
+      "lines": 7
+    },
+    {
+      "path": "website/next.config.ts",
+      "bytes": 6559,
+      "sha256": "e90ccf12606a2afb897ae65254945feedf7a01a01bc6d5dd8c6c25b3aff09bc0",
+      "lines": 174
+    },
+    {
+      "path": "website/package-lock.json",
+      "bytes": 338654,
+      "sha256": "ee3296ab138403efe846f0dfe3ad2a571ecb7cdcc1b16c33cbdf51af09a2b08c",
+      "lines": 9625
+    },
+    {
+      "path": "website/package.json",
+      "bytes": 1108,
+      "sha256": "7506f4e3474078393e9969b40ebcc4a14d7c282e2af5b0fbc4aff6080fde6a4e",
+      "lines": 45
+    },
+    {
+      "path": "website/postcss.config.mjs",
+      "bytes": 94,
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "lines": 7
+    },
+    {
+      "path": "website/prompt files/AJS_EXISTING_LIVE_PROJECT_Warmwind_UI_SEO_ADMIN_SUPABASE_UPGRADE_MASTER_PROMPT.txt",
+      "bytes": 55049,
+      "sha256": "ae33d08b3c68f4a5f354db691920f4a43c09444cb53bdaa1abba5d1eca9cc613",
+      "lines": 1956
+    },
+    {
+      "path": "website/prompt files/AJS_ULTIMATE_EXISTING_PROJECT_PRODUCTION_UPGRADE_MASTER_PROMPT_V2.txt",
+      "bytes": 94429,
+      "sha256": "3b6170f1dd18a0adf33efcc61bf3efde4e4e39ada9978c4f8bef9f1bb85c06b1",
+      "lines": 3772
+    },
+    {
+      "path": "website/public/ads.txt",
+      "bytes": 59,
+      "sha256": "141e1c5988e8d629015dda4b9bb677caf77ccca838a11b72418dd79bd1dad7b1",
+      "lines": 1
+    },
+    {
+      "path": "website/public/images/client-workspace-master.svg",
+      "bytes": 7565,
+      "sha256": "604814ac4f481b21e243e547d0090ca03ce3359ce9d0976444046f4d54dfec29",
+      "lines": 75
+    },
+    {
+      "path": "website/public/images/client-workspace.webp",
+      "bytes": 109192,
+      "sha256": "70393c8516bccb447a932934e40b5c221445c06b781b3c1965e6653a7cbd5ea3",
+      "lines": null
+    },
+    {
+      "path": "website/public/images/login-sculpture.webp",
+      "bytes": 19192,
+      "sha256": "88619f280e0e43779aca809e75cf6c5a7935ca1ca36b548235728a72f6be030a",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/art.png",
+      "bytes": 431527,
+      "sha256": "f2fba97f29b900185c7a9b2785b4aff09dae4be3f9cf024f925d3a5b1adb21fd",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/desktop-admin.png",
+      "bytes": 228421,
+      "sha256": "e8b3a110f026158dd643d35becfdf67a2badefa33088a163e0d05a00f35077ed",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/desktop-home.png",
+      "bytes": 237578,
+      "sha256": "3b7266e60f9cba19e76c78dd04203470d30c79f2c23f4d549956c263c26d4990",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/desktop-login-dark.png",
+      "bytes": 438988,
+      "sha256": "85e92b3e8a88637a0aae2637319a9205147022d3eeafeb7a3c442f709130de6b",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/desktop-login.png",
+      "bytes": 410905,
+      "sha256": "7ebc17759464e259bf9245db7332b9c856380b9aeda9a97932fc2faf147b60c1",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/desktop-portal.png",
+      "bytes": 397948,
+      "sha256": "d80bcf8a361fd3aba94ac44c969e95807af835072963f7da98984498008e351b",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-admin.png",
+      "bytes": 79771,
+      "sha256": "9e09597e04cf39b0dab923cc7e7a1b5fe0a9b7b2164c0a2162bb4b815fd8e87e",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-home.png",
+      "bytes": 103522,
+      "sha256": "d0bc2f96558f2a7c05e6d602aa26bbe422e7d033a89bfd811091115591916157",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-login-dark.png",
+      "bytes": 132956,
+      "sha256": "36f2d96a093bfe0d5cb84c3fafeebe34073be9a5b81d7e3b9d6413f6ea8beb44",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-login.png",
+      "bytes": 132432,
+      "sha256": "e798c2cf24bacc03596db3615908550d7f958cdebdea2ec26209e3b83215203d",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-navigation.png",
+      "bytes": 114661,
+      "sha256": "bfe4f0c79a79bf5a2383f87c1668c0734b212cea0064129de91ab96684e2335a",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/mobile-portal.png",
+      "bytes": 112488,
+      "sha256": "1f7b5e9b1728d1cfea0ad6f48b649dd2eb13941a2f6ea24658d09e9fabbdbbb5",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-admin.png",
+      "bytes": 174772,
+      "sha256": "0faa380e7e5044ef776b299d214c92b6182e8de0c9c3b58f802593d248361474",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-home.png",
+      "bytes": 206451,
+      "sha256": "7b25acd631e84ae7a05529b97327c74b700ded24314fdbb232a2f961f842fcb5",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-login-dark.png",
+      "bytes": 341311,
+      "sha256": "e095f0a2586ca8b479a80814f429c4f79d1ce3e023973cc06aa39a3e491fc347",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-login.png",
+      "bytes": 329878,
+      "sha256": "ef2eca49e47c522763e48f18c8873d911b17875ca34dc960ab188a475e8cb24b",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-navigation.png",
+      "bytes": 258042,
+      "sha256": "98524dc1e29c6fe97925b6b6df52c02c3153bc4d89a4f48dfe0203734cc47b8c",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/tablet-portal.png",
+      "bytes": 354004,
+      "sha256": "a14fd86eddac90153919ef4b12e870c1ed62cd48f9654db8db1e51cb8e3f545e",
+      "lines": null
+    },
+    {
+      "path": "website/public/reference-review/video.jpg",
+      "bytes": 47069,
+      "sha256": "929eaf95d4de46da38bd270e403e2c4e6545ac1c8486e94684940b19ba244829",
+      "lines": null
+    },
+    {
+      "path": "website/scripts/measure-finishing.mjs",
+      "bytes": 2627,
+      "sha256": "8c07eec063ef79ccdd10b42ce176cb08c0e9d15114952a646b532ca05ff531ff",
+      "lines": 43
+    },
+    {
+      "path": "website/scripts/release-qa.mjs",
+      "bytes": 6542,
+      "sha256": "b4b53656df1cbb060f9f1ed9d044e27477a6b37f0ce970c643a3dadb340c212b",
+      "lines": 169
+    },
+    {
+      "path": "website/scripts/responsive-qa.mjs",
+      "bytes": 7006,
+      "sha256": "c26d875a103bf7ca9284892a93b62c93f6ba0914bb6d38d0372d030c0cf16d3f",
+      "lines": 187
+    },
+    {
+      "path": "website/scripts/seo-verify.mjs",
+      "bytes": 6447,
+      "sha256": "9f6f8308690b895f7af8fad1965d09dc819e5a8af44a214c3c802788e960eee5",
+      "lines": 191
+    },
+    {
+      "path": "website/scripts/verify-finishing.mjs",
+      "bytes": 5041,
+      "sha256": "cb0cc23ca290f9fc90f5016679d1936b3bec3bc76bffa1bddbaac909f0b69e12",
+      "lines": 83
+    },
+    {
+      "path": "website/scripts/verify-presentation.mjs",
+      "bytes": 8830,
+      "sha256": "c2084f7d4988b368be02d354228dde8fbe1d49b84ed185e1e26d367eccb07bd2",
+      "lines": 156
+    },
+    {
+      "path": "website/scripts/verify-responsive-scale.mjs",
+      "bytes": 3954,
+      "sha256": "927fda5184a7ae061c356e9306ac53a44c96ee7e82f4ba9c1c416ac487c5446e",
+      "lines": 62
+    },
+    {
+      "path": "website/scripts/verify-visual-repairs.mjs",
+      "bytes": 8317,
+      "sha256": "dc364765b8116c38e89078fb1538f76bfb9d83162053dc17613e64d340bbb491",
+      "lines": 140
+    },
+    {
+      "path": "website/src/app/(public)/about/page.tsx",
+      "bytes": 11573,
+      "sha256": "a565e6f4948bded7bd18b55cce7f119bd4a23fc7015afd86064fc1aa49f12f8b",
+      "lines": 284
+    },
+    {
+      "path": "website/src/app/(public)/account/page.tsx",
+      "bytes": 23960,
+      "sha256": "7bfe52e530ec6d322f74bd555745684ac8e70597271e6726622243b0c6fce787",
+      "lines": 562
+    },
+    {
+      "path": "website/src/app/(public)/ai-methods/page.tsx",
+      "bytes": 2617,
+      "sha256": "bdb8430c75fe4db260930de3e01aba86eb9db1fdd33a3737613405861ee0e580",
+      "lines": 60
+    },
+    {
+      "path": "website/src/app/(public)/blog/[slug]/page.tsx",
+      "bytes": 7563,
+      "sha256": "cbb410c6a36072eea33decd6dc6c1b1765418e346b3ee982c090c3da46ad375d",
+      "lines": 200
+    },
+    {
+      "path": "website/src/app/(public)/blog/page.tsx",
+      "bytes": 7330,
+      "sha256": "d1aa5de6fa10e26f77a863b2b0237b2c56e4f745c24f8445ec1e67d93703ce45",
+      "lines": 187
+    },
+    {
+      "path": "website/src/app/(public)/contact/page.tsx",
+      "bytes": 7401,
+      "sha256": "73e3066a6bb9bf6f20583882f28fecc2ad6c3ec6df379b202f020cf6cd6120d6",
+      "lines": 175
+    },
+    {
+      "path": "website/src/app/(public)/forgot-password/page.tsx",
+      "bytes": 669,
+      "sha256": "59dc01478e37c8a5d234fc00cd43889b247931ca2f2fe6980be2ce9bff787d11",
+      "lines": 21
+    },
+    {
+      "path": "website/src/app/(public)/layout.tsx",
+      "bytes": 2057,
+      "sha256": "3f2c57f3ad900380489a95cf661d3d098842fa25a202e82eaaa49d46cffda3f2",
+      "lines": 46
+    },
+    {
+      "path": "website/src/app/(public)/login/page.tsx",
+      "bytes": 1375,
+      "sha256": "cfdf7e7972766628190e1c46d9c5e1ebe7c7debff0bc80e1c03f1ae0e43cd180",
+      "lines": 43
+    },
+    {
+      "path": "website/src/app/(public)/page.tsx",
+      "bytes": 1480,
+      "sha256": "b422aea423b7180cdc1809f154e8a9845b57a86540fd83bfd0737f5559259c33",
+      "lines": 45
+    },
+    {
+      "path": "website/src/app/(public)/privacy/page.tsx",
+      "bytes": 7020,
+      "sha256": "836aac1f1c80d70c27f90d42d58153521b563b9636a46315aef99d8f7286a99f",
+      "lines": 133
+    },
+    {
+      "path": "website/src/app/(public)/projects/[slug]/page.tsx",
+      "bytes": 15340,
+      "sha256": "036d067508934bb08ffd8ba9ad89993137c48bb897e700124529294b31763007",
+      "lines": 371
+    },
+    {
+      "path": "website/src/app/(public)/projects/page.tsx",
+      "bytes": 4228,
+      "sha256": "a2104f724033193776209245193b3196dc4bc294087d499e6fbf5525d2c129a4",
+      "lines": 120
+    },
+    {
+      "path": "website/src/app/(public)/request-quote/page.tsx",
+      "bytes": 2124,
+      "sha256": "545ecc31acc806882b242cd8a584af29ca12c5c9ce6248496ce73dc734c83fbe",
+      "lines": 56
+    },
+    {
+      "path": "website/src/app/(public)/reset-password/page.tsx",
+      "bytes": 1675,
+      "sha256": "3e1526b1a164ae303eb5860b36eda2698c564b0200a725de0b243ce7f0e9db10",
+      "lines": 54
+    },
+    {
+      "path": "website/src/app/(public)/reviews/page.tsx",
+      "bytes": 7219,
+      "sha256": "0cfa3cb9eda733f2d0d76f6d2c96af2015da35c0f26a074e301841395947a726",
+      "lines": 181
+    },
+    {
+      "path": "website/src/app/(public)/service-agreement/page.tsx",
+      "bytes": 3710,
+      "sha256": "29032bd0b9a37d338fbf5549d1fede186ced29ea710f3db8e4ebd4ca74b127fe",
+      "lines": 89
+    },
+    {
+      "path": "website/src/app/(public)/services/[slug]/page.tsx",
+      "bytes": 13956,
+      "sha256": "0cb20e899cf516eb4a87ca405f9bd4eeb11366bc0571fab992b5b84cfe93c702",
+      "lines": 347
+    },
+    {
+      "path": "website/src/app/(public)/services/page.tsx",
+      "bytes": 4899,
+      "sha256": "3e0b8cec12f0b3d7d6b784fda9414aa2ae657578dd98cf3ca740bbe2762d1ef1",
+      "lines": 110
+    },
+    {
+      "path": "website/src/app/(public)/signup/page.tsx",
+      "bytes": 975,
+      "sha256": "8dc3ff7be6a0f870d727fbd071fcb65ff03e591460e60266d71448093466aaab",
+      "lines": 28
+    },
+    {
+      "path": "website/src/app/(public)/team/page.tsx",
+      "bytes": 3526,
+      "sha256": "1e68990bb5712e80402bd7d029d14ff8a4cf25e95f844e5274f8b2d20fa7d0cb",
+      "lines": 95
+    },
+    {
+      "path": "website/src/app/(public)/terms/page.tsx",
+      "bytes": 4465,
+      "sha256": "acb7921e5c55f54721152eaac78a8c09ae84de55625c223e6e51bc7f3d4e0293",
+      "lines": 104
+    },
+    {
+      "path": "website/src/app/(public)/update-password/page.tsx",
+      "bytes": 1678,
+      "sha256": "e489be17fdb5b2412e436d5a88ae19955a4003db4e1ab1ff5d1edbb1d9e5a9e0",
+      "lines": 56
+    },
+    {
+      "path": "website/src/app/accent-surfaces.css",
+      "bytes": 5841,
+      "sha256": "aa6ec1a799904ad15e4148ecbf71bedd3ac6d527fb7b46942c8df08acd69456b",
+      "lines": 64
+    },
+    {
+      "path": "website/src/app/action-surfaces.css",
+      "bytes": 4475,
+      "sha256": "8255e5bb1139bf6d070b74a470d02b606df85e8978397c46e1c88b2d39546e54",
+      "lines": 51
+    },
+    {
+      "path": "website/src/app/ajadmin/agreements/page.tsx",
+      "bytes": 13886,
+      "sha256": "b073bf0fc2ffde59445ae9d1820753e4b7904ea611a78122b47f23f076c184b3",
+      "lines": 323
+    },
+    {
+      "path": "website/src/app/ajadmin/audit/page.tsx",
+      "bytes": 7013,
+      "sha256": "b97748cbc7349c7db1cb0d542ebbf1616f0246166adc1398c8b7f73aed1d54e8",
+      "lines": 195
+    },
+    {
+      "path": "website/src/app/ajadmin/brand/page.tsx",
+      "bytes": 2692,
+      "sha256": "8aae83539b40dd57e635d130f9e15ef89201082ac0ff8f31942055da4fdd92a3",
+      "lines": 78
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/[id]/page.tsx",
+      "bytes": 2914,
+      "sha256": "e3ad4ec0223c815e28c33d6509d82da437af0dd8cd0183cd23da622ce31e1526",
+      "lines": 80
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/new/page.tsx",
+      "bytes": 1867,
+      "sha256": "79967c7c6d5b7dc69f5f1d3598e5ef8b8a65fcd80abe70acd858c4eb52a8aeb3",
+      "lines": 57
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/page.tsx",
+      "bytes": 2549,
+      "sha256": "b23020b12158845afa7ca2eeee8f7566b95b1367d8098baf722327d93f9174fb",
+      "lines": 78
+    },
+    {
+      "path": "website/src/app/ajadmin/home/[id]/page.tsx",
+      "bytes": 6981,
+      "sha256": "aca5d29cd0cb218db83eab25057dc1874202216383d1f13ecf4e4ecdc76fae87",
+      "lines": 214
+    },
+    {
+      "path": "website/src/app/ajadmin/home/new/page.tsx",
+      "bytes": 3422,
+      "sha256": "9ba7456875f21e4c7b5f8420ea3745e183e90be5a6457245afd2738a06b1d8d5",
+      "lines": 99
+    },
+    {
+      "path": "website/src/app/ajadmin/home/page.tsx",
+      "bytes": 7938,
+      "sha256": "4455dd3082f7b1d183bdddad96cc06d47fbab0a6806780dfe7e9dc6dda865f6b",
+      "lines": 195
+    },
+    {
+      "path": "website/src/app/ajadmin/layout.tsx",
+      "bytes": 1569,
+      "sha256": "aa015e6adfebcc3b8734c0bd8925aff314d9bea859bf38ffb79e71925ada842e",
+      "lines": 44
+    },
+    {
+      "path": "website/src/app/ajadmin/leads/[kind]/[id]/page.tsx",
+      "bytes": 5506,
+      "sha256": "fc32c8d53ac0a2693e86aedefcb576f7b2732befd9b18b0e3167c08e793c0c8a",
+      "lines": 158
+    },
+    {
+      "path": "website/src/app/ajadmin/leads/page.tsx",
+      "bytes": 7745,
+      "sha256": "d10dc0c6070016e0f866dc237db6f7d3540589c162abcbaba323bbfd9e3a0d14",
+      "lines": 208
+    },
+    {
+      "path": "website/src/app/ajadmin/loading.tsx",
+      "bytes": 265,
+      "sha256": "8f110f7019e7fa7010e51f8877b53f04adaa73bcc6f5fab54b08c505c12ead32",
+      "lines": 7
+    },
+    {
+      "path": "website/src/app/ajadmin/login/login-form.tsx",
+      "bytes": 3574,
+      "sha256": "9935d5a19130a155025407fb5687c67f126eae726a7aa857e2314afc1e464e1c",
+      "lines": 103
+    },
+    {
+      "path": "website/src/app/ajadmin/login/page.tsx",
+      "bytes": 2879,
+      "sha256": "622b75aa6ad3928fe72575556fbe129b05cf6605755a6c57b99b5251012d8135",
+      "lines": 75
+    },
+    {
+      "path": "website/src/app/ajadmin/media/page.tsx",
+      "bytes": 8219,
+      "sha256": "0ba3970b90d8aaf08d21225b125ffc1e0bf79a1a097e318d7d5aff1626e039ac",
+      "lines": 213
+    },
+    {
+      "path": "website/src/app/ajadmin/page.tsx",
+      "bytes": 10317,
+      "sha256": "61258bc44e66f36f6e82edc7f4f1236f5cd91a62af1d73ad33f7f60da1adf3a2",
+      "lines": 241
+    },
+    {
+      "path": "website/src/app/ajadmin/users/page.tsx",
+      "bytes": 13331,
+      "sha256": "8d0df01aa70e0c5384aec573256e7ef4184ab668bb00e6c978396dd91d0c4f26",
+      "lines": 324
+    },
+    {
+      "path": "website/src/app/auth/callback/route.ts",
+      "bytes": 2390,
+      "sha256": "2944b33765bba0b24483497ad11436f7bdc57ee966d018059f1bda6854030f66",
+      "lines": 67
+    },
+    {
+      "path": "website/src/app/auth/confirm/route.ts",
+      "bytes": 2289,
+      "sha256": "9729341543fbad15cdac4f3dda0d53e8b1206f7bfcea465ae24cc1a0c294fb2a",
+      "lines": 66
+    },
+    {
+      "path": "website/src/app/blog/rss.xml/route.ts",
+      "bytes": 1594,
+      "sha256": "d80955d88b861e0da1d3588cc54fbfc144620385ee0576a11b74fce90bf64f91",
+      "lines": 52
+    },
+    {
+      "path": "website/src/app/design-preview/page.tsx",
+      "bytes": 1496,
+      "sha256": "9fe34b7864e743e686b92c2f1fdfc5f4e5f30a9495aaf35e19479d88163293f2",
+      "lines": 30
+    },
+    {
+      "path": "website/src/app/error.tsx",
+      "bytes": 831,
+      "sha256": "48488ec9e68069974f5ff39d9abb43fd72973f3ad8e1620ede56b88187917d47",
+      "lines": 28
+    },
+    {
+      "path": "website/src/app/favicon.ico",
+      "bytes": 25931,
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+      "lines": null
+    },
+    {
+      "path": "website/src/app/global-error.tsx",
+      "bytes": 1009,
+      "sha256": "ec47882b77510ab9db360e50f24f681089057d338055c1ab54a32cb48402e557",
+      "lines": 43
+    },
+    {
+      "path": "website/src/app/globals.css",
+      "bytes": 23196,
+      "sha256": "ad2b528c3cd48eb9c499b2488bae20ede408d4fbc928f4ccc8df11e30dfa3379",
+      "lines": 833
+    },
+    {
+      "path": "website/src/app/icon.tsx",
+      "bytes": 611,
+      "sha256": "f4e8fe0b02d135a1d041b50684abd61d064595f50160f4c31146a8cd62d10959",
+      "lines": 27
+    },
+    {
+      "path": "website/src/app/layout.tsx",
+      "bytes": 1686,
+      "sha256": "ea35796ba2e091b1f48d1971ab853145d4e2febd23c58756a2cb473967ab9c34",
+      "lines": 49
+    },
+    {
+      "path": "website/src/app/not-found.tsx",
+      "bytes": 687,
+      "sha256": "03c3b908b711ffe4bff14ca077ba199a01316042e140a0161c3721e348c192b5",
+      "lines": 19
+    },
+    {
+      "path": "website/src/app/opengraph-image.tsx",
+      "bytes": 2190,
+      "sha256": "d4292bf47227a1b6ff6526a1cfdcea1e8f9d71f25877ad15d9516b32d7b9937d",
+      "lines": 73
+    },
+    {
+      "path": "website/src/app/robots.ts",
+      "bytes": 1316,
+      "sha256": "ba22716da8e7cfbcaf365cd42cf4c4f79b5747aa885874b5f127ac7f01c2cdaf",
+      "lines": 50
+    },
+    {
+      "path": "website/src/app/sitemap.ts",
+      "bytes": 4668,
+      "sha256": "465a32897c1d2dfdaaaf5c480660d89a4a5afbd34c71f564385ad5d54db8a76c",
+      "lines": 115
+    },
+    {
+      "path": "website/src/app/surface-system.css",
+      "bytes": 4162,
+      "sha256": "b66d93114fa01e8ead6e1ce59a3bcf82ce840cc95da78eabd219f5aa02517b43",
+      "lines": 53
+    },
+    {
+      "path": "website/src/components/admin/AdminNav.tsx",
+      "bytes": 4231,
+      "sha256": "dc15afeb0175bde33c3d5b674f74f55c13562ad6dbc7a5b903cca7bb36c12d66",
+      "lines": 120
+    },
+    {
+      "path": "website/src/components/admin/AdminShell.tsx",
+      "bytes": 6370,
+      "sha256": "5a1b681845165cf6d0b07c410c3f57e10ed3353d3161c28877015117a0ab4461",
+      "lines": 156
+    },
+    {
+      "path": "website/src/components/admin/AdminSubmitButton.tsx",
+      "bytes": 472,
+      "sha256": "ff8b1c9ed06fd2244510f852d90188a4a103598120cf8825807a47c4aacb459e",
+      "lines": 22
+    },
+    {
+      "path": "website/src/components/admin/BrandSettingsForm.tsx",
+      "bytes": 7249,
+      "sha256": "a974d24a67d2f6449090a6c14c97735cb9e30b2645c160b0fa99d4a1a4e85d36",
+      "lines": 227
+    },
+    {
+      "path": "website/src/components/admin/ConfirmButton.tsx",
+      "bytes": 2188,
+      "sha256": "622de903d15c372866a16daa07862f3937995d37fc19b16dcb09a096cbbbc01d",
+      "lines": 80
+    },
+    {
+      "path": "website/src/components/admin/LeadEditForm.tsx",
+      "bytes": 2714,
+      "sha256": "c70dba71ca091db5fa1d1457b0d3246a51b907a358afe62c3405b3b6380d7096",
+      "lines": 93
+    },
+    {
+      "path": "website/src/components/admin/ResourceForm.tsx",
+      "bytes": 11107,
+      "sha256": "0570268d5a8845f7392871010697c75bf792b02d8f0017325a21104526d34e1e",
+      "lines": 318
+    },
+    {
+      "path": "website/src/components/admin/ResourceList.tsx",
+      "bytes": 15449,
+      "sha256": "6a93ead7bd1ec2686fb6d82f7478a96c4e416aecbff493d9ee162c1e61e0cba6",
+      "lines": 328
+    },
+    {
+      "path": "website/src/components/admin/SetupNotice.tsx",
+      "bytes": 739,
+      "sha256": "626814161398d3a11d4a5adfb1ef3e9ff2cd6627f0e960fa0b59e1ca0983e20e",
+      "lines": 20
+    },
+    {
+      "path": "website/src/components/admin/admin-surface.module.css",
+      "bytes": 3454,
+      "sha256": "91f1b352ddae12f51c69a0b784197b9257a296c77050f4f25f05d738d4981a24",
+      "lines": 33
+    },
+    {
+      "path": "website/src/components/design-preview/DeliveryProcess.tsx",
+      "bytes": 4667,
+      "sha256": "188d8bbe76ec1bb1efd6a9a8964abfcd892dba8e477153faf2c4966cf6bd3088",
+      "lines": 71
+    },
+    {
+      "path": "website/src/components/design-preview/HomeExperience.tsx",
+      "bytes": 6688,
+      "sha256": "ff0a376213c98471573be9e850d93f5ca1f5143242c51609c27061bb2e849412",
+      "lines": 88
+    },
+    {
+      "path": "website/src/components/design-preview/OrbitArtwork.tsx",
+      "bytes": 2500,
+      "sha256": "e9da63c8b51e9092c0622e21ac994840e4e9f879b80ee1aaf413fcdf899e5cd6",
+      "lines": 48
+    },
+    {
+      "path": "website/src/components/design-preview/ScrollJourney.tsx",
+      "bytes": 4489,
+      "sha256": "d465516a2cb5d768b9ab04556dce035e57d581a1bb58ea7a5539d220531ccb9a",
+      "lines": 97
+    },
+    {
+      "path": "website/src/components/design-preview/SculpturalScenes.tsx",
+      "bytes": 2379,
+      "sha256": "283d78e8aa3e4ca41bbcb4c24f40c06911d87691563fefc14e632270593ea3cc",
+      "lines": 40
+    },
+    {
+      "path": "website/src/components/design-preview/ServiceJourney.tsx",
+      "bytes": 2286,
+      "sha256": "f05c323eed11196e109ebbb8758c6ef7ab2464674363b5169d265e08fa81ffdd",
+      "lines": 39
+    },
+    {
+      "path": "website/src/components/design-preview/home-content.module.css",
+      "bytes": 3915,
+      "sha256": "eff57d4592c9c35d078077f0f01e32d7df6b63b861e992ec9e07eb33b894ceab",
+      "lines": 57
+    },
+    {
+      "path": "website/src/components/design-preview/pearl-benefits.module.css",
+      "bytes": 4094,
+      "sha256": "36362ede5a402e91025f3a9c0f48ad51a1bf1ffff291256310fc103c04225de0",
+      "lines": 138
+    },
+    {
+      "path": "website/src/components/design-preview/reference.module.css",
+      "bytes": 37779,
+      "sha256": "5fdca9c3fd221168169d1d1dc7cbe3fa5ba97af010523d232a8d81ff7398d1c2",
+      "lines": 425
+    },
+    {
+      "path": "website/src/components/design-preview/sculptural-scenes.module.css",
+      "bytes": 6328,
+      "sha256": "7ddd56f8a0b6c6554e20c76e2f015a4b657845baa2c8c1b2c9d537c68884797b",
+      "lines": 37
+    },
+    {
+      "path": "website/src/components/motion/MotionWords.tsx",
+      "bytes": 546,
+      "sha256": "7df3fadede6f99b3931465fe24e8eadeb19059f548f08e580347399b7d6ea253",
+      "lines": 11
+    },
+    {
+      "path": "website/src/components/motion/SceneMotion.tsx",
+      "bytes": 3803,
+      "sha256": "8e3d770c56642b22cea7941abd980bb746e92147ca8d3e955a4784d27bd017b7",
+      "lines": 85
+    },
+    {
+      "path": "website/src/components/motion/SurfaceMotion.tsx",
+      "bytes": 2420,
+      "sha256": "4e9266a6d32fa565b3317842c739193c5e5a6b0b62a2d0346c75522ec508e205",
+      "lines": 50
+    },
+    {
+      "path": "website/src/components/motion/motion-utils.test.ts",
+      "bytes": 1589,
+      "sha256": "0a54b758f534ebe89d01a03182bb0d344dc19cedaeef974fa6162d423c1b2226",
+      "lines": 35
+    },
+    {
+      "path": "website/src/components/motion/motion-utils.ts",
+      "bytes": 983,
+      "sha256": "b72a3e8e001ac1697bee9341ab8a3536df93f6b1e8043f61f9a4397bf86ff710",
+      "lines": 20
+    },
+    {
+      "path": "website/src/components/portal/AccountForms.tsx",
+      "bytes": 7634,
+      "sha256": "fc3f2e3811ee056dfd2e64b0ee41c8951a3af9a69ca98033e2da781006cb31a1",
+      "lines": 242
+    },
+    {
+      "path": "website/src/components/portal/AgreementsHistory.tsx",
+      "bytes": 4459,
+      "sha256": "f1e244e13ca858eb26ae640d1e1c954964b459138363ed46badf14cf4e2c7725",
+      "lines": 118
+    },
+    {
+      "path": "website/src/components/portal/AuthCard.tsx",
+      "bytes": 6115,
+      "sha256": "9af8f343318ce65faaf93d25f7da65fc7ab49b5331bd983b27b5dadbb5d4526b",
+      "lines": 127
+    },
+    {
+      "path": "website/src/components/portal/AuthForms.tsx",
+      "bytes": 17023,
+      "sha256": "57d074d6d45725ab1559a4ef8752b43c5bbffbb6c515a858b690998c92e21cc2",
+      "lines": 510
+    },
+    {
+      "path": "website/src/components/portal/LoginExperience.tsx",
+      "bytes": 1659,
+      "sha256": "f2344a8905f5f7b719d0dca6a739a1bcaed1d5c47aac10e62093d0a9799a47a7",
+      "lines": 47
+    },
+    {
+      "path": "website/src/components/portal/LoginPasswordField.tsx",
+      "bytes": 1114,
+      "sha256": "79fcc158864c3dd7447491b00f35cbfd4939b40d7d4d7b00b9ef9da787e1e894",
+      "lines": 20
+    },
+    {
+      "path": "website/src/components/portal/PortalLoginModal.tsx",
+      "bytes": 1817,
+      "sha256": "ad81a314717cb90d90fe93b2130c405ab90a396899ef6154b00d606c18d7b032",
+      "lines": 54
+    },
+    {
+      "path": "website/src/components/portal/login-experience.module.css",
+      "bytes": 4029,
+      "sha256": "e19aac18dbc988d13f63f4d05a57a4893cc63521cb896d36c37b10e3d75425aa",
+      "lines": 32
+    },
+    {
+      "path": "website/src/components/seo/JsonLd.tsx",
+      "bytes": 225,
+      "sha256": "397156881dc74da344dbcb560c71015510a54016af61d3e50a1ed5ed0c7775c6",
+      "lines": 9
+    },
+    {
+      "path": "website/src/components/site/AnnouncementBar.tsx",
+      "bytes": 2596,
+      "sha256": "958725b788f652fa5271cb47ba3824999b36d4b73e594ed893985a872f1c79cf",
+      "lines": 74
+    },
+    {
+      "path": "website/src/components/site/BlogPreviewSection.tsx",
+      "bytes": 4687,
+      "sha256": "0abac42e83ef03ab027e7febace238dd6313569ae142bc62c8b776fc29a8f50c",
+      "lines": 112
+    },
+    {
+      "path": "website/src/components/site/Breadcrumbs.tsx",
+      "bytes": 1362,
+      "sha256": "400f12974d1dc8de5f4f83d2e447f4b4e8163095aea917006ab687ba93822bb7",
+      "lines": 40
+    },
+    {
+      "path": "website/src/components/site/FeaturedProjects.tsx",
+      "bytes": 1826,
+      "sha256": "2c55eef7067039d31a3c895f880493f73db58fc9caf35f022f2cb5721c05d5d0",
+      "lines": 50
+    },
+    {
+      "path": "website/src/components/site/GallerySection.tsx",
+      "bytes": 1934,
+      "sha256": "bdf50a52a156a2e71e1f3ba5de05b880df939e2691840297adc0e82dec95e12a",
+      "lines": 43
+    },
+    {
+      "path": "website/src/components/site/Hero.tsx",
+      "bytes": 11462,
+      "sha256": "01a11273c4d6fee6d3bfcea5f90b206af684b58b82bee1d33000b387011197a9",
+      "lines": 250
+    },
+    {
+      "path": "website/src/components/site/HeroVideo.tsx",
+      "bytes": 6466,
+      "sha256": "076dd50d4e61fb294d3845303347a90acafc5445907d9dd3ef530b157c87fb9b",
+      "lines": 157
+    },
+    {
+      "path": "website/src/components/site/Industries.tsx",
+      "bytes": 1905,
+      "sha256": "057eae9b8732f6600e7f90482eefac48cabb5c094c4aef4673d304f13d500777",
+      "lines": 54
+    },
+    {
+      "path": "website/src/components/site/LaunchBenefits.tsx",
+      "bytes": 2133,
+      "sha256": "ef4ae9034df01e4058e0538e7b506ca64982ff0cdf7ab9af774d709afa8d4624",
+      "lines": 45
+    },
+    {
+      "path": "website/src/components/site/LeadForms.tsx",
+      "bytes": 16060,
+      "sha256": "0d3b094610172e8f5c9e50fe5afbb2c027c58d180801fd488eb66a22192d0e7a",
+      "lines": 488
+    },
+    {
+      "path": "website/src/components/site/Markdown.test.ts",
+      "bytes": 1617,
+      "sha256": "b9b10133392e8eea02fe3a68cda6d14d0fe9dd31f1f342bd917310711a3fdc62",
+      "lines": 46
+    },
+    {
+      "path": "website/src/components/site/Markdown.tsx",
+      "bytes": 4645,
+      "sha256": "655a4846c7cdcd492af3634884259d799dac76f1b137e7e0811938b6b6146829",
+      "lines": 118
+    },
+    {
+      "path": "website/src/components/site/OfferPopup.tsx",
+      "bytes": 2792,
+      "sha256": "cbc1fe851b19c2784008a6f5e489f4376b17def53b656edbdafc9158b42f2e56",
+      "lines": 95
+    },
+    {
+      "path": "website/src/components/site/PageHero.tsx",
+      "bytes": 1544,
+      "sha256": "d8c658525410974720d3afb249e9781eb2d4d162f96cecbd48ec4b5ea4fa02bb",
+      "lines": 50
+    },
+    {
+      "path": "website/src/components/site/PlatformsShowcase.tsx",
+      "bytes": 4147,
+      "sha256": "9b0ea0fcdf7b8e4ff3c27a0eb365c730b6a70acb7906d7330670950a47ef7e7e",
+      "lines": 105
+    },
+    {
+      "path": "website/src/components/site/Process.tsx",
+      "bytes": 3613,
+      "sha256": "0fe3347b150c390accdf05238b3c2a7abe47ab4877c51f304d485edaf6b217be",
+      "lines": 84
+    },
+    {
+      "path": "website/src/components/site/ProjectFiltersBar.tsx",
+      "bytes": 2695,
+      "sha256": "ada832840a266b50e7106581a017003a486ea3e3eaa67f7ee3a9e4bedee4aec9",
+      "lines": 93
+    },
+    {
+      "path": "website/src/components/site/PublicSiteFrame.tsx",
+      "bytes": 980,
+      "sha256": "feb771a845b4b55340c19ee767106f49a0b64523f967210cf71b065f1a379d7c",
+      "lines": 24
+    },
+    {
+      "path": "website/src/components/site/Reveal.tsx",
+      "bytes": 943,
+      "sha256": "6e80f882a7768e28bd57175c228181148324eb220585861fa1e01d1e7ee67bd9",
+      "lines": 36
+    },
+    {
+      "path": "website/src/components/site/RevealObserver.tsx",
+      "bytes": 3190,
+      "sha256": "66b0b6bb880b7aa58fa07a3a7149f9f5ce49ea07863ede1f194edc5f912ad2c9",
+      "lines": 69
+    },
+    {
+      "path": "website/src/components/site/ServicesOverview.tsx",
+      "bytes": 2023,
+      "sha256": "15accd09c8321d9301bd22aaf9824c12b90c2249eb529e84a242024a219afdee",
+      "lines": 52
+    },
+    {
+      "path": "website/src/components/site/TeamSection.tsx",
+      "bytes": 1991,
+      "sha256": "1f1f2937d98a7b0925b11c38df7132b59e1b168788f41b22aaccd3088da75574",
+      "lines": 57
+    },
+    {
+      "path": "website/src/components/site/TechCapabilities.tsx",
+      "bytes": 4561,
+      "sha256": "aed218df46a54be850ce3472adf64e585706e6e56ed66145eda732b1740c65bf",
+      "lines": 122
+    },
+    {
+      "path": "website/src/components/site/TestimonialsSection.tsx",
+      "bytes": 2064,
+      "sha256": "ebc6a94eec47beed0ec22a0a0b07aa85950f0322825fa8a32aa33502d4089d4d",
+      "lines": 50
+    },
+    {
+      "path": "website/src/components/site/TrustStrip.tsx",
+      "bytes": 2399,
+      "sha256": "1d9168f299b6ea431993dbdf0223a566f7b2c5280e787531430cb7152b681fa8",
+      "lines": 61
+    },
+    {
+      "path": "website/src/components/site/WhyUs.tsx",
+      "bytes": 3007,
+      "sha256": "0e5592bfb1bcf86aba06e299380a1f7ab05184607ad49f18b1f8e07b3b445cb6",
+      "lines": 75
+    },
+    {
+      "path": "website/src/components/site/icons.tsx",
+      "bytes": 1752,
+      "sha256": "630e2e50d1766ed012b4bb5c5c269f63325bb8f6fec37dda0827ca4af6af2fb4",
+      "lines": 79
+    },
+    {
+      "path": "website/src/components/site/offer-popup.module.css",
+      "bytes": 424,
+      "sha256": "a676425751e507a74d04d31848992550423c0e24f57760fbafb524f716052b75",
+      "lines": 12
+    },
+    {
+      "path": "website/src/components/site/page-hero.module.css",
+      "bytes": 2324,
+      "sha256": "255bc10d1ffee6ff33d615b3ec1be996219dfd013d4c4a37d1039c375b35af78",
+      "lines": 17
+    },
+    {
+      "path": "website/src/components/ui/Accordion.tsx",
+      "bytes": 2583,
+      "sha256": "e439db55620e2bc8e84a05143fd6ba26dc99b19087158b2b778d9bbf08e083e6",
+      "lines": 74
+    },
+    {
+      "path": "website/src/components/ui/ActionIcon.tsx",
+      "bytes": 1163,
+      "sha256": "c45b96fc84e6a70cd1d4ab6a2d9aafb886e2b9ea4f9b82c0cf66f2ed1538b0c5",
+      "lines": 20
+    },
+    {
+      "path": "website/src/components/ui/Badge.tsx",
+      "bytes": 2415,
+      "sha256": "c9ec5bbcd83694c317261d3924ca0e8bb39eb84c0ed01090cdf8f694a4ae7471",
+      "lines": 70
+    },
+    {
+      "path": "website/src/components/ui/BottomNavigation.tsx",
+      "bytes": 9632,
+      "sha256": "09b4ad051ae712a23fe15f529d80768adb1eeebd57fe2a32af9c0c0ad23c5616",
+      "lines": 205
+    },
+    {
+      "path": "website/src/components/ui/BrandIcons.tsx",
+      "bytes": 1898,
+      "sha256": "8ef4df9f2c436260c9718fd6d92838c5922ccfbed9e5962a0b85946d8ac1d167",
+      "lines": 31
+    },
+    {
+      "path": "website/src/components/ui/Button.tsx",
+      "bytes": 5049,
+      "sha256": "f58751035d108456eafb30b45aac873cc52d8bb7973e8cb880000247e4b668c9",
+      "lines": 122
+    },
+    {
+      "path": "website/src/components/ui/CTA.tsx",
+      "bytes": 3240,
+      "sha256": "719c2ecae6d471574342ee07a0180d797ae693125848d6ff0db5f280da77cb60",
+      "lines": 89
+    },
+    {
+      "path": "website/src/components/ui/Card.tsx",
+      "bytes": 975,
+      "sha256": "34ce2fc61dc31de160b95a338df67a3c5deb5d1224903ad99c8e35b07ddcb1ea",
+      "lines": 34
+    },
+    {
+      "path": "website/src/components/ui/Dialog.tsx",
+      "bytes": 1893,
+      "sha256": "4ad6e903567d7df94105add4ec07fed6d1150a80e7e2c218aad1334d48d03af4",
+      "lines": 66
+    },
+    {
+      "path": "website/src/components/ui/Drawer.tsx",
+      "bytes": 1830,
+      "sha256": "a73c9973eebfb50aa39ca49143debc148521b4e6ec3c79cca2ff895a209785a3",
+      "lines": 60
+    },
+    {
+      "path": "website/src/components/ui/Footer.tsx",
+      "bytes": 3172,
+      "sha256": "936ebc49d1b32b06219a45cef0e5c9682d8f47f857ff59d3f9af7a9a08d9ad88",
+      "lines": 82
+    },
+    {
+      "path": "website/src/components/ui/IconButton.tsx",
+      "bytes": 920,
+      "sha256": "8d1476db10d6d6986e28d494c16fa15f1ff27c61f0d79a74eb5a144d9b805d97",
+      "lines": 32
+    },
+    {
+      "path": "website/src/components/ui/Input.tsx",
+      "bytes": 3290,
+      "sha256": "540c4580d3ba7fa349e43454839231ac6f95ff9c69600a5d33fa389263b5eb6d",
+      "lines": 103
+    },
+    {
+      "path": "website/src/components/ui/MarketingHeader.tsx",
+      "bytes": 3883,
+      "sha256": "d300fa3e498d3cb5a74b2fac664a91748eebaa82ee48c7469e489bf0feac0956",
+      "lines": 112
+    },
+    {
+      "path": "website/src/components/ui/MediaFrame.tsx",
+      "bytes": 1967,
+      "sha256": "3db1a353e96e60de69f3db82b4ade785ca77f1e6b5b5c5d9cfa35bc89ffe5229",
+      "lines": 70
+    },
+    {
+      "path": "website/src/components/ui/MobileMenu.tsx",
+      "bytes": 4705,
+      "sha256": "04c1415d8efd2ee22d39b384e86f0aaf83683f5f5eea35859a2030df8b7d2682",
+      "lines": 122
+    },
+    {
+      "path": "website/src/components/ui/ProjectCard.tsx",
+      "bytes": 3487,
+      "sha256": "16d40862e2b34993d99d1c67b2bc3146d9e4ba30ed77dbc228adc565ebb4bc08",
+      "lines": 107
+    },
+    {
+      "path": "website/src/components/ui/ProjectFrame.tsx",
+      "bytes": 4983,
+      "sha256": "277d713960e59765590f5cae7531d6749af437a85b9feb3f88aefac904fd4726",
+      "lines": 161
+    },
+    {
+      "path": "website/src/components/ui/ReviewCard.tsx",
+      "bytes": 4039,
+      "sha256": "a509d9a59745f7520d657d8b5b2963e425c74ea4560edda2e906d7c3611fd51a",
+      "lines": 120
+    },
+    {
+      "path": "website/src/components/ui/ScrollProgress.tsx",
+      "bytes": 1734,
+      "sha256": "0b62b18bf45f13a781535b6e162a23738fe305bb493a59425bd477cc05c0a8ab",
+      "lines": 49
+    },
+    {
+      "path": "website/src/components/ui/Section.tsx",
+      "bytes": 747,
+      "sha256": "aa7538e721a6e3fcd70bc74cd4e15f041eca2945b432cd68bc520816ff967ab4",
+      "lines": 32
+    },
+    {
+      "path": "website/src/components/ui/SectionHeader.tsx",
+      "bytes": 1873,
+      "sha256": "aa6a646ba9e7009e05196901bc472cb0616f26e1d77c92780b47da9739afb4ed",
+      "lines": 62
+    },
+    {
+      "path": "website/src/components/ui/ServiceCard.tsx",
+      "bytes": 2534,
+      "sha256": "ea0173d0f39ae6eaa2034e778442405525fb773eb471826d85527d7b74074af0",
+      "lines": 74
+    },
+    {
+      "path": "website/src/components/ui/Skeleton.tsx",
+      "bytes": 200,
+      "sha256": "edd65ffac50127dbec2fc150ed92d5b0a99dba73aaea118e624f2fb0a2b82719",
+      "lines": 5
+    },
+    {
+      "path": "website/src/components/ui/SocialLinks.tsx",
+      "bytes": 3720,
+      "sha256": "eb840efd323ceb777cf57b6c7f7faf0bc4715b65d1ac84965b232a398ef15f5d",
+      "lines": 51
+    },
+    {
+      "path": "website/src/components/ui/States.tsx",
+      "bytes": 1658,
+      "sha256": "2ff04d922d4b5292b14e252923aca133838a705182c0a285093ae4abdcc871c4",
+      "lines": 69
+    },
+    {
+      "path": "website/src/components/ui/Tabs.tsx",
+      "bytes": 3979,
+      "sha256": "0ecb8c48b6e824fe92ca068e538f6fbd13ccd13826b12897493996704ff9cd96",
+      "lines": 130
+    },
+    {
+      "path": "website/src/components/ui/TeamCard.tsx",
+      "bytes": 3867,
+      "sha256": "e238ff948c71cfc74b4cfd2b299908d9d058e7dfde931f16fc9dfd9382a8b07c",
+      "lines": 111
+    },
+    {
+      "path": "website/src/components/ui/ThemeToggle.tsx",
+      "bytes": 2315,
+      "sha256": "8796d75d4b2175145464cdf804bd3fead76c2e5bf41983212c05ea36df88748a",
+      "lines": 63
+    },
+    {
+      "path": "website/src/components/ui/Toast.tsx",
+      "bytes": 3425,
+      "sha256": "7ed1815ca70dde6b1eed50b8c13ecadf6256b323d4382a81461254e1b52373cf",
+      "lines": 110
+    },
+    {
+      "path": "website/src/components/ui/bottom-navigation.module.css",
+      "bytes": 15666,
+      "sha256": "abe08f007c1e544aef3d7c7d1d4287792a655aabe809a94a7aa0068db771a996",
+      "lines": 254
+    },
+    {
+      "path": "website/src/components/ui/footer.module.css",
+      "bytes": 6058,
+      "sha256": "5e1621c60da81fbe9be0c2ca5606e8c2c8d99a73138cc1b8beee771d60e58683",
+      "lines": 334
+    },
+    {
+      "path": "website/src/components/ui/gradient-card.tsx",
+      "bytes": 5862,
+      "sha256": "1c8adbaaa639651298ef1e1dcb8f0e7d6a17ed8eb0ee3704d0032fd526214077",
+      "lines": 131
+    },
+    {
+      "path": "website/src/components/ui/navigation.module.css",
+      "bytes": 2255,
+      "sha256": "dfdd746157c4f5f97ccb1c34821087c93f185c5b6167f368184df68a436f467a",
+      "lines": 24
+    },
+    {
+      "path": "website/src/components/ui/reference-ui.test.ts",
+      "bytes": 3110,
+      "sha256": "e2e768406b592094dcbcedd391ee4e686d1cc977253ee02847927fc2df2d856c",
+      "lines": 55
+    },
+    {
+      "path": "website/src/components/ui/service-accent.test.ts",
+      "bytes": 699,
+      "sha256": "d040fd48878a784231353d79109771ece067629ffb3f8c93e6a2a67c5b6462fa",
+      "lines": 20
+    },
+    {
+      "path": "website/src/components/ui/service-accent.ts",
+      "bytes": 634,
+      "sha256": "7c35ce8ea7d018284522eb36c5aebc3e52f21e9a968bd0df5b4c9749df9d9479",
+      "lines": 10
+    },
+    {
+      "path": "website/src/components/ui/social-links.module.css",
+      "bytes": 1666,
+      "sha256": "4c7378a05195148f304e43112e74aadf93371eefe3b3317eb42d71d12f26367f",
+      "lines": 24
+    },
+    {
+      "path": "website/src/components/ui/tubelight-navbar-demo.tsx",
+      "bytes": 664,
+      "sha256": "f99d5bc5e41d7eb8e990e8809d36a90daf72e31ff7fa46782f5780762947017d",
+      "lines": 15
+    },
+    {
+      "path": "website/src/components/ui/tubelight-navbar.tsx",
+      "bytes": 3492,
+      "sha256": "202500eb6d20f1b55a199c5f6b426b049a76a4b8ee8146a3f3801a89d94028f7",
+      "lines": 82
+    },
+    {
+      "path": "website/src/lib/admin/actions.ts",
+      "bytes": 18966,
+      "sha256": "245dd3e467583d48ff0b7a2a43d0feeed0a2a90ca8d6592e96ec07bb8e612f90",
+      "lines": 576
+    },
+    {
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "bytes": 12349,
+      "sha256": "012a63eda05eeec5391ca0a2da5e6f14fc6ae54aab94f4794ad430d205d9a704",
+      "lines": 341
+    },
+    {
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "bytes": 9105,
+      "sha256": "6946bc235420df54213d772b95f7743bf631aca73e557268610f6c41b051fe4b",
+      "lines": 252
+    },
+    {
+      "path": "website/src/lib/admin/builder-labels.ts",
+      "bytes": 469,
+      "sha256": "3a98724cda402751f3bbfe11c76dfbf96e70ef7aef68e79c309eda3c8cc50f47",
+      "lines": 16
+    },
+    {
+      "path": "website/src/lib/admin/crud.ts",
+      "bytes": 4432,
+      "sha256": "6b883ef54bed39d625baebf861f17922dd849fa2796cd12c53771f96569bf1c8",
+      "lines": 122
+    },
+    {
+      "path": "website/src/lib/admin/media-actions.ts",
+      "bytes": 4718,
+      "sha256": "1c286137f1f3975eeeb2cddb94bbbf3dda0765266572f9977977e77dce7d9a83",
+      "lines": 134
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.test.ts",
+      "bytes": 1134,
+      "sha256": "d2c4fb4fc192a991b1aa934017cedb8ca3069a8fc292d455fc84153a9fa5620d",
+      "lines": 32
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.ts",
+      "bytes": 1763,
+      "sha256": "183f8f1dc195a9f30f1d0f5de1893bf3e1f117cead0f04bd68b5e214769ab471",
+      "lines": 65
+    },
+    {
+      "path": "website/src/lib/admin/resources.test.ts",
+      "bytes": 2661,
+      "sha256": "3db9463ffd9f76ddbea244afa077c747e7a96d2659fab6965448097b357abe4f",
+      "lines": 75
+    },
+    {
+      "path": "website/src/lib/admin/resources.ts",
+      "bytes": 37667,
+      "sha256": "0f3c9ca6bc02e8e6e73a0bbbd6ce5d085378698d5706303710992214bdfc6c6c",
+      "lines": 1009
+    },
+    {
+      "path": "website/src/lib/admin/settings-actions.ts",
+      "bytes": 3402,
+      "sha256": "0bc169c934f6a019045ace0744efcf6665b41fe9b52b21af9b7e4723cfd8932b",
+      "lines": 107
+    },
+    {
+      "path": "website/src/lib/admin/user-actions.ts",
+      "bytes": 9396,
+      "sha256": "223caabf7d8cd4764b10c7dbfc88bc6139104275a8bd35300a0a5aa99e9ef702",
+      "lines": 269
+    },
+    {
+      "path": "website/src/lib/agreements/acceptance.ts",
+      "bytes": 6759,
+      "sha256": "1b9176ef81d94183e0b8842d475bf0278f49348e818d7b817828d6c709dfb511",
+      "lines": 177
+    },
+    {
+      "path": "website/src/lib/agreements/data.ts",
+      "bytes": 3085,
+      "sha256": "bc19ba5a6be2356c959c66c12edd532ad45f105f28cce5a677c3d8472a4786c1",
+      "lines": 83
+    },
+    {
+      "path": "website/src/lib/auth/actions.ts",
+      "bytes": 3715,
+      "sha256": "0da51d17d16a76746f5b0e20c24fdc0f5eb70650518dfe9bc5d86f7411fdb3a5",
+      "lines": 107
+    },
+    {
+      "path": "website/src/lib/auth/permissions.test.ts",
+      "bytes": 2597,
+      "sha256": "cf4a31cfaf240afafc2aa960868eab712ebb1b6cd3caf1fa7c4c9df020fe074e",
+      "lines": 60
+    },
+    {
+      "path": "website/src/lib/auth/permissions.ts",
+      "bytes": 1777,
+      "sha256": "27d931bfea8df2e6252c954a3395fd7bb82b9aa18dd31fac60aaf9c862a8640c",
+      "lines": 70
+    },
+    {
+      "path": "website/src/lib/auth/recovery.ts",
+      "bytes": 233,
+      "sha256": "2633c5fff9c4874543256315ac7dcf064bdb8f47846dd852f74345643d28a153",
+      "lines": 9
+    },
+    {
+      "path": "website/src/lib/auth/session.ts",
+      "bytes": 2741,
+      "sha256": "38571992634fd7df23a572e0583a1178906650040260fc1f9000edec9d130a9c",
+      "lines": 86
+    },
+    {
+      "path": "website/src/lib/bottom-navigation.test.ts",
+      "bytes": 1760,
+      "sha256": "3915432e50f5a5706b39c3739cb9e650283ab308a9318d62156a5a4001fc9e0b",
+      "lines": 33
+    },
+    {
+      "path": "website/src/lib/bottom-navigation.ts",
+      "bytes": 810,
+      "sha256": "30e9a3582767f5e24eb2db7c8f4da9c66d790b7caa8bbaf51281cdd085e63dd7",
+      "lines": 18
+    },
+    {
+      "path": "website/src/lib/data/admin-leads.ts",
+      "bytes": 7786,
+      "sha256": "70b87c3aae767a57ddcc1e34181c3f272283a0f60cd41f17dae5dd38544f0a5f",
+      "lines": 226
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.test.ts",
+      "bytes": 2366,
+      "sha256": "908fdea6f2020cc27509b24d83fe3b147ea68923e3a5f3c0706f6eb0b82dc75b",
+      "lines": 53
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.ts",
+      "bytes": 1188,
+      "sha256": "4692b1f6adde50ddebf965d7b9b0c3757735235afe0047d8d5aa0771c60c6c0a",
+      "lines": 38
+    },
+    {
+      "path": "website/src/lib/data/blog-fallback.ts",
+      "bytes": 6711,
+      "sha256": "2eb960e664b9654e2c97e9db0771be38c4a705c490e1fa90cf3f80e0345155a5",
+      "lines": 124
+    },
+    {
+      "path": "website/src/lib/data/blog.ts",
+      "bytes": 9819,
+      "sha256": "fe403566b6fe1c78ccfe19c450f47128be6e9442b1e93adab723218d52db8003",
+      "lines": 278
+    },
+    {
+      "path": "website/src/lib/data/cta.test.ts",
+      "bytes": 1054,
+      "sha256": "2c21ff60271ff69a7f5cd8909e9767a669ccdba679498a0f8e4d8a088afa11b2",
+      "lines": 26
+    },
+    {
+      "path": "website/src/lib/data/cta.ts",
+      "bytes": 1213,
+      "sha256": "2c252b6c20149a57eb6cc2bf349a296297caa4f9176b6a485037c9f625c9c8dc",
+      "lines": 29
+    },
+    {
+      "path": "website/src/lib/data/growth.ts",
+      "bytes": 13989,
+      "sha256": "5baaaadbeb99056b94b765693bcd5239dc25364e6e54d40f2cbea2fcce5029f5",
+      "lines": 439
+    },
+    {
+      "path": "website/src/lib/data/home.ts",
+      "bytes": 5227,
+      "sha256": "aba78e59dcf0836f125ef4c2c3e9d1cf03b1eaa99103b591bbc9d390101f25ec",
+      "lines": 162
+    },
+    {
+      "path": "website/src/lib/data/jsonb.ts",
+      "bytes": 519,
+      "sha256": "22be6dfae14d831ef7f568c71230c4c9273eeb00d7864383d175db7df0b3804d",
+      "lines": 15
+    },
+    {
+      "path": "website/src/lib/data/mappers.test.ts",
+      "bytes": 2688,
+      "sha256": "1aa8d3789ab141f63701e3b228701f1fc64158905df957280a65ccbb52e982c7",
+      "lines": 87
+    },
+    {
+      "path": "website/src/lib/data/mappers.ts",
+      "bytes": 3771,
+      "sha256": "ee539919d04ea286f8c690f12725dd0070a1daa3a4aec850edaf73285c60bcfa",
+      "lines": 160
+    },
+    {
+      "path": "website/src/lib/data/navigation.ts",
+      "bytes": 2093,
+      "sha256": "d41a3b1a848a8a431ffdca6ed9f58320ab15c234652cf56277e6e64a4f3e7757",
+      "lines": 60
+    },
+    {
+      "path": "website/src/lib/data/projects.test.ts",
+      "bytes": 2582,
+      "sha256": "9c065b28cd152601fde21ed428f838563b6a7a9119eb0353ee6e62445d75cfe8",
+      "lines": 70
+    },
+    {
+      "path": "website/src/lib/data/projects.ts",
+      "bytes": 8492,
+      "sha256": "3c40f2422a4ebbd84ea6475e324d80ada9236aa0b5095795c9c8cc967d200c93",
+      "lines": 233
+    },
+    {
+      "path": "website/src/lib/data/sections.ts",
+      "bytes": 3819,
+      "sha256": "52dc210d0a6f6c456954f3eac6e416bd8074526325f04c82b9ec849e99538c21",
+      "lines": 115
+    },
+    {
+      "path": "website/src/lib/data/services-fallback.ts",
+      "bytes": 44197,
+      "sha256": "3ccbece31898cf651a794562c3e633b7436962cb20f0050e8fbdcdcb7bc104d2",
+      "lines": 916
+    },
+    {
+      "path": "website/src/lib/data/services.test.ts",
+      "bytes": 2551,
+      "sha256": "4bc6a1d4a902edeb105ba703f3b4a303baeba50e5c4a1acbb07f5b22baa90535",
+      "lines": 64
+    },
+    {
+      "path": "website/src/lib/data/services.ts",
+      "bytes": 9301,
+      "sha256": "6b459bd0033626f48bd66c6a59dd0197b47dbac2ca59b68344a9a7502a2f9d4e",
+      "lines": 283
+    },
+    {
+      "path": "website/src/lib/data/settings.ts",
+      "bytes": 2735,
+      "sha256": "764ed4b5f69913f8bcc04e395ef6c8c6c5bbab14ff47179901e49e93d8790740",
+      "lines": 78
+    },
+    {
+      "path": "website/src/lib/data/team.ts",
+      "bytes": 1103,
+      "sha256": "7e427612d8fce07cff9d7edaa639980eb02419acfd47c07964bfee790a499b39",
+      "lines": 30
+    },
+    {
+      "path": "website/src/lib/email/email.ts",
+      "bytes": 3571,
+      "sha256": "395abdd4b794e9849b718b9455d51341971085bf9215e575d0bfa8338a701837",
+      "lines": 107
+    },
+    {
+      "path": "website/src/lib/email/escape.ts",
+      "bytes": 627,
+      "sha256": "d6c756834e3e69faacf369e52321ba79c533c889c31f16ee28a841749e3074a4",
+      "lines": 20
+    },
+    {
+      "path": "website/src/lib/email/templates.tsx",
+      "bytes": 5402,
+      "sha256": "0cef22c44621a181f9e075c2f434365128a44a5b7cb0a21ea6638243ad048e8c",
+      "lines": 107
+    },
+    {
+      "path": "website/src/lib/env.server.ts",
+      "bytes": 565,
+      "sha256": "1d0692b2567b80d35922d76cf1e5eb4b528071a1eaf91eee3a578b418f0b9142",
+      "lines": 18
+    },
+    {
+      "path": "website/src/lib/env.test.ts",
+      "bytes": 1976,
+      "sha256": "2336d74c011980595678c55b0b874e6f5c655bc85549c8fecf995bb82266a3c1",
+      "lines": 60
+    },
+    {
+      "path": "website/src/lib/env.ts",
+      "bytes": 2118,
+      "sha256": "630daec5b6afab5e7ce6bc57d01dc087423505df998a9cc3737db9b52a5a2a35",
+      "lines": 64
+    },
+    {
+      "path": "website/src/lib/leads/actions.ts",
+      "bytes": 13180,
+      "sha256": "68e6bf30e842004590fa4c53964c7a0d58300cb7837164a5603bcbf04fb66e4a",
+      "lines": 357
+    },
+    {
+      "path": "website/src/lib/leads/admin-actions.ts",
+      "bytes": 3152,
+      "sha256": "4a941bc00df4bf7fa38dabc2c86abd14dfaa2c1a6f50b1df94c72f2128d61ea6",
+      "lines": 94
+    },
+    {
+      "path": "website/src/lib/navigation.ts",
+      "bytes": 1394,
+      "sha256": "c23a84cf3a78400a161407c707bd58e6f3bd5b6096c80ba7d6e2302c31111707",
+      "lines": 45
+    },
+    {
+      "path": "website/src/lib/pdf/simple-pdf.ts",
+      "bytes": 8273,
+      "sha256": "44c42d3cc157312cd050d1595b378fde640131e758663096af508ce7fbce5e9e",
+      "lines": 233
+    },
+    {
+      "path": "website/src/lib/portal/actions.ts",
+      "bytes": 19938,
+      "sha256": "fae930da1c91960be7496b2dbbeb5aad347ad5aba8f0e1b82168b52d435bd67f",
+      "lines": 590
+    },
+    {
+      "path": "website/src/lib/preview-security.test.ts",
+      "bytes": 1467,
+      "sha256": "255f08ad1004205192a4e76f1dc00957654614c7db0a1fdff664f9034138f843",
+      "lines": 32
+    },
+    {
+      "path": "website/src/lib/rate-limit.ts",
+      "bytes": 1260,
+      "sha256": "281200b2c5d3fe135d79edcd28a06dd8cabacd69d3d00adcca673914781e413a",
+      "lines": 35
+    },
+    {
+      "path": "website/src/lib/seo/jsonld.test.ts",
+      "bytes": 2823,
+      "sha256": "c502cadc746b150cae3216bff5c21a60f117710ef8411677c56ebe75394b9bf5",
+      "lines": 68
+    },
+    {
+      "path": "website/src/lib/seo/jsonld.ts",
+      "bytes": 11130,
+      "sha256": "164e240a5801087ce1ac8baa8de97adbf70965ec0e8fb192fda9920f7534d4ca",
+      "lines": 380
+    },
+    {
+      "path": "website/src/lib/seo/metadata.test.ts",
+      "bytes": 2449,
+      "sha256": "7d207cd6d780fb262cb26fb887e7f99560d2c0110779258b957f51ae915ef061",
+      "lines": 56
+    },
+    {
+      "path": "website/src/lib/seo/metadata.ts",
+      "bytes": 4777,
+      "sha256": "9e0ebe0a85d15655a48b5fb2f027bc3d5502ef7a569b45061a2fae2683ed3b3f",
+      "lines": 142
+    },
+    {
+      "path": "website/src/lib/seo/overrides.ts",
+      "bytes": 1295,
+      "sha256": "83d05fedd764bb52a345f27de309fe8ebf5d88db182128bf94d995471a075665",
+      "lines": 38
+    },
+    {
+      "path": "website/src/lib/seo/site.ts",
+      "bytes": 2789,
+      "sha256": "13d1ac1d695d504fa5cf9fc50d32a3e97afabf512e2641f5f6ede56dc00c1c71",
+      "lines": 71
+    },
+    {
+      "path": "website/src/lib/supabase/admin.ts",
+      "bytes": 1422,
+      "sha256": "9c5e7eb697e793386852a0e741a3ac7ea8a250f1142cac44fe88586eb7f09968",
+      "lines": 39
+    },
+    {
+      "path": "website/src/lib/supabase/client.ts",
+      "bytes": 530,
+      "sha256": "a6435bc3b36ee9b11dbb4cac8da811ad499eb835f3ef1dab2730245ffd62402d",
+      "lines": 15
+    },
+    {
+      "path": "website/src/lib/supabase/public.ts",
+      "bytes": 651,
+      "sha256": "0a1a425bff91fcd7cb1e89271d1bd775d7e4bfe248fd9369bdc470660fda2fc1",
+      "lines": 19
+    },
+    {
+      "path": "website/src/lib/supabase/server.ts",
+      "bytes": 1898,
+      "sha256": "c84b505db621a18d9a89be1568745c6656e603978ba61e21980bdb58bd860541",
+      "lines": 58
+    },
+    {
+      "path": "website/src/lib/utils.ts",
+      "bytes": 112,
+      "sha256": "01efd17908f47bef207d1d3d4bf26531f559162774b428b52955f43c57e08824",
+      "lines": 2
+    },
+    {
+      "path": "website/src/lib/utils/cn.test.ts",
+      "bytes": 463,
+      "sha256": "769fb8cca7312adf3b5d42d99f4a168ee4dcabde4dcb42eb0a973e31f0ffc609",
+      "lines": 16
+    },
+    {
+      "path": "website/src/lib/utils/cn.ts",
+      "bytes": 270,
+      "sha256": "09895817b53e2113b4d1abb68d2b1baaf1c91f6768a0fc1977c05b8e7b3e2c44",
+      "lines": 7
+    },
+    {
+      "path": "website/src/lib/validation/auth.test.ts",
+      "bytes": 1860,
+      "sha256": "6dead56e201992ad8f289e3b3aff5eade9a5c9f104baeb35c5722a7f4aa646db",
+      "lines": 53
+    },
+    {
+      "path": "website/src/lib/validation/auth.ts",
+      "bytes": 948,
+      "sha256": "6d538f0d089e0f65f1dbaf0f2f6e763219ea302b8464ee373764d074dd9b9d29",
+      "lines": 28
+    },
+    {
+      "path": "website/src/lib/validation/leads.test.ts",
+      "bytes": 4062,
+      "sha256": "3854281eb97aa1ba3e7e8988be04c7707b8824e6093eae058af6f5f9d3cedfaa",
+      "lines": 127
+    },
+    {
+      "path": "website/src/lib/validation/leads.ts",
+      "bytes": 4385,
+      "sha256": "79605f01f8530df0fbcbb99ba2020690ad2faded10c21a05f50ce54fd312c47f",
+      "lines": 123
+    },
+    {
+      "path": "website/src/lib/validation/portal.test.ts",
+      "bytes": 3716,
+      "sha256": "874c4dbc2f9887238653d307de79a590d6b908138f3c0c7cba991a31643e0322",
+      "lines": 115
+    },
+    {
+      "path": "website/src/lib/validation/portal.ts",
+      "bytes": 4624,
+      "sha256": "04ae5cd85dfab69c19aedabc6785700dbc5a64b2fc91bc08a7f3e9982d6a5eb0",
+      "lines": 148
+    },
+    {
+      "path": "website/src/lib/validation/sections.test.ts",
+      "bytes": 1523,
+      "sha256": "b29373f16519a36f7b28c972fbc8c31bb9a4796735e51d7f8ed22891020747ef",
+      "lines": 36
+    },
+    {
+      "path": "website/src/lib/validation/sections.ts",
+      "bytes": 1165,
+      "sha256": "16ef728b17f29da85a97475ee9caa8689f16a3286f2de6ae000a26599bfdc003",
+      "lines": 45
+    },
+    {
+      "path": "website/src/proxy.ts",
+      "bytes": 4859,
+      "sha256": "bd464545b853a25c4445ad1c61b484fab532c3126e83a6279f14edf990425e71",
+      "lines": 134
+    },
+    {
+      "path": "website/src/types/database.test.ts",
+      "bytes": 1592,
+      "sha256": "1b8bb8729792a267afe576aceae6a1bc9b50121c6e9b37947ffc8a873fcb9473",
+      "lines": 39
+    },
+    {
+      "path": "website/src/types/database.ts",
+      "bytes": 60839,
+      "sha256": "89ea09d9b7d40d65c4b4e50d7d857449809b6536b6fcae7408eadedcb790bb33",
+      "lines": 1968
+    },
+    {
+      "path": "website/supabase/email-templates/confirmation.html",
+      "bytes": 1309,
+      "sha256": "2794cf45224a81d880d5f20ad8a00feb8206f3df923f0417fc3f791a3f9a1a47",
+      "lines": 40
+    },
+    {
+      "path": "website/supabase/email-templates/invite.html",
+      "bytes": 1116,
+      "sha256": "1df5fec65a6a1c11f4201621a1f4bd41869caf10a29eff0491f1616503834352",
+      "lines": 37
+    },
+    {
+      "path": "website/supabase/email-templates/magic-link.html",
+      "bytes": 1123,
+      "sha256": "5507e8dc25981d8a2547c54d43ba9a7f8ad66098e4ba61ff81301ae63e9f535e",
+      "lines": 37
+    },
+    {
+      "path": "website/supabase/email-templates/recovery.html",
+      "bytes": 1348,
+      "sha256": "c1db86d39f11dd1e41e1111818f9d93e5e4c405e1da07c54826aa640c7ef0b04",
+      "lines": 41
+    },
+    {
+      "path": "website/supabase/migrations/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": null
+    },
+    {
+      "path": "website/supabase/migrations/0001_roles_and_profiles.sql",
+      "bytes": 5895,
+      "sha256": "81fc31b124169a419567e9ac5519fcea7d7591681a91c85348f1e2cdae7858f4",
+      "lines": 136
+    },
+    {
+      "path": "website/supabase/migrations/0002_site_config.sql",
+      "bytes": 8193,
+      "sha256": "b4f70e4f64483faa04dacde762f91fcf0b457e86e1f374d171e50295decaea5b",
+      "lines": 186
+    },
+    {
+      "path": "website/supabase/migrations/0003_services.sql",
+      "bytes": 3502,
+      "sha256": "82ef1e06609e6ba0b2b7986fc057dcefb6be40a20eca74af0e3551e830287818",
+      "lines": 87
+    },
+    {
+      "path": "website/supabase/migrations/0004_clients_projects.sql",
+      "bytes": 6173,
+      "sha256": "85a3ab049e82d2a2fd5a5c172528ea6441efe184094ac518aba21deacb72b10a",
+      "lines": 150
+    },
+    {
+      "path": "website/supabase/migrations/0005_team_testimonials.sql",
+      "bytes": 3965,
+      "sha256": "1ddfd1f6a083d7a277ecfdcb91d07db87c53b03eb1a049a0abd544da07458a40",
+      "lines": 91
+    },
+    {
+      "path": "website/supabase/migrations/0006_blog.sql",
+      "bytes": 4863,
+      "sha256": "dfb3312e0915a12b026e1dc0600ac0632dc87e48bf572a4b7c70cb203bf5a69e",
+      "lines": 120
+    },
+    {
+      "path": "website/supabase/migrations/0007_leads_ops_audit.sql",
+      "bytes": 12140,
+      "sha256": "af42313561153130a9a47fa2e6736864d1d610a1c74c8cbadab0b7e8eeb8c19e",
+      "lines": 278
+    },
+    {
+      "path": "website/supabase/migrations/0008_storage.sql",
+      "bytes": 3391,
+      "sha256": "f10f79544ea3055201ff8e7ea0d353f8f95616833f071d718b8875aa98ec9710",
+      "lines": 65
+    },
+    {
+      "path": "website/supabase/migrations/0009_lead_attachments.sql",
+      "bytes": 1365,
+      "sha256": "b8ca817f048018b5fe8cc4cefad626cb47e5c7ce24a0dae17e4991990875bc48",
+      "lines": 34
+    },
+    {
+      "path": "website/supabase/migrations/0010_admin_cms.sql",
+      "bytes": 6899,
+      "sha256": "db711e579d2970867bec28c4ec3157c45467c6a33c2e5f6466b809b12f48f6cf",
+      "lines": 148
+    },
+    {
+      "path": "website/supabase/migrations/0011_client_portal_and_reviews.sql",
+      "bytes": 7897,
+      "sha256": "7902d9f493614d069e44307d2de0b34e532eec82c2757b1c5ae39e65c65f0af8",
+      "lines": 194
+    },
+    {
+      "path": "website/supabase/migrations/0012_portal_auth_and_admin_security.sql",
+      "bytes": 7677,
+      "sha256": "25fdf0cdf1937fd27216a713e641eebdbde9f04fbd470d8dc268a365cbe05519",
+      "lines": 190
+    },
+    {
+      "path": "website/supabase/migrations/0013_admin_persistence_repair.sql",
+      "bytes": 2432,
+      "sha256": "1557831967743da70f021413637b24822e83f330ec646a4fc75bf1a41f510e96",
+      "lines": 75
+    },
+    {
+      "path": "website/supabase/migrations/0014_portal_performance_indexes.sql",
+      "bytes": 173,
+      "sha256": "ec0525d0bedd30dbe06e0e11f163421754a11b9d7fb41b737251c25fcb69fd79",
+      "lines": 7
+    },
+    {
+      "path": "website/supabase/migrations/0015_admin_mutation_resilience.sql",
+      "bytes": 2807,
+      "sha256": "1ab4369ad4ccc078f09b669c7cbb906e4745a2118135cd86d62e8e0f6ad86355",
+      "lines": 94
+    },
+    {
+      "path": "website/supabase/migrations/0016_offers_updates_agreements.sql",
+      "bytes": 38517,
+      "sha256": "c6143a6ce8661b497209fa458db13487d854b70c19c9e1c813d721f9323811c5",
+      "lines": 756
+    },
+    {
+      "path": "website/supabase/seed/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": null
+    },
+    {
+      "path": "website/supabase/seed/admin-username-template.sql",
+      "bytes": 712,
+      "sha256": "6eebc4eb7581f9074840b7b1865946c1c34387b7e0b765e0663c0b79efd1b2b4",
+      "lines": 23
+    },
+    {
+      "path": "website/supabase/seed/demo-seed.sql",
+      "bytes": 3544,
+      "sha256": "f25244bf7c213acced433afa3db72c6b1c2cea3de54e68e266f8cce8978c394b",
+      "lines": 89
+    },
+    {
+      "path": "website/supabase/tests/rls-checks.sql",
+      "bytes": 6359,
+      "sha256": "f8da5fe7ac25ba1290cc64cbad0c3397a7e234e7fd80319a8154afd9bf3e31b0",
+      "lines": 90
+    },
+    {
+      "path": "website/tsconfig.json",
+      "bytes": 670,
+      "sha256": "5c51df4c59f4510d8c7dadf07a5c32132228826a3b331da5e286207b4df7ef9c",
+      "lines": 34
+    },
+    {
+      "path": "website/vitest.config.ts",
+      "bytes": 297,
+      "sha256": "3edcd5d809083840b7696f7bd020901b140bbe5771c1e35cd1d06bbb132586c8",
+      "lines": 14
+    }
+  ],
+  "modules": [
+    {
+      "path": "website/src/app/(public)/about/page.tsx",
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/ui/SectionHeader",
+        "@/components/site/GallerySection",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site",
+        "@/lib/data/sections"
+      ],
+      "exports": [
+        "generateMetadata",
+        "AboutPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/account/page.tsx",
+      "imports": [
+        "next",
+        "next/image",
+        "next/navigation",
+        "lucide-react",
+        "@/components/portal/AccountForms",
+        "@/components/portal/AgreementsHistory",
+        "@/lib/agreements/data",
+        "@/lib/supabase/admin",
+        "@/components/ui/Badge",
+        "@/components/ui/Button",
+        "@/components/ui/States",
+        "@/lib/portal/actions",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/supabase/server"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "ClientAccountPage"
+      ],
+      "tables": [
+        "agreement_acceptances",
+        "client_portal_documents",
+        "clients",
+        "contact_submissions",
+        "profiles",
+        "projects",
+        "quote_requests",
+        "testimonials",
+        "user_addresses"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/ai-methods/page.tsx",
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/States",
+        "@/lib/data/ai-methods",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "AiMethodsPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/blog/[slug]/page.tsx",
+      "imports": [
+        "next",
+        "next/image",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Badge",
+        "@/components/ui/CTA",
+        "@/components/site/Markdown",
+        "@/components/site/Reveal",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "revalidate",
+        "dynamicParams",
+        "generateStaticParams",
+        "generateMetadata",
+        "ArticlePage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/blog/page.tsx",
+      "imports": [
+        "next",
+        "next/image",
+        "next/link",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Badge",
+        "@/components/ui/CTA",
+        "@/components/ui/States",
+        "@/components/site/Reveal",
+        "@/lib/utils/cn",
+        "@/lib/seo/metadata",
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "BlogIndexPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/contact/page.tsx",
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Button",
+        "@/components/site/LeadForms",
+        "@/lib/seo/metadata",
+        "@/lib/data/settings",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld"
+      ],
+      "exports": [
+        "dynamic",
+        "generateMetadata",
+        "ContactPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/forgot-password/page.tsx",
+      "imports": [
+        "next",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms"
+      ],
+      "exports": [
+        "metadata",
+        "ForgotPasswordPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/layout.tsx",
+      "imports": [
+        "react",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld",
+        "@/components/ui/MarketingHeader",
+        "@/components/ui/Footer",
+        "@/lib/data/settings",
+        "@/lib/data/navigation",
+        "@/lib/data/growth",
+        "@/components/site/AnnouncementBar",
+        "@/components/site/OfferPopup",
+        "@/components/site/PublicSiteFrame"
+      ],
+      "exports": [
+        "PublicLayout"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/login/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/portal/LoginExperience",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/validation/portal"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "ClientLoginPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/page.tsx",
+      "imports": [
+        "next",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site",
+        "@/lib/data/home",
+        "@/lib/data/settings",
+        "@/components/design-preview/HomeExperience",
+        "@/lib/data/growth"
+      ],
+      "exports": [
+        "revalidate",
+        "dynamic",
+        "generateMetadata",
+        "HomePage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/privacy/page.tsx",
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/lib/seo/metadata"
+      ],
+      "exports": [
+        "metadata",
+        "PrivacyPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/projects/[slug]/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Badge",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/MediaFrame",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/projects",
+        "@/lib/data/services"
+      ],
+      "exports": [
+        "revalidate",
+        "dynamicParams",
+        "generateStaticParams",
+        "generateMetadata",
+        "CaseStudyPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/projects/page.tsx",
+      "imports": [
+        "next",
+        "@/components/site/PageHero",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/CTA",
+        "@/components/ui/Button",
+        "@/components/ui/States",
+        "@/components/site/Reveal",
+        "@/components/site/ProjectFiltersBar",
+        "lucide-react",
+        "@/lib/seo/metadata",
+        "@/lib/data/projects"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "ProjectsPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/request-quote/page.tsx",
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/SectionHeader",
+        "@/components/site/LeadForms",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "generateMetadata",
+        "dynamic",
+        "RequestQuotePage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/reset-password/page.tsx",
+      "imports": [
+        "next",
+        "next/headers",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/recovery"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "ResetPasswordPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/reviews/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/ReviewCard",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/env",
+        "@/lib/supabase/server"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "ReviewsPage"
+      ],
+      "tables": [
+        "testimonials"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/service-agreement/page.tsx",
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/CTA",
+        "@/components/site/Markdown",
+        "@/lib/agreements/data",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "ServiceAgreementPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/services/[slug]/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Accordion",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/ServiceCard",
+        "@/components/site/Reveal",
+        "@/components/site/icons",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/home",
+        "@/lib/data/mappers",
+        "@/lib/data/services"
+      ],
+      "exports": [
+        "revalidate",
+        "dynamicParams",
+        "generateStaticParams",
+        "generateMetadata",
+        "ServiceDetailPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/services/page.tsx",
+      "imports": [
+        "next",
+        "@/components/site/PageHero",
+        "@/components/ui/ServiceCard",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/site/icons",
+        "@/lib/seo/metadata",
+        "@/lib/data/services"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "ServicesPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/signup/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/session",
+        "@/lib/env"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "ClientSignupPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/team/page.tsx",
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/States",
+        "@/components/ui/TeamCard",
+        "@/components/site/Reveal",
+        "@/components/site/GallerySection",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/data/team",
+        "@/lib/data/sections"
+      ],
+      "exports": [
+        "revalidate",
+        "generateMetadata",
+        "TeamPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/terms/page.tsx",
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/lib/seo/metadata"
+      ],
+      "exports": [
+        "metadata",
+        "TermsPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/(public)/update-password/page.tsx",
+      "imports": [
+        "next",
+        "next/headers",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/recovery"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "UpdatePasswordPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/accent-surfaces.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/action-surfaces.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/agreements/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/ui/Badge",
+        "@/components/admin/AdminSubmitButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/agreements/data",
+        "@/lib/admin/agreement-actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "AgreementsPage"
+      ],
+      "tables": [
+        "agreement_acceptances",
+        "agreement_versions",
+        "agreements"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/audit/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/States",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "AuditPage"
+      ],
+      "tables": [
+        "audit_logs"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/brand/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/admin/BrandSettingsForm",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "BrandSettingsPage"
+      ],
+      "tables": [
+        "site_settings"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/[id]/page.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/ResourceForm",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "@/lib/env"
+      ],
+      "exports": [
+        "dynamic",
+        "ResourceEditPage"
+      ],
+      "tables": [
+        "blog_categories"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/new/page.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/admin/ResourceForm",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions"
+      ],
+      "exports": [
+        "dynamic",
+        "ResourceNewPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/c/[resource]/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/admin/ResourceList",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions"
+      ],
+      "exports": [
+        "dynamic",
+        "generateMetadata",
+        "ResourceListPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/home/[id]/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "zod",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/ui/Badge",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/builder-actions",
+        "@/lib/admin/builder-labels"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "SectionEditPage"
+      ],
+      "tables": [
+        "page_sections"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/home/new/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/admin/builder-actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "NewSectionPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/home/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/builder-actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "HomeBuilderPage"
+      ],
+      "tables": [
+        "page_sections"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/layout.tsx",
+      "imports": [
+        "next",
+        "react",
+        "next/navigation",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/auth/permissions",
+        "@/components/admin/AdminShell",
+        "@/components/ui/Toast",
+        "@/components/admin/admin-surface.module.css",
+        "@/components/ui/ThemeToggle"
+      ],
+      "exports": [
+        "metadata",
+        "AdminLayout"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/leads/[kind]/[id]/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/LeadEditForm",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/admin-leads"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "LeadDetailPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/leads/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "@/lib/utils/cn",
+        "@/components/ui/Badge",
+        "@/components/ui/States",
+        "@/components/ui/Input",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/admin-leads",
+        "@/lib/validation/leads"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "LeadsInboxPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/loading.tsx",
+      "imports": [],
+      "exports": [
+        "Loading"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/login/login-form.tsx",
+      "imports": [
+        "react",
+        "@/lib/auth/actions",
+        "lucide-react"
+      ],
+      "exports": [
+        "LoginForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/login/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/app/ajadmin/login/login-form",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/validation/auth",
+        "@/lib/seo/site",
+        "@/lib/auth/permissions"
+      ],
+      "exports": [
+        "metadata",
+        "AdminLoginPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/media/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/ui/States",
+        "@/components/admin/ConfirmButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/media-actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "MediaLibraryPage"
+      ],
+      "tables": [
+        "media_assets"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/page.tsx",
+      "imports": [
+        "next",
+        "next/link",
+        "lucide-react",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/auth/actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "AdminDashboardPage"
+      ],
+      "tables": [
+        "quote_requests"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/ajadmin/users/page.tsx",
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/ui/Badge",
+        "@/components/admin/AdminSubmitButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/user-actions"
+      ],
+      "exports": [
+        "dynamic",
+        "metadata",
+        "UsersPage"
+      ],
+      "tables": [
+        "admin_usernames",
+        "profiles"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/auth/callback/route.ts",
+      "imports": [
+        "next/server",
+        "@supabase/ssr",
+        "@supabase/supabase-js",
+        "@/lib/env",
+        "@/lib/validation/portal",
+        "@/lib/auth/recovery"
+      ],
+      "exports": [
+        "GET"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/auth/confirm/route.ts",
+      "imports": [
+        "next/server",
+        "@supabase/ssr",
+        "@supabase/supabase-js",
+        "@/lib/env",
+        "@/lib/validation/portal",
+        "@/lib/auth/recovery"
+      ],
+      "exports": [
+        "GET"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/blog/rss.xml/route.ts",
+      "imports": [
+        "@/lib/env",
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "revalidate",
+        "GET"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/design-preview/page.tsx",
+      "imports": [
+        "next",
+        "@/components/ui/MarketingHeader",
+        "@/components/ui/Footer",
+        "@/lib/data/home",
+        "@/lib/data/settings",
+        "@/lib/data/navigation",
+        "@/lib/data/growth",
+        "@/components/design-preview/HomeExperience",
+        "@/components/design-preview/reference.module.css"
+      ],
+      "exports": [
+        "metadata",
+        "DesignPreviewPage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/error.tsx",
+      "imports": [],
+      "exports": [
+        "RouteError"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/global-error.tsx",
+      "imports": [],
+      "exports": [
+        "GlobalError"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/globals.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/icon.tsx",
+      "imports": [
+        "next/og"
+      ],
+      "exports": [
+        "size",
+        "contentType",
+        "Icon"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/layout.tsx",
+      "imports": [
+        "next",
+        "react",
+        "geist/font/sans",
+        "@/lib/seo/metadata",
+        "@/components/site/RevealObserver",
+        "@/components/motion/SceneMotion",
+        "@/components/motion/SurfaceMotion"
+      ],
+      "exports": [
+        "metadata",
+        "RootLayout"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/not-found.tsx",
+      "imports": [
+        "next/link"
+      ],
+      "exports": [
+        "NotFound"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/opengraph-image.tsx",
+      "imports": [
+        "next/og"
+      ],
+      "exports": [
+        "alt",
+        "size",
+        "contentType",
+        "OpengraphImage"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/robots.ts",
+      "imports": [
+        "next",
+        "@/lib/env"
+      ],
+      "exports": [
+        "robots"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/sitemap.ts",
+      "imports": [
+        "next",
+        "@/lib/env",
+        "@/lib/data/services",
+        "@/lib/data/projects",
+        "@/lib/data/blog",
+        "@/lib/data/growth"
+      ],
+      "exports": [
+        "revalidate",
+        "sitemap"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/app/surface-system.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/AdminNav.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "AdminNav"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/AdminShell.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "react",
+        "lucide-react",
+        "@/components/admin/AdminNav",
+        "@/components/ui/Drawer",
+        "@/components/ui/IconButton",
+        "@/components/ui/ThemeToggle",
+        "./admin-surface.module.css",
+        "@/lib/auth/actions"
+      ],
+      "exports": [
+        "AdminShell"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/AdminSubmitButton.tsx",
+      "imports": [
+        "react-dom",
+        "@/components/ui/Button"
+      ],
+      "exports": [
+        "AdminSubmitButton"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/BrandSettingsForm.tsx",
+      "imports": [
+        "react",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/ui/Toast",
+        "@/lib/admin/settings-actions"
+      ],
+      "exports": [
+        "BrandSettingsValues",
+        "BrandSettingsForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/ConfirmButton.tsx",
+      "imports": [
+        "react",
+        "react-dom",
+        "@/components/ui/Dialog",
+        "@/components/ui/Button"
+      ],
+      "exports": [
+        "ConfirmButton"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/LeadEditForm.tsx",
+      "imports": [
+        "react",
+        "@/components/ui/Input",
+        "@/components/ui/Button",
+        "@/lib/leads/admin-actions",
+        "@/lib/validation/leads"
+      ],
+      "exports": [
+        "LeadEditForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/ResourceForm.tsx",
+      "imports": [
+        "react",
+        "react-dom",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Input",
+        "@/components/ui/Button",
+        "@/components/admin/ConfirmButton",
+        "@/components/ui/Toast",
+        "@/lib/admin/actions",
+        "@/lib/admin/resources"
+      ],
+      "exports": [
+        "ResourceForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/ResourceList.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/ui/States",
+        "@/components/ui/Input",
+        "@/components/admin/ConfirmButton",
+        "@/lib/admin/actions",
+        "@/lib/admin/resources",
+        "@/lib/admin/crud"
+      ],
+      "exports": [
+        "ResourceList"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/SetupNotice.tsx",
+      "imports": [
+        "next/link"
+      ],
+      "exports": [
+        "SetupNotice"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/admin/admin-surface.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/DeliveryProcess.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "./reference.module.css"
+      ],
+      "exports": [
+        "DeliveryProcess"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/HomeExperience.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/components/site/Reveal",
+        "@/components/site/TrustStrip",
+        "@/components/site/PlatformsShowcase",
+        "@/components/site/Industries",
+        "@/components/site/TechCapabilities",
+        "@/components/site/WhyUs",
+        "@/components/site/FeaturedProjects",
+        "@/components/site/TeamSection",
+        "@/components/site/TestimonialsSection",
+        "@/components/site/BlogPreviewSection",
+        "@/lib/data/home",
+        "@/lib/data/growth",
+        "@/lib/seo/site",
+        "./OrbitArtwork",
+        "./DeliveryProcess",
+        "./ServiceJourney",
+        "@/components/motion/MotionWords",
+        "./SculpturalScenes",
+        "./reference.module.css",
+        "./home-content.module.css",
+        "./pearl-benefits.module.css"
+      ],
+      "exports": [
+        "HomeExperience"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/OrbitArtwork.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "./reference.module.css"
+      ],
+      "exports": [
+        "OrbitArtwork"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/ScrollJourney.tsx",
+      "imports": [
+        "react",
+        "./reference.module.css"
+      ],
+      "exports": [
+        "ScrollJourney"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/SculpturalScenes.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "./sculptural-scenes.module.css"
+      ],
+      "exports": [
+        "OwnershipOrbit",
+        "CosmicBackdrop"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/ServiceJourney.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/lib/data/mappers",
+        "./reference.module.css",
+        "@/components/ui/service-accent",
+        "./ScrollJourney"
+      ],
+      "exports": [
+        "ServiceJourney"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/home-content.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/pearl-benefits.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/reference.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/design-preview/sculptural-scenes.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/motion/MotionWords.tsx",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "MotionWords"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/motion/SceneMotion.tsx",
+      "imports": [
+        "react",
+        "./motion-utils"
+      ],
+      "exports": [
+        "SceneMotion"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/motion/SurfaceMotion.tsx",
+      "imports": [
+        "react",
+        "./motion-utils"
+      ],
+      "exports": [
+        "SurfaceMotion"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/motion/motion-utils.test.ts",
+      "imports": [
+        "vitest",
+        "./motion-utils"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/motion/motion-utils.ts",
+      "imports": [],
+      "exports": [
+        "clamp",
+        "pointerTilt",
+        "revealFrames"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/AccountForms.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/portal/actions",
+        "@/components/ui/Button",
+        "@/components/ui/Input",
+        "@/components/portal/AuthForms",
+        "@/components/site/LeadForms"
+      ],
+      "exports": [
+        "CompleteProfileDefaults",
+        "CompleteProfileForm",
+        "ProfileForm",
+        "AvatarForm",
+        "ReviewForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/AgreementsHistory.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/ui/States"
+      ],
+      "exports": [
+        "AcceptanceItem",
+        "AgreementsHistory"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/AuthCard.tsx",
+      "imports": [
+        "next/link",
+        "react",
+        "lucide-react",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "AuthCard"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/AuthForms.tsx",
+      "imports": [
+        "next/link",
+        "react",
+        "lucide-react",
+        "@/lib/portal/actions",
+        "@/lib/supabase/client",
+        "@/lib/env",
+        "@/components/ui/Button",
+        "@/components/ui/Input",
+        "./LoginPasswordField",
+        "@/components/site/LeadForms"
+      ],
+      "exports": [
+        "AddressFields",
+        "ClientLoginForm",
+        "ClientSignupForm",
+        "ForgotPasswordForm",
+        "ResetPasswordForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/LoginExperience.tsx",
+      "imports": [
+        "next/image",
+        "next/link",
+        "react",
+        "lucide-react",
+        "@/lib/seo/site",
+        "./login-experience.module.css"
+      ],
+      "exports": [
+        "LoginSurface",
+        "LoginExperience"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/LoginPasswordField.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/components/ui/Input"
+      ],
+      "exports": [
+        "LoginPasswordField"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/PortalLoginModal.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/components/portal/AuthForms",
+        "@/components/ui/IconButton",
+        "./LoginExperience",
+        "./login-experience.module.css"
+      ],
+      "exports": [
+        "PortalLoginModal"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/portal/login-experience.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/seo/JsonLd.tsx",
+      "imports": [],
+      "exports": [
+        "JsonLd"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/AnnouncementBar.tsx",
+      "imports": [
+        "react",
+        "@/lib/data/growth",
+        "lucide-react",
+        "next/link",
+        "@/components/ui/IconButton"
+      ],
+      "exports": [
+        "AnnouncementBar"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/BlogPreviewSection.tsx",
+      "imports": [
+        "next/link",
+        "next/image",
+        "lucide-react",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Button",
+        "@/components/site/Reveal",
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "BlogPreviewSection"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Breadcrumbs.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "Crumb",
+        "Breadcrumbs"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/FeaturedProjects.tsx",
+      "imports": [
+        "@/components/ui/ProjectCard",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Button",
+        "@/components/site/Reveal",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "FeaturedProjects"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/GallerySection.tsx",
+      "imports": [
+        "next/image",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/lib/validation/sections"
+      ],
+      "exports": [
+        "GallerySection"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Hero.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/components/site/HeroVideo",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "Hero"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/HeroVideo.tsx",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "HeroVideo"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Industries.tsx",
+      "imports": [
+        "lucide-react",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal"
+      ],
+      "exports": [
+        "Industries"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/LaunchBenefits.tsx",
+      "imports": [
+        "@/components/site/Reveal",
+        "@/components/ui/SectionHeader",
+        "@/lib/data/growth",
+        "lucide-react"
+      ],
+      "exports": [
+        "LaunchBenefits"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/LeadForms.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/components/ui/Input",
+        "@/components/ui/Button",
+        "@/lib/leads/actions"
+      ],
+      "exports": [
+        "AGREEMENT_CONSENT_LABEL",
+        "AgreementCheckbox",
+        "ContactForm",
+        "QuoteForm",
+        "AppointmentForm"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Markdown.test.ts",
+      "imports": [
+        "vitest",
+        "@/components/site/Markdown",
+        "@/lib/data/blog"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Markdown.tsx",
+      "imports": [
+        "react-markdown",
+        "remark-gfm",
+        "next/link",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "headingSlug",
+        "TocEntry",
+        "extractToc",
+        "Markdown"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/OfferPopup.tsx",
+      "imports": [
+        "react",
+        "@/lib/data/growth",
+        "@/components/ui/Dialog",
+        "@/components/ui/Button",
+        "./offer-popup.module.css"
+      ],
+      "exports": [
+        "OfferPopup"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/PageHero.tsx",
+      "imports": [
+        "react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/lib/utils/cn",
+        "./page-hero.module.css"
+      ],
+      "exports": [
+        "PageHero"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/PlatformsShowcase.tsx",
+      "imports": [
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/components/site/icons"
+      ],
+      "exports": [
+        "PlatformsShowcase"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Process.tsx",
+      "imports": [
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal"
+      ],
+      "exports": [
+        "Process"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/ProjectFiltersBar.tsx",
+      "imports": [
+        "next/link",
+        "@/lib/utils/cn",
+        "@/lib/data/projects"
+      ],
+      "exports": [
+        "ProjectFiltersBar"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/PublicSiteFrame.tsx",
+      "imports": [
+        "react",
+        "next/navigation",
+        "@/components/design-preview/reference.module.css"
+      ],
+      "exports": [
+        "PublicSiteFrame"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/Reveal.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "Reveal"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/RevealObserver.tsx",
+      "imports": [
+        "react",
+        "@/components/motion/motion-utils"
+      ],
+      "exports": [
+        "RevealObserver"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/ServicesOverview.tsx",
+      "imports": [
+        "@/components/ui/ServiceCard",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Button",
+        "@/components/site/Reveal",
+        "@/components/site/icons",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "ServicesOverview"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/TeamSection.tsx",
+      "imports": [
+        "@/components/ui/TeamCard",
+        "@/components/ui/Button",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "TeamSection"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/TechCapabilities.tsx",
+      "imports": [
+        "lucide-react",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal"
+      ],
+      "exports": [
+        "TechCapabilities"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/TestimonialsSection.tsx",
+      "imports": [
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/components/ui/ReviewCard",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "TestimonialsSection"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/TrustStrip.tsx",
+      "imports": [
+        "lucide-react",
+        "@/components/site/Reveal"
+      ],
+      "exports": [
+        "TrustStrip"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/WhyUs.tsx",
+      "imports": [
+        "lucide-react",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal"
+      ],
+      "exports": [
+        "WhyUs"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/icons.tsx",
+      "imports": [
+        "lucide-react",
+        "react"
+      ],
+      "exports": [
+        "ICON_MAP",
+        "iconFor",
+        "renderIcon",
+        "TRUST_ICONS",
+        "PROCESS_ICONS",
+        "PLATFORM_ICONS"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/offer-popup.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/site/page-hero.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Accordion.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "AccordionItem",
+        "Accordion"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ActionIcon.tsx",
+      "imports": [
+        "lucide-react"
+      ],
+      "exports": [
+        "ActionIcon"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Badge.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "BadgeProps",
+        "Badge",
+        "StatusPill"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/BottomNavigation.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "react",
+        "lucide-react",
+        "@/lib/data/navigation",
+        "./Button",
+        "./ThemeToggle",
+        "./tubelight-navbar",
+        "@/lib/bottom-navigation",
+        "./bottom-navigation.module.css"
+      ],
+      "exports": [
+        "BottomNavigation"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/BrandIcons.tsx",
+      "imports": [
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "LinkedInIcon",
+        "GitHubIcon"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Button.tsx",
+      "imports": [
+        "next/link",
+        "react",
+        "@/lib/utils/cn",
+        "./ActionIcon"
+      ],
+      "exports": [
+        "ButtonProps",
+        "Button"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/CTA.tsx",
+      "imports": [
+        "@/components/ui/Button",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "CTA"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Card.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "Card",
+        "CardTitle",
+        "CardBody"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Dialog.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils/cn",
+        "@/components/ui/IconButton"
+      ],
+      "exports": [
+        "Dialog"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Drawer.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils/cn",
+        "@/components/ui/IconButton"
+      ],
+      "exports": [
+        "Drawer"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Footer.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "@/lib/navigation",
+        "@/lib/seo/site",
+        "@/lib/data/settings",
+        "@/lib/data/navigation",
+        "./footer.module.css",
+        "./SocialLinks",
+        "./Button"
+      ],
+      "exports": [
+        "Footer"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/IconButton.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "IconButtonProps",
+        "IconButton"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Input.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "InputProps",
+        "Input",
+        "TextareaProps",
+        "Textarea",
+        "SelectProps",
+        "Select",
+        "Field"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/MarketingHeader.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "react",
+        "./bottom-navigation.module.css",
+        "@/lib/navigation",
+        "@/lib/seo/site",
+        "@/components/ui/Button",
+        "@/components/ui/BottomNavigation",
+        "@/components/portal/PortalLoginModal",
+        "@/components/ui/ScrollProgress",
+        "@/lib/supabase/client",
+        "@/lib/data/navigation"
+      ],
+      "exports": [
+        "MarketingHeader"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/MediaFrame.tsx",
+      "imports": [
+        "next/image",
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "MediaFrame"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/MobileMenu.tsx",
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "./navigation.module.css",
+        "react",
+        "lucide-react",
+        "@/lib/navigation",
+        "@/lib/seo/site",
+        "@/components/ui/Button",
+        "@/components/ui/IconButton",
+        "@/components/ui/ThemeToggle",
+        "@/lib/data/navigation"
+      ],
+      "exports": [
+        "MobileMenu"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ProjectCard.tsx",
+      "imports": [
+        "next/image",
+        "next/link",
+        "@/lib/utils/cn",
+        "@/components/ui/Badge"
+      ],
+      "exports": [
+        "ProjectCard"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ProjectFrame.tsx",
+      "imports": [
+        "next/image",
+        "react",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "FrameVariant",
+        "ProjectFrameProps",
+        "ProjectFrame"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ReviewCard.tsx",
+      "imports": [
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "ReviewCardProps",
+        "ReviewCard"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ScrollProgress.tsx",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "ScrollProgress"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Section.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "SectionProps",
+        "Section"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/SectionHeader.tsx",
+      "imports": [
+        "react",
+        "@/components/motion/MotionWords",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "SectionHeader"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ServiceCard.tsx",
+      "imports": [
+        "next/link",
+        "lucide-react",
+        "react",
+        "@/lib/utils/cn",
+        "./service-accent"
+      ],
+      "exports": [
+        "ServiceCard"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Skeleton.tsx",
+      "imports": [
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "Skeleton"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/SocialLinks.tsx",
+      "imports": [
+        "lucide-react",
+        "./BrandIcons",
+        "@/lib/data/settings",
+        "./social-links.module.css"
+      ],
+      "exports": [
+        "socialPlatform",
+        "SocialLinks"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/States.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "EmptyState",
+        "ErrorState"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Tabs.tsx",
+      "imports": [
+        "react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "TabItem",
+        "Tabs"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/TeamCard.tsx",
+      "imports": [
+        "next/image",
+        "./social-links.module.css",
+        "lucide-react",
+        "@/lib/utils/cn",
+        "@/components/ui/BrandIcons"
+      ],
+      "exports": [
+        "TeamCard"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/ThemeToggle.tsx",
+      "imports": [
+        "react",
+        "lucide-react"
+      ],
+      "exports": [
+        "ThemeToggle"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/Toast.tsx",
+      "imports": [
+        "react",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "ToastProvider",
+        "useToast"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/bottom-navigation.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/footer.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/gradient-card.tsx",
+      "imports": [
+        "react",
+        "next/link",
+        "class-variance-authority",
+        "lucide-react",
+        "@/lib/utils/cn"
+      ],
+      "exports": [
+        "GradientCardProps"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/navigation.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/reference-ui.test.ts",
+      "imports": [
+        "react",
+        "react-dom/server",
+        "vitest",
+        "./Button",
+        "./SocialLinks"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/service-accent.test.ts",
+      "imports": [
+        "vitest",
+        "./service-accent"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/service-accent.ts",
+      "imports": [],
+      "exports": [
+        "serviceAccent"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/social-links.module.css",
+      "imports": [],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/tubelight-navbar-demo.tsx",
+      "imports": [
+        "lucide-react",
+        "@/lib/navigation",
+        "@/components/ui/tubelight-navbar"
+      ],
+      "exports": [
+        "NavBarDemo"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/components/ui/tubelight-navbar.tsx",
+      "imports": [
+        "react",
+        "framer-motion",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/lib/utils",
+        "@/lib/bottom-navigation"
+      ],
+      "exports": [
+        "NavItem",
+        "NavBar"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": true,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/actions.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/supabase/admin",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/admin/resources",
+        "@/lib/admin/crud",
+        "@/lib/admin/resources",
+        "@/lib/admin/mutation-result"
+      ],
+      "exports": [
+        "ResourceActionState",
+        "upsertResourceAction",
+        "setResourceStatusAction",
+        "toggleResourceActiveAction",
+        "deleteResourceAction",
+        "restoreResourceAction",
+        "reorderResourceAction"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "imports": [
+        "next/cache",
+        "next/navigation",
+        "zod",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "@/lib/agreements/acceptance",
+        "@/lib/pdf/simple-pdf"
+      ],
+      "exports": [
+        "createAgreementAction",
+        "createAgreementVersionAction",
+        "activateAgreementVersionAction",
+        "generateAgreementVersionPdfAction",
+        "archiveAgreementAction"
+      ],
+      "tables": [
+        "agreement_versions",
+        "agreements",
+        "audit_logs"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "imports": [
+        "next/cache",
+        "next/navigation",
+        "zod",
+        "@/lib/validation/sections",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin"
+      ],
+      "exports": [
+        "toggleSectionVisibilityAction",
+        "reorderSectionAction",
+        "setSectionStatusAction",
+        "saveSectionAction",
+        "createSectionAction"
+      ],
+      "tables": [
+        "page_sections"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/admin/builder-labels.ts",
+      "imports": [],
+      "exports": [
+        "SECTION_LABELS"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/crud.ts",
+      "imports": [
+        "@/lib/supabase/admin",
+        "@/lib/admin/resources"
+      ],
+      "exports": [
+        "AdminRow",
+        "ResourceListResult",
+        "getResourceConfig",
+        "isResourceKey",
+        "listResourceRows",
+        "getResourceRow",
+        "getAdjacentRowId",
+        "uniqueSlug"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/media-actions.ts",
+      "imports": [
+        "next/cache",
+        "next/navigation",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "zod"
+      ],
+      "exports": [
+        "uploadMediaAction",
+        "deleteMediaAction"
+      ],
+      "tables": [
+        "media_assets"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/admin/mutation-result"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.ts",
+      "imports": [],
+      "exports": [
+        "AdminMutationCode",
+        "AdminMutationSuccess",
+        "AdminMutationFailure",
+        "AdminMutationResult",
+        "AdminMutationState",
+        "validationFailure",
+        "authFailure",
+        "databaseFailureForCode"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/resources.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/admin/resources"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/resources.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "FieldType",
+        "FieldOption",
+        "FieldDef",
+        "ListColumn",
+        "ResourceKey",
+        "CapabilityBase",
+        "ResourceConfig",
+        "RESOURCES",
+        "SLUG_PATTERN",
+        "isSafeInternalPath",
+        "isSafeNavigationTarget",
+        "buildResourceSchema"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/admin/settings-actions.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "zod",
+        "@/lib/admin/mutation-result",
+        "@/lib/admin/resources"
+      ],
+      "exports": [
+        "SettingsState",
+        "updateSettingsAction"
+      ],
+      "tables": [
+        "site_settings"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/admin/user-actions.ts",
+      "imports": [
+        "next/cache",
+        "next/navigation",
+        "zod",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "@/lib/validation/portal"
+      ],
+      "exports": [
+        "createUserAction",
+        "resetUserPasswordAction",
+        "changeUserRoleAction",
+        "updateAdminUsernameAction"
+      ],
+      "tables": [
+        "admin_usernames",
+        "audit_logs",
+        "profiles",
+        "user_addresses"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/agreements/acceptance.ts",
+      "imports": [
+        "next/headers",
+        "@/lib/supabase/admin",
+        "@/lib/rate-limit",
+        "@/lib/pdf/simple-pdf",
+        "@/lib/agreements/data"
+      ],
+      "exports": [
+        "AcceptanceContext",
+        "AcceptanceInput",
+        "acceptanceEvidenceBlocks",
+        "recordAgreementAcceptance",
+        "signedAgreementFileUrl"
+      ],
+      "tables": [
+        "agreement_acceptances",
+        "agreements"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/agreements/data.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/public"
+      ],
+      "exports": [
+        "SERVICE_AGREEMENT_SLUG",
+        "AGREEMENT_CONSENT_TEXT",
+        "LAWYER_REVIEW_NOTE",
+        "PublicAgreementVersion",
+        "getCurrentServiceAgreement",
+        "formatVersion"
+      ],
+      "tables": [
+        "agreement_versions",
+        "agreements"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/auth/actions.ts",
+      "imports": [
+        "next/navigation",
+        "next/headers",
+        "@/lib/supabase/server",
+        "@/lib/validation/auth",
+        "@/lib/validation/portal",
+        "@/lib/auth/permissions",
+        "@/lib/rate-limit"
+      ],
+      "exports": [
+        "SignInState",
+        "signInAction",
+        "signOutAction"
+      ],
+      "tables": [
+        "admin_usernames",
+        "profiles"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/auth/permissions.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/auth/permissions"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/auth/permissions.ts",
+      "imports": [],
+      "exports": [
+        "ROLES",
+        "AppRole",
+        "ROLE_RANK",
+        "ROLE_LABELS",
+        "roleAtLeast",
+        "CAPABILITIES",
+        "Capability",
+        "can"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/auth/recovery.ts",
+      "imports": [],
+      "exports": [
+        "RECOVERY_COOKIE_NAME",
+        "RECOVERY_COOKIE_OPTIONS"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/auth/session.ts",
+      "imports": [
+        "react",
+        "next/navigation",
+        "@/lib/env",
+        "@/lib/supabase/server",
+        "@/lib/auth/permissions"
+      ],
+      "exports": [
+        "SessionUser",
+        "getCurrentUser",
+        "requireStaff"
+      ],
+      "tables": [
+        "profiles"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/bottom-navigation.test.ts",
+      "imports": [
+        "vitest",
+        "./navigation",
+        "./bottom-navigation"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/bottom-navigation.ts",
+      "imports": [
+        "./data/navigation"
+      ],
+      "exports": [
+        "splitNavigation",
+        "isNavigationActive"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/admin-leads.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "@/lib/validation/leads"
+      ],
+      "exports": [
+        "LeadKind",
+        "LEAD_KINDS",
+        "isLeadKind",
+        "LeadTable",
+        "leadTable",
+        "LeadRow",
+        "LeadListResult",
+        "listLeads",
+        "getLead",
+        "StaffOption",
+        "getStaffOptions",
+        "getAttachmentSignedUrl"
+      ],
+      "tables": [
+        "lead-attachments",
+        "profiles"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.test.ts",
+      "imports": [
+        "vitest",
+        "./ai-methods"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/public"
+      ],
+      "exports": [
+        "PublicAiMethod",
+        "getPublicAiMethods"
+      ],
+      "tables": [
+        "ai_methods"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/blog-fallback.ts",
+      "imports": [
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "FallbackPost",
+        "FALLBACK_POSTS"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/blog.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/supabase/server",
+        "@/lib/supabase/public",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/blog-fallback"
+      ],
+      "exports": [
+        "BlogPostTeaser",
+        "BlogTag",
+        "BlogPostFull",
+        "getAuthorName",
+        "estimateReadingMinutes",
+        "getPublishedPosts",
+        "getBlogCategories",
+        "getPostBySlug",
+        "getPostSlugs",
+        "getPostSitemapEntries",
+        "pickRelatedPosts"
+      ],
+      "tables": [
+        "blog_categories",
+        "blog_post_tags",
+        "blog_posts",
+        "profiles"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/cta.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/data/cta"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/cta.ts",
+      "imports": [],
+      "exports": [
+        "DEFAULT_CTA_LABEL",
+        "DEFAULT_CTA_HREF",
+        "textOrDefault",
+        "ctaHrefOrDefault",
+        "sanitizeCta"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/growth.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/public",
+        "@/lib/data/jsonb"
+      ],
+      "exports": [
+        "Offer",
+        "Announcement",
+        "LaunchBenefit",
+        "SocialPlatform",
+        "SocialLinkItem",
+        "SOCIAL_PLATFORMS",
+        "UPDATE_TYPE_LABELS",
+        "OFFER_TYPE_LABELS",
+        "FALLBACK_BENEFITS",
+        "getLiveOffers",
+        "getOfferBySlug",
+        "getPopupOffer",
+        "getLiveAnnouncements",
+        "getAnnouncementBySlug",
+        "getTopBarAnnouncement",
+        "getLaunchBenefits",
+        "getSocialLinks",
+        "getOfferSitemapEntries",
+        "getUpdateSitemapEntries",
+        "formatInr"
+      ],
+      "tables": [
+        "announcements",
+        "launch_benefits",
+        "offers",
+        "social_links"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/home.ts",
+      "imports": [
+        "@/lib/env",
+        "@/lib/supabase/public",
+        "@/lib/data/mappers",
+        "@/lib/data/services-fallback",
+        "@/lib/data/team",
+        "@/lib/data/blog"
+      ],
+      "exports": [
+        "FALLBACK_SERVICES",
+        "HomeContent",
+        "getRecentPublicProjects",
+        "getHomeContent"
+      ],
+      "tables": [
+        "clients",
+        "projects",
+        "services",
+        "testimonials"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/jsonb.ts",
+      "imports": [],
+      "exports": [
+        "asStringArray",
+        "asStringRecord"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/mappers.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/data/mappers"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/mappers.ts",
+      "imports": [],
+      "exports": [
+        "ServiceTeaser",
+        "ProjectTeaser",
+        "TeamTeaser",
+        "TestimonialTeaser",
+        "ServiceRowLike",
+        "ProjectRowLike",
+        "TeamRowLike",
+        "TestimonialRowLike",
+        "toServiceTeaser",
+        "toProjectTeaser",
+        "toTeamTeaser",
+        "toTestimonialTeaser"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/navigation.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/public",
+        "@/lib/navigation"
+      ],
+      "exports": [
+        "PublicNavLink",
+        "PublicNavigation",
+        "getPublicNavigation"
+      ],
+      "tables": [
+        "navigation_items"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/projects.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/data/projects",
+        "@/lib/data/mappers"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/projects.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/supabase/server",
+        "@/lib/supabase/public",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/jsonb",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "CaseStudyMedia",
+        "CaseStudy",
+        "ProjectFilters",
+        "getPublicProjects",
+        "getProjectCaseStudy",
+        "getProjectSlugs",
+        "getProjectSitemapEntries",
+        "deriveFacets",
+        "buildFilterHref",
+        "applyFilters"
+      ],
+      "tables": [
+        "clients",
+        "project_media",
+        "projects"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/sections.ts",
+      "imports": [
+        "react",
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/server",
+        "@/lib/supabase/public",
+        "@/lib/validation/sections"
+      ],
+      "exports": [
+        "HomeSection",
+        "getHomeSections",
+        "getGalleryForPage"
+      ],
+      "tables": [
+        "page_sections"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/services-fallback.ts",
+      "imports": [
+        "@/lib/data/services"
+      ],
+      "exports": [
+        "SERVICE_CATEGORIES",
+        "FALLBACK_SERVICES"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/services.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/data/services-fallback",
+        "@/lib/data/services"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/services.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/supabase/server",
+        "@/lib/supabase/public",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/jsonb",
+        "@/lib/data/services-fallback"
+      ],
+      "exports": [
+        "ServiceFaq",
+        "ServiceDetail",
+        "ServiceCardModel",
+        "toServiceDetail",
+        "getServicesIndex",
+        "getServiceBySlug",
+        "getServiceSlugs",
+        "ContentSitemapEntry",
+        "getServiceSitemapEntries",
+        "pickRelatedServices",
+        "pickRelevantProjectIds"
+      ],
+      "tables": [
+        "service_faqs",
+        "services"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/settings.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/env",
+        "@/lib/supabase/public",
+        "@/lib/data/cta",
+        "@/lib/data/cta",
+        "@/lib/data/growth"
+      ],
+      "exports": [
+        "SocialLink",
+        "SiteSettings",
+        "getSiteSettings",
+        "whatsappLink"
+      ],
+      "tables": [
+        "site_settings"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/data/team.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/supabase/public",
+        "@/lib/data/mappers"
+      ],
+      "exports": [
+        "getPublishedTeam"
+      ],
+      "tables": [
+        "team_members"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/email/email.ts",
+      "imports": [
+        "resend",
+        "@/lib/email/escape",
+        "@/lib/email/templates"
+      ],
+      "exports": [
+        "sendPasswordRecoveryEmail",
+        "isEmailConfigured",
+        "EmailDelivery",
+        "sendLeadEmails"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/email/escape.ts",
+      "imports": [],
+      "exports": [
+        "escapeHtml",
+        "stripHeaderBreaks"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/email/templates.tsx",
+      "imports": [
+        "@/lib/email/escape",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "LeadEmailContent",
+        "renderAdminNotification",
+        "renderVisitorConfirmation",
+        "renderPasswordRecovery"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/env.server.ts",
+      "imports": [],
+      "exports": [
+        "requireSupabaseServiceRoleKey"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/env.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/env"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/env.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "PublicSupabaseEnv",
+        "parseSiteUrl",
+        "parsePublicSupabaseEnv",
+        "siteUrl",
+        "supabasePublicEnv",
+        "isSupabaseConfigured",
+        "requirePublicSupabaseEnv"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/leads/actions.ts",
+      "imports": [
+        "next/headers",
+        "@/lib/supabase/admin",
+        "@/lib/supabase/server",
+        "@/lib/env",
+        "@/lib/rate-limit",
+        "@/lib/validation/leads",
+        "@/lib/email/email",
+        "@/lib/agreements/acceptance",
+        "@/lib/agreements/data"
+      ],
+      "exports": [
+        "LeadFormState",
+        "submitContactAction",
+        "submitQuoteAction",
+        "requestAppointmentAction"
+      ],
+      "tables": [
+        "appointment_requests",
+        "contact_submissions",
+        "lead-attachments",
+        "quote_requests"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/leads/admin-actions.ts",
+      "imports": [
+        "next/cache",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/server",
+        "@/lib/data/admin-leads",
+        "@/lib/validation/leads",
+        "@/lib/admin/mutation-result"
+      ],
+      "exports": [
+        "LeadUpdateState",
+        "updateLeadAction"
+      ],
+      "tables": [
+        "appointment_requests",
+        "contact_submissions",
+        "quote_requests"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/navigation.ts",
+      "imports": [],
+      "exports": [
+        "NAV_LINKS",
+        "FOOTER_LINK_GROUPS"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/pdf/simple-pdf.ts",
+      "imports": [],
+      "exports": [
+        "PdfBlock",
+        "buildPdf",
+        "markdownToBlocks"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/portal/actions.ts",
+      "imports": [
+        "next/headers",
+        "next/cache",
+        "next/navigation",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/supabase/server",
+        "@/lib/auth/recovery",
+        "@/lib/email/email",
+        "@/lib/rate-limit",
+        "@/lib/validation/portal",
+        "@/lib/agreements/acceptance",
+        "@/lib/agreements/data"
+      ],
+      "exports": [
+        "PortalActionState",
+        "clientLoginAction",
+        "clientSignupAction",
+        "googleOAuthReadyAction",
+        "forgotPasswordAction",
+        "updatePasswordAction",
+        "updateProfileAction",
+        "completeProfileAction",
+        "uploadAvatarAction",
+        "submitVerifiedReviewAction",
+        "clientSignOutAction"
+      ],
+      "tables": [
+        "admin_usernames",
+        "agreement_acceptances",
+        "clients",
+        "profile-avatars",
+        "profiles",
+        "projects",
+        "testimonials",
+        "user_addresses"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": true
+    },
+    {
+      "path": "website/src/lib/preview-security.test.ts",
+      "imports": [
+        "vitest"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/rate-limit.ts",
+      "imports": [],
+      "exports": [
+        "RateLimitOptions",
+        "isRateLimited",
+        "clientIpFrom"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/jsonld.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/seo/jsonld"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/jsonld.ts",
+      "imports": [
+        "@/lib/env",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "ORGANIZATION_ID",
+        "WEBSITE_ID",
+        "ContactPointJsonLd",
+        "OrganizationJsonLd",
+        "organizationJsonLd",
+        "BreadcrumbJsonLd",
+        "breadcrumbJsonLd",
+        "ServiceJsonLd",
+        "serviceJsonLd",
+        "BlogPostingJsonLd",
+        "blogPostingJsonLd",
+        "WebSiteJsonLd",
+        "webSiteJsonLd",
+        "AboutPageJsonLd",
+        "aboutPageJsonLd",
+        "ContactPageJsonLd",
+        "contactPageJsonLd",
+        "FAQItem",
+        "FAQPageJsonLd",
+        "faqPageJsonLd",
+        "LocalBusinessJsonLd",
+        "localBusinessJsonLd"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/metadata.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/seo/metadata"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/metadata.ts",
+      "imports": [
+        "next",
+        "@/lib/env",
+        "@/lib/seo/overrides",
+        "@/lib/seo/site"
+      ],
+      "exports": [
+        "HOMEPAGE_TITLE",
+        "buildMetadata",
+        "buildRootMetadata",
+        "buildRouteMetadata"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/overrides.ts",
+      "imports": [
+        "react",
+        "@/lib/env",
+        "@/lib/supabase/public"
+      ],
+      "exports": [
+        "SeoOverride",
+        "getSeoOverride"
+      ],
+      "tables": [
+        "seo_metadata"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/seo/site.ts",
+      "imports": [],
+      "exports": [
+        "BRAND",
+        "SITE_KEYWORDS",
+        "SERVICE_TYPES"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/supabase/admin.ts",
+      "imports": [
+        "@supabase/supabase-js",
+        "@/types/database",
+        "@/lib/env",
+        "@/lib/env.server"
+      ],
+      "exports": [
+        "createSupabaseAdminClient",
+        "createSupabaseAdminLooseClient"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/supabase/client.ts",
+      "imports": [
+        "@supabase/ssr",
+        "@/types/database",
+        "@/lib/env"
+      ],
+      "exports": [
+        "createSupabaseBrowserClient"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/supabase/public.ts",
+      "imports": [
+        "@supabase/supabase-js",
+        "@/types/database",
+        "@/lib/env"
+      ],
+      "exports": [
+        "createSupabasePublicClient"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/supabase/server.ts",
+      "imports": [
+        "next/headers",
+        "@supabase/ssr",
+        "@/types/database",
+        "@/lib/env"
+      ],
+      "exports": [
+        "createSupabaseServerClient",
+        "createSupabaseServerLooseClient"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/utils.ts",
+      "imports": [
+        "./utils/cn"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/utils/cn.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/utils/cn"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/utils/cn.ts",
+      "imports": [],
+      "exports": [
+        "cn"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/auth.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/validation/auth"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/auth.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "loginSchema",
+        "LoginInput",
+        "safeAdminPath"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/leads.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/validation/leads"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/leads.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "spamGuardSchema",
+        "assertNotSpam",
+        "checkboxField",
+        "AGREEMENT_REQUIRED_MESSAGE",
+        "contactSchema",
+        "ContactInput",
+        "quoteSchema",
+        "QuoteInput",
+        "appointmentSchema",
+        "AppointmentInput",
+        "ATTACHMENT_MAX_BYTES",
+        "ATTACHMENT_MIME_ALLOW",
+        "validateAttachment",
+        "LEAD_STATUSES",
+        "leadStatusSchema",
+        "LeadStatus"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/portal.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/validation/portal"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/portal.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "clientLoginSchema",
+        "usernameField",
+        "mobileField",
+        "addressSchema",
+        "AddressInput",
+        "clientSignupSchema",
+        "completeProfileSchema",
+        "forgotPasswordSchema",
+        "updatePasswordSchema",
+        "profileSchema",
+        "reviewSchema",
+        "safePortalPath",
+        "normalizeAdminUsername",
+        "adminUsernameSchema"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/sections.test.ts",
+      "imports": [
+        "vitest",
+        "@/lib/validation/sections"
+      ],
+      "exports": [],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/lib/validation/sections.ts",
+      "imports": [
+        "zod"
+      ],
+      "exports": [
+        "galleryImageSchema",
+        "galleryContentSchema",
+        "GalleryContent",
+        "SectionType",
+        "ParsedSection"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/proxy.ts",
+      "imports": [
+        "next/server",
+        "@supabase/ssr",
+        "@/lib/env"
+      ],
+      "exports": [
+        "proxy",
+        "config"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/types/database.test.ts",
+      "imports": [
+        "vitest",
+        "@supabase/supabase-js",
+        "@/types/database"
+      ],
+      "exports": [],
+      "tables": [
+        "profiles",
+        "projects",
+        "site_settings"
+      ],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    },
+    {
+      "path": "website/src/types/database.ts",
+      "imports": [],
+      "exports": [
+        "Json",
+        "Database",
+        "Tables"
+      ],
+      "tables": [],
+      "rpcs": [],
+      "client": false,
+      "serverActions": false
+    }
+  ],
+  "routes": [
+    {
+      "route": "/about",
+      "source": "website/src/app/(public)/about/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/ui/SectionHeader",
+        "@/components/site/GallerySection",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site",
+        "@/lib/data/sections"
+      ],
+      "functions": [
+        "generateMetadata",
+        "AboutPage"
+      ]
+    },
+    {
+      "route": "/account",
+      "source": "website/src/app/(public)/account/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/image",
+        "next/navigation",
+        "lucide-react",
+        "@/components/portal/AccountForms",
+        "@/components/portal/AgreementsHistory",
+        "@/lib/agreements/data",
+        "@/lib/supabase/admin",
+        "@/components/ui/Badge",
+        "@/components/ui/Button",
+        "@/components/ui/States",
+        "@/lib/portal/actions",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/supabase/server"
+      ],
+      "functions": [
+        "ClientAccountPage"
+      ]
+    },
+    {
+      "route": "/ai-methods",
+      "source": "website/src/app/(public)/ai-methods/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/States",
+        "@/lib/data/ai-methods",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata"
+      ],
+      "functions": [
+        "generateMetadata",
+        "AiMethodsPage"
+      ]
+    },
+    {
+      "route": "/blog/[slug]",
+      "source": "website/src/app/(public)/blog/[slug]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "slug"
+      ],
+      "imports": [
+        "next",
+        "next/image",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Badge",
+        "@/components/ui/CTA",
+        "@/components/site/Markdown",
+        "@/components/site/Reveal",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/blog"
+      ],
+      "functions": [
+        "generateStaticParams",
+        "generateMetadata",
+        "ArticlePage"
+      ]
+    },
+    {
+      "route": "/blog",
+      "source": "website/src/app/(public)/blog/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/image",
+        "next/link",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Badge",
+        "@/components/ui/CTA",
+        "@/components/ui/States",
+        "@/components/site/Reveal",
+        "@/lib/utils/cn",
+        "@/lib/seo/metadata",
+        "@/lib/data/blog"
+      ],
+      "functions": [
+        "generateMetadata",
+        "BlogIndexPage"
+      ]
+    },
+    {
+      "route": "/contact",
+      "source": "website/src/app/(public)/contact/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/Button",
+        "@/components/site/LeadForms",
+        "@/lib/seo/metadata",
+        "@/lib/data/settings",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ContactPage"
+      ]
+    },
+    {
+      "route": "/forgot-password",
+      "source": "website/src/app/(public)/forgot-password/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms"
+      ],
+      "functions": [
+        "ForgotPasswordPage"
+      ]
+    },
+    {
+      "route": "/login",
+      "source": "website/src/app/(public)/login/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/portal/LoginExperience",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/validation/portal"
+      ],
+      "functions": [
+        "ClientLoginPage"
+      ]
+    },
+    {
+      "route": "/",
+      "source": "website/src/app/(public)/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site",
+        "@/lib/data/home",
+        "@/lib/data/settings",
+        "@/components/design-preview/HomeExperience",
+        "@/lib/data/growth"
+      ],
+      "functions": [
+        "generateMetadata",
+        "HomePage"
+      ]
+    },
+    {
+      "route": "/privacy",
+      "source": "website/src/app/(public)/privacy/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/lib/seo/metadata"
+      ],
+      "functions": [
+        "PrivacyPage"
+      ]
+    },
+    {
+      "route": "/projects/[slug]",
+      "source": "website/src/app/(public)/projects/[slug]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "slug"
+      ],
+      "imports": [
+        "next",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Badge",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/MediaFrame",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/SectionHeader",
+        "@/components/site/Reveal",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/projects",
+        "@/lib/data/services"
+      ],
+      "functions": [
+        "generateStaticParams",
+        "generateMetadata",
+        "CaseStudyPage"
+      ]
+    },
+    {
+      "route": "/projects",
+      "source": "website/src/app/(public)/projects/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/site/PageHero",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/CTA",
+        "@/components/ui/Button",
+        "@/components/ui/States",
+        "@/components/site/Reveal",
+        "@/components/site/ProjectFiltersBar",
+        "lucide-react",
+        "@/lib/seo/metadata",
+        "@/lib/data/projects"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ProjectsPage"
+      ]
+    },
+    {
+      "route": "/request-quote",
+      "source": "website/src/app/(public)/request-quote/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/SectionHeader",
+        "@/components/site/LeadForms",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site"
+      ],
+      "functions": [
+        "generateMetadata",
+        "RequestQuotePage"
+      ]
+    },
+    {
+      "route": "/reset-password",
+      "source": "website/src/app/(public)/reset-password/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/headers",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/recovery"
+      ],
+      "functions": [
+        "ResetPasswordPage"
+      ]
+    },
+    {
+      "route": "/reviews",
+      "source": "website/src/app/(public)/reviews/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/ReviewCard",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/seo/JsonLd",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/env",
+        "@/lib/supabase/server"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ReviewsPage"
+      ]
+    },
+    {
+      "route": "/service-agreement",
+      "source": "website/src/app/(public)/service-agreement/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/CTA",
+        "@/components/site/Markdown",
+        "@/lib/agreements/data",
+        "@/lib/seo/metadata",
+        "@/lib/seo/site"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ServiceAgreementPage"
+      ]
+    },
+    {
+      "route": "/services/[slug]",
+      "source": "website/src/app/(public)/services/[slug]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "slug"
+      ],
+      "imports": [
+        "next",
+        "next/navigation",
+        "lucide-react",
+        "@/components/site/Breadcrumbs",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Accordion",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/ProjectCard",
+        "@/components/ui/SectionHeader",
+        "@/components/ui/ServiceCard",
+        "@/components/site/Reveal",
+        "@/components/site/icons",
+        "@/lib/seo/metadata",
+        "@/lib/seo/jsonld",
+        "@/lib/data/home",
+        "@/lib/data/mappers",
+        "@/lib/data/services"
+      ],
+      "functions": [
+        "generateStaticParams",
+        "generateMetadata",
+        "ServiceDetailPage"
+      ]
+    },
+    {
+      "route": "/services",
+      "source": "website/src/app/(public)/services/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/site/PageHero",
+        "@/components/ui/ServiceCard",
+        "@/components/ui/CTA",
+        "@/components/site/Reveal",
+        "@/components/site/icons",
+        "@/lib/seo/metadata",
+        "@/lib/data/services"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ServicesPage"
+      ]
+    },
+    {
+      "route": "/signup",
+      "source": "website/src/app/(public)/signup/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/session",
+        "@/lib/env"
+      ],
+      "functions": [
+        "ClientSignupPage"
+      ]
+    },
+    {
+      "route": "/team",
+      "source": "website/src/app/(public)/team/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "lucide-react",
+        "@/components/site/PageHero",
+        "@/components/seo/JsonLd",
+        "@/components/ui/Button",
+        "@/components/ui/CTA",
+        "@/components/ui/States",
+        "@/components/ui/TeamCard",
+        "@/components/site/Reveal",
+        "@/components/site/GallerySection",
+        "@/lib/seo/jsonld",
+        "@/lib/seo/metadata",
+        "@/lib/data/team",
+        "@/lib/data/sections"
+      ],
+      "functions": [
+        "generateMetadata",
+        "TeamPage"
+      ]
+    },
+    {
+      "route": "/terms",
+      "source": "website/src/app/(public)/terms/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/site/Breadcrumbs",
+        "@/components/ui/SectionHeader",
+        "@/lib/seo/metadata"
+      ],
+      "functions": [
+        "TermsPage"
+      ]
+    },
+    {
+      "route": "/update-password",
+      "source": "website/src/app/(public)/update-password/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/headers",
+        "next/navigation",
+        "@/components/portal/AuthCard",
+        "@/components/portal/AuthForms",
+        "@/lib/auth/recovery"
+      ],
+      "functions": [
+        "UpdatePasswordPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/agreements",
+      "source": "website/src/app/ajadmin/agreements/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/ui/Badge",
+        "@/components/admin/AdminSubmitButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/agreements/data",
+        "@/lib/admin/agreement-actions"
+      ],
+      "functions": [
+        "AgreementsPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/audit",
+      "source": "website/src/app/ajadmin/audit/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/States",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin"
+      ],
+      "functions": [
+        "AuditPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/brand",
+      "source": "website/src/app/ajadmin/brand/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/admin/BrandSettingsForm",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin"
+      ],
+      "functions": [
+        "BrandSettingsPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/c/[resource]/[id]",
+      "source": "website/src/app/ajadmin/c/[resource]/[id]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "resource",
+        "id"
+      ],
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/ResourceForm",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/supabase/admin",
+        "@/lib/env"
+      ],
+      "functions": [
+        "ResourceEditPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/c/[resource]/new",
+      "source": "website/src/app/ajadmin/c/[resource]/new/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "resource"
+      ],
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/admin/ResourceForm",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions"
+      ],
+      "functions": [
+        "ResourceNewPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/c/[resource]",
+      "source": "website/src/app/ajadmin/c/[resource]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "resource"
+      ],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/admin/ResourceList",
+        "@/lib/admin/crud",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions"
+      ],
+      "functions": [
+        "generateMetadata",
+        "ResourceListPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/home/[id]",
+      "source": "website/src/app/ajadmin/home/[id]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "id"
+      ],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "zod",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/ui/Badge",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/builder-actions",
+        "@/lib/admin/builder-labels"
+      ],
+      "functions": [
+        "SectionEditPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/home/new",
+      "source": "website/src/app/ajadmin/home/new/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/admin/SetupNotice",
+        "@/lib/env",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/admin/builder-actions"
+      ],
+      "functions": [
+        "NewSectionPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/home",
+      "source": "website/src/app/ajadmin/home/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/SetupNotice",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/builder-actions"
+      ],
+      "functions": [
+        "HomeBuilderPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/leads/[kind]/[id]",
+      "source": "website/src/app/ajadmin/leads/[kind]/[id]/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [
+        "kind",
+        "id"
+      ],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/ui/Badge",
+        "@/components/admin/LeadEditForm",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/admin-leads"
+      ],
+      "functions": [
+        "LeadDetailPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/leads",
+      "source": "website/src/app/ajadmin/leads/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "@/lib/utils/cn",
+        "@/components/ui/Badge",
+        "@/components/ui/States",
+        "@/components/ui/Input",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/data/admin-leads",
+        "@/lib/validation/leads"
+      ],
+      "functions": [
+        "LeadsInboxPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/login",
+      "source": "website/src/app/ajadmin/login/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/app/ajadmin/login/login-form",
+        "@/lib/auth/session",
+        "@/lib/env",
+        "@/lib/validation/auth",
+        "@/lib/seo/site",
+        "@/lib/auth/permissions"
+      ],
+      "functions": [
+        "AdminLoginPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/media",
+      "source": "website/src/app/ajadmin/media/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "@/components/ui/Input",
+        "@/components/admin/AdminSubmitButton",
+        "@/components/ui/States",
+        "@/components/admin/ConfirmButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/media-actions"
+      ],
+      "functions": [
+        "MediaLibraryPage"
+      ]
+    },
+    {
+      "route": "/ajadmin",
+      "source": "website/src/app/ajadmin/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/link",
+        "lucide-react",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/auth/actions"
+      ],
+      "functions": [
+        "AdminDashboardPage"
+      ]
+    },
+    {
+      "route": "/ajadmin/users",
+      "source": "website/src/app/ajadmin/users/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "next/navigation",
+        "@/components/ui/Badge",
+        "@/components/admin/AdminSubmitButton",
+        "@/lib/auth/session",
+        "@/lib/auth/permissions",
+        "@/lib/env",
+        "@/lib/supabase/admin",
+        "@/lib/admin/user-actions"
+      ],
+      "functions": [
+        "UsersPage"
+      ]
+    },
+    {
+      "route": "/auth/callback",
+      "source": "website/src/app/auth/callback/route.ts",
+      "kind": "route.ts",
+      "dynamicParams": [],
+      "imports": [
+        "next/server",
+        "@supabase/ssr",
+        "@supabase/supabase-js",
+        "@/lib/env",
+        "@/lib/validation/portal",
+        "@/lib/auth/recovery"
+      ],
+      "functions": [
+        "GET"
+      ]
+    },
+    {
+      "route": "/auth/confirm",
+      "source": "website/src/app/auth/confirm/route.ts",
+      "kind": "route.ts",
+      "dynamicParams": [],
+      "imports": [
+        "next/server",
+        "@supabase/ssr",
+        "@supabase/supabase-js",
+        "@/lib/env",
+        "@/lib/validation/portal",
+        "@/lib/auth/recovery"
+      ],
+      "functions": [
+        "GET"
+      ]
+    },
+    {
+      "route": "/blog/rss.xml",
+      "source": "website/src/app/blog/rss.xml/route.ts",
+      "kind": "route.ts",
+      "dynamicParams": [],
+      "imports": [
+        "@/lib/env",
+        "@/lib/data/blog"
+      ],
+      "functions": [
+        "GET"
+      ]
+    },
+    {
+      "route": "/design-preview",
+      "source": "website/src/app/design-preview/page.tsx",
+      "kind": "page.tsx",
+      "dynamicParams": [],
+      "imports": [
+        "next",
+        "@/components/ui/MarketingHeader",
+        "@/components/ui/Footer",
+        "@/lib/data/home",
+        "@/lib/data/settings",
+        "@/lib/data/navigation",
+        "@/lib/data/growth",
+        "@/components/design-preview/HomeExperience",
+        "@/components/design-preview/reference.module.css"
+      ],
+      "functions": [
+        "DesignPreviewPage"
+      ]
+    }
+  ]
+}

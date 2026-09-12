@@ -1,0 +1,5478 @@
+{
+  "mode": "isolated production; unconfigured Supabase; anonymous fresh browser; reduced motion for screenshots",
+  "viewport": {
+    "desktop": [
+      1214,
+      900
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "results": [
+    {
+      "route": "/about",
+      "status": 200,
+      "finalPath": "/about",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "About Us — The Team Behind AJS Technology | AJ System Soft Technology",
+      "h1": [
+        "AJ System Soft TechnologyAJ System Soft Technology"
+      ],
+      "canonical": "http://localhost:3000/about",
+      "robots": null,
+      "description": "AJ System Soft Technology (also known as AJS Technology) builds custom software, SaaS platforms, web and mobile apps, desktop software and business systems around each client's requirements.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "AboutPage"
+      ],
+      "heading": "Home\nAbout\n\nABOUT US\n\nAJ System Soft Technology\nAJ System Soft Technology\n\nSoftware built around your requirements.\n\nAJ System Soft Technology is a software development company that builds technology around one thing: your requirements. We design and",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Meet the team",
+          "name": null,
+          "type": null,
+          "href": "/team",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/about.webp",
+      "errors": []
+    },
+    {
+      "route": "/account",
+      "status": 200,
+      "finalPath": "/account",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Client Account | AJ System Soft Technology",
+      "h1": [
+        "Client portal setup in progress"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Private AJ System Soft Technology client workspace.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Client portal setup in progress\n\nThe public website is available, but secure account access needs the production Supabase configuration.\n\nContact AJS",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Contact AJS",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/account-unauthenticated.webp",
+      "errors": []
+    },
+    {
+      "route": "/ai-methods",
+      "status": 200,
+      "finalPath": "/ai-methods",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AI Methods | AJ System Soft Technology",
+      "h1": [
+        "Explore AI methods and resourcesExplore AI methods and resources"
+      ],
+      "canonical": "http://localhost:3000/ai-methods",
+      "robots": null,
+      "description": "Explore AI methods and resources shared by AJ System Soft Technology.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "heading": "Home\nAI Methods\n\nAI METHODS\n\nExplore AI methods and resources\nExplore AI methods and resources\n\nBrowse the resources shared by AJ System Soft Technology.\n\nNo AI resources are available yet\n\nPublished resources will appear here when they are available",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/blog",
+      "status": 200,
+      "finalPath": "/blog",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Insights — Software Planning, Platforms & Business Systems | AJ System Soft Technology",
+      "h1": [
+        "Notes from the workbenchNotes from the workbench"
+      ],
+      "canonical": "http://localhost:3000/blog",
+      "robots": null,
+      "description": "Practical articles from AJ System Soft Technology on planning custom software, choosing platforms, ERP digitisation, POS automation and maintaining business software.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nBlog\n\nINSIGHTS\n\nNotes from the workbench\nNotes from the workbench\n\nPractical articles on planning software, choosing platforms and running business systems — written by the team that builds them.\n\nBusiness systems\n30 Aug 2026\n3 min\nWhat ERP digi",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business systems30 Aug 20263 minWhat ERP digitisation actually means for small businessesERP is not ",
+          "name": null,
+          "type": null,
+          "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Platforms30 Aug 20263 minWeb app or mobile app: choosing the right platformThe platform question is ",
+          "name": null,
+          "type": null,
+          "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Planning30 Aug 20263 minHow to plan a custom software projectA practical checklist for the first fou",
+          "name": null,
+          "type": null,
+          "href": "/blog/how-to-plan-a-custom-software-project",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "finalPath": "/contact",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Contact Us | AJ System Soft Technology",
+      "h1": [
+        "Tell us what you need builtTell us what you need built"
+      ],
+      "canonical": "http://localhost:3000/contact",
+      "robots": null,
+      "description": "Contact AJ System Soft Technology to discuss your software project — message us, request a consultation, or reach us on WhatsApp.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "ContactPage",
+        "ProfessionalService"
+      ],
+      "heading": "Home\nContact\n\nCONTACT\n\nTell us what you need built\nTell us what you need built\n\nSend a message, request a consultation, or reach us directly — every genuine enquiry gets a reply.\n\nSend a message\n\nBrief is fine — we will ask the right follow-up questi",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_2",
+          "name": "$ACTION_REF_2",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_2:0",
+          "name": "$ACTION_2:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_2:1",
+          "name": "$ACTION_2:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "website",
+          "name": "website",
+          "type": "text",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "startedAt",
+          "name": "startedAt",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "name",
+          "name": "name",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "phone",
+          "name": "phone",
+          "type": "tel",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "company",
+          "name": "company",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "message",
+          "name": "message",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "agreementAccepted",
+          "name": "agreementAccepted",
+          "type": "checkbox",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View Agreement",
+          "name": null,
+          "type": null,
+          "href": "/service-agreement",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Send message",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a quote instead",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_3",
+          "name": "$ACTION_REF_3",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_3:0",
+          "name": "$ACTION_3:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_3:1",
+          "name": "$ACTION_3:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "website",
+          "name": "website",
+          "type": "text",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "startedAt",
+          "name": "startedAt",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "name",
+          "name": "name",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "phone",
+          "name": "phone",
+          "type": "tel",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "preferredDate",
+          "name": "preferredDate",
+          "type": "date",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Any timeMorning (9–12)Afternoon (12–5)Evening (5–8)",
+          "name": "preferredTime",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "topic",
+          "name": "topic",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "message",
+          "name": "message",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Request a consultation",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/contact.webp",
+      "errors": []
+    },
+    {
+      "route": "/forgot-password",
+      "status": 200,
+      "finalPath": "/forgot-password",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Recover Client Account | AJ System Soft Technology",
+      "h1": [
+        "Reset your password"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Request a secure password recovery link for the AJS client portal.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to AJS Technology\n\nCLIENT WORKSPACE\n\nYour project details, updates and requests in one secure place.\n\nSign in to follow enquiries, view linked project information, manage your profile and share verified feedback after working with our team.\n\nPro",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to AJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Send recovery link",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Back to sign in",
+          "name": null,
+          "type": null,
+          "href": "/login",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/login",
+      "status": 200,
+      "finalPath": "/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Client Login | AJ System Soft Technology",
+      "h1": [
+        "Welcome back!"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Secure client portal login for AJ System Soft Technology customers.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to website\nAJ\nAJS Technology\n\nCLIENT PORTAL\n\nWelcome back!\nSign in to your secure project workspace.\nEmail address*\nPassword*\nForgot password?\nSign in to client portal\nG\nContinue with Google\n\nNew here? Create an account",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "AJAJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "next",
+          "name": "next",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Show password",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Forgot password?",
+          "name": null,
+          "type": null,
+          "href": "/forgot-password",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Sign in to client portal",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "GContinue with Google",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Create an account",
+          "name": null,
+          "type": null,
+          "href": "/signup",
+          "disabled": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fclient-workspace.webp&w=3840&q=75",
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "screenshot": "screenshots/login-portal-unconfigured.webp",
+      "errors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "finalPath": "/",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Software built aroundyour requirements."
+      ],
+      "canonical": "http://localhost:3000",
+      "robots": null,
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "ProfessionalService"
+      ],
+      "heading": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore Projects",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore what we build",
+          "name": null,
+          "type": null,
+          "href": "#home-services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore all services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/android-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Discovery & requirements01",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Proposal & planning02",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Design & development03",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Testing & deployment04",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Support & growth05",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore all services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View all articles",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one gi",
+          "name": null,
+          "type": null,
+          "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really",
+          "name": null,
+          "type": null,
+          "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Planning3 min readHow to plan a custom software projectA practical checklist for the first four week",
+          "name": null,
+          "type": null,
+          "href": "/blog/how-to-plan-a-custom-software-project",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View all articles",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a Consultation",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/home-desktop.webp",
+      "errors": []
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "finalPath": "/privacy",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Privacy Policy | AJ System Soft Technology",
+      "h1": [
+        "Privacy PolicyPrivacy Policy"
+      ],
+      "canonical": "http://localhost:3000/privacy",
+      "robots": null,
+      "description": "How AJ System Soft Technology collects, uses and protects the information you share through our contact and quote forms.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nPrivacy Policy\n\nLEGAL\n\nPrivacy Policy\nPrivacy Policy\n\nPlain language, because privacy text you cannot understand protects no one.\n\nLast updated: 4 September 2026\n\nWhat we collect\n\nWhen you use our contact, quote or consultation forms we collect ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "contact page",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/projects",
+      "status": 200,
+      "finalPath": "/projects",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Projects & Case Studies | AJ System Soft Technology",
+      "h1": [
+        "Projects & case studiesProjects & case studies"
+      ],
+      "canonical": "http://localhost:3000/projects",
+      "robots": null,
+      "description": "Real client work by AJ System Soft Technology: web applications, SaaS platforms, mobile apps, desktop software and industry-specific business systems. Confidential engagements stay private.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nProjects\n\nPORTFOLIO\n\nProjects & case studies\nProjects & case studies\n\nA selection of the software we have delivered. Confidential engagements stay private by design — clients decide what is shown.\n\nCase studies are being prepared\n\nWe publish a p",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Browse services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Contact us",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/projects.webp",
+      "errors": []
+    },
+    {
+      "route": "/request-quote",
+      "status": 200,
+      "finalPath": "/request-quote",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Request a Quote | AJ System Soft Technology",
+      "h1": [
+        "Request a quoteRequest a quote"
+      ],
+      "canonical": "http://localhost:3000/request-quote",
+      "robots": null,
+      "description": "Tell AJ System Soft Technology your software requirements — project type, platform, industry and scope — and receive a practical plan with a transparent estimate.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "heading": "Home\nRequest a Quote\n\nSTART YOUR PROJECT\n\nRequest a quote\nRequest a quote\n\nTell us what you need — AJS Technology replies with a practical plan, the right platform and a transparent estimate. Only the marked fields are required; the rest help us prep",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "website",
+          "name": "website",
+          "type": "text",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "startedAt",
+          "name": "startedAt",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "fullName",
+          "name": "fullName",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "company",
+          "name": "company",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "phone",
+          "name": "phone",
+          "type": "tel",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "whatsapp",
+          "name": "whatsapp",
+          "type": "tel",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "location",
+          "name": "location",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Select a type…Business websiteWeb application / portalSaaS productMobile app (Android / iOS)Windows ",
+          "name": "projectType",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Select a platform…WebWeb + mobileAndroidiOSWindows desktopNot sure — advise me",
+          "name": "platform",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Select an industry…Retail & shopsHealthcare & clinicsPharmacyHospitality (hotels/restaurants)Manufac",
+          "name": "industry",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Select a range…Under ₹50,000₹50,000 – ₹2,00,000₹2,00,000 – ₹5,00,000₹5,00,000+Not sure yet",
+          "name": "budgetRange",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "Select a timeline…ASAPWithin 1 month1–3 months3–6 monthsJust exploring",
+          "name": "timeline",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "SELECT",
+          "label": "EmailPhone callWhatsApp",
+          "name": "preferredContact",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "requirements",
+          "name": "requirements",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "attachment",
+          "name": "attachment",
+          "type": "file",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "consent",
+          "name": "consent",
+          "type": "checkbox",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "agreementAccepted",
+          "name": "agreementAccepted",
+          "type": "checkbox",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View Agreement",
+          "name": null,
+          "type": null,
+          "href": "/service-agreement",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Request a quote",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/reset-password",
+      "status": 200,
+      "finalPath": "/reset-password",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Update Client Password | AJ System Soft Technology",
+      "h1": [
+        "Choose a new password"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Choose a new password for the AJS client portal.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to AJS Technology\n\nCLIENT WORKSPACE\n\nYour project details, updates and requests in one secure place.\n\nSign in to follow enquiries, view linked project information, manage your profile and share verified feedback after working with our team.\n\nPro",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to AJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": true
+        },
+        {
+          "tag": "INPUT",
+          "label": "confirmPassword",
+          "name": "confirmPassword",
+          "type": "password",
+          "href": null,
+          "disabled": true
+        },
+        {
+          "tag": "A",
+          "label": "Request a new recovery link",
+          "name": null,
+          "type": null,
+          "href": "/forgot-password",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/reviews",
+      "status": 200,
+      "finalPath": "/reviews",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Verified Client Reviews | AJ System Soft Technology",
+      "h1": [
+        "Real reviews from real software projectsReal reviews from real software projects"
+      ],
+      "canonical": "http://localhost:3000/reviews",
+      "robots": null,
+      "description": "Read verified real client reviews and feedback for software engineering, web application development, SaaS platforms, and enterprise solutions by AJ System Soft Technology.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "heading": "Home\nVerified Reviews\n\nVERIFIED CLIENT FEEDBACK\n\nReal reviews from real software projects\nReal reviews from real software projects\n\nAll reviews on this page are submitted exclusively by verified clients of AJ System Soft Technology and moderated for ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Submit Review",
+          "name": null,
+          "type": null,
+          "href": "/login",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View Case Studies",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Contact Our Team",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a Quote",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Contact Us",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/service-agreement",
+      "status": 200,
+      "finalPath": "/service-agreement",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Service Agreement | AJ System Soft Technology",
+      "h1": [
+        "Service AgreementService Agreement"
+      ],
+      "canonical": "http://localhost:3000/service-agreement",
+      "robots": null,
+      "description": "The AJ System Soft Technology service agreement: scope, support, customization, ownership, payment and acceptance terms for every project.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nService Agreement\n\nLEGAL\n\nService Agreement\nService Agreement\n\nHow we work with every client — scope, support and acceptance terms.\n\nThe current service agreement is not published yet. It is shared with every client before a project starts — req",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a Consultation",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "finalPath": "/services",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Services — Custom Software, SaaS, Web, Mobile & Business Systems | AJ System Soft Technology",
+      "h1": [
+        "Software services built around your requirementsSoftware services built around your requirements"
+      ],
+      "canonical": "http://localhost:3000/services",
+      "robots": null,
+      "description": "Software development services: custom software, SaaS platforms, web applications, websites, ecommerce, Android and iOS apps, desktop software, ERP, POS and industry-specific systems.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nServices\n\nSERVICES\n\nSoftware services built around your requirements\nSoftware services built around your requirements\n\nPick the closest match below — or simply tell us your problem and we will propose the right approach. Every engagement starts ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Software & Applications",
+          "name": null,
+          "type": null,
+          "href": "#category-software-applications",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Mobile & Desktop",
+          "name": null,
+          "type": null,
+          "href": "#category-mobile-desktop",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business Systems",
+          "name": null,
+          "type": null,
+          "href": "#category-business-systems",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Industry Solutions",
+          "name": null,
+          "type": null,
+          "href": "#category-industry-solutions",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your c",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards,",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors in",
+          "name": null,
+          "type": null,
+          "href": "/services/website-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and orde",
+          "name": null,
+          "type": null,
+          "href": "/services/ecommerce-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that ",
+          "name": null,
+          "type": null,
+          "href": "/services/android-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App S",
+          "name": null,
+          "type": null,
+          "href": "/services/ios-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need d",
+          "name": null,
+          "type": null,
+          "href": "/services/desktop-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reportin",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, m",
+          "name": null,
+          "type": null,
+          "href": "/services/api-system-integrations",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing mainten",
+          "name": null,
+          "type": null,
+          "href": "/services/cloud-deployment-maintenance",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by cli",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pha",
+          "name": null,
+          "type": null,
+          "href": "/services/pharmacy-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory",
+          "name": null,
+          "type": null,
+          "href": "/services/retail-pos-inventory",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hote",
+          "name": null,
+          "type": null,
+          "href": "/services/hotel-management-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a Quote",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View Projects",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/services.webp",
+      "errors": []
+    },
+    {
+      "route": "/signup",
+      "status": 200,
+      "finalPath": "/signup",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Create Client Account | AJ System Soft Technology",
+      "h1": [
+        "Start your client workspace"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Create a secure AJ System Soft Technology client portal account.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to AJS Technology\n\nCLIENT WORKSPACE\n\nYour project details, updates and requests in one secure place.\n\nSign in to follow enquiries, view linked project information, manage your profile and share verified feedback after working with our team.\n\nPro",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to AJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "GSign up with Google",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "fullName",
+          "name": "fullName",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "username",
+          "name": "username",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "phone",
+          "name": "phone",
+          "type": "tel",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "company",
+          "name": "company",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "confirmPassword",
+          "name": "confirmPassword",
+          "type": "password",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "addressLine1",
+          "name": "addressLine1",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "addressLine2",
+          "name": "addressLine2",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "city",
+          "name": "city",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "state",
+          "name": "state",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "postalCode",
+          "name": "postalCode",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "country",
+          "name": "country",
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "consent",
+          "name": "consent",
+          "type": "checkbox",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "privacy policy",
+          "name": null,
+          "type": null,
+          "href": "/privacy",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "agreementAccepted",
+          "name": "agreementAccepted",
+          "type": "checkbox",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View Agreement",
+          "name": null,
+          "type": null,
+          "href": "/service-agreement",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Create secure account",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Sign in",
+          "name": null,
+          "type": null,
+          "href": "/login",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/team",
+      "status": 200,
+      "finalPath": "/team",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Our Team | AJ System Soft Technology",
+      "h1": [
+        "The people behind AJS TechnologyThe people behind AJS Technology"
+      ],
+      "canonical": "http://localhost:3000/team",
+      "robots": null,
+      "description": "Meet the people of AJ System Soft Technology (AJS Technology) — the team that understands your requirements and builds, ships and supports your software.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "heading": "Home\nTeam\n\nOUR TEAM\n\nThe people behind AJS Technology\nThe people behind AJS Technology\n\nThe team that will understand your requirements, build your software and stay around to support it.\n\nTeam profiles are being prepared\n\nWe only publish real profil",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Contact us",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/team.webp",
+      "errors": []
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "finalPath": "/terms",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Terms & Conditions | AJ System Soft Technology",
+      "h1": [
+        "Terms & ConditionsTerms & Conditions"
+      ],
+      "canonical": "http://localhost:3000/terms",
+      "robots": null,
+      "description": "The terms that govern the use of the AJ System Soft Technology website and the engagement of our software development services.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Home\nTerms & Conditions\n\nLEGAL\n\nTerms & Conditions\nTerms & Conditions\n\nThe short version: we agree on scope in writing, you own what you pay for, and we keep your information confidential.\n\nLast updated: 30 August 2026\n\nAbout these terms\n\nThese terms",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/update-password",
+      "status": 200,
+      "finalPath": "/update-password",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Update Client Password | AJ System Soft Technology",
+      "h1": [
+        "Choose a new password"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Choose a new password for the AJS client portal.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to AJS Technology\n\nCLIENT WORKSPACE\n\nYour project details, updates and requests in one secure place.\n\nSign in to follow enquiries, view linked project information, manage your profile and share verified feedback after working with our team.\n\nPro",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to AJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": true
+        },
+        {
+          "tag": "INPUT",
+          "label": "confirmPassword",
+          "name": "confirmPassword",
+          "type": "password",
+          "href": null,
+          "disabled": true
+        },
+        {
+          "tag": "A",
+          "label": "Request a new recovery link",
+          "name": null,
+          "type": null,
+          "href": "/forgot-password",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/agreements",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/audit",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/brand",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/home/new",
+      "status": 200,
+      "finalPath": "/ajadmin/home/new",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Add Section",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "The home page builder needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/home",
+      "status": 200,
+      "finalPath": "/ajadmin/home",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Home Page Builder",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "The home page builder needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/leads",
+      "status": 200,
+      "finalPath": "/ajadmin/leads",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Leads",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Session expired — sign in again.",
+      "overflow": false,
+      "controls": [],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/login",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/media",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin",
+      "status": 200,
+      "finalPath": "/ajadmin",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Dashboard",
+      "h1": [
+        "Complete admin setup"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Complete admin setup\n\nConnect the production Supabase environment and apply migrations 0001–0012 before using the CMS. The public fallback site remains available while setup is incomplete.\n\nView public website",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "View public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/admin-dashboard-setup-blocked.webp",
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/users",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Secure Staff Login",
+      "h1": [
+        "Staff Administration"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Return to public website\nAJS\nStaff Administration\n\nAJ System Soft Technology · Internal CMS & Operations\n\nSupabase credentials not configured in environment variables.\n\nEncrypted Session · Access attempts logged & audited",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Return to public website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/auth/callback",
+      "status": 200,
+      "finalPath": "/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Client Login | AJ System Soft Technology",
+      "h1": [
+        "Welcome back!"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Secure client portal login for AJ System Soft Technology customers.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to website\nAJ\nAJS Technology\n\nCLIENT PORTAL\n\nWelcome back!\nSign in to your secure project workspace.\nEmail address*\nPassword*\nForgot password?\nGoogle sign-in could not be completed. Please try again.\nSign in to client portal\nG\nContinue with Goog",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "AJAJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "next",
+          "name": "next",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Show password",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Forgot password?",
+          "name": null,
+          "type": null,
+          "href": "/forgot-password",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Sign in to client portal",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "GContinue with Google",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Create an account",
+          "name": null,
+          "type": null,
+          "href": "/signup",
+          "disabled": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fclient-workspace.webp&w=3840&q=75",
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/auth/confirm",
+      "status": 200,
+      "finalPath": "/login",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "Client Login | AJ System Soft Technology",
+      "h1": [
+        "Welcome back!"
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "Secure client portal login for AJ System Soft Technology customers.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "Back to website\nAJ\nAJS Technology\n\nCLIENT PORTAL\n\nWelcome back!\nSign in to your secure project workspace.\nEmail address*\nPassword*\nForgot password?\ninvalid_email_link\nSign in to client portal\nG\nContinue with Google\n\nNew here? Create an account",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to website",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "AJAJS Technology",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_REF_1",
+          "name": "$ACTION_REF_1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:0",
+          "name": "$ACTION_1:0",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_1:1",
+          "name": "$ACTION_1:1",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "$ACTION_KEY",
+          "name": "$ACTION_KEY",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "next",
+          "name": "next",
+          "type": "hidden",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "email",
+          "name": "email",
+          "type": "email",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "label": "password",
+          "name": "password",
+          "type": "password",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Show password",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Forgot password?",
+          "name": null,
+          "type": null,
+          "href": "/forgot-password",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Sign in to client portal",
+          "name": null,
+          "type": "submit",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "GContinue with Google",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Create an account",
+          "name": null,
+          "type": null,
+          "href": "/signup",
+          "disabled": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fclient-workspace.webp&w=3840&q=75",
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/blog/rss.xml",
+      "status": 200,
+      "finalPath": "/blog/rss.xml",
+      "headers": {
+        "contentType": "application/rss+xml; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    },
+    {
+      "route": "/design-preview",
+      "status": 200,
+      "finalPath": "/design-preview",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Design preview | AJS Technology | AJ System Soft Technology",
+      "h1": [
+        "Software built aroundyour requirements."
+      ],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore Projects",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore what we build",
+          "name": null,
+          "type": null,
+          "href": "#home-services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore all services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/android-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Learn more",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore service",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Discovery & requirements01",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Proposal & planning02",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Design & development03",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Testing & deployment04",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Support & growth05",
+          "name": null,
+          "type": null,
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Explore all services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View all articles",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one gi",
+          "name": null,
+          "type": null,
+          "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really",
+          "name": null,
+          "type": null,
+          "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Planning3 min readHow to plan a custom software projectA practical checklist for the first four week",
+          "name": null,
+          "type": null,
+          "href": "/blog/how-to-plan-a-custom-software-project",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "View all articles",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Request a Consultation",
+          "name": null,
+          "type": null,
+          "href": "/contact",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/custom-software-development",
+      "status": 200,
+      "finalPath": "/services/custom-software-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Custom Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Custom Software Development"
+      ],
+      "canonical": "http://localhost:3000/services/custom-software-development",
+      "robots": null,
+      "description": "Custom software built around your exact requirements — specification, development, deployment and support, with full source code ownership.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nCustom Software Development\n\nSOFTWARE & APPLICATIONS\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nDiscuss your project\nSee our work\n\nOff-the-shelf to",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How much does custom software cost?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How long does a custom build take?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Who owns the software?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your c",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards,",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors in",
+          "name": null,
+          "type": null,
+          "href": "/services/website-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/saas-development",
+      "status": 200,
+      "finalPath": "/services/saas-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "SaaS Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "SaaS Development"
+      ],
+      "canonical": "http://localhost:3000/services/saas-development",
+      "robots": null,
+      "description": "Multi-tenant SaaS development: onboarding, subscriptions, dashboards, APIs and admin tooling, built to scale from pilot to product.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nSaaS Development\n\nSOFTWARE & APPLICATIONS\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nDiscuss your project\nSee our work\n\nTurning a service idea into a subscrip",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can you build on top of our existing product?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Which billing systems do you integrate?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can the product start small and grow?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards,",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors in",
+          "name": null,
+          "type": null,
+          "href": "/services/website-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/web-application-development",
+      "status": 200,
+      "finalPath": "/services/web-application-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Web Application Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Web Application Development"
+      ],
+      "canonical": "http://localhost:3000/services/web-application-development",
+      "robots": null,
+      "description": "Secure, fast web applications: portals, dashboards, role-based access, reporting and integrations — built to handle real daily workloads.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nWeb Application Development\n\nSOFTWARE & APPLICATIONS\n\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nDiscuss your project\nSee our work\n\nA web application ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Will the application work on mobile devices?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can it connect to our existing software?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "What happens if traffic grows suddenly?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your c",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors in",
+          "name": null,
+          "type": null,
+          "href": "/services/website-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/website-development",
+      "status": 200,
+      "finalPath": "/services/website-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Website Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Website Development"
+      ],
+      "canonical": "http://localhost:3000/services/website-development",
+      "robots": null,
+      "description": "Professional business websites: responsive design, fast loading, CMS editing, contact forms and technical SEO done properly from day one.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nWebsite Development\n\nSOFTWARE & APPLICATIONS\n\nWebsite Development\n\nProfessional, fast-loading company websites that build trust and turn visitors into enquiries.\n\nDiscuss your project\nSee our work\n\nYour website is often the first seriou",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can we update the website ourselves?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Will the site rank on Google?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can you redesign our existing site?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your c",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards,",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/ecommerce-development",
+      "status": 200,
+      "finalPath": "/services/ecommerce-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Ecommerce Website Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Ecommerce Development"
+      ],
+      "canonical": "http://localhost:3000/services/ecommerce-development",
+      "robots": null,
+      "description": "Online store development: catalogue, secure payments, order management, stock sync and reporting — engineered around how you fulfil orders.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nEcommerce Development\n\nSOFTWARE & APPLICATIONS\n\nEcommerce Development\n\nOnline stores with clean product catalogues, smooth checkout, payments and order management.\n\nDiscuss your project\nSee our work\n\nAn online store succeeds on details:",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Which payment gateways can we use?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can the store connect to our shop's billing software?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Who handles product photos and descriptions?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your c",
+          "name": null,
+          "type": null,
+          "href": "/services/saas-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards,",
+          "name": null,
+          "type": null,
+          "href": "/services/web-application-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/android-app-development",
+      "status": 200,
+      "finalPath": "/services/android-app-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Android App Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Android App Development"
+      ],
+      "canonical": "http://localhost:3000/services/android-app-development",
+      "robots": null,
+      "description": "Native Android app development: Play Store release, backend APIs, offline support, push notifications and crash monitoring.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nAndroid App Development\n\nMOBILE & DESKTOP\n\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nDiscuss your project\nSee our work\n\nAndroid runs on an enorm",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Do you publish the app under our account?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can the app work without internet?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Should we build Android and iOS together?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App S",
+          "name": null,
+          "type": null,
+          "href": "/services/ios-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need d",
+          "name": null,
+          "type": null,
+          "href": "/services/desktop-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/ios-app-development",
+      "status": 200,
+      "finalPath": "/services/ios-app-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "iOS App Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "iOS App Development"
+      ],
+      "canonical": "http://localhost:3000/services/ios-app-development",
+      "robots": null,
+      "description": "Native iOS app development with Swift: App Store release support, secure authentication, push notifications and ongoing OS updates.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\niOS App Development\n\nMOBILE & DESKTOP\n\niOS App Development\n\nNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.\n\nDiscuss your project\nSee our work\n\niOS users notice quality. We build iPhone and i",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Do we need a Mac or an Apple developer account?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can one app serve both iOS and Android?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How do you handle App Store review?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that ",
+          "name": null,
+          "type": null,
+          "href": "/services/android-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need d",
+          "name": null,
+          "type": null,
+          "href": "/services/desktop-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/desktop-software-development",
+      "status": 200,
+      "finalPath": "/services/desktop-software-development",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Desktop & Windows Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Desktop Software Development"
+      ],
+      "canonical": "http://localhost:3000/services/desktop-software-development",
+      "robots": null,
+      "description": "Windows desktop software development: simple installers, offline operation, printer and barcode hardware integration, auto-updates.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nDesktop Software Development\n\nMOBILE & DESKTOP\n\nDesktop Software Development\n\nWindows desktop and EXE software for shops, offices and labs that need dependable local machines.\n\nDiscuss your project\nSee our work\n\nSome work belongs on the",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can the desktop software run without internet?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can it print to our existing printer?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Which Windows versions are supported?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that ",
+          "name": null,
+          "type": null,
+          "href": "/services/android-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App S",
+          "name": null,
+          "type": null,
+          "href": "/services/ios-app-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/erp-business-software",
+      "status": 200,
+      "finalPath": "/services/erp-business-software",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "ERP & CRM Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "ERP & Business Software"
+      ],
+      "canonical": "http://localhost:3000/services/erp-business-software",
+      "robots": null,
+      "description": "ERP, CRM and inventory software: live stock, invoicing, approvals and management dashboards — implemented in stages with data migration.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nERP & Business Software\n\nBUSINESS SYSTEMS\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nDiscuss your project\nSee our work\n\nAn ERP succeeds when it mirrors how y",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Should we buy a standard ERP or build one?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can it start with just inventory and billing?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How is our existing data migrated?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, m",
+          "name": null,
+          "type": null,
+          "href": "/services/api-system-integrations",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing mainten",
+          "name": null,
+          "type": null,
+          "href": "/services/cloud-deployment-maintenance",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/hospital-clinic-software",
+      "status": 200,
+      "finalPath": "/services/hospital-clinic-software",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Hospital & Clinic Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Hospital & Clinic Software"
+      ],
+      "canonical": "http://localhost:3000/services/hospital-clinic-software",
+      "robots": null,
+      "description": "Hospital and clinic management software: patient records, appointments, prescriptions, departmental billing and role-based data protection.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nHospital & Clinic Software\n\nINDUSTRY SOLUTIONS\n\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nDiscuss your project\nSee our work\n\nHospitals and clinics cannot affo",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can it work for a single-doctor clinic?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How is patient data protected?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can existing patient records be imported?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pha",
+          "name": null,
+          "type": null,
+          "href": "/services/pharmacy-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory",
+          "name": null,
+          "type": null,
+          "href": "/services/retail-pos-inventory",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hote",
+          "name": null,
+          "type": null,
+          "href": "/services/hotel-management-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/pharmacy-software",
+      "status": 200,
+      "finalPath": "/services/pharmacy-software",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Pharmacy Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Pharmacy Software"
+      ],
+      "canonical": "http://localhost:3000/services/pharmacy-software",
+      "robots": null,
+      "description": "Pharmacy management software: fast counter billing, batch and expiry tracking, substitute lookups, supplier ledgers and GST reports.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nPharmacy Software\n\nINDUSTRY SOLUTIONS\n\nPharmacy Software\n\nMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.\n\nDiscuss your project\nSee our work\n\nA pharmacy counter lives and dies by speed and acc",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can we import our existing medicine list?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Does it handle both retail and wholesale billing?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Will it run on the computer at our counter?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by cli",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory",
+          "name": null,
+          "type": null,
+          "href": "/services/retail-pos-inventory",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hote",
+          "name": null,
+          "type": null,
+          "href": "/services/hotel-management-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/retail-pos-inventory",
+      "status": 200,
+      "finalPath": "/services/retail-pos-inventory",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Retail POS & Inventory Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Retail POS & Inventory"
+      ],
+      "canonical": "http://localhost:3000/services/retail-pos-inventory",
+      "robots": null,
+      "description": "POS and inventory software: fast counter billing, live multi-location stock, daily closing reports and owner dashboards.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nRetail POS & Inventory\n\nINDUSTRY SOLUTIONS\n\nRetail POS & Inventory\n\nBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.\n\nDiscuss your project\nSee our work\n\nRetail software earns its keep at ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can multiple counters share one stock?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Does it work with barcode scanners and thermal printers?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can the owner check sales from home?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by cli",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pha",
+          "name": null,
+          "type": null,
+          "href": "/services/pharmacy-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hote",
+          "name": null,
+          "type": null,
+          "href": "/services/hotel-management-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/hotel-management-software",
+      "status": 200,
+      "finalPath": "/services/hotel-management-software",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Hotel Management Software Development Company in India | AJ System Soft Technology",
+      "h1": [
+        "Hotel Management Software"
+      ],
+      "canonical": "http://localhost:3000/services/hotel-management-software",
+      "robots": null,
+      "description": "Hotel software: room availability calendar, check-in/out, housekeeping workflow, split billing, agent ledgers and occupancy reports.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nHotel Management Software\n\nINDUSTRY SOLUTIONS\n\nHotel Management Software\n\nFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.\n\nDiscuss your project\nSee our work\n\nA hotel's day is a moving puzz",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can it handle both rooms and a restaurant?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Does it support online bookings from our website?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "What about different tariff seasons?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by cli",
+          "name": null,
+          "type": null,
+          "href": "/services/hospital-clinic-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pha",
+          "name": null,
+          "type": null,
+          "href": "/services/pharmacy-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory",
+          "name": null,
+          "type": null,
+          "href": "/services/retail-pos-inventory",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/api-system-integrations",
+      "status": 200,
+      "finalPath": "/services/api-system-integrations",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "API Integration Services Company in India | AJ System Soft Technology",
+      "h1": [
+        "API & System Integrations"
+      ],
+      "canonical": "http://localhost:3000/services/api-system-integrations",
+      "robots": null,
+      "description": "System integration services: payment webhooks, WhatsApp and SMS, accounting exchanges, marketplace imports and legacy bridges — built to fail safely.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nAPI & System Integrations\n\nBUSINESS SYSTEMS\n\nAPI & System Integrations\n\nConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.\n\nDiscuss your project\nSee our work\n\nMost businesses do no",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can you integrate with our old legacy software?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "What happens when one side goes down?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Is it safe to share API keys with you?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reportin",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing mainten",
+          "name": null,
+          "type": null,
+          "href": "/services/cloud-deployment-maintenance",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/cloud-deployment-maintenance",
+      "status": 200,
+      "finalPath": "/services/cloud-deployment-maintenance",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Cloud Application Modernization & Maintenance in India | AJ System Soft Technology",
+      "h1": [
+        "Cloud Deployment & Maintenance"
+      ],
+      "canonical": "http://localhost:3000/services/cloud-deployment-maintenance",
+      "robots": null,
+      "description": "Cloud deployment and maintenance: pipelines, automated backups with tested restores, monitoring with alerts and scheduled security updates.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "heading": "Home\nServices\nCloud Deployment & Maintenance\n\nBUSINESS SYSTEMS\n\nCloud Deployment & Maintenance\n\nReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.\n\nDiscuss your project\nSee our work\n\nSoftware is not fini",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Services",
+          "name": null,
+          "type": null,
+          "href": "/services",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Discuss your project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "See our work",
+          "name": null,
+          "type": null,
+          "href": "/projects",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Can you maintain software you did not build?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Which cloud providers do you work with?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "How quickly do you respond to an outage?",
+          "name": null,
+          "type": "button",
+          "href": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reportin",
+          "name": null,
+          "type": null,
+          "href": "/services/erp-business-software",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, m",
+          "name": null,
+          "type": null,
+          "href": "/services/api-system-integrations",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from",
+          "name": null,
+          "type": null,
+          "href": "/services/custom-software-development",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/blog/how-to-plan-a-custom-software-project",
+      "status": 200,
+      "finalPath": "/blog/how-to-plan-a-custom-software-project",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "How to plan a custom software project | AJ System Soft Technology",
+      "h1": [
+        "How to plan a custom software project"
+      ],
+      "canonical": "http://localhost:3000/blog/how-to-plan-a-custom-software-project",
+      "robots": null,
+      "description": "A practical checklist for the first four weeks of a custom software project — before a single line of code is written.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "heading": "Home\nBlog\nHow to plan a custom software project\nPlanning\nHow to plan a custom software project\nAJ System Soft Technology\n30 August 2026\n3 min read\n\nMost software projects do not fail in the code; they fail in the planning. Here is the sequence we tak",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Blog",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Write down the actual workflow",
+          "name": null,
+          "type": null,
+          "href": "#write-down-the-actual-workflow",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Separate must-haves from nice-to-haves",
+          "name": null,
+          "type": null,
+          "href": "#separate-must-haves-from-nice-to-haves",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Decide who signs off",
+          "name": null,
+          "type": null,
+          "href": "#decide-who-signs-off",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Agree what success looks like",
+          "name": null,
+          "type": null,
+          "href": "#agree-what-success-looks-like",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Budget for the boring parts",
+          "name": null,
+          "type": null,
+          "href": "#budget-for-the-boring-parts",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business systemsWhat ERP digitisation actually means for small businessesERP is not one giant system",
+          "name": null,
+          "type": null,
+          "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "PlatformsWeb app or mobile app: choosing the right platformThe platform question is really a user qu",
+          "name": null,
+          "type": null,
+          "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "status": 200,
+      "finalPath": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "Web app or mobile app: choosing the right platform | AJ System Soft Technology",
+      "h1": [
+        "Web app or mobile app: choosing the right platform"
+      ],
+      "canonical": "http://localhost:3000/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "robots": null,
+      "description": "The platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "heading": "Home\nBlog\nWeb app or mobile app: choosing the right platform\nPlatforms\nWeb app or mobile app: choosing the right platform\nAJ System Soft Technology\n30 August 2026\n3 min read\n\n\"Should we build a web app or a mobile app?\" is usually the first question ",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Blog",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Check where the work happens",
+          "name": null,
+          "type": null,
+          "href": "#check-where-the-work-happens",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Check how often users return",
+          "name": null,
+          "type": null,
+          "href": "#check-how-often-users-return",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Check the data connection",
+          "name": null,
+          "type": null,
+          "href": "#check-the-data-connection",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Check the budget honestly",
+          "name": null,
+          "type": null,
+          "href": "#check-the-budget-honestly",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Business systemsWhat ERP digitisation actually means for small businessesERP is not one giant system",
+          "name": null,
+          "type": null,
+          "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "PlanningHow to plan a custom software projectA practical checklist for the first four weeks of a cus",
+          "name": null,
+          "type": null,
+          "href": "/blog/how-to-plan-a-custom-software-project",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "status": 200,
+      "finalPath": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "What ERP digitisation actually means for small businesses | AJ System Soft Technology",
+      "h1": [
+        "What ERP digitisation actually means for small businesses"
+      ],
+      "canonical": "http://localhost:3000/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "robots": null,
+      "description": "ERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.",
+      "schema": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting"
+      ],
+      "heading": "Home\nBlog\nWhat ERP digitisation actually means for small businesses\nBusiness systems\nWhat ERP digitisation actually means for small businesses\nAJ System Soft Technology\n30 August 2026\n3 min read\n\n\"ERP\" sounds like enterprise software with an enterpri",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Blog",
+          "name": null,
+          "type": null,
+          "href": "/blog",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Stage one: make stock honest",
+          "name": null,
+          "type": null,
+          "href": "#stage-one-make-stock-honest",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Stage two: connect billing to stock",
+          "name": null,
+          "type": null,
+          "href": "#stage-two-connect-billing-to-stock",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Stage three: purchasing and approvals",
+          "name": null,
+          "type": null,
+          "href": "#stage-three-purchasing-and-approvals",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Stage four: dashboards",
+          "name": null,
+          "type": null,
+          "href": "#stage-four-dashboards",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "What this looks like in practice",
+          "name": null,
+          "type": null,
+          "href": "#what-this-looks-like-in-practice",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "PlatformsWeb app or mobile app: choosing the right platformThe platform question is really a user qu",
+          "name": null,
+          "type": null,
+          "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "PlanningHow to plan a custom software projectA practical checklist for the first four weeks of a cus",
+          "name": null,
+          "type": null,
+          "href": "/blog/how-to-plan-a-custom-software-project",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "label": "Start Your Project",
+          "name": null,
+          "type": null,
+          "href": "/request-quote",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/c/services",
+      "status": 200,
+      "finalPath": "/ajadmin/c/services",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — Services",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Services needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "screenshot": "screenshots/admin-crud-setup-blocked.webp",
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/c/services/new",
+      "status": 200,
+      "finalPath": "/ajadmin/c/services/new",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Services needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/c/services/00000000-0000-0000-0000-000000000000",
+      "status": 200,
+      "finalPath": "/ajadmin/c/services/00000000-0000-0000-0000-000000000000",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "Services needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/ajadmin/c/ai-methods",
+      "status": 200,
+      "finalPath": "/ajadmin/c/ai-methods",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": "noindex, nofollow",
+        "frame": "DENY"
+      },
+      "title": "AJS Admin — AI Methods",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "AI Methods needs Supabase first.\n\nFollow docs/PHASE-2-SUPABASE-SETUP.md to apply the migrations and configure .env.local — then this module goes live. Back to site",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to site",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/offers",
+      "status": 404,
+      "finalPath": "/offers",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "noindex",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/updates",
+      "status": 404,
+      "finalPath": "/updates",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "noindex",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/portal",
+      "status": 404,
+      "finalPath": "/portal",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "noindex",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/profile",
+      "status": 404,
+      "finalPath": "/profile",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "noindex",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/projects/phase0-nonexistent",
+      "status": 404,
+      "finalPath": "/projects/phase0-nonexistent",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "index, follow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/services/phase0-nonexistent",
+      "status": 404,
+      "finalPath": "/services/phase0-nonexistent",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [],
+      "canonical": null,
+      "robots": "noindex",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [],
+      "overflow": false,
+      "controls": [],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/blog/phase0-nonexistent",
+      "status": 404,
+      "finalPath": "/blog/phase0-nonexistent",
+      "headers": {
+        "contentType": "text/html; charset=utf-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "h1": [
+        "Page not found"
+      ],
+      "canonical": null,
+      "robots": "index, follow",
+      "description": "AJ System Soft Technology designs and builds custom software, SaaS platforms, websites, web and mobile apps, desktop software and industry-specific business systems such as ERP, CRM, POS and hospital software — built around each client's requirements.",
+      "schema": [
+        "Organization",
+        "WebSite"
+      ],
+      "heading": "404\n\nPage not found\n\nThe page you are looking for does not exist or may have moved.\n\nBack to home",
+      "overflow": false,
+      "controls": [
+        {
+          "tag": "A",
+          "label": "Back to home",
+          "name": null,
+          "type": null,
+          "href": "/",
+          "disabled": false
+        }
+      ],
+      "images": [],
+      "errors": []
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "finalPath": "/robots.txt",
+      "headers": {
+        "contentType": "text/plain",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "finalPath": "/sitemap.xml",
+      "headers": {
+        "contentType": "application/xml",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    },
+    {
+      "route": "/ads.txt",
+      "status": 200,
+      "finalPath": "/ads.txt",
+      "headers": {
+        "contentType": "text/plain; charset=UTF-8",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    },
+    {
+      "route": "/opengraph-image",
+      "status": 200,
+      "finalPath": "/opengraph-image",
+      "headers": {
+        "contentType": "image/png",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    },
+    {
+      "route": "/icon",
+      "status": 200,
+      "finalPath": "/icon",
+      "headers": {
+        "contentType": "image/png",
+        "noindex": null,
+        "frame": "DENY"
+      },
+      "errors": []
+    }
+  ],
+  "mobileBaseline": {
+    "x": 14,
+    "y": 744,
+    "width": 362,
+    "height": 84,
+    "text": "Home\nServices\nMore\nProjects\nContact",
+    "overflow": false
+  },
+  "gestures": {
+    "mobileMoreOpen": true,
+    "mobileMoreClosed": true
+  }
+}
