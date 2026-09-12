@@ -1,4 +1,8 @@
-# Phase 9 — concurrent-workspace safety pause
+# Phase 9 — concurrent-workspace safety pause (historical)
+
+## Resumed after owner clarification
+
+The owner confirmed **“Sirf yahi chat”** on 2026-09-12. The prior overlap's cause remains unestablished; do not assume another user editing session or repeat that question. Work resumed from stable, clean HEAD `7025675dbc5d6f3ea303c5bee6212faf7debe31b`. See [PHASE_9_ADMIN_QA](PHASE_9_ADMIN_QA.md) for fresh 363-test/typecheck/lint/isolated-build results and the remaining private verification gates. The pause evidence below is historical, not the latest execution gate.
 
 Date: 2026-09-12. Start HEAD: `3da085dba4f7a0723d1a92d7850443ca7392d348`, branch `system-upgrade-init`; starting worktree clean. Owner authorized `CONTINUE NEXT PHASE SAFLY` after declining Supabase secret setup. Phase 8 authenticated gates remain deferred. Phase 9 was started, NOT completed; no Phase 10 authorization implied.
 

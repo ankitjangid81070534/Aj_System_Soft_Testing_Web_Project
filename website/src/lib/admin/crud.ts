@@ -86,7 +86,9 @@ export async function getAdjacentRowId(
   const admin = createSupabaseAdminLooseClient();
   const column = config.defaultOrder.column;
   const current = typeof row[column] === "number" ? (row[column] as number) : null;
-  if (current === null) return null;
+  if (current === null || !Number.isFinite(current)) {
+    throw new Error("This record has no valid ordering value. Refresh the list.");
+  }
 
   let query = admin.from(config.table).select("*");
   if (config.supports.softDelete) query = query.is("deleted_at", null);
@@ -94,10 +96,13 @@ export async function getAdjacentRowId(
     ascending: config.defaultOrder.asc,
     nullsFirst: false,
   });
-  if (error || !data) return null;
-  const rows = (data ?? []) as unknown as AdminRow[];
+  // null means a confirmed list boundary, not a failed read. The action form
+  // catches these errors and keeps the failure visible without claiming success.
+  if (error || !data) throw new Error("The ordering data could not be loaded.");
+  const rows = data as unknown as AdminRow[];
 
   const index = rows.findIndex((item) => item.id === row.id);
+  if (index < 0) throw new Error("This record is no longer in the ordering list.");
   const target = direction === "up" ? rows[index - 1] : rows[index + 1];
   return target ? String(target.id) : null;
 }

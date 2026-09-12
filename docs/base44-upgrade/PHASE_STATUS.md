@@ -1,14 +1,14 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA — IN PROGRESS; PAUSED FOR CONCURRENT WORKSPACE EDITS
+CURRENT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA — RESUMED; LOCAL SAFETY CHECKS PASS, PRIVATE VERIFICATION INCOMPLETE
 LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 and Phase 8 authenticated gates remain INCOMPLETE / DEFERRED
-NEXT_PHASE: Finish Phase 9 safely after workspace reconciliation; Phase 10 NOT authorized
-LAST_COMMIT_HASH: 3da085dba4f7a0723d1a92d7850443ca7392d348
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Phase 9 combined tree is not production-build/regression certified.
+NEXT_PHASE: Finish Phase 9 admin QA within available access; Phase 10 NOT authorized
+LAST_COMMIT_HASH: 7025675dbc5d6f3ea303c5bee6212faf7debe31b
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Fresh isolated production build and local regressions pass; no deployment or authenticated release sign-off.
 
-## Current safety pause — overrides historical execution gates below
+## Current continuation — overrides historical execution gates below
 
-Owner authorized `CONTINUE NEXT PHASE SAFLY` after declining credentials again. Phase 9 began, but simultaneous edits of the same admin files appeared from an unidentified writer. See [PHASE_9_CONCURRENCY_PAUSE](PHASE_9_CONCURRENCY_PAUSE.md). Do not overwrite the other edits or mark this phase complete. Fresh typecheck, whitespace and admin-login HTTP response pass; current preview has a hydration mismatch error, no failed requests/overlay and nonempty main. No fresh gesture, responsive visual, persistence or production-build sign-off. Await a single-writer decision before continuing; Phase 10 must not begin. Other phase/test/file sections below are retained historical evidence, not Phase 9 passes. The hash above is the verified pre-edit Phase 9 HEAD, not a fabricated post-turn commit.
+Owner confirmed **“Sirf yahi chat”**. The old overlap's cause is unestablished; do not assume another user session or repeat the coordination question. Resumed from the stable, clean committed checkpoint. See [PHASE_9_ADMIN_QA](PHASE_9_ADMIN_QA.md): fixed a demonstrated reorder-lookup false-success/wrong-neighbor risk and added 46 adapter-level regression tests. Fresh **363 tests / 38 files**, typecheck, lint, whitespace and isolated production build PASS. Existing auth, role, mutation, cache and public UI contracts were retained. Private gestures/persistence are NOT automatically verified; preview navigation assertions were inconclusive and an older hydration error remained buffered. No credentials were requested/generated or records written. Phase 9 is not complete and Phase 10 must not begin. Sections below are historical evidence, not fresh Phase 9 passes. The hash above is the actual pre-edit HEAD for this continuation, not a post-turn commit.
 
 The hash is the actual pre-edit HEAD for cross-chat recovery, not a post-turn commit. At recovery start, fetched main and system-upgrade-init were identical at this merge of PR #7; all other fetched branch tips were ancestors, so there is no unmerged unique work to combine. No branch switch/deletion, direct main push, manual commit or deployment was performed. Base44 commits/pushes at turn end; the owner explicitly requests PR creation for this work and alongside future completed phases, not automatic merging of newly opened PRs.
 
