@@ -27,8 +27,9 @@
 .skipLink:focus { top: 12px; }
 .headerFrame, .footerFrame { --purple: #2563eb; --ink: var(--color-ink); --muted: var(--color-ink-muted); }
 .headerFrame { position: relative; z-index: 40; background: #fff; transition: background-color 450ms ease; }
-/* Leave room to reach footer links above the persistent bottom dock. */
+/* Reserve footer clearance only while the navigation is a bottom dock. */
 .footerFrame { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) { .footerFrame { padding-bottom: 0; } }
 .headerFrame[data-scene-tone="dark"] { background: #100c1d; }
 .headerFrame[data-scene-tone="dark"] > header { --color-ink: #f4ecff; --color-ink-muted: #c5b5d8; --color-ink-soft: #e2d3f3; }
 .headerFrame[data-scene-tone="dark"] :global(.glass-strong) { background: #100c1de8; transition: background-color 450ms ease; }
