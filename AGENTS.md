@@ -1,9 +1,11 @@
 # Base44 Dev Environment
 
-## Current Phase 11 checkpoint (2026-09-12)
-- Phase 11 research-only deliverables are complete; start with `docs/base44-upgrade/PHASE_STATUS.md`, `SEO_KEYWORD_MAP.md` and `PHASE_11_CONTENT_PROPOSALS.md`. Phase 12 is not authorized; earlier Phase 1/8/9 private gates remain deferred.
-- `seo-keywords-5000.csv` has exactly 5,000 source-derived candidates, not observed demand or content to publish. Counts: en 1,680 / hi 1,660 / hi-Latn 1,660; 18 existing owners. Empty volume/difficulty fields mean unknown. Do not recycle the historical missing 5,000-keyword text-file claims or create separate URLs for variants.
-- Fresh corpus/script/source checks and all 31 mapped local public responses pass; `evidence/phase11-corpus-verification.json` pins the CSV SHA-256 and route evidence. Recheck that digest after any CSV edit. No application/config/data changes, fresh visual/authenticated verification, deployment or published-domain indexing are part of this phase.
+## Current Phase 11 recovery checkpoint (2026-09-12)
+- Read the top of `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_11_RECOVERY.md` first. Earlier completion notes missed taxonomy gaps: recovery added 23 overlapping master research groups, 15 evidence-backed candidate replacements and the existing Disclaimer map entry. Still exactly 5,000 candidates: en 1,680 / hi 1,660 / hi-Latn 1,660; now 19 owners / 32 mapped public pages. Demand remains unknown.
+- The corpus digest, source checks and 32 current local responses are in `evidence/phase11-corpus-verification.json`; revalidate it after CSV edits. Fresh 384 tests / 44 files, typecheck, lint and isolated copied-source production build pass. Browser returned no tab; private gates remain deferred, not passed.
+- Fresh main `f53d765` is tree-identical to pre-edit `7fc7b45`; every fetched branch is included in main. No unique work needs combining. Use managed branch → PR → main, never direct main writes, mass deletion or redundant merges. The owner requests a PR alongside each completed phase.
+- Phase 12 is stopped until `START NEXT PHASE SAFELY`. With that phase, add existing Privacy/Disclaimer links to desktop top navigation and mobile More as requested, preserving tablet/Portal/CTA behavior. Do not reinterpret this as a wholesale navbar redesign or permission for new pages.
+- Existing dev compose was reused successfully. No app/config/data/secrets changes; no visual/authenticated/deployment or field-performance sign-off. Prior missing/declined integration configuration remains unchanged.
 
 ## Historical Phase 10 checkpoint (2026-09-12)
 - Owner authorized the next phase after Phase 9 private gates were disclosed. Phase 10 local technical SEO is complete; read `PHASE_10_TECHNICAL_SEO.md` and top of `PHASE_STATUS.md`. Earlier Phase 1/8/9 private gates stay deferred, not passed; Phase 11 is not authorized. Earlier phase-gate notes below are historical.

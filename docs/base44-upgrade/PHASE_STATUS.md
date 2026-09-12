@@ -1,12 +1,29 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 11 — ADVANCED SEO / 5,000-QUERY RESEARCH — LOCAL RESEARCH DELIVERABLES COMPLETE
+CURRENT_PHASE: 11 — ADVANCED SEO / 5,000-QUERY RESEARCH — RECOVERY COVERAGE COMPLETE
 LAST_COMPLETED_PHASE: 11 — research-only scope; Phase 1/8/9 authenticated gates remain INCOMPLETE / DEFERRED (not contiguous full sign-off)
-NEXT_PHASE: 12 — content SEO / buyer intent; STOP pending separate authorization
-LAST_COMMIT_HASH: 61c7752479aa50960dfd4a71de6ca67a27852e34
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. No deployment, observed search-demand evidence, live-domain indexing or authenticated release sign-off.
+NEXT_PHASE: 12 — content SEO / buyer intent + requested Privacy/Disclaimer navigation links; STOP pending `START NEXT PHASE SAFELY`
+FILES_CHANGED_LAST_PHASE: AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; SEO_KEYWORD_MAP.md; seo-keywords-5000.csv; PHASE_11_RECOVERY.md; evidence/phase11-corpus-verification.json (unqualified paths under docs/base44-upgrade)
+TESTS_LAST_PHASE: PASS — 5,000 unique normalized candidates, 23 master research groups / 19 existing owners, source excerpts, preserved IDs/language counts, unique page primaries and 3–8 secondaries, 32 mapped HTTP 200/H1/preview-noindex responses, sitemap/link coverage; 384 tests / 44 files; typecheck; lint; isolated production build. Browser: UNVERIFIED (no browser tab available). No authenticated persistence or deployment pass.
+KNOWN_RISKS: Research candidates are not observed demand; native-language and per-query editorial review still needed. Prior auth/admin/portal and production gates remain deferred. Old view in another project/chat has no established cause; local and main code trees matched at recovery start.
+BLOCKERS: No blocker for research-only completion. Authenticated verification remains blocked by prior missing/declined integration configuration and test-session access; browser verification unavailable this turn. No Search Console dataset/authorized connector.
+APPROVALS_NEEDED: Exact continuation command before Phase 12; new article/service URLs and unverified business/contractual claims need separate review. Owner requests a PR per completed phase; use managed PR flow, not direct main pushes or mass deletion. Privacy/Disclaimer desktop-top/mobile-More placement is already requested for the next phase.
+LAST_COMMIT_HASH: 7fc7b45e1036b7e7ef4364e34fe40fbd7fe9f2cd (actual pre-edit HEAD; the platform creates the resulting commit, not a fabricated post-edit hash)
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. No deployment, remote data migration, field performance measurement, live-domain indexing or authenticated release sign-off.
 
-## Current Phase 11 continuation — overrides historical execution gates below
+## Current Phase 11 recovery — authoritative over historical gates below
+
+See [PHASE_11_RECOVERY](PHASE_11_RECOVERY.md). The owner requested verification of the interrupted phase and completion before advancing. The original CSV was intact but missing explicit Brand/CRM/Automation candidates, comparison intent and the master's 23-group taxonomy. Fifteen redundant variants were replaced; exactly **5,000** candidates remain (**1,680 English / 1,660 Hindi / 1,660 Hinglish**). All rows now have overlapping `master_clusters` while keeping one existing topic owner. Added the already-existing `/disclaimer` to the map (32 public pages), without changing legal copy or routes.
+
+Fresh Git fetch: main `f53d765` is the PR #8 merge, one commit ahead but **tree-identical** to starting HEAD; all fetched branch tips are ancestors of main. There is no unique branch work needing merge. No branch switch, deletion, direct main write, manual commit/push or merge occurred. The managed working branch remains the edit surface and PRs are the main integration path.
+
+Existing Base44 environment/compose were reused and validated: healthy source-mounted Next dev on port 3000. No application source/config/dependency/data/secrets changes. Browser check returned no available tab; it does not invalidate the passing HTTP checks and is not visual evidence. Earlier private gates remain deferred, not passed. The corpus SHA-256 and fresh scope-limited results are in [verification evidence](evidence/phase11-corpus-verification.json).
+
+**STOP after Phase 11.** Next phase includes the owner's requested existing Privacy/Disclaimer links (desktop top navigation, mobile More), alongside scoped content SEO. No navbar change or Phase 12 content writing was performed in this recovery.
+
+---
+
+## Historical Phase 11 result — before recovery coverage audit
 
 Owner authorized **“CONTINUE NEXT PHASE SAFLY”** after the Phase 10 checkpoint; this authorizes Phase 11 only, not Phase 12. Completed exactly **5,000 distinct research candidates** across **18 clusters**: **1,680 English, 1,660 Hindi and 1,660 Roman Hindi/Hinglish**. See [SEO_KEYWORD_MAP](SEO_KEYWORD_MAP.md), [content proposals](PHASE_11_CONTENT_PROPOSALS.md) and [verification evidence](evidence/phase11-corpus-verification.json). Queries are source-derived hypotheses, not observed searches; metrics remain unknown. Every candidate has an exact source excerpt and an existing provisional owner. Fresh structural checks, source evidence, 31 mapped public HTML responses, all recommended link targets and preview noindex checks PASS. English wording and Hindi inflection refinements preserve IDs/counts; the final evidence digest matches the reviewed corpus. No runtime source/config, UI, page content, routes, dependencies, data, secrets or indexing changes were made. No fresh visual, authenticated integration or production-build sign-off is claimed for this documentation-only phase. New-page proposals are unapproved; Phase 12 and publication require separate authorization. The hash above is the actual pre-edit HEAD, not a post-turn commit.
 
