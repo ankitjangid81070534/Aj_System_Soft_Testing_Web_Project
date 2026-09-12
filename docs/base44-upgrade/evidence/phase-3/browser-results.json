@@ -1,0 +1,93 @@
+{
+  "results": [
+    {
+      "name": "Card keyboard focus and genuine detail navigation",
+      "status": "PASS",
+      "evidence": {
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "width": "3px",
+          "color": "rgb(29, 78, 216)",
+          "offset": "4px"
+        },
+        "detailPath": "/services/custom-software-development"
+      }
+    },
+    {
+      "name": "Project CTA retains genuine destination",
+      "status": "PASS",
+      "evidence": {
+        "path": "/request-quote",
+        "formVisible": true
+      }
+    },
+    {
+      "name": "Fields show tokenized focus; blank submit stays client-side",
+      "status": "PASS",
+      "evidence": {
+        "invalidFocus": true,
+        "noWrite": true,
+        "style": {
+          "outline": "solid",
+          "width": "3px",
+          "placeholder": "rgb(23, 19, 30)"
+        }
+      }
+    },
+    {
+      "name": "Theme toggle changes focus tokens and survives reload",
+      "status": "PASS",
+      "evidence": {
+        "darkFocus": "#93c5fd",
+        "restoredLight": true
+      }
+    },
+    {
+      "name": "Mobile More opens and closes without dock changes",
+      "status": "PASS",
+      "evidence": {
+        "openClose": true,
+        "rect": {
+          "x": 14,
+          "y": 744,
+          "width": 362,
+          "height": 84
+        }
+      }
+    },
+    {
+      "name": "Reduced motion and sharp icon foregrounds",
+      "status": "PASS",
+      "evidence": {
+        "filter": "none",
+        "opacity": "1",
+        "transition": "0s",
+        "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -1px 2px 0px inset, rgba(16, 28, 59, 0.376) 0px 6px 12px -8px"
+      }
+    },
+    {
+      "name": "Tablet retains navigation and avoids overflow",
+      "status": "PASS",
+      "evidence": {
+        "r": {
+          "x": 149,
+          "y": 914.8125,
+          "width": 470,
+          "height": 93.1875
+        },
+        "overflow": false
+      }
+    },
+    {
+      "name": "Desktop pointer hover keeps icons crisp and controls accessible",
+      "status": "PASS",
+      "evidence": {
+        "lift": "-4px",
+        "iconFilter": "none"
+      }
+    }
+  ],
+  "errors": [],
+  "writes": 0
+}

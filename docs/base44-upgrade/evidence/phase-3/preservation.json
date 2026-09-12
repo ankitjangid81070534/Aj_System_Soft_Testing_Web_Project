@@ -1,0 +1,47 @@
+[
+  {
+    "view": "home-desktop",
+    "contentPreserved": true,
+    "linksPreserved": true,
+    "navGeometryPreserved": true,
+    "cardCountPreserved": true,
+    "noOverflow": true,
+    "noPageErrors": true
+  },
+  {
+    "view": "services-desktop",
+    "contentPreserved": true,
+    "linksPreserved": true,
+    "navGeometryPreserved": true,
+    "cardCountPreserved": true,
+    "noOverflow": true,
+    "noPageErrors": true
+  },
+  {
+    "view": "services-mobile",
+    "contentPreserved": true,
+    "linksPreserved": true,
+    "navGeometryPreserved": true,
+    "cardCountPreserved": true,
+    "noOverflow": true,
+    "noPageErrors": true
+  },
+  {
+    "view": "contact-mobile",
+    "contentPreserved": true,
+    "linksPreserved": true,
+    "navGeometryPreserved": true,
+    "cardCountPreserved": true,
+    "noOverflow": true,
+    "noPageErrors": true
+  },
+  {
+    "view": "services-dark",
+    "contentPreserved": true,
+    "linksPreserved": true,
+    "navGeometryPreserved": true,
+    "cardCountPreserved": true,
+    "noOverflow": true,
+    "noPageErrors": true
+  }
+]

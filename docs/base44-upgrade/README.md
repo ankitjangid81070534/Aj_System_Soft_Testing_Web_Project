@@ -12,8 +12,10 @@
 10. [Phase 2 information architecture and movement ledger](PHASE_2_INFORMATION_ARCHITECTURE.md)
 11. [Phase 2 seven visitor journeys](PHASE_2_USER_JOURNEYS.md)
 12. [Phase 2 benchmark sources and limits](PHASE_2_BENCHMARKS.md)
+13. [Phase 3 shared design-system changes and checks](PHASE_3_DESIGN_SYSTEM.md)
+14. [Phase 3 before/after screenshots](evidence/phase-3/SCREENSHOTS.md)
 
-The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 2 documentation is complete; the live site is unchanged. This does not approve the proposed homepage reorder or waive backend/release gates.
+The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 
 Phase 0 contains documentation and evidence only. Actual backend/auth/DB verification and live visual sign-off have explicit blockers; they are not reported as passes. Older numbered reports elsewhere describe older programs.
 

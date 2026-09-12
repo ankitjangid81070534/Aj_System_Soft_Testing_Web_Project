@@ -2,11 +2,11 @@ import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils/cn";
 
 const baseField =
-  "ui-field w-full rounded-xl border border-line bg-surface px-3.5 text-sm text-ink " +
+  "ui-field w-full rounded-field border border-line bg-surface px-3.5 text-sm text-ink " +
   "shadow-[inset_0_1px_2px_rgb(15_23_42/0.04)] " +
-  "placeholder:text-ink-muted/70 transition-[border-color,box-shadow,background-color] duration-200 ease-soft " +
+  "placeholder:text-ink-muted transition-[border-color,box-shadow,background-color] duration-[var(--duration-control)] ease-soft " +
   "hover:border-line-strong " +
-  "focus-visible:outline-none focus-visible:border-brand-500 focus-visible:shadow-[0_0_0_4px_rgb(59_108_246/0.15),inset_0_1px_2px_rgb(15_23_42/0.04)] " +
+  "focus-ring focus-visible:border-brand-500 focus-visible:shadow-[0_0_0_4px_rgb(59_108_246/0.15),inset_0_1px_2px_rgb(15_23_42/0.04)] " +
   "disabled:cursor-not-allowed disabled:opacity-60";
 
 export type InputProps = ComponentProps<"input"> & { invalid?: boolean };

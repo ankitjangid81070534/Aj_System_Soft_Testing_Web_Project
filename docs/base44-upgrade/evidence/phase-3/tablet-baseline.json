@@ -1,0 +1,19 @@
+{
+  "match": true,
+  "results": [
+    {
+      "label": "baseline",
+      "x": 149,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875
+    },
+    {
+      "label": "current",
+      "x": 149,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875
+    }
+  ]
+}
