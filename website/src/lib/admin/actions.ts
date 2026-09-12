@@ -54,6 +54,9 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
   try {
     revalidatePath(`/ajadmin/c/${config.section}`);
     revalidatePath("/");
+    if (["services", "projects", "posts", "seo"].includes(config.key)) {
+      revalidatePath("/sitemap.xml");
+    }
 
     if (config.key === "services") revalidatePath("/services");
     if (config.key === "projects") revalidatePath("/projects");
@@ -78,6 +81,10 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
         "/blog",
         "/team",
         "/request-quote",
+        "/ai-methods",
+        "/privacy",
+        "/terms",
+        "/service-agreement",
       ]) {
         revalidatePath(route);
       }

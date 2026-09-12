@@ -3,7 +3,7 @@ import { siteUrl } from "@/lib/env";
 import { getServiceSitemapEntries } from "@/lib/data/services";
 import { getProjectSitemapEntries } from "@/lib/data/projects";
 import { getPostSitemapEntries } from "@/lib/data/blog";
-import { getOfferSitemapEntries, getUpdateSitemapEntries } from "@/lib/data/growth";
+import { getSeoOverride } from "@/lib/seo/overrides";
 
 export const revalidate = 3600;
 
@@ -44,12 +44,14 @@ function latest(dates: (string | null | undefined)[]): Date | undefined {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [serviceEntries, projectEntries, postEntries, offerEntries, updateEntries] = await Promise.all([
+  const [serviceEntries, projectEntries, postEntries, staticRoutes] = await Promise.all([
     getServiceSitemapEntries(),
     getProjectSitemapEntries(),
     getPostSitemapEntries(),
-    getOfferSitemapEntries(),
-    getUpdateSitemapEntries(),
+    Promise.all(STATIC_ROUTES.map(async (route) => ({
+      ...route,
+      noIndex: (await getSeoOverride(route.path))?.noIndex === true,
+    }))),
   ]);
 
   // Hub pages inherit the newest child date so Google recrawls them when a
@@ -72,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   };
 
   return [
-    ...STATIC_ROUTES.map((route) => {
+    ...staticRoutes.filter((route) => !route.noIndex).map((route) => {
       const lastModified = hubDates[route.path];
       return {
         url: new URL(route.path, siteUrl).toString(),
@@ -83,33 +85,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
     ...serviceEntries.map((entry) => ({
       url: new URL(`/services/${entry.slug}`, siteUrl).toString(),
-      ...(entry.updatedAt ? { lastModified: new Date(entry.updatedAt) } : {}),
+      ...(latest([entry.updatedAt]) ? { lastModified: latest([entry.updatedAt]) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
     ...projectEntries.map((entry) => ({
       url: new URL(`/projects/${entry.slug}`, siteUrl).toString(),
-      ...(entry.updatedAt ? { lastModified: new Date(entry.updatedAt) } : {}),
+      ...(latest([entry.updatedAt]) ? { lastModified: latest([entry.updatedAt]) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...postEntries.map((entry) => ({
       url: new URL(`/blog/${entry.slug}`, siteUrl).toString(),
-      ...(entry.updatedAt ? { lastModified: new Date(entry.updatedAt) } : {}),
+      ...(latest([entry.updatedAt]) ? { lastModified: latest([entry.updatedAt]) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.6,
-    })),
-    ...offerEntries.map((entry) => ({
-      url: new URL(`/offers/${entry.slug}`, siteUrl).toString(),
-      ...(entry.updatedAt ? { lastModified: new Date(entry.updatedAt) } : {}),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
-    ...updateEntries.map((entry) => ({
-      url: new URL(`/updates/${entry.slug}`, siteUrl).toString(),
-      ...(entry.updatedAt ? { lastModified: new Date(entry.updatedAt) } : {}),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     })),
   ];
 }

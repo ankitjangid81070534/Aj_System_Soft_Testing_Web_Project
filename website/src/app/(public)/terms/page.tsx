@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { buildMetadata } from "@/lib/seo/metadata";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Terms & Conditions",
-  description:
-    "The terms that govern the use of the AJ System Soft Technology website and the engagement of our software development services.",
-  path: "/terms",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  return buildRouteMetadata({
+    title: "Terms & Conditions",
+    description:
+      "The terms that govern the use of the AJ System Soft Technology website and the engagement of our software development services.",
+    path: "/terms",
+  });
+}
 
 const SECTIONS = [
   {

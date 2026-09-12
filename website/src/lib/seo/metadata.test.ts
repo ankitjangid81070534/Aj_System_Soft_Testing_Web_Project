@@ -1,7 +1,12 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { buildMetadata, buildRootMetadata, HOMEPAGE_TITLE } from "@/lib/seo/metadata";
 
 describe("buildMetadata", () => {
+  beforeEach(() => {
+    vi.stubEnv("BASE44_PUBLIC_HOST_SUFFIX", "");
+    vi.stubEnv("VERCEL_ENV", "production");
+  });
+  afterEach(() => vi.unstubAllEnvs());
   it("resolves the canonical URL against the site URL", () => {
     const metadata = buildMetadata({ description: "Test description", path: "/services" });
     expect(metadata.alternates?.canonical).toBe("http://localhost:3000/services");
@@ -49,8 +54,8 @@ describe("buildMetadata", () => {
     expect(metadata.openGraph).not.toHaveProperty("publishedTime");
   });
 
-  it("leaves robots undefined for public pages", () => {
+  it("omits robots on public pages so root directives are inherited", () => {
     const metadata = buildMetadata({ description: "d", path: "/about" });
-    expect(metadata.robots).toBeUndefined();
+    expect(metadata).not.toHaveProperty("robots");
   });
 });

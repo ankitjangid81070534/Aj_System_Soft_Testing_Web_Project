@@ -43,7 +43,7 @@ describe("webSiteJsonLd", () => {
     const site = webSiteJsonLd();
     expect(site.publisher["@id"]).toBe("http://localhost:3000/#organization");
     expect(site.inLanguage).toBe("en-IN");
-    expect(site.potentialAction.target.urlTemplate).toContain("{search_term_string}");
+    expect(site).not.toHaveProperty("potentialAction");
   });
 });
 

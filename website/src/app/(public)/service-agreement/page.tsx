@@ -5,14 +5,14 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
 import { Markdown } from "@/components/site/Markdown";
 import { getCurrentServiceAgreement, LAWYER_REVIEW_NOTE } from "@/lib/agreements/data";
-import { buildMetadata } from "@/lib/seo/metadata";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
 import { BRAND } from "@/lib/seo/site";
 
 export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   const agreement = await getCurrentServiceAgreement();
-  return buildMetadata({
+  return buildRouteMetadata({
     title: agreement ? `${agreement.title} — v${agreement.versionNumber}` : "Service Agreement",
     description:
       "The AJ System Soft Technology service agreement: scope, support, customization, ownership, payment and acceptance terms for every project.",

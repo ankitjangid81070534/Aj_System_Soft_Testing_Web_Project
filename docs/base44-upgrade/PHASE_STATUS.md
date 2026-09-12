@@ -1,14 +1,14 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA — RESUMED; LOCAL SAFETY CHECKS PASS, PRIVATE VERIFICATION INCOMPLETE
-LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 and Phase 8 authenticated gates remain INCOMPLETE / DEFERRED
-NEXT_PHASE: Finish Phase 9 admin QA within available access; Phase 10 NOT authorized
-LAST_COMMIT_HASH: 7025675dbc5d6f3ea303c5bee6212faf7debe31b
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Fresh isolated production build and local regressions pass; no deployment or authenticated release sign-off.
+CURRENT_PHASE: 10 — TECHNICAL SEO FOUNDATION — LOCAL IMPLEMENTATION / SERVER-RENDERED CHECKS COMPLETE
+LAST_COMPLETED_PHASE: 10 — local technical SEO scope only; Phase 1/8/9 authenticated gates remain INCOMPLETE / DEFERRED (not contiguous full sign-off)
+NEXT_PHASE: 11 — advanced SEO / 5,000-query research; STOP pending separate authorization
+LAST_COMMIT_HASH: b0794fad6552c953cee6c65e3e372ec568483a1c
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated production build and SEO response audit PASS; no deployment, live-domain indexing or authenticated release sign-off.
 
 ## Current continuation — overrides historical execution gates below
 
-Owner confirmed **“Sirf yahi chat”**. The old overlap's cause is unestablished; do not assume another user session or repeat the coordination question. Resumed from the stable, clean committed checkpoint. See [PHASE_9_ADMIN_QA](PHASE_9_ADMIN_QA.md): fixed a demonstrated reorder-lookup false-success/wrong-neighbor risk and added 46 adapter-level regression tests. Fresh **363 tests / 38 files**, typecheck, lint, whitespace and isolated production build PASS. Existing auth, role, mutation, cache and public UI contracts were retained. Private gestures/persistence are NOT automatically verified; preview navigation assertions were inconclusive and an older hydration error remained buffered. No credentials were requested/generated or records written. Phase 9 is not complete and Phase 10 must not begin. Sections below are historical evidence, not fresh Phase 9 passes. The hash above is the actual pre-edit HEAD for this continuation, not a post-turn commit.
+Owner requested **“CONTINUE NEXT PHASE SAFLY”** after the Phase 9 private-verification limitation was disclosed. Completed the independently testable Phase 10 scope without relabeling earlier gates as passed. See [PHASE_10_TECHNICAL_SEO](PHASE_10_TECHNICAL_SEO.md): metadata inheritance/preview protection, accurate sitemap, aligned static SEO overrides/cache refresh, factual schema and safe JSON-LD serialization. Fresh **377 tests / 41 files**, typecheck, lint, whitespace and isolated production build PASS. **31 public + 9 private/setup HTML responses** pass in both preview and isolated production modes, plus two expected 404s each. No visible-content/layout/role/database-schema/data changes, credentials requests or deployment. Final browser check was unavailable because no tab was open; the older hydration warning is not claimed fixed. Real SEO-save gestures/persistence and published-domain checks remain deferred. Phase 11 must not begin automatically. The hash above is this phase's actual pre-edit HEAD, not a post-turn commit. Prior phase notes below are historical.
 
 The hash is the actual pre-edit HEAD for cross-chat recovery, not a post-turn commit. At recovery start, fetched main and system-upgrade-init were identical at this merge of PR #7; all other fetched branch tips were ancestors, so there is no unmerged unique work to combine. No branch switch/deletion, direct main push, manual commit or deployment was performed. Base44 commits/pushes at turn end; the owner explicitly requests PR creation for this work and alongside future completed phases, not automatic merging of newly opened PRs.
 

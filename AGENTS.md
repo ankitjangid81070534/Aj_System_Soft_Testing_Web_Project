@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Current Phase 10 checkpoint (2026-09-12)
+- Owner authorized the next phase after Phase 9 private gates were disclosed. Phase 10 local technical SEO is complete; read `PHASE_10_TECHNICAL_SEO.md` and top of `PHASE_STATUS.md`. Earlier Phase 1/8/9 private gates stay deferred, not passed; Phase 11 is not authorized. Earlier phase-gate notes below are historical.
+- On public production metadata, omit `robots` rather than set it to `undefined`: Next otherwise erases inherited root index/snippet directives. Both page metadata and robots output protect Base44/Vercel previews; unset those flags only in isolated production verification, never in the actual sandbox service.
+- Sitemap must not advertise nonexistent offers/updates detail routes. Static route noindex overrides now match legal metadata too; content/SEO saves refresh sitemap and all static SEO outputs. JSON-LD must escape `<`, omit invented dates/prices/search actions, and distinguish service audiences from geographic coverage.
+- Fresh checks: 377 tests / 41 files, typecheck, lint, isolated production build, and 31 public + 9 private HTTP/HTML checks in BOTH preview and isolated production modes, plus two expected 404s each. Final browser check had no open tab; no new visual or authenticated persistence pass. Real canonical domain/publication and prior hydration warning remain release checks.
+
 ## Current Phase 9 continuation (2026-09-12)
 - Owner confirmed only this chat is active. Do not repeatedly gate work on an assumed second editing session; the old overlap's cause is unestablished. Resume from `PHASE_9_ADMIN_QA.md` and current `PHASE_STATUS.md`, not the historical concurrency pause.
 - At pre-edit HEAD `7025675`, generic quick actions already return explicit outcomes and use `AdminActionForm`; keep media redirect control flow intact. Ordering lookup must throw for read failures/missing current records, reserving `null` for a genuine boundary, or the new feedback can report false success.
