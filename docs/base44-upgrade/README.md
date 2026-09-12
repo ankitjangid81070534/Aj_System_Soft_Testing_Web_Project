@@ -9,6 +9,11 @@
 7. [SEO inventory / deferred research map](SEO_KEYWORD_MAP.md)
 8. [Screenshot evidence index](evidence/SCREENSHOTS.md)
 9. [Phase 1 fixes, functional matrix and blocked checks](PHASE_1_FUNCTIONAL_AUDIT.md)
+10. [Phase 2 information architecture and movement ledger](PHASE_2_INFORMATION_ARCHITECTURE.md)
+11. [Phase 2 seven visitor journeys](PHASE_2_USER_JOURNEYS.md)
+12. [Phase 2 benchmark sources and limits](PHASE_2_BENCHMARKS.md)
+
+The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 2 documentation is complete; the live site is unchanged. This does not approve the proposed homepage reorder or waive backend/release gates.
 
 Phase 0 contains documentation and evidence only. Actual backend/auth/DB verification and live visual sign-off have explicit blockers; they are not reported as passes. Older numbered reports elsewhere describe older programs.
 

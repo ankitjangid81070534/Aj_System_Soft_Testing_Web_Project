@@ -5,7 +5,7 @@ Authority: [the supplied master plan](MASTER_UPGRADE_PLAN.md), current user inst
 
 ## Current progress
 
-Phase 1 source fixes and current verification levels are recorded in [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md). The original Phase 0 snapshot below is retained: dashboard lead access and supported slug redirect matching have since been repaired, and publication permission checks added to generic/Builder saves. Full backend verification remains blocked; Phase 2 is not started.
+Phase 1 source fixes and current verification levels are recorded in [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md). The original Phase 0 snapshot below is retained: dashboard lead access and supported slug redirect matching have since been repaired, and publication permission checks added to generic/Builder saves. Full backend verification remains blocked. The owner explicitly deferred those checks to proceed with documentation-only Phase 2; see [information architecture](PHASE_2_INFORMATION_ARCHITECTURE.md), [visitor journeys](PHASE_2_USER_JOURNEYS.md) and [benchmark evidence](PHASE_2_BENCHMARKS.md). The live composition is unchanged and proposed material moves still require approval.
 
 ## Scope and evidence honesty
 

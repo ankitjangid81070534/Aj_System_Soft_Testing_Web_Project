@@ -1,7 +1,7 @@
 # Phase 1 — functional/backend audit progress
 
 Date: 2026-09-12. Starting commit: `5e5a85a4a70e09baf078adf32811394644d4e22d`; branch `upgrade-desktop-navbar`.
-**Status: local audit and confirmed fixes implemented; full Phase 1 remains INCOMPLETE / BLOCKED. Phase 2 is NOT started.**
+**Status: local audit and confirmed fixes implemented; full Phase 1 remains INCOMPLETE / BLOCKED.** Subsequent owner decision on 2026-09-12: explicitly proceed with Phase 2 planning while deferring these checks, not marking them passed. The evidence below remains Phase 1 evidence; [PHASE_STATUS](PHASE_STATUS.md) controls current sequencing.
 
 The owner declined all Supabase/Resend secret setup. No retry, placeholder generation, project switch, auth bypass, migration, real DB write, email delivery or deployment was performed. Test adapters below are isolated unit mocks, not replacement app data and not configured credentials.
 
@@ -141,4 +141,4 @@ Timing variation in these small unthrottled samples is not a field-performance c
 
 ## Stop / handoff
 
-Phase 1 is held at its unresolved integration/functional gates. Do not advance to Phase 2 or relabel blocked checks as passes. No more secret prompts unless the owner explicitly reopens configuration. Further `START NEXT PHASE SAFELY` commands resume this unfinished phase; changing the acceptance scope or deferring its blockers requires an explicit owner decision, not an automatic skip.
+Phase 1 remains unresolved at its integration/functional gates. The owner subsequently explicitly selected “Start Phase 2 planning” after being told this defers those gates rather than passing them. Follow the updated PHASE_STATUS for sequencing; do not use this historical attempt's stop point to override that authorization. No more secret prompts unless the owner explicitly reopens configuration. Deferred checks must be revisited before corresponding integration success or release readiness is claimed; the deferral is not permission for speculative migrations, data writes or a homepage reorder.
