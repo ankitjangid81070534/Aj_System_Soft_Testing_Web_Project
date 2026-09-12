@@ -48,14 +48,14 @@ export function NavBar({ items, className, embedded = false, activeUrl, renderIt
               aria-hidden="true"
               data-tubelight
               layoutId={reducedMotion ? undefined : "lamp"}
-              className="pointer-events-none absolute inset-0 hidden rounded-full bg-orange-400/5 lg:block"
+              className="pointer-events-none absolute inset-0 hidden rounded-full bg-accent-500/5 lg:block"
               initial={false}
               transition={reducedMotion ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-orange-400">
-                <div className="absolute -top-2 -left-2 h-6 w-12 rounded-full bg-orange-400/20 blur-md" />
-                <div className="absolute -top-1 h-6 w-8 rounded-full bg-orange-400/20 blur-md" />
-                <div className="absolute top-0 left-2 h-4 w-4 rounded-full bg-orange-400/20 blur-sm" />
+              <div className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-accent-500">
+                <div className="absolute -top-2 -left-2 h-6 w-12 rounded-full bg-accent-500/20 blur-md" />
+                <div className="absolute -top-1 h-6 w-8 rounded-full bg-accent-500/20 blur-md" />
+                <div className="absolute top-0 left-2 h-4 w-4 rounded-full bg-accent-500/20 blur-sm" />
               </div>
             </motion.div>
           ) : null;

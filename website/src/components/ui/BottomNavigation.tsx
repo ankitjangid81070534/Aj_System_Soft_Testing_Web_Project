@@ -142,7 +142,12 @@ export function BottomNavigation({
         </Link>
         <NavBar items={tubelightItems} activeUrl={activeUrl} embedded
           className={styles.linkGroup} renderItem={renderNavItem} />
+        <NavBar items={navLinks.map(toNavItem)} embedded
+          className={styles.desktopLinks} renderItem={renderNavItem} />
         <div className={styles.dockActions}>
+          <button type="button" className={styles.accountTrigger} onClick={onPortal}>
+            <User aria-hidden="true" size={17} />{authenticated ? "Open Account" : "Client Login"}
+          </button>
           <button type="button" className={styles.searchTrigger} onClick={openSearch}
             aria-label="Search navigation" title="Search pages (Ctrl K / ⌘ K)" aria-keyshortcuts="Meta+K Control+K" aria-haspopup="dialog" aria-controls="more-navigation" aria-expanded={open}>
             <Search aria-hidden="true" size={19} /><kbd>⌘ K</kbd>

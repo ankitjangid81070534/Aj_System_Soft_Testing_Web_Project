@@ -7,7 +7,7 @@
   color: var(--dock-ink);
   font-family: var(--font-geist-sans), Arial, sans-serif;
 }
-.dockBrand, .dockActions, .searchField { display: none; }
+.dockBrand, .dockActions, .searchField, .desktopLinks { display: none; }
 .linkGroup { display: contents; }
 .searchStatus { font-size: 14px; color: var(--dock-muted); margin-top: 16px; }
 .dock {
@@ -148,99 +148,96 @@
 }
 /* Desktop translation of the mobile dock, without changing phone geometry. */
 @media (min-width: 1024px) {
-  .brandBar { height: 128px; visibility: hidden; pointer-events: none; }
+  .brandBar { height: 176px; visibility: hidden; pointer-events: none; }
   .dock, .panel, :global(.dark) .dock, :global(.dark) .panel {
-    --dock-ink: #242424;
-    --dock-muted: #636363;
-    --dock-line: #e7e7e7;
-    --dock-surface: #f9f9f9;
+    --dock-ink: #17131e;
+    --dock-muted: #554c60;
+    --dock-accent: color-mix(in srgb, var(--color-accent-500), #17131e 30%);
+    --dock-soft: color-mix(in srgb, var(--color-accent-500), #fff 93%);
+    --dock-line: color-mix(in srgb, var(--color-accent-500), #fff 85%);
+    --dock-surface: #fff;
   }
   .dock, :global(.dark) .dock {
     inset: 24px 0 auto;
-    width: min(1440px, max(70vw, 960px));
+    width: min(1320px, calc(100% - 48px));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     max-width: calc(100% - 48px);
-    min-height: 84px;
-    gap: clamp(14px, 1.4vw, 26px);
+    min-height: 132px;
+    gap: 14px 24px;
     padding: 14px 26px;
     border: 1px solid #ffffffed;
     border-radius: 26px;
-    background: linear-gradient(120deg, #fffffffa, #f4f4f4f5);
+    background: linear-gradient(120deg, #fffffffa, #faf8fcf5);
     backdrop-filter: blur(20px);
-    box-shadow: inset 0 2px 1px #fff, 0 0 24px #ffffff80, 0 12px 40px #22222212, 0 3px 10px #ffad5114;
+    box-shadow: inset 0 2px 1px #fff, 0 0 24px #ffffff80, 0 12px 40px #22222212, 0 3px 10px #7c3aed14;
     transition: padding .6s cubic-bezier(.16,1,.3,1), min-height .6s cubic-bezier(.16,1,.3,1), background .6s, box-shadow .6s;
   }
-  .dock[data-scrolled="true"] { min-height: 72px; padding-block: 8px; background: #fffffff5; box-shadow: inset 0 1px #f0f0f0, 0 12px 36px #22222218; }
+  .dock[data-scrolled="true"] { min-height: 120px; padding-block: 8px; background: #fffffff5; box-shadow: inset 0 1px #f0f0f0, 0 12px 36px #22222218; }
   .dockBrand { display: flex; align-items: center; flex: 0 1 215px; min-width: 44px; gap: 12px; color: var(--dock-ink); text-decoration: none; }
-  .dockMark { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border: 1px solid #efc99d; border-radius: 14px; color: #985519; background: linear-gradient(135deg, #f7e0c6, #fffdf9); font-size: 17px; font-weight: 650; letter-spacing: -.05em; }
-  .dockMark > span { position: absolute; right: -3px; bottom: 2px; width: 7px; height: 7px; border-radius: 50%; background: #c46a16; box-shadow: 0 0 0 3px #ffffff; }
+  .dockMark { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border: 1px solid var(--dock-line); border-radius: 14px; color: var(--dock-accent); background: linear-gradient(135deg, var(--dock-line), #fff); font-size: 17px; font-weight: 650; letter-spacing: -.05em; }
+  .dockMark > span { position: absolute; right: -3px; bottom: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--dock-accent); box-shadow: 0 0 0 3px #ffffff; }
   .dockBrandCopy { max-width: 160px; font-size: 12px; font-weight: 550; line-height: 1.4; letter-spacing: -.015em; overflow-wrap: anywhere; }
-  .dockBrandCopy small { display: block; margin-top: 5px; font-size: 8px; font-weight: 500; letter-spacing: .14em; color: #c46a16; }
-  .linkGroup { display: flex; align-items: center; justify-content: center; flex: 1 1 auto; gap: 4px; min-width: 0; }
-  .dock .item, .dock .more { position: relative; flex: 1 1 0; flex-direction: row; min-height: 46px; padding: 9px 12px; gap: 8px; border: 1px solid transparent; border-radius: 999px; font-size: clamp(13px, .95vw, 18px); font-weight: 500; line-height: 1.4; color: var(--dock-muted); transition: color 220ms, background 220ms, border-color 220ms; }
+  .dockBrandCopy small { display: block; margin-top: 5px; font-size: 8px; font-weight: 500; letter-spacing: .14em; color: var(--dock-accent); }
+  .linkGroup { display: none; }
+  .desktopLinks { display: grid; grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); align-items: center; gap: 6px; min-width: 0; padding-top: 10px; border-top: 1px solid var(--dock-line); }
+  .dock .item, .dock .more { position: relative; flex: 1 1 0; flex-direction: row; min-height: 46px; padding: 9px 12px; gap: 8px; border: 1px solid transparent; border-radius: 999px; font-size: clamp(12px, 1vw, 15px); font-weight: 500; line-height: 1.4; color: var(--dock-muted); transition: color 220ms, background 220ms, border-color 220ms; }
   .item > svg { flex-shrink: 0; width: 18px; height: 18px; }
-  .dock .item[aria-current="page"] { color: #71421b; background: #fff3e5; border-color: #f7e0c6; font-weight: 600; }
-  .dock .more[data-active="true"] { color: #71421b; background: #fff3e5; border-color: #f7e0c6; }
+  .dock .item[aria-current="page"] { color: var(--dock-accent); background: var(--dock-soft); border-color: var(--dock-line); font-weight: 600; }
   .item[aria-current="page"] > svg { stroke-width: 1.8; }
-  .dock .more, :global(.dark) .dock .more { color: #6b4728; }
-  .moreOrb { width: 25px; height: 25px; flex-shrink: 0; margin: 0; background: radial-gradient(circle at 32% 25%, #ffcf8e, #ffad51 65%, #ff9d3e); color: #fff; box-shadow: inset 0 1px #fff5, 0 2px 7px #ffad5126; }
-  .moreOrb svg { width: 18px; height: 18px; }
-  .more[data-active="true"] .moreOrb { box-shadow: 0 0 0 2px #f9f9f9, 0 0 0 3px #c46a16; }
-  .dockActions { display: flex; align-items: center; flex-shrink: 0; gap: 14px; padding-left: 16px; border-left: 1px solid #e7e7e7; }
-  .searchTrigger { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; min-width: 40px; border: 0; border-radius: 10px; background: transparent; color: #636363; cursor: pointer; }
+  .dockActions { grid-column: 2; grid-row: 1; display: flex; align-items: center; flex-shrink: 0; gap: 14px; padding-left: 16px; border-left: 1px solid #e7e7e7; }
+  .accountTrigger { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--dock-line); border-radius: 12px; background: #fff; color: var(--dock-accent); font-size: 13px; font-weight: 550; cursor: pointer; }
+  .searchTrigger { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; min-width: 40px; border: 0; border-radius: 10px; background: transparent; color: var(--dock-muted); cursor: pointer; }
   .searchTrigger kbd { padding: 3px 5px; border: 1px solid #e4e4e4; border-radius: 5px; font-family: inherit; font-size: 10px; line-height: 1.2; white-space: nowrap; }
-  .desktopCta { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; max-width: 190px; padding: 10px 15px; border: 1px solid #e6bd90; border-radius: 12px; background: #fff8ef; color: #75491f; font-size: 13px; font-weight: 550; line-height: 1.4; text-align: center; text-decoration: none; transition: color 220ms, background 220ms, border-color 220ms; }
+  .desktopCta { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; max-width: 190px; padding: 10px 15px; border: 1px solid var(--dock-line); border-radius: 12px; background: var(--dock-soft); color: var(--dock-accent); font-size: 13px; font-weight: 550; line-height: 1.4; text-align: center; text-decoration: none; transition: color 220ms, background 220ms, border-color 220ms; }
   .desktopCta svg { flex-shrink: 0; }
-  .dock :is(a, button):focus-visible, .panel :is(a, button, input):focus-visible { outline-color: #985519; }
-  .panel { inset: 124px 0 auto; width: min(960px, calc(100% - 48px)); max-height: calc(100dvh - 148px); border-color: #ffffffed; border-radius: 26px; background: #fffffff5; backdrop-filter: blur(20px); transform: translateY(-12px) scale(.98); }
+  .dock :is(a, button):focus-visible, .panel :is(a, button, input):focus-visible { outline-color: var(--dock-accent); }
+  .panel { inset: 188px 0 auto; width: min(960px, calc(100% - 48px)); max-height: calc(100dvh - 212px); border-color: #ffffffed; border-radius: 26px; background: #fffffff5; backdrop-filter: blur(20px); transform: translateY(-12px) scale(.98); }
   .panel, :global(.dark) .panel { box-shadow: inset 0 1px #fff, 0 24px 80px #22222220; }
   .panel::backdrop { background: #32323220; backdrop-filter: blur(12px); }
   .panelInner { padding: 32px; }
   .panelHeading { margin-bottom: 24px; }
-  .panel .eyebrow { color: #c46a16; font-size: 12px; letter-spacing: .06em; }
+  .panel .eyebrow { color: var(--dock-accent); font-size: 12px; letter-spacing: .06em; }
   .panel .panelHeading h2 { font-size: 32px; letter-spacing: -.035em; }
-  .searchField { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 12px 16px; border: 1px solid var(--dock-line); border-radius: 14px; color: #c46a16; background: #ffffff; }
-  .searchField:focus-within { border-color: #e6bd90; }
+  .searchField { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 12px 16px; border: 1px solid var(--dock-line); border-radius: 14px; color: var(--dock-accent); background: #ffffff; }
+  .searchField:focus-within { border-color: var(--dock-line); }
   .searchField input { flex: 1; min-width: 0; padding: 4px; background: transparent; border: 0; border-radius: 4px; outline-offset: 2px; color: var(--dock-ink); font: inherit; font-size: 16px; }
   .searchField input::placeholder { color: var(--dock-muted); }
   .searchField kbd { color: var(--dock-muted); font-size: 10px; letter-spacing: .08em; }
   .moreLinks { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
   .panel .menuLink { min-height: 84px; padding: 20px; border-radius: 16px; font-size: 17px; background: linear-gradient(135deg, #ffffff, transparent); }
-  .menuLink svg { color: #c46a16; }
-  .panel .menuLink[aria-current="page"] { background: #fff3e5; border-color: #e4b27a; }
+  .menuLink svg { color: var(--dock-accent); }
+  .panel .menuLink[aria-current="page"] { background: var(--dock-soft); border-color: var(--dock-accent); }
   .utilities { grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; margin-block: 24px 0; padding-top: 20px; }
   .panel .portal { font-size: 16px; }
   .theme { font-size: 14px; }
-  .theme button { color: #242424; }
+  .theme button { color: var(--dock-ink); }
   .panel .cta { margin-top: 24px; }
-  :global(html) { scroll-padding-top: 120px; scroll-padding-bottom: 24px; }
+  :global(html) { scroll-padding-top: 180px; scroll-padding-bottom: 24px; }
   @starting-style { .panel[open] { transform: translateY(-12px) scale(.98); } }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
-  .dock { gap: 12px; padding-inline: 18px; }
-  .dockBrand { flex-basis: 155px; gap: 9px; }
-  .dockBrandCopy { font-size: 10px; }
-  .dockBrandCopy small { font-size: 6px; }
-  .dock .item, .dock .more { padding-inline: 8px; gap: 6px; }
-  .dockActions { gap: 8px; padding-left: 10px; }
-  .searchTrigger kbd { display: none; }
-  .desktopCta { max-width: 160px; padding-inline: 12px; font-size: 12px; }
+  .dock { padding-inline: 18px; }
+  .dock .item { padding-inline: 8px; gap: 6px; }
+  .dockActions { gap: 10px; }
 }
 @media (min-width: 1024px) and (max-height: 600px) {
   .panel { inset-block: 16px auto; max-height: calc(100dvh - 32px); }
 }
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  .dock .item:hover, .dock .more:hover { color: #242424; border-color: #e4e4e4; background: #ffffff; }
+  .dock .item:hover, .dock .more:hover { color: var(--dock-ink); border-color: #e4e4e4; background: #ffffff; }
   .item:hover > svg, .more:hover .moreOrb { transform: none; }
-  .searchTrigger:hover { background: #f0f0f0; color: #985519; }
-  .desktopCta:hover { color: #553314; background: #ffd5a1; border-color: #efba7a; }
-  .panel .menuLink:hover { background: #fff8ef; border-color: #efc99d; }
+  .accountTrigger:hover { background: var(--dock-soft); border-color: var(--dock-accent); }
+  .searchTrigger:hover { background: #f0f0f0; color: var(--dock-accent); }
+  .desktopCta:hover { color: var(--dock-accent); background: var(--dock-soft); border-color: var(--dock-accent); }
+  .panel .menuLink:hover { background: var(--dock-soft); border-color: var(--dock-line); }
 }
 @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-  .linkGroup > * { animation: navEntry 500ms cubic-bezier(.16,1,.3,1) both; }
-  .linkGroup > :nth-child(2) { animation-delay: 40ms; }
-  .linkGroup > :nth-child(3) { animation-delay: 80ms; }
-  .linkGroup > :nth-child(4) { animation-delay: 120ms; }
-  .linkGroup > :nth-child(5) { animation-delay: 160ms; }
+  .desktopLinks > * { animation: navEntry 500ms cubic-bezier(.16,1,.3,1) both; }
+  .desktopLinks > :nth-child(2) { animation-delay: 40ms; }
+  .desktopLinks > :nth-child(3) { animation-delay: 80ms; }
+  .desktopLinks > :nth-child(4) { animation-delay: 120ms; }
+  .desktopLinks > :nth-child(5) { animation-delay: 160ms; }
   @keyframes navEntry { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 }
 @media (prefers-reduced-motion: reduce) {
