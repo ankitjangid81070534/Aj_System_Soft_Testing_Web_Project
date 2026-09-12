@@ -21,13 +21,14 @@ import styles from "./reference.module.css";
 import contentStyles from "./home-content.module.css";
 import pearlStyles from "./pearl-benefits.module.css";
 import sectionStyles from "./home-sections.module.css";
+import motionStyles from "./home-motion.module.css";
 
 /** Shared by the live homepage and preview: public data is fetched by the route.
  * Original section components retain complete descriptions, media and links.
  */
 export function HomeExperience({ content, benefits }: { content: HomeContent; benefits: LaunchBenefit[] }) {
   return (
-    <div data-home-experience className={`${contentStyles.content} ${sectionStyles.sections}`}>
+    <div data-home-experience className={`${contentStyles.content} ${sectionStyles.sections} ${motionStyles.motion}`}>
       <HomeHero />
       <div className={contentStyles.legacy}><TrustStrip /></div>
       {benefits.length > 0 && <section className={`${styles.section} ${styles.benefitsSection}`} id="included" data-home-section="benefits">

@@ -1,0 +1,46 @@
+[
+  {
+    "view": "phone",
+    "text": true,
+    "links": true,
+    "headings": true,
+    "hero": true,
+    "nav": true,
+    "sections": true,
+    "noOverflow": true,
+    "noErrors": true
+  },
+  {
+    "view": "tablet",
+    "text": true,
+    "links": true,
+    "headings": true,
+    "hero": true,
+    "nav": true,
+    "sections": true,
+    "noOverflow": true,
+    "noErrors": true
+  },
+  {
+    "view": "desktop",
+    "text": true,
+    "links": true,
+    "headings": true,
+    "hero": true,
+    "nav": true,
+    "sections": true,
+    "noOverflow": true,
+    "noErrors": true
+  },
+  {
+    "view": "tablet-dark",
+    "text": true,
+    "links": true,
+    "headings": true,
+    "hero": true,
+    "nav": true,
+    "sections": true,
+    "noOverflow": true,
+    "noErrors": true
+  }
+]

@@ -20,7 +20,10 @@
 17. [Phase 5 homepage presentation and checks](PHASE_5_HOMEPAGE_SECTIONS.md)
 18. [Phase 5 section screenshots](evidence/phase-5/SCREENSHOTS.md)
 
-Phase 5 is complete and stopped before Phase 6. It retains the current homepage sequence and accepted hero/navigation while refining section presentation; material reorder approval was not received, and authenticated integration checks remain deferred.
+19. [Phase 6 motion and scroll safety](PHASE_6_MOTION.md)
+20. [Phase 6 evidence](evidence/phase-6/SCREENSHOTS.md)
+
+Phase 6 is complete and stopped before Phase 7. Motion, keyboard access and short-screen scrolling are refined; current content/order and accepted navigation/hero layout remain preserved. Material reorder approval was not received, and authenticated integration checks remain deferred.
 
 The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 

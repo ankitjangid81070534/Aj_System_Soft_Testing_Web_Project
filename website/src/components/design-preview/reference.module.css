@@ -76,7 +76,9 @@
 .centerHeading > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 20px auto !important; max-width: 445px; }
 /* Native page scrolling, progressively enhanced by ScrollJourney. */
 .journey { background: #090819; color: #fff; position: relative; }
-.journeyStage { overflow: hidden; }
+/* Clip paint without creating a second scroll container: native Tab focus
+   must not add scrollLeft on top of the translated storytelling track. */
+.journeyStage { overflow: clip; }
 .journeyTrack { display: flex; flex-direction: column; }
 .journeyScene { position: relative; min-height: 620px; overflow: hidden; background: radial-gradient(ellipse at 46% 65%, #48258345, transparent 50%), #090819; }
 .sceneWord { position: absolute; top: 55px; left: 15%; font-size: clamp(110px, 19vw, 240px); line-height: 1; font-weight: 500; letter-spacing: -.06em; color: #ffffff15; }

@@ -1,0 +1,157 @@
+[
+  {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "mode": "stacked",
+    "reduced": false,
+    "passes": [
+      {
+        "pass": 1,
+        "scrollSteps": 44,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 2,
+        "scrollSteps": 44,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 3,
+        "scrollSteps": 44,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      }
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "name": "small-phone",
+    "width": 320,
+    "height": 740,
+    "mode": "stacked",
+    "reduced": false,
+    "passes": [
+      {
+        "pass": 1,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 2,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 3,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      }
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "name": "current-tablet",
+    "width": 919,
+    "height": 499,
+    "mode": "stacked",
+    "reduced": false,
+    "passes": [
+      {
+        "pass": 1,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 2,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      },
+      {
+        "pass": 3,
+        "scrollSteps": 56,
+        "restartedEntrances": 0,
+        "atTop": true,
+        "unconsumed": 0,
+        "hidden": 0
+      }
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "name": "tall-tablet",
+    "width": 919,
+    "height": 1024,
+    "mode": "horizontal",
+    "reduced": false,
+    "passes": [],
+    "errors": [],
+    "nativeScrollProgressed": true,
+    "preferenceReset": true,
+    "pass": true
+  },
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "mode": "horizontal",
+    "reduced": false,
+    "passes": [],
+    "errors": [],
+    "nativeScrollProgressed": true,
+    "preferenceReset": true,
+    "shortResizeStacked": true,
+    "pass": true
+  },
+  {
+    "name": "short-desktop",
+    "width": 1440,
+    "height": 600,
+    "mode": "stacked",
+    "reduced": false,
+    "passes": [],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "name": "reduced-tablet",
+    "width": 919,
+    "height": 499,
+    "mode": "stacked",
+    "reduced": true,
+    "passes": [],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "name": "no-js",
+    "pass": true,
+    "services": 6
+  }
+]
