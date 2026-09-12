@@ -14,16 +14,23 @@ export function PortalLoginModal({ onClose }: { onClose: () => void }) {
     const dialog = dialogRef.current;
     if (!dialog) return;
     const previousOverflow = document.body.style.overflow;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     dialog.showModal();
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = previousOverflow;
       if (dialog.open) dialog.close();
+      // React removes the dialog before effect cleanup; native restoration alone
+      // can leave focus on body instead of the desktop login or mobile More button.
+      if (previousFocus?.isConnected && previousFocus.getClientRects().length) {
+        previousFocus.focus({ preventScroll: true });
+      }
     };
   }, []);
 
   return (
     <dialog
+      id="portal-login-dialog"
       ref={dialogRef}
       aria-labelledby="portal-login-title"
       onClose={() => {

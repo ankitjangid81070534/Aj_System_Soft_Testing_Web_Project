@@ -1,0 +1,674 @@
+[
+  {
+    "name": "phone-small",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 64,
+      "width": 320,
+      "height": 826.203125,
+      "bottom": 890.203125
+    },
+    "nav": {
+      "x": 14,
+      "y": 640,
+      "width": 292,
+      "height": 84,
+      "bottom": 724
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note\nView all articles",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 16,
+        "y": 390.203125,
+        "width": 288,
+        "height": 48,
+        "bottom": 438.203125
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 16,
+        "y": 448.203125,
+        "width": 288,
+        "height": 48,
+        "bottom": 496.203125
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 69,
+        "y": 666.203125,
+        "width": 182,
+        "height": 44,
+        "bottom": 710.203125
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 64,
+      "width": 390,
+      "height": 740,
+      "bottom": 804
+    },
+    "nav": {
+      "x": 14,
+      "y": 744,
+      "width": 362,
+      "height": 84,
+      "bottom": 828
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note\nView all articles",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 99,
+        "y": 325.421875,
+        "width": 192,
+        "height": 48,
+        "bottom": 373.421875
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 103,
+        "y": 383.421875,
+        "width": 184,
+        "height": 48,
+        "bottom": 431.421875
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 104,
+        "y": 555.421875,
+        "width": 182,
+        "height": 44,
+        "bottom": 599.421875
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 76,
+      "width": 768,
+      "height": 700,
+      "bottom": 776
+    },
+    "nav": {
+      "x": 149,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 180.5,
+        "y": 349.03125,
+        "width": 203,
+        "height": 48,
+        "bottom": 397.03125
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 395.5,
+        "y": 349.03125,
+        "width": 192,
+        "height": 48,
+        "bottom": 397.03125
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 293,
+        "y": 488.03125,
+        "width": 182,
+        "height": 44,
+        "bottom": 532.03125
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "current-tablet",
+    "width": 919,
+    "height": 1024,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 76,
+      "width": 919,
+      "height": 700,
+      "bottom": 776
+    },
+    "nav": {
+      "x": 224.5,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 256,
+        "y": 366.71875,
+        "width": 203,
+        "height": 48,
+        "bottom": 414.71875
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 471,
+        "y": 366.71875,
+        "width": 192,
+        "height": 48,
+        "bottom": 414.71875
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 368.5,
+        "y": 505.71875,
+        "width": 182,
+        "height": 44,
+        "bottom": 549.71875
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "current-tablet-dark",
+    "width": 919,
+    "height": 1024,
+    "dark": true,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 76,
+      "width": 919,
+      "height": 700,
+      "bottom": 776
+    },
+    "nav": {
+      "x": 224.5,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 256,
+        "y": 366.71875,
+        "width": 203,
+        "height": 48,
+        "bottom": 414.71875
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 471,
+        "y": 366.71875,
+        "width": 192,
+        "height": 48,
+        "bottom": 414.71875
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 368.5,
+        "y": 505.71875,
+        "width": 182,
+        "height": 44,
+        "bottom": 549.71875
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "width": 1214,
+    "height": 900,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 100,
+      "width": 1214,
+      "height": 700,
+      "bottom": 800
+    },
+    "nav": {
+      "x": 16,
+      "y": 16,
+      "width": 1182,
+      "height": 64,
+      "bottom": 80
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 403.5,
+        "y": 435.671875,
+        "width": 203,
+        "height": 48,
+        "bottom": 483.671875
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 618.5,
+        "y": 435.671875,
+        "width": 192,
+        "height": 48,
+        "bottom": 483.671875
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 516,
+        "y": 574.671875,
+        "width": 182,
+        "height": 44,
+        "bottom": 618.671875
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "wide",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 100,
+      "width": 1440,
+      "height": 700,
+      "bottom": 800
+    },
+    "nav": {
+      "x": 16,
+      "y": 16,
+      "width": 1408,
+      "height": 64,
+      "bottom": 80
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 516.5,
+        "y": 470.09375,
+        "width": 203,
+        "height": 48,
+        "bottom": 518.09375
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 731.5,
+        "y": 470.09375,
+        "width": 192,
+        "height": 48,
+        "bottom": 518.09375
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 629,
+        "y": 609.09375,
+        "width": 182,
+        "height": 44,
+        "bottom": 653.09375
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "dark",
+    "width": 1214,
+    "height": 900,
+    "dark": true,
+    "heroText": "AJ System Soft Technology — available for new projects\n\nSoftware built around\nyour requirements.\n\nCustom software, web platforms, SaaS, Android & iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.\n\nStart Your Project\nExplore Projects\nRequirements-first delivery\nYou own the source code\nSupport after launch\nWebsites & web apps\nDesktop software\nERP / CRM / POS\nIndustry software\nAPI integrations\nExplore what we build",
+    "heading": "Software built around\nyour requirements.",
+    "hero": {
+      "x": 0,
+      "y": 100,
+      "width": 1214,
+      "height": 700,
+      "bottom": 800
+    },
+    "nav": {
+      "x": 16,
+      "y": 16,
+      "width": 1182,
+      "height": 64,
+      "bottom": 80
+    },
+    "otherContent": [
+      "Requirements-first process\n\nWe start from your workflows, not from a template.\n\nYou own your software\n\nSource code and documentation handed over with the build.\n\nMaintenance & support\n\nOngoing care after launch — updates, fixes and improvements.\n\nClear communication\n\nPlain-language updates at every stage of the project.",
+      "Launch Benefits\n\nWhat's included with every project\n\nOur service goes beyond just writing code. Every custom software project includes these benefits by default.\n\n6 Months Support\n\nBug fixes and technical support for six months after delivery, as described in the Service Agreement.\n\n6 Months Eligible Customization\n\nReasonable, in-scope adjustments for six months so the product keeps matching how you work.\n\n1 Year Android App Offer\n\nEligible website and software projects can add a companion Android app under the current offer terms.\n\nSEO / Search Setup Assistance\n\nTechnical SEO foundations, indexing setup and structured data — no ranking guarantees, just correct groundwork.\n\nClient / Admin Portal\n\nWhere applicable, a secure portal to manage content, leads and documents without depending on us for every change.\n\nCustom Requirement-Based Development\n\nEvery project is scoped around your actual requirements — no forced templates.",
+      "Services\n\nWhat we can build for you\n\nFrom a single business tool to a complete platform — every engagement starts with your requirements and ends with working software.\n\nExplore all services",
+      "Build.\nAJS Technology\nCustom Software Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nCustom Software Development\n\nSoftware designed and built around your exact business requirements, from first draft to deployment.\n\nSoftware & Applications\nExplore service\nWeb Application Development\n\nFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.\n\nSoftware & Applications\nExplore service\n01 / 03\nConnect.\nAJS Technology\nSaaS Development\n\nSoftware & Applications\n\nLearn more\n\nWhat we can build for you\n\nSaaS Development\n\nMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.\n\nSoftware & Applications\nExplore service\nAndroid App Development\n\nNative Android apps — customer-facing products and internal field tools that work reliably on real devices.\n\nMobile & Desktop\nExplore service\n02 / 03\nGrow.\nAJS Technology\nERP & Business Software\n\nBusiness Systems\n\nLearn more\n\nWhat we can build for you\n\nERP & Business Software\n\nERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.\n\nBusiness Systems\nExplore service\nHospital & Clinic Software\n\nOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.\n\nIndustry Solutions\nExplore service\n03 / 03",
+      "WHAT WE BUILD\n\nOne team, every platform\nOne team, every platform\n\nTell us the problem — we propose the right platform and architecture for it, not the other way around.\n\nWebsites & Web Apps\n\nCompany websites, customer portals and operational web applications built for speed and clarity.\n\nSaaS Platforms\n\nMulti-tenant products with subscriptions, roles, dashboards and the APIs your customers need.\n\nAndroid & iOS Apps\n\nNative and cross-platform mobile apps, from customer-facing products to field-work tools.\n\nWindows Desktop & EXE\n\nDesktop software for shops, offices and labs that needs to run reliably on local machines.\n\nERP, CRM & Admin Panels\n\nBusiness systems that connect sales, stock, accounts and reporting in one manageable place.\n\nIndustry-Specific Software\n\nHospital, clinic, pharmacy, retail POS, inventory and hotel software shaped by real workflows.",
+      "Discovery & requirements\nRequirements-first delivery\n\nHow we work\n\nFrom your requirement to a working product\n\nA straightforward five-step delivery process — you always know what is happening and what comes next.\n\nDiscovery & requirements\n01\nProposal & planning\n02\nDesign & development\n03\nTesting & deployment\n04\nSupport & growth\n05\n\nWe sit with you (or your team) and map the exact workflows, rules and outcomes the software must support.",
+      "Requirements-first\nWeb · SaaS · Apps\nYou own the source code\nRequirements-first\nWeb · SaaS · Apps\nYou own the source code\n\nOne team, every platform\n\nYou own your software.\nWe help it grow.\n\nSource code and documentation handed over with the build. Ongoing care after launch — updates, fixes and improvements.\n\nExplore all services",
+      "INDUSTRIES\n\nSoftware for the way your industry works\nSoftware for the way your industry works\n\nEvery trade has its own rules, documents and workflows. We build around them.\n\nHealthcare & clinics\n\nPharmacy & medical stores\n\nRetail & shops\n\nHotels & hospitality\n\nManufacturing\n\nLogistics & distribution\n\nEducation & institutes\n\nProfessional services\n\nTECHNOLOGY\n\nA modern, maintainable stack\nA modern, maintainable stack\n\nWe choose proven technology per project — here is what we commonly work with.\n\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nReact\nNext.js\nTypeScript\nNode.js\nPostgreSQL\nSupabase\nKotlin\nSwift\nFlutter\n.NET\nElectron\nTailwind CSS\nGraphQL\nCI/CD\nWeb & frontend\nReact\nNext.js\nTypeScript\nTailwind CSS\nREST & GraphQL APIs\nMobile\nAndroid (Kotlin)\niOS (Swift)\nReact Native\nFlutter\nBackend & data\nNode.js\nPostgreSQL\nSupabase\nAuthentication & RLS\nBackground jobs\nDesktop & cloud\n.NET / C#\nElectron\nWindows deployment\nCloud hosting\nCI/CD\n\nWHY AJS TECHNOLOGY\n\nWhy teams choose AJ System Soft Technology\nWhy teams choose AJ System Soft Technology\n\nA focused development partner that treats your requirements as the specification.\n\nRequirements lead, code follows\n\nWe invest in understanding your process before writing a line of code — the software fits the work, not the reverse.\n\nEnd-to-end delivery\n\nOne team handles discovery, design, development, deployment and support — no handover gaps.\n\nBuilt to be maintained\n\nClean architecture, typed models and documentation mean your software stays changeable for years.\n\nSecurity & ownership\n\nRole-based access, protected data and a system you own outright — including the source code.\n\nINSIGHTS & ARTICLES\n\nEngineering & architecture notes\nEngineering & architecture notes\n\nPractical guides on custom software planning, SaaS engineering, ERP design, and technical decisions.\n\nView all articles\nBusiness systems\n3 min read\nWhat ERP digitisation actually means for small businesses\n\nERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.\n\nAug 30, 2026\nRead note\nPlatforms\n3 min read\nWeb app or mobile app: choosing the right platform\n\nThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.\n\nAug 30, 2026\nRead note\nPlanning\n3 min read\nHow to plan a custom software project\n\nA practical checklist for the first four weeks of a custom software project — before a single line of code is written.\n\nAug 30, 2026\nRead note",
+      "Start a project\n\nReady to build software around your requirements?\nReady to build software around your requirements?\n\nTell us what you need — we will propose the right platform, a clear plan and a transparent estimate.\n\nStart Your Project\nRequest a Consultation"
+    ],
+    "otherLinks": [
+      "/services",
+      "/services/custom-software-development",
+      "/services/custom-software-development",
+      "/services/web-application-development",
+      "/services/saas-development",
+      "/services/saas-development",
+      "/services/android-app-development",
+      "/services/erp-business-software",
+      "/services/erp-business-software",
+      "/services/hospital-clinic-software",
+      "/services",
+      "/blog",
+      "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "/blog/how-to-plan-a-custom-software-project",
+      "/blog",
+      "/request-quote",
+      "/contact"
+    ],
+    "actions": [
+      {
+        "text": "Start Your Project",
+        "href": "/request-quote",
+        "x": 403.5,
+        "y": 435.671875,
+        "width": 203,
+        "height": 48,
+        "bottom": 483.671875
+      },
+      {
+        "text": "Explore Projects",
+        "href": "/projects",
+        "x": 618.5,
+        "y": 435.671875,
+        "width": 192,
+        "height": 48,
+        "bottom": 483.671875
+      },
+      {
+        "text": "Explore what we build",
+        "href": "#home-services",
+        "x": 516,
+        "y": 574.671875,
+        "width": 182,
+        "height": 44,
+        "bottom": 618.671875
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  }
+]

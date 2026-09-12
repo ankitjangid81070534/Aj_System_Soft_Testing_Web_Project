@@ -1,0 +1,201 @@
+[
+  {
+    "name": "Eight desktop destinations and current states",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "paths": [
+        "/services",
+        "/projects",
+        "/ai-methods",
+        "/reviews",
+        "/about",
+        "/team",
+        "/contact",
+        "/"
+      ]
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "quoteForm": true,
+      "projects": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "quoteForm": true,
+      "projects": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "quoteForm": true,
+      "projects": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Keyboard hero action and visible focus",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "href": "/request-quote",
+      "style": "solid",
+      "width": "3px"
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Service discovery anchor",
+    "width": 320,
+    "pass": true,
+    "detail": {
+      "hash": "#home-services",
+      "headingY": 114.890625
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Service discovery anchor",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "hash": "#home-services",
+      "headingY": 113.203125
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Desktop portal opens, discloses state, closes and restores focus",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "opened": true,
+      "closed": true,
+      "focusRestored": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": [
+      {
+        "method": "POST",
+        "host": "pagead2.googlesyndication.com",
+        "path": "/pagead/ping"
+      }
+    ]
+  },
+  {
+    "name": "More menu to portal handoff and Escape",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "onlyOneModal": true,
+      "closed": true,
+      "focus": "More navigation options"
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "More menu to portal handoff and Escape",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "onlyOneModal": true,
+      "closed": true,
+      "focus": "More navigation options"
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Navigation search empty state, result and immediate route",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "emptyState": true,
+      "oneResult": true,
+      "routed": true,
+      "closed": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Dark theme restoration and hover hierarchy",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "light": "rgb(29, 78, 216)",
+      "hover": "rgb(30, 64, 175)",
+      "dark": "rgb(191, 219, 254)",
+      "persisted": true
+    },
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  }
+]

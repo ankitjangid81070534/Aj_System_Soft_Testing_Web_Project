@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Check, Code2, Layers3, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Code2, Layers3, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { TrustStrip } from "@/components/site/TrustStrip";
 import { PlatformsShowcase } from "@/components/site/PlatformsShowcase";
@@ -12,8 +12,7 @@ import { TestimonialsSection } from "@/components/site/TestimonialsSection";
 import { BlogPreviewSection } from "@/components/site/BlogPreviewSection";
 import type { HomeContent } from "@/lib/data/home";
 import type { LaunchBenefit } from "@/lib/data/growth";
-import { BRAND } from "@/lib/seo/site";
-import { OrbitArtwork } from "./OrbitArtwork";
+import { HomeHero } from "./HomeHero";
 import { DeliveryProcess } from "./DeliveryProcess";
 import { ServiceJourney } from "./ServiceJourney";
 import { MotionWords } from "@/components/motion/MotionWords";
@@ -28,20 +27,7 @@ import pearlStyles from "./pearl-benefits.module.css";
 export function HomeExperience({ content, benefits }: { content: HomeContent; benefits: LaunchBenefit[] }) {
   return (
     <div data-home-experience className={contentStyles.content}>
-      <section className={styles.hero} data-scroll-scene>
-        <OrbitArtwork />
-        <div className={styles.heroCopy}>
-          <p className={styles.heroBadge}><Sparkles size={13} />{BRAND.primaryName} — available for new projects</p>
-          <h1>Software built around<br />your requirements.</h1>
-          <p className={styles.heroDescription}>Custom software, web platforms, SaaS, Android &amp; iOS apps and business automation systems — engineered around your workflows, from first mockup to launch.</p>
-          <div className={styles.heroActions}>
-            <Link className={`${styles.primaryButton} action-control action-primary`} href="/request-quote">Start Your Project <ArrowUpRight size={15} /></Link>
-            <Link className={`${styles.secondaryButton} action-control action-secondary`} href="/projects">Explore Projects <Layers3 size={16} aria-hidden="true" /></Link>
-          </div>
-          <ul className={contentStyles.heroPoints}>{["Requirements-first delivery", "You own the source code", "Support after launch"].map(point => <li key={point}><Check size={12} />{point}</li>)}</ul>
-        </div>
-        <a className={styles.scrollCue} href="#home-services">Explore what we build <ArrowDown size={13} /></a>
-      </section>
+      <HomeHero />
       <div className={contentStyles.legacy}><TrustStrip /></div>
       {benefits.length > 0 && <section className={`${styles.section} ${styles.benefitsSection}`} id="included">
         <Reveal><div className={styles.centerHeading}>

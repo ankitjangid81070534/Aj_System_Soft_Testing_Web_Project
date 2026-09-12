@@ -1,0 +1,152 @@
+[
+  {
+    "view": "phone-small",
+    "width": 320,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 14,
+      "y": 640,
+      "width": 292,
+      "height": 84,
+      "bottom": 724
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  },
+  {
+    "view": "phone",
+    "width": 390,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 14,
+      "y": 744,
+      "width": 362,
+      "height": 84,
+      "bottom": 828
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  },
+  {
+    "view": "tablet",
+    "width": 768,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 149,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  },
+  {
+    "view": "current-tablet",
+    "width": 919,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 224.5,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    }
+  },
+  {
+    "view": "current-tablet-dark",
+    "width": 919,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 224.5,
+      "y": 914.8125,
+      "width": 470,
+      "height": 93.1875,
+      "bottom": 1008
+    }
+  },
+  {
+    "view": "desktop",
+    "width": 1214,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 16,
+      "y": 16,
+      "width": 1182,
+      "height": 64,
+      "bottom": 80
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  },
+  {
+    "view": "wide",
+    "width": 1440,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 16,
+      "y": 16,
+      "width": 1408,
+      "height": 64,
+      "bottom": 80
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  },
+  {
+    "view": "dark",
+    "width": 1214,
+    "noOverflow": true,
+    "noPageErrors": true,
+    "targetsAtLeast44": true,
+    "conversionPairAboveFold": true,
+    "navigation": {
+      "x": 16,
+      "y": 16,
+      "width": 1182,
+      "height": 64,
+      "bottom": 80
+    },
+    "nonHeroContentPreserved": true,
+    "nonHeroLinksPreserved": true,
+    "headingPreserved": true,
+    "navigationPreserved": true,
+    "destinationsPreserved": true
+  }
+]

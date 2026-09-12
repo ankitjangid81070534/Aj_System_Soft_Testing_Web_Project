@@ -14,6 +14,10 @@
 12. [Phase 2 benchmark sources and limits](PHASE_2_BENCHMARKS.md)
 13. [Phase 3 shared design-system changes and checks](PHASE_3_DESIGN_SYSTEM.md)
 14. [Phase 3 before/after screenshots](evidence/phase-3/SCREENSHOTS.md)
+15. [Phase 4 hero, navigation and conversion checks](PHASE_4_NAVBAR_HERO.md)
+16. [Phase 4 before/after and current tablet screenshots](evidence/phase-4/SCREENSHOTS.md)
+
+Phase 4 is complete and stopped before Phase 5. It preserves the accepted navigation and homepage sequence; authenticated integration checks remain deferred.
 
 The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 

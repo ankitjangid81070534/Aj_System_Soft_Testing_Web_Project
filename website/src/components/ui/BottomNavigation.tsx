@@ -21,7 +21,7 @@ const icons: Record<string, typeof House> = {
 };
 
 export function BottomNavigation({
-  navLinks, open, onOpen, onClose, onPortal, authenticated, brandName, ctaLabel, ctaHref,
+  navLinks, open, onOpen, onClose, onPortal, authenticated, portalOpen = false, brandName, ctaLabel, ctaHref,
 }: {
   navLinks: readonly PublicNavLink[];
   open: boolean;
@@ -29,11 +29,17 @@ export function BottomNavigation({
   onClose: () => void;
   onPortal: () => void;
   authenticated: boolean;
+  portalOpen?: boolean;
   brandName: string;
   ctaLabel: string;
   ctaHref: string;
 }) {
   const pathname = usePathname();
+  const portalDisclosure = authenticated ? {} : {
+    "aria-haspopup": "dialog" as const,
+    "aria-expanded": portalOpen,
+    "aria-controls": portalOpen ? "portal-login-dialog" : undefined,
+  };
   const { primary, overflow } = splitNavigation(navLinks);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const moreRef = useRef<HTMLButtonElement>(null);
@@ -145,7 +151,7 @@ export function BottomNavigation({
         <NavBar items={navLinks.map(toNavItem)} embedded
           className={styles.desktopLinks} renderItem={renderNavItem} />
         <div className={styles.dockActions}>
-          <button type="button" className={styles.accountTrigger} onClick={onPortal}>
+          <button type="button" className={styles.accountTrigger} onClick={onPortal} {...portalDisclosure}>
             <User aria-hidden="true" size={17} />{authenticated ? "Open Account" : "Client Login"}
           </button>
           <button type="button" className={styles.searchTrigger} onClick={openSearch}
@@ -188,7 +194,7 @@ export function BottomNavigation({
           </nav>
           {query.trim() && <p className={styles.searchStatus} role="status">{menuLinks.length ? `${menuLinks.length} page${menuLinks.length === 1 ? "" : "s"} found` : "No pages found. Try a different name."}</p>}
           <div className={styles.utilities}>
-            <button type="button" className={styles.portal} onClick={() => { setQuery(""); onPortal(); }}>
+            <button type="button" className={styles.portal} onClick={() => { setQuery(""); onPortal(); }} {...portalDisclosure}>
               <User aria-hidden="true" size={20} strokeWidth={1.6} />
               <span>{authenticated ? "Open Account" : "Client Login"}</span>
               <ArrowUpRight aria-hidden="true" size={16} />

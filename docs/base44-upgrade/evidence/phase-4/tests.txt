@@ -1,0 +1,46 @@
+
+> website@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+ ✓ src/lib/admin/resources.test.ts (6 tests) 28ms
+ ✓ src/components/design-preview/HomeHero.test.ts (17 tests) 251ms
+ ✓ src/components/ui/phase4-navigation.test.ts (5 tests) 114ms
+ ✓ src/lib/admin/actions-authorization.test.ts (12 tests) 59ms
+ ✓ src/app/ajadmin/dashboard-access.test.ts (6 tests) 57ms
+ ✓ src/lib/admin/builder-authorization.test.ts (7 tests) 42ms
+ ✓ src/proxy.test.ts (10 tests) 82ms
+ ✓ src/components/ui/reference-ui.test.ts (16 tests) 33ms
+ ✓ src/lib/preview-security.test.ts (4 tests) 19ms
+ ✓ src/components/ui/foundation.test.ts (29 tests) 25ms
+ ✓ src/lib/validation/leads.test.ts (14 tests) 20ms
+ ✓ src/lib/validation/portal.test.ts (7 tests) 19ms
+ ✓ src/lib/env.test.ts (9 tests) 8ms
+ ✓ src/lib/validation/auth.test.ts (7 tests) 8ms
+ ✓ src/lib/data/projects.test.ts (5 tests) 17ms
+ ✓ src/lib/data/services.test.ts (5 tests) 12ms
+ ✓ src/lib/validation/sections.test.ts (5 tests) 11ms
+ ✓ src/types/database.test.ts (3 tests) 5ms
+ ✓ src/lib/bottom-navigation.test.ts (3 tests) 6ms
+ ✓ src/lib/data/mappers.test.ts (6 tests) 5ms
+ ✓ src/lib/seo/metadata.test.ts (8 tests) 7ms
+ ✓ src/components/site/Markdown.test.ts (4 tests) 6ms
+ ✓ src/lib/data/ai-methods.test.ts (4 tests) 7ms
+ ✓ src/components/motion/motion-utils.test.ts (6 tests) 9ms
+ ✓ src/lib/seo/jsonld.test.ts (8 tests) 7ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 4ms
+ ✓ src/lib/auth/permissions.test.ts (6 tests) 5ms
+ ✓ src/lib/admin/mutation-result.test.ts (3 tests) 5ms
+ ✓ src/components/ui/service-accent.test.ts (11 tests) 9ms
+ ✓ src/lib/data/cta.test.ts (3 tests) 5ms
+
+ Test Files  30 passed (30)
+      Tests  232 passed (232)
+   Start at  12:52:51
+   Duration  4.45s (transform 1.59s, setup 0ms, import 6.59s, tests 887ms, environment 3ms)
+
