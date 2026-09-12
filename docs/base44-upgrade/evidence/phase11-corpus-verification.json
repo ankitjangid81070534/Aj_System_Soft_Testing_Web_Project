@@ -1,9 +1,9 @@
 {
-  "verified_at_utc": "2026-09-12T19:59:09.407731+00:00",
+  "verified_at_utc": "2026-09-12T19:59:58.959004+00:00",
   "scope": "Research corpus and existing local route responses only; no publication, observed search demand, authenticated persistence or visual sign-off",
   "starting_head": "61c7752479aa50960dfd4a71de6ca67a27852e34",
   "corpus_path": "docs/base44-upgrade/seo-keywords-5000.csv",
-  "corpus_sha256": "78662f7b0fe4a3ce6a64fce81ebdbd24b117b44d448da81eaea6ba4f443769ca",
+  "corpus_sha256": "3d4328a4afbaecab98fcb15aa86e8b35d063642761e27205de6b1af050396d0a",
   "data_rows": 5000,
   "unique_normalized_queries": 5000,
   "sequential_candidate_ids": true,
@@ -42,7 +42,7 @@
   "mapped_page_count": 31,
   "all_mapped_links_in_current_sitemap": true,
   "application_source_config_unchanged": true,
-  "wording_review": "85 English candidate wording corrections; not individual editorial approval of all 5,000 candidates",
+  "wording_review": "English template wording and 37 Hindi inflection refinements; representative cluster/language review, not individual editorial approval of all 5,000 candidates",
   "route_probes": [
     {
       "path": "/",
@@ -261,5 +261,6 @@
       "has_main_and_heading": true,
       "preview_noindex": true
     }
-  ]
+  ],
+  "line_endings": "LF; parsed rows unchanged by normalization"
 }
