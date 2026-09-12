@@ -1,0 +1,50 @@
+
+> website@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+ ✓ src/components/design-preview/HomeHero.test.ts (17 tests) 184ms
+ ✓ src/components/ui/phase4-navigation.test.ts (5 tests) 96ms
+ ✓ src/proxy.test.ts (16 tests) 49ms
+ ✓ src/components/design-preview/HomeExperience.test.ts (13 tests) 491ms
+ ✓ src/lib/admin/actions-authorization.test.ts (12 tests) 64ms
+ ✓ src/lib/admin/builder-authorization.test.ts (7 tests) 40ms
+ ✓ src/app/ajadmin/dashboard-access.test.ts (6 tests) 129ms
+ ✓ src/components/ui/reference-ui.test.ts (16 tests) 53ms
+ ✓ src/components/ui/foundation.test.ts (29 tests) 26ms
+ ✓ src/lib/validation/leads.test.ts (14 tests) 26ms
+ ✓ src/lib/admin/resources.test.ts (6 tests) 29ms
+ ✓ src/lib/preview-security.test.ts (4 tests) 18ms
+ ✓ src/components/site/public-pages.test.ts (16 tests) 29ms
+ ✓ src/lib/validation/portal.test.ts (7 tests) 13ms
+ ✓ src/lib/data/projects.test.ts (5 tests) 20ms
+ ✓ src/lib/data/services.test.ts (5 tests) 21ms
+ ✓ src/lib/validation/sections.test.ts (5 tests) 10ms
+ ✓ src/lib/env.test.ts (9 tests) 13ms
+ ✓ src/lib/data/ai-methods.test.ts (4 tests) 7ms
+ ✓ src/components/motion/frame-scheduler.test.ts (6 tests) 7ms
+ ✓ src/lib/validation/auth.test.ts (7 tests) 10ms
+ ✓ src/components/motion/motion-lifecycle.test.ts (9 tests) 7ms
+ ✓ src/lib/seo/jsonld.test.ts (8 tests) 12ms
+ ✓ src/lib/bottom-navigation.test.ts (3 tests) 6ms
+ ✓ src/lib/seo/metadata.test.ts (8 tests) 7ms
+ ✓ src/components/ui/service-accent.test.ts (11 tests) 6ms
+ ✓ src/components/motion/motion-utils.test.ts (6 tests) 6ms
+ ✓ src/lib/data/mappers.test.ts (6 tests) 6ms
+ ✓ src/lib/auth/permissions.test.ts (6 tests) 6ms
+ ✓ src/lib/admin/mutation-result.test.ts (3 tests) 5ms
+ ✓ src/types/database.test.ts (3 tests) 8ms
+ ✓ src/lib/data/cta.test.ts (3 tests) 6ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 4ms
+ ✓ src/components/site/Markdown.test.ts (4 tests) 7ms
+
+ Test Files  34 passed (34)
+      Tests  282 passed (282)
+   Start at  14:39:59
+   Duration  3.82s (transform 1.30s, setup 0ms, import 5.04s, tests 1.42s, environment 4ms)
+

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "service",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "layout": {
+      "title": "Custom Software Development",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "FAQ click open/close passed",
+    "pass": true
+  },
+  {
+    "name": "contact",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "layout": {
+      "title": "Tell us what you need built",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Invalid contact submit blocked without writes",
+    "pass": true
+  },
+  {
+    "name": "article",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "layout": {
+      "title": "What ERP digitisation actually means for small businesses",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Contents click, keyboard reopening and fragment link passed",
+    "pass": true
+  },
+  {
+    "name": "service",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "layout": {
+      "title": "Custom Software Development",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "FAQ click open/close passed",
+    "pass": true
+  },
+  {
+    "name": "contact",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "layout": {
+      "title": "Tell us what you need built",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Invalid contact submit blocked without writes",
+    "pass": true
+  },
+  {
+    "name": "article",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "layout": {
+      "title": "What ERP digitisation actually means for small businesses",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Contents click, keyboard reopening and fragment link passed",
+    "pass": true
+  },
+  {
+    "name": "service",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "layout": {
+      "title": "Custom Software Development",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "FAQ click open/close passed",
+    "pass": true
+  },
+  {
+    "name": "contact",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "layout": {
+      "title": "Tell us what you need built",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Invalid contact submit blocked without writes",
+    "pass": true
+  },
+  {
+    "name": "article",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "layout": {
+      "title": "What ERP digitisation actually means for small businesses",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Contents click, keyboard reopening and fragment link passed",
+    "pass": true
+  },
+  {
+    "name": "service",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "layout": {
+      "title": "Custom Software Development",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "FAQ click open/close passed",
+    "pass": true
+  },
+  {
+    "name": "contact",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "layout": {
+      "title": "Tell us what you need built",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Invalid contact submit blocked without writes",
+    "pass": true
+  },
+  {
+    "name": "article",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "layout": {
+      "title": "What ERP digitisation actually means for small businesses",
+      "oneH1": true,
+      "overflow": false,
+      "overlap": false,
+      "wordBlocks": false
+    },
+    "interaction": "Contents click, keyboard reopening and fragment link passed",
+    "pass": true
+  }
+]

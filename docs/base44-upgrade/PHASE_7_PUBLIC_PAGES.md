@@ -4,7 +4,7 @@ Date: 2026-09-12. Starting HEAD: `7846c345e7` (actual pre-edit branch HEAD). Bra
 
 Owner authorization: `continue next phase safly`.
 
-**IMPLEMENTED; FINAL VISUAL SIGN-OFF PENDING. STOPPED before Phase 8.** Phase 1 integration gates remain deferred, not passed. No publishing, PR, merge, secret setup, migration or business-data write was performed.
+**COMPLETE for the public UI scope; final responsive visual review passed. STOPPED before Phase 8.** See [final review](PHASE_7_FINAL_REVIEW.md) for the 282-test rerun and clearly labeled actual-iframe versus independent visual evidence. Phase 1 integration gates remain deferred, not passed. No publishing, PR, merge, secret setup, migration or business-data write was performed.
 
 ## Presentation changes
 
@@ -37,7 +37,7 @@ Five configurations: 320×740, 390×844, 919×499, 1440×1000, and dark 919×900
 - **5 article journeys PASS:** real article link → native contents click/keyboard disclosure → fragment navigation; 44px section links, no page overflow. These were run separately after the initial broader script incorrectly assumed there were blog-category records. That initial assumption failed in all five configurations; it was not an app defect or a passing filter test.
 - Native invalid contact submission is validation evidence only. It is NOT a successful lead save or email delivery.
 
-### Actual iframe and visual status
+### Actual iframe and visual status — initial implementation history
 
 - Services → detail navigation and FAQ open/close passed in the actual iframe with gesture-plus-assertion checks.
 - After the title fix the iframe reported a single-line 41.37px title at 919px, no word blocks, no console errors, no failed requests, no overlay and nonempty main content.
@@ -51,7 +51,7 @@ Five configurations: 320×740, 390×844, 919×499, 1440×1000, and dark 919×900
 - Hosted auth/client/admin success, roles/RLS/storage/CRUD, lead persistence/email, Home Builder composition and hosted schema remain deferred. The owner declined credentials; none were requested or generated.
 - No whole-site accessibility certification, field performance measurement, production domain/release or deployment claims.
 
-## Continuation review — 2026-09-12
+## Earlier continuation review — historical
 
 At HEAD `a7d0d0decd`, the owner's next `continue next phase safly` request resumed this unfinished gate. The source-mounted development service is healthy and the homepage returns HTTP 200. In the actual preview, `/services` eventually rendered the expected H1 with populated main content and no console errors, failed requests or error overlay; the initial navigation-helper failure is not credited as a passing gesture.
 
@@ -59,6 +59,6 @@ The requested screenshot returned `iframe_hidden`: the preview surface is hidden
 
 ## Next safe step
 
-Finish visual review of the corrected service hero plus article/Contact layouts at phone, current tablet and desktop sizes. Preserve the unchanged navbar/dock. Phase 7 is not fully signed off yet; **do not start Phase 8 automatically**. Data-backed checks remain separate owner-dependent release gates.
+Final visual review is now complete: see [PHASE_7_FINAL_REVIEW](PHASE_7_FINAL_REVIEW.md). Preserve the unchanged navbar/dock and **wait for fresh authorization before Phase 8**. Data-backed checks remain separate owner-dependent release gates, not successful integration claims.
 
 Evidence: [verification and captures](evidence/phase-7/SCREENSHOTS.md).

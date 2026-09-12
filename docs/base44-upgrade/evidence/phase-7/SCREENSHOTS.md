@@ -1,31 +1,35 @@
-# Phase 7 evidence — visual sign-off pending
+# Phase 7 evidence — final public UI visual review complete
 
-The saved images below are **independent Chromium captures of the source app**, using its real preview origin and reduced motion. They were captured after the heading correction but **not visually reviewed**. They are not iframe screenshot passes.
+See [final review and limits](../../PHASE_7_FINAL_REVIEW.md). The actual 919px service-detail iframe screenshot was reviewed successfully on 2026-09-12. A subsequent phone iframe capture returned `iframe_hidden` and is not a pass.
 
-The actual iframe's first 919×499 service-detail screenshot exposed broken per-word title wrapping. The source was corrected to render normal-flow H1 text. Subsequent iframe geometry/health and independent layout checks passed. A post-fix screenshot was not obtained: the preview tool stopped accepting verification calls after eight attempts. Final visual sign-off remains open.
+The **fresh independent source-browser captures below were visually reviewed** through a temporary evidence viewer. They use the running source app's real preview origin and reduced motion, without mocked records or auth bypass. They are not live-iframe phone/desktop screenshots.
 
-## Captures awaiting review
+## Reviewed responsive captures
 
-- [390px Services](images/390-services.png)
-- [919×499 Services](images/919-services.png)
-- [390px Contact](images/390-contact.png)
-- [919×499 Contact](images/919-contact.png)
-- [919px dark Contact](images/919-dark-contact.png)
-- [919×499 Reviews](images/919-reviews.png)
-- [390px article](images/390-article.png)
-- [919×499 article](images/919-article.png)
-- [919px dark article](images/919-dark-article.png)
+| View | Phone 390×844 | Tablet 919×499 | Desktop 1440×1000 |
+|---|---|---|---|
+| Corrected service detail | [Phone](final-review/service-390.png) | [Tablet](final-review/service-919.png) | [Desktop](final-review/service-1440.png) |
+| Contact header | [Phone](final-review/contact-390.png) | [Tablet](final-review/contact-919.png) | [Desktop](final-review/contact-1440.png) |
+| Scrolled contact form | [Phone](final-review/contact-form-390.png) | [Tablet](final-review/contact-form-919.png) | [Desktop](final-review/contact-form-1440.png) |
+| Article header | [Phone](final-review/article-390.png) | [Tablet](final-review/article-919.png) | [Desktop](final-review/article-1440.png) |
+| Scrolled article contents | [Phone](final-review/article-contents-390.png) | [Tablet](final-review/article-contents-919.png) | [Desktop](final-review/article-contents-1440.png) |
 
-The 919×499 fixed dock occupies the lower viewport as before; its appearance is not a claim that all controls fit above the fold. These are selected views, not full-page/whole-site certification.
+Reviewed 919×900 dark views: [service](final-review/service-919-dark.png), [contact](final-review/contact-919-dark.png), [article](final-review/article-919-dark.png).
 
-## Assertions and limits
+The fixed mobile/tablet dock occupies the lower viewport as before. Controls/content may need scrolling; the captures do not imply that everything fits above the fold or certify every state.
 
-- [Initial browser report](browser-results.json): 35 index-layout passes, 15 service/contact/review-journey passes, five runtime/write-guard passes. Five combined article/category checks initially failed because the script assumed category records that do not exist. **Those entries remain failures in this raw report**, not rewritten as passes.
-- [Separate article journeys](article-results.json): five passes for actual article links, native disclosure click/keyboard and section fragments; category filters explicitly unverified.
-- [Preservation](preservation.json): seven index-page link lists, form descriptors and normalized text comparisons pass. The normalizer removes the previous decorative title duplicate and ignores whitespace boundaries.
-- [Tests](tests.txt): 34 files / 276 tests, including 16 source-contract checks (not mocked hosted-success claims).
-- [Typecheck](typecheck.txt), [lint](lint.txt), [production build](build.txt): pass.
+## Fresh assertions
 
-Actual iframe service navigation and FAQ open/close pass separately. Its post-correction check returned no console errors, failed requests, overlay or empty main; it is health/geometry evidence, not final visual evidence.
+- [Twelve layout/interaction results](final-review/results.json): service FAQ open/close, invalid Contact submission without writes, article disclosure click/keyboard and actual fragment navigation, across four configurations.
+- [282 tests](final-review/tests.txt), [typecheck](final-review/typecheck.txt), [lint](final-review/lint.txt): PASS.
+- No application code changed in the final review turn; production build was not rerun.
 
-Real project details, category/project filters, populated team/reviews, auth persistence and lead/email delivery remain unverified. See [Phase 7 report](../../PHASE_7_PUBLIC_PAGES.md).
+## Earlier evidence retained unchanged
+
+- [Original browser report](browser-results.json): 35 index-layout passes, 15 service/contact/review-journey passes and five runtime/write guards. Its five combined article/category checks failed because the script assumed nonexistent categories; these remain failures, not rewritten as passes.
+- [Separate article journeys](article-results.json): five passes; category filtering explicitly unverified.
+- [Preservation](preservation.json): seven index-page link lists, form descriptors and normalized text comparisons pass.
+- Earlier [276-test run](tests.txt), [typecheck](typecheck.txt), [lint](lint.txt), [production build](build.txt): historical passes, not this turn's rerun.
+- Earlier screenshots remain under `images/`; final sign-off uses the fresh reviewed `final-review/` captures above, not an implied review of every historical image.
+
+Real records, auth/persistence and lead/email delivery remain unverified; see the [Phase 7 report](../../PHASE_7_PUBLIC_PAGES.md).
