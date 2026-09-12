@@ -2,7 +2,7 @@
 
 ## Phase-gated upgrade program (2026-09-12)
 - The new owner-supplied 0–17 upgrade program is tracked in `docs/base44-upgrade/PHASE_STATUS.md`; read it, `MASTER_PROJECT_UNDERSTANDING.md`, `REGRESSION_BASELINE.md` and `MASTER_UPGRADE_PLAN.md` before continuing.
-- Phase 0 added documentation/baselines only. Phase 1 is NOT started and requires the exact command `START NEXT PHASE SAFELY`; older numbered reports are not this program's phase state.
+- Phase 0 added documentation/baselines only. Phase 1 was authorized and initial inspection started, but it is unfinished. The owner declined Supabase/Resend secret setup on 2026-09-12: do not retry that request or generate substitute credentials. Static/local audit may continue without them; real integration checks stay blocked. Do not advance to Phase 2; older numbered reports are not this program's phase state.
 - Real Supabase/auth/admin persistence remains blocked by absent configuration. The default isolated production build passed; optional webpack build failed on existing CSS-module global selectors. Keep these outcomes separate.
 - Preserve the accepted compact one-row desktop navbar, visible left brand/centered eight links, and unchanged mobile dock. Do not redesign during the Phase 1 functional audit.
 

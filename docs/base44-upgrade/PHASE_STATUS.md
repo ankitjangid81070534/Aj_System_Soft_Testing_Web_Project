@@ -1,20 +1,22 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 0 — PROJECT INGESTION + BASELINE ONLY — completed with documented verification blockers
+CURRENT_PHASE: 1 — FULL FUNCTIONAL / BACKEND / API AUDIT — started; paused after initial inspection, integration checks blocked
 LAST_COMPLETED_PHASE: 0 (baseline deliverables; not full backend QA or visual sign-off)
-NEXT_PHASE: 1 — FULL FUNCTIONAL / BACKEND / API AUDIT — NOT STARTED
-LAST_COMMIT_HASH: 421447d827a2f5ec60acd2cc05e830b3acbbc92f
+NEXT_PHASE: 1 — resume the unfinished audit; do NOT advance to Phase 2
+LAST_COMMIT_HASH: 1ed6e9cd8b7281b7c893a6aa4af7f87e69df05a7
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated local default-production build and anonymous smoke passed; actual deployment/domain/live DB not verified.
 
 The recorded hash is the **source baseline / pre-phase HEAD**, not an invented post-turn documentation commit. Base44 auto-commits at turn end; next phase must read `git rev-parse HEAD` and record the actual new HEAD. No manual commit/push, force push, branch switch, PR or merge was performed.
 
 ## Execution gate
 
-STOPPED. Do not run Phase 1 until the user sends exactly:
+Phase 1 was authorized by the user's next-phase command. Initial source inspection and runtime presence checks were performed; all six integration variables remain absent. No application fix, migration, database write or new functional test was completed during this attempt.
 
-`START NEXT PHASE SAFELY`
+On 2026-09-12 the owner explicitly **rejected setting** NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY, EMAIL_FROM and EMAIL_ADMIN_TO. Do not retry secret setup, generate substitute credentials, change Supabase projects or bypass auth. Revisit configuration only if the owner explicitly reopens it.
 
-On that command: re-read this file, MASTER_PROJECT_UNDERSTANDING, REGRESSION_BASELINE and the supplied MASTER_UPGRADE_PLAN; verify branch/HEAD/cleanliness; start **only Phase 1**. Historical phase reports outside this folder do not advance this new program. A skipped or blocked backend test is never silently promoted to PASS.
+The audit is paused, not completed. Static/local checks can resume without secrets under the existing Phase 1 scope. Re-read this file, MASTER_PROJECT_UNDERSTANDING, REGRESSION_BASELINE and MASTER_UPGRADE_PLAN before resuming; verify branch/HEAD/diff. A subsequent `START NEXT PHASE SAFELY` resumes **unfinished Phase 1**, not Phase 2. Historical reports and blocked checks never count as completion.
+
+The tests and file list below remain the **last completed phase's (Phase 0)** evidence, not new Phase 1 passes. This interruption only updates PHASE_STATUS.md and the AGENTS.md pointer.
 
 ## TESTS_LAST_PHASE
 
@@ -40,12 +42,12 @@ B01 and R01–R12 in REGRESSION_BASELINE are authoritative. Highest next-phase p
 - Live preview screenshot renderer failed; saved local captures still require visual review.
 - Production not published/verified; no Search Console/CrUX/real network or database performance data.
 
-These block corresponding verification, not the completed documentation baseline. Phase 1 can begin with static/read-only checks after the exact trigger, but cannot claim full end-to-end success until blockers are resolved.
+These block corresponding verification, not the completed Phase 0 documentation baseline. Phase 1 has begun and may continue static/local checks without credentials, but cannot claim full end-to-end success while these checks remain blocked.
 
 ## APPROVALS_NEEDED
 
-- Exact next-phase trigger before any Phase 1 work.
-- Securely supplied existing-project integration configuration and authorized test accounts/safe test-data scope before configured writes/auth tests. Do not paste credentials in chat.
+- Phase 1 is already authorized; Phase 2 is not started or authorized by completion of this attempt.
+- Integration setup was declined. Do not request those secrets again without the owner's renewed request. Real writes/auth tests remain blocked until the owner chooses to configure the existing project and authorizes test accounts/safe test-data scope; never request credentials in chat.
 - Explicit approval for any destructive operations, production migrations/deploy, route renames, substantial content moves/removals, PR creation or merge. No such approval inferred here.
 - Preserve accepted compact desktop navbar, visible left brand/centered eight links and mobile navigation during every later design phase.
 
