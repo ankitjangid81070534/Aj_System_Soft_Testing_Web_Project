@@ -20,6 +20,7 @@ describe("sitemap matches public route and metadata contracts (mocked records)",
   it("includes only implemented public routes and omits explicit noindex hubs", async () => {
     const entries = await sitemap();
     const paths = entries.map(entry => new URL(entry.url).pathname);
+    expect(paths).toContain("/disclaimer");
     expect(paths).not.toContain("/reviews");
     expect(paths).not.toContain("/offers/unit-offer");
     expect(paths).not.toContain("/updates/unit-update");

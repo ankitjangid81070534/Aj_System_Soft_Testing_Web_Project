@@ -30,6 +30,7 @@ const STATIC_ROUTES: readonly StaticRoute[] = [
   { path: "/team", changeFrequency: "monthly", priority: 0.75 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/disclaimer", changeFrequency: "yearly", priority: 0.3 },
   { path: "/service-agreement", changeFrequency: "monthly", priority: 0.3 },
 ];
 

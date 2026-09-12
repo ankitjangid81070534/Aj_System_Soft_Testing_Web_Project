@@ -33,7 +33,7 @@ describe("SEO metadata save refreshes all affected output", () => {
     form.set("path", "/privacy");
     form.set("no_index", "on");
     expect(await upsertResourceAction({ ok: null }, form)).toMatchObject({ ok: true });
-    for (const route of ["/sitemap.xml", "/", "/about", "/contact", "/services", "/projects", "/reviews", "/blog", "/team", "/request-quote", "/ai-methods", "/privacy", "/terms", "/service-agreement"])
+    for (const route of ["/sitemap.xml", "/", "/about", "/contact", "/services", "/projects", "/reviews", "/blog", "/team", "/request-quote", "/ai-methods", "/privacy", "/terms", "/disclaimer", "/service-agreement"])
       expect(mocks.refresh).toHaveBeenCalledWith(route);
   });
   it("never accesses the database or invalidates output for an unauthenticated save", async () => {

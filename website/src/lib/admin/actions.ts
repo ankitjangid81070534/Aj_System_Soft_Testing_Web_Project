@@ -84,6 +84,7 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
         "/ai-methods",
         "/privacy",
         "/terms",
+        "/disclaimer",
         "/service-agreement",
       ]) {
         revalidatePath(route);
