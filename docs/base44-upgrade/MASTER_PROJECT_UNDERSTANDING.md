@@ -3,6 +3,10 @@
 Date: 2026-09-12. Baseline source commit: `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. Branch: `upgrade-desktop-navbar`.
 Authority: [the supplied master plan](MASTER_UPGRADE_PLAN.md), current user instructions and [PHASE_STATUS](PHASE_STATUS.md). This is a NEW 0–17 program; older `docs/PHASE-*` and UI audit reports are historical evidence, not completion of this program.
 
+## Current progress
+
+Phase 1 source fixes and current verification levels are recorded in [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md). The original Phase 0 snapshot below is retained: dashboard lead access and supported slug redirect matching have since been repaired, and publication permission checks added to generic/Builder saves. Full backend verification remains blocked; Phase 2 is not started.
+
 ## Scope and evidence honesty
 
 - All **337 tracked files** were read for an inventory/hash baseline; **239 TS/TSX/CSS source modules** indexed for imports, exports and literal database/storage references. See [source-inventory.json](evidence/source-inventory.json).

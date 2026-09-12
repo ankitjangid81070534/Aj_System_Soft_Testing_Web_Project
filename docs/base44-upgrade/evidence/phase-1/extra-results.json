@@ -1,0 +1,40 @@
+[
+  {
+    "check": "Signup blank submit",
+    "invalidRequiredFields": 13,
+    "createsAccount": false
+  },
+  {
+    "check": "Consultation blank submit",
+    "nameInvalid": true,
+    "createsAppointment": false
+  },
+  {
+    "route": "/auth/callback",
+    "status": 307,
+    "location": "http://localhost:3100/login?error=oauth_callback"
+  },
+  {
+    "route": "/auth/confirm",
+    "status": 307,
+    "location": "http://localhost:3100/login?error=invalid_email_link"
+  },
+  {
+    "route": "/robots.txt",
+    "status": 200,
+    "location": null,
+    "contentType": "text/plain"
+  },
+  {
+    "route": "/sitemap.xml",
+    "status": 200,
+    "location": null,
+    "contentType": "application/xml"
+  },
+  {
+    "route": "/blog/rss.xml",
+    "status": 200,
+    "location": null,
+    "contentType": "application/rss+xml; charset=utf-8"
+  }
+]

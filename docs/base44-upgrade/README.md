@@ -8,6 +8,7 @@
 6. [Performance baseline](PERFORMANCE_BASELINE.md)
 7. [SEO inventory / deferred research map](SEO_KEYWORD_MAP.md)
 8. [Screenshot evidence index](evidence/SCREENSHOTS.md)
+9. [Phase 1 fixes, functional matrix and blocked checks](PHASE_1_FUNCTIONAL_AUDIT.md)
 
 Phase 0 contains documentation and evidence only. Actual backend/auth/DB verification and live visual sign-off have explicit blockers; they are not reported as passes. Older numbered reports elsewhere describe older programs.
 

@@ -2,6 +2,10 @@
 
 Date: 2026-09-12. Source baseline `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. App branch `upgrade-desktop-navbar`.
 
+## Phase 1 follow-up (baseline below retained)
+
+See [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md): R04 has a code fix and role regression tests; R05 is fixed for service/project/blog families with routing tests. Newly discovered generic/Home Builder Save publication bypasses are also repaired. Real hosted authorization/persistence and R01/R02/R03 remain blocked/unresolved; none is silently marked fully verified.
+
 ## Evidence and acceptance boundaries
 
 | Check | Result | Evidence/limits |

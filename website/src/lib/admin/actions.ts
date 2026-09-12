@@ -288,8 +288,14 @@ export async function upsertResourceAction(
     }
   }
 
-  const admin = createSupabaseAdminLooseClient();
   const isCreate = !id;
+  if (
+    isCreate && config.supports.publish && values.status === "published" &&
+    !can(auth.user.role, `${config.capability}:publish` as Capability)
+  ) {
+    return authFailure("FORBIDDEN", "Your role cannot publish this content. Save it as a draft.");
+  }
+  const admin = createSupabaseAdminLooseClient();
   if (config.slugSource && isCreate) {
     const slug = typeof values.slug === "string" && values.slug !== "" ? values.slug : "item";
     values.slug = await uniqueSlug(config, slug);
@@ -323,6 +329,14 @@ export async function upsertResourceAction(
       message: "This record no longer exists.",
     };
   }
+  // The Save form is another status-change entry point, not a publish bypass.
+  // Editors can still edit content without changing its current publication state.
+  if (
+    config.supports.publish && values.status !== existing.status &&
+    !can(auth.user.role, `${config.capability}:publish` as Capability)
+  ) {
+    return authFailure("FORBIDDEN", "Your role cannot change the publication status.");
+  }
   if (config.supports.softDelete && existing.deleted_at) {
     return {
       ok: false,
@@ -331,6 +345,11 @@ export async function upsertResourceAction(
     };
   }
 
+  // Omit the protected field for editors even when it matched the read row:
+  // a concurrent publisher must not have their newer status overwritten.
+  if (config.supports.publish && !can(auth.user.role, `${config.capability}:publish` as Capability)) {
+    delete payload.status;
+  }
   const { data, error } = await admin
     .from(config.table)
     .update(payload)

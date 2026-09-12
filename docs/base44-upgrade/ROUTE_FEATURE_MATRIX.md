@@ -2,6 +2,8 @@
 
 Baseline `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. Source patterns and anonymous isolated-production observations; this is not a completed Phase 1 mutation audit.
 
+Current action-by-action expected/actual/status matrix: [Phase 1 functional audit](PHASE_1_FUNCTIONAL_AUDIT.md). That report supersedes verification status only; this Phase 0 source/route inventory remains the immutable baseline. Full Phase 1 is still blocked, not completed.
+
 ## Source route patterns
 
 | Route | Source | Feature/data boundary | Observation |

@@ -1,0 +1,111 @@
+
+> website@0.1.0 test
+> vitest run src/proxy.test.ts
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+stderr | src/proxy.test.ts > configured redirect and session routing (mocked provider) > keeps public fallback pages available without configuration
+[ajadmin] Supabase not configured — admin auth check skipped until Phase 2.
+
+ ❯ src/proxy.test.ts (10 tests | 5 failed) 75ms
+     × runs saved redirects for /services/old-service without session overhead 37ms
+     × runs saved redirects for /projects/old-project without session overhead 4ms
+     × runs saved redirects for /blog/old-post without session overhead 3ms
+     × does not call Auth for an unmatched public detail page 9ms
+     × continues public navigation on redirect-provider failure 3ms
+     ✓ keeps the unauthenticated gate for /account 3ms
+     ✓ keeps the unauthenticated gate for /ajadmin/c/services 2ms
+     ✓ keeps signed-in client navigation available 2ms
+     ✓ keeps token-free auth callback and static assets outside proxy matching 8ms
+     ✓ keeps public fallback pages available without configuration 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/proxy.test.ts > configured redirect and session routing (mocked provider) > runs saved redirects for /services/old-service without session overhead
+ FAIL  src/proxy.test.ts > configured redirect and session routing (mocked provider) > runs saved redirects for /projects/old-project without session overhead
+ FAIL  src/proxy.test.ts > configured redirect and session routing (mocked provider) > runs saved redirects for /blog/old-post without session overhead
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/proxy.test.ts:48:7
+     46|     const { proxy } = await import("./proxy");
+     47|     const response = await proxy(new NextRequest(`https://site.example…
+     48|     expect(new URL(response.headers.get("location")!).pathname).toBe(l…
+       |       ^
+     49|     expect(mocks.getUser).toHaveBeenCalledOnce();
+     50|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/proxy.test.ts > configured redirect and session routing (mocked provider) > does not call Auth for an unmatched public detail page
+AssertionError: expected "vi.fn()" to not be called at all, but actually been called 1 times
+
+Received:
+
+  1st vi.fn() call:
+
+    Array [
+      "https://unit-test.invalid",
+      "unit-test-not-a-credential",
+      Object {
+        "cookies": Object {
+          "getAll": [Function getAll],
+          "setAll": [Function setAll],
+        },
+      },
+    ]
+
+
+Number of calls: 1
+
+ ❯ src/proxy.test.ts:61:54
+     60|     }
+     61|   });
+     62|   it("keeps public fallback pages available without configuration", as…
+       |                                      ^
+     63|     mocks.configured = false;
+     64|     const { proxy } = await import("./proxy");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/proxy.test.ts > configured redirect and session routing (mocked provider) > continues public navigation on redirect-provider failure
+AssertionError: expected "vi.fn()" to not be called at all, but actually been called 1 times
+
+Received:
+
+  1st vi.fn() call:
+
+    Array [
+      "https://unit-test.invalid",
+      "unit-test-not-a-credential",
+      Object {
+        "cookies": Object {
+          "getAll": [Function getAll],
+          "setAll": [Function setAll],
+        },
+      },
+    ]
+
+
+Number of calls: 1
+
+ ❯ src/proxy.test.ts:67:54
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 5 passed (10)
+   Start at  10:59:15
+   Duration  768ms (transform 91ms, setup 0ms, import 455ms, tests 75ms, environment 0ms)
+
