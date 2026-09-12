@@ -3,10 +3,18 @@
 CURRENT_PHASE: 8 — AUTH / CLIENT PORTAL UI + UX — UI IMPLEMENTED; AUTHENTICATED VERIFICATION DEFERRED
 LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 remains INCOMPLETE / DEFERRED
 NEXT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA; requires fresh authorization acknowledging the remaining Phase 8 checks
-LAST_COMMIT_HASH: 69878865ff
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated default production build passes; no deployment or release sign-off.
+LAST_COMMIT_HASH: 54ba811ed5e1b7eb8b05ddba710003abdd583629
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Fresh isolated default production build passes at the recovery HEAD; no deployment or release sign-off.
 
-The hash is the actual pre-edit HEAD for the Phase 8 service-log follow-up. That follow-up fixed the smooth-scroll declaration warning: 295 tests, typecheck/lint and fresh iframe navigation/readiness checks pass with clean logs; the original Phase 8 verification below remains historical. See the follow-up section in PHASE_8_AUTH_PORTAL. Base44 commits/pushes automatically at turn end; no post-turn hash is invented. No manual commit/push, branch switch, PR, merge or deployment.
+The hash is the actual pre-edit HEAD for cross-chat recovery, not a post-turn commit. At recovery start, fetched main and system-upgrade-init were identical at this merge of PR #7; all other fetched branch tips were ancestors, so there is no unmerged unique work to combine. No branch switch/deletion, direct main push, manual commit or deployment was performed. Base44 commits/pushes at turn end; the owner explicitly requests PR creation for this work and alongside future completed phases, not automatic merging of newly opened PRs.
+
+## Cross-chat recovery — not a new phase
+
+See [CONTINUATION_RECOVERY](CONTINUATION_RECOVERY.md). The owner's recollection of an interrupted Phase 7 is older than the repository: Phase 7 public UI is complete and Phase 8 UI is already merged. No Phase 7/8 implementation was repeated and Phase 9 has not started. Main stays the integration source of truth through the managed working-branch/PR workflow, not direct edits to main. The exact cause of an old view in another app/chat is not established by this audit.
+
+Fresh checks: **295 tests / 35 files**, typecheck, lint, whitespace and isolated production build PASS. Sixteen nonempty HTTP 200 route probes plus an intentional missing-service HTTP 404 PASS at route-response scope only. Source-mounted development service is healthy. Current iframe gesture/visual verification is **NOT AUTOMATICALLY VERIFIED** (`iframe_unavailable`); historical Phase 7/8 browser results below are not fresh passes. Auth/portal/admin persistence remains blocked by absent existing-project configuration and approved test sessions; the prior credential refusal is preserved.
+
+Recovery files: `CONTINUATION_RECOVERY.md`, this file, `MASTER_PROJECT_UNDERSTANDING.md`, `AGENTS.md`. No app source/config/dependency/schema/data changes. Previous implementation files and tests remain listed below as historical phase evidence. Pending owner choice: finish Phase 8 authenticated checks with renewed secure-configuration/test-session authorization, or explicitly defer them and authorize Phase 9. Do not silently treat either choice as already made.
 
 ## Owner authorization / execution gate
 
