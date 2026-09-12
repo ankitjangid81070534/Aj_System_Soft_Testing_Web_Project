@@ -1,6 +1,11 @@
 # Base44 Dev Environment
 
-## Current Phase 10 checkpoint (2026-09-12)
+## Current Phase 11 checkpoint (2026-09-12)
+- Phase 11 research-only deliverables are complete; start with `docs/base44-upgrade/PHASE_STATUS.md`, `SEO_KEYWORD_MAP.md` and `PHASE_11_CONTENT_PROPOSALS.md`. Phase 12 is not authorized; earlier Phase 1/8/9 private gates remain deferred.
+- `seo-keywords-5000.csv` has exactly 5,000 source-derived candidates, not observed demand or content to publish. Counts: en 1,680 / hi 1,660 / hi-Latn 1,660; 18 existing owners. Empty volume/difficulty fields mean unknown. Do not recycle the historical missing 5,000-keyword text-file claims or create separate URLs for variants.
+- Fresh corpus/script/source checks and all 31 mapped local public responses pass; `evidence/phase11-corpus-verification.json` pins the CSV SHA-256 and route evidence. Recheck that digest after any CSV edit. No application/config/data changes, fresh visual/authenticated verification, deployment or published-domain indexing are part of this phase.
+
+## Historical Phase 10 checkpoint (2026-09-12)
 - Owner authorized the next phase after Phase 9 private gates were disclosed. Phase 10 local technical SEO is complete; read `PHASE_10_TECHNICAL_SEO.md` and top of `PHASE_STATUS.md`. Earlier Phase 1/8/9 private gates stay deferred, not passed; Phase 11 is not authorized. Earlier phase-gate notes below are historical.
 - On public production metadata, omit `robots` rather than set it to `undefined`: Next otherwise erases inherited root index/snippet directives. Both page metadata and robots output protect Base44/Vercel previews; unset those flags only in isolated production verification, never in the actual sandbox service.
 - Sitemap must not advertise nonexistent offers/updates detail routes. Static route noindex overrides now match legal metadata too; content/SEO saves refresh sitemap and all static SEO outputs. JSON-LD must escape `<`, omit invented dates/prices/search actions, and distinguish service audiences from geographic coverage.

@@ -1,0 +1,265 @@
+{
+  "verified_at_utc": "2026-09-12T19:59:09.407731+00:00",
+  "scope": "Research corpus and existing local route responses only; no publication, observed search demand, authenticated persistence or visual sign-off",
+  "starting_head": "61c7752479aa50960dfd4a71de6ca67a27852e34",
+  "corpus_path": "docs/base44-upgrade/seo-keywords-5000.csv",
+  "corpus_sha256": "78662f7b0fe4a3ce6a64fce81ebdbd24b117b44d448da81eaea6ba4f443769ca",
+  "data_rows": 5000,
+  "unique_normalized_queries": 5000,
+  "sequential_candidate_ids": true,
+  "language_counts": {
+    "en": 1680,
+    "hi": 1660,
+    "hi-Latn": 1660
+  },
+  "cluster_counts": {
+    "custom-software-development": 300,
+    "saas-development": 300,
+    "web-application-development": 300,
+    "website-development": 300,
+    "ecommerce-development": 300,
+    "android-app-development": 300,
+    "ios-app-development": 300,
+    "desktop-software-development": 300,
+    "erp-business-software": 300,
+    "hospital-clinic-software": 300,
+    "pharmacy-software": 300,
+    "retail-pos-inventory": 300,
+    "hotel-management-software": 300,
+    "api-system-integrations": 300,
+    "cloud-deployment-maintenance": 300,
+    "how-to-plan-a-custom-software-project": 200,
+    "web-app-or-mobile-app-choosing-the-right-platform": 150,
+    "what-erp-digitization-actually-means-for-small-businesses": 150
+  },
+  "source_quotes_valid": true,
+  "source_digests": {
+    "website/src/lib/data/blog-fallback.ts": "2eb960e664b9654e2c97e9db0771be38c4a705c490e1fa90cf3f80e0345155a5",
+    "website/src/lib/data/services-fallback.ts": "3ccbece31898cf651a794562c3e633b7436962cb20f0050e8fbdcdcb7bc104d2"
+  },
+  "all_demand_metrics_unknown": true,
+  "existing_candidate_owner_count": 18,
+  "mapped_page_count": 31,
+  "all_mapped_links_in_current_sitemap": true,
+  "application_source_config_unchanged": true,
+  "wording_review": "85 English candidate wording corrections; not individual editorial approval of all 5,000 candidates",
+  "route_probes": [
+    {
+      "path": "/",
+      "http_status": 200,
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/about",
+      "http_status": 200,
+      "title": "About Us — The Team Behind AJS Technology | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/ai-methods",
+      "http_status": 200,
+      "title": "AI Methods | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog",
+      "http_status": 200,
+      "title": "Insights — Software Planning, Platforms & Business Systems | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "http_status": 200,
+      "title": "How to plan a custom software project | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "http_status": 200,
+      "title": "Web app or mobile app: choosing the right platform | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "http_status": 200,
+      "title": "What ERP digitisation actually means for small businesses | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/contact",
+      "http_status": 200,
+      "title": "Contact Us | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/privacy",
+      "http_status": 200,
+      "title": "Privacy Policy | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/projects",
+      "http_status": 200,
+      "title": "Projects & Case Studies | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/request-quote",
+      "http_status": 200,
+      "title": "Request a Quote | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/reviews",
+      "http_status": 200,
+      "title": "Verified Client Reviews | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/service-agreement",
+      "http_status": 200,
+      "title": "Service Agreement | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services",
+      "http_status": 200,
+      "title": "Services — Custom Software, SaaS, Web, Mobile & Business Systems | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/android-app-development",
+      "http_status": 200,
+      "title": "Android App Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/api-system-integrations",
+      "http_status": 200,
+      "title": "API Integration Services Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/cloud-deployment-maintenance",
+      "http_status": 200,
+      "title": "Cloud Application Modernization & Maintenance in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/custom-software-development",
+      "http_status": 200,
+      "title": "Custom Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/desktop-software-development",
+      "http_status": 200,
+      "title": "Desktop & Windows Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/ecommerce-development",
+      "http_status": 200,
+      "title": "Ecommerce Website Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/erp-business-software",
+      "http_status": 200,
+      "title": "ERP & CRM Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/hospital-clinic-software",
+      "http_status": 200,
+      "title": "Hospital & Clinic Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/hotel-management-software",
+      "http_status": 200,
+      "title": "Hotel Management Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/ios-app-development",
+      "http_status": 200,
+      "title": "iOS App Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/pharmacy-software",
+      "http_status": 200,
+      "title": "Pharmacy Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/retail-pos-inventory",
+      "http_status": 200,
+      "title": "Retail POS & Inventory Software Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/saas-development",
+      "http_status": 200,
+      "title": "SaaS Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/web-application-development",
+      "http_status": 200,
+      "title": "Web Application Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/services/website-development",
+      "http_status": 200,
+      "title": "Website Development Company in India | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/team",
+      "http_status": 200,
+      "title": "Our Team | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/terms",
+      "http_status": 200,
+      "title": "Terms & Conditions | AJ System Soft Technology",
+      "has_main_and_heading": true,
+      "preview_noindex": true
+    }
+  ]
+}
