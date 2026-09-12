@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteUrl } from "@/lib/env";
 import { getSeoOverride } from "@/lib/seo/overrides";
 import { BRAND, SITE_KEYWORDS } from "@/lib/seo/site";
+import { isPreviewDeployment } from "@/lib/seo/indexing";
 
 export const HOMEPAGE_TITLE = `${BRAND.primaryName} | Custom Software Development Company India`;
 
@@ -61,7 +62,9 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
         ? { "application/rss+xml": new URL(input.rss, siteUrl).toString() }
         : undefined,
     },
-    robots: input.noIndex ? { index: false, follow: false } : undefined,
+    // Omit the field on public production pages: an explicit undefined erases
+    // the root robots metadata, including its rich-snippet preferences.
+    ...(input.noIndex || isPreviewDeployment() ? { robots: { index: false, follow: false } } : {}),
     openGraph,
     twitter: {
       card: "summary_large_image",
@@ -77,7 +80,7 @@ export function buildRootMetadata(): Metadata {
     /^google-site-verification=/i,
     "",
   ).trim();
-  const isPreview = process.env.VERCEL_ENV === "preview";
+  const isPreview = isPreviewDeployment();
   return {
     metadataBase: new URL(siteUrl),
     title: { default: HOMEPAGE_TITLE, template: `%s | ${BRAND.primaryName}` },
@@ -135,7 +138,7 @@ export async function buildRouteMetadata(input: {
     description: override?.description ?? input.description,
     title: override?.title ?? input.title,
     absoluteTitle: input.absoluteTitle,
-    noIndex: override?.noIndex ?? input.noIndex,
+    noIndex: input.noIndex || override?.noIndex,
     rss: input.rss,
     ogImageUrl: override?.ogImageUrl,
   });

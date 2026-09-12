@@ -40,6 +40,7 @@ export const FOOTER_LINK_GROUPS = [
       { label: "Service Agreement", href: "/service-agreement" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
+      { label: "Disclaimer", href: "/disclaimer" },
     ],
   },
 ] as const;

@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import { useFormStatus } from "react-dom";
 import { Dialog } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
+import { AdminActionForm, type AdminQuickAction } from "./AdminActionForm";
 
 function SubmitButton({ label }: { label: string }) {
   const { pending } = useFormStatus();
@@ -27,8 +28,9 @@ export function ConfirmButton({
   confirmLabel = "Yes, continue",
   extraFields,
   className,
+  ariaLabel,
 }: {
-  action: (formData: FormData) => Promise<void>;
+  action: AdminQuickAction;
   resource: string;
   id: string;
   label: ReactNode;
@@ -37,6 +39,7 @@ export function ConfirmButton({
   confirmLabel?: string;
   extraFields?: Record<string, string>;
   className?: string;
+  ariaLabel?: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -44,6 +47,8 @@ export function ConfirmButton({
     <>
       <button
         type="button"
+        aria-label={ariaLabel ?? (typeof label === "string" ? undefined : title)}
+        aria-haspopup="dialog"
         onClick={() => setOpen(true)}
         className={
           className ??
@@ -53,11 +58,9 @@ export function ConfirmButton({
         {label}
       </button>
       <Dialog open={open} onClose={() => setOpen(false)} title={title} description={description}>
-        <form
-          action={async (formData) => {
-            await action(formData);
-            setOpen(false);
-          }}
+        <AdminActionForm
+          action={action}
+          onSuccess={() => setOpen(false)}
           className="flex flex-col gap-4"
         >
           <input type="hidden" name="__resource" value={resource} />
@@ -73,7 +76,7 @@ export function ConfirmButton({
             </Button>
             <SubmitButton label={confirmLabel} />
           </div>
-        </form>
+        </AdminActionForm>
       </Dialog>
     </>
   );

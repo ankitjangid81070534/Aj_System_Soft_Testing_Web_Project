@@ -3,7 +3,9 @@ import { ArrowDown, ArrowUp, Pencil, Plus, Search, Trash2, Undo2 } from "lucide-
 import { StatusPill } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/States";
 import { Input } from "@/components/ui/Input";
+import { AdminTableRegion } from "@/components/admin/AdminTableRegion";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
+import { AdminActionForm } from "./AdminActionForm";
 import {
   deleteResourceAction,
   reorderResourceAction,
@@ -64,7 +66,9 @@ export function ResourceList({
         <form
           action={`/ajadmin/c/${config.section}`}
           method="get"
-          className="flex max-w-md flex-1 gap-2"
+          role="search"
+          aria-label={`Search ${config.label}`}
+          className="flex min-w-0 basis-full gap-2 sm:max-w-md sm:flex-1"
         >
           {view ? <input type="hidden" name="view" value={view} /> : null}
           {status ? <input type="hidden" name="status" value={status} /> : null}
@@ -82,27 +86,27 @@ export function ResourceList({
             <span className="sr-only">Search</span>
           </button>
         </form>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {config.supports.publish ? (
             <>
               <Link
                 href={listHref({ status: "", page: 1 })}
-                aria-pressed={status === ""}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
+                aria-current={status === "" ? "page" : undefined}
+                className={`inline-flex min-h-11 items-center rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
               >
                 All
               </Link>
               <Link
                 href={listHref({ status: "published", page: 1 })}
-                aria-pressed={status === "published"}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "published" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
+                aria-current={status === "published" ? "page" : undefined}
+                className={`inline-flex min-h-11 items-center rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "published" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
               >
                 Published
               </Link>
               <Link
                 href={listHref({ status: "draft", page: 1 })}
-                aria-pressed={status === "draft"}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "draft" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
+                aria-current={status === "draft" ? "page" : undefined}
+                className={`inline-flex min-h-11 items-center rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${status === "draft" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
               >
                 Drafts
               </Link>
@@ -111,8 +115,8 @@ export function ResourceList({
           {config.supports.softDelete ? (
             <Link
               href={listHref({ view: inTrash ? "" : "trash", page: 1 })}
-              aria-pressed={inTrash}
-              className={`rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${inTrash ? "border-danger/40 bg-danger-soft text-danger" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
+              aria-current={inTrash ? "page" : undefined}
+              className={`inline-flex min-h-11 items-center rounded-full border px-3 py-1.5 text-xs font-medium focus-ring ${inTrash ? "border-danger/40 bg-danger-soft text-danger" : "border-line bg-surface text-ink-muted hover:text-ink"}`}
             >
               Trash
             </Link>
@@ -129,7 +133,7 @@ export function ResourceList({
 
       <div className="overflow-hidden rounded-2xl border border-line bg-surface shadow-e1">
         {result.rows.length > 0 ? (
-          <div className="overflow-x-auto">
+          <AdminTableRegion label={`${config.label} records and actions`}>
             <table className="w-full text-left text-sm">
               <caption className="sr-only">{config.label} list</caption>
               <thead>
@@ -154,7 +158,10 @@ export function ResourceList({
                       className="border-b border-line last:border-b-0 hover:bg-canvas/50"
                     >
                       {config.listColumns.map((column) => (
-                        <td key={column.name} className="max-w-[16rem] truncate px-4 py-3">
+                        <td
+                          key={column.name}
+                          className="max-w-[20rem] break-words px-4 py-3 [overflow-wrap:anywhere]"
+                        >
                           {column.render === "status" ? (
                             <StatusPill status={String(row[column.name] ?? "draft")} />
                           ) : (
@@ -168,34 +175,34 @@ export function ResourceList({
                         <div className="flex items-center justify-end gap-1">
                           {config.supports.reorder && !inTrash ? (
                             <>
-                              <form action={reorderResourceAction}>
+                              <AdminActionForm action={reorderResourceAction}>
                                 <input type="hidden" name="__resource" value={config.key} />
                                 <input type="hidden" name="__id" value={rowId} />
                                 <input type="hidden" name="direction" value="up" />
                                 <button
                                   type="submit"
                                   aria-label={`Move ${String(row[config.listColumns[0].name])} up`}
-                                  className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
+                                  className="icon-control inline-flex h-11 w-11 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
                                 >
                                   <ArrowUp aria-hidden="true" className="h-4 w-4" />
                                 </button>
-                              </form>
-                              <form action={reorderResourceAction}>
+                              </AdminActionForm>
+                              <AdminActionForm action={reorderResourceAction}>
                                 <input type="hidden" name="__resource" value={config.key} />
                                 <input type="hidden" name="__id" value={rowId} />
                                 <input type="hidden" name="direction" value="down" />
                                 <button
                                   type="submit"
                                   aria-label={`Move ${String(row[config.listColumns[0].name])} down`}
-                                  className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
+                                  className="icon-control inline-flex h-11 w-11 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-canvas-raised hover:text-ink focus-ring"
                                 >
                                   <ArrowDown aria-hidden="true" className="h-4 w-4" />
                                 </button>
-                              </form>
+                              </AdminActionForm>
                             </>
                           ) : null}
                           {config.supports.activate && !inTrash ? (
-                            <form action={toggleResourceActiveAction}>
+                            <AdminActionForm action={toggleResourceActiveAction}>
                               <input type="hidden" name="__resource" value={config.key} />
                               <input type="hidden" name="__id" value={rowId} />
                               <button
@@ -204,7 +211,7 @@ export function ResourceList({
                               >
                                 {row.is_active ? "Deactivate" : "Activate"}
                               </button>
-                            </form>
+                            </AdminActionForm>
                           ) : null}
                           {inTrash && config.supports.softDelete ? (
                             <ConfirmButton
@@ -226,7 +233,7 @@ export function ResourceList({
                             <Link
                               href={editHref}
                               aria-label={`Edit ${String(row[config.listColumns[0].name] ?? "item")}`}
-                              className="rounded-full border border-line p-1.5 text-ink-muted transition-colors hover:text-ink focus-ring"
+                              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-line p-2 text-ink-muted transition-colors hover:text-ink focus-ring"
                             >
                               <Pencil aria-hidden="true" className="h-4 w-4" />
                             </Link>
@@ -237,7 +244,8 @@ export function ResourceList({
                               resource={config.key}
                               id={rowId}
                               label={<Trash2 aria-hidden="true" className="h-4 w-4" />}
-                              title={`Delete this ${config.singular.toLowerCase()}?`}
+                              ariaLabel={`Delete ${String(row[config.listColumns[0].name] ?? config.singular)}`}
+                              title={`Delete ${String(row[config.listColumns[0].name] ?? config.singular.toLowerCase())}?`}
                               description={
                                 config.supports.softDelete
                                   ? "It moves to the trash and can be restored later."
@@ -246,7 +254,7 @@ export function ResourceList({
                               confirmLabel={
                                 config.supports.softDelete ? "Move to trash" : "Delete permanently"
                               }
-                              className="icon-control inline-flex h-8 w-8 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-danger-soft hover:text-danger focus-ring"
+                              className="icon-control inline-flex h-11 w-11 items-center justify-center rounded-full p-1.5 text-ink-muted transition-colors hover:bg-danger-soft hover:text-danger focus-ring"
                             />
                           ) : null}
                         </div>
@@ -256,9 +264,9 @@ export function ResourceList({
                 })}
               </tbody>
             </table>
-          </div>
+          </AdminTableRegion>
         ) : result.error ? (
-          <div className="p-4">
+          <div role="alert" className="p-4">
             <EmptyState
               title="Could not load records"
               description="The database request failed, so the list may be out of date. This is not the same as an empty module — please retry."
@@ -295,7 +303,10 @@ export function ResourceList({
       </div>
 
       {result.pageCount > 1 ? (
-        <div className="flex items-center justify-between text-sm text-ink-muted">
+        <nav
+          aria-label={`${config.label} pages`}
+          className="flex flex-wrap items-center justify-between gap-3 text-sm text-ink-muted"
+        >
           <p>
             Page {result.page} of {result.pageCount} · {result.total} total
           </p>
@@ -317,12 +328,12 @@ export function ResourceList({
               </Link>
             ) : null}
           </div>
-        </div>
-      ) : (
+        </nav>
+      ) : !result.error ? (
         <p className="text-xs text-ink-muted" role="status">
           {result.total} {result.total === 1 ? "record" : "records"}
         </p>
-      )}
+      ) : null}
     </div>
   );
 }

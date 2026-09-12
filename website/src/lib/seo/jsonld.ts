@@ -112,7 +112,8 @@ export type ServiceJsonLd = {
   description: string;
   url: string;
   provider: { "@type": "Organization"; name: string; url: string };
-  areaServed?: string[];
+  areaServed: string[];
+  audience?: { "@type": "BusinessAudience"; audienceType: string }[];
 };
 
 export function serviceJsonLd(input: {
@@ -127,6 +128,7 @@ export function serviceJsonLd(input: {
     name: input.name,
     description: input.description,
     url: new URL(input.path, siteUrl).toString(),
+    areaServed: [...BRAND.areaServed],
     provider: {
       "@type": "Organization",
       name: BRAND.primaryName,
@@ -134,7 +136,10 @@ export function serviceJsonLd(input: {
     },
   };
   if (input.industries && input.industries.length > 0) {
-    service.areaServed = input.industries;
+    service.audience = input.industries.map((industry) => ({
+      "@type": "BusinessAudience",
+      audienceType: industry,
+    }));
   }
   return service;
 }
@@ -144,7 +149,7 @@ export type BlogPostingJsonLd = {
   "@type": "BlogPosting";
   headline: string;
   description: string;
-  datePublished: string;
+  datePublished?: string;
   dateModified?: string;
   author: { "@type": "Organization" | "Person"; name: string };
   publisher: { "@type": "Organization"; name: string };
@@ -166,7 +171,6 @@ export function blogPostingJsonLd(input: {
     "@type": "BlogPosting",
     headline: input.title,
     description: input.description,
-    datePublished: input.publishedAt ?? new Date().toISOString(),
     author: {
       // Person only when a real author is set; organisation authorship otherwise.
       "@type": input.authorName === BRAND.primaryName ? "Organization" : "Person",
@@ -175,7 +179,13 @@ export function blogPostingJsonLd(input: {
     publisher: { "@type": "Organization", name: BRAND.primaryName },
     mainEntityOfPage: new URL(input.path, siteUrl).toString(),
   };
-  if (input.modifiedAt) article.dateModified = input.modifiedAt;
+  // Missing or invalid source dates are omitted, never invented at render time.
+  if (input.publishedAt && !Number.isNaN(Date.parse(input.publishedAt))) {
+    article.datePublished = input.publishedAt;
+  }
+  if (input.modifiedAt && !Number.isNaN(Date.parse(input.modifiedAt))) {
+    article.dateModified = input.modifiedAt;
+  }
   if (input.imageUrl) article.image = input.imageUrl;
   return article;
 }
@@ -191,17 +201,11 @@ export type WebSiteJsonLd = {
   inLanguage: string;
   publisher: { "@id": string };
   keywords: string;
-  potentialAction: {
-    "@type": "SearchAction";
-    target: { "@type": "EntryPoint"; urlTemplate: string };
-    "query-input": string;
-  };
 };
 
 /**
- * WebSite entity with a SearchAction pointing at the projects filter (the only
- * public search-like surface). Makes the site eligible for a Sitelinks search
- * box and ties the site to the Organization publisher node.
+ * WebSite entity tied to its Organization publisher. Projects has facet filters,
+ * not a free-text search endpoint, so no unsupported SearchAction is advertised.
  */
 export function webSiteJsonLd(): WebSiteJsonLd {
   return {
@@ -215,14 +219,6 @@ export function webSiteJsonLd(): WebSiteJsonLd {
     inLanguage: "en-IN",
     publisher: { "@id": ORGANIZATION_ID() },
     keywords: SITE_KEYWORDS.join(", "),
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: new URL("/projects?q={search_term_string}", siteUrl).toString(),
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -325,7 +321,6 @@ export type LocalBusinessJsonLd = {
   image: string;
   description: string;
   slogan: string;
-  priceRange: string;
   areaServed: string[];
   serviceType: string[];
   parentOrganization: { "@id": string };
@@ -359,7 +354,6 @@ export function localBusinessJsonLd(options?: {
     image: new URL("/opengraph-image", siteUrl).toString(),
     description: BRAND.description,
     slogan: BRAND.tagline,
-    priceRange: "$$",
     areaServed: [...BRAND.areaServed],
     serviceType: [...SERVICE_TYPES],
     parentOrganization: { "@id": ORGANIZATION_ID() },

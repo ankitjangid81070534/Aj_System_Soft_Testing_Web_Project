@@ -1,12 +1,28 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 8 — AUTH / CLIENT PORTAL UI + UX — UI IMPLEMENTED; AUTHENTICATED VERIFICATION DEFERRED
-LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 remains INCOMPLETE / DEFERRED
-NEXT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA; requires fresh authorization acknowledging the remaining Phase 8 checks
-LAST_COMMIT_HASH: 69878865ff
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated default production build passes; no deployment or release sign-off.
+CURRENT_PHASE: 11 — ADVANCED SEO / 5,000-QUERY RESEARCH — LOCAL RESEARCH DELIVERABLES COMPLETE
+LAST_COMPLETED_PHASE: 11 — research-only scope; Phase 1/8/9 authenticated gates remain INCOMPLETE / DEFERRED (not contiguous full sign-off)
+NEXT_PHASE: 12 — content SEO / buyer intent; STOP pending separate authorization
+LAST_COMMIT_HASH: 61c7752479aa50960dfd4a71de6ca67a27852e34
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. No deployment, observed search-demand evidence, live-domain indexing or authenticated release sign-off.
 
-The hash is the actual pre-edit HEAD for the Phase 8 service-log follow-up. That follow-up fixed the smooth-scroll declaration warning: 295 tests, typecheck/lint and fresh iframe navigation/readiness checks pass with clean logs; the original Phase 8 verification below remains historical. See the follow-up section in PHASE_8_AUTH_PORTAL. Base44 commits/pushes automatically at turn end; no post-turn hash is invented. No manual commit/push, branch switch, PR, merge or deployment.
+## Current Phase 11 continuation — overrides historical execution gates below
+
+Owner authorized **“CONTINUE NEXT PHASE SAFLY”** after the Phase 10 checkpoint; this authorizes Phase 11 only, not Phase 12. Completed exactly **5,000 distinct research candidates** across **18 clusters**: **1,680 English, 1,660 Hindi and 1,660 Roman Hindi/Hinglish**. See [SEO_KEYWORD_MAP](SEO_KEYWORD_MAP.md), [content proposals](PHASE_11_CONTENT_PROPOSALS.md) and [verification evidence](evidence/phase11-corpus-verification.json). Queries are source-derived hypotheses, not observed searches; metrics remain unknown. Every candidate has an exact source excerpt and an existing provisional owner. Fresh structural checks, source evidence, 31 mapped public HTML responses, all recommended link targets and preview noindex checks PASS. English wording and Hindi inflection refinements preserve IDs/counts; the final evidence digest matches the reviewed corpus. No runtime source/config, UI, page content, routes, dependencies, data, secrets or indexing changes were made. No fresh visual, authenticated integration or production-build sign-off is claimed for this documentation-only phase. New-page proposals are unapproved; Phase 12 and publication require separate authorization. The hash above is the actual pre-edit HEAD, not a post-turn commit.
+
+## Historical Phase 10 continuation
+
+Owner requested **“CONTINUE NEXT PHASE SAFLY”** after the Phase 9 private-verification limitation was disclosed. Completed the independently testable Phase 10 scope without relabeling earlier gates as passed. See [PHASE_10_TECHNICAL_SEO](PHASE_10_TECHNICAL_SEO.md): metadata inheritance/preview protection, accurate sitemap, aligned static SEO overrides/cache refresh, factual schema and safe JSON-LD serialization. Fresh **377 tests / 41 files**, typecheck, lint, whitespace and isolated production build PASS. **31 public + 9 private/setup HTML responses** pass in both preview and isolated production modes, plus two expected 404s each. No visible-content/layout/role/database-schema/data changes, credentials requests or deployment. Final browser check was unavailable because no tab was open; the older hydration warning is not claimed fixed. Real SEO-save gestures/persistence and published-domain checks remain deferred. Phase 11 must not begin automatically. The hash above is this phase's actual pre-edit HEAD, not a post-turn commit. Prior phase notes below are historical.
+
+The hash is the actual pre-edit HEAD for cross-chat recovery, not a post-turn commit. At recovery start, fetched main and system-upgrade-init were identical at this merge of PR #7; all other fetched branch tips were ancestors, so there is no unmerged unique work to combine. No branch switch/deletion, direct main push, manual commit or deployment was performed. Base44 commits/pushes at turn end; the owner explicitly requests PR creation for this work and alongside future completed phases, not automatic merging of newly opened PRs.
+
+## Cross-chat recovery — not a new phase
+
+See [CONTINUATION_RECOVERY](CONTINUATION_RECOVERY.md). The owner's recollection of an interrupted Phase 7 is older than the repository: Phase 7 public UI is complete and Phase 8 UI is already merged. No Phase 7/8 implementation was repeated and Phase 9 has not started. Main stays the integration source of truth through the managed working-branch/PR workflow, not direct edits to main. The exact cause of an old view in another app/chat is not established by this audit.
+
+Fresh checks: **295 tests / 35 files**, typecheck, lint, whitespace and isolated production build PASS. Sixteen nonempty HTTP 200 route probes plus an intentional missing-service HTTP 404 PASS at route-response scope only. Source-mounted development service is healthy. Current iframe gesture/visual verification is **NOT AUTOMATICALLY VERIFIED** (`iframe_unavailable`); historical Phase 7/8 browser results below are not fresh passes. Auth/portal/admin persistence remains blocked by absent existing-project configuration and approved test sessions; the prior credential refusal is preserved.
+
+Recovery files: `CONTINUATION_RECOVERY.md`, this file, `MASTER_PROJECT_UNDERSTANDING.md`, `AGENTS.md`. No app source/config/dependency/schema/data changes. Previous implementation files and tests remain listed below as historical phase evidence. Pending owner choice: finish Phase 8 authenticated checks with renewed secure-configuration/test-session authorization, or explicitly defer them and authorize Phase 9. Do not silently treat either choice as already made.
 
 ## Owner authorization / execution gate
 

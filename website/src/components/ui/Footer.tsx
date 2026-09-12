@@ -72,7 +72,9 @@ export function Footer({
 
           <div className={styles.megaBrand} aria-hidden="true">{brandShortName}</div>
           <div className={styles.bottomRow}>
-            <p>© {new Date().getFullYear()} {brandName}. All rights reserved.</p>
+            <p className={styles.legalNotice}>
+              © 2026 Ankit System Soft Technology. All rights reserved. | An MSME Registered Enterprise | Udyam Reg No: UDYAM-RJ-17-0685557
+            </p>
             <p>{tagline}</p>
           </div>
         </div>

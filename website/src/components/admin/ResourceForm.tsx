@@ -6,7 +6,9 @@ import { useRouter } from "next/navigation";
 import { Eye, Save } from "lucide-react";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button, type ButtonProps } from "@/components/ui/Button";
+import { AdminFeedback } from "@/components/admin/AdminFeedback";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
+import { AdminActionForm } from "./AdminActionForm";
 import { useToast } from "@/components/ui/Toast";
 import {
   deleteResourceAction,
@@ -18,7 +20,15 @@ import {
 } from "@/lib/admin/actions";
 import type { FieldDef, ResourceConfig } from "@/lib/admin/resources";
 
-function QuickActionButton({ label, variant, size }: { label: ReactNode; variant?: ButtonProps["variant"]; size?: ButtonProps["size"] }) {
+function QuickActionButton({
+  label,
+  variant,
+  size,
+}: {
+  label: ReactNode;
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
+}) {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" loading={pending} variant={variant} size={size}>
@@ -95,7 +105,10 @@ function FieldControl({
             aria-invalid={Boolean(error)}
             aria-describedby={errorId}
           />
-          {field.hint ? <span className="text-ink-muted">{field.hint}</span> : <span>Enabled</span>}
+          <span>
+            <span className="block font-medium text-ink">{field.label}</span>
+            {field.hint ? <span className="block text-xs text-ink-muted">{field.hint}</span> : null}
+          </span>
         </label>
       );
     case "select":
@@ -199,27 +212,27 @@ export function ResourceForm({
           </Button>
         ) : null}
         {config.supports.publish && !isCreate ? (
-          <form action={setResourceStatusAction}>
+          <AdminActionForm action={setResourceStatusAction}>
             <input type="hidden" name="__resource" value={config.key} />
             <input type="hidden" name="__id" value={id} />
             <input type="hidden" name="status" value={published ? "draft" : "published"} />
-            <QuickActionButton 
-              variant={published ? "outline" : "primary"} 
-              size="sm" 
-              label={published ? "Unpublish" : "Publish"} 
+            <QuickActionButton
+              variant={published ? "outline" : "primary"}
+              size="sm"
+              label={published ? "Unpublish" : "Publish"}
             />
-          </form>
+          </AdminActionForm>
         ) : null}
         {config.supports.activate && !isCreate ? (
-          <form action={toggleResourceActiveAction}>
+          <AdminActionForm action={toggleResourceActiveAction}>
             <input type="hidden" name="__resource" value={config.key} />
             <input type="hidden" name="__id" value={id} />
-            <QuickActionButton 
-              variant="ghost" 
-              size="sm" 
-              label={row?.is_active ? "Deactivate" : "Activate"} 
+            <QuickActionButton
+              variant="ghost"
+              size="sm"
+              label={row?.is_active ? "Deactivate" : "Activate"}
             />
-          </form>
+          </AdminActionForm>
         ) : null}
         {!isCreate && config.supports.softDelete && row?.deleted_at ? (
           <ConfirmButton
@@ -258,10 +271,11 @@ export function ResourceForm({
       <form
         ref={formRef}
         action={formAction}
+        aria-busy={pending}
         onChange={() => {
           dirtyRef.current = true;
         }}
-        className="grid gap-4 rounded-2xl border border-line bg-surface p-6 shadow-e1 sm:grid-cols-2"
+        className="grid min-w-0 gap-5 rounded-2xl border border-line bg-surface p-4 shadow-e1 sm:grid-cols-2 sm:p-6"
       >
         <input type="hidden" name="__resource" value={config.key} />
         {!isCreate ? <input type="hidden" name="__id" value={id} /> : null}
@@ -274,7 +288,10 @@ export function ResourceForm({
           const fieldError =
             state.ok === false ? state.fieldErrors?.[effectiveField.name]?.[0] : undefined;
           return (
-            <div key={field.name} className={effectiveField.wide ? "sm:col-span-2" : undefined}>
+            <div
+              key={field.name}
+              className={effectiveField.wide ? "min-w-0 sm:col-span-2" : "min-w-0"}
+            >
               {effectiveField.type === "boolean" ? (
                 <FieldControl field={effectiveField} row={row} error={fieldError} />
               ) : (
@@ -296,21 +313,12 @@ export function ResourceForm({
           );
         })}
 
-        <div className="flex items-center gap-3 sm:col-span-2">
+        <div className="flex flex-wrap items-start gap-3 border-t border-line pt-4 sm:col-span-2">
           <Button type="submit" loading={pending}>
             <Save aria-hidden="true" className="h-4 w-4" />
             {isCreate ? `Create ${config.singular.toLowerCase()}` : "Save changes"}
           </Button>
-          {state.ok === true && state.message ? (
-            <p role="status" className="text-sm text-success">
-              {state.message}
-            </p>
-          ) : null}
-          {state.ok === false && state.message ? (
-            <p role="alert" className="text-sm text-danger">
-              {state.message}
-            </p>
-          ) : null}
+          <AdminFeedback state={state} />
         </div>
       </form>
     </div>

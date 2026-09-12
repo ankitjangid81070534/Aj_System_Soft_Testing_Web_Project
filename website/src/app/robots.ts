@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/env";
+import { isPreviewDeployment } from "@/lib/seo/indexing";
 
 /** Private, account and auth surfaces — never indexed. */
 const PRIVATE_PATHS = [
@@ -14,9 +15,13 @@ const PRIVATE_PATHS = [
   "/update-password",
   "/auth/",
   "/api/",
+  "/design-preview",
 ];
 
 export default function robots(): MetadataRoute.Robots {
+  if (isPreviewDeployment()) {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
   return {
     rules: [
       {
@@ -35,13 +40,13 @@ export default function robots(): MetadataRoute.Robots {
         // content for ad relevance and for the site approval review.
         userAgent: "Mediapartners-Google",
         allow: "/",
-        disallow: ["/ajadmin", "/ajadmin/", "/account", "/account/", "/auth/", "/api/"],
+        disallow: PRIVATE_PATHS,
       },
       {
         // Google Ads landing-page quality crawler.
         userAgent: "AdsBot-Google",
         allow: "/",
-        disallow: ["/ajadmin", "/ajadmin/", "/account", "/account/", "/auth/", "/api/"],
+        disallow: PRIVATE_PATHS,
       },
     ],
     sitemap: new URL("sitemap.xml", siteUrl).toString(),

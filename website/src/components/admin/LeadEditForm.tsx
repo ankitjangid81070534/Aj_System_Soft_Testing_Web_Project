@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { Field, Select, Textarea } from "@/components/ui/Input";
+import { AdminFeedback } from "@/components/admin/AdminFeedback";
 import { Button } from "@/components/ui/Button";
 import { updateLeadAction, type LeadUpdateState } from "@/lib/leads/admin-actions";
 import { LEAD_STATUSES } from "@/lib/validation/leads";
@@ -36,7 +37,7 @@ export function LeadEditForm({
   const [state, formAction, pending] = useActionState(updateLeadAction, initialState);
 
   return (
-    <form action={formAction} className="flex flex-col gap-4">
+    <form action={formAction} aria-busy={pending} className="flex min-w-0 flex-col gap-4">
       <input type="hidden" name="kind" value={kind} />
       <input type="hidden" name="id" value={id} />
       <Field label="Status" htmlFor="lead-status">
@@ -73,16 +74,7 @@ export function LeadEditForm({
           maxLength={4000}
         />
       </Field>
-      {state.ok === true ? (
-        <p role="status" className="rounded-xl bg-success-soft px-4 py-3 text-sm text-success">
-          {state.message}
-        </p>
-      ) : null}
-      {state.ok === false ? (
-        <p role="alert" className="rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger">
-          {state.message}
-        </p>
-      ) : null}
+      <AdminFeedback state={state} />
       <div>
         <Button type="submit" loading={pending}>
           {pending ? "Saving…" : "Save changes"}

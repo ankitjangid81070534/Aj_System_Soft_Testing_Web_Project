@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { ExternalLink, LogOut, Menu, ShieldCheck } from "lucide-react";
-import { AdminNav } from "@/components/admin/AdminNav";
+import { AdminNav, adminPageLabel } from "@/components/admin/AdminNav";
 import { Drawer } from "@/components/ui/Drawer";
 import { IconButton } from "@/components/ui/IconButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
@@ -52,11 +52,19 @@ export function AdminShell({
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const section = pathname.split("/").filter(Boolean).at(-1)?.replaceAll("-", " ");
-  const pageLabel = pathname === "/ajadmin" ? "Dashboard" : section || "Admin workspace";
+  const pageLabel = adminPageLabel(pathname);
 
   return (
-    <div data-admin-ui className={`${styles.shell} min-h-svh bg-canvas lg:grid lg:grid-cols-[17.5rem_minmax(0,1fr)]`}>
+    <div
+      data-admin-ui
+      className={`${styles.shell} min-h-svh bg-canvas lg:grid lg:grid-cols-[17.5rem_minmax(0,1fr)]`}
+    >
+      <a
+        href="#admin-main"
+        className="sr-only z-50 rounded-xl bg-surface p-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus-ring"
+      >
+        Skip to admin content
+      </a>
       <aside className="sticky top-0 hidden h-svh flex-col border-r border-line bg-warm-50/95 shadow-e2 backdrop-blur-xl dark:bg-surface/95 lg:flex">
         <div className="border-b border-line px-5 py-5">
           <Link href="/ajadmin" className="inline-flex items-center gap-3 rounded-xl focus-ring">
@@ -102,7 +110,7 @@ export function AdminShell({
             <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-700">
               AJS Command
             </p>
-            <p className="mt-0.5 text-sm font-semibold capitalize text-ink">{pageLabel}</p>
+            <p className="mt-0.5 text-sm font-semibold text-ink">{pageLabel}</p>
           </div>
           <Link
             href="/"
@@ -134,7 +142,13 @@ export function AdminShell({
           </div>
         </header>
 
-        <main className="min-w-0 px-4 py-6 sm:px-6 sm:py-8 xl:px-10 xl:py-10">{children}</main>
+        <main
+          id="admin-main"
+          tabIndex={-1}
+          className="min-w-0 scroll-mt-24 px-4 py-6 focus:outline-none sm:px-6 sm:py-8 xl:px-10 xl:py-10"
+        >
+          {children}
+        </main>
       </div>
 
       <Drawer

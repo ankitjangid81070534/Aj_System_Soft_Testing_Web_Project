@@ -39,7 +39,7 @@ export async function generateMetadata({
     type: "article",
     article: {
       publishedTime: post.publishedAt || undefined,
-      authors: ["AJ System Soft Technology"],
+      authors: [post.authorName],
     },
   });
 }
