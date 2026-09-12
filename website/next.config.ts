@@ -116,6 +116,11 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   experimental: {
+    // The preview proxy forwards an internal host but keeps the browser's
+    // public Origin. Trust only this sandbox's exact origin, in development.
+    ...(isBase44Preview
+      ? { serverActions: { allowedOrigins: [`3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`] } }
+      : {}),
     // Tree-shake icon imports (lucide) so only used icons ship.
     optimizePackageImports: ["lucide-react"],
   },

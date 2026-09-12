@@ -20,6 +20,8 @@ import {
   ProfileForm,
   ReviewForm,
 } from "@/components/portal/AccountForms";
+import { AccountNavigation } from "@/components/portal/AccountNavigation";
+import styles from "@/components/portal/portal-ui.module.css";
 import { AgreementsHistory } from "@/components/portal/AgreementsHistory";
 import { getCurrentServiceAgreement } from "@/lib/agreements/data";
 import { createSupabaseAdminLooseClient } from "@/lib/supabase/admin";
@@ -194,7 +196,7 @@ export default async function ClientAccountPage() {
   const verified = Boolean(client?.id && client.portal_enabled);
 
   return (
-    <div className="relative overflow-hidden pb-20">
+    <div className={`${styles.workspace} relative pb-20`}>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_18%_10%,rgba(22,135,248,0.15),transparent_34%),radial-gradient(circle_at_82%_16%,rgba(31,157,109,0.08),transparent_30%)]"
@@ -206,24 +208,24 @@ export default async function ClientAccountPage() {
             className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-brand-100/60 blur-3xl dark:bg-brand-100/5"
           />
           <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex min-w-0 items-center gap-4">
               {avatar ? (
                 <Image
                   src={avatar}
                   alt=""
                   width={72}
                   height={72}
-                  className="h-16 w-16 rounded-2xl object-cover shadow-e2 sm:h-[4.5rem] sm:w-[4.5rem]"
+                  className="h-16 w-16 shrink-0 rounded-2xl object-cover shadow-e2 sm:h-[4.5rem] sm:w-[4.5rem]"
                 />
               ) : (
                 <span
                   aria-hidden="true"
-                  className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-600 text-xl font-bold text-on-brand shadow-e2 sm:h-[4.5rem] sm:w-[4.5rem]"
+                  className="inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-600 text-xl font-bold text-on-brand shadow-e2 sm:h-[4.5rem] sm:w-[4.5rem]"
                 >
                   {initials || "AJ"}
                 </span>
               )}
-              <div>
+              <div className="min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
                   <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-700">
                     Client workspace
@@ -274,6 +276,8 @@ export default async function ClientAccountPage() {
           </div>
         </section>
 
+        <AccountNavigation />
+
         {!verified ? (
           <div className="mt-5 flex items-start gap-3 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-4 text-sm text-brand-800 dark:border-brand-800 dark:bg-brand-950/50 dark:text-brand-300">
             <Clock3 aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
@@ -321,14 +325,14 @@ export default async function ClientAccountPage() {
           </section>
         ) : null}
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <section className="rounded-3xl border border-line bg-surface p-6 shadow-e2">
+        <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <section id="profile" aria-labelledby="profile-heading" className="rounded-3xl border border-line bg-surface p-6 shadow-e2">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
                 <UserRound aria-hidden="true" className="h-5 w-5" />
               </span>
               <div>
-                <h2 className="text-lg font-semibold text-ink">Profile</h2>
+                <h2 id="profile-heading" className="text-lg font-semibold text-ink">Profile</h2>
                 <p className="text-xs text-ink-muted">Keep your contact details current.</p>
               </div>
             </div>
@@ -344,13 +348,13 @@ export default async function ClientAccountPage() {
             </div>
           </section>
 
-          <section className="rounded-3xl border border-line bg-surface p-6 shadow-e2">
+          <section id="projects" aria-labelledby="projects-heading" className="rounded-3xl border border-line bg-surface p-6 shadow-e2">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-success-soft text-success">
                 <Building2 aria-hidden="true" className="h-5 w-5" />
               </span>
               <div>
-                <h2 className="text-lg font-semibold text-ink">Projects & access</h2>
+                <h2 id="projects-heading" className="text-lg font-semibold text-ink">Projects & access</h2>
                 <p className="text-xs text-ink-muted">
                   Private records linked to your client profile.
                 </p>
@@ -384,13 +388,13 @@ export default async function ClientAccountPage() {
           </section>
         </div>
 
-        <section className="mt-6 rounded-3xl border border-line bg-surface p-6 shadow-e2 sm:p-7">
+        <section id="requests" aria-labelledby="requests-heading" className="mt-6 rounded-3xl border border-line bg-surface p-6 shadow-e2 sm:p-7">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-brand-700">
                 Activity
               </p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight text-ink">
+              <h2 id="requests-heading" className="mt-1 text-2xl font-semibold tracking-tight text-ink">
                 Request history
               </h2>
             </div>
@@ -489,12 +493,12 @@ export default async function ClientAccountPage() {
           </section>
         ) : null}
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <section id="reviews" aria-labelledby="review-heading" className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <div className="rounded-3xl border border-line bg-surface p-6 shadow-e2 sm:p-7">
             <div className="flex items-center gap-3">
               <Star aria-hidden="true" className="h-5 w-5 text-warning" />
               <div>
-                <h2 className="text-xl font-semibold text-ink">Verified review</h2>
+                <h2 id="review-heading" className="text-xl font-semibold text-ink">Verified review</h2>
                 <p className="text-xs text-ink-muted">
                   Real client feedback, moderated before publication.
                 </p>

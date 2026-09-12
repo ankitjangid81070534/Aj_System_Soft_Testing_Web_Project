@@ -46,7 +46,7 @@ export function PortalLoginModal({ onClose }: { onClose: () => void }) {
         if (event.target instanceof HTMLDialogElement) onClose();
         if (event.target instanceof Element && event.target.closest("a")) onClose();
       }}
-      className={`${styles.modal} open:animate-panel-in`}
+      className={styles.modal}
     >
       <div className={styles.close}>
         <IconButton aria-label="Close client login" onClick={onClose} size="sm">

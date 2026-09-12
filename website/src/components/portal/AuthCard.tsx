@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowLeft, Boxes, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import styles from "./portal-ui.module.css";
 import { BRAND } from "@/lib/seo/site";
 
 export function AuthCard({
@@ -15,13 +16,13 @@ export function AuthCard({
   children: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-20">
+    <section className={`${styles.authPage} relative px-4 sm:px-6`}>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_28%_20%,rgba(22,135,248,0.13),transparent_42%),radial-gradient(circle_at_78%_28%,rgba(31,157,109,0.08),transparent_34%)]"
       />
 
-      <div className="mx-auto grid w-full max-w-content items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(23rem,0.78fr)] lg:gap-16">
+      <div className={`${styles.authLayout} mx-auto grid w-full max-w-content gap-10 lg:gap-12`}>
         <div className="relative hidden min-h-[34rem] lg:block">
           <Link
             href="/"
@@ -94,10 +95,10 @@ export function AuthCard({
           </div>
         </div>
 
-        <div>
+        <div className={styles.authForm}>
           <Link
             href="/"
-            className="mb-6 inline-flex items-center gap-2 rounded-full text-sm font-medium text-ink-muted transition-colors hover:text-ink focus-ring lg:hidden"
+            className="mb-4 inline-flex min-h-11 items-center gap-2 rounded-full text-sm font-medium text-ink-muted transition-colors hover:text-ink focus-ring lg:hidden"
           >
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             Back to website

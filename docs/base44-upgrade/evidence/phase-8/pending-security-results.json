@@ -1,0 +1,8 @@
+{
+  "pendingDisabled": true,
+  "pendingAnnounced": true,
+  "realReadinessFeedback": true,
+  "unrelatedOriginRejected": 500,
+  "transportFailureRecovered": true,
+  "scope": "Read-only readiness and deliberately failed transport; not OAuth success"
+}

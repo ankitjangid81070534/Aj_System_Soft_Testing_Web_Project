@@ -1,0 +1,1016 @@
+[
+  {
+    "name": "Layout login",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Welcome back!",
+      "fields": [
+        {
+          "id": "client-email",
+          "inside": true
+        },
+        {
+          "id": "client-password",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout signup",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Start your client workspace",
+      "fields": [
+        {
+          "id": "signup-name",
+          "inside": true
+        },
+        {
+          "id": "signup-username",
+          "inside": true
+        },
+        {
+          "id": "signup-email",
+          "inside": true
+        },
+        {
+          "id": "signup-phone",
+          "inside": true
+        },
+        {
+          "id": "signup-company",
+          "inside": true
+        },
+        {
+          "id": "signup-password",
+          "inside": true
+        },
+        {
+          "id": "signup-confirm",
+          "inside": true
+        },
+        {
+          "id": "signup-address1",
+          "inside": true
+        },
+        {
+          "id": "signup-address2",
+          "inside": true
+        },
+        {
+          "id": "signup-city",
+          "inside": true
+        },
+        {
+          "id": "signup-state",
+          "inside": true
+        },
+        {
+          "id": "signup-postal",
+          "inside": true
+        },
+        {
+          "id": "signup-country",
+          "inside": true
+        },
+        {
+          "id": "",
+          "inside": true
+        },
+        {
+          "id": "signup-agreement",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout forgot-password",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Reset your password",
+      "fields": [
+        {
+          "id": "recovery-email",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout reset-password",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Choose a new password",
+      "fields": [
+        {
+          "id": "reset-password",
+          "inside": true
+        },
+        {
+          "id": "reset-confirm",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout account",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Client portal setup in progress",
+      "fields": []
+    }
+  },
+  {
+    "name": "Password controls and invalid submissions",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "valuesPreserved": true,
+      "nativeInvalidBlocked": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Recovery validation and expired-link route",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidBlocked": true,
+      "expiredDisabled": true,
+      "retryDestination": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Google readiness feedback",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": false,
+    "error": "locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <div role=\"alert\" tabindex=\"-1\" aria-atomic=\"true\" class=\"flex scroll-my-32 items-start gap-2.5 rounded-2xl border px-4 py-3 text-sm leading-6 [overflow-wrap:anywhere] focus-ring border-danger/20 bg-danger-soft text-danger\">…</div> aka getByRole('alert').filter({ hasText: 'Google sign-in will be' })\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n  - waiting for getByRole('alert') to be visible\n"
+  },
+  {
+    "name": "Login modal controls and dismissal",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "toggle": true,
+      "closed": true
+    }
+  },
+  {
+    "name": "No runtime errors or business writes",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "pass": false,
+    "error": "Expected values to be strictly equal:\n\n2 !== 1\n"
+  },
+  {
+    "name": "Layout login",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Welcome back!",
+      "fields": [
+        {
+          "id": "client-email",
+          "inside": true
+        },
+        {
+          "id": "client-password",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout signup",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Start your client workspace",
+      "fields": [
+        {
+          "id": "signup-name",
+          "inside": true
+        },
+        {
+          "id": "signup-username",
+          "inside": true
+        },
+        {
+          "id": "signup-email",
+          "inside": true
+        },
+        {
+          "id": "signup-phone",
+          "inside": true
+        },
+        {
+          "id": "signup-company",
+          "inside": true
+        },
+        {
+          "id": "signup-password",
+          "inside": true
+        },
+        {
+          "id": "signup-confirm",
+          "inside": true
+        },
+        {
+          "id": "signup-address1",
+          "inside": true
+        },
+        {
+          "id": "signup-address2",
+          "inside": true
+        },
+        {
+          "id": "signup-city",
+          "inside": true
+        },
+        {
+          "id": "signup-state",
+          "inside": true
+        },
+        {
+          "id": "signup-postal",
+          "inside": true
+        },
+        {
+          "id": "signup-country",
+          "inside": true
+        },
+        {
+          "id": "",
+          "inside": true
+        },
+        {
+          "id": "signup-agreement",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout forgot-password",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Reset your password",
+      "fields": [
+        {
+          "id": "recovery-email",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout reset-password",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Choose a new password",
+      "fields": [
+        {
+          "id": "reset-password",
+          "inside": true
+        },
+        {
+          "id": "reset-confirm",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout account",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Client portal setup in progress",
+      "fields": []
+    }
+  },
+  {
+    "name": "Password controls and invalid submissions",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "valuesPreserved": true,
+      "nativeInvalidBlocked": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Recovery validation and expired-link route",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidBlocked": true,
+      "expiredDisabled": true,
+      "retryDestination": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Google readiness feedback",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": false,
+    "error": "locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <div role=\"alert\" tabindex=\"-1\" aria-atomic=\"true\" class=\"flex scroll-my-32 items-start gap-2.5 rounded-2xl border px-4 py-3 text-sm leading-6 [overflow-wrap:anywhere] focus-ring border-danger/20 bg-danger-soft text-danger\">…</div> aka getByRole('alert').filter({ hasText: 'Google sign-in will be' })\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n  - waiting for getByRole('alert') to be visible\n"
+  },
+  {
+    "name": "Login modal controls and dismissal",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "toggle": true,
+      "closed": true
+    }
+  },
+  {
+    "name": "No runtime errors or business writes",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "errors": [],
+      "writes": "Only the read-only Google readiness action"
+    }
+  },
+  {
+    "name": "Layout login",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Welcome back!",
+      "fields": [
+        {
+          "id": "client-email",
+          "inside": true
+        },
+        {
+          "id": "client-password",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout signup",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Start your client workspace",
+      "fields": [
+        {
+          "id": "signup-name",
+          "inside": true
+        },
+        {
+          "id": "signup-username",
+          "inside": true
+        },
+        {
+          "id": "signup-email",
+          "inside": true
+        },
+        {
+          "id": "signup-phone",
+          "inside": true
+        },
+        {
+          "id": "signup-company",
+          "inside": true
+        },
+        {
+          "id": "signup-password",
+          "inside": true
+        },
+        {
+          "id": "signup-confirm",
+          "inside": true
+        },
+        {
+          "id": "signup-address1",
+          "inside": true
+        },
+        {
+          "id": "signup-address2",
+          "inside": true
+        },
+        {
+          "id": "signup-city",
+          "inside": true
+        },
+        {
+          "id": "signup-state",
+          "inside": true
+        },
+        {
+          "id": "signup-postal",
+          "inside": true
+        },
+        {
+          "id": "signup-country",
+          "inside": true
+        },
+        {
+          "id": "",
+          "inside": true
+        },
+        {
+          "id": "signup-agreement",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout forgot-password",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Reset your password",
+      "fields": [
+        {
+          "id": "recovery-email",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout reset-password",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Choose a new password",
+      "fields": [
+        {
+          "id": "reset-password",
+          "inside": true
+        },
+        {
+          "id": "reset-confirm",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout account",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Client portal setup in progress",
+      "fields": []
+    }
+  },
+  {
+    "name": "Password controls and invalid submissions",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "valuesPreserved": true,
+      "nativeInvalidBlocked": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Recovery validation and expired-link route",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidBlocked": true,
+      "expiredDisabled": true,
+      "retryDestination": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Google readiness feedback",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": false,
+    "error": "The input did not match the regular expression /database update is complete/. Input:\n\n''\n"
+  },
+  {
+    "name": "Login modal controls and dismissal",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "toggle": true,
+      "closed": true
+    }
+  },
+  {
+    "name": "No runtime errors or business writes",
+    "width": 919,
+    "height": 499,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "errors": [],
+      "writes": "Only the read-only Google readiness action"
+    }
+  },
+  {
+    "name": "Layout login",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Welcome back!",
+      "fields": [
+        {
+          "id": "client-email",
+          "inside": true
+        },
+        {
+          "id": "client-password",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout signup",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Start your client workspace",
+      "fields": [
+        {
+          "id": "signup-name",
+          "inside": true
+        },
+        {
+          "id": "signup-username",
+          "inside": true
+        },
+        {
+          "id": "signup-email",
+          "inside": true
+        },
+        {
+          "id": "signup-phone",
+          "inside": true
+        },
+        {
+          "id": "signup-company",
+          "inside": true
+        },
+        {
+          "id": "signup-password",
+          "inside": true
+        },
+        {
+          "id": "signup-confirm",
+          "inside": true
+        },
+        {
+          "id": "signup-address1",
+          "inside": true
+        },
+        {
+          "id": "signup-address2",
+          "inside": true
+        },
+        {
+          "id": "signup-city",
+          "inside": true
+        },
+        {
+          "id": "signup-state",
+          "inside": true
+        },
+        {
+          "id": "signup-postal",
+          "inside": true
+        },
+        {
+          "id": "signup-country",
+          "inside": true
+        },
+        {
+          "id": "",
+          "inside": true
+        },
+        {
+          "id": "signup-agreement",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout forgot-password",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Reset your password",
+      "fields": [
+        {
+          "id": "recovery-email",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout reset-password",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Choose a new password",
+      "fields": [
+        {
+          "id": "reset-password",
+          "inside": true
+        },
+        {
+          "id": "reset-confirm",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout account",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Client portal setup in progress",
+      "fields": []
+    }
+  },
+  {
+    "name": "Password controls and invalid submissions",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "valuesPreserved": true,
+      "nativeInvalidBlocked": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Recovery validation and expired-link route",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidBlocked": true,
+      "expiredDisabled": true,
+      "retryDestination": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Google readiness feedback",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": false,
+    "error": "locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <div role=\"alert\" tabindex=\"-1\" aria-atomic=\"true\" class=\"flex scroll-my-32 items-start gap-2.5 rounded-2xl border px-4 py-3 text-sm leading-6 [overflow-wrap:anywhere] focus-ring border-danger/20 bg-danger-soft text-danger\">…</div> aka getByRole('alert').filter({ hasText: 'Google sign-in will be' })\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n  - waiting for getByRole('alert') to be visible\n"
+  },
+  {
+    "name": "Login modal controls and dismissal",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "toggle": true,
+      "closed": true
+    }
+  },
+  {
+    "name": "No runtime errors or business writes",
+    "width": 1440,
+    "height": 1000,
+    "dark": false,
+    "pass": false,
+    "error": "Expected values to be strictly equal:\n\n2 !== 1\n"
+  },
+  {
+    "name": "Layout login",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Welcome back!",
+      "fields": [
+        {
+          "id": "client-email",
+          "inside": true
+        },
+        {
+          "id": "client-password",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout signup",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Start your client workspace",
+      "fields": [
+        {
+          "id": "signup-name",
+          "inside": true
+        },
+        {
+          "id": "signup-username",
+          "inside": true
+        },
+        {
+          "id": "signup-email",
+          "inside": true
+        },
+        {
+          "id": "signup-phone",
+          "inside": true
+        },
+        {
+          "id": "signup-company",
+          "inside": true
+        },
+        {
+          "id": "signup-password",
+          "inside": true
+        },
+        {
+          "id": "signup-confirm",
+          "inside": true
+        },
+        {
+          "id": "signup-address1",
+          "inside": true
+        },
+        {
+          "id": "signup-address2",
+          "inside": true
+        },
+        {
+          "id": "signup-city",
+          "inside": true
+        },
+        {
+          "id": "signup-state",
+          "inside": true
+        },
+        {
+          "id": "signup-postal",
+          "inside": true
+        },
+        {
+          "id": "signup-country",
+          "inside": true
+        },
+        {
+          "id": "",
+          "inside": true
+        },
+        {
+          "id": "signup-agreement",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout forgot-password",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Reset your password",
+      "fields": [
+        {
+          "id": "recovery-email",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout reset-password",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Choose a new password",
+      "fields": [
+        {
+          "id": "reset-password",
+          "inside": true
+        },
+        {
+          "id": "reset-confirm",
+          "inside": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "Layout account",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "oneH1": true,
+      "overflow": false,
+      "title": "Client portal setup in progress",
+      "fields": []
+    }
+  },
+  {
+    "name": "Password controls and invalid submissions",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "valuesPreserved": true,
+      "nativeInvalidBlocked": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Recovery validation and expired-link route",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "invalidBlocked": true,
+      "expiredDisabled": true,
+      "retryDestination": true,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Google readiness feedback",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": false,
+    "error": "locator.waitFor: Error: strict mode violation: getByRole('alert') resolved to 2 elements:\n    1) <div role=\"alert\" tabindex=\"-1\" aria-atomic=\"true\" class=\"flex scroll-my-32 items-start gap-2.5 rounded-2xl border px-4 py-3 text-sm leading-6 [overflow-wrap:anywhere] focus-ring border-danger/20 bg-danger-soft text-danger\">…</div> aka getByRole('alert').filter({ hasText: 'Google sign-in will be' })\n    2) <div role=\"alert\" aria-live=\"assertive\" id=\"__next-route-announcer__\"></div> aka locator('[id=\"__next-route-announcer__\"]')\n\nCall log:\n  - waiting for getByRole('alert') to be visible\n"
+  },
+  {
+    "name": "Login modal controls and dismissal",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "toggle": true,
+      "closed": true
+    }
+  },
+  {
+    "name": "No runtime errors or business writes",
+    "width": 919,
+    "height": 900,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "errors": [],
+      "writes": "Only the read-only Google readiness action"
+    }
+  }
+]

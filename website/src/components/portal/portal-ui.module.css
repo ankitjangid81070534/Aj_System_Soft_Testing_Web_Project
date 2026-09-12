@@ -1,0 +1,102 @@
+/* Scoped to account surfaces: public navigation and admin forms are unchanged. */
+.authPage {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+.authLayout {
+  align-items: start;
+}
+.authForm {
+  min-width: 0;
+  width: 100%;
+  max-width: 42rem;
+  justify-self: center;
+}
+.authForm h1 {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.form {
+  min-width: 0;
+}
+.form :is(input, select, textarea) {
+  min-width: 0;
+  scroll-margin-block: 7rem 10rem;
+}
+.form :is(input, textarea, select):user-invalid {
+  border-color: var(--color-danger);
+}
+.form :is(button, a) {
+  scroll-margin-block: 7rem 10rem;
+}
+.form a:not(:global(.action-control)) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+.form fieldset {
+  min-width: 0;
+}
+.form fieldset legend {
+  margin-bottom: 0.75rem;
+}
+.form button {
+  transform: none;
+}
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+.navigation a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-control);
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.navigation a:hover {
+  background: var(--color-brand-50);
+  color: var(--color-brand-700);
+}
+.workspace {
+  overflow-wrap: anywhere;
+}
+.workspace :is(section[id], h2[id]) {
+  scroll-margin-top: 7rem;
+}
+.workspace :is(section, form, fieldset) {
+  min-width: 0;
+}
+.workspace :is(input, select, textarea) {
+  scroll-margin-block: 7rem 10rem;
+}
+@media (min-width: 1024px) {
+  .authLayout {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
+}
+@media (max-width: 639px) {
+  .form :is(input:not([type="checkbox"]):not([type="file"]), select, textarea) {
+    font-size: 1rem;
+  }
+  .navigation {
+    gap: 0.25rem;
+  }
+  .navigation a {
+    flex: 1 0 auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .form :global(.animate-spin) {
+    animation: none;
+  }
+}

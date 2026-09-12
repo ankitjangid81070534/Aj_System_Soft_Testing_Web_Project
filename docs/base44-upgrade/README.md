@@ -25,8 +25,10 @@
 
 21. [Phase 7 public pages](PHASE_7_PUBLIC_PAGES.md)
 22. [Phase 7 verification evidence](evidence/phase-7/SCREENSHOTS.md)
+23. [Phase 8 auth and portal UI](PHASE_8_AUTH_PORTAL.md)
+24. [Phase 8 verification evidence](evidence/phase-8/README.md)
 
-Phase 7 public UI scope and [final responsive visual review](PHASE_7_FINAL_REVIEW.md) are complete; STOPPED before Phase 8. Public-page hierarchy and responsive article navigation are refined. Accepted homepage/navigation and business behavior remain preserved; material reorder approval was not received, and integration checks remain deferred.
+Phase 7 public UI scope and [final responsive visual review](PHASE_7_FINAL_REVIEW.md) are complete. Phase 8 UI is implemented with public auth states verified; authenticated portal checks remain deferred. STOPPED before Phase 9. Public-page hierarchy and responsive article navigation are refined. Accepted homepage/navigation and business behavior remain preserved; material reorder approval was not received, and integration checks remain deferred.
 
 The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
 
