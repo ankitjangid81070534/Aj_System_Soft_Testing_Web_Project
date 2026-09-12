@@ -14,7 +14,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "card-surface rounded-2xl border border-line bg-surface",
+        "card-surface rounded-card border border-line bg-surface",
         flat ? "shadow-e1" : "card-3d shadow-e2",
         className,
       )}
@@ -25,10 +25,10 @@ export function Card({
 
 export function CardTitle({ className, ...props }: ComponentProps<"h3">) {
   return (
-    <h3 className={cn("text-lg font-semibold tracking-tight text-ink", className)} {...props} />
+    <h3 className={cn("text-card-title font-semibold tracking-tight text-ink", className)} {...props} />
   );
 }
 
 export function CardBody({ className, ...props }: ComponentProps<"div">) {
-  return <div className={cn("relative z-10 p-5 sm:p-6", className)} {...props} />;
+  return <div className={cn("relative z-10 p-card sm:p-card-lg", className)} {...props} />;
 }

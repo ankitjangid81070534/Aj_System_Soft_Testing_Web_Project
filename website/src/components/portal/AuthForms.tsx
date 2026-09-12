@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useActionState, useEffect, useState } from "react";
-import { ArrowRight, CheckCircle2, Loader2, Mail, UserRound } from "lucide-react";
+import { ArrowRight, Loader2, Mail, UserRound } from "lucide-react";
 import {
   clientLoginAction,
   clientSignupAction,
@@ -16,6 +16,9 @@ import { siteUrl } from "@/lib/env";
 import { Button } from "@/components/ui/Button";
 import { Field, Input } from "@/components/ui/Input";
 import { LoginPasswordField } from "./LoginPasswordField";
+import { PasswordField } from "./PasswordField";
+import { PortalFeedback as Feedback } from "./PortalFeedback";
+import styles from "./portal-ui.module.css";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
 
 const initialState: PortalActionState = { status: "idle" };
@@ -26,7 +29,9 @@ export function AddressFields({
   defaults,
 }: {
   prefix: string;
-  defaults?: Partial<Record<"addressLine1" | "addressLine2" | "city" | "state" | "postalCode" | "country", string>>;
+  defaults?: Partial<
+    Record<"addressLine1" | "addressLine2" | "city" | "state" | "postalCode" | "country", string>
+  >;
 }) {
   return (
     <fieldset className="space-y-4">
@@ -99,25 +104,6 @@ export function AddressFields({
   );
 }
 
-function Feedback({ state }: { state: PortalActionState }) {
-  if (!state.message) return null;
-  return (
-    <div
-      role={state.status === "error" ? "alert" : "status"}
-      className={
-        state.status === "error"
-          ? "rounded-2xl border border-danger/20 bg-danger-soft px-4 py-3 text-sm text-danger"
-          : "flex items-start gap-2 rounded-2xl border border-success/20 bg-success-soft px-4 py-3 text-sm text-success"
-      }
-    >
-      {state.status === "success" ? (
-        <CheckCircle2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
-      ) : null}
-      <span>{state.message}</span>
-    </div>
-  );
-}
-
 function SubmitButton({ pending, idle, busy }: { pending: boolean; idle: string; busy: string }) {
   return (
     <Button type="submit" loading={pending} className="w-full">
@@ -134,14 +120,13 @@ function GoogleButton({ label }: { label: string }) {
   async function startGoogleOAuth() {
     setPending(true);
     setError(null);
-    const readiness = await googleOAuthReadyAction();
-    if (readiness.status !== "success") {
-      setError(readiness.message ?? "Google sign-in is unavailable right now.");
-      setPending(false);
-      return;
-    }
-
     try {
+      const readiness = await googleOAuthReadyAction();
+      if (readiness.status !== "success") {
+        setError(readiness.message ?? "Google sign-in is unavailable right now.");
+        setPending(false);
+        return;
+      }
       const supabase = createSupabaseBrowserClient();
       const callbackOrigin =
         window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
@@ -164,9 +149,13 @@ function GoogleButton({ label }: { label: string }) {
       console.error("[auth] Google OAuth failed to start:", cause);
       const message = String((cause as { message?: string } | null)?.message ?? "");
       if (/provider/i.test(message)) {
-        setError("Google sign-in is not enabled for this site yet. The site owner must enable the Google provider in Supabase Auth settings.");
+        setError(
+          "Google sign-in is not enabled for this site yet. The site owner must enable the Google provider in Supabase Auth settings.",
+        );
       } else if (/redirect|url/i.test(message)) {
-        setError("The Google sign-in callback URL is not allowlisted yet. The site owner must add it under Supabase Auth URL configuration.");
+        setError(
+          "The Google sign-in callback URL is not allowlisted yet. The site owner must add it under Supabase Auth URL configuration.",
+        );
       } else {
         setError("Google sign-in could not be started. Please try again.");
       }
@@ -180,17 +169,21 @@ function GoogleButton({ label }: { label: string }) {
         type="button"
         onClick={startGoogleOAuth}
         disabled={pending}
+        aria-busy={pending}
         className="action-control action-secondary flex h-11 w-full items-center justify-center gap-3 rounded-full border border-line bg-surface text-sm font-medium text-ink shadow-e1 transition-all hover:border-line-strong hover:shadow-e2 focus-ring disabled:opacity-60"
       >
-        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#EA4335] text-xs font-bold text-white">
+        <span
+          aria-hidden="true"
+          className="flex h-5 w-5 shrink-0 items-center justify-center text-base font-bold text-brand-700"
+        >
           {pending ? <Loader2 className="h-3 w-3 animate-spin" /> : "G"}
         </span>
         {pending ? "Connecting…" : label}
       </button>
       {error ? (
-        <p role="alert" className="mt-2 text-xs text-danger">
-          {error}
-        </p>
+        <div className="mt-3">
+          <Feedback state={{ status: "error", message: error }} focusOnError />
+        </div>
       ) : null}
     </div>
   );
@@ -198,7 +191,10 @@ function GoogleButton({ label }: { label: string }) {
 
 function Divider({ label = "or continue with email" }: { label?: string }) {
   return (
-    <div data-login-divider className="flex items-center gap-3 text-[11px] uppercase tracking-[0.12em] text-ink-muted">
+    <div
+      data-login-divider
+      className="flex items-center gap-3 text-[11px] uppercase tracking-[0.12em] text-ink-muted"
+    >
       <span className="h-px flex-1 bg-line" />
       {label}
       <span className="h-px flex-1 bg-line" />
@@ -218,8 +214,8 @@ export function ClientLoginForm({
   const [state, action, pending] = useActionState(clientLoginAction, initialState);
 
   return (
-    <div className="space-y-5" data-client-login>
-      <form action={action} className="space-y-4">
+    <div className={`${styles.form} space-y-5`} data-client-login>
+      <form action={action} aria-busy={pending} className="space-y-4">
         <input type="hidden" name="next" value={nextPath} />
         <Field label="Email address" htmlFor="client-email" required>
           <div className="relative">
@@ -249,7 +245,7 @@ export function ClientLoginForm({
         </div>
         {notice ? <Feedback state={{ status: "success", message: notice }} /> : null}
         {error ? <Feedback state={{ status: "error", message: error }} /> : null}
-        <Feedback state={state} />
+        <Feedback state={state} focusOnError />
         <SubmitButton pending={pending} idle="Sign in to client portal" busy="Signing in…" />
       </form>
       <Divider label="or" />
@@ -271,10 +267,10 @@ export function ClientSignupForm() {
   const [state, action, pending] = useActionState(clientSignupAction, initialState);
 
   return (
-    <div className="space-y-5">
+    <div className={`${styles.form} space-y-5`}>
       <GoogleButton label="Sign up with Google" />
       <Divider />
-      <form action={action} className="space-y-4">
+      <form action={action} aria-busy={pending} className="space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <Field label="Full name" htmlFor="signup-name" required>
             <div className="relative">
@@ -338,33 +334,25 @@ export function ClientSignupForm() {
           <Input id="signup-company" name="company" autoComplete="organization" maxLength={160} />
         </Field>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field
+          <PasswordField
             label="Password"
-            htmlFor="signup-password"
-            required
             hint="8+ characters with a letter and number."
-          >
-            <Input
-              id="signup-password"
-              name="password"
-              type="password"
-              autoComplete="new-password"
-              required
-              minLength={8}
-              maxLength={128}
-            />
-          </Field>
-          <Field label="Confirm password" htmlFor="signup-confirm" required>
-            <Input
-              id="signup-confirm"
-              name="confirmPassword"
-              type="password"
-              autoComplete="new-password"
-              required
-              minLength={8}
-              maxLength={128}
-            />
-          </Field>
+            id="signup-password"
+            name="password"
+            autoComplete="new-password"
+            required
+            minLength={8}
+            maxLength={128}
+          />
+          <PasswordField
+            label="Confirm password"
+            id="signup-confirm"
+            name="confirmPassword"
+            autoComplete="new-password"
+            required
+            minLength={8}
+            maxLength={128}
+          />
         </div>
         <AddressFields prefix="signup" />
         <label className="flex items-start gap-2.5 text-xs leading-5 text-ink-muted">
@@ -383,7 +371,7 @@ export function ClientSignupForm() {
           </span>
         </label>
         <AgreementCheckbox id="signup-agreement" className="text-xs leading-5" />
-        <Feedback state={state} />
+        <Feedback state={state} focusOnError />
         <SubmitButton pending={pending} idle="Create secure account" busy="Creating account…" />
       </form>
       <p className="text-center text-sm text-ink-muted">
@@ -402,7 +390,7 @@ export function ClientSignupForm() {
 export function ForgotPasswordForm() {
   const [state, action, pending] = useActionState(forgotPasswordAction, initialState);
   return (
-    <form action={action} className="space-y-5">
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-5`}>
       <Field label="Account email" htmlFor="recovery-email" required>
         <Input
           id="recovery-email"
@@ -413,7 +401,7 @@ export function ForgotPasswordForm() {
           autoFocus
         />
       </Field>
-      <Feedback state={state} />
+      <Feedback state={state} focusOnError />
       <SubmitButton pending={pending} idle="Send recovery link" busy="Sending…" />
       <p className="text-center text-sm text-ink-muted">
         <Link
@@ -461,37 +449,29 @@ export function ResetPasswordForm({
   }, []);
 
   return (
-    <form action={action} className="space-y-5">
-      <Field
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-5`}>
+      <PasswordField
         label="New password"
-        htmlFor="reset-password"
-        required
         hint="8+ characters with a letter and number."
-      >
-        <Input
-          id="reset-password"
-          name="password"
-          type="password"
-          autoComplete="new-password"
-          required={recoveryReady}
-          disabled={!recoveryReady}
-          minLength={8}
-          autoFocus
-        />
-      </Field>
-      <Field label="Confirm new password" htmlFor="reset-confirm" required>
-        <Input
-          id="reset-confirm"
-          name="confirmPassword"
-          type="password"
-          autoComplete="new-password"
-          required={recoveryReady}
-          disabled={!recoveryReady}
-          minLength={8}
-        />
-      </Field>
+        id="reset-password"
+        name="password"
+        autoComplete="new-password"
+        required={recoveryReady}
+        disabled={!recoveryReady}
+        minLength={8}
+        autoFocus
+      />
+      <PasswordField
+        label="Confirm new password"
+        id="reset-confirm"
+        name="confirmPassword"
+        autoComplete="new-password"
+        required={recoveryReady}
+        disabled={!recoveryReady}
+        minLength={8}
+      />
       {linkError ? <Feedback state={{ status: "error", message: linkError }} /> : null}
-      <Feedback state={state} />
+      <Feedback state={state} focusOnError />
       {recoveryReady ? (
         <SubmitButton pending={pending} idle="Update password" busy="Updating…" />
       ) : null}

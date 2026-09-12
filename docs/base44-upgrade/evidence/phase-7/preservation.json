@@ -1,0 +1,44 @@
+[
+  {
+    "route": "/services",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/projects",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/reviews",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/about",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/team",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/contact",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  },
+  {
+    "route": "/blog",
+    "linksPreserved": true,
+    "formControlsPreserved": true,
+    "textPreservedIgnoringDecorativeDuplicationAndWhitespace": true
+  }
+]

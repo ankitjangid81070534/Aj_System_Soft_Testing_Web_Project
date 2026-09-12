@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { galleryContentSchema } from "@/lib/validation/sections";
 import { getCurrentUser } from "@/lib/auth/session";
-import { can } from "@/lib/auth/permissions";
+import { can, type AppRole, type Capability } from "@/lib/auth/permissions";
 import { createSupabaseAdminLooseClient } from "@/lib/supabase/admin";
 
 const idSchema = z.string().uuid();
@@ -16,10 +16,12 @@ const directionSchema = z.enum(["up", "down"]);
  * section page (validated JSONB — no raw HTML/JS); these actions handle the
  * structure: visibility, ordering, publish state.
  */
-async function authorize(): Promise<{ ok: true; userId: string } | { ok: false }> {
+async function authorize(
+  capability: Capability = "content:write",
+): Promise<{ ok: true; userId: string; role: AppRole } | { ok: false }> {
   const user = await getCurrentUser();
-  if (!user || !can(user.role, "content:write")) return { ok: false };
-  return { ok: true, userId: user.id };
+  if (!user || !can(user.role, capability)) return { ok: false };
+  return { ok: true, userId: user.id, role: user.role };
 }
 
 function builderRedirect(path: string, kind: "notice" | "error", message: string): never {
@@ -95,7 +97,7 @@ export async function reorderSectionAction(formData: FormData): Promise<void> {
 }
 
 export async function setSectionStatusAction(formData: FormData): Promise<void> {
-  const auth = await authorize();
+  const auth = await authorize("content:publish");
   if (!auth.ok) return;
   const id = idSchema.safeParse(formData.get("id"));
   const status = z.enum(["draft", "published"]).safeParse(formData.get("status"));
@@ -177,12 +179,15 @@ export async function saveSectionAction(formData: FormData): Promise<void> {
   const sectionClient = createSupabaseAdminLooseClient();
   const { data: rows, error: readError } = await sectionClient
     .from("page_sections")
-    .select("section_type")
+    .select("section_type, status")
     .eq("id", id.data)
     .limit(1);
   const sectionType = rows?.[0]?.section_type;
   if (readError || typeof sectionType !== "string") {
     builderRedirect(editPath, "error", "This section could not be loaded for saving.");
+  }
+  if (rows?.[0]?.status !== status.data && !can(auth.role, "content:publish")) {
+    builderRedirect(editPath, "error", "Your role cannot change the publication status.");
   }
   const contentError = validateSectionContent(sectionType, content);
   if (contentError) builderRedirect(editPath, "error", contentError);
@@ -192,7 +197,8 @@ export async function saveSectionAction(formData: FormData): Promise<void> {
     .from("page_sections")
     .update({
       content,
-      status: status.data,
+      // Editors never send publication state, avoiding concurrent status clobbering.
+      ...(can(auth.role, "content:publish") ? { status: status.data } : {}),
       variant: variant.data,
       accent: accent.data,
       sort_order: sortOrder.data,

@@ -27,8 +27,9 @@
 .skipLink:focus { top: 12px; }
 .headerFrame, .footerFrame { --purple: #2563eb; --ink: var(--color-ink); --muted: var(--color-ink-muted); }
 .headerFrame { position: relative; z-index: 40; background: #fff; transition: background-color 450ms ease; }
-/* Leave room to reach footer links above the persistent bottom dock. */
+/* Reserve footer clearance only while the navigation is a bottom dock. */
 .footerFrame { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) { .footerFrame { padding-bottom: 0; } }
 .headerFrame[data-scene-tone="dark"] { background: #100c1d; }
 .headerFrame[data-scene-tone="dark"] > header { --color-ink: #f4ecff; --color-ink-muted: #c5b5d8; --color-ink-soft: #e2d3f3; }
 .headerFrame[data-scene-tone="dark"] :global(.glass-strong) { background: #100c1de8; transition: background-color 450ms ease; }
@@ -75,7 +76,9 @@
 .centerHeading > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 20px auto !important; max-width: 445px; }
 /* Native page scrolling, progressively enhanced by ScrollJourney. */
 .journey { background: #090819; color: #fff; position: relative; }
-.journeyStage { overflow: hidden; }
+/* Clip paint without creating a second scroll container: native Tab focus
+   must not add scrollLeft on top of the translated storytelling track. */
+.journeyStage { overflow: clip; }
 .journeyTrack { display: flex; flex-direction: column; }
 .journeyScene { position: relative; min-height: 620px; overflow: hidden; background: radial-gradient(ellipse at 46% 65%, #48258345, transparent 50%), #090819; }
 .sceneWord { position: absolute; top: 55px; left: 15%; font-size: clamp(110px, 19vw, 240px); line-height: 1; font-weight: 500; letter-spacing: -.06em; color: #ffffff15; }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
-import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { PageHero } from "@/components/site/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
@@ -100,42 +100,33 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       {service.faqs.length > 0 ? <JsonLd data={faqPageJsonLd(service.faqs)} /> : null}
 
       <article>
-        <header className="border-b border-line bg-surface">
-          <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
-            <Breadcrumbs
-              items={[
-                { name: "Home", href: "/" },
-                { name: "Services", href: "/services" },
-                { name: service.name, href: `/services/${service.slug}` },
-              ]}
-            />
-            <div className="mt-6 flex max-w-3xl flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-100 bg-brand-50 text-brand-600"
-                >
-                  {renderIcon(service.icon, "h-6 w-6")}
-                </span>
-                {service.category ? (
-                  <p className="text-eyebrow font-semibold uppercase tracking-[0.08em] text-brand-600">
-                    {service.category}
-                  </p>
-                ) : null}
-              </div>
-              <h1 className="text-display-sm font-semibold tracking-tight text-balance text-ink sm:text-display-md">
-                {service.name}
-              </h1>
-              <p className="text-base text-ink-muted sm:text-lg">{service.shortDescription}</p>
-              <div className="flex flex-wrap gap-3 pt-1">
-                <Button href="/request-quote">Discuss your project</Button>
-                <Button href="/projects" variant="secondary">
-                  See our work
-                </Button>
-              </div>
+        <PageHero
+          crumbs={crumbs.map((crumb) => ({ name: crumb.name, href: crumb.path }))}
+          beforeTitle={
+            <div className="flex items-center gap-3">
+              <span
+                aria-hidden="true"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-100 bg-brand-50 text-brand-600"
+              >
+                {renderIcon(service.icon, "h-6 w-6")}
+              </span>
+              {service.category ? (
+                <p className="text-eyebrow font-semibold uppercase tracking-[0.08em] text-brand-600">
+                  {service.category}
+                </p>
+              ) : null}
             </div>
+          }
+          title={service.name}
+          description={service.shortDescription}
+        >
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Button href="/request-quote">Discuss your project</Button>
+            <Button href="/projects" variant="secondary">
+              See our work
+            </Button>
           </div>
-        </header>
+        </PageHero>
 
         {service.longDescription ? (
           <section className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">
@@ -155,7 +146,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <Reveal>
                 <SectionHeader
                   eyebrow="The problem"
-                  title="Business problems this solves"
+                  title={<span id="problems-heading">Business problems this solves</span>}
                   description={`If any of these sound familiar, ${service.name.toLowerCase()} is worth a conversation.`}
                 />
               </Reveal>
@@ -268,7 +259,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <section className="border-y border-line bg-surface" aria-labelledby="related-work">
             <div className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">
               <Reveal>
-                <SectionHeader eyebrow="Related work" title="Projects in this space" />
+                <SectionHeader
+                  eyebrow="Related work"
+                  title={<span id="related-work">Projects in this space</span>}
+                />
               </Reveal>
               <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {relatedProjects.map((project, index) => (
@@ -296,7 +290,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             aria-labelledby="faq-heading"
           >
             <Reveal>
-              <SectionHeader eyebrow="FAQ" title="Common questions" />
+              <SectionHeader eyebrow="FAQ" title={<span id="faq-heading">Common questions</span>} />
             </Reveal>
             <Reveal delay={80}>
               <Accordion
@@ -315,7 +309,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <section className="border-t border-line bg-surface" aria-labelledby="related-services">
             <div className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">
               <Reveal>
-                <SectionHeader eyebrow="Keep exploring" title="Related services" />
+                <SectionHeader
+                  eyebrow="Keep exploring"
+                  title={<span id="related-services">Related services</span>}
+                />
               </Reveal>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedServices.map((related, index) => (

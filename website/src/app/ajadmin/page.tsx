@@ -15,7 +15,7 @@ import {
 import { isSupabaseConfigured } from "@/lib/env";
 import { createSupabaseAdminLooseClient } from "@/lib/supabase/admin";
 import { getCurrentUser } from "@/lib/auth/session";
-import { ROLE_LABELS } from "@/lib/auth/permissions";
+import { can, ROLE_LABELS } from "@/lib/auth/permissions";
 import { signOutAction } from "@/lib/auth/actions";
 
 export const dynamic = "force-dynamic";
@@ -71,7 +71,7 @@ export default async function AdminDashboardPage() {
   }
 
   const user = await getCurrentUser();
-  if (!user) {
+  if (!user || !can(user.role, "content:read")) {
     return (
       <section>
         <p className="text-sm text-ink-muted">Session expired - sign in again.</p>
@@ -89,12 +89,16 @@ export default async function AdminDashboardPage() {
     }),
   );
 
-  const admin = createSupabaseAdminLooseClient();
-  const { data: recentLeads } = await admin
-    .from("quote_requests")
-    .select("id, full_name, email, created_at")
-    .order("created_at", { ascending: false })
-    .limit(5);
+  // The service-role client bypasses RLS: enforce lead access before querying,
+  // not merely by hiding links in the staff shell.
+  const canReadLeads = can(user.role, "leads:read");
+  const { data: recentLeads, error: leadsError } = canReadLeads
+    ? await createSupabaseAdminLooseClient()
+        .from("quote_requests")
+        .select("id, full_name, email, created_at")
+        .order("created_at", { ascending: false })
+        .limit(5)
+    : { data: null, error: null };
 
   return (
     <section className="mx-auto max-w-[90rem]">
@@ -121,13 +125,13 @@ export default async function AdminDashboardPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Link
+            {canReadLeads && <Link
               href="/ajadmin/leads"
               className="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-surface px-4 text-sm font-medium text-ink shadow-e1 hover:shadow-e2 focus-ring"
             >
               <Inbox aria-hidden="true" className="h-4 w-4 text-brand-600" />
               Open lead inbox
-            </Link>
+            </Link>}
             <Link
               href="/ajadmin/c/projects/new"
               className="inline-flex h-10 items-center gap-2 rounded-full bg-brand-600 px-4 text-sm font-semibold text-on-brand shadow-e2 hover:bg-brand-700 focus-ring"
@@ -169,7 +173,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       <div className="mt-6 grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
-        <div className="rounded-3xl border border-line bg-surface p-5 shadow-e2 sm:p-6">
+        {canReadLeads && <div className="rounded-3xl border border-line bg-surface p-5 shadow-e2 sm:p-6">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold text-ink">Latest quote requests</h2>
             <Link
@@ -179,7 +183,11 @@ export default async function AdminDashboardPage() {
               Open inbox
             </Link>
           </div>
-          {recentLeads && recentLeads.length > 0 ? (
+          {leadsError ? (
+            <p role="alert" className="mt-3 text-sm text-ink-muted">
+              Quote requests could not be loaded. Please try again.
+            </p>
+          ) : recentLeads && recentLeads.length > 0 ? (
             <ul className="mt-3 divide-y divide-line">
               {recentLeads.map((lead) => (
                 <li
@@ -204,7 +212,7 @@ export default async function AdminDashboardPage() {
           ) : (
             <p className="mt-3 text-sm text-ink-muted">No quote requests yet.</p>
           )}
-        </div>
+        </div>}
 
         <div className="rounded-3xl border border-line bg-surface p-5 shadow-e2 sm:p-6">
           <h2 className="text-sm font-semibold text-ink">Quick actions</h2>

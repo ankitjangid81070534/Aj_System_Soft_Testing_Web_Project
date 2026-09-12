@@ -1,0 +1,66 @@
+/* Phase 3: shared dimensions and surface recipes. Existing layouts, fonts,
+   navigation geometry and semantic component APIs are intentionally retained. */
+@theme {
+  --text-label: 0.75rem;
+  --text-label--line-height: 1rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.5rem;
+  --text-card-title: 1.125rem;
+  --text-card-title--line-height: 1.75rem;
+  --spacing-card: 1.25rem;
+  --spacing-card-lg: 1.5rem;
+  --spacing-badge-x: 0.625rem;
+  --spacing-badge-y: 0.125rem;
+  --radius-control: 9999px;
+  --radius-card: 1.5rem;
+  --radius-card-compact: 1.25rem;
+  --radius-field: 0.75rem;
+  --radius-tile: 0.9rem;
+}
+
+:root {
+  --border-width-ui: 1px;
+  --focus-width: 3px;
+  --focus-offset: 4px;
+  --focus-color: #1d4ed8;
+  --focus-separator: #ffffff;
+  --duration-control: 220ms;
+  --duration-surface: 320ms;
+  --surface-lift: -4px;
+  --action-ink: #151923;
+  --action-muted: #4d5666;
+  --action-inverse: #f4f7ff;
+  --action-border: #e3e7ef;
+  --action-face: linear-gradient(155deg, #ffffff, #f8faff);
+  --action-shadow: inset 0 1px 1px #ffffff, 0 7px 18px -12px #15284f66, 0 2px 5px #14213d12;
+  --surface-sheen: linear-gradient(145deg, #fff 35%, #f3f8ff 100%);
+  --shadow-sculpted: inset 0 1px 0 #fff, inset 0 -1px 0 #c7d8ec70, 0 2px 5px #44226806, 0 14px 36px -18px #28649b30;
+  --shadow-sculpted-hover: inset 0 1px 0 #fff, 0 3px 8px #44226808, 0 25px 55px -18px #28649b40;
+  --shadow-tile: inset 0 1px 1px #ffffff80, 0 5px 10px -8px #0008;
+}
+
+:is(.card-3d, .card-lift, .reference-card) {
+  --shadow-jewel: inset 0 1px 1px #ffffff82, inset 0 -2px 4px #0003, 0 6px 12px -7px #101c3b66, 0 16px 28px -20px color-mix(in srgb, var(--card-light), transparent 35%);
+  --shadow-jewel-hover: inset 0 1px 1px #ffffff80, 0 8px 14px -9px #101c3b50, 0 22px 32px -22px color-mix(in srgb, var(--card-accent), transparent 15%);
+}
+
+.dark {
+  --focus-color: #93c5fd;
+  --focus-separator: #15101e;
+  --surface-sheen: linear-gradient(145deg, #20182d 10%, #15101f);
+  --shadow-sculpted: inset 0 1px 0 #ffffff0c, 0 14px 36px -18px #0008;
+  --shadow-sculpted-hover: inset 0 1px 0 #ffffff18, 0 25px 55px -18px #000b;
+}
+
+/* Bound spread on touch-sized surfaces; do not reduce any hit area. */
+@media (max-width: 700px) {
+  :root {
+    --shadow-sculpted: inset 0 1px 0 #ffffff80, 0 5px 14px -9px #24334c30;
+  }
+  :is(.card-3d, .card-lift, .reference-card) { --shadow-jewel: inset 0 1px 1px #ffffff70, inset 0 -1px 2px #0003, 0 6px 12px -8px #101c3b60; }
+  .dark { --shadow-sculpted: inset 0 1px 0 #ffffff12, 0 5px 14px -9px #0009; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-control: 0ms; --duration-surface: 0ms; --surface-lift: 0px; }
+}

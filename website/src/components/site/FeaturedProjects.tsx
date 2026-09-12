@@ -12,7 +12,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectTeaser[] }) {
   if (projects.length === 0) return null;
 
   return (
-    <section className="mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
+    <section data-home-section="projects" className="mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
       <Reveal>
         <SectionHeader
           eyebrow="Client work"

@@ -39,7 +39,7 @@ const REASONS = [
 
 export function WhyUs() {
   return (
-    <section className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
+    <section data-home-section="principles" className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
       <div
         aria-hidden="true"
         className="aurora aurora-b -left-40 bottom-0 -z-10 hidden h-96 w-96 lg:block"
@@ -51,7 +51,7 @@ export function WhyUs() {
           description="A focused development partner that treats your requirements as the specification."
         />
       </Reveal>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div data-section-grid className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {REASONS.map(({ Icon, title, description, tone, glow }, index) => (
           <Reveal key={title} delay={index * 50} className="h-full">
             <article className="group card-3d flex h-full flex-col gap-4 rounded-[1.375rem] p-6">

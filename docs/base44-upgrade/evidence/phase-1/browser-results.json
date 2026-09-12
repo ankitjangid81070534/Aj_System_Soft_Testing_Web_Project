@@ -1,0 +1,193 @@
+{
+  "mode": "Isolated production browser from current cloned source; real UI gestures; Supabase absent precondition; no fabricated backend data; not live-iframe verification",
+  "results": [
+    {
+      "name": "Desktop nav: all eight links, current state and unchanged geometry",
+      "status": "PASS",
+      "evidence": {
+        "links": [
+          "/",
+          "/services",
+          "/projects",
+          "/ai-methods",
+          "/reviews",
+          "/about",
+          "/team",
+          "/contact"
+        ],
+        "geometry": {
+          "height": 64,
+          "width": 1182,
+          "position": "fixed"
+        }
+      }
+    },
+    {
+      "name": "Search: filtering, empty state, real result navigation, dialog close",
+      "status": "PASS",
+      "evidence": {
+        "filter": true,
+        "emptyState": true,
+        "path": "/services",
+        "closed": true
+      }
+    },
+    {
+      "name": "Theme: real toggle, storage persistence across reload, restore",
+      "status": "PASS",
+      "evidence": {
+        "darkPersisted": true,
+        "restoredLight": true
+      }
+    },
+    {
+      "name": "Portal modal: entry and close",
+      "status": "PASS",
+      "evidence": {
+        "opened": true,
+        "closeControl": "Close client login",
+        "closed": true
+      }
+    },
+    {
+      "name": "Service card → detail and quote CTA",
+      "status": "PASS",
+      "evidence": {
+        "detail": true,
+        "quoteForm": true
+      }
+    },
+    {
+      "name": "Blog card → article",
+      "status": "PASS",
+      "evidence": {
+        "article": true
+      }
+    },
+    {
+      "name": "Project cards and filters accurately absent without real CMS data",
+      "status": "PASS",
+      "evidence": {
+        "emptyState": true,
+        "dataBackedCardAndFilterGestures": "BLOCKED—no real project records; no mock content inserted"
+      }
+    },
+    {
+      "name": "Client login submit reports missing configuration",
+      "status": "PASS",
+      "evidence": {
+        "rejectionVisible": true,
+        "authenticated": false
+      }
+    },
+    {
+      "name": "Google entry reports unavailable, no external OAuth redirect",
+      "status": "PASS",
+      "evidence": {
+        "path": "/login",
+        "rejectionVisible": true,
+        "realOAuth": "BLOCKED"
+      }
+    },
+    {
+      "name": "Password recovery submit reports missing configuration",
+      "status": "PASS",
+      "evidence": {
+        "rejectionVisible": true,
+        "emailSent": false
+      }
+    },
+    {
+      "name": "Contact invalid submit is prevented by native validation",
+      "status": "PASS",
+      "evidence": {
+        "requiredNameInvalid": true
+      }
+    },
+    {
+      "name": "Contact valid submit reports unavailable rather than fake success",
+      "status": "PASS",
+      "evidence": {
+        "rejectionVisible": true,
+        "recordSaved": false
+      }
+    },
+    {
+      "name": "Quote valid submit reports unavailable rather than fake success",
+      "status": "PASS",
+      "evidence": {
+        "rejectionVisible": true,
+        "recordSaved": false
+      }
+    },
+    {
+      "name": "Private account and admin routes show setup boundaries and noindex",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "/account",
+          "heading": [
+            "Client portal setup in progress"
+          ]
+        },
+        {
+          "path": "/ajadmin",
+          "heading": [
+            "Complete admin setup"
+          ]
+        },
+        {
+          "path": "/ajadmin/c/services",
+          "heading": []
+        },
+        {
+          "path": "/ajadmin/media",
+          "heading": [
+            "Staff Administration"
+          ]
+        },
+        {
+          "path": "/ajadmin/users",
+          "heading": [
+            "Staff Administration"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile More: open, choose overflow route, close, dock unchanged",
+      "status": "PASS",
+      "evidence": {
+        "path": "/about",
+        "closed": true,
+        "geometry": {
+          "height": 84,
+          "width": 362
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "actionResponses": [
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/forgot-password",
+      "status": 200
+    },
+    {
+      "path": "/contact",
+      "status": 200
+    },
+    {
+      "path": "/request-quote",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+[
+  {
+    "name": "Layout /services",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /projects",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /reviews",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /about",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /team",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /contact",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /blog",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Service category anchor, detail, FAQ and enquiry",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "category": "#category-industry-solutions",
+      "service": "/services/custom-software-development",
+      "faqOpenClose": true,
+      "quoteForm": true
+    }
+  },
+  {
+    "name": "Article categories and mobile contents links",
+    "width": 320,
+    "dark": false,
+    "pass": false,
+    "error": "The expression evaluated to a falsy value:\n\n  assert(await cats.count()>1)\n"
+  },
+  {
+    "name": "Contact invalid submission stays local",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidFields": 6,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Review login action keeps auth destination",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "path": "/login"
+    }
+  },
+  {
+    "name": "Runtime and write guard",
+    "width": 320,
+    "dark": false,
+    "pass": true,
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Layout /services",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /projects",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /reviews",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /about",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /team",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /contact",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /blog",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Service category anchor, detail, FAQ and enquiry",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "category": "#category-industry-solutions",
+      "service": "/services/custom-software-development",
+      "faqOpenClose": true,
+      "quoteForm": true
+    }
+  },
+  {
+    "name": "Article categories and mobile contents links",
+    "width": 390,
+    "dark": false,
+    "pass": false,
+    "error": "The expression evaluated to a falsy value:\n\n  assert(await cats.count()>1)\n"
+  },
+  {
+    "name": "Contact invalid submission stays local",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidFields": 6,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Review login action keeps auth destination",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "path": "/login"
+    }
+  },
+  {
+    "name": "Runtime and write guard",
+    "width": 390,
+    "dark": false,
+    "pass": true,
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Layout /services",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /projects",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /reviews",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /about",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /team",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /contact",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /blog",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Service category anchor, detail, FAQ and enquiry",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "category": "#category-industry-solutions",
+      "service": "/services/custom-software-development",
+      "faqOpenClose": true,
+      "quoteForm": true
+    }
+  },
+  {
+    "name": "Article categories and mobile contents links",
+    "width": 919,
+    "dark": false,
+    "pass": false,
+    "error": "The expression evaluated to a falsy value:\n\n  assert(await cats.count()>1)\n"
+  },
+  {
+    "name": "Contact invalid submission stays local",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidFields": 6,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Review login action keeps auth destination",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "path": "/login"
+    }
+  },
+  {
+    "name": "Runtime and write guard",
+    "width": 919,
+    "dark": false,
+    "pass": true,
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Layout /services",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /projects",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /reviews",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /about",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /team",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /contact",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /blog",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Service category anchor, detail, FAQ and enquiry",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "category": "#category-industry-solutions",
+      "service": "/services/custom-software-development",
+      "faqOpenClose": true,
+      "quoteForm": true
+    }
+  },
+  {
+    "name": "Article categories and mobile contents links",
+    "width": 1440,
+    "dark": false,
+    "pass": false,
+    "error": "The expression evaluated to a falsy value:\n\n  assert(await cats.count()>1)\n"
+  },
+  {
+    "name": "Contact invalid submission stays local",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "invalidFields": 6,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Review login action keeps auth destination",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "detail": {
+      "path": "/login"
+    }
+  },
+  {
+    "name": "Runtime and write guard",
+    "width": 1440,
+    "dark": false,
+    "pass": true,
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Layout /services",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /projects",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /reviews",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /about",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /team",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /contact",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Layout /blog",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "oneH1": true,
+      "plainTitle": true
+    }
+  },
+  {
+    "name": "Service category anchor, detail, FAQ and enquiry",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "category": "#category-industry-solutions",
+      "service": "/services/custom-software-development",
+      "faqOpenClose": true,
+      "quoteForm": true
+    }
+  },
+  {
+    "name": "Article categories and mobile contents links",
+    "width": 919,
+    "dark": true,
+    "pass": false,
+    "error": "The expression evaluated to a falsy value:\n\n  assert(await cats.count()>1)\n"
+  },
+  {
+    "name": "Contact invalid submission stays local",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "invalidFields": 6,
+      "noWrites": true
+    }
+  },
+  {
+    "name": "Review login action keeps auth destination",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "detail": {
+      "path": "/login"
+    }
+  },
+  {
+    "name": "Runtime and write guard",
+    "width": 919,
+    "dark": true,
+    "pass": true,
+    "errors": [],
+    "writes": []
+  }
+]

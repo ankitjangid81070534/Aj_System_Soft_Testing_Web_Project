@@ -1,0 +1,83 @@
+
+> website@0.1.0 build
+> next build
+
+▲ Next.js 16.3.3 (Turbopack)
+✓ Running next.config.ts took 25ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 10.7s
+  Running TypeScript ...
+  Finished TypeScript in 9.8s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/42) ...
+  Generating static pages using 3 workers (10/42) 
+  Generating static pages using 3 workers (20/42) 
+  Generating static pages using 3 workers (31/42) 
+✓ Generating static pages using 3 workers (42/42) in 1150ms
+  Finalizing page optimization ...
+
+Route (app)                                                            Revalidate  Expire
+┌ ○ /                                                                          5m      1y
+├ ○ /_not-found
+├ ○ /about                                                                     5m      1y
+├ ƒ /account
+├ ○ /ai-methods                                                                5m      1y
+├ ƒ /ajadmin
+├ ƒ /ajadmin/agreements
+├ ƒ /ajadmin/audit
+├ ƒ /ajadmin/brand
+├ ƒ /ajadmin/c/[resource]
+├ ƒ /ajadmin/c/[resource]/[id]
+├ ƒ /ajadmin/c/[resource]/new
+├ ƒ /ajadmin/home
+├ ƒ /ajadmin/home/[id]
+├ ƒ /ajadmin/home/new
+├ ƒ /ajadmin/leads
+├ ƒ /ajadmin/leads/[kind]/[id]
+├ ƒ /ajadmin/login
+├ ƒ /ajadmin/media
+├ ƒ /ajadmin/users
+├ ƒ /auth/callback
+├ ƒ /auth/confirm
+├ ƒ /blog
+├   /blog/[slug]
+│ ├ ● /blog/how-to-plan-a-custom-software-project                              5m      1y
+│ ├ ● /blog/web-app-or-mobile-app-choosing-the-right-platform                  5m      1y
+│ └ ● /blog/what-erp-digitization-actually-means-for-small-businesses          5m      1y
+├ ○ /blog/rss.xml                                                              1h      1y
+├ ƒ /contact
+├ ○ /design-preview                                                            5m      1y
+├ ○ /forgot-password                                                           5m      1y
+├ ○ /icon
+├ ƒ /login
+├ ○ /opengraph-image
+├ ○ /privacy                                                                   5m      1y
+├ ƒ /projects
+├ ● /projects/[slug]
+├ ƒ /request-quote
+├ ƒ /reset-password
+├ ○ /reviews                                                                   5m      1y
+├ ○ /robots.txt
+├ ○ /service-agreement                                                         5m      1y
+├ ○ /services                                                                  5m      1y
+├   /services/[slug]
+│ ├ ● /services/custom-software-development                                    5m      1y
+│ ├ ● /services/saas-development                                               5m      1y
+│ ├ ● /services/web-application-development                                    5m      1y
+│ └ ● [+12 more paths]
+├ ƒ /signup
+├ ○ /sitemap.xml                                                               5m      1y
+├ ○ /team                                                                      5m      1y
+├ ○ /terms                                                                     5m      1y
+└ ƒ /update-password
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

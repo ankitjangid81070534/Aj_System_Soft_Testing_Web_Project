@@ -28,5 +28,9 @@ describe("preview embedding security", () => {
       expect(csp).toContain("upgrade-insecure-requests");
     }
     if (suffix) expect(config.allowedDevOrigins).toContain(`3000-${suffix}`);
+    // Only this development preview origin is trusted for forwarded actions.
+    expect(config.experimental?.serverActions).toEqual(
+      embedded ? { allowedOrigins: [`3000-${suffix}`] } : undefined,
+    );
   });
 });

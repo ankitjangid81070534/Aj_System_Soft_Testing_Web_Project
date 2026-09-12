@@ -1,0 +1,95 @@
+{
+  "method": "isolated final production, warm server, cold browser contexts, normal motion, no throttling, 5 seconds after load, 3 runs/template; not field CWV",
+  "rows": [
+    {
+      "route": "/",
+      "width": 1214,
+      "height": 900,
+      "run": 1,
+      "lcp": 540,
+      "cls": 0,
+      "ttfb": 124,
+      "jsTransfer": 624429
+    },
+    {
+      "route": "/",
+      "width": 1214,
+      "height": 900,
+      "run": 2,
+      "lcp": 332,
+      "cls": 0,
+      "ttfb": 9.099999999627471,
+      "jsTransfer": 624397
+    },
+    {
+      "route": "/",
+      "width": 1214,
+      "height": 900,
+      "run": 3,
+      "lcp": 352,
+      "cls": 0,
+      "ttfb": 11.199999999254942,
+      "jsTransfer": 624398
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "run": 1,
+      "lcp": 232,
+      "cls": 0,
+      "ttfb": 9.800000000745058,
+      "jsTransfer": 624397
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "run": 2,
+      "lcp": 200,
+      "cls": 0,
+      "ttfb": 10.899999998509884,
+      "jsTransfer": 624399
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "run": 3,
+      "lcp": 220,
+      "cls": 0,
+      "ttfb": 8.400000000372529,
+      "jsTransfer": 624396
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "height": 844,
+      "run": 1,
+      "lcp": 148,
+      "cls": 0,
+      "ttfb": 8,
+      "jsTransfer": 625533
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "height": 844,
+      "run": 2,
+      "lcp": 192,
+      "cls": 0,
+      "ttfb": 10.399999998509884,
+      "jsTransfer": 625534
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "height": 844,
+      "run": 3,
+      "lcp": 144,
+      "cls": 0,
+      "ttfb": 7.800000000745058,
+      "jsTransfer": 625532
+    }
+  ]
+}

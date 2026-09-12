@@ -22,7 +22,7 @@ export function ServiceJourney({ services }: { services: ServiceTeaser[] }) {
                   <div className={styles.codeLines} aria-hidden="true"><i /><i /><i /><i /></div>
                   <Link href={`/services/${group[0].slug}`}>Learn more <ArrowUpRight size={15} /></Link>
                 </div>
-                <div className={styles.sceneCopy}>
+                <div className={styles.sceneCopy} data-service-copy>
                   <p className={styles.eyebrow}>What we can build for you</p>
                   {group.map(service => <div key={service.id}>
                     <h2>{service.name}</h2><p>{service.shortDescription}</p>

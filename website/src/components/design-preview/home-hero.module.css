@@ -1,0 +1,121 @@
+/* Hero-only refinements. Do not restyle the approved navigation or later sections. */
+.hero.hero {
+  --hero-ink: #17131e;
+  --hero-muted: #554c60;
+  --hero-action: #1d4ed8;
+  --hero-on-action: #ffffff;
+  --hero-action-hover: #1e40af;
+  background: #ffffff;
+  min-height: 700px;
+  padding-bottom: 80px;
+}
+.hero .copy {
+  width: min(1000px, calc(100% - 48px));
+  padding-top: clamp(36px, 4vw, 64px);
+  color: var(--hero-ink);
+}
+.hero .copy::before { opacity: .35; }
+.hero h1 {
+  font-size: clamp(2.25rem, 5.2vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+.hero .badge {
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 7px 12px;
+  margin-bottom: 20px !important;
+  color: var(--hero-ink);
+}
+.hero .badge svg { flex-shrink: 0; }
+.hero .description {
+  max-width: 650px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--hero-muted);
+}
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+.hero .actions > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 7px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  transition-duration: var(--duration-control);
+}
+.hero .primary:global(.action-control) {
+  color: var(--hero-on-action);
+  background: var(--hero-action);
+  border-color: var(--hero-action);
+  box-shadow: var(--shadow-e2);
+}
+.hero .secondary:global(.action-control) { color: #17131e; background: #ffffff; border-color: #d9cce5; box-shadow: var(--shadow-e1); }
+.hero :is(.points, .services) { display: flex; flex-wrap: wrap; justify-content: center; padding: 0; list-style: none; }
+.hero .points { gap: 7px 16px; margin: 20px auto 0; }
+.points li { display: flex; align-items: center; gap: 5px; color: var(--hero-muted); font-size: 13px; line-height: 1.5; }
+.points svg { color: #047857; flex-shrink: 0; }
+.hero .services { gap: 6px 16px; max-width: 740px; margin: 22px auto 0; }
+.services li { color: var(--hero-muted); font-size: 13px; line-height: 1.5; }
+.hero .explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hero-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero :is(.primary, .secondary, .explore):focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: var(--focus-offset); }
+@media (hover: hover) and (pointer: fine) {
+  .hero .primary:global(.action-control):hover { color: var(--hero-on-action); background: var(--hero-action-hover); border-color: var(--hero-action-hover); }
+  .hero .secondary:global(.action-control):hover { color: #17131e; background: #f3eef8; }
+}
+@media (min-width: 701px) and (max-width: 1023px) {
+  .hero.hero { padding-bottom: 220px; }
+  .hero.hero > [aria-hidden="true"] { top: auto; bottom: 65px; height: 150px; transform: none; opacity: .65; }
+}
+@media (max-width: 700px) {
+  .hero.hero { min-height: 740px; padding-bottom: 180px; }
+  .hero .copy { width: calc(100% - 32px); padding-top: 30px; }
+  .hero .description { font-size: 14px; line-height: 1.6; margin-top: 16px; }
+  .hero .badge { font-size: 11px; margin-bottom: 18px !important; }
+  .hero .actions { gap: 10px; margin-top: 20px; }
+  .hero .actions > a { font-size: 14px; }
+  .hero .points { gap: 5px 12px; margin-top: 16px; }
+  .points li { font-size: 12px; }
+  .hero .services { gap: 5px 12px; margin-top: 16px; }
+  .services li { font-size: 12px; }
+  /* Reserve decoration below the copy instead of crossing labels or controls. */
+  .hero.hero > [aria-hidden="true"] { top: auto; bottom: 32px; height: 140px; transform: none; opacity: .65; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 2rem; }
+  .hero .actions > a { width: 100%; max-width: 288px; }
+}
+:global(.dark) .hero.hero {
+  --hero-ink: #f6f1fc;
+  --hero-muted: #d6cce2;
+  --hero-action: #bfdbfe;
+  --hero-on-action: #07101f;
+  --hero-action-hover: #dbeafe;
+  background: #171120;
+}
+:global(.dark) .hero .copy::before { opacity: .16; }
+:global(.dark) .hero .badge { background: #241b30; border-color: #463454; }
+:global(.dark) .hero .points svg { color: #6ee7b7; }
+@media (prefers-reduced-motion: reduce) {
+  .hero .copy { animation: none; }
+  .hero .actions > a { transition: none; }
+}

@@ -15,6 +15,7 @@ export function PageHero({
   title,
   description,
   aside,
+  beforeTitle,
   className,
   children,
 }: {
@@ -24,25 +25,31 @@ export function PageHero({
   description?: ReactNode;
   /** Optional content rendered to the right on large screens. */
   aside?: ReactNode;
+  /** Existing category, icon or publication badges above the title. */
+  beforeTitle?: ReactNode;
   className?: string;
   /** Optional content rendered under the heading (e.g. filter chips). */
   children?: ReactNode;
 }) {
   return (
     <header className={cn(styles.hero, className)} data-scroll-scene>
-      <div className={styles.art} aria-hidden="true"><span /><span /><span /></div>
+      <div className={styles.art} aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className={styles.inner}>
         <Breadcrumbs items={crumbs} />
-        <div
-          className={cn(
-            styles.heading,
-            Boolean(aside) && styles.withAside,
-          )}
-        >
-          <SectionHeader as="h1" eyebrow={eyebrow} title={title} description={description}>
-            {children}
-          </SectionHeader>
-          {aside ? <div className="lg:justify-self-end">{aside}</div> : null}
+        <div className={cn(styles.heading, Boolean(aside) && styles.withAside)}>
+          <div className={styles.copy}>
+            {beforeTitle ? <div className={styles.beforeTitle}>{beforeTitle}</div> : null}
+            {/* Keep page titles in normal text flow, including long CMS titles.
+                Per-word inline blocks can split under balanced wrapping. */}
+            <SectionHeader as="h1" eyebrow={eyebrow} title={<span>{title}</span>} description={description}>
+              {children}
+            </SectionHeader>
+          </div>
+          {aside ? <div className={styles.aside}>{aside}</div> : null}
         </div>
       </div>
     </header>

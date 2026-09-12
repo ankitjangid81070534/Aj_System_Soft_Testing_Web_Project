@@ -24,7 +24,7 @@ const INDUSTRIES = [
 
 export function Industries() {
   return (
-    <section className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
+    <section data-home-section="industries" className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
       <div
         aria-hidden="true"
         className="aurora aurora-c -right-40 top-10 -z-10 hidden h-96 w-96 lg:block"
@@ -37,7 +37,7 @@ export function Industries() {
           align="center"
         />
       </Reveal>
-      <div className="mt-12 grid grid-cols-1 gap-3.5 min-[360px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+      <div data-section-grid className="mt-12 grid grid-cols-1 gap-3.5 min-[360px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
         {INDUSTRIES.map(({ Icon, label }, index) => (
           <Reveal key={label} delay={index * 40} className="h-full">
             <div className="group card-3d flex h-full items-center gap-3.5 rounded-2xl p-4">

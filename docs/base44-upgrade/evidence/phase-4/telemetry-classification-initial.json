@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Eight desktop destinations and current states",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "paths": [
+        "/services",
+        "/projects",
+        "/ai-methods",
+        "/reviews",
+        "/about",
+        "/team",
+        "/contact",
+        "/"
+      ]
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "quoteForm": true,
+      "projects": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "quoteForm": true,
+      "projects": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Hero primary and secondary conversion links",
+    "width": 1214,
+    "pass": false,
+    "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     method: 'POST',\n+     url: 'https://pagead2.googlesyndication.com/pagead/ping?e=1'\n+   },\n+   {\n+     method: 'POST',\n+     url: 'https://pagead2.googlesyndication.com/pagead/ping?e=1'\n+   }\n+ ]\n- []\n",
+    "errors": [],
+    "writes": [
+      {
+        "method": "POST",
+        "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1"
+      },
+      {
+        "method": "POST",
+        "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1"
+      }
+    ]
+  },
+  {
+    "name": "Keyboard hero action and visible focus",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "href": "/request-quote",
+      "style": "solid",
+      "width": "3px"
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Service discovery anchor",
+    "width": 320,
+    "pass": true,
+    "detail": {
+      "hash": "#home-services",
+      "headingY": 114.890625
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Service discovery anchor",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "hash": "#home-services",
+      "headingY": 113.203125
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Desktop portal opens, discloses state, closes and restores focus",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "opened": true,
+      "closed": true,
+      "focusRestored": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "More menu to portal handoff and Escape",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "onlyOneModal": true,
+      "closed": true,
+      "focus": "More navigation options"
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "More menu to portal handoff and Escape",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "onlyOneModal": true,
+      "closed": true,
+      "focus": "More navigation options"
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Navigation search empty state, result and immediate route",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "emptyState": true,
+      "oneResult": true,
+      "routed": true,
+      "closed": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Header Start Project destination",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "quoteForm": true
+    },
+    "errors": [],
+    "writes": []
+  },
+  {
+    "name": "Dark theme restoration and hover hierarchy",
+    "width": 1214,
+    "pass": true,
+    "detail": {
+      "light": "rgb(29, 78, 216)",
+      "hover": "rgb(30, 64, 175)",
+      "dark": "rgb(191, 219, 254)",
+      "persisted": true
+    },
+    "errors": [],
+    "writes": []
+  }
+]

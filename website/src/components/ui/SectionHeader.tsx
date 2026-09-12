@@ -28,6 +28,7 @@ export function SectionHeader({
   };
   return (
     <div
+      data-section-heading
       className={cn(
         "flex flex-col gap-3.5",
         align === "center" && "items-center text-center",

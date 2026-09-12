@@ -1,0 +1,203 @@
+[
+  {
+    "name": "Service discovery and detail",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "href": "/services/custom-software-development",
+      "heading": "Custom Software Development"
+    }
+  },
+  {
+    "name": "All five delivery controls and keyboard activation",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "fiveDistinctDescriptions": true,
+      "keyboardSelection": true
+    }
+  },
+  {
+    "name": "Ownership services link",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "path": "/services"
+    }
+  },
+  {
+    "name": "Closing project enquiry action",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "form": true
+    }
+  },
+  {
+    "name": "Closing consultation action",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "path": "/contact"
+    }
+  },
+  {
+    "name": "Existing article card",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "href": "/blog/what-erp-digitization-actually-means-for-small-businesses"
+    }
+  },
+  {
+    "name": "Theme toggle preserves readable capability surfaces",
+    "width": 390,
+    "pass": true,
+    "detail": {
+      "color": "rgb(208, 198, 221)",
+      "size": "14px"
+    }
+  },
+  {
+    "name": "Runtime and mutation guard",
+    "width": 390,
+    "pass": true,
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Service discovery and detail",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "href": "/services/custom-software-development",
+      "heading": "Custom Software Development"
+    }
+  },
+  {
+    "name": "All five delivery controls and keyboard activation",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "fiveDistinctDescriptions": true,
+      "keyboardSelection": true
+    }
+  },
+  {
+    "name": "Ownership services link",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "path": "/services"
+    }
+  },
+  {
+    "name": "Closing project enquiry action",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "form": true
+    }
+  },
+  {
+    "name": "Closing consultation action",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "path": "/contact"
+    }
+  },
+  {
+    "name": "Existing article card",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "href": "/blog/what-erp-digitization-actually-means-for-small-businesses"
+    }
+  },
+  {
+    "name": "Theme toggle preserves readable capability surfaces",
+    "width": 919,
+    "pass": true,
+    "detail": {
+      "color": "rgb(208, 198, 221)",
+      "size": "16px"
+    }
+  },
+  {
+    "name": "Runtime and mutation guard",
+    "width": 919,
+    "pass": true,
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  },
+  {
+    "name": "Service discovery and detail",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "href": "/services/custom-software-development",
+      "heading": "Custom Software Development"
+    }
+  },
+  {
+    "name": "All five delivery controls and keyboard activation",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "fiveDistinctDescriptions": true,
+      "keyboardSelection": true
+    }
+  },
+  {
+    "name": "Ownership services link",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "path": "/services"
+    }
+  },
+  {
+    "name": "Closing project enquiry action",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "form": true
+    }
+  },
+  {
+    "name": "Closing consultation action",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "path": "/contact"
+    }
+  },
+  {
+    "name": "Existing article card",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "href": "/blog/what-erp-digitization-actually-means-for-small-businesses"
+    }
+  },
+  {
+    "name": "Theme toggle preserves readable capability surfaces",
+    "width": 1440,
+    "pass": true,
+    "detail": {
+      "color": "rgb(208, 198, 221)",
+      "size": "16px"
+    }
+  },
+  {
+    "name": "Runtime and mutation guard",
+    "width": 1440,
+    "pass": true,
+    "errors": [],
+    "writes": [],
+    "externalTelemetry": []
+  }
+]

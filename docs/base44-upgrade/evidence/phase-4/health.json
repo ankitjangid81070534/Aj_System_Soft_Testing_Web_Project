@@ -1,0 +1,10 @@
+{
+  "httpStatus": 200,
+  "heroPresent": true,
+  "mainChildren": 2,
+  "overlay": false,
+  "dialogsOpen": 0,
+  "path": "/",
+  "errors": [],
+  "failed": []
+}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { PageHero } from "@/components/site/PageHero";
 import { Button } from "@/components/ui/Button";
 import { ContactForm, AppointmentForm } from "@/components/site/LeadForms";
 import { buildRouteMetadata } from "@/lib/seo/metadata";
@@ -52,24 +51,18 @@ export default async function ContactPage() {
         })}
       />
 
+      <PageHero
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Contact", href: "/contact" },
+        ]}
+        eyebrow="Contact"
+        title="Tell us what you need built"
+        description="Send a message, request a consultation, or reach us directly — every genuine enquiry gets a reply."
+      />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
-        <Breadcrumbs
-          items={[
-            { name: "Home", href: "/" },
-            { name: "Contact", href: "/contact" },
-          ]}
-        />
-        <div className="mt-6 max-w-3xl">
-          <SectionHeader
-            as="h1"
-            eyebrow="Contact"
-            title="Tell us what you need built"
-            description="Send a message, request a consultation, or reach us directly — every genuine enquiry gets a reply."
-          />
-        </div>
-
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-start">
-          <div className="rounded-3xl border border-line bg-surface p-6 shadow-e1 sm:p-8">
+        <div className="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-start">
+          <div className="min-w-0 rounded-3xl border border-line bg-surface p-5 shadow-e1 sm:p-8">
             <h2 className="text-lg font-semibold tracking-tight text-ink">Send a message</h2>
             <p className="mt-1 mb-6 text-sm text-ink-muted">
               Brief is fine — we will ask the right follow-up questions.
@@ -77,7 +70,7 @@ export default async function ContactPage() {
             <ContactForm startedAt={startedAt} />
           </div>
 
-          <aside className="flex flex-col gap-4">
+          <aside className="flex min-w-0 flex-col gap-4 [overflow-wrap:anywhere]">
             <div className="rounded-2xl border border-line bg-surface p-5 shadow-e1">
               <h2 className="text-sm font-semibold text-ink">Direct contact</h2>
               <ul className="mt-3 flex flex-col gap-3 text-sm">
@@ -158,7 +151,7 @@ export default async function ContactPage() {
         </div>
 
         <section
-          className="mt-14 rounded-3xl border border-line bg-surface p-6 shadow-e1 sm:p-8"
+          className="mt-14 scroll-mt-28 rounded-3xl border border-line bg-surface p-6 shadow-e1 sm:p-8"
           aria-labelledby="consultation"
         >
           <h2 id="consultation" className="text-lg font-semibold tracking-tight text-ink">

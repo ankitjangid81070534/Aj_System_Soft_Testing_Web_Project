@@ -71,11 +71,19 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 308);
   }
 
-  // Transitional scaffold behaviour: Supabase arrives in Phase 2. Until the
-  // env values exist, the admin area stays reachable so the scaffold can be
-  // reviewed; Phase 2 turns this into a hard gate.
+  // Slugged public content needs the redirect map, not an Auth round trip.
+  // Keep existing account/admin/login session refresh behavior unchanged.
+  if (["/services", "/projects", "/blog"].some(
+    root => pathname === root || pathname.startsWith(`${root}/`),
+  )) return NextResponse.next();
+
+  // Public fallback pages intentionally work without Supabase. Only warn on
+  // protected routes where the missing configuration affects authentication.
+  // Preserve scaffold access here; server-side authorization remains unchanged.
   if (!isSupabaseConfigured || !supabasePublicEnv) {
-    console.warn("[ajadmin] Supabase not configured — admin auth check skipped until Phase 2.");
+    if (isAdminPath || isClientPath) {
+      console.warn("[auth] Supabase not configured — session checks unavailable for this protected route.");
+    }
     return NextResponse.next();
   }
 
@@ -130,5 +138,8 @@ export const config = {
     "/update-password",
     "/",
     "/ajadmin/:path*",
+    "/services/:path*",
+    "/projects/:path*",
+    "/blog/:path*",
   ],
 };

@@ -102,6 +102,7 @@ export function MarketingHeader({
         onClose={() => setMenuOpen(false)}
         onPortal={() => void openPortal()}
         authenticated={authenticated}
+        portalOpen={portalOpen}
         brandName={safeBrandName}
         ctaLabel={safeCtaLabel}
         ctaHref={safeCtaHref}

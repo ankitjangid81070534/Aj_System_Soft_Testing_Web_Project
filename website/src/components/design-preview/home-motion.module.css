@@ -1,0 +1,25 @@
+/* Motion only: no new geometry, colors, layout or content. The heading is never
+   hidden. Existing hero settle/orbit, reveals, card depth and CTA remain. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion :global([data-hero-entrance]) {
+    animation: settle-layer 520ms cubic-bezier(.16, 1, .3, 1) backwards;
+  }
+  .motion :global([data-hero-entrance="actions"]) { animation-delay: 70ms; }
+  .motion :global([data-hero-entrance="details"]) { animation-delay: 140ms; }
+  /* A focused control must not keep moving beneath keyboard/pointer users. */
+  .motion :global([data-hero-copy]:focus-within),
+  .motion :global([data-hero-copy]:focus-within [data-hero-entrance]) { animation: none; }
+}
+@keyframes settle-layer {
+  from { transform: translate3d(0, 8px, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+  .motion :global([data-hero-entrance]) { animation-duration: 320ms; animation-delay: 0ms; }
+  /* Keep the stage-change cue, but avoid a large perspective flight on phones. */
+  .motion :global([data-process-card]) { animation: compact-stage 320ms cubic-bezier(.16, 1, .3, 1) both; }
+}
+@keyframes compact-stage {
+  from { opacity: .65; transform: translate3d(0, 8px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}

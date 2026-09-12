@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { Camera, CheckCircle2, Save, Send, Star } from "lucide-react";
+import { Camera, Save, Send, Star } from "lucide-react";
 import {
   completeProfileAction,
   submitVerifiedReviewAction,
@@ -13,6 +13,9 @@ import { Button } from "@/components/ui/Button";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { AddressFields } from "@/components/portal/AuthForms";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
+
+import { PortalFeedback as FormFeedback } from "./PortalFeedback";
+import styles from "./portal-ui.module.css";
 
 const initialState: PortalActionState = { status: "idle" };
 
@@ -35,7 +38,7 @@ export type CompleteProfileDefaults = {
 export function CompleteProfileForm({ defaults }: { defaults: CompleteProfileDefaults }) {
   const [state, action, pending] = useActionState(completeProfileAction, initialState);
   return (
-    <form action={action} className="space-y-4">
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Full name" htmlFor="complete-name" required>
           <Input
@@ -76,29 +79,12 @@ export function CompleteProfileForm({ defaults }: { defaults: CompleteProfileDef
       </Field>
       <AddressFields prefix="complete" defaults={defaults} />
       <AgreementCheckbox id="complete-agreement" />
-      <FormFeedback state={state} />
+      <FormFeedback state={state} focusOnError />
       <Button type="submit" size="sm" loading={pending}>
         <Save aria-hidden="true" className="h-4 w-4" />
         {pending ? "Saving…" : "Complete profile"}
       </Button>
     </form>
-  );
-}
-
-function FormFeedback({ state }: { state: PortalActionState }) {
-  if (!state.message) return null;
-  return (
-    <p
-      role={state.status === "error" ? "alert" : "status"}
-      className={
-        state.status === "error"
-          ? "rounded-xl bg-danger-soft px-3.5 py-2.5 text-sm text-danger"
-          : "flex items-center gap-2 rounded-xl bg-success-soft px-3.5 py-2.5 text-sm text-success"
-      }
-    >
-      {state.status === "success" ? <CheckCircle2 aria-hidden="true" className="h-4 w-4" /> : null}
-      {state.message}
-    </p>
   );
 }
 
@@ -113,7 +99,7 @@ export function ProfileForm({
 }) {
   const [state, action, pending] = useActionState(updateProfileAction, initialState);
   return (
-    <form action={action} className="space-y-4">
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
       <Field label="Full name" htmlFor="profile-name" required>
         <Input
           id="profile-name"
@@ -145,7 +131,7 @@ export function ProfileForm({
           />
         </Field>
       </div>
-      <FormFeedback state={state} />
+      <FormFeedback state={state} focusOnError />
       <Button type="submit" size="sm" loading={pending}>
         <Save aria-hidden="true" className="h-4 w-4" />
         {pending ? "Saving…" : "Save profile"}
@@ -157,7 +143,7 @@ export function ProfileForm({
 export function AvatarForm() {
   const [state, action, pending] = useActionState(uploadAvatarAction, initialState);
   return (
-    <form action={action} className="space-y-3">
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-3`}>
       <Field
         label="Profile photo"
         htmlFor="profile-avatar"
@@ -169,10 +155,10 @@ export function AvatarForm() {
           type="file"
           accept="image/jpeg,image/png,image/webp,image/avif"
           required
-          className="block w-full rounded-xl border border-line bg-canvas px-3 py-2 text-xs text-ink-muted file:mr-3 file:rounded-full file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-brand-700"
+          className="focus-ring block min-w-0 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-xs text-ink-muted file:mr-3 file:rounded-full file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-brand-700"
         />
       </Field>
-      <FormFeedback state={state} />
+      <FormFeedback state={state} focusOnError />
       <Button type="submit" size="sm" variant="secondary" loading={pending}>
         <Camera aria-hidden="true" className="h-4 w-4" />
         {pending ? "Uploading…" : "Update photo"}
@@ -184,7 +170,7 @@ export function AvatarForm() {
 export function ReviewForm({ projects }: { projects: { id: string; name: string }[] }) {
   const [state, action, pending] = useActionState(submitVerifiedReviewAction, initialState);
   return (
-    <form action={action} className="space-y-4">
+    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Rating" htmlFor="review-rating" required>
           <Select id="review-rating" name="rating" defaultValue="5" required>
@@ -231,7 +217,7 @@ export function ReviewForm({ projects }: { projects: { id: string; name: string 
           rows={5}
         />
       </Field>
-      <FormFeedback state={state} />
+      <FormFeedback state={state} focusOnError />
       <Button type="submit" loading={pending}>
         <Star aria-hidden="true" className="h-4 w-4" />
         {pending ? "Submitting…" : "Post review"}

@@ -12,7 +12,7 @@ export function TeamSection({ members }: { members: TeamTeaser[] }) {
   if (members.length === 0) return null;
 
   return (
-    <section className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
+    <section data-home-section="team" className="relative mx-auto w-full max-w-content px-4 py-16 sm:px-6 sm:py-24">
       <div
         aria-hidden="true"
         className="aurora aurora-c -right-40 bottom-0 -z-10 hidden h-96 w-96 lg:block"

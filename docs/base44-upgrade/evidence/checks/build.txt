@@ -1,0 +1,55 @@
+
+> website@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.3.3 (webpack)
+✓ Running next.config.ts took 32ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+- Experiments (use with caution):
+  · optimizePackageImports
+
+  Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/app/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/app/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/app/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/tmp/phase0-production/src/components/design-preview/reference.module.css|rsc': No serializer registered for CssSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> CssSyntaxError
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/app/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/app/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/app/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/tmp/phase0-production/src/components/design-preview/reference.module.css|ssr': No serializer registered for CssSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> CssSyntaxError
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/app/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/app/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/app/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/tmp/phase0-production/src/components/ui/bottom-navigation.module.css|ssr': No serializer registered for CssSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> CssSyntaxError
+Failed to compile.
+
+./src/components/design-preview/reference.module.css:288:50
+Syntax error: Selector ":global(html:has([data-home-experience]))" is not pure (pure selectors must contain at least one local class or id)
+
+  286 |   .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  287 | }
+> 288 | @media (prefers-reduced-motion: no-preference) { :global(html:has([data-home-experience])) { scroll-behavior: smooth; } }
+      |                                                  ^
+  289 | 
+  290 | /* Reference choreography: light orbit → rotating dark panels → lit stage →
+
+./src/components/design-preview/reference.module.css:288:50
+Syntax error: Selector ":global(html:has([data-home-experience]))" is not pure (pure selectors must contain at least one local class or id)
+
+  286 |   .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  287 | }
+> 288 | @media (prefers-reduced-motion: no-preference) { :global(html:has([data-home-experience])) { scroll-behavior: smooth; } }
+      |                                                  ^
+  289 | 
+  290 | /* Reference choreography: light orbit → rotating dark panels → lit stage →
+
+./src/components/ui/bottom-navigation.module.css:123:1
+Syntax error: Selector ":global(html)" is not pure (pure selectors must contain at least one local class or id)
+
+  121 | .brandMark { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border: 1px solid var(--color-line); border-radius: 10px; font-size: 11px; }
+  122 | .shortName { display: none; }
+> 123 | :global(html) { scroll-padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
+      | ^
+  124 | :global(.dark) .dock, :global(.dark) .panel {
+  125 |   --dock-ink: #f4f4f4; --dock-muted: #b3b3b3; --dock-line: #393939; --dock-surface: #232323;
+
+
+> Build failed because of webpack errors

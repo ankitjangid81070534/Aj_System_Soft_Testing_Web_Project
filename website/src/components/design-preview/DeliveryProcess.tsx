@@ -38,7 +38,7 @@ export function DeliveryProcess() {
   const step = steps[active];
   const Icon = step.Icon;
   return (
-    <section ref={sectionRef} className={styles.processJourney} id="delivery" data-scroll-scene>
+    <section ref={sectionRef} className={styles.processJourney} id="delivery" data-home-section="delivery" data-scroll-scene>
       <div className={`${styles.section} ${styles.process}`}>
       <div className={styles.processArt} aria-hidden="true" data-home-reveal>
         <div className={styles.processRings} />
@@ -51,7 +51,7 @@ export function DeliveryProcess() {
         </div>
         <div className={styles.processBase} />
       </div>
-      <div className={styles.processCopy} data-home-reveal>
+      <div className={styles.processCopy} data-section-copy data-home-reveal>
         <p className={styles.eyebrow}>How we work</p>
         <h2 className={styles.processTitle}>From your requirement to a working product</h2>
         <p className={styles.processIntro}>A straightforward five-step delivery process — you always know what is happening and what comes next.</p>

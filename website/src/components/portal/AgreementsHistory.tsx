@@ -33,6 +33,7 @@ export function AgreementsHistory({
   return (
     <section
       id="agreements"
+      aria-labelledby="agreements-heading"
       className="mt-6 rounded-3xl border border-line bg-surface p-6 shadow-e2 sm:p-7"
     >
       <div className="flex flex-wrap items-end justify-between gap-3">
@@ -41,7 +42,7 @@ export function AgreementsHistory({
             <FileSignature aria-hidden="true" className="h-5 w-5" />
           </span>
           <div>
-            <h2 className="text-xl font-semibold text-ink">Agreements</h2>
+            <h2 id="agreements-heading" className="text-xl font-semibold text-ink">Agreements</h2>
             <p className="text-xs text-ink-muted">
               Every Service Agreement version you accepted, with date and context.
             </p>
@@ -57,8 +58,9 @@ export function AgreementsHistory({
       </div>
 
       {acceptances.length > 0 ? (
-        <div className="mt-5 overflow-hidden rounded-2xl border border-line">
-          <table className="w-full text-left text-sm">
+        <div role="region" aria-label="Accepted agreements" tabIndex={0} className="mt-5 overflow-x-auto rounded-2xl border border-line focus-ring">
+          <table className="w-full min-w-[32rem] text-left text-sm">
+            <caption className="sr-only">Agreement versions accepted by this account</caption>
             <thead className="bg-canvas text-xs uppercase tracking-wide text-ink-muted">
               <tr>
                 <th scope="col" className="px-4 py-2.5 font-medium">
