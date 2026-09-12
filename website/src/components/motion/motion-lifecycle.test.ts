@@ -8,6 +8,10 @@ const journey = readFileSync(new URL("../design-preview/ScrollJourney.tsx", impo
 const css = readFileSync(new URL("../design-preview/home-motion.module.css", import.meta.url), "utf8");
 
 describe("Phase 6 motion safeguards", () => {
+  it("declares smooth scrolling so route transitions can temporarily disable it", () => {
+    const layout = readFileSync(new URL("../../app/layout.tsx", import.meta.url), "utf8");
+    expect(layout).toMatch(/<html\b[^>]*data-scroll-behavior="smooth"/);
+  });
   it("keeps nested desktop word movement without a second opacity fade", () => {
     const frames = revealFrames("word", false, true);
     expect(frames.every(frame => frame.opacity === undefined)).toBe(true);

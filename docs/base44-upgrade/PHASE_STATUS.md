@@ -3,10 +3,10 @@
 CURRENT_PHASE: 8 — AUTH / CLIENT PORTAL UI + UX — UI IMPLEMENTED; AUTHENTICATED VERIFICATION DEFERRED
 LAST_COMPLETED_PHASE: 7 — public UI scope; Phase 1 remains INCOMPLETE / DEFERRED
 NEXT_PHASE: 9 — ADMIN UI / ADMIN FUNCTION QA; requires fresh authorization acknowledging the remaining Phase 8 checks
-LAST_COMMIT_HASH: bf40359d86
+LAST_COMMIT_HASH: 69878865ff
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated default production build passes; no deployment or release sign-off.
 
-The hash is the actual pre-edit HEAD for Phase 8. Base44 commits/pushes automatically at turn end; no post-turn hash is invented. No manual commit/push, branch switch, PR, merge or deployment.
+The hash is the actual pre-edit HEAD for the Phase 8 service-log follow-up. That follow-up fixed the smooth-scroll declaration warning: 295 tests, typecheck/lint and fresh iframe navigation/readiness checks pass with clean logs; the original Phase 8 verification below remains historical. See the follow-up section in PHASE_8_AUTH_PORTAL. Base44 commits/pushes automatically at turn end; no post-turn hash is invented. No manual commit/push, branch switch, PR, merge or deployment.
 
 ## Owner authorization / execution gate
 

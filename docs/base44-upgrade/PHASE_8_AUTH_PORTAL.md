@@ -60,3 +60,11 @@ Supabase/Resend configuration remains declined. No secrets generated/requested, 
 Phase 1 integration gates, Home Builder/hosted schema gaps, record-dependent public-page checks and production release gates remain deferred. Phase 9 requires fresh authorization with these limits acknowledged.
 
 Evidence: [index](evidence/phase-8/README.md).
+
+## Service-log follow-up — 2026-09-12, starting HEAD `69878865ff`
+
+The owner supplied accumulated errors from the preceding edit/test session. Fresh service logs and browser verification did not reproduce the CSS chunk rejection, closed-stream/BuilderBridge errors, or preview-origin rejection. The earlier `untrusted.invalid` rejection and aborted-fetch message were deliberate security/transport tests; production protections were not relaxed to suppress those logs.
+
+Fixed the remaining Next warning by declaring the existing smooth-scroll behavior with `data-scroll-behavior="smooth"` on the root HTML element. This lets Next temporarily disable smooth scrolling during route transitions, without removing anchor scrolling or reduced-motion CSS. Added a regression contract.
+
+Actual iframe gestures PASS: Forgot password → recovery form → Back to sign in, followed by Google readiness → the real unconfigured-portal message. No browser errors, warnings, failed requests, overlay or empty main. Fresh service logs show GETs and the readiness POST returning 200, without new errors. **35 files / 295 tests**, typecheck, lint and whitespace PASS. No production build rerun for this attribute-only follow-up; the earlier build remains historical evidence. Successful authentication remains deferred, and Phase 9 is still untouched.
