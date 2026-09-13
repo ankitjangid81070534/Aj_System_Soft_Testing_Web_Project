@@ -1,17 +1,29 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 12 — CONTENT SEO / BUYER INTENT — EXISTING-SOURCE CONTENT COMPLETE (verification limits below)
-LAST_COMPLETED_PHASE: 12 — scoped public content; earlier Phase 1/8/9 authenticated gates remain INCOMPLETE / DEFERRED, not contiguous full release sign-off
-NEXT_PHASE: 13 — performance / Core Web Vitals; STOP pending `START NEXT PHASE SAFELY`; navbar work EXCLUDED
-FILES_CHANGED_LAST_PHASE: website/src/lib/data/blog-fallback.ts; services-fallback.ts; services.test.ts; buyer-intent-content.test.ts (last three relative to website/src/lib/data); AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; SEO_KEYWORD_MAP.md; PHASE_12_CONTENT_SEO.md; evidence/phase12-verification.json; evidence/phase12-browser.json; evidence/phase12-production.json (unqualified docs paths under docs/base44-upgrade)
-TESTS_LAST_PHASE: PASS — 392 tests / 45 files, typecheck, lint, isolated production build, whitespace; 102 independent Chromium assertions at 390/919/1440px; 6 production HTTP/server-content/H1/noindex checks; original content/metadata preservation and unchanged 5000-query corpus/source excerpts. User-preview and visual review UNVERIFIED.
-KNOWN_RISKS: CMS-owned slugs retain their managed copy; this phase edits existing default content only. Independent browser checks are not a user-iframe visual pass. No observed query demand or field CWV measurement. Prior private/release gates remain deferred.
-BLOCKERS: No blocker for scoped default-content completion. User-preview unavailable (iframe did not respond, then no browser tab); authenticated integration/configuration/test-session gates remain unchanged. No production deployment or Search Console access.
-APPROVALS_NEEDED: Separate continuation before Phase 13; new routes, CMS publication/data writes and unverified business claims need review. Owner requests PR alongside each phase, not direct main edits. Latest instruction EXCLUDES navbar work and supersedes queued Privacy/Disclaimer placement; do not resume it automatically.
-LAST_COMMIT_HASH: db04052b0aa8ac720ac9e69699db272f16b34898 (actual pre-edit HEAD; resulting commit managed by platform)
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Isolated production build/smoke passed, NOT a deployment or published-domain/field-performance sign-off.
+CURRENT_PHASE: 13 — PERFORMANCE / CORE WEB VITALS — SCOPED OPTIMIZATION + LOCAL MEASUREMENT COMPLETE
+LAST_COMPLETED_PHASE: 13 — scoped code/local lab work; field performance, complete visual review and prior Phase 1/8/9 authenticated gates remain DEFERRED, not full release sign-off
+NEXT_PHASE: 14 — responsive / all screen sizes; STOP pending owner continuation; navbar work remains EXCLUDED
+FILES_CHANGED_LAST_PHASE: website/src/lib/data/blog.ts; blog-performance.test.ts (relative to that data directory); website/src/app/(public)/blog/[slug]/page.tsx; article-performance.test.ts (same route directory); website/src/components/site/BlogPreviewSection.tsx; GallerySection.tsx; image-delivery.test.ts (same site directory); website/src/components/ui/ProjectCard.tsx; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; PHASE_13_PERFORMANCE.md; evidence/phase13-before-lab.json; evidence/phase13-after-lab.json; evidence/phase13-verification.json; evidence/phase13-production.json (unqualified docs paths under docs/base44-upgrade)
+TESTS_LAST_PHASE: PASS — 403 tests / 48 files, typecheck, lint, isolated production build, whitespace; 18 before/after production-homepage lab runs at 390/919/1440px; 6 production-built route checks; real live-preview article/anchor/service/FAQ/home gestures. Lab timings mixed, CLS unchanged; no field-CWV speedup claim.
+KNOWN_RISKS: Configured-CMS query/media benefits cannot be measured with absent Supabase credentials. Optional media tests use unit fixtures, not published data. Complete post-change visual review and field INP/LCP/CLS are not passed. Existing remote/authenticated gates remain deferred.
+BLOCKERS: No blocker for scoped source optimization. Real CMS/database access, published-domain performance and complete visual sign-off remain unavailable; final screenshot was blocked by preview-call budget. App is healthy; completed-source logs/tests are clean.
+APPROVALS_NEEDED: Owner continuation before Phase 14. Remote CMS/data/schema changes, production publishing and navbar changes require separate authorization. Standing PR-per-phase request remains; never direct main edits or automatic merges.
+LAST_COMMIT_HASH: 9f4dfb9d96 (actual pre-edit HEAD prefix; full hash in phase13-verification.json; resulting commit managed by platform)
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Local production build/lab checks are NOT deployment, field CWV or ranking evidence.
 
-## Current Phase 12 result — authoritative over historical gates below
+## Current Phase 13 result — authoritative over historical gates below
+
+Owner said **“continue”**. See [PHASE_13_PERFORMANCE](PHASE_13_PERFORMANCE.md). Tightened blog projections without removing reading-time inputs; ran independent article/recent and tags/author reads concurrently; made below-fold galleries lazy and capped wide-screen teaser/gallery image size hints. Preserved publication/draft behavior, authorship fallbacks, 404s, original content, routes, image frames/priority, cache/RLS boundaries, AdSense/auth and dependencies. **No navbar/layout/CSS change.**
+
+Actual measured homepage LCP is `h1#home-hero-title`, server-rendered without animation delay, with one self-hosted font request. At 390/919/1440px, three cold-cache production runs per revision yielded before→after LCP medians **1.608→1.536s / 1.600→1.616s / 1.692→1.772s**. CLS is identical across revisions. Timings are mixed; no causal speedup/INP/field-CWV pass is claimed. The targeted CMS paths have mocked concurrency/projection/image tests; no remote records were changed.
+
+Fresh **403 tests / 48 files**, typecheck, lint, isolated build and six production route checks pass. Real live iframe blog/article/contents/service/FAQ/home gestures pass; final runtime checks show no current errors, failed requests or overlay. Baseline tablet hero and post-change footer captures were reviewed; complete visual after-review remains unverified due to the preview budget. The brief mid-edit duplicate declaration was removed before final tests/build; historical logs do not indicate a current failure.
+
+**STOP before Phase 14.** No merge, deployment, manual commit/push, branch switch or automatic navbar task performed.
+
+---
+
+## Historical Phase 12 result — superseded by Phase 13 above
 
 Owner authorized **“START NEXT PHASE NAVBAR OPTION VALA WORK MT KRNA OK PHASE WALA WORK KRO SAFLY”**: only Phase 12, explicitly **no navbar work**. See [PHASE_12_CONTENT_SEO](PHASE_12_CONTENT_SEO.md).
 

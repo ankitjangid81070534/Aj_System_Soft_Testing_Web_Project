@@ -1,0 +1,607 @@
+{
+  "mode": "Sandbox production lab, not field Core Web Vitals",
+  "conditions": {
+    "cpuSlowdown": 4,
+    "latencyMs": 40,
+    "downloadBytesPerSecond": 200000,
+    "coldBrowserCache": true,
+    "observationAfterLoadMs": 5000,
+    "thirdPartyScripts": "unchanged, not blocked"
+  },
+  "results": [
+    {
+      "width": 390,
+      "run": 1,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1656,
+          "size": 24016,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2616.199999999255,
+          "value": 0.0023664824707185818
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1006.6999999992549,
+          "duration": 559
+        },
+        {
+          "time": 2684.899999999441,
+          "duration": 178
+        },
+        {
+          "time": 2924.5,
+          "duration": 218
+        },
+        {
+          "time": 3596.5999999996275,
+          "duration": 200
+        },
+        {
+          "time": 4319.899999999441,
+          "duration": 230
+        },
+        {
+          "time": 4642.5,
+          "duration": 51
+        },
+        {
+          "time": 4805.699999999255,
+          "duration": 54
+        },
+        {
+          "time": 4899,
+          "duration": 50
+        },
+        {
+          "time": 5284.299999999814,
+          "duration": 52
+        }
+      ],
+      "cls": 0.0023664824707185818,
+      "ttfb": 11.399999999441206,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1536,
+          "size": 24016,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2598.4000000003725,
+          "value": 0.0023664824707185818
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1007.9000000003725,
+          "duration": 441
+        },
+        {
+          "time": 2661.7000000001863,
+          "duration": 163
+        },
+        {
+          "time": 2907.800000000745,
+          "duration": 210
+        },
+        {
+          "time": 3586.7000000001863,
+          "duration": 211
+        },
+        {
+          "time": 4284.700000000186,
+          "duration": 202
+        },
+        {
+          "time": 4741.800000000745,
+          "duration": 58
+        }
+      ],
+      "cls": 0.0023664824707185818,
+      "ttfb": 8.300000000745058,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1532,
+          "size": 24016,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2601.600000000559,
+          "value": 0.0023664824707185818
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1006.4000000003725,
+          "duration": 444
+        },
+        {
+          "time": 2749,
+          "duration": 151
+        },
+        {
+          "time": 2941.5,
+          "duration": 197
+        },
+        {
+          "time": 3553.7000000001863,
+          "duration": 194
+        },
+        {
+          "time": 4234.800000000745,
+          "duration": 52
+        },
+        {
+          "time": 4359.100000000559,
+          "duration": 185
+        },
+        {
+          "time": 5191.5,
+          "duration": 54
+        }
+      ],
+      "cls": 0.0023664824707185818,
+      "ttfb": 10.800000000745058,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 919,
+      "run": 1,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1596,
+          "size": 41912,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2651,
+          "value": 0.003844530044471493
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 997.7000000001863,
+          "duration": 463
+        },
+        {
+          "time": 2955.800000000745,
+          "duration": 201
+        },
+        {
+          "time": 3481.300000000745,
+          "duration": 219
+        },
+        {
+          "time": 3736,
+          "duration": 141
+        },
+        {
+          "time": 4497.4000000003725,
+          "duration": 55
+        },
+        {
+          "time": 4555.300000000745,
+          "duration": 60
+        },
+        {
+          "time": 5238.4000000003725,
+          "duration": 209
+        }
+      ],
+      "cls": 0.003844530044471493,
+      "ttfb": 10.200000000186265,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 919,
+      "run": 2,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1616,
+          "size": 41912,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2621.7999999998137,
+          "value": 0.003844530044471493
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1021.7000000001863,
+          "duration": 466
+        },
+        {
+          "time": 2735.600000000559,
+          "duration": 195
+        },
+        {
+          "time": 3004.5,
+          "duration": 197
+        },
+        {
+          "time": 3537.7999999998137,
+          "duration": 201
+        },
+        {
+          "time": 4334.9000000003725,
+          "duration": 250
+        },
+        {
+          "time": 4966.200000000186,
+          "duration": 56
+        },
+        {
+          "time": 5027,
+          "duration": 56
+        },
+        {
+          "time": 5129.200000000186,
+          "duration": 60
+        },
+        {
+          "time": 5388.100000000559,
+          "duration": 78
+        },
+        {
+          "time": 5513,
+          "duration": 50
+        },
+        {
+          "time": 5603.799999999814,
+          "duration": 57
+        }
+      ],
+      "cls": 0.003844530044471493,
+      "ttfb": 7.7000000001862645,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 919,
+      "run": 3,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1704,
+          "size": 41912,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2671.4000000003725,
+          "value": 0.003844530044471493
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 998.7000000001863,
+          "duration": 570
+        },
+        {
+          "time": 2939.2000000001863,
+          "duration": 239
+        },
+        {
+          "time": 3449.600000000559,
+          "duration": 216
+        },
+        {
+          "time": 3709.100000000559,
+          "duration": 149
+        },
+        {
+          "time": 4601,
+          "duration": 55
+        },
+        {
+          "time": 4671.9000000003725,
+          "duration": 56
+        },
+        {
+          "time": 4792.5,
+          "duration": 62
+        },
+        {
+          "time": 4866,
+          "duration": 63
+        },
+        {
+          "time": 5008.300000000745,
+          "duration": 219
+        },
+        {
+          "time": 5227.800000000745,
+          "duration": 55
+        },
+        {
+          "time": 5326.4000000003725,
+          "duration": 56
+        },
+        {
+          "time": 5427.5,
+          "duration": 50
+        },
+        {
+          "time": 5510.600000000559,
+          "duration": 51
+        },
+        {
+          "time": 5588.700000000186,
+          "duration": 58
+        },
+        {
+          "time": 5706.200000000186,
+          "duration": 55
+        },
+        {
+          "time": 5856.100000000559,
+          "duration": 50
+        }
+      ],
+      "cls": 0.003844530044471493,
+      "ttfb": 7.6000000005587935,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1772,
+          "size": 103320,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2645.0999999996275,
+          "value": 0.0037893681278935187
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1007.2000000001863,
+          "duration": 558
+        },
+        {
+          "time": 2698.0999999996275,
+          "duration": 299
+        },
+        {
+          "time": 3107.399999999441,
+          "duration": 225
+        },
+        {
+          "time": 3571.5999999996275,
+          "duration": 215
+        },
+        {
+          "time": 4105.899999999441,
+          "duration": 58
+        },
+        {
+          "time": 4243.5999999996275,
+          "duration": 55
+        },
+        {
+          "time": 4322.5,
+          "duration": 64
+        },
+        {
+          "time": 4405.799999999814,
+          "duration": 385
+        },
+        {
+          "time": 5596.799999999814,
+          "duration": 51
+        }
+      ],
+      "cls": 0.0037893681278935187,
+      "ttfb": 7.3999999994412065,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1784,
+          "size": 103320,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2694.5,
+          "value": 0.0037893681278935187
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 992.3999999994412,
+          "duration": 572
+        },
+        {
+          "time": 2748.5,
+          "duration": 288
+        },
+        {
+          "time": 3104.399999999441,
+          "duration": 225
+        },
+        {
+          "time": 3516.5,
+          "duration": 232
+        },
+        {
+          "time": 4259.899999999441,
+          "duration": 57
+        },
+        {
+          "time": 4326.700000000186,
+          "duration": 68
+        },
+        {
+          "time": 4436.200000000186,
+          "duration": 358
+        },
+        {
+          "time": 5629,
+          "duration": 59
+        }
+      ],
+      "cls": 0.0037893681278935187,
+      "ttfb": 11.599999999627471,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "run": 3,
+      "status": 200,
+      "errors": [],
+      "lcp": [
+        {
+          "time": 1680,
+          "size": 103320,
+          "tag": "H1",
+          "id": "home-hero-title",
+          "text": "Software built aroundyour requirements."
+        }
+      ],
+      "shifts": [
+        {
+          "time": 2652.2999999998137,
+          "value": 0.0037893681278935187
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1008,
+          "duration": 468
+        },
+        {
+          "time": 2697.4000000003725,
+          "duration": 281
+        },
+        {
+          "time": 3063.0999999996275,
+          "duration": 225
+        },
+        {
+          "time": 3530.0999999996275,
+          "duration": 212
+        },
+        {
+          "time": 4186.4000000003725,
+          "duration": 55
+        },
+        {
+          "time": 4263.200000000186,
+          "duration": 52
+        },
+        {
+          "time": 4347.5999999996275,
+          "duration": 330
+        },
+        {
+          "time": 5455.299999999814,
+          "duration": 53
+        }
+      ],
+      "cls": 0.0037893681278935187,
+      "ttfb": 9.299999999813735,
+      "fonts": 1,
+      "jsBytes": 363785,
+      "adsScripts": 1,
+      "heroAnimation": "none",
+      "overflow": false
+    }
+  ]
+}

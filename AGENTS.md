@@ -1,6 +1,14 @@
 # Base44 Dev Environment
 
-## Current Phase 12 content checkpoint (2026-09-12)
+## Current Phase 13 performance checkpoint (2026-09-13)
+- Read `PHASE_STATUS.md` and `PHASE_13_PERFORMANCE.md` first. Phase 13 scoped source/lab work is complete; stop before Phase 14 pending owner continuation. Navbar remains excluded.
+- Blog query projections must retain `content` for reading-time fallback and both author/creator IDs for detail authorship. Tags/author and article/recent reads are independent; unit tests hold responses until both start. Never turn these into cross-user caches or change public/admin client boundaries.
+- About/Team galleries are below-fold/native-lazy. Gallery, homepage blog and project-card image hints cap at 384px in the existing 1216px three-column containers; frame CSS, high-DPR source selection and priority flags are unchanged.
+- Fresh 403 tests / 48 files, typecheck, lint, isolated build, 18 controlled production-homepage runs and six production routes pass. Raw evidence is `evidence/phase13-*.json`; mixed timings are NOT a homepage speedup/field-CWV claim. Supabase remains unconfigured, so database/media improvements have unit—not remote—verification.
+- Live real blog/article/anchor/service/FAQ/home clicks pass; runtime after completed edits is clean. Preview `navigate()` can change URL without rendering; recover via real site links, not an app router patch. Baseline hero and after-footer captures were reviewed, but final hero capture hit the preview budget; no complete visual pass. Earlier private gates remain deferred.
+- Source-mounted dev server was not replaced by production tests. One-off lab scripts/builds remain in `/tmp`; no ads were blocked, credentials exposed, data seeded, navbar changed, or production deployed. Standing managed PR-per-phase flow remains.
+
+## Historical Phase 12 content checkpoint (2026-09-12)
 - Read current `PHASE_STATUS.md` and `PHASE_12_CONTENT_SEO.md`. Owner explicitly EXCLUDED navbar work; the older Privacy/Disclaimer navigation task is superseded, not queued for automatic execution. Stop before Phase 13 pending continuation.
 - Existing default content only: seven buyer FAQs across three services, plus three expanded guides with contextual existing-route links. CMS precedence and loaders are unchanged; managed records are not overwritten. Original copy/metadata/dates are preserved. No nav/layout/CSS/auth/API/config/schema/dependency changes.
 - Fresh 392 tests / 45 files, typecheck, lint, isolated production build, 102 independent Chromium assertions at 390/919/1440px and six production-built route checks pass. See `evidence/phase12-*.json`. Iframe unavailable/no tab means user-preview and visual review are NOT passed; independent DOM fit is not screenshot sign-off.

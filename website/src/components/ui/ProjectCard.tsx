@@ -49,7 +49,7 @@ export function ProjectCard({
             alt={`${name} — project preview`}
             fill
             priority={priority}
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            sizes="(min-width: 1216px) 384px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover object-top transition-transform duration-500 ease-soft group-hover:scale-[1.04]"
           />
         ) : (

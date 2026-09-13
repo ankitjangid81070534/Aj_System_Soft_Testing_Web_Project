@@ -23,8 +23,8 @@ export function GallerySection({ content }: { content: GalleryContent }) {
                     src={image.url}
                     alt={image.alt || `Gallery image ${index + 1}`}
                     fill
-                    loading={index < 3 ? "eager" : "lazy"}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 50vw"
+                    loading="lazy"
+                    sizes="(min-width: 1216px) 384px, (min-width: 1024px) 33vw, 50vw"
                     className="object-cover transition-transform duration-300 ease-soft group-hover:scale-[1.03]"
                   />
                 </div>
