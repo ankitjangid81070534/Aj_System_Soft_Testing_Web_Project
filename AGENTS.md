@@ -1,6 +1,14 @@
 # Base44 Dev Environment
 
-## Current Phase 14 recovery checkpoint (2026-09-13)
+## Current Phase 15 checkpoint (2026-09-13 UTC)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md` first. Phase 15 scoped work complete; STOP before Phase 16. The earlier navbar exclusion is superseded: Privacy/Disclaimer links are now implemented.
+- Legal links supplement—not overwrite—CMS navigation. Keep them in mobile More even with fewer than four main CMS links. Desktop legal links sit under the brand within the existing top navbar; central nav/portal/CTA are preserved.
+- Toast container needs its nameable `region` role; polite delivery is unchanged. Desktop accent mixes 40% dark to pass measured dark-theme eyebrow/CTA contrast. Do not weaken headers/auth or add a heavy library for this.
+- Final 415 tests, typecheck/lint/build, 60+9 automated scans and 73 real gestures pass. Evaluate an active native dialog after finite transitions settle; its background is inert. Keep incomplete/initial results in evidence—zero automated violations is not full conformance.
+- Current iframe clicks/focus pass; post-change screenshot is NOT verified (hidden preview). Prior buffered hydration warning, native/manual/private/remote integration gates remain deferred. Retention/consent/logging promises require owner operational confirmation.
+- Production HTTP 200 may contain a streamed redirect: `/ajadmin/users` resolves to `/ajadmin/login` in a real browser. Unconfigured dashboard/account notices are not authenticated tests. Build with production NODE_ENV in `/tmp`; axe-core is temporary tooling, not an application dependency. Managed PR flow; no main edit/merge/deploy.
+
+## Historical Phase 14 recovery checkpoint (2026-09-13)
 - Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_14_RECOVERY.md` first. Missing `d5be8b3` patch restored from `origin/system-upgrade-init`; other fetched feature tips already belonged to main. Do not indiscriminately merge/delete branches or edit main. Managed PR flow only.
 - Phase 14 scoped recovery complete, not visual/native/private release sign-off. Fresh 405 tests, typecheck, lint, production build, 760 route-size cases and 20 gestures pass. Live iframe Home → Privacy gesture also passes; screenshot is UNVERIFIED because panel is hidden, and older buffered hydration warning is not diagnosed.
 - Next is Phase 15 only after continuation. Owner now explicitly requests existing Privacy/Disclaimer links in desktop top nav and mobile More; this supersedes all historical navbar exclusions. No navbar edit in recovery.

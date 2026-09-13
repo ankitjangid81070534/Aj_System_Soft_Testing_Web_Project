@@ -1,0 +1,119 @@
+{
+  "at": "2026-09-13T18:44:18.908Z",
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "path": "/privacy",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "path": "/disclaimer",
+      "visibleFits": true,
+      "arrived": true,
+      "dialogsClosed": true,
+      "overflow": false
+    }
+  ],
+  "guard": {
+    "requested": "/ajadmin/users",
+    "actual": "/ajadmin/login",
+    "heading": "Staff Administration",
+    "userForms": 0
+  }
+}

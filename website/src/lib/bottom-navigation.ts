@@ -1,4 +1,5 @@
 import type { PublicNavLink } from "./data/navigation";
+import { isLegalNavigationLink } from "./navigation";
 
 const preferredRoutes = ["/", "/services", "/projects", "/contact"];
 
@@ -8,7 +9,8 @@ export function splitNavigation(links: readonly PublicNavLink[]) {
     const link = links.find(item => item.href === href);
     return link ? [link] : [];
   });
-  const remaining = links.filter(link => !preferred.includes(link));
+  // Legal pages belong in More even when a CMS supplies fewer than four main links.
+  const remaining = links.filter(link => !preferred.includes(link) && !isLegalNavigationLink(link.href));
   const primary = [...preferred, ...remaining].slice(0, 4);
   return { primary, overflow: links.filter(link => !primary.includes(link)) };
 }

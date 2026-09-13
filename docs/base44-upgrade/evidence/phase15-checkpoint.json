@@ -1,0 +1,50 @@
+{
+  "at": "2026-09-13T18:44:13.131Z",
+  "starting_head": "f995cddf7283b0928e8f88b604c47600b91d2fa8",
+  "phase": 15,
+  "scope": "Scoped accessibility, legal navigation, security/trust source/local audit; not full release sign-off",
+  "checks": {
+    "tests": 415,
+    "test_files": 51,
+    "typecheck": "pass",
+    "lint": "pass",
+    "isolated_production_build": "pass",
+    "final_automated_accessibility_scans": 60,
+    "supplementary_resting_state_scans": 9,
+    "final_reported_violations": 0,
+    "interaction_assertions": 73,
+    "live_iframe": "More Privacy/Disclaimer gestures, close focus restoration, return Home passed; no new runtime errors or failed requests",
+    "visual": "UNVERIFIED \u2014 post-change screenshot iframe_hidden",
+    "dependency_audit_production_advisories": 0
+  },
+  "source_sha256": {
+    "website/src/lib/navigation.ts": "8321e8282585b1c0426f6684f1d38a2d37b7c1cb95a53ef2e7dd4472f5a8ce45",
+    "website/src/lib/bottom-navigation.ts": "48ce653780d32ab175e273755712772870d3afdc76603a3908b8035e67cf8434",
+    "website/src/components/ui/BottomNavigation.tsx": "49bf73bcb72c07e39a384acce0ecc37602ec1970843fec506fe9e5c1270f4ed0",
+    "website/src/components/ui/bottom-navigation.module.css": "b4b296526d164c0727fd438769deb89bc21e5d14f0e2879c886b86eea23da22b",
+    "website/src/components/ui/Toast.tsx": "d1837f495fc5061791b8b165dd4c5abad4dc5ee70dbc47c143bdb1890032d533",
+    "website/src/components/ui/phase15-accessibility.test.ts": "d160398584ff21d4ffe01b1754c3eb53f2666ac4516a7a2f11f409603a70e6af",
+    "website/src/lib/phase15-security.test.ts": "1bffe82a7be64815b713d9c00df0576c3c4ccbb6efe82047269a28ed327b4057"
+  },
+  "preserved_sha256": {
+    "website/next.config.ts": "d71791d04e2402a461fb4cc741eda173cd8feb2096a5d0878517317836c1587d",
+    "website/package.json": "7506f4e3474078393e9969b40ebcc4a14d7c282e2af5b0fbc4aff6080fde6a4e",
+    "website/package-lock.json": "ee3296ab138403efe846f0dfe3ad2a571ecb7cdcc1b16c33cbdf51af09a2b08c",
+    "website/src/app/(public)/privacy/page.tsx": "8b649c4fb2d711f1dae42a5ec608c4360427948fed19a9b21616ce1f1f7ba2b4",
+    "website/src/app/(public)/disclaimer/page.tsx": "4dfd8269166185d71a0b869a7d5d99e4ee5c6ffd8fa9c3d5c45b99d15c17c466",
+    "docs/base44-upgrade/seo-keywords-5000.csv": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0"
+  },
+  "deferred": [
+    "post-change visual screenshots",
+    "manual screen-reader and incomplete contrast review",
+    "native zoom/physical devices/non-Chromium",
+    "authenticated portal/admin and populated CMS",
+    "remote RLS/CRUD/OAuth/email",
+    "owner confirmation of retention/consent/logging promises",
+    "earlier buffered iframe hydration warning diagnosis"
+  ],
+  "phase16_started": false,
+  "published": false,
+  "remote_data_writes": false,
+  "dependencies_added_to_app": false
+}

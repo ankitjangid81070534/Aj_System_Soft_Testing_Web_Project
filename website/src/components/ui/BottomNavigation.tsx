@@ -12,6 +12,7 @@ import { Button } from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
 import { NavBar, type NavItem } from "./tubelight-navbar";
 import { isNavigationActive, splitNavigation } from "@/lib/bottom-navigation";
+import { isLegalNavigationLink, withLegalNavigation } from "@/lib/navigation";
 import styles from "./bottom-navigation.module.css";
 
 const icons: Record<string, typeof House> = {
@@ -40,7 +41,10 @@ export function BottomNavigation({
     "aria-expanded": portalOpen,
     "aria-controls": portalOpen ? "portal-login-dialog" : undefined,
   };
-  const { primary, overflow } = splitNavigation(navLinks);
+  const links = withLegalNavigation(navLinks);
+  const legalLinks = links.filter(link => isLegalNavigationLink(link.href));
+  const desktopLinks = links.filter(link => !isLegalNavigationLink(link.href));
+  const { primary, overflow } = splitNavigation(links);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const moreRef = useRef<HTMLButtonElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -55,7 +59,7 @@ export function BottomNavigation({
     if (dialogRef.current?.open) searchRef.current?.focus();
   }, [onOpen]);
   const menuLinks = query.trim()
-    ? navLinks.filter(link => link.label.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()))
+    ? links.filter(link => link.label.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()))
     : overflow;
 
   useEffect(() => {
@@ -142,13 +146,23 @@ export function BottomNavigation({
   return (
     <>
       <nav aria-label="Main" className={styles.dock} data-bottom-navigation data-scrolled={scrolled || undefined}>
-        <Link href="/" className={styles.dockBrand} aria-label={`${brandName} — home`}>
-          <span className={styles.dockMark} aria-hidden="true">AJ<span /></span>
-          <span className={styles.dockBrandCopy}>{brandName}<small>DESIGN. BUILD. EVOLVE.</small></span>
-        </Link>
+        <div className={styles.dockIdentity}>
+          <Link href="/" className={styles.dockBrand} aria-label={`${brandName} — home`}>
+            <span className={styles.dockMark} aria-hidden="true">AJ<span /></span>
+            <span className={styles.dockBrandCopy}>{brandName}<small>DESIGN. BUILD. EVOLVE.</small></span>
+          </Link>
+          <div className={styles.legalLinks} data-legal-navigation>
+            {legalLinks.map(link => (
+              <Link key={link.href} href={link.href}
+                aria-current={isNavigationActive(pathname, link.href) ? "page" : undefined}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
         <NavBar items={tubelightItems} activeUrl={activeUrl} embedded
           className={styles.linkGroup} renderItem={renderNavItem} />
-        <NavBar items={navLinks.map(toNavItem)} embedded
+        <NavBar items={desktopLinks.map(toNavItem)} embedded
           className={styles.desktopLinks} renderItem={renderNavItem} />
         <div className={styles.dockActions}>
           <button type="button" className={styles.accountTrigger} onClick={onPortal} {...portalDisclosure}>

@@ -1,17 +1,27 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 14 — INTERRUPTED BRANCH RECOVERY + FRESH RESPONSIVE VERIFICATION — scoped recovery complete; outstanding gates below are not passed
-LAST_COMPLETED_PHASE: 14 — scoped presentation fixes/anonymous audit recovered from d5be8b3; full visual/native-device/private sign-off remains deferred
-NEXT_PHASE: 15 — accessibility + security + trust, with owner-authorized existing Privacy/Disclaimer links in desktop top navigation and mobile More; STOP pending START NEXT PHASE SAFELY
-FILES_CHANGED_LAST_PHASE: website/src/app/(public)/privacy/page.tsx; website/src/components/portal/AuthCard.tsx; website/src/components/portal/responsive-layout.test.ts; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; PHASE_14_RESPONSIVE.md; PHASE_14_RECOVERY.md; evidence/phase14-before-layout.json; evidence/phase14-after-layout.json; evidence/phase14-interactions.json; evidence/phase14-final.json; evidence/phase14-verification.json; evidence/phase14-recovery-browser.json; evidence/phase14-recovery-checkpoint.json (unqualified docs paths under docs/base44-upgrade)
-TESTS_LAST_PHASE: PASS — 405 tests / 49 files, typecheck, lint, isolated production build with production NODE_ENV, whitespace; fresh 760 route-size cases, 20 independent gesture assertions, 2 production geometry routes; localhost/public-proxy and live-iframe footer Privacy navigation. Visual screenshots NOT verified.
-KNOWN_RISKS: Native browser/OS scaling, physical devices, non-Chromium browsers, populated CMS, authenticated portal/admin and remote persistence remain unverified. Earlier buffered iframe hydration warning/AdSense load error is not diagnosed; fresh localhost/public-proxy consoles and live gesture checks are clean.
-BLOCKERS: Post-change screenshot review blocked by hidden/zero-size preview panel; open preview for visual sign-off. Supabase/email credentials absent; earlier private gates remain deferred. No boot or scoped source-test blocker.
-APPROVALS_NEEDED: Next-phase command; secure credentials/test-account access for private gates, separate production publication and managed PR merge. Latest owner message authorizes legal navigation in Phase 15 and supersedes earlier navbar exclusion. PR per completed phase remains requested. No direct main edits or branch deletion.
-LAST_COMMIT_HASH: 7b2f39ba9b96ff28dfb2bd3dbbcec64da4b10c9f (platform-created Phase 14 recovery commit; this final PR-reference bookkeeping is committed automatically afterward; original recovered phase commit d5be8b31ad91caefb9cb1c5ab2e873c97924d21a)
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Source-mounted local dev is healthy; production build/smoke checks are not deployment or field-CWV evidence.
+CURRENT_PHASE: 15 — ACCESSIBILITY + SECURITY + TRUST — scoped implementation/source/local audit COMPLETE
+LAST_COMPLETED_PHASE: 15 — scoped work only; manual visual/screen-reader/native-device/private/production gates remain deferred
+NEXT_PHASE: 16 — full system regression; STOP pending START NEXT PHASE SAFELY
+FILES_CHANGED_LAST_PHASE: website/src/lib/navigation.ts; website/src/lib/bottom-navigation.ts; website/src/components/ui/BottomNavigation.tsx; website/src/components/ui/bottom-navigation.module.css; website/src/components/ui/Toast.tsx; website/src/components/ui/phase15-accessibility.test.ts; website/src/lib/phase15-security.test.ts; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; docs/base44-upgrade/REGRESSION_BASELINE.md; docs/base44-upgrade/PHASE_STATUS.md; docs/base44-upgrade/PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md; docs/base44-upgrade/evidence/phase15-before-a11y.json; docs/base44-upgrade/evidence/phase15-initial-verification.json; docs/base44-upgrade/evidence/phase15-verification.json; docs/base44-upgrade/evidence/phase15-dialog-before-contrast.json; docs/base44-upgrade/evidence/phase15-dialog-a11y.json; docs/base44-upgrade/evidence/phase15-small-screen.json; docs/base44-upgrade/evidence/phase15-production.json; docs/base44-upgrade/evidence/phase15-npm-audit.json; docs/base44-upgrade/evidence/phase15-checkpoint.json
+TESTS_LAST_PHASE: PASS — 415 tests / 51 files, typecheck, lint, final isolated production build, whitespace; 60 final automated WCAG A/AA scans + 9 supplemental resting-state scans with zero reported violations; 73 independent real gesture assertions; live More Privacy/Disclaimer, focus return and Home clicks; production header/guard checks, 18 local before/after homepage lab samples, zero reported production dependency advisories.
+KNOWN_RISKS: Incomplete automated contrast/ARIA checks require manual review; no complete WCAG/security certification. Native zoom/physical devices/non-Chromium, populated CMS, authenticated portal/admin and remote CRUD/RLS/OAuth/email are unverified. Existing retention/consent/hosted-logging promises need owner operational confirmation. Earlier buffered iframe warning is not diagnosed; fresh gestures are clean.
+BLOCKERS: Post-change screenshot blocked by hidden preview surface; open preview for visual approval. Supabase/email credentials and authenticated test sessions absent. No scoped source/build blocker.
+APPROVALS_NEEDED: Phase 16 continuation; secure credentials/test accounts and owner legal-operational confirmation for deferred gates; separate production publication and managed PR merge. Standing PR-per-phase request remains. No direct main changes or branch deletion.
+LAST_COMMIT_HASH: f995cddf7283b0928e8f88b604c47600b91d2fa8 (actual pre-phase HEAD; resulting phase commit/push managed by platform)
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Healthy source-mounted live dev on port 3000; local production build, anonymous smoke and lab checks are not deployment or field CWV.
 
-## Current Phase 14 recovery — authoritative over historical notes
+## Current Phase 15 result — authoritative over historical notes
+
+Owner said **START NEXT PHASE SAFELY**. See [Phase 15 report](PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md). Added existing Privacy/Disclaimer destinations inside desktop top navbar and mobile More, preserving the original central links/CMS labels and CTA. Corrected the notification live-region role and confirmed dark-desktop text contrast failures with a narrow accent-token change. Added ten regression/security-boundary contract tests.
+
+No auth/API/RLS/schema, security-header, dependency, legal-copy/date, content/SEO, secret or remote-data changes. The final 60+9 automated scans report zero violations but retain incomplete rules; this is not blanket conformance. All 73 independent gestures pass. User iframe legal clicks, close/focus and Home pass without new errors; screenshot review remains blocked by a hidden surface. No temporary dialogs left open.
+
+**STOP before Phase 16.** Managed PR tool returned the existing [PR #10](https://github.com/ankitjangid81070534/Aj_System_Soft_Testing_Web_Project/pull/10) for this branch; no second simultaneous same-branch PR was created. At the final local check Phase 15 files were still pending the platform's end-of-turn automatic commit/push, so no new commit hash is invented here. No automatic full-system regression, merge, deployment, direct main write or branch deletion. Carry forward all deferred gates explicitly.
+
+---
+
+## Historical Phase 14 recovery — superseded by Phase 15 above
 
 See [PHASE_14_RECOVERY](PHASE_14_RECOVERY.md). A fresh fetch found **one unique missing Phase 14 commit** on `origin/system-upgrade-init`; working HEAD and `origin/main` matched, while all other feature tips were already ancestors. Recovered its exact reviewed patch without switching branches, rewriting history, deleting branches or editing main. Old branches do not all need merging.
 

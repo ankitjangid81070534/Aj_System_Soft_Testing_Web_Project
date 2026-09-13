@@ -1,0 +1,129 @@
+{
+  "at": "2026-09-13T18:41:43.360Z",
+  "scope": "Reduced-motion resting-state active-dialog scans; outside modal background is inert and excluded for dialogue scans. Body scanned separately after closing.",
+  "results": [
+    {
+      "width": 390,
+      "target": "#more-navigation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "target": "body",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 206
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "target": "#portal-login-dialog",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "width": 919,
+      "target": "#more-navigation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "width": 919,
+      "target": "body",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ]
+    },
+    {
+      "width": 919,
+      "target": "#portal-login-dialog",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "target": "#more-navigation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "target": "body",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 210
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "target": "#portal-login-dialog",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ]
+    }
+  ]
+}

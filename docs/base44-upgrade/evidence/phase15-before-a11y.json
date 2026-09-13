@@ -1,0 +1,294 @@
+{
+  "at": "2026-09-13T18:34:55.246Z",
+  "scope": "Anonymous 919px reduced-motion WCAG A/AA automated scan; not full manual conformance",
+  "results": [
+    {
+      "path": "/",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/services",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/projects",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 85
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 54
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 52
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/services/custom-software-development",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/privacy",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/disclaimer",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 33
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/forgot-password",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".pointer-events-none"
+              ],
+              "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute.",
+              "html": "<div aria-live=\"polite\" aria-label=\"Notifications\" class=\"pointer-events-none fixed bottom-4 right-4 z-60 flex w-[min(24rem,calc(100vw-2rem))] flex-col gap-2\"></div>"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    }
+  ]
+}

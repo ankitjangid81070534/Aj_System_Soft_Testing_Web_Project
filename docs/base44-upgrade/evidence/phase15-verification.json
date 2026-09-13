@@ -1,0 +1,1580 @@
+{
+  "at": "2026-09-13T18:44:13.131Z",
+  "scope": "Anonymous Chromium automated WCAG A/AA plus real legal navigation/keyboard/theme gestures; not authenticated or full screen-reader conformance",
+  "scans": [
+    {
+      "path": "/projects",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/services",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 85
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 54
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 52
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/privacy",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/disclaimer",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 33
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/forgot-password",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/projects",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/services",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 85
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 54
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 52
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/disclaimer",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/privacy",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 33
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/forgot-password",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/services",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 97
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 210
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/projects",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 45
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 44
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 64
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 60
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 53
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 74
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/privacy",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/disclaimer",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/forgot-password",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 42
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 44
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 1
+        }
+      ],
+      "passes": 12
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 2
+        }
+      ],
+      "passes": 15
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 919,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 1
+        }
+      ],
+      "passes": 12
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 15
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 1440,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 6
+        }
+      ],
+      "passes": 15
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 15
+    }
+  ],
+  "gestures": [
+    {
+      "width": 320,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "search legal destination",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    }
+  ],
+  "geometry": [
+    {
+      "width": 320,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 400,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 769,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 919,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 1024,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1024,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "out": [],
+      "height": 64.796875,
+      "top": 16
+    },
+    {
+      "width": 1280,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1280,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1366,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1366,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1366,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1440,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1440,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1536,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1536,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1536,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1600,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1600,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1600,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1920,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1920,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 2560,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 2560,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 2560,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    }
+  ],
+  "errors": [],
+  "applicationWrites": [],
+  "summary": {
+    "scans": 60,
+    "violationInstances": 0,
+    "gestures": 61,
+    "failedGestures": [],
+    "geometryIssues": [],
+    "uncaughtErrors": 0
+  }
+}
