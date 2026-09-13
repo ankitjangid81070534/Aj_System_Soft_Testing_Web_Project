@@ -8,7 +8,7 @@ TESTS_LAST_PHASE: PASS — 405 tests / 49 files, typecheck, lint, isolated produ
 KNOWN_RISKS: Native browser/OS scaling, physical devices, non-Chromium browsers, populated CMS, authenticated portal/admin and remote persistence remain unverified. Earlier buffered iframe hydration warning/AdSense load error is not diagnosed; fresh localhost/public-proxy consoles and live gesture checks are clean.
 BLOCKERS: Post-change screenshot review blocked by hidden/zero-size preview panel; open preview for visual sign-off. Supabase/email credentials absent; earlier private gates remain deferred. No boot or scoped source-test blocker.
 APPROVALS_NEEDED: Next-phase command; secure credentials/test-account access for private gates, separate production publication and managed PR merge. Latest owner message authorizes legal navigation in Phase 15 and supersedes earlier navbar exclusion. PR per completed phase remains requested. No direct main edits or branch deletion.
-LAST_COMMIT_HASH: 49e16e4330ffc96225352494ddfad12aa20bea0f (actual pre-recovery HEAD; new commit/push managed by platform; recovered original phase commit d5be8b31ad91caefb9cb1c5ab2e873c97924d21a)
+LAST_COMMIT_HASH: 7b2f39ba9b96ff28dfb2bd3dbbcec64da4b10c9f (platform-created Phase 14 recovery commit; this final PR-reference bookkeeping is committed automatically afterward; original recovered phase commit d5be8b31ad91caefb9cb1c5ab2e873c97924d21a)
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Source-mounted local dev is healthy; production build/smoke checks are not deployment or field-CWV evidence.
 
 ## Current Phase 14 recovery — authoritative over historical notes
@@ -17,7 +17,7 @@ See [PHASE_14_RECOVERY](PHASE_14_RECOVERY.md). A fresh fetch found **one unique 
 
 Fresh quality checks and the complete anonymous route-size rescan pass. Initial temporary build/heading-assertion mistakes were corrected in `/tmp` only and are documented; no app bug fix is claimed for those harness corrections. Live iframe Home → Privacy gestures now pass without new errors. Screenshot review is still blocked by the hidden preview, and private/native-device checks are not silently approved.
 
-**STOP: Phase 15 has not started.** On the next authorized phase, include the newly requested Privacy/Disclaimer navigation placement; no navbar change was made in this recovery. Use the managed PR-per-phase workflow. Do not claim a release, main merge or all-device/full-backend pass.
+**STOP: Phase 15 has not started.** On the next authorized phase, include the newly requested Privacy/Disclaimer navigation placement; no navbar change was made in this recovery. Managed recovery PR: [#10](https://github.com/ankitjangid81070534/Aj_System_Soft_Testing_Web_Project/pull/10), opened and pushed, **not merged**. Use the managed PR-per-phase workflow. Do not claim a release, main merge or all-device/full-backend pass.
 
 ---
 
