@@ -1,0 +1,767 @@
+{
+  "scope": "Independent Chromium against cloned Next dev source; NOT the user preview iframe; anonymous public checks only",
+  "checks": [
+    {
+      "width": 390,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should we prepare before requesting an estimate?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should the handover checklist cover?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "When might a ready-made tool be the better choice?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/custom-software-development",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "What needs to be agreed before migrating our records?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "How should we accept a module before adding the next one?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/erp-business-software",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should the maintenance agreement make explicit?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should we ask about backups and recovery?",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Prepare a one-page project brief",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Compare estimates on the same scope",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Discuss the next step",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "custom software development scope",
+      "target": "/services/custom-software-development",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "web app or mobile app guide",
+      "target": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Match the workflow to the platform",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Test the uncertain parts before choosing",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Plan the next conversation",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "website development",
+      "target": "/services/website-development",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "web application development",
+      "target": "/services/web-application-development",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "Android application development",
+      "target": "/services/android-app-development",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "custom software planning checklist",
+      "target": "/blog/how-to-plan-a-custom-software-project",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Agree an acceptance check for each stage",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Assign migration and rollout responsibilities",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Choose the scope before the system",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "ERP and business software service scope",
+      "target": "/services/erp-business-software",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "retail POS and inventory software",
+      "target": "/services/retail-pos-inventory",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "API and system integration",
+      "target": "/services/api-system-integrations",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should we prepare before requesting an estimate?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should the handover checklist cover?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "When might a ready-made tool be the better choice?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/custom-software-development",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "What needs to be agreed before migrating our records?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "How should we accept a module before adding the next one?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/erp-business-software",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should the maintenance agreement make explicit?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should we ask about backups and recovery?",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Prepare a one-page project brief",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Compare estimates on the same scope",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Discuss the next step",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "custom software development scope",
+      "target": "/services/custom-software-development",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "web app or mobile app guide",
+      "target": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Match the workflow to the platform",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Test the uncertain parts before choosing",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Plan the next conversation",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "website development",
+      "target": "/services/website-development",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "web application development",
+      "target": "/services/web-application-development",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "Android application development",
+      "target": "/services/android-app-development",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "custom software planning checklist",
+      "target": "/blog/how-to-plan-a-custom-software-project",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Agree an acceptance check for each stage",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Assign migration and rollout responsibilities",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Choose the scope before the system",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "ERP and business software service scope",
+      "target": "/services/erp-business-software",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "retail POS and inventory software",
+      "target": "/services/retail-pos-inventory",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "API and system integration",
+      "target": "/services/api-system-integrations",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should we prepare before requesting an estimate?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "What should the handover checklist cover?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/custom-software-development",
+      "kind": "faq_open_answer_close",
+      "question": "When might a ready-made tool be the better choice?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/custom-software-development",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "What needs to be agreed before migrating our records?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/erp-business-software",
+      "kind": "faq_open_answer_close",
+      "question": "How should we accept a module before adding the next one?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/erp-business-software",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should the maintenance agreement make explicit?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "faq_open_answer_close",
+      "question": "What should we ask about backups and recovery?",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/cloud-deployment-maintenance",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Prepare a one-page project brief",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Compare estimates on the same scope",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "contents_link_target",
+      "heading": "Discuss the next step",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "custom software development scope",
+      "target": "/services/custom-software-development",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "kind": "article_body_link",
+      "label": "web app or mobile app guide",
+      "target": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Match the workflow to the platform",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Test the uncertain parts before choosing",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "contents_link_target",
+      "heading": "Plan the next conversation",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "project discussion",
+      "target": "/request-quote",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "website development",
+      "target": "/services/website-development",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "web application development",
+      "target": "/services/web-application-development",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "Android application development",
+      "target": "/services/android-app-development",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "kind": "article_body_link",
+      "label": "custom software planning checklist",
+      "target": "/blog/how-to-plan-a-custom-software-project",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Agree an acceptance check for each stage",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Assign migration and rollout responsibilities",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "contents_link_target",
+      "heading": "Choose the scope before the system",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "render_and_horizontal_fit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "ERP and business software service scope",
+      "target": "/services/erp-business-software",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "retail POS and inventory software",
+      "target": "/services/retail-pos-inventory",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "API and system integration",
+      "target": "/services/api-system-integrations",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "kind": "article_body_link",
+      "label": "request a project discussion",
+      "target": "/request-quote",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "writes": [
+    {
+      "method": "POST",
+      "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1"
+    },
+    {
+      "method": "POST",
+      "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1"
+    },
+    {
+      "method": "POST",
+      "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1"
+    }
+  ],
+  "screenshots": {
+    "captured": 3,
+    "storage": "Temporary container paths only, not persistent evidence",
+    "reviewed": false
+  },
+  "summary": {
+    "passed": 102,
+    "errors": 0,
+    "failedRequests": 0,
+    "writes": 3,
+    "application_business_writes": 0,
+    "existing_adsense_pings": 3
+  },
+  "write_classification": "All observed POSTs were the existing AdSense pagead/ping endpoint, not application/API/database mutations. Initial zero-total-POST assertion was too broad; no app fix was needed or claimed."
+}

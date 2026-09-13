@@ -18,7 +18,7 @@ describe("fallback service catalogue", () => {
       expect(service.platforms.length).toBeGreaterThanOrEqual(1);
       expect(service.features.length).toBeGreaterThanOrEqual(4);
       expect(service.processSteps.length).toBeGreaterThanOrEqual(4);
-      expect(service.faqs.length).toBe(3);
+      expect(service.faqs.length).toBeGreaterThanOrEqual(3);
       expect(service.seoDescription).toBeTruthy();
     }
   });

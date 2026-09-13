@@ -1,9 +1,26 @@
 # Base44 Dev Environment
 
-## Current Phase 11 checkpoint (2026-09-12)
-- Phase 11 research-only deliverables are complete; start with `docs/base44-upgrade/PHASE_STATUS.md`, `SEO_KEYWORD_MAP.md` and `PHASE_11_CONTENT_PROPOSALS.md`. Phase 12 is not authorized; earlier Phase 1/8/9 private gates remain deferred.
-- `seo-keywords-5000.csv` has exactly 5,000 source-derived candidates, not observed demand or content to publish. Counts: en 1,680 / hi 1,660 / hi-Latn 1,660; 18 existing owners. Empty volume/difficulty fields mean unknown. Do not recycle the historical missing 5,000-keyword text-file claims or create separate URLs for variants.
-- Fresh corpus/script/source checks and all 31 mapped local public responses pass; `evidence/phase11-corpus-verification.json` pins the CSV SHA-256 and route evidence. Recheck that digest after any CSV edit. No application/config/data changes, fresh visual/authenticated verification, deployment or published-domain indexing are part of this phase.
+## Current Phase 13 performance checkpoint (2026-09-13)
+- Read `PHASE_STATUS.md` and `PHASE_13_PERFORMANCE.md` first. Phase 13 scoped source/lab work is complete; stop before Phase 14 pending owner continuation. Navbar remains excluded.
+- Blog query projections must retain `content` for reading-time fallback and both author/creator IDs for detail authorship. Tags/author and article/recent reads are independent; unit tests hold responses until both start. Never turn these into cross-user caches or change public/admin client boundaries.
+- About/Team galleries are below-fold/native-lazy. Gallery, homepage blog and project-card image hints cap at 384px in the existing 1216px three-column containers; frame CSS, high-DPR source selection and priority flags are unchanged.
+- Fresh 403 tests / 48 files, typecheck, lint, isolated build, 18 controlled production-homepage runs and six production routes pass. Raw evidence is `evidence/phase13-*.json`; mixed timings are NOT a homepage speedup/field-CWV claim. Supabase remains unconfigured, so database/media improvements have unit—not remote—verification.
+- Live real blog/article/anchor/service/FAQ/home clicks pass; runtime after completed edits is clean. Preview `navigate()` can change URL without rendering; recover via real site links, not an app router patch. Baseline hero and after-footer captures were reviewed, but final hero capture hit the preview budget; no complete visual pass. Earlier private gates remain deferred.
+- Source-mounted dev server was not replaced by production tests. One-off lab scripts/builds remain in `/tmp`; no ads were blocked, credentials exposed, data seeded, navbar changed, or production deployed. Standing managed PR-per-phase flow remains.
+
+## Historical Phase 12 content checkpoint (2026-09-12)
+- Read current `PHASE_STATUS.md` and `PHASE_12_CONTENT_SEO.md`. Owner explicitly EXCLUDED navbar work; the older Privacy/Disclaimer navigation task is superseded, not queued for automatic execution. Stop before Phase 13 pending continuation.
+- Existing default content only: seven buyer FAQs across three services, plus three expanded guides with contextual existing-route links. CMS precedence and loaders are unchanged; managed records are not overwritten. Original copy/metadata/dates are preserved. No nav/layout/CSS/auth/API/config/schema/dependency changes.
+- Fresh 392 tests / 45 files, typecheck, lint, isolated production build, 102 independent Chromium assertions at 390/919/1440px and six production-built route checks pass. See `evidence/phase12-*.json`. Iframe unavailable/no tab means user-preview and visual review are NOT passed; independent DOM fit is not screenshot sign-off.
+- All 5,000 research rows and source excerpts are unchanged. Phase 11 source digests describe the old snapshot; current content digests are in Phase 12 evidence. Do not rewrite historical verification to imply a fresh test.
+- The browser's existing AdSense POST pings are not application/database mutations. Record them, do not disable ads or mislabel them as CRUD writes. Earlier private gates remain deferred. Owner requests a PR alongside each completed phase; use the managed branch workflow.
+
+## Historical Phase 11 recovery checkpoint (2026-09-12)
+- Read the top of `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_11_RECOVERY.md` first. Earlier completion notes missed taxonomy gaps: recovery added 23 overlapping master research groups, 15 evidence-backed candidate replacements and the existing Disclaimer map entry. Still exactly 5,000 candidates: en 1,680 / hi 1,660 / hi-Latn 1,660; now 19 owners / 32 mapped public pages. Demand remains unknown.
+- The corpus digest, source checks and 32 current local responses are in `evidence/phase11-corpus-verification.json`; revalidate it after CSV edits. Fresh 384 tests / 44 files, typecheck, lint and isolated copied-source production build pass. Browser returned no tab; private gates remain deferred, not passed.
+- Fresh main `f53d765` is tree-identical to pre-edit `7fc7b45`; every fetched branch is included in main. No unique work needs combining. Use managed branch → PR → main, never direct main writes, mass deletion or redundant merges. The owner requests a PR alongside each completed phase.
+- Phase 12 is stopped until `START NEXT PHASE SAFELY`. With that phase, add existing Privacy/Disclaimer links to desktop top navigation and mobile More as requested, preserving tablet/Portal/CTA behavior. Do not reinterpret this as a wholesale navbar redesign or permission for new pages.
+- Existing dev compose was reused successfully. No app/config/data/secrets changes; no visual/authenticated/deployment or field-performance sign-off. Prior missing/declined integration configuration remains unchanged.
 
 ## Historical Phase 10 checkpoint (2026-09-12)
 - Owner authorized the next phase after Phase 9 private gates were disclosed. Phase 10 local technical SEO is complete; read `PHASE_10_TECHNICAL_SEO.md` and top of `PHASE_STATUS.md`. Earlier Phase 1/8/9 private gates stay deferred, not passed; Phase 11 is not authorized. Earlier phase-gate notes below are historical.

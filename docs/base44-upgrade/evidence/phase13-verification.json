@@ -1,0 +1,124 @@
+{
+  "starting_head": "9f4dfb9d965dc57682e8743e09c29aec76ab7957",
+  "recorded_at_utc": "2026-09-13T06:10:48.173170+00:00",
+  "quality": {
+    "unit_tests": 403,
+    "test_files": 48,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "isolated_production_build": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "measurements": [
+    {
+      "revision": "before",
+      "width": 390,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1608,
+      "cls_median": 0.0023664824707185818,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363789,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 1100
+    },
+    {
+      "revision": "before",
+      "width": 919,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1600,
+      "cls_median": 0.003844530044471493,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363789,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 1053
+    },
+    {
+      "revision": "before",
+      "width": 1440,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1692,
+      "cls_median": 0.0037893681278935187,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363789,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 1125
+    },
+    {
+      "revision": "after",
+      "width": 390,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1536,
+      "cls_median": 0.0023664824707185818,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363785,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 985
+    },
+    {
+      "revision": "after",
+      "width": 919,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1616,
+      "cls_median": 0.003844530044471493,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363785,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 1116
+    },
+    {
+      "revision": "after",
+      "width": 1440,
+      "runs": 3,
+      "lcp_element": "h1#home-hero-title",
+      "lcp_ms_median": 1772,
+      "cls_median": 0.0037893681278935187,
+      "self_hosted_font_requests": 1,
+      "first_party_js_encoded_bytes_median": 363785,
+      "post_load_long_task_excess_ms_median_NOT_INP_OR_TBT": 1459
+    }
+  ],
+  "interpretation": "Small sandbox lab samples with unchanged live third parties. Mixed LCP/long-task timings, unchanged CLS, effectively unchanged JS bytes; no causal homepage speedup or field CWV/INP pass claimed. Main deterministic benefits target configured CMS queries and real CMS media, absent in this sandbox.",
+  "preservation": {
+    "website/src/components/ui/MarketingHeader.tsx": {
+      "unchanged": true,
+      "sha256": "872d1cd14644f20120cfff2ebd49eb7efd31f8418c10b65486cd0ea8bab28cdc"
+    },
+    "website/src/app/layout.tsx": {
+      "unchanged": true,
+      "sha256": "45c03f81adef1b5ce2903de5109d31b426018a44ea53cefdd9600be7428eb7e9"
+    },
+    "website/package.json": {
+      "unchanged": true,
+      "sha256": "7506f4e3474078393e9969b40ebcc4a14d7c282e2af5b0fbc4aff6080fde6a4e"
+    },
+    "website/next.config.ts": {
+      "unchanged": true,
+      "sha256": "d71791d04e2402a461fb4cc741eda173cd8feb2096a5d0878517317836c1587d"
+    },
+    "website/src/lib/data/services-fallback.ts": {
+      "unchanged": true,
+      "sha256": "b19dfc7146134960cb67ee440ce7b7cde7f4f43a984c44cf69ad2e9a2fc03c78"
+    },
+    "website/src/lib/data/blog-fallback.ts": {
+      "unchanged": true,
+      "sha256": "4f56ca92b125536fab9c72d313fb405a2f4d56a84cf2659327ed8afcc0a1b722"
+    },
+    "docs/base44-upgrade/seo-keywords-5000.csv": {
+      "unchanged": true,
+      "sha256": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0"
+    }
+  },
+  "live_preview": {
+    "real_blog_index_to_article_click": "PASS: performed=true and unique section attached",
+    "article_toc_click": "PASS: performed=true and hash matched",
+    "article_service_link": "PASS: performed=true and expected route/FAQ attached",
+    "faq_open_answer_close": "PASS: performed=true for both gestures; correct answer and collapsed final state",
+    "home_link": "PASS: performed=true and hero attached",
+    "projects_destination": "Reached after real click and unique heading wait; final helper omitted performed in serialized result, so no separate gesture-completion assertion claimed",
+    "runtime": "No errors after completed source edits; no failed requests or overlay; nonempty main",
+    "visual": "Baseline tablet hero and post-change footer captured/reviewed. Final hero capture blocked by preview-call budget, so no complete before/after visual sign-off. CSS/class/frame markup unchanged; optional CMS image visuals unverified.",
+    "tool_limitations": "navigate helper changed URL without rendering; recovered through real header/footer links. No workaround added to app."
+  },
+  "cms": "Supabase URL/anon key absent. Query projection and concurrency verified with isolated unit fixtures, not a live database; no fixture data published.",
+  "transient_compile_error": "Duplicate authorName existed briefly between targeted edits at 06:00:40 UTC; removed by final blog.ts edit at 06:00:43 UTC. Fresh full suite/build and subsequent browser/service logs pass; historical log entries are not a current error."
+}

@@ -1,9 +1,9 @@
 {
-  "verified_at_utc": "2026-09-12T19:59:58.959004+00:00",
-  "scope": "Research corpus and existing local route responses only; no publication, observed search demand, authenticated persistence or visual sign-off",
-  "starting_head": "61c7752479aa50960dfd4a71de6ca67a27852e34",
+  "verified_at_utc": "2026-09-12T21:30:27.886282+00:00",
+  "scope": "Phase 11 recovery: research corpus, current route responses and existing regression/build checks only; no publication, measured demand, visual or authenticated sign-off",
+  "starting_head": "7fc7b45e1036b7e7ef4364e34fe40fbd7fe9f2cd",
   "corpus_path": "docs/base44-upgrade/seo-keywords-5000.csv",
-  "corpus_sha256": "3d4328a4afbaecab98fcb15aa86e8b35d063642761e27205de6b1af050396d0a",
+  "corpus_sha256": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0",
   "data_rows": 5000,
   "unique_normalized_queries": 5000,
   "sequential_candidate_ids": true,
@@ -13,7 +13,8 @@
     "hi-Latn": 1660
   },
   "cluster_counts": {
-    "custom-software-development": 300,
+    "custom-software-development": 297,
+    "brand": 3,
     "saas-development": 300,
     "web-application-development": 300,
     "website-development": 300,
@@ -32,235 +33,309 @@
     "web-app-or-mobile-app-choosing-the-right-platform": 150,
     "what-erp-digitization-actually-means-for-small-businesses": 150
   },
+  "master_cluster_counts": {
+    "Custom Software": 497,
+    "India": 45,
+    "Buyer Questions": 4052,
+    "Brand": 3,
+    "Hindi/Hinglish Search Intent": 3320,
+    "SaaS": 300,
+    "Websites/Web Apps": 750,
+    "Ecommerce": 300,
+    "Inventory": 434,
+    "Mobile Apps": 750,
+    "Desktop/EXE": 300,
+    "Billing": 145,
+    "ERP": 450,
+    "CRM": 3,
+    "Hospital": 300,
+    "Clinic": 300,
+    "Industry": 1200,
+    "Pharmacy": 300,
+    "POS": 300,
+    "Hotel": 300,
+    "API/Integrations": 300,
+    "Automation": 3,
+    "Maintenance/Support": 300
+  },
+  "master_cluster_count": 23,
+  "intent_counts": {
+    "commercial": 407,
+    "transactional": 91,
+    "cost-planning": 669,
+    "requirements": 1397,
+    "planning": 850,
+    "risk-review": 811,
+    "handover": 225,
+    "capability": 450,
+    "comparison": 6,
+    "informational": 91,
+    "problem-aware": 3
+  },
   "source_quotes_valid": true,
   "source_digests": {
-    "website/src/lib/data/blog-fallback.ts": "2eb960e664b9654e2c97e9db0771be38c4a705c490e1fa90cf3f80e0345155a5",
-    "website/src/lib/data/services-fallback.ts": "3ccbece31898cf651a794562c3e633b7436962cb20f0050e8fbdcdcb7bc104d2"
+    "website/src/lib/data/services-fallback.ts": "3ccbece31898cf651a794562c3e633b7436962cb20f0050e8fbdcdcb7bc104d2",
+    "website/src/lib/seo/site.ts": "13d1ac1d695d504fa5cf9fc50d32a3e97afabf512e2641f5f6ede56dc00c1c71",
+    "website/src/lib/data/blog-fallback.ts": "2eb960e664b9654e2c97e9db0771be38c4a705c490e1fa90cf3f80e0345155a5"
   },
+  "changed_candidate_ids": [
+    "Q0099",
+    "Q0199",
+    "Q0299",
+    "Q2499",
+    "Q2599",
+    "Q2699",
+    "Q3999",
+    "Q4099",
+    "Q4199",
+    "Q0098",
+    "Q0198",
+    "Q0298",
+    "Q2498",
+    "Q2598",
+    "Q2698"
+  ],
   "all_demand_metrics_unknown": true,
-  "existing_candidate_owner_count": 18,
-  "mapped_page_count": 31,
+  "existing_candidate_owner_count": 19,
+  "mapped_page_count": 32,
   "all_mapped_links_in_current_sitemap": true,
+  "unique_primary_per_mapped_page": true,
+  "secondary_count_three_to_eight_per_page": true,
   "application_source_config_unchanged": true,
-  "wording_review": "English template wording and 37 Hindi inflection refinements; representative cluster/language review, not individual editorial approval of all 5,000 candidates",
-  "route_probes": [
+  "checks": {
+    "unit_tests": "PASS: 384 tests / 44 files",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "isolated_production_build": "PASS, copied source/dependencies in /tmp/phase11-build; live dev output untouched",
+    "preview_browser": "UNVERIFIED: No browser tab available",
+    "authenticated_persistence": "DEFERRED: prior missing/declined configuration and approved test-session gates unchanged",
+    "production_deployment": "NOT PERFORMED"
+  },
+  "wording_review": "15 individually written coverage repairs; original 4,985 query strings retained. Not individual editorial approval or observed demand for all 5,000.",
+  "public_route_responses": [
     {
       "path": "/",
-      "http_status": 200,
+      "status": 200,
       "title": "AJ System Soft Technology | Custom Software Development Company India",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/about",
-      "http_status": 200,
+      "status": 200,
       "title": "About Us — The Team Behind AJS Technology | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/ai-methods",
-      "http_status": 200,
+      "status": 200,
       "title": "AI Methods | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/blog",
-      "http_status": 200,
-      "title": "Insights — Software Planning, Platforms & Business Systems | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Insights — Software Planning, Platforms &amp; Business Systems | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/blog/how-to-plan-a-custom-software-project",
-      "http_status": 200,
+      "status": 200,
       "title": "How to plan a custom software project | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
-      "http_status": 200,
+      "status": 200,
       "title": "Web app or mobile app: choosing the right platform | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
-      "http_status": 200,
+      "status": 200,
       "title": "What ERP digitisation actually means for small businesses | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/contact",
-      "http_status": 200,
+      "status": 200,
       "title": "Contact Us | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
+      "preview_noindex": true
+    },
+    {
+      "path": "/disclaimer",
+      "status": 200,
+      "title": "Legal Disclaimer | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/privacy",
-      "http_status": 200,
+      "status": 200,
       "title": "Privacy Policy | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/projects",
-      "http_status": 200,
-      "title": "Projects & Case Studies | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Projects &amp; Case Studies | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/request-quote",
-      "http_status": 200,
+      "status": 200,
       "title": "Request a Quote | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/reviews",
-      "http_status": 200,
+      "status": 200,
       "title": "Verified Client Reviews | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/service-agreement",
-      "http_status": 200,
+      "status": 200,
       "title": "Service Agreement | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services",
-      "http_status": 200,
-      "title": "Services — Custom Software, SaaS, Web, Mobile & Business Systems | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Services — Custom Software, SaaS, Web, Mobile &amp; Business Systems | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/android-app-development",
-      "http_status": 200,
+      "status": 200,
       "title": "Android App Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/api-system-integrations",
-      "http_status": 200,
+      "status": 200,
       "title": "API Integration Services Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/cloud-deployment-maintenance",
-      "http_status": 200,
-      "title": "Cloud Application Modernization & Maintenance in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Cloud Application Modernization &amp; Maintenance in India | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/custom-software-development",
-      "http_status": 200,
+      "status": 200,
       "title": "Custom Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/desktop-software-development",
-      "http_status": 200,
-      "title": "Desktop & Windows Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Desktop &amp; Windows Software Development Company in India | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/ecommerce-development",
-      "http_status": 200,
+      "status": 200,
       "title": "Ecommerce Website Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/erp-business-software",
-      "http_status": 200,
-      "title": "ERP & CRM Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "ERP &amp; CRM Software Development Company in India | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/hospital-clinic-software",
-      "http_status": 200,
-      "title": "Hospital & Clinic Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Hospital &amp; Clinic Software Development Company in India | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/hotel-management-software",
-      "http_status": 200,
+      "status": 200,
       "title": "Hotel Management Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/ios-app-development",
-      "http_status": 200,
+      "status": 200,
       "title": "iOS App Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/pharmacy-software",
-      "http_status": 200,
+      "status": 200,
       "title": "Pharmacy Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/retail-pos-inventory",
-      "http_status": 200,
-      "title": "Retail POS & Inventory Software Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Retail POS &amp; Inventory Software Development Company in India | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/saas-development",
-      "http_status": 200,
+      "status": 200,
       "title": "SaaS Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/web-application-development",
-      "http_status": 200,
+      "status": 200,
       "title": "Web Application Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/services/website-development",
-      "http_status": 200,
+      "status": 200,
       "title": "Website Development Company in India | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/team",
-      "http_status": 200,
+      "status": 200,
       "title": "Our Team | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "has_h1": true,
       "preview_noindex": true
     },
     {
       "path": "/terms",
-      "http_status": 200,
-      "title": "Terms & Conditions | AJ System Soft Technology",
-      "has_main_and_heading": true,
+      "status": 200,
+      "title": "Terms of Service | AJ System Soft Technology",
+      "has_h1": true,
       "preview_noindex": true
     }
-  ],
-  "line_endings": "LF; parsed rows unchanged by normalization"
+  ]
 }

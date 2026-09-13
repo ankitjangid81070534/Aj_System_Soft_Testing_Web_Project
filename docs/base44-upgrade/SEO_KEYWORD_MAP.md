@@ -1,9 +1,13 @@
 # SEO keyword map — Phase 11 research-only recommendations
 
+## Phase 12 implementation note (2026-09-12)
+
+See [PHASE_12_CONTENT_SEO.md](PHASE_12_CONTENT_SEO.md): existing custom-software/ERP/maintenance FAQs and the three existing guides now address selected buyer questions with contextual links. No new URLs, keyword-primary changes, research-corpus edits or CMS writes. Metadata/primary ownership remain unchanged. The evidence below is the Phase 11 research baseline; current source digests and verification are in Phase 12 evidence. The owner explicitly excluded navbar work; the earlier Privacy/Disclaimer navigation request was **not implemented** and must not be resumed automatically.
+
 ## Evidence and publication boundary
 
 - CSV: [seo-keywords-5000.csv](seo-keywords-5000.csv), exactly **5,000 distinct research candidates**, not 5,000 observed searches. Search volume, difficulty, impressions, clicks and ranking potential are unknown. No Search Console export or authorized connector was available; a site-verification token would not itself grant query-data access.
-- The fallback permitted by the master plan is used: actual service descriptions/features/deliverables and three existing articles. Each CSV row includes a verbatim source excerpt and provisional existing topic-owner route. Questions may need better answers even when their subject is supported.
+- The fallback permitted by the master plan is used: actual service descriptions/features/deliverables, three existing articles and the shared brand identity constants. Each CSV row includes a verbatim source excerpt and provisional existing topic-owner route. Questions may need better answers even when their subject is supported.
 - Generation is deliberately disclosed: 40 buyer-question patterns plus ten evidenced facets × six question patterns per service, in three languages; editorial topic patterns supply the final 500. The equal service quota is coverage, NOT estimated demand or priority. The whole set is a research queue, not a final targeting prescription.
 - Primary/secondary phrases below are editorial query hypotheses selected for semantic fit. They are **not verified search-demand findings**. All mapped routes already exist; full production URLs are intentionally absent because this app is not published. Primary/secondary assignments have not been applied to titles, body text, internal links, schema, sitemap or CMS.
 - Hindi/Hinglish rows map to the same topic owner for review; this does not claim the English site provides localized answers. No Hindi URLs, hreflang declarations or language-specific pages are created. Native-language editorial review and localization approval are required before publication.
@@ -11,11 +15,14 @@
 
 ## Cluster register
 
-15 service clusters × 300 = 4,500; planning article = 200; platform article = 150; ERP article = 150. Total **18 clusters / 5,000 rows**. Languages: **1,680 English (`en`), 1,660 Hindi (`hi`), 1,660 Roman Hindi/Hinglish (`hi-Latn`)**.
+**Recovery audit, 2026-09-12:** the original 5,000-row corpus was intact but its 18 route-based clusters did not explicitly cover the master's 23 research groups: Brand, CRM and Automation had no candidate phrases, and comparison intent was absent. Fifteen redundant pattern variants were replaced with source-backed English/Hindi/Hinglish candidates; all IDs and language counts are retained. The CSV now separates the existing `cluster` (19 topic owners) from `master_clusters` (23 overlapping research groups). This is research classification, not new services or URLs.
+
+14 service owners × 300 + custom software 297 + brand 3 + planning article 200 + platform article 150 + ERP article 150 = **5,000 rows**. Languages: **1,680 English (`en`), 1,660 Hindi (`hi`), 1,660 Roman Hindi/Hinglish (`hi-Latn`)**. The generation method above describes the original corpus; the 15 individually written recovery substitutions are recorded in the verification evidence.
 
 | Cluster / existing topic owner | IDs | Candidates | Role |
 |---|---|---:|---|
-| `/services/custom-software-development` | Q0001–Q0300 | 300 | Service buyer research |
+| `/services/custom-software-development` | Q0001–Q0300 except Q0099/Q0199/Q0299 | 297 | Service buyer research |
+| `/` | Q0099 / Q0199 / Q0299 | 3 | Brand discovery research |
 | `/services/saas-development` | Q0301–Q0600 | 300 | Service buyer research |
 | `/services/web-application-development` | Q0601–Q0900 | 300 | Service buyer research |
 | `/services/website-development` | Q0901–Q1200 | 300 | Service buyer research |
@@ -33,6 +40,42 @@
 | `/blog/how-to-plan-a-custom-software-project` | Q4501–Q4700 | 200 | Informational article research |
 | `/blog/web-app-or-mobile-app-choosing-the-right-platform` | Q4701–Q4850 | 150 | Informational article research |
 | `/blog/what-erp-digitization-actually-means-for-small-businesses` | Q4851–Q5000 | 150 | Informational article research |
+
+## Required master taxonomy (overlapping research groups)
+
+`cluster` is the existing topic owner; `master_clusters` is the master-plan classification. A candidate can belong to several groups, so these counts must **not** be summed as additional queries. Shared hospital/clinic scope does not imply separate landing pages. India tags only cover explicit India/Bharat phrases, not fabricated city coverage. Hindi/Hinglish is a language-intent overlay, not a localization promise.
+
+| Master group | Candidates tagged |
+|---|---:|
+| Custom Software | 497 |
+| India | 45 |
+| Buyer Questions | 4052 |
+| Brand | 3 |
+| Hindi/Hinglish Search Intent | 3320 |
+| SaaS | 300 |
+| Websites/Web Apps | 750 |
+| Ecommerce | 300 |
+| Inventory | 434 |
+| Mobile Apps | 750 |
+| Desktop/EXE | 300 |
+| Billing | 145 |
+| ERP | 450 |
+| CRM | 3 |
+| Hospital | 300 |
+| Clinic | 300 |
+| Industry | 1200 |
+| Pharmacy | 300 |
+| POS | 300 |
+| Hotel | 300 |
+| API/Integrations | 300 |
+| Automation | 3 |
+| Maintenance/Support | 300 |
+
+### Intent and evidence dimensions
+
+Commercial, transactional, informational, comparison and problem-aware are explicit values in `intent`. Existing cost-planning, requirements, planning, risk-review and handover values describe narrower buyer questions rather than measured demand. Industry/software-type groups use the owner scope; technology facets remain under `subcluster` and verbatim `source_evidence` (for example Kotlin and server-rendered pages). Business-size and project-requirement phrases include small-business CRM and staged ERP requirements. Local relevance is India only where source-supported, not a license for city pages. All 23 requested master groups are represented without inventing new offerings.
+
+Brand, CRM and Automation each have a deliberately small seed set of three candidates, one per language, not comprehensive market research. Comparison seeds ask about alternatives already discussed in the custom-software and ERP source. Do not derive a new article or unsupported CRM features from those questions alone.
 
 ## Recommended service-page assignments
 
@@ -68,7 +111,7 @@ Informational evaluation intent, not service-provider acquisition. Each article 
 
 ## Existing supporting / navigational pages
 
-These 13 routes complete the **31-page** existing sitemap map. Each has one primary and three secondary hypotheses. These auxiliary brand/navigation phrases are **not additional CSV rows** and are not scored as demand. Empty galleries/resources and legal pages are not acquisition priorities.
+These 14 routes complete the **32-page** existing sitemap map, including the Disclaimer added before this recovery. Each has one primary and three secondary hypotheses. The homepage brand primary also appears in Q0099; the other auxiliary phrases are map recommendations, **not additional CSV rows**, and are not scored as demand. Empty galleries/resources and legal pages are not acquisition priorities.
 
 | Existing page | Primary hypothesis | Secondary hypotheses (3) | Intent / stage / purpose | Recommended links | CTA / gate |
 |---|---|---|---|---|---|
@@ -83,6 +126,7 @@ These 13 routes complete the **31-page** existing sitemap map. Each has one prim
 | `/ai-methods` | AJ System Soft Technology AI resources | AJS Technology AI methods; AI resources shared by AJ System Soft Technology; AJ System Soft Technology resource directory | Branded resource discovery only; no evidence to market an AI development service | /blog; /services; /contact | Browse actually published resources; no invented tools or guarantees |
 | `/blog` | AJ System Soft Technology software planning articles | AJS Technology software insights; AJ System Soft Technology platform guides; AJ System Soft Technology ERP articles | Editorial navigation; individual articles own specific questions | /blog/how-to-plan-a-custom-software-project; /blog/web-app-or-mobile-app-choosing-the-right-platform; /blog/what-erp-digitization-actually-means-for-small-businesses | Read the relevant existing guide |
 | `/privacy` | AJ System Soft Technology privacy policy | AJS Technology data privacy policy; AJ System Soft Technology data collection; AJ System Soft Technology privacy contact | Legal navigation, not an acquisition landing page | /contact; /terms | Read policy; use existing contact path for questions |
+| `/disclaimer` | AJ System Soft Technology legal disclaimer | AJS Technology disclaimer; AJ System Soft Technology client operations disclaimer; AJ System Soft Technology digital services disclaimer | Legal navigation / clarification; explain the existing disclaimer, not commercial acquisition or legal advice | /terms; /privacy; /contact | Read the disclaimer; contact for clarification |
 | `/terms` | AJ System Soft Technology terms and conditions | AJS Technology website terms; AJ System Soft Technology usage terms; AJ System Soft Technology engagement terms | Legal navigation, not an acquisition landing page | /privacy; /service-agreement; /contact | Read terms; contact for clarification |
 | `/service-agreement` | AJ System Soft Technology service agreement | AJS Technology project agreement; AJ System Soft Technology engagement agreement; AJ System Soft Technology software service terms | Contract navigation; current agreement content, not legal advice | /terms; /contact; /request-quote | Read available agreement; no claim of an authenticated acceptance test |
 
@@ -102,7 +146,7 @@ See [PHASE_11_CONTENT_PROPOSALS.md](PHASE_11_CONTENT_PROPOSALS.md). Proposal pri
 
 ## Validation and future decision process
 
-- Structural QA: 5,000 data rows plus one header; globally unique normalized phrases; sequential IDs; valid language/scripts; verbatim evidence found in the cited files; all 18 owners are existing public sitemap routes; all 31 mapped pages and recommended link destinations verified against that inventory. Fresh route checks and the final CSV digest are also recorded in [corpus verification evidence](evidence/phase11-corpus-verification.json).
+- Structural QA: 5,000 data rows plus one header; globally unique normalized phrases; sequential IDs; valid language/scripts; verbatim evidence found in the cited files; all 19 owners are existing public sitemap routes; all 32 mapped pages and recommended link destinations verified against that inventory. Fresh route checks and the final CSV digest are also recorded in [corpus verification evidence](evidence/phase11-corpus-verification.json).
 - Human review: all 15 service feature sets and all three source articles reviewed; example query patterns and translations sampled across every cluster/language. This is **not** individual editorial approval of all 5,000 candidates. Native Hindi/Hinglish review, real-user relevance and live SERP intent remain validation gates.
 - After publication and authorization, use a real Search Console Performance export (query + landing page, country, device, date range, impressions, clicks, CTR, position). Keep observed queries separate from these inferred candidates and deduplicate within comparable date ranges; do not label absent rows zero-demand.
 - Classify observed intent, compare the currently ranking landing page with this owner map, and inspect competing results before assigning priority. Use actual data to replace equal quotas, not invented volume/KD values.
@@ -111,4 +155,4 @@ See [PHASE_11_CONTENT_PROPOSALS.md](PHASE_11_CONTENT_PROPOSALS.md). Proposal pri
 
 ## Phase boundary
 
-Phase 11 delivers research and planning documents only. Runtime code, content, data, dependencies, secrets, routes, SEO settings and UI are unchanged. Phase 12 requires separate continuation authorization. Prior authenticated integration gates and real-domain publication/indexing checks remain deferred, not passed.
+Phase 11 delivers research and planning documents only. Runtime code, content, data, dependencies, secrets, routes, SEO settings and UI are unchanged. This recovery completed only Phase 11; Phase 12 waits for `START NEXT PHASE SAFELY`. The owner's Privacy/Disclaimer navigation request is queued in [PHASE_11_RECOVERY.md](PHASE_11_RECOVERY.md). Prior authenticated integration gates and real-domain publication/indexing checks remain deferred, not passed.

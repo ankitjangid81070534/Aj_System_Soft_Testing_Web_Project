@@ -43,7 +43,7 @@ export function BlogPreviewSection({ posts }: { posts: BlogPostTeaser[] }) {
                     src={post.coverUrl}
                     alt={post.title}
                     fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1216px) 384px, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 ease-soft group-hover:scale-[1.04]"
                   />
                 </div>

@@ -40,6 +40,11 @@ export type BlogPostFull = BlogPostTeaser & {
 
 const PER_PAGE = 9;
 
+// Keep content for the existing reading-time fallback; omit unused CMS fields.
+const POST_TEASER_COLUMNS =
+  "id, slug, title, excerpt, cover_image_url, reading_minutes, content, published_at, is_featured, status, blog_categories(name)";
+const POST_DETAIL_COLUMNS = `${POST_TEASER_COLUMNS}, author_id, created_by`;
+
 /** Organisation authorship fallback — never an invented person. */
 const ORG_AUTHOR = "AJ System Soft Technology";
 
@@ -136,7 +141,7 @@ export const getPublishedPosts = cache(
 
       let query = supabase
         .from("blog_posts")
-        .select("*, blog_categories(name)", { count: "exact" })
+        .select(POST_TEASER_COLUMNS, { count: "exact" })
         .is("deleted_at", null);
       if (categoryId) query = query.eq("category_id", categoryId);
 
@@ -189,7 +194,7 @@ export const getPostBySlug = cache(async (slug: string): Promise<BlogPostFull | 
     const supabase = await createSupabaseServerClient();
     const user = await getCurrentUser();
     const staffPreview = user ? can(user.role, "content:read") : false;
-    let query = supabase.from("blog_posts").select("*, blog_categories(name)").eq("slug", slug);
+    let query = supabase.from("blog_posts").select(POST_DETAIL_COLUMNS).eq("slug", slug);
     if (!staffPreview) query = query.eq("status", "published").eq("is_active", true);
     const { data: rows, error } = await query.limit(1);
     if (error) return fallback;
@@ -200,10 +205,20 @@ export const getPostBySlug = cache(async (slug: string): Promise<BlogPostFull | 
     const base = teaserFromRow(row, category ? String(category.name) : null);
     base.status = typeof row.status === "string" ? row.status : "draft";
 
-    const { data: tagRows } = await supabase
-      .from("blog_post_tags")
-      .select("blog_tags(id, name, slug)")
-      .eq("post_id", String(row.id));
+    // Tags and authorship both depend on the post, but not on each other.
+    const [{ data: tagRows }, authorName] = await Promise.all([
+      supabase
+        .from("blog_post_tags")
+        .select("blog_tags(id, name, slug)")
+        .eq("post_id", String(row.id)),
+      getAuthorName(
+        typeof row.author_id === "string"
+          ? row.author_id
+          : typeof row.created_by === "string"
+            ? row.created_by
+            : null,
+      ),
+    ]);
     const tags = ((tagRows ?? []) as unknown as Record<string, unknown>[])
       .map((entry) => entry.blog_tags as Record<string, unknown> | null)
       .filter((tag): tag is Record<string, unknown> => tag !== null)
@@ -212,14 +227,6 @@ export const getPostBySlug = cache(async (slug: string): Promise<BlogPostFull | 
         name: String(tag.name),
         slug: String(tag.slug),
       }));
-
-    const authorName = await getAuthorName(
-      typeof row.author_id === "string"
-        ? row.author_id
-        : typeof row.created_by === "string"
-          ? row.created_by
-          : null,
-    );
 
     return {
       ...base,

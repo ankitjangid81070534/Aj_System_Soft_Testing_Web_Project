@@ -51,12 +51,15 @@ function formatDate(value: string | null): string | null {
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  // Related public posts do not depend on the article request completing.
+  const [post, { rows: recent }] = await Promise.all([
+    getPostBySlug(slug),
+    getPublishedPosts({ page: 1 }),
+  ]);
   if (!post) notFound();
 
   const toc = extractToc(post.content);
   const showToc = toc.length >= 3;
-  const { rows: recent } = await getPublishedPosts({ page: 1 });
   const related = pickRelatedPosts(recent, post).slice(0, 3);
 
   const crumbs = [
