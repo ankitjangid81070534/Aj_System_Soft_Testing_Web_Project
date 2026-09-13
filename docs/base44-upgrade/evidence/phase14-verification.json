@@ -1,0 +1,48 @@
+{
+  "verified_at_utc": "2026-09-13T07:56:46.710021+00:00",
+  "starting_head": "6295e278c7e82bf21dada7d51f30bd7c006d700f",
+  "scope": "Phase 14 presentation fixes and anonymous responsive audit only; no all-device, authenticated or release sign-off",
+  "checks": {
+    "tests": {
+      "files": 49,
+      "tests": 405,
+      "pass": true
+    },
+    "typecheck": "pass",
+    "lint": "pass",
+    "isolated_production_build": "pass with copied dependencies; live dev output untouched",
+    "baseline_route_cases": 152,
+    "after_route_cases": 760,
+    "independent_interaction_assertions": 59,
+    "production_geometry_routes": 2,
+    "real_footer_click_origins": [
+      "localhost",
+      "public-preview-proxy"
+    ],
+    "page_wide_overflow_cases": 0,
+    "uncaught_page_errors": 0,
+    "failed_external_google_csp_report_requests": 38,
+    "application_write_requests": 0
+  },
+  "preservation": {
+    "navbar_unchanged": true,
+    "auth_actions_data_config_dependencies_unchanged": true,
+    "copy_urls_dates_unchanged": true,
+    "research_csv_sha256": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0"
+  },
+  "source_sha256": {
+    "website/src/app/(public)/privacy/page.tsx": "8b649c4fb2d711f1dae42a5ec608c4360427948fed19a9b21616ce1f1f7ba2b4",
+    "website/src/components/portal/AuthCard.tsx": "b6df24d3501bbb0d922ad95ef3cdb64dd6b4aa9ff5da9250f9ef2e2a090489a0",
+    "website/src/components/portal/responsive-layout.test.ts": "6b0eea6ecf19a347ec08bd3ae949432a0add6817a1c441a7f8a2b2ebf3cf258f"
+  },
+  "deferred": [
+    "Post-change visual/user-iframe interaction verification; tab disappearance, failed navigation assertion, truncated hydration warning",
+    "Native browser 125%/150% zoom and OS scaling; only reflow equivalents measured",
+    "Real devices/keyboards/browser chrome and Safari/Firefox",
+    "Authenticated portal/admin tables, data-backed filters/images, inactive offer modal, remote persistence and earlier Phase 1/8/9 gates"
+  ],
+  "next_phase": "15 \u2014 STOP pending owner continuation",
+  "published": false,
+  "secrets_data_mutations": false,
+  "temporary_scripts_committed": false
+}

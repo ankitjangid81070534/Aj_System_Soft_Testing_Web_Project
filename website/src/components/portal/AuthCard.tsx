@@ -44,7 +44,7 @@ export function AuthCard({
           </div>
 
           <div className="relative mt-10 h-56 max-w-xl [perspective:900px]">
-            <div className="absolute inset-x-8 top-0 rotate-[-2deg] rounded-3xl border border-line bg-surface/75 p-5 shadow-e3 backdrop-blur-xl">
+            <div className="absolute inset-x-4 top-0 rotate-[-2deg] rounded-3xl border border-line bg-surface/75 p-5 shadow-e3 backdrop-blur-xl xl:inset-x-8">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-600 text-on-brand shadow-e2">
@@ -65,7 +65,7 @@ export function AuthCard({
                   ["Status", "In progress"],
                   ["Support", "Connected"],
                 ].map(([label, status]) => (
-                  <div key={label} className="rounded-2xl border border-line bg-canvas p-3">
+                  <div key={label} className="min-w-0 rounded-2xl border border-line bg-canvas p-2 [overflow-wrap:anywhere] xl:p-3">
                     <p className="text-[11px] text-ink-muted">{label}</p>
                     <p className="mt-1 text-sm font-semibold text-ink">{status}</p>
                   </div>

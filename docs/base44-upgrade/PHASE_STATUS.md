@@ -1,17 +1,39 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 13 — PERFORMANCE / CORE WEB VITALS — SCOPED OPTIMIZATION + LOCAL MEASUREMENT COMPLETE
-LAST_COMPLETED_PHASE: 13 — scoped code/local lab work; field performance, complete visual review and prior Phase 1/8/9 authenticated gates remain DEFERRED, not full release sign-off
-NEXT_PHASE: 14 — responsive / all screen sizes; STOP pending owner continuation; navbar work remains EXCLUDED
-FILES_CHANGED_LAST_PHASE: website/src/lib/data/blog.ts; blog-performance.test.ts (relative to that data directory); website/src/app/(public)/blog/[slug]/page.tsx; article-performance.test.ts (same route directory); website/src/components/site/BlogPreviewSection.tsx; GallerySection.tsx; image-delivery.test.ts (same site directory); website/src/components/ui/ProjectCard.tsx; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; PHASE_13_PERFORMANCE.md; evidence/phase13-before-lab.json; evidence/phase13-after-lab.json; evidence/phase13-verification.json; evidence/phase13-production.json (unqualified docs paths under docs/base44-upgrade)
-TESTS_LAST_PHASE: PASS — 403 tests / 48 files, typecheck, lint, isolated production build, whitespace; 18 before/after production-homepage lab runs at 390/919/1440px; 6 production-built route checks; real live-preview article/anchor/service/FAQ/home gestures. Lab timings mixed, CLS unchanged; no field-CWV speedup claim.
-KNOWN_RISKS: Configured-CMS query/media benefits cannot be measured with absent Supabase credentials. Optional media tests use unit fixtures, not published data. Complete post-change visual review and field INP/LCP/CLS are not passed. Existing remote/authenticated gates remain deferred.
-BLOCKERS: No blocker for scoped source optimization. Real CMS/database access, published-domain performance and complete visual sign-off remain unavailable; final screenshot was blocked by preview-call budget. App is healthy; completed-source logs/tests are clean.
-APPROVALS_NEEDED: Owner continuation before Phase 14. Remote CMS/data/schema changes, production publishing and navbar changes require separate authorization. Standing PR-per-phase request remains; never direct main edits or automatic merges.
-LAST_COMMIT_HASH: 9f4dfb9d96 (actual pre-edit HEAD prefix; full hash in phase13-verification.json; resulting commit managed by platform)
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Local production build/lab checks are NOT deployment, field CWV or ranking evidence.
+CURRENT_PHASE: 14 — INTERRUPTED BRANCH RECOVERY + FRESH RESPONSIVE VERIFICATION — scoped recovery complete; outstanding gates below are not passed
+LAST_COMPLETED_PHASE: 14 — scoped presentation fixes/anonymous audit recovered from d5be8b3; full visual/native-device/private sign-off remains deferred
+NEXT_PHASE: 15 — accessibility + security + trust, with owner-authorized existing Privacy/Disclaimer links in desktop top navigation and mobile More; STOP pending START NEXT PHASE SAFELY
+FILES_CHANGED_LAST_PHASE: website/src/app/(public)/privacy/page.tsx; website/src/components/portal/AuthCard.tsx; website/src/components/portal/responsive-layout.test.ts; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; PHASE_14_RESPONSIVE.md; PHASE_14_RECOVERY.md; evidence/phase14-before-layout.json; evidence/phase14-after-layout.json; evidence/phase14-interactions.json; evidence/phase14-final.json; evidence/phase14-verification.json; evidence/phase14-recovery-browser.json; evidence/phase14-recovery-checkpoint.json (unqualified docs paths under docs/base44-upgrade)
+TESTS_LAST_PHASE: PASS — 405 tests / 49 files, typecheck, lint, isolated production build with production NODE_ENV, whitespace; fresh 760 route-size cases, 20 independent gesture assertions, 2 production geometry routes; localhost/public-proxy and live-iframe footer Privacy navigation. Visual screenshots NOT verified.
+KNOWN_RISKS: Native browser/OS scaling, physical devices, non-Chromium browsers, populated CMS, authenticated portal/admin and remote persistence remain unverified. Earlier buffered iframe hydration warning/AdSense load error is not diagnosed; fresh localhost/public-proxy consoles and live gesture checks are clean.
+BLOCKERS: Post-change screenshot review blocked by hidden/zero-size preview panel; open preview for visual sign-off. Supabase/email credentials absent; earlier private gates remain deferred. No boot or scoped source-test blocker.
+APPROVALS_NEEDED: Next-phase command; secure credentials/test-account access for private gates, separate production publication and managed PR merge. Latest owner message authorizes legal navigation in Phase 15 and supersedes earlier navbar exclusion. PR per completed phase remains requested. No direct main edits or branch deletion.
+LAST_COMMIT_HASH: 49e16e4330ffc96225352494ddfad12aa20bea0f (actual pre-recovery HEAD; new commit/push managed by platform; recovered original phase commit d5be8b31ad91caefb9cb1c5ab2e873c97924d21a)
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Source-mounted local dev is healthy; production build/smoke checks are not deployment or field-CWV evidence.
 
-## Current Phase 13 result — authoritative over historical gates below
+## Current Phase 14 recovery — authoritative over historical notes
+
+See [PHASE_14_RECOVERY](PHASE_14_RECOVERY.md). A fresh fetch found **one unique missing Phase 14 commit** on `origin/system-upgrade-init`; working HEAD and `origin/main` matched, while all other feature tips were already ancestors. Recovered its exact reviewed patch without switching branches, rewriting history, deleting branches or editing main. Old branches do not all need merging.
+
+Fresh quality checks and the complete anonymous route-size rescan pass. Initial temporary build/heading-assertion mistakes were corrected in `/tmp` only and are documented; no app bug fix is claimed for those harness corrections. Live iframe Home → Privacy gestures now pass without new errors. Screenshot review is still blocked by the hidden preview, and private/native-device checks are not silently approved.
+
+**STOP: Phase 15 has not started.** On the next authorized phase, include the newly requested Privacy/Disclaimer navigation placement; no navbar change was made in this recovery. Use the managed PR-per-phase workflow. Do not claim a release, main merge or all-device/full-backend pass.
+
+---
+
+## Historical original Phase 14 result — superseded by recovery above
+
+Owner said **“Phase 14 safly”**. See [PHASE_14_RESPONSIVE](PHASE_14_RESPONSIVE.md). Fixed the privacy policy's long-URL wrapping and account-card illustration spacing at the first two-column breakpoint. Preserved desktop-xl spacing, all text/dates/URLs, navbar, forms/consent/actions, auth/RLS, CMS, dependencies, AdSense, SEO and the 5,000-query corpus. No new interaction or unrelated refactor.
+
+Independent Chromium covered 38 anonymous routes at 20 configurations: all 15 requested dimensions, current 769px tablet, phone/tablet landscape and two explicitly simulated zoom-reflow cases. All 760 return HTTP 200 with headings and no page-wide overflow. Two genuine content-overflow defects are gone. Raw evidence retains intentionally translated story scenes; real wheel gestures reach the final content. Three active Team-indicator overflow readings are decorative: its text range fits. **No navbar change.**
+
+Fresh **405 tests / 49 files**, typecheck/lint, isolated copied-dependency build, 59 gesture assertions and two production geometry checks pass. Actual localhost/public-proxy footer clicks also pass with no console errors. The initial tablet screenshot was reviewed; post-change live iframe navigation/visual checks are **unverified**, with a buffered hydration warning and tab availability failures. Native browser zoom, physical devices, populated CMS and authenticated/admin-table checks remain deferred. Neither dummy data nor security bypasses were used.
+
+**STOP before Phase 15.** No merge, deployment, manual commit/push, branch switch or automatic navbar work performed.
+
+---
+
+## Historical Phase 13 result — superseded by Phase 14 above
 
 Owner said **“continue”**. See [PHASE_13_PERFORMANCE](PHASE_13_PERFORMANCE.md). Tightened blog projections without removing reading-time inputs; ran independent article/recent and tags/author reads concurrently; made below-fold galleries lazy and capped wide-screen teaser/gallery image size hints. Preserved publication/draft behavior, authorship fallbacks, 404s, original content, routes, image frames/priority, cache/RLS boundaries, AdSense/auth and dependencies. **No navbar/layout/CSS change.**
 
