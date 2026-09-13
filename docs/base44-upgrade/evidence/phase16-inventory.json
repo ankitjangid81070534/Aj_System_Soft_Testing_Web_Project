@@ -1,0 +1,381 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "source": "website/src/app/(public)/page.tsx"
+    },
+    {
+      "path": "/ajadmin",
+      "source": "website/src/app/ajadmin/page.tsx"
+    },
+    {
+      "path": "/design-preview",
+      "source": "website/src/app/design-preview/page.tsx"
+    },
+    {
+      "path": "/about",
+      "source": "website/src/app/(public)/about/page.tsx"
+    },
+    {
+      "path": "/account",
+      "source": "website/src/app/(public)/account/page.tsx"
+    },
+    {
+      "path": "/ai-methods",
+      "source": "website/src/app/(public)/ai-methods/page.tsx"
+    },
+    {
+      "path": "/blog",
+      "source": "website/src/app/(public)/blog/page.tsx"
+    },
+    {
+      "path": "/contact",
+      "source": "website/src/app/(public)/contact/page.tsx"
+    },
+    {
+      "path": "/disclaimer",
+      "source": "website/src/app/(public)/disclaimer/page.tsx"
+    },
+    {
+      "path": "/forgot-password",
+      "source": "website/src/app/(public)/forgot-password/page.tsx"
+    },
+    {
+      "path": "/login",
+      "source": "website/src/app/(public)/login/page.tsx"
+    },
+    {
+      "path": "/privacy",
+      "source": "website/src/app/(public)/privacy/page.tsx"
+    },
+    {
+      "path": "/projects",
+      "source": "website/src/app/(public)/projects/page.tsx"
+    },
+    {
+      "path": "/request-quote",
+      "source": "website/src/app/(public)/request-quote/page.tsx"
+    },
+    {
+      "path": "/reset-password",
+      "source": "website/src/app/(public)/reset-password/page.tsx"
+    },
+    {
+      "path": "/reviews",
+      "source": "website/src/app/(public)/reviews/page.tsx"
+    },
+    {
+      "path": "/service-agreement",
+      "source": "website/src/app/(public)/service-agreement/page.tsx"
+    },
+    {
+      "path": "/services",
+      "source": "website/src/app/(public)/services/page.tsx"
+    },
+    {
+      "path": "/signup",
+      "source": "website/src/app/(public)/signup/page.tsx"
+    },
+    {
+      "path": "/team",
+      "source": "website/src/app/(public)/team/page.tsx"
+    },
+    {
+      "path": "/terms",
+      "source": "website/src/app/(public)/terms/page.tsx"
+    },
+    {
+      "path": "/update-password",
+      "source": "website/src/app/(public)/update-password/page.tsx"
+    },
+    {
+      "path": "/blog/[slug]",
+      "source": "website/src/app/(public)/blog/[slug]/page.tsx"
+    },
+    {
+      "path": "/projects/[slug]",
+      "source": "website/src/app/(public)/projects/[slug]/page.tsx"
+    },
+    {
+      "path": "/services/[slug]",
+      "source": "website/src/app/(public)/services/[slug]/page.tsx"
+    },
+    {
+      "path": "/ajadmin/agreements",
+      "source": "website/src/app/ajadmin/agreements/page.tsx"
+    },
+    {
+      "path": "/ajadmin/audit",
+      "source": "website/src/app/ajadmin/audit/page.tsx"
+    },
+    {
+      "path": "/ajadmin/brand",
+      "source": "website/src/app/ajadmin/brand/page.tsx"
+    },
+    {
+      "path": "/ajadmin/home",
+      "source": "website/src/app/ajadmin/home/page.tsx"
+    },
+    {
+      "path": "/ajadmin/leads",
+      "source": "website/src/app/ajadmin/leads/page.tsx"
+    },
+    {
+      "path": "/ajadmin/login",
+      "source": "website/src/app/ajadmin/login/page.tsx"
+    },
+    {
+      "path": "/ajadmin/media",
+      "source": "website/src/app/ajadmin/media/page.tsx"
+    },
+    {
+      "path": "/ajadmin/users",
+      "source": "website/src/app/ajadmin/users/page.tsx"
+    },
+    {
+      "path": "/ajadmin/c/[resource]",
+      "source": "website/src/app/ajadmin/c/[resource]/page.tsx"
+    },
+    {
+      "path": "/ajadmin/c/[resource]/[id]",
+      "source": "website/src/app/ajadmin/c/[resource]/[id]/page.tsx"
+    },
+    {
+      "path": "/ajadmin/c/[resource]/new",
+      "source": "website/src/app/ajadmin/c/[resource]/new/page.tsx"
+    },
+    {
+      "path": "/ajadmin/home/[id]",
+      "source": "website/src/app/ajadmin/home/[id]/page.tsx"
+    },
+    {
+      "path": "/ajadmin/home/new",
+      "source": "website/src/app/ajadmin/home/new/page.tsx"
+    },
+    {
+      "path": "/ajadmin/leads/[kind]/[id]",
+      "source": "website/src/app/ajadmin/leads/[kind]/[id]/page.tsx"
+    }
+  ],
+  "routeHandlers": [
+    "website/src/app/auth/callback/route.ts",
+    "website/src/app/auth/confirm/route.ts",
+    "website/src/app/blog/rss.xml/route.ts"
+  ],
+  "serverActions": [
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "upsertResourceAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "setResourceStatusAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "toggleResourceActiveAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "deleteResourceAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "restoreResourceAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/actions.ts",
+      "action": "reorderResourceAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/agreement-actions.ts",
+      "action": "createAgreementAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/agreement-actions.ts",
+      "action": "createAgreementVersionAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/agreement-actions.ts",
+      "action": "activateAgreementVersionAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/agreement-actions.ts",
+      "action": "generateAgreementVersionPdfAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/agreement-actions.ts",
+      "action": "archiveAgreementAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/builder-actions.ts",
+      "action": "toggleSectionVisibilityAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/builder-actions.ts",
+      "action": "reorderSectionAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/builder-actions.ts",
+      "action": "setSectionStatusAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/builder-actions.ts",
+      "action": "saveSectionAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/builder-actions.ts",
+      "action": "createSectionAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/media-actions.ts",
+      "action": "uploadMediaAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/media-actions.ts",
+      "action": "deleteMediaAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/settings-actions.ts",
+      "action": "updateSettingsAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/user-actions.ts",
+      "action": "createUserAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/user-actions.ts",
+      "action": "resetUserPasswordAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/user-actions.ts",
+      "action": "changeUserRoleAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/admin/user-actions.ts",
+      "action": "updateAdminUsernameAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/auth/actions.ts",
+      "action": "signInAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/auth/actions.ts",
+      "action": "signOutAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/leads/actions.ts",
+      "action": "submitContactAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/leads/actions.ts",
+      "action": "submitQuoteAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/leads/actions.ts",
+      "action": "requestAppointmentAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/leads/admin-actions.ts",
+      "action": "updateLeadAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "clientLoginAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "clientSignupAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "googleOAuthReadyAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "forgotPasswordAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "updatePasswordAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "updateProfileAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "completeProfileAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "uploadAvatarAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "submitVerifiedReviewAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    },
+    {
+      "source": "website/src/lib/portal/actions.ts",
+      "action": "clientSignOutAction",
+      "coverage": "source/unit coverage where present; hosted success and persistence blocked"
+    }
+  ],
+  "adminResources": [
+    "services",
+    "clients",
+    "projects",
+    "team",
+    "testimonials",
+    "posts",
+    "categories",
+    "tags",
+    "navigation",
+    "payments",
+    "offers",
+    "announcements",
+    "benefits",
+    "ai-methods",
+    "socials",
+    "seo",
+    "redirects"
+  ]
+}

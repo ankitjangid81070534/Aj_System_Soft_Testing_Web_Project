@@ -1,6 +1,14 @@
 # Base44 Dev Environment
 
-## Current Phase 15 checkpoint (2026-09-13 UTC)
+## Current Phase 16 checkpoint (2026-09-13 UTC)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_16_FULL_SYSTEM_REGRESSION.md`. Phase 16 is PARTIAL/BLOCKED, not fully complete; do not automatically start Phase 17 or release.
+- Native search consumes first Escape when populated. BottomNavigation now prevents that default and calls existing closeMenu, except during IME composition. Keep close/reset/focus paths centralized. `e2e/navigation.spec.ts` reproduces two desktop cases plus a mobile control.
+- Run reusable tests against an already-running server: `npx playwright test e2e/navigation.spec.ts --workers=1 --reporter=line --output=/tmp/navigation-e2e`; optional PLAYWRIGHT_BASE_URL changes target. No new dependencies, auth bypass or data setup.
+- Third-party requests can prevent networkidle forever; use bounded waits for actual heading/font/UI readiness. Anonymous `/ajadmin/leads` intentionally renders a session-expired paragraph, not an H1/inbox. Public canonical checks exclude intentionally noindex auth routes. Initial harness findings are retained, not represented as app fixes.
+- 415 unit tests + 3 reusable browser tests, type/lint/build pass. 760 pre-fix route-size cases, 86 final production gestures, 48 route/15 endpoint probes, 35 internal links pass at scope. Three unconfigured action POSTs are failure/readiness checks, NOT persisted writes. Fifteen lab samples include one missing LCP entry; no field CWV claim.
+- Live iframe hidden/rAF-dependent helpers time out. Final non-animation-wait diagnostics show healthy Home/root, no open dialogs/new errors. Screenshots and live legal-click re-verification remain unverified. Hosted credentials/sessions, CMS Builder/schema issues, private/manual/native/operational gates remain open; respect prior credential deferral.
+
+## Historical Phase 15 checkpoint (2026-09-13 UTC)
 - Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md` first. Phase 15 scoped work complete; STOP before Phase 16. The earlier navbar exclusion is superseded: Privacy/Disclaimer links are now implemented.
 - Legal links supplement—not overwrite—CMS navigation. Keep them in mobile More even with fewer than four main CMS links. Desktop legal links sit under the brand within the existing top navbar; central nav/portal/CTA are preserved.
 - Toast container needs its nameable `region` role; polite delivery is unchanged. Desktop accent mixes 40% dark to pass measured dark-theme eyebrow/CTA contrast. Do not weaken headers/auth or add a heavy library for this.

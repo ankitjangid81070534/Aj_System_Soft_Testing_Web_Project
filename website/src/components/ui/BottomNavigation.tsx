@@ -191,6 +191,14 @@ export function BottomNavigation({
           <label className={styles.searchField}>
             <Search aria-hidden="true" size={20} />
             <input ref={searchRef} type="search" value={query} onChange={event => setQuery(event.target.value)}
+              onKeyDown={event => {
+                // Native search fields consume the first Escape to clear text.
+                // Keep the dialog's advertised Escape-to-close behavior instead.
+                if (event.key === "Escape" && !event.nativeEvent.isComposing) {
+                  event.preventDefault();
+                  closeMenu();
+                }
+              }}
               placeholder="Find a page…" aria-label="Search pages" autoComplete="off" />
             <kbd>ESC</kbd>
           </label>

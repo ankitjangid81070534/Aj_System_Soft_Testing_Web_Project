@@ -1,0 +1,68 @@
+{
+  "phase": 16,
+  "status": "PARTIALLY_VERIFIED_BLOCKED_FOR_FULL_SIGNOFF",
+  "startingHead": "6f2aca0c14b12159bd4a10c751cdff1ffc63235c",
+  "sourceChanges": [
+    "website/src/components/ui/BottomNavigation.tsx",
+    "website/e2e/navigation.spec.ts"
+  ],
+  "sourceSha256": {
+    "website/src/components/ui/BottomNavigation.tsx": "8f77a4a33490adefb75a0b070753f05c0f2619a10d7ec36ec9f979ac52471516",
+    "website/e2e/navigation.spec.ts": "6060e9dd5ebec05903011e41b6600710c3df805455d756b159398ac25c221b18"
+  },
+  "preservedSha256": {
+    "website/package.json": "7506f4e3474078393e9969b40ebcc4a14d7c282e2af5b0fbc4aff6080fde6a4e",
+    "website/package-lock.json": "ee3296ab138403efe846f0dfe3ad2a571ecb7cdcc1b16c33cbdf51af09a2b08c",
+    "website/next.config.ts": "d71791d04e2402a461fb4cc741eda173cd8feb2096a5d0878517317836c1587d",
+    "docker-compose.base44.yml": "37a1f0bd18eb61deeda3a3aad82d33aa3f7dd4f6da5bc383a154492cce021486",
+    ".base44/environment.json": "3231d4791cd79fdd5ab4f7f3fb0b07f81f42baabeba7aedc70f8813ef1141ecd",
+    "docs/base44-upgrade/seo-keywords-5000.csv": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0"
+  },
+  "checks": {
+    "unitTests": 415,
+    "unitTestFiles": 51,
+    "reusableBrowserTests": 3,
+    "browserTestsPassOn": [
+      "source dev",
+      "final isolated production"
+    ],
+    "typecheck": "pass",
+    "lint": "pass",
+    "build": "pass",
+    "routeSizeCasesBeforeKeyboardFix": 760,
+    "finalProductionGestureAssertions": 86,
+    "finalAnonymousRouteProbes": 48,
+    "endpointProbes": 15,
+    "internalLinks": 35,
+    "productionDependencyAdvisories": 0,
+    "previewFinal": {
+      "path": "/",
+      "rootChildren": 9,
+      "mainChildren": 2,
+      "openDialogs": 0,
+      "overlay": false,
+      "failedRequests": 0,
+      "onlyHistoricalConsoleErrors": true
+    },
+    "liveLegalGesture": "UNVERIFIED this phase: helper timeouts",
+    "visual": "BLOCKED iframe_hidden",
+    "perfSamples": 15,
+    "missingLcpSamples": 1
+  },
+  "blocked": [
+    "real credentials and approved staff/client sessions",
+    "hosted auth, CRUD, uploads, RLS, email, public sync",
+    "Home Builder integration with actual saved composition",
+    "hosted ai_methods schema/migration verification",
+    "post-change screenshots and complete manual accessibility",
+    "native-device/non-Chromium/field performance",
+    "older iframe warning diagnosis",
+    "operational retention/consent/logging confirmations"
+  ],
+  "businessDataWrites": false,
+  "serverActionPosts": 3,
+  "postsPurpose": "Google readiness and recovery/contact unconfigured rejection, not persistence",
+  "phase17Started": false,
+  "published": false,
+  "automaticMerge": false
+}
