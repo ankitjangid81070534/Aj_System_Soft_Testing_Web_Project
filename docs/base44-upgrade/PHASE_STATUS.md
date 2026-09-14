@@ -11,6 +11,12 @@ APPROVALS_NEEDED: Existing-project configuration and approved test sessions/data
 LAST_COMMIT_HASH: 6f2aca0c14b12159bd4a10c751cdff1ffc63235c (pre-Phase-16 HEAD; phase progress/fix commit and push are platform-managed at turn end)
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Live source dev healthy on 3000; isolated production verification is not deployment.
 
+## Hydration / GitHub diagnostic continuation — 2026-09-14
+
+See [HYDRATION_DIAGNOSIS](HYDRATION_DIAGNOSIS.md). The owner's current React diff shows unexpected browser-injected `bis_size` attributes; live body also has external `bis_*` markers. No matching app source and no hydration errors in six clean local-browser cases or two clean public-preview cases. Exact injecting extension/tool is unidentified; owner-side disable/reload remains necessary. No suppression or application workaround was shipped. Earlier unrelated AdSense/historical messages are not all resolved by this finding.
+
+Fresh **415 tests / 51 files**, typecheck and lint pass; eight actual clean-browser menu open/close journeys pass. Current branch HEAD `cd5ce7a49cbe5052e979e08e263cf4ab49d115f3` already equals GitHub's working-branch tip. Only diagnostic documentation changes this turn, auto-committed/pushed by Base44. No fresh production build, owner-browser remediation sign-off, application/schema/data change, merge or deployment. Phase 16 remains blocked and CMS repairs remain unimplemented.
+
 ## Phase 16 CMS planning continuation — 2026-09-14
 
 Owner selected **Plan CMS repairs**. The [CMS repair proposal](PHASE_16_CMS_REPAIR_PLAN.md) is complete; **no repairs implemented**. Starting HEAD is `06c3cfe1039d5d88b31b5998d628270f4db662da`, worktree clean. Fresh scoped Builder authorization / AI public-reader tests: **11 PASS / 2 files**, mocked adapters only. Documentation-only changes: new repair plan plus pointers in this file, MASTER_PROJECT_UNDERSTANDING and AGENTS.

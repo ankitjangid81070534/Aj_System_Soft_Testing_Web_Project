@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Hydration diagnostic continuation (2026-09-14)
+- Read `docs/base44-upgrade/HYDRATION_DIAGNOSIS.md`. Owner iframe React diff contains externally injected `bis_size` attributes and body `bis_*`/`__processed_…__` markers, absent from app source and clean browsers. Exact injector not identified; owner must disable the injecting browser extension/tool and reload. No app fix or owner-browser resolution claimed.
+- Six local phone/tablet/desktop light/dark cases and two public-preview tablet cases hydrate cleanly and pass real menu open/close. Fresh 415 tests, typecheck and lint pass. Do not blanket-suppress hydration warnings, strip attributes, disable SSR/ads or weaken headers to conceal injection.
+- Starting `cd5ce7a` already matched the remote working branch, including all its latest phase/CMS planning updates. Diagnostic docs auto-sync at turn end; no merge/release or new CMS implementation authorized.
+
 ## CMS repair planning continuation (2026-09-14)
 - Owner requested planning only. Read `docs/base44-upgrade/PHASE_16_CMS_REPAIR_PLAN.md`; repairs, schema changes and Home integration are NOT implemented or authorized. Phase 16 remains blocked; Phase 17 not started.
 - Recommended first slice after approval: Builder truthful list/quick-action outcomes using existing admin result/form patterns. Its two-write reorder is still non-atomic; feedback alone cannot fix that. Preserve editor status omission and inspect cross-page gallery use before adding Home-only row filters.
