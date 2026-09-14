@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## CMS repair planning continuation (2026-09-14)
+- Owner requested planning only. Read `docs/base44-upgrade/PHASE_16_CMS_REPAIR_PLAN.md`; repairs, schema changes and Home integration are NOT implemented or authorized. Phase 16 remains blocked; Phase 17 not started.
+- Recommended first slice after approval: Builder truthful list/quick-action outcomes using existing admin result/form patterns. Its two-write reorder is still non-atomic; feedback alone cannot fix that. Preserve editor status omission and inspect cross-page gallery use before adding Home-only row filters.
+- Do not directly wire the unused home-section loader: its defaults omit accepted Home content, it discards variant/accent, and all-hidden versus read-error semantics need approval. 0016 supports three types missing from Builder lists/database type unions. Reconcile saved rows and effective RLS before enabling public composition.
+- Fresh planning baseline: 11 tests across Builder authorization and AI reader pass (mocked adapters only). No SQL, data, credentials, UI or configuration changes; preserve credential deferral.
+
 ## Current Phase 16 checkpoint (2026-09-13 UTC)
 - Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_16_FULL_SYSTEM_REGRESSION.md`. Phase 16 is PARTIAL/BLOCKED, not fully complete; do not automatically start Phase 17 or release.
 - Native search consumes first Escape when populated. BottomNavigation now prevents that default and calls existing closeMenu, except during IME composition. Keep close/reset/focus paths centralized. `e2e/navigation.spec.ts` reproduces two desktop cases plus a mobile control.

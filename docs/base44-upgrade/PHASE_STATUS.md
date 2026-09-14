@@ -11,7 +11,15 @@ APPROVALS_NEEDED: Existing-project configuration and approved test sessions/data
 LAST_COMMIT_HASH: 6f2aca0c14b12159bd4a10c751cdff1ffc63235c (pre-Phase-16 HEAD; phase progress/fix commit and push are platform-managed at turn end)
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Live source dev healthy on 3000; isolated production verification is not deployment.
 
-## Current Phase 16 result — authoritative over historical notes
+## Phase 16 CMS planning continuation — 2026-09-14
+
+Owner selected **Plan CMS repairs**. The [CMS repair proposal](PHASE_16_CMS_REPAIR_PLAN.md) is complete; **no repairs implemented**. Starting HEAD is `06c3cfe1039d5d88b31b5998d628270f4db662da`, worktree clean. Fresh scoped Builder authorization / AI public-reader tests: **11 PASS / 2 files**, mocked adapters only. Documentation-only changes: new repair plan plus pointers in this file, MASTER_PROJECT_UNDERSTANDING and AGENTS.
+
+Recommended next slice, pending implementation approval: truthful Builder load/save/quick-action feedback, reusing existing admin patterns. Later slices require actual schema/content reconciliation, explicit publication/visibility decisions, transactional reorder approval and a preservation-ledger approval before public Home integration. The plan also records section-type drift and a source-level application/RLS publication-boundary risk; no hosted exploit or fix is claimed.
+
+Phase 16 remains PARTIAL/BLOCKED. Credential deferral, CMS/schema/manual gates and non-publication remain unchanged. No fresh full build/visual/authenticated sign-off, SQL/data/config changes, Phase 17 start, merge or deployment. The original phase verification fields above remain historical Phase 16 results, not a new full regression run.
+
+## Current Phase 16 result — original regression checkpoint
 
 Owner said **START NEXT PHASE SAFELY**. See [Phase 16 report and final defects table](PHASE_16_FULL_SYSTEM_REGRESSION.md). Expanded regression coverage reproduced native search consuming first Escape with populated text. An eight-line input handler reuses existing close/reset/focus behavior and skips IME composition; three reusable browser tests pass on dev/final production after two targeted pre-fix production failures.
 
