@@ -1,0 +1,387 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "gesture": "main navigation /services",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /projects",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /ai-methods",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /reviews",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /about",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /team",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /contact",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /privacy",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "main navigation /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "theme toggle and preference",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "menu Escape and focus return",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "service card detail",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "FAQ opens accessible answer",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "FAQ closes answer",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "service quote CTA",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #c-name",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #a-name",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #q-name",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #client-email",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #signup-name",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "empty form blocked #recovery-email",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "password reveal preserves input",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "password hides again",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "blog card detail",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "article contents anchor",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "homepage project CTA",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /services",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /projects",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /ai-methods",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /reviews",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /about",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /team",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /contact",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /privacy",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "main navigation /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "theme toggle and preference",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "menu Escape and focus return",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "service card detail",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "FAQ opens accessible answer",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "FAQ closes answer",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "service quote CTA",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #c-name",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #a-name",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #q-name",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #client-email",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #signup-name",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "empty form blocked #recovery-email",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "password reveal preserves input",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "password hides again",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "blog card detail",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "article contents anchor",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "homepage project CTA",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "Google unconfigured readiness feedback",
+      "pass": true,
+      "authenticated": false
+    },
+    {
+      "width": 919,
+      "gesture": "recovery unconfigured feedback",
+      "pass": true,
+      "emailDelivered": false
+    },
+    {
+      "width": 919,
+      "gesture": "contact unconfigured guard feedback",
+      "pass": true,
+      "leadPersisted": false
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /services",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /projects",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /ai-methods",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /reviews",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /about",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /team",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /contact",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /privacy",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "main navigation /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "theme toggle and preference",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "navigation empty search feedback",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "legal search result",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "applicationPosts": [
+    {
+      "width": 919,
+      "url": "http://localhost:3300/login",
+      "kind": "server action, not proof of a persisted mutation"
+    },
+    {
+      "width": 919,
+      "url": "http://localhost:3300/forgot-password",
+      "kind": "server action, not proof of a persisted mutation"
+    },
+    {
+      "width": 919,
+      "url": "http://localhost:3300/contact",
+      "kind": "server action, not proof of a persisted mutation"
+    }
+  ],
+  "unavailable": [
+    {
+      "width": 390,
+      "feature": "populated project cards, facets and galleries",
+      "reason": "no published project data; no records fabricated"
+    },
+    {
+      "width": 919,
+      "feature": "populated project cards, facets and galleries",
+      "reason": "no published project data; no records fabricated"
+    }
+  ]
+}

@@ -1,0 +1,706 @@
+{
+  "at": "2026-09-13T19:04:35.387Z",
+  "scope": "SEO/link audit from the full route scan; final production lab spot checks, 1.5-second post-font observation per template/width, unthrottled, no field INP/CWV certification",
+  "linkChecks": [
+    {
+      "href": "/",
+      "status": 200
+    },
+    {
+      "href": "/request-quote",
+      "status": 200
+    },
+    {
+      "href": "/privacy",
+      "status": 200
+    },
+    {
+      "href": "/disclaimer",
+      "status": 200
+    },
+    {
+      "href": "/services",
+      "status": 200
+    },
+    {
+      "href": "/projects",
+      "status": 200
+    },
+    {
+      "href": "/contact",
+      "status": 200
+    },
+    {
+      "href": "/ai-methods",
+      "status": 200
+    },
+    {
+      "href": "/reviews",
+      "status": 200
+    },
+    {
+      "href": "/about",
+      "status": 200
+    },
+    {
+      "href": "/team",
+      "status": 200
+    },
+    {
+      "href": "/services/custom-software-development",
+      "status": 200
+    },
+    {
+      "href": "/services/web-application-development",
+      "status": 200
+    },
+    {
+      "href": "/services/saas-development",
+      "status": 200
+    },
+    {
+      "href": "/services/android-app-development",
+      "status": 200
+    },
+    {
+      "href": "/services/erp-business-software",
+      "status": 200
+    },
+    {
+      "href": "/services/hospital-clinic-software",
+      "status": 200
+    },
+    {
+      "href": "/blog",
+      "status": 200
+    },
+    {
+      "href": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "status": 200
+    },
+    {
+      "href": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "status": 200
+    },
+    {
+      "href": "/blog/how-to-plan-a-custom-software-project",
+      "status": 200
+    },
+    {
+      "href": "/login",
+      "status": 200
+    },
+    {
+      "href": "/service-agreement",
+      "status": 200
+    },
+    {
+      "href": "/terms",
+      "status": 200
+    },
+    {
+      "href": "/services/website-development",
+      "status": 200
+    },
+    {
+      "href": "/services/retail-pos-inventory",
+      "status": 200
+    },
+    {
+      "href": "/services/api-system-integrations",
+      "status": 200
+    },
+    {
+      "href": "/services/ecommerce-development",
+      "status": 200
+    },
+    {
+      "href": "/services/ios-app-development",
+      "status": 200
+    },
+    {
+      "href": "/services/desktop-software-development",
+      "status": 200
+    },
+    {
+      "href": "/services/cloud-deployment-maintenance",
+      "status": 200
+    },
+    {
+      "href": "/services/pharmacy-software",
+      "status": 200
+    },
+    {
+      "href": "/services/hotel-management-software",
+      "status": 200
+    },
+    {
+      "href": "/forgot-password",
+      "status": 200
+    },
+    {
+      "href": "/signup",
+      "status": 200
+    }
+  ],
+  "seo": [
+    {
+      "path": "/",
+      "title": "AJ System Soft Technology | Custom Software Development Company India",
+      "description": true,
+      "canonical": "http://localhost:3000/",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 3,
+      "invalidSchema": false
+    },
+    {
+      "path": "/about",
+      "title": "About Us \u2014 The Team Behind AJS Technology | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/about",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 4,
+      "invalidSchema": false
+    },
+    {
+      "path": "/ai-methods",
+      "title": "AI Methods | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/ai-methods",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 3,
+      "invalidSchema": false
+    },
+    {
+      "path": "/blog",
+      "title": "Insights \u2014 Software Planning, Platforms & Business Systems | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/blog",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "title": "How to plan a custom software project | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/blog/how-to-plan-a-custom-software-project",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 4,
+      "invalidSchema": false
+    },
+    {
+      "path": "/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "title": "Web app or mobile app: choosing the right platform | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/blog/web-app-or-mobile-app-choosing-the-right-platform",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 4,
+      "invalidSchema": false
+    },
+    {
+      "path": "/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "title": "What ERP digitisation actually means for small businesses | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/blog/what-erp-digitization-actually-means-for-small-businesses",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 4,
+      "invalidSchema": false
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/contact",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/disclaimer",
+      "title": "Legal Disclaimer | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/disclaimer",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy Policy | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/privacy",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/projects",
+      "title": "Projects & Case Studies | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/projects",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/request-quote",
+      "title": "Request a Quote | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/request-quote",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 3,
+      "invalidSchema": false
+    },
+    {
+      "path": "/reviews",
+      "title": "Verified Client Reviews | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/reviews",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 3,
+      "invalidSchema": false
+    },
+    {
+      "path": "/service-agreement",
+      "title": "Service Agreement | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/service-agreement",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services",
+      "title": "Services \u2014 Custom Software, SaaS, Web, Mobile & Business Systems | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/android-app-development",
+      "title": "Android App Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/android-app-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/api-system-integrations",
+      "title": "API Integration Services Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/api-system-integrations",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/cloud-deployment-maintenance",
+      "title": "Cloud Application Modernization & Maintenance in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/cloud-deployment-maintenance",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/custom-software-development",
+      "title": "Custom Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/custom-software-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/desktop-software-development",
+      "title": "Desktop & Windows Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/desktop-software-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/ecommerce-development",
+      "title": "Ecommerce Website Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/ecommerce-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/erp-business-software",
+      "title": "ERP & CRM Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/erp-business-software",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/hospital-clinic-software",
+      "title": "Hospital & Clinic Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/hospital-clinic-software",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/hotel-management-software",
+      "title": "Hotel Management Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/hotel-management-software",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/ios-app-development",
+      "title": "iOS App Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/ios-app-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/pharmacy-software",
+      "title": "Pharmacy Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/pharmacy-software",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/retail-pos-inventory",
+      "title": "Retail POS & Inventory Software Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/retail-pos-inventory",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/saas-development",
+      "title": "SaaS Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/saas-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/web-application-development",
+      "title": "Web Application Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/web-application-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/services/website-development",
+      "title": "Website Development Company in India | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/services/website-development",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 5,
+      "invalidSchema": false
+    },
+    {
+      "path": "/team",
+      "title": "Our Team | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/team",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 3,
+      "invalidSchema": false
+    },
+    {
+      "path": "/terms",
+      "title": "Terms of Service | AJ System Soft Technology",
+      "description": true,
+      "canonical": "http://localhost:3000/terms",
+      "pathMatches": true,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/login",
+      "title": "Client Login | AJ System Soft Technology",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/signup",
+      "title": "Create Client Account | AJ System Soft Technology",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/forgot-password",
+      "title": "Recover Client Account | AJ System Soft Technology",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/reset-password",
+      "title": "Update Client Password | AJ System Soft Technology",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/update-password",
+      "title": "Update Client Password | AJ System Soft Technology",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 2,
+      "invalidSchema": false
+    },
+    {
+      "path": "/ajadmin/login",
+      "title": "AJS Admin \u2014 Secure Staff Login",
+      "description": true,
+      "pathMatches": false,
+      "previewNoindex": true,
+      "schemaCount": 0,
+      "invalidSchema": false
+    }
+  ],
+  "lab": [
+    {
+      "width": 390,
+      "path": "/",
+      "metrics": {
+        "lcp": 224,
+        "cls": 0,
+        "longTasks": 1
+      },
+      "overflow": false,
+      "scriptBytes": 625703
+    },
+    {
+      "width": 390,
+      "path": "/services",
+      "metrics": {
+        "lcp": 128,
+        "cls": 0,
+        "longTasks": 1
+      },
+      "overflow": false,
+      "scriptBytes": 626768
+    },
+    {
+      "width": 390,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "metrics": {
+        "lcp": 116,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625703
+    },
+    {
+      "width": 390,
+      "path": "/contact",
+      "metrics": {
+        "lcp": 124,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625635
+    },
+    {
+      "width": 390,
+      "path": "/login",
+      "metrics": {
+        "lcp": 0,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625704
+    },
+    {
+      "width": 919,
+      "path": "/",
+      "metrics": {
+        "lcp": 240,
+        "cls": 0,
+        "longTasks": 2
+      },
+      "overflow": false,
+      "scriptBytes": 625804
+    },
+    {
+      "width": 919,
+      "path": "/services",
+      "metrics": {
+        "lcp": 168,
+        "cls": 0,
+        "longTasks": 1
+      },
+      "overflow": false,
+      "scriptBytes": 626802
+    },
+    {
+      "width": 919,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "metrics": {
+        "lcp": 136,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625803
+    },
+    {
+      "width": 919,
+      "path": "/contact",
+      "metrics": {
+        "lcp": 172,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625634
+    },
+    {
+      "width": 919,
+      "path": "/login",
+      "metrics": {
+        "lcp": 128,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625634
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "metrics": {
+        "lcp": 320,
+        "cls": 0,
+        "longTasks": 2
+      },
+      "overflow": false,
+      "scriptBytes": 625639
+    },
+    {
+      "width": 1440,
+      "path": "/services",
+      "metrics": {
+        "lcp": 192,
+        "cls": 0,
+        "longTasks": 2
+      },
+      "overflow": false,
+      "scriptBytes": 626769
+    },
+    {
+      "width": 1440,
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "metrics": {
+        "lcp": 140,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625804
+    },
+    {
+      "width": 1440,
+      "path": "/contact",
+      "metrics": {
+        "lcp": 168,
+        "cls": 0,
+        "longTasks": 1
+      },
+      "overflow": false,
+      "scriptBytes": 625635
+    },
+    {
+      "width": 1440,
+      "path": "/login",
+      "metrics": {
+        "lcp": 144,
+        "cls": 0,
+        "longTasks": 0
+      },
+      "overflow": false,
+      "scriptBytes": 625804
+    }
+  ],
+  "summary": {
+    "internalLinks": 35,
+    "brokenLinks": [],
+    "seoRoutes": 38,
+    "seoFailures": [],
+    "samples": 15,
+    "publicSeoRoutes": 32,
+    "privateNoindexRoutes": 6,
+    "missingLcpSamples": [
+      {
+        "path": "/login",
+        "width": 390,
+        "reason": "No LCP entry during bounded observation; not zero-millisecond performance"
+      }
+    ]
+  },
+  "harnessCorrection": "Canonical path equality applies to the 32 public marketing/content routes, not intentionally noindex auth/admin pages. Initial findings retained in phase16-seo-perf-initial.json. No SEO source changed."
+}

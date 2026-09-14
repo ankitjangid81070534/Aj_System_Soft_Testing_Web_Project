@@ -1,17 +1,73 @@
 # Phase status — new master upgrade program
 
-CURRENT_PHASE: 13 — PERFORMANCE / CORE WEB VITALS — SCOPED OPTIMIZATION + LOCAL MEASUREMENT COMPLETE
-LAST_COMPLETED_PHASE: 13 — scoped code/local lab work; field performance, complete visual review and prior Phase 1/8/9 authenticated gates remain DEFERRED, not full release sign-off
-NEXT_PHASE: 14 — responsive / all screen sizes; STOP pending owner continuation; navbar work remains EXCLUDED
-FILES_CHANGED_LAST_PHASE: website/src/lib/data/blog.ts; blog-performance.test.ts (relative to that data directory); website/src/app/(public)/blog/[slug]/page.tsx; article-performance.test.ts (same route directory); website/src/components/site/BlogPreviewSection.tsx; GallerySection.tsx; image-delivery.test.ts (same site directory); website/src/components/ui/ProjectCard.tsx; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; PHASE_STATUS.md; PHASE_13_PERFORMANCE.md; evidence/phase13-before-lab.json; evidence/phase13-after-lab.json; evidence/phase13-verification.json; evidence/phase13-production.json (unqualified docs paths under docs/base44-upgrade)
-TESTS_LAST_PHASE: PASS — 403 tests / 48 files, typecheck, lint, isolated production build, whitespace; 18 before/after production-homepage lab runs at 390/919/1440px; 6 production-built route checks; real live-preview article/anchor/service/FAQ/home gestures. Lab timings mixed, CLS unchanged; no field-CWV speedup claim.
-KNOWN_RISKS: Configured-CMS query/media benefits cannot be measured with absent Supabase credentials. Optional media tests use unit fixtures, not published data. Complete post-change visual review and field INP/LCP/CLS are not passed. Existing remote/authenticated gates remain deferred.
-BLOCKERS: No blocker for scoped source optimization. Real CMS/database access, published-domain performance and complete visual sign-off remain unavailable; final screenshot was blocked by preview-call budget. App is healthy; completed-source logs/tests are clean.
-APPROVALS_NEEDED: Owner continuation before Phase 14. Remote CMS/data/schema changes, production publishing and navbar changes require separate authorization. Standing PR-per-phase request remains; never direct main edits or automatic merges.
-LAST_COMMIT_HASH: 9f4dfb9d96 (actual pre-edit HEAD prefix; full hash in phase13-verification.json; resulting commit managed by platform)
-PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Local production build/lab checks are NOT deployment, field CWV or ranking evidence.
+CURRENT_PHASE: 16 — FULL SYSTEM REGRESSION — anonymous/local checks and keyboard fix complete; FULL SIGN-OFF BLOCKED
+LAST_COMPLETED_PHASE: 15 — scoped accessibility/security/trust; Phase 16 is partially verified, not fully complete
+NEXT_PHASE: Finish Phase 16 blocked verification first. Phase 17 — Git/release/final QA — NOT STARTED or automatically authorized.
+FILES_CHANGED_LAST_PHASE: website/src/components/ui/BottomNavigation.tsx; website/e2e/navigation.spec.ts; AGENTS.md; docs/base44-upgrade/MASTER_PROJECT_UNDERSTANDING.md; docs/base44-upgrade/PHASE_STATUS.md; docs/base44-upgrade/REGRESSION_BASELINE.md; docs/base44-upgrade/PHASE_16_FULL_SYSTEM_REGRESSION.md; docs/base44-upgrade/evidence/phase16-routes.json; docs/base44-upgrade/evidence/phase16-gestures.json; docs/base44-upgrade/evidence/phase16-gestures-before-fix.json; docs/base44-upgrade/evidence/phase16-escape.json; docs/base44-upgrade/evidence/phase16-endpoints.json; docs/base44-upgrade/evidence/phase16-endpoints-initial.json; docs/base44-upgrade/evidence/phase16-seo-perf.json; docs/base44-upgrade/evidence/phase16-seo-perf-initial.json; docs/base44-upgrade/evidence/phase16-inventory.json; docs/base44-upgrade/evidence/phase16-npm-audit.json; docs/base44-upgrade/evidence/phase16-checkpoint.json
+TESTS_LAST_PHASE: PASS — 415 unit tests / 51 files; 3 durable browser tests against dev and final production; typecheck, lint, final isolated build, whitespace. 760 pre-fix anonymous route-size cases; 86 final production gesture assertions; 48 final anonymous route probes; 15 endpoint/negative probes; 35 internal links; 32 public SEO routes plus six private noindex surfaces. Zero production dependency advisories. Fifteen local performance samples, one missing LCP entry (not 0ms).
+KNOWN_RISKS: Hosted auth/CRUD/RLS/uploads/OAuth/email/public sync remain unverified. Home Builder/public composition disconnect and missing committed ai_methods creation remain source-confirmed risks needing real schema/data/owner decisions. Manual/native-device/non-Chromium/visual QA, operational legal promises and field performance remain open. Historical iframe hydration/AdSense errors not diagnosed; final iframe root healthy with no new errors.
+BLOCKERS: Six Supabase/email entries absent in managed file and running process; prior deferral/refusal respected. Post-change screenshot blocked by hidden preview. No scoped build/type/lint/unit/browser-test blocker. Do not call this full system or release approval.
+APPROVALS_NEEDED: Existing-project configuration and approved test sessions/data, visual/manual review, and owner decisions for retained integration/schema risks. Separate Phase 17 authorization and production publication/managed merge; no automatic main edits or branch deletion.
+LAST_COMMIT_HASH: 6f2aca0c14b12159bd4a10c751cdff1ffc63235c (pre-Phase-16 HEAD; phase progress/fix commit and push are platform-managed at turn end)
+PRODUCTION_STATUS: Base44 app NOT PUBLISHED. Live source dev healthy on 3000; isolated production verification is not deployment.
 
-## Current Phase 13 result — authoritative over historical gates below
+## Hydration / GitHub diagnostic continuation — 2026-09-14
+
+See [HYDRATION_DIAGNOSIS](HYDRATION_DIAGNOSIS.md). The owner's current React diff shows unexpected browser-injected `bis_size` attributes; live body also has external `bis_*` markers. No matching app source and no hydration errors in six clean local-browser cases or two clean public-preview cases. Exact injecting extension/tool is unidentified; owner-side disable/reload remains necessary. No suppression or application workaround was shipped. Earlier unrelated AdSense/historical messages are not all resolved by this finding.
+
+Fresh **415 tests / 51 files**, typecheck and lint pass; eight actual clean-browser menu open/close journeys pass. Current branch HEAD `cd5ce7a49cbe5052e979e08e263cf4ab49d115f3` already equals GitHub's working-branch tip. Only diagnostic documentation changes this turn, auto-committed/pushed by Base44. No fresh production build, owner-browser remediation sign-off, application/schema/data change, merge or deployment. Phase 16 remains blocked and CMS repairs remain unimplemented.
+
+## Phase 16 CMS planning continuation — 2026-09-14
+
+Owner selected **Plan CMS repairs**. The [CMS repair proposal](PHASE_16_CMS_REPAIR_PLAN.md) is complete; **no repairs implemented**. Starting HEAD is `06c3cfe1039d5d88b31b5998d628270f4db662da`, worktree clean. Fresh scoped Builder authorization / AI public-reader tests: **11 PASS / 2 files**, mocked adapters only. Documentation-only changes: new repair plan plus pointers in this file, MASTER_PROJECT_UNDERSTANDING and AGENTS.
+
+Recommended next slice, pending implementation approval: truthful Builder load/save/quick-action feedback, reusing existing admin patterns. Later slices require actual schema/content reconciliation, explicit publication/visibility decisions, transactional reorder approval and a preservation-ledger approval before public Home integration. The plan also records section-type drift and a source-level application/RLS publication-boundary risk; no hosted exploit or fix is claimed.
+
+Phase 16 remains PARTIAL/BLOCKED. Credential deferral, CMS/schema/manual gates and non-publication remain unchanged. No fresh full build/visual/authenticated sign-off, SQL/data/config changes, Phase 17 start, merge or deployment. The original phase verification fields above remain historical Phase 16 results, not a new full regression run.
+
+## Current Phase 16 result — original regression checkpoint
+
+Owner said **START NEXT PHASE SAFELY**. See [Phase 16 report and final defects table](PHASE_16_FULL_SYSTEM_REGRESSION.md). Expanded regression coverage reproduced native search consuming first Escape with populated text. An eight-line input handler reuses existing close/reset/focus behavior and skips IME composition; three reusable browser tests pass on dev/final production after two targeted pre-fix production failures.
+
+No auth/data/schema/RLS, dependency, SEO/content/legal, security-header/AdSense, compose or secret changes. Three deliberate unconfigured server-action requests showed honest unavailable states; no lead/account/email or remote business data created. All 39 exported actions and 17 resources are inventoried, not declared hosted-tested. Existing source/mock test results do not waive backend gates.
+
+Current live More-open gesture passes; legal-navigation helper calls time out, so that live interaction is unverified this phase. Independent journeys pass. Final non-animation-wait iframe check shows Home, no open dialogs, nonempty root/main, no overlay/failed requests and only historical buffered errors. Post-change screenshot is unavailable. **STOP at Phase 16 partial verification; do not start Phase 17 or release automatically.** Managed PR tool returned existing [PR #10](https://github.com/ankitjangid81070534/Aj_System_Soft_Testing_Web_Project/pull/10) for the progress/fix branch. The new commit/push is platform-managed at turn end; no resulting commit hash or merge is claimed here.
+
+---
+
+## Historical Phase 15 result — superseded by Phase 16 status above
+
+Owner said **START NEXT PHASE SAFELY**. See [Phase 15 report](PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md). Added existing Privacy/Disclaimer destinations inside desktop top navbar and mobile More, preserving the original central links/CMS labels and CTA. Corrected the notification live-region role and confirmed dark-desktop text contrast failures with a narrow accent-token change. Added ten regression/security-boundary contract tests.
+
+No auth/API/RLS/schema, security-header, dependency, legal-copy/date, content/SEO, secret or remote-data changes. The final 60+9 automated scans report zero violations but retain incomplete rules; this is not blanket conformance. All 73 independent gestures pass. User iframe legal clicks, close/focus and Home pass without new errors; screenshot review remains blocked by a hidden surface. No temporary dialogs left open.
+
+**STOP before Phase 16.** Managed PR tool returned the existing [PR #10](https://github.com/ankitjangid81070534/Aj_System_Soft_Testing_Web_Project/pull/10) for this branch; no second simultaneous same-branch PR was created. At the final local check Phase 15 files were still pending the platform's end-of-turn automatic commit/push, so no new commit hash is invented here. No automatic full-system regression, merge, deployment, direct main write or branch deletion. Carry forward all deferred gates explicitly.
+
+---
+
+## Historical Phase 14 recovery — superseded by Phase 15 above
+
+See [PHASE_14_RECOVERY](PHASE_14_RECOVERY.md). A fresh fetch found **one unique missing Phase 14 commit** on `origin/system-upgrade-init`; working HEAD and `origin/main` matched, while all other feature tips were already ancestors. Recovered its exact reviewed patch without switching branches, rewriting history, deleting branches or editing main. Old branches do not all need merging.
+
+Fresh quality checks and the complete anonymous route-size rescan pass. Initial temporary build/heading-assertion mistakes were corrected in `/tmp` only and are documented; no app bug fix is claimed for those harness corrections. Live iframe Home → Privacy gestures now pass without new errors. Screenshot review is still blocked by the hidden preview, and private/native-device checks are not silently approved.
+
+**STOP: Phase 15 has not started.** On the next authorized phase, include the newly requested Privacy/Disclaimer navigation placement; no navbar change was made in this recovery. Managed recovery PR: [#10](https://github.com/ankitjangid81070534/Aj_System_Soft_Testing_Web_Project/pull/10), opened and pushed, **not merged**. Use the managed PR-per-phase workflow. Do not claim a release, main merge or all-device/full-backend pass.
+
+---
+
+## Historical original Phase 14 result — superseded by recovery above
+
+Owner said **“Phase 14 safly”**. See [PHASE_14_RESPONSIVE](PHASE_14_RESPONSIVE.md). Fixed the privacy policy's long-URL wrapping and account-card illustration spacing at the first two-column breakpoint. Preserved desktop-xl spacing, all text/dates/URLs, navbar, forms/consent/actions, auth/RLS, CMS, dependencies, AdSense, SEO and the 5,000-query corpus. No new interaction or unrelated refactor.
+
+Independent Chromium covered 38 anonymous routes at 20 configurations: all 15 requested dimensions, current 769px tablet, phone/tablet landscape and two explicitly simulated zoom-reflow cases. All 760 return HTTP 200 with headings and no page-wide overflow. Two genuine content-overflow defects are gone. Raw evidence retains intentionally translated story scenes; real wheel gestures reach the final content. Three active Team-indicator overflow readings are decorative: its text range fits. **No navbar change.**
+
+Fresh **405 tests / 49 files**, typecheck/lint, isolated copied-dependency build, 59 gesture assertions and two production geometry checks pass. Actual localhost/public-proxy footer clicks also pass with no console errors. The initial tablet screenshot was reviewed; post-change live iframe navigation/visual checks are **unverified**, with a buffered hydration warning and tab availability failures. Native browser zoom, physical devices, populated CMS and authenticated/admin-table checks remain deferred. Neither dummy data nor security bypasses were used.
+
+**STOP before Phase 15.** No merge, deployment, manual commit/push, branch switch or automatic navbar work performed.
+
+---
+
+## Historical Phase 13 result — superseded by Phase 14 above
 
 Owner said **“continue”**. See [PHASE_13_PERFORMANCE](PHASE_13_PERFORMANCE.md). Tightened blog projections without removing reading-time inputs; ran independent article/recent and tags/author reads concurrently; made below-fold galleries lazy and capped wide-screen teaser/gallery image size hints. Preserved publication/draft behavior, authorship fallbacks, 404s, original content, routes, image frames/priority, cache/RLS boundaries, AdSense/auth and dependencies. **No navbar/layout/CSS change.**
 

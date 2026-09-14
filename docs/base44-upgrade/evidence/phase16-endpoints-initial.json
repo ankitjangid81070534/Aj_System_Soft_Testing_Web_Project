@@ -1,0 +1,502 @@
+{
+  "at": "2026-09-13T18:57:57.686Z",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "finalPath": "/",
+      "h1": "Software built around\nyour requirements.",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/ajadmin",
+      "status": 200,
+      "finalPath": "/ajadmin",
+      "h1": "Complete admin setup",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/design-preview",
+      "status": 200,
+      "finalPath": "/design-preview",
+      "h1": "Software built around\nyour requirements.",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "finalPath": "/about",
+      "h1": "AJ System Soft Technology",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "finalPath": "/account",
+      "h1": "Client portal setup in progress",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ai-methods",
+      "status": 200,
+      "finalPath": "/ai-methods",
+      "h1": "Explore AI methods and resources",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "finalPath": "/blog",
+      "h1": "Notes from the workbench",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "finalPath": "/contact",
+      "h1": "Tell us what you need built",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/disclaimer",
+      "status": 200,
+      "finalPath": "/disclaimer",
+      "h1": "Legal Disclaimer",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/forgot-password",
+      "status": 200,
+      "finalPath": "/forgot-password",
+      "h1": "Reset your password",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "finalPath": "/login",
+      "h1": "Welcome back!",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "finalPath": "/privacy",
+      "h1": "Privacy Policy\nPrivacy Policy",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/projects",
+      "status": 200,
+      "finalPath": "/projects",
+      "h1": "Projects & case studies",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/request-quote",
+      "status": 200,
+      "finalPath": "/request-quote",
+      "h1": "Request a quote\nRequest a quote",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/reset-password",
+      "status": 200,
+      "finalPath": "/reset-password",
+      "h1": "Choose a new password",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/reviews",
+      "status": 200,
+      "finalPath": "/reviews",
+      "h1": "Real reviews from real software projects",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/service-agreement",
+      "status": 200,
+      "finalPath": "/service-agreement",
+      "h1": "Service Agreement\nService Agreement",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "finalPath": "/services",
+      "h1": "Software services built around your requirements",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/signup",
+      "status": 200,
+      "finalPath": "/signup",
+      "h1": "Start your client workspace",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/team",
+      "status": 200,
+      "finalPath": "/team",
+      "h1": "The people behind AJS Technology",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "finalPath": "/terms",
+      "h1": "Terms of Service - AJ System Soft Technology",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/update-password",
+      "status": 200,
+      "finalPath": "/update-password",
+      "h1": "Choose a new password",
+      "privateIndex": "noindex, nofollow"
+    },
+    {
+      "path": "/ajadmin/agreements",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/audit",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/brand",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/home",
+      "status": 200,
+      "finalPath": "/ajadmin/home",
+      "h1": "The home page builder needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/leads",
+      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('main h1') to be visible\n"
+    },
+    {
+      "path": "/ajadmin/login",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/media",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/users",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "h1": "Staff Administration",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/home/new",
+      "status": 200,
+      "finalPath": "/ajadmin/home/new",
+      "h1": "The home page builder needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/services",
+      "status": 200,
+      "finalPath": "/ajadmin/c/services",
+      "h1": "Services needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/clients",
+      "status": 200,
+      "finalPath": "/ajadmin/c/clients",
+      "h1": "Clients needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/projects",
+      "status": 200,
+      "finalPath": "/ajadmin/c/projects",
+      "h1": "Projects needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/team",
+      "status": 200,
+      "finalPath": "/ajadmin/c/team",
+      "h1": "Team needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/testimonials",
+      "status": 200,
+      "finalPath": "/ajadmin/c/testimonials",
+      "h1": "Testimonials needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/posts",
+      "status": 200,
+      "finalPath": "/ajadmin/c/posts",
+      "h1": "Blog posts needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/categories",
+      "status": 200,
+      "finalPath": "/ajadmin/c/categories",
+      "h1": "Blog categories needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/tags",
+      "status": 200,
+      "finalPath": "/ajadmin/c/tags",
+      "h1": "Blog tags needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/navigation",
+      "status": 200,
+      "finalPath": "/ajadmin/c/navigation",
+      "h1": "Navigation needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/payments",
+      "status": 200,
+      "finalPath": "/ajadmin/c/payments",
+      "h1": "Payment links needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/offers",
+      "status": 200,
+      "finalPath": "/ajadmin/c/offers",
+      "h1": "Offers needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/announcements",
+      "status": 200,
+      "finalPath": "/ajadmin/c/announcements",
+      "h1": "Announcements needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/benefits",
+      "status": 200,
+      "finalPath": "/ajadmin/c/benefits",
+      "h1": "Launch Benefits needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/ai-methods",
+      "status": 200,
+      "finalPath": "/ajadmin/c/ai-methods",
+      "h1": "AI Methods needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/socials",
+      "status": 200,
+      "finalPath": "/ajadmin/c/socials",
+      "h1": "Social Links needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/seo",
+      "status": 200,
+      "finalPath": "/ajadmin/c/seo",
+      "h1": "SEO metadata needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    },
+    {
+      "path": "/ajadmin/c/redirects",
+      "status": 200,
+      "finalPath": "/ajadmin/c/redirects",
+      "h1": "Redirects needs Supabase first.",
+      "privateIndex": "noindex, nofollow",
+      "note": "Anonymous denial/setup state only, not privileged access verification"
+    }
+  ],
+  "probes": [
+    {
+      "path": "/auth/callback",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/login?error=oauth_callback",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/auth/callback?flow=recovery",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/update-password?error=invalid_recovery_link",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/auth/callback?next=https%3A%2F%2Fexample.invalid",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/login?error=oauth_callback",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/auth/confirm",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/login?error=invalid_email_link",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/auth/confirm?type=recovery",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/update-password?error=invalid_recovery_link",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/auth/confirm?type=unknown",
+      "status": 307,
+      "location": "http://0.0.0.0:3300/login?error=invalid_email_link",
+      "contentType": null,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/blog/rss.xml",
+      "status": 200,
+      "location": null,
+      "contentType": "application/rss+xml; charset=utf-8",
+      "robots": null,
+      "xmlValid": true,
+      "rssCount": 3
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "contentType": "application/xml",
+      "robots": null,
+      "xmlValid": true,
+      "privateSitemapLeak": false,
+      "unsupportedSitemapLeak": false,
+      "sitemapCount": 32
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "location": null,
+      "contentType": "text/plain",
+      "robots": null,
+      "previewBlocked": true
+    },
+    {
+      "path": "/not-a-real-regression-page",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    },
+    {
+      "path": "/services/not-a-real-regression-service",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    },
+    {
+      "path": "/blog/not-a-real-regression-post",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    },
+    {
+      "path": "/projects/not-a-real-regression-project",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    },
+    {
+      "path": "/offers",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    },
+    {
+      "path": "/updates",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "robots": null
+    }
+  ],
+  "headers": {
+    "x-frame-options": "DENY",
+    "x-content-type-options": "nosniff",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.googleadservices.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google https://*.adtrafficquality.google; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.supabase.co https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.googleusercontent.com https://*.adtrafficquality.google; font-src 'self' data: https://fonts.gstatic.com; media-src 'self' https://strvid.nyc3.cdn.digitaloceanspaces.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://*.adtrafficquality.google; frame-src https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google https://*.adtrafficquality.google; child-src https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+  },
+  "summary": {
+    "pageProbes": 48,
+    "pageErrors": [
+      {
+        "path": "/ajadmin/leads",
+        "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('main h1') to be visible\n"
+      }
+    ],
+    "endpointProbes": 15,
+    "serverErrors": [],
+    "privateIndexFailures": [
+      {
+        "path": "/ajadmin/leads",
+        "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('main h1') to be visible\n"
+      }
+    ]
+  }
+}

@@ -2,6 +2,14 @@
 
 Date: 2026-09-12. Source baseline `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. App branch `upgrade-desktop-navbar`.
 
+## Phase 16 follow-up (original baseline retained)
+
+[Phase 16 regression report](PHASE_16_FULL_SYSTEM_REGRESSION.md) contains the current final defects table. Fixed populated-search first Escape; 415 unit + 3 browser tests pass, alongside scoped anonymous/local regressions. Full system sign-off is BLOCKED by private/hosted/manual gates and retained Builder/schema risks. Historical R03/R04/R05/R08 outcomes must be read with their later scoped fixes; none grants hosted release approval. Phase 17 has not started.
+
+## Phase 15 follow-up (original baseline retained)
+
+Scoped Phase 15 results are in [PHASE_15_ACCESSIBILITY_SECURITY_TRUST](PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md): original/CMS navigation preserved while legal links were added; notification semantics and desktop dark contrast corrected. Fresh 415 tests, 60+9 automated scans and 73 independent gestures pass; live iframe legal navigation/focus also passes. No full visual, screen-reader, native-device, authenticated or remote persistence pass is claimed. Historical baseline risk rows below remain historical evidence; current gates live in PHASE_STATUS.
+
 ## Phase 1 follow-up (baseline below retained)
 
 See [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md): R04 has a code fix and role regression tests; R05 is fixed for service/project/blog families with routing tests. Newly discovered generic/Home Builder Save publication bypasses are also repaired. Real hosted authorization/persistence and R01/R02/R03 remain blocked/unresolved; none is silently marked fully verified.

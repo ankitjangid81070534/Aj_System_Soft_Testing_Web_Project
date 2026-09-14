@@ -1,0 +1,1777 @@
+{
+  "at": "2026-09-13T18:40:17.862Z",
+  "scope": "Anonymous Chromium automated WCAG A/AA plus real legal navigation/keyboard/theme gestures; not authenticated or full screen-reader conformance",
+  "scans": [
+    {
+      "path": "/projects",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/services",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 85
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 54
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 52
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/privacy",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/disclaimer",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 33
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/forgot-password",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/services",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 205
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/projects",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 85
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 54
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 52
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/privacy",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/disclaimer",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 33
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/forgot-password",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 919,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 210
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/services",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 97
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/projects",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 45
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 91
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/team",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 44
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 64
+        },
+        {
+          "id": "duplicate-id-aria",
+          "count": 1
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/request-quote",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 60
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "path": "/blog",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 58
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/blog/how-to-plan-a-custom-software-project",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 53
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "path": "/privacy",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 36
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "path": "/services/custom-software-development",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 74
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/disclaimer",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/terms",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/service-agreement",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/login",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 39
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/signup",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 44
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/ajadmin/login",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "path": "/forgot-password",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 42
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 390,
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__brandMark"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.53 (foreground color: #f6f1fc, background color: #9c999f, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__shortName"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.53 (foreground color: #f6f1fc, background color: #9c999f, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 208
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 919,
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__brandMark"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2 (foreground color: #f6f1fc, background color: #afadb2, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__fullName"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2 (foreground color: #f6f1fc, background color: #afadb2, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ],
+      "passes": 24
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 919,
+      "theme": "light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #eeeeee, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#more-navigation-title"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"ai-methods\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"reviews\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"about\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"team\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"privacy\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__menuLink[href$=\"disclaimer\"] > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__portal > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.26 (foreground color: #e4e4e4, background color: #fefefe, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 180
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/disclaimer#More",
+      "width": 1440,
+      "theme": "dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.3 (foreground color: #7c67b8, background color: #f6f5f6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".rounded-sm"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.09 (foreground color: #695f73, background color: #15101e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ],
+      "passes": 27
+    },
+    {
+      "path": "/#portal-login-dialog",
+      "width": 1440,
+      "theme": "light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.06 (foreground color: #f9f7fc, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#more-navigation-title"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #f6f6f7, background color: #ffffff, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "input[type=\"search\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #f6f6f7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__searchField > kbd"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.05 (foreground color: #f9f8f9, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__portal > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #f6f6f7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".bottom-navigation-module__JWf-0a__theme > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.05 (foreground color: #f9f8f9, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "count": 3
+        },
+        {
+          "id": "color-contrast",
+          "count": 190
+        }
+      ],
+      "passes": 27
+    }
+  ],
+  "gestures": [
+    {
+      "width": 320,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 400,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "More /privacy",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "More /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 919,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "search legal destination",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "dark theme",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "keyboard skip link",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "gesture": "portal open Tab Escape",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1536,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1600,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "desktop /privacy",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "desktop /disclaimer",
+      "pass": true
+    },
+    {
+      "width": 2560,
+      "gesture": "keyboard menu Tab then Escape restores trigger",
+      "pass": true
+    }
+  ],
+  "geometry": [
+    {
+      "width": 320,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 400,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "out": [],
+      "height": 84,
+      "top": 800
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 769,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 919,
+      "overflow": false,
+      "out": [],
+      "height": 93.1875,
+      "top": 790.8125
+    },
+    {
+      "width": 1024,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1024,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "out": [],
+      "height": 64.796875,
+      "top": 16
+    },
+    {
+      "width": 1280,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1280,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1366,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1366,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1366,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1440,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1440,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1536,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1536,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1536,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1600,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1600,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1600,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 1920,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1920,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    },
+    {
+      "width": 2560,
+      "path": "/privacy",
+      "label": "Privacy",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 2560,
+      "path": "/disclaimer",
+      "label": "Disclaimer",
+      "fit": true,
+      "visible": true,
+      "current": "page"
+    },
+    {
+      "width": 2560,
+      "overflow": false,
+      "out": [],
+      "height": 82,
+      "top": 16
+    }
+  ],
+  "errors": [],
+  "applicationWrites": [],
+  "summary": {
+    "scans": 60,
+    "violationInstances": 5,
+    "gestures": 61,
+    "failedGestures": [],
+    "geometryIssues": [],
+    "uncaughtErrors": 0
+  }
+}

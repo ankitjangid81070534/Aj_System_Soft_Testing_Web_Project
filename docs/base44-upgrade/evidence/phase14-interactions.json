@@ -1,0 +1,445 @@
+{
+  "scope": "Independent Chromium; real click/tap/fill/wheel gestures. Anonymous UI only, no successful form submissions, auth bypass, fixtures or CMS writes.",
+  "checks": [
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 14.189773559570312,
+        "y": 39.26055908203125,
+        "width": 291.62046813964844,
+        "height": 413.3370361328125
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 16,
+        "y": 22.71875,
+        "width": 288,
+        "height": 522.546875
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "kind": "short_screen_story_stacked",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 14.337265014648438,
+        "y": 316.12744140625,
+        "width": 361.32545471191406,
+        "height": 412.7294921875
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 16,
+        "y": 33.765625,
+        "width": 358,
+        "height": 776.46875
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "kind": "short_screen_story_stacked",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 166.1527099609375,
+        "y": 497.076416015625,
+        "width": 436.694580078125,
+        "height": 414.3636474609375
+      }
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 16,
+        "y": 167.90625,
+        "width": 737,
+        "height": 688.1875
+      }
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "kind": "horizontal_story_wheel_last_scene_reachable",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 190.81576538085938,
+        "y": 649.7460327148438,
+        "width": 438.3684387207031,
+        "height": 415.95196533203125
+      }
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 16,
+        "y": 245.90625,
+        "width": 788,
+        "height": 688.1875
+      }
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "kind": "horizontal_story_wheel_last_scene_reachable",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 41.5999755859375,
+        "y": 93.72592163085938,
+        "width": 940.800048828125,
+        "height": 561.1418762207031
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "navigation_search_filter_clear",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 22,
+        "y": 39.90625,
+        "width": 980,
+        "height": 688.1875
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "kind": "horizontal_story_wheel_last_scene_reachable",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 202.28604125976562,
+        "y": 13.104721069335938,
+        "width": 439.4279479980469,
+        "height": 365.5241241455078
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 16,
+        "y": 15.59375,
+        "width": 812,
+        "height": 358.796875
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "kind": "short_screen_story_stacked",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "menu_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 242.39910888671875,
+        "y": 98.43206787109375,
+        "width": 955.2017211914062,
+        "height": 569.7318115234375
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "navigation_search_filter_clear",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "login_modal_open_fits",
+      "pass": true,
+      "bounds": {
+        "x": 230,
+        "y": 105.90625,
+        "width": 980,
+        "height": 688.1875
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "login_email_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "login_modal_close",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "contact_fill_consent_toggle_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "quote_select_fill_no_submit",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "faq_open_answer_close",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "horizontal_story_wheel_last_scene_reachable",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "kind": "reduced_motion_story_stacked",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "writes": []
+}

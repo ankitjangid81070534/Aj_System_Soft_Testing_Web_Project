@@ -14,6 +14,20 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
+/** Required legal destinations supplement (never replace) CMS navigation. */
+export const LEGAL_NAV_LINKS = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Disclaimer", href: "/disclaimer" },
+] as const;
+
+export function isLegalNavigationLink(href: string) {
+  return LEGAL_NAV_LINKS.some(link => link.href === href);
+}
+
+export function withLegalNavigation<T extends { label: string; href: string }>(links: readonly T[]) {
+  return [...links, ...LEGAL_NAV_LINKS.filter(legal => !links.some(link => link.href === legal.href))];
+}
+
 export const FOOTER_LINK_GROUPS = [
   {
     title: "Build",

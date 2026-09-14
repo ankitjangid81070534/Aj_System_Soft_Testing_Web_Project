@@ -1,0 +1,45 @@
+{
+  "at": "2026-09-13T18:17:28.618Z",
+  "starting_head": "49e16e4330ffc96225352494ddfad12aa20bea0f",
+  "recovered_source_commit": "d5be8b31ad91caefb9cb1c5ab2e873c97924d21a",
+  "working_branch": "system-upgrade-phase",
+  "recovery_method": "Reviewed merge-base patch applied to working tree; no switch, direct main write, manual commit/push, deletion or merge",
+  "checks": {
+    "tests": 405,
+    "test_files": 49,
+    "typecheck": "pass",
+    "lint": "pass",
+    "isolated_production_build": "pass with NODE_ENV=production; initial harness inherited development env and failed",
+    "browser": {
+      "routeCases": 760,
+      "failures": 0,
+      "interactionChecks": 20,
+      "failedInteractions": 0,
+      "uncaughtErrors": 0
+    },
+    "live_iframe": "Home and Privacy footer clicks performed; destination headings appeared; no new console errors, failed requests, overlay or overflow; root populated",
+    "visual": "UNVERIFIED \u2014 screenshot iframe_hidden",
+    "source_hashes_match_original_phase14": true
+  },
+  "source_sha256": {
+    "website/src/app/(public)/privacy/page.tsx": "8b649c4fb2d711f1dae42a5ec608c4360427948fed19a9b21616ce1f1f7ba2b4",
+    "website/src/components/portal/AuthCard.tsx": "b6df24d3501bbb0d922ad95ef3cdb64dd6b4aa9ff5da9250f9ef2e2a090489a0",
+    "website/src/components/portal/responsive-layout.test.ts": "6b0eea6ecf19a347ec08bd3ae949432a0add6817a1c441a7f8a2b2ebf3cf258f",
+    "docs/base44-upgrade/seo-keywords-5000.csv": "8653b9a0e471df199ee5fb869885b83b6dbe806b11ca025ee9c277863d83dde0"
+  },
+  "deferred": [
+    "hidden-preview screenshot review",
+    "earlier buffered iframe hydration warning diagnosis",
+    "native zoom/OS scaling",
+    "physical-device and non-Chromium checks",
+    "authenticated portal/admin and populated CMS",
+    "remote persistence"
+  ],
+  "phase15_requested_navigation": {
+    "desktop": "Privacy and Disclaimer in top navigation",
+    "mobile": "Privacy and Disclaimer inside More",
+    "implemented": false,
+    "supersedes_prior_navbar_exclusion": true
+  },
+  "production_status": "Base44 not published; no deployment"
+}

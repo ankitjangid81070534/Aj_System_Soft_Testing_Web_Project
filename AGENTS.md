@@ -1,6 +1,48 @@
 # Base44 Dev Environment
 
-## Current Phase 13 performance checkpoint (2026-09-13)
+## Hydration diagnostic continuation (2026-09-14)
+- Read `docs/base44-upgrade/HYDRATION_DIAGNOSIS.md`. Owner iframe React diff contains externally injected `bis_size` attributes and body `bis_*`/`__processed_…__` markers, absent from app source and clean browsers. Exact injector not identified; owner must disable the injecting browser extension/tool and reload. No app fix or owner-browser resolution claimed.
+- Six local phone/tablet/desktop light/dark cases and two public-preview tablet cases hydrate cleanly and pass real menu open/close. Fresh 415 tests, typecheck and lint pass. Do not blanket-suppress hydration warnings, strip attributes, disable SSR/ads or weaken headers to conceal injection.
+- Starting `cd5ce7a` already matched the remote working branch, including all its latest phase/CMS planning updates. Diagnostic docs auto-sync at turn end; no merge/release or new CMS implementation authorized.
+
+## CMS repair planning continuation (2026-09-14)
+- Owner requested planning only. Read `docs/base44-upgrade/PHASE_16_CMS_REPAIR_PLAN.md`; repairs, schema changes and Home integration are NOT implemented or authorized. Phase 16 remains blocked; Phase 17 not started.
+- Recommended first slice after approval: Builder truthful list/quick-action outcomes using existing admin result/form patterns. Its two-write reorder is still non-atomic; feedback alone cannot fix that. Preserve editor status omission and inspect cross-page gallery use before adding Home-only row filters.
+- Do not directly wire the unused home-section loader: its defaults omit accepted Home content, it discards variant/accent, and all-hidden versus read-error semantics need approval. 0016 supports three types missing from Builder lists/database type unions. Reconcile saved rows and effective RLS before enabling public composition.
+- Fresh planning baseline: 11 tests across Builder authorization and AI reader pass (mocked adapters only). No SQL, data, credentials, UI or configuration changes; preserve credential deferral.
+
+## Current Phase 16 checkpoint (2026-09-13 UTC)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_16_FULL_SYSTEM_REGRESSION.md`. Phase 16 is PARTIAL/BLOCKED, not fully complete; do not automatically start Phase 17 or release.
+- Native search consumes first Escape when populated. BottomNavigation now prevents that default and calls existing closeMenu, except during IME composition. Keep close/reset/focus paths centralized. `e2e/navigation.spec.ts` reproduces two desktop cases plus a mobile control.
+- Run reusable tests against an already-running server: `npx playwright test e2e/navigation.spec.ts --workers=1 --reporter=line --output=/tmp/navigation-e2e`; optional PLAYWRIGHT_BASE_URL changes target. No new dependencies, auth bypass or data setup.
+- Third-party requests can prevent networkidle forever; use bounded waits for actual heading/font/UI readiness. Anonymous `/ajadmin/leads` intentionally renders a session-expired paragraph, not an H1/inbox. Public canonical checks exclude intentionally noindex auth routes. Initial harness findings are retained, not represented as app fixes.
+- 415 unit tests + 3 reusable browser tests, type/lint/build pass. 760 pre-fix route-size cases, 86 final production gestures, 48 route/15 endpoint probes, 35 internal links pass at scope. Three unconfigured action POSTs are failure/readiness checks, NOT persisted writes. Fifteen lab samples include one missing LCP entry; no field CWV claim.
+- Live iframe hidden/rAF-dependent helpers time out. Final non-animation-wait diagnostics show healthy Home/root, no open dialogs/new errors. Screenshots and live legal-click re-verification remain unverified. Hosted credentials/sessions, CMS Builder/schema issues, private/manual/native/operational gates remain open; respect prior credential deferral.
+
+## Historical Phase 15 checkpoint (2026-09-13 UTC)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md` first. Phase 15 scoped work complete; STOP before Phase 16. The earlier navbar exclusion is superseded: Privacy/Disclaimer links are now implemented.
+- Legal links supplement—not overwrite—CMS navigation. Keep them in mobile More even with fewer than four main CMS links. Desktop legal links sit under the brand within the existing top navbar; central nav/portal/CTA are preserved.
+- Toast container needs its nameable `region` role; polite delivery is unchanged. Desktop accent mixes 40% dark to pass measured dark-theme eyebrow/CTA contrast. Do not weaken headers/auth or add a heavy library for this.
+- Final 415 tests, typecheck/lint/build, 60+9 automated scans and 73 real gestures pass. Evaluate an active native dialog after finite transitions settle; its background is inert. Keep incomplete/initial results in evidence—zero automated violations is not full conformance.
+- Current iframe clicks/focus pass; post-change screenshot is NOT verified (hidden preview). Prior buffered hydration warning, native/manual/private/remote integration gates remain deferred. Retention/consent/logging promises require owner operational confirmation.
+- Production HTTP 200 may contain a streamed redirect: `/ajadmin/users` resolves to `/ajadmin/login` in a real browser. Unconfigured dashboard/account notices are not authenticated tests. Build with production NODE_ENV in `/tmp`; axe-core is temporary tooling, not an application dependency. Managed PR flow; no main edit/merge/deploy.
+
+## Historical Phase 14 recovery checkpoint (2026-09-13)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_14_RECOVERY.md` first. Missing `d5be8b3` patch restored from `origin/system-upgrade-init`; other fetched feature tips already belonged to main. Do not indiscriminately merge/delete branches or edit main. Managed PR flow only.
+- Phase 14 scoped recovery complete, not visual/native/private release sign-off. Fresh 405 tests, typecheck, lint, production build, 760 route-size cases and 20 gestures pass. Live iframe Home → Privacy gesture also passes; screenshot is UNVERIFIED because panel is hidden, and older buffered hydration warning is not diagnosed.
+- Next is Phase 15 only after continuation. Owner now explicitly requests existing Privacy/Disclaimer links in desktop top nav and mobile More; this supersedes all historical navbar exclusions. No navbar edit in recovery.
+- Isolated build must copy dependencies and set `NODE_ENV=production` (compose defaults to development). Keep scripts/builds in `/tmp`, not in live `.next`. MotionWords has an accessible text span plus aria-hidden decoration: assert accessible heading name, not literal innerText equality.
+- Missing Supabase/email credentials remain optional startup omissions, not functioning integrations. No database writes, auth bypass, deployment or manual commit/push. Original evidence is historical; fresh evidence is `phase14-recovery-*.json`.
+
+## Historical original Phase 14 responsive checkpoint (2026-09-13)
+- Read `docs/base44-upgrade/PHASE_STATUS.md` and `PHASE_14_RESPONSIVE.md` first. Owner authorized Phase 14 only; scoped responsive fixes/audit complete, STOP before Phase 15. Navbar remains excluded.
+- Privacy sections now wrap long URLs; AuthCard workspace tiles gain room at the 1024px split while preserving xl spacing. No form/auth/action/content/SEO/nav changes. Presentation tests belong in `.test.ts` (the configured runner does not discover `.test.tsx`).
+- Fresh 405 tests / 49 files, typecheck, lint, copied-dependency isolated production build, 760 route-size scans and 59 independent gestures pass at their stated scope. Evidence retains raw offscreen story scenes and active Team-indicator overflow; real wheel and text-range checks show content remains reachable/fits. Never fix decorative overflow by hiding or restyling the navbar.
+- Native 125%/150% browser zoom is NOT verified: tested reduced-CSS-viewport/DPR reflow equivalents only. Actual authenticated tables, populated CMS images/filters, inactive offers and real-device keyboards remain deferred.
+- Baseline tablet screenshot reviewed, but after-edit iframe repeatedly disappeared; a footer click did not navigate and a hydration warning was truncated before diagnostics lost the tab. Independent localhost AND public-proxy footer clicks/console checks pass; this is NOT iframe or visual sign-off. Google ORB/CSP-report failures and AdSense pings are external, not app mutations; preserve ads/CSP.
+- For isolated builds use real copied dependencies, not an out-of-root symlink. One-off browser scripts/builds/logs stay in `/tmp`. Live dev compose is unchanged/healthy; no remote writes, production publishing or automatic merge. Standing managed PR-per-phase request remains.
+
+## Historical Phase 13 performance checkpoint (2026-09-13)
 - Read `PHASE_STATUS.md` and `PHASE_13_PERFORMANCE.md` first. Phase 13 scoped source/lab work is complete; stop before Phase 14 pending owner continuation. Navbar remains excluded.
 - Blog query projections must retain `content` for reading-time fallback and both author/creator IDs for detail authorship. Tags/author and article/recent reads are independent; unit tests hold responses until both start. Never turn these into cross-user caches or change public/admin client boundaries.
 - About/Team galleries are below-fold/native-lazy. Gallery, homepage blog and project-card image hints cap at 384px in the existing 1216px three-column containers; frame CSS, high-DPR source selection and priority flags are unchanged.

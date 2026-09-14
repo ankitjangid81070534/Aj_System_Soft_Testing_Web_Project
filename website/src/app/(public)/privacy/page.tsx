@@ -98,7 +98,7 @@ export default function PrivacyPage() {
       </div>
       <p className="mt-4 text-xs text-ink-muted">Last updated: 4 September 2026</p>
 
-      <div className="mt-10 flex flex-col gap-10">
+      <div className="mt-10 flex flex-col gap-10 [overflow-wrap:anywhere]">
         {SECTIONS.map((section) => (
           <section key={section.title}>
             <h2 className="text-xl font-semibold tracking-tight text-ink">{section.title}</h2>
