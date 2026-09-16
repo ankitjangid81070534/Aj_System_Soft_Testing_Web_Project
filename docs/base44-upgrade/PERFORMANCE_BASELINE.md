@@ -1,35 +1,27 @@
-# Performance baseline — Phase 0
+# Performance baseline — 30-phase Phase 0
 
-Source `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. See [raw samples](evidence/performance.json).
+2026-09-16, source `b566a40`. [Fresh raw samples](evidence/phase0-30/browser.json); [previous baseline](archive-pre-30-phase/PERFORMANCE_BASELINE.md) is historical, not a before/after comparison.
 
-## Method and limits
+## Method
 
-- Next default production build, isolated server on container loopback 3100; warm server, fresh browser context each run. No CPU/network throttling. Normal motion. Three samples per template/viewport. Five-second observation window after load.
-- These are diagnostic lab numbers, not Lighthouse scores, field Core Web Vitals or real-device/production network claims. Supabase is absent, so no real query waterfall/TTFB impact was measured.
-- LCP is the latest observed candidate; CLS is observed shift sum in that window. INP field data is unavailable. `observedBlockingMs` is summed long-task excess above 50ms in the observation window, **not standardized Lighthouse TBT**. JS transfer uses Resource Timing, so cross-origin resources without timing access and later loads may be undercounted. No detailed JS execution trace was taken.
+Isolated production build on container loopback `127.0.0.1:3101`; warm server, fresh Chromium context for each sample, **no CPU/network throttling**, normal motion, five-second observation after load, three runs per size. Supabase is absent. Captures separately used reduced motion. No ads/third parties were disabled.
 
-## Median of three runs
+LCP = last observed candidate; CLS = shift sum excluding recent input (not a full field session-window metric). Observed blocking = sum of long-task duration above 50ms, **not Lighthouse TBT**. Resource Timing transfers can omit/collapse cached or opaque cross-origin sizes; images and third-party execution are not fully measurable from these entries. Variable third-party JS makes totals vary materially.
 
-| Template | Viewport | LCP ms | CLS | TTFB ms | JS transfer KiB | JS encoded KiB | Observed blocking ms | Load ms |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| `/` | 1214×900 | 448.0 | 0.0000 | 13.1 | 609.9 | 605.2 | 45.0 | 955.4 |
-| `/` | 390×844 | 196.0 | 0.0000 | 6.2 | 609.8 | 605.1 | 7.0 | 741.7 |
-| `/services` | 390×844 | 168.0 | 0.0000 | 6.4 | 610.9 | 605.9 | 0.0 | 646.4 |
-| `/contact` | 390×844 | 148.0 | 0.0000 | 17.8 | 609.8 | 605.1 | 0.0 | 613.3 |
+| Viewport | Median LCP ms | CLS | TTFB ms | JS transfer KiB | JS encoded KiB | Image transfer bytes* | Observed blocking ms |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| mobile 390×844 | 264 | 0.000 | 10.3 | 611.1 | 606.4 | 600 | 69 |
+| tablet 919×499 | 228 | 0.000 | 9.7 | 1019.6 | 1015.0 | 300 | 27 |
+| desktop 1440×900 | 320 | 0.000 | 7.9 | 1019.6 | 1015.0 | 600 | 58 |
 
-## Repository/runtime facts and budgets
+*Low image transfer is an incomplete observation, **not the weight of production imagery**. Current Home uses CSS/SVG decoration and lacks real uploaded project records; entries may be cache hits or inaccessible cross-origin timing. JS transfer varied approximately 611–1020 KiB. Do not label this a stable bundle budget or causal improvement.
 
-- Development Home curl: HTTP 200, 356,835 response bytes, warm TTFB ~217ms for the recorded probe. Do not compare dev compilation/HMR output with production transfer numbers.
-- Shared root ships theme bootstrap, AdSense, reveal/scene/surface motion. Navbar Framer Motion is already installed; no new dependencies were added in this phase.
-- Images: Next AVIF/WebP config and remote allowlists; self-hosted Geist via the package. Raw resource counts/transfers are retained in evidence. Real uploaded media weight and third-party delivery remain unknown.
-- CSS-first artwork rather than WebGL is the current preferred approach. Root scroll/pointer observers and public data fetches should be measured before adding motion.
-- No field INP, Search Console/CrUX, trace-based JS execution, distributed TTFB, mobile CPU/network-throttled score or real CMS query timing was available; do not mark those targets passed.
-- Later targets remain LCP ≤2.5s, CLS ≤0.1, field INP ≤200ms on representative users. Low loopback samples do not prove those targets.
-- Require same-template before/after runs and no content removal to manufacture speed. Phase 13 must obtain realistic mobile conditions and identify the true LCP element before optimization.
+Development HTTP probe separately: 200, 360,974 bytes, ~211ms TTFB with live dev compilation. Do not compare that payload to production sizes.
 
-## Build baseline
+## Open measurements / future gate
 
-- `npm run typecheck`, `npm run lint`, `npm test`: pass.
-- `NODE_ENV=production npm run build` in isolated directory with copied dependencies: pass (default Turbopack, compiled ~10.7s in the successful output).
-- `npm run build -- --webpack`: existing CSS-module purity incompatibility; optional-bundler issue tracked separately, no production-source fix in Phase 0.
-- No production deploy/publish was performed.
+- Field INP/CrUX/Search Console and real-user LCP/CLS: unavailable.
+- Standardized lab TBT and detailed JS execution traces: not measured; long-task list is retained only as diagnostic evidence.
+- Real CMS query latency, save latency, storage imagery, network/CPU-throttled mobile, full scrolling and navigation timings: not measured here.
+- Existing three navigation regressions pass functionally; they are not response-latency benchmarks.
+- Targets remain LCP ≤2.5s, INP ≤200ms, CLS ≤0.1; none is certified by fast unthrottled localhost numbers. Collect controlled same-content before/after conditions in Phase 28, keeping third-party variance explicit.
