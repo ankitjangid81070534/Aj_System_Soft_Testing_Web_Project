@@ -16,6 +16,10 @@ LAST_SAFE_COMMIT: 9c348a82577b2b417334a2edb88922ff84898ab4 — pre-Phase-4 basel
 CURRENT_BRANCH: initial-setup — unchanged
 PRODUCTION_STATUS: Base44 app NOT PUBLISHED. No production mutation, deployment or branch-parity claim.
 
+## Latest acceptance recheck (2026-09-18 UTC)
+
+Repeated continuation resumed Phase 4 only; see [acceptance recheck](PHASE_4_30_ACCEPTANCE_RECHECK.md). Fresh 460 tests/53 files, typecheck and lint pass; source dev healthy and Home HTTP 200. Actual iframe is `/request-quote` at 662×580 with visibility `hidden`, mounted content, no failed requests/overlay and the same three historical buffered stream errors—not a new reproduction or fix. Screenshot again returned `iframe_hidden`; no visual/gesture acceptance. Application unchanged; Phase 5 remains not started. Open and keep the preview visible to finish this gate. Recheck starting HEAD: `921fde541dcbdca6366311407ee4071e40c1ba90` (not a completion commit).
+
 ## Gate
 
 **STOP at Phase 4 acceptance checkpoint; do not skip to Phase 5.** Read [Phase 4 implementation/verification](PHASE_4_30_DESIGN_SYSTEM.md), [current Home preservation/movement ledger](PHASE_3_30_HOMEPAGE_PLAN.md), master, decisions and risks. The latest command authorized Phase 4 only. A repeated continuation must first resume this unfinished acceptance checkpoint, not implicitly approve header work. No material Home moves have been approved/applied.
