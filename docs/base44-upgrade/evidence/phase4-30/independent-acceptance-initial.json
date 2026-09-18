@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-18T19:02:34.816Z",
+  "source": "source-mounted development via public preview origin; fresh independent browser contexts, not editor iframe",
+  "scenarios": [
+    {
+      "width": 1024,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1024,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1024,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "pass": false,
+      "failure": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('searchbox', { name: 'Search pages' })\n"
+    },
+    {
+      "width": 1440,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1440,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "pass": false,
+      "failure": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('searchbox', { name: 'Search pages' })\n"
+    },
+    {
+      "width": 1920,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1920,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1920,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [
+        "Framing 'https://www.google.com/' violates the following report-only Content Security Policy directive: \"frame-ancestors 'self'\". The violation has been logged, but no further action has been taken.\n"
+      ],
+      "failedRequests": [
+        {
+          "path": "/csp/frame-ancestors/38fac9d5b82543fc4729580d18ff2d3d",
+          "sameOrigin": false,
+          "error": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "pass": false,
+      "failure": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('searchbox', { name: 'Search pages' })\n"
+    }
+  ],
+  "allPassed": false,
+  "noSubmissions": true
+}
