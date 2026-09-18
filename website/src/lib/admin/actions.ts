@@ -298,8 +298,11 @@ export async function upsertResourceAction(
   }
 
   const isCreate = !id;
+  // Quick-action visibility is not a permission boundary. Offers and
+  // announcements have a status field even without a Publish quick action.
+  const hasPublicationStatus = config.fields.some((field) => field.name === "status");
   if (
-    isCreate && config.supports.publish && values.status === "published" &&
+    isCreate && hasPublicationStatus && values.status === "published" &&
     !can(auth.user.role, `${config.capability}:publish` as Capability)
   ) {
     return authFailure("FORBIDDEN", "Your role cannot publish this content. Save it as a draft.");
@@ -341,7 +344,7 @@ export async function upsertResourceAction(
   // The Save form is another status-change entry point, not a publish bypass.
   // Editors can still edit content without changing its current publication state.
   if (
-    config.supports.publish && values.status !== existing.status &&
+    hasPublicationStatus && values.status !== existing.status &&
     !can(auth.user.role, `${config.capability}:publish` as Capability)
   ) {
     return authFailure("FORBIDDEN", "Your role cannot change the publication status.");
@@ -356,7 +359,7 @@ export async function upsertResourceAction(
 
   // Omit the protected field for editors even when it matched the read row:
   // a concurrent publisher must not have their newer status overwritten.
-  if (config.supports.publish && !can(auth.user.role, `${config.capability}:publish` as Capability)) {
+  if (hasPublicationStatus && !can(auth.user.role, `${config.capability}:publish` as Capability)) {
     delete payload.status;
   }
   const { data, error } = await admin

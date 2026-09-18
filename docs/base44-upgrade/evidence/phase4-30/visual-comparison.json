@@ -1,0 +1,773 @@
+{
+  "method": "Independent Chromium reduced-motion, 900px height, same routes/themes; raw screenshot pixels with channel delta >12. Not human visual approval.",
+  "cases": [
+    {
+      "name": "390-light-home",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.784,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          192,
+          48
+        ],
+        "after": [
+          192,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-light-services",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.43,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-light-contact",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.43,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-light-login",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 8.69,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          296,
+          45
+        ],
+        "after": [
+          296,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-dark-home",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.833,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          192,
+          48
+        ],
+        "after": [
+          192,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-dark-services",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.43,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-dark-contact",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.43,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "390-dark-login",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.555,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          296,
+          45
+        ],
+        "after": [
+          296,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-light-home",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.675,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          192,
+          48
+        ],
+        "after": [
+          192,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-light-services",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.253,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-light-contact",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.253,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-light-login",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 7.147,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          418,
+          45
+        ],
+        "after": [
+          418,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-dark-home",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.702,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          192,
+          48
+        ],
+        "after": [
+          192,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-dark-services",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.253,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-dark-contact",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.253,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "662-dark-login",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.273,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          418,
+          45
+        ],
+        "after": [
+          418,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-light-home",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.372,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          203,
+          48
+        ],
+        "after": [
+          203,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-light-services",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.203,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-light-contact",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.203,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-light-login",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.372,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          310.46875,
+          45
+        ],
+        "after": [
+          310.46875,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-dark-home",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.395,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          203,
+          48
+        ],
+        "after": [
+          203,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-dark-services",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.203,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-dark-contact",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.203,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "820-dark-login",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.372,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          310.46875,
+          45
+        ],
+        "after": [
+          310.46875,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-light-home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.202,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          203,
+          48
+        ],
+        "after": [
+          203,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-light-services",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-light-contact",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.09,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-light-login",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.209,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          405.25,
+          45
+        ],
+        "after": [
+          405.25,
+          45
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-dark-home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.29,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          203,
+          48
+        ],
+        "after": [
+          203,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-dark-services",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          198,
+          48
+        ],
+        "after": [
+          198,
+          48
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-dark-contact",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.09,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          166,
+          44
+        ],
+        "after": [
+          166,
+          44
+        ]
+      },
+      "noOverflow": true
+    },
+    {
+      "name": "1440-dark-login",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sameDimensions": true,
+      "changedPixelPercent": 0.209,
+      "sameHeadings": true,
+      "sameLinks": true,
+      "sameSectionOrder": true,
+      "sameNavGeometry": true,
+      "actionGeometry": {
+        "before": [
+          405.25,
+          45
+        ],
+        "after": [
+          405.25,
+          45
+        ]
+      },
+      "noOverflow": true
+    }
+  ]
+}

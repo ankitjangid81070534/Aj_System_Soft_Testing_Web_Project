@@ -1,0 +1,166 @@
+{
+  "scope": "Anonymous isolated-production renders; not authenticated saves",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "finalPath": "/",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "finalPath": "/services",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/projects",
+      "status": 200,
+      "finalPath": "/projects",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "finalPath": "/blog",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "finalPath": "/contact",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/request-quote",
+      "status": 200,
+      "finalPath": "/request-quote",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "finalPath": "/login",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/signup",
+      "status": 200,
+      "finalPath": "/signup",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "finalPath": "/account",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin",
+      "status": 200,
+      "finalPath": "/ajadmin",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/c/offers",
+      "status": 200,
+      "finalPath": "/ajadmin/c/offers",
+      "setupNotice": true,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/c/announcements",
+      "status": 200,
+      "finalPath": "/ajadmin/c/announcements",
+      "setupNotice": true,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/home",
+      "status": 200,
+      "finalPath": "/ajadmin/home",
+      "setupNotice": true,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/media",
+      "status": 200,
+      "finalPath": "/ajadmin/media",
+      "setupNotice": false,
+      "hasContent": false,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/brand",
+      "status": 200,
+      "finalPath": "/ajadmin/brand",
+      "setupNotice": false,
+      "hasContent": false,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/agreements",
+      "status": 200,
+      "finalPath": "/ajadmin/login",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/leads",
+      "status": 200,
+      "finalPath": "/ajadmin/leads",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/ajadmin/users",
+      "status": 200,
+      "finalPath": "/ajadmin/users",
+      "setupNotice": false,
+      "hasContent": false,
+      "applicationError": false
+    },
+    {
+      "path": "/auth/callback",
+      "status": 200,
+      "finalPath": "/login",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    },
+    {
+      "path": "/auth/confirm",
+      "status": 200,
+      "finalPath": "/login",
+      "setupNotice": false,
+      "hasContent": true,
+      "applicationError": false
+    }
+  ],
+  "pageErrors": []
+}

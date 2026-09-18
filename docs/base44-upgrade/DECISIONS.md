@@ -1,0 +1,52 @@
+# Decisions — 30-phase program
+
+| ID | Decision | Reason / boundary |
+|---|---|---|
+| D01 | Latest attached 0–29 plan is current; execute only Phase 0 | Owner explicitly requires the exact continuation command. Old numbered reports are history, not matching new phase completions. |
+| D02 | Preserve five old baseline/state files byte-for-byte in archive | Avoid deleting prior progress or silently losing old Phase 16 blockers. Existing application work remains untouched. |
+| D03 | Reuse valid Base44 compose/environment manifest | Healthy source-mounted Next dev; no new stack, config or unnecessary runtime rewrite. |
+| D04 | Preserve existing Supabase architecture without connecting/migrating now | The app already uses it, editing workflow does not. Public fallback boots safely; missing persistence is a blocker, never a browser-local substitute. |
+| D05 | Respect previous credential deferral | No secret request, generated credential, dummy business record or auth bypass. Successful backend tests remain unavailable. |
+| D06 | Documentation-only baseline, no “obvious” fixes | Builder/source/schema/voice/placement gaps are recorded for gated phases. Phase 0 forbids design/feature changes. |
+| D07 | Keep the exact existing 5,000-query corpus | Count/uniqueness checked; no duplicate research or publication. Phase 26 will reassess current content mapping. |
+| D08 | Test production in an isolated container /tmp copy | Keep live source/HMR and `.next` intact; copy dependencies, explicit production mode. No new app dependency. |
+| D09 | Separate evidence levels | Source inventory, mock/unit, anonymous browser, authenticated persistence, field metrics and deployment are different claims. |
+| D10 | Preserve optional budget field; no new pricing promise | Existing quote form already has optional budget. Wizard choices are future owner decisions. |
+| D11 | No live AI without safe server/provider/knowledge boundary | AI Methods links directory is not a chatbot. Text/voice implementation remains phases 19–21; microphone policy change needs explicit scoped review. |
+| D12 | Managed Git workflow only | Branch stays initial-setup; no manual commit/push, switch, merge, delete, force-push or deploy. Ask before opening a PR. |
+| D13 | Keep latest master verbatim, including full phase list | `MASTER_PLAN_30_PHASES.md` is a byte-exact copy of the attachment; earlier masters remain historical. |
+| D14 | Do not use old README migration claims as execution permission | Effective hosted schema/history is unknown; migration 0016 may include data effects. No automatic SQL replay. |
+
+## Phase 1 decisions (2026-09-18)
+
+- D15: The repeated continuation resumed the interrupted Phase 1; it did not skip to Phase 2. Source audit/scoped repair is complete; hosted functional sign-off remains blocked.
+- D16: Fix the demonstrated offers/announcements Save permission bypass using the resource status field rather than UI quick-publish visibility. Preserve editor draft creation/content edits and admin publication. No UI, schema or activation-only resource change.
+- D17: Before/after mocked-action tests prove the local repair, not direct RLS parity. Committed editor write policies remain a release blocker until sanitized existing-schema review and separate approved policy work.
+- D18: Do not resolve non-atomic operations, Builder composition, upload-capacity policy, agreement semantics or identity linkage by speculative migrations/configuration changes. Record each finding and its acceptance gate in the current Phase 1 report.
+
+## Phase 2 decisions (2026-09-18)
+
+- D19: Resume the interrupted Phase 2 and persist its evidence/report before any next phase. Repeated continuation does not skip unfinished checkpoints or authorize two phases.
+- D20: Benchmark patterns only from Thoughtworks Home, Netguru services and Atomic Object portfolio; do not copy brand/content/claims or present research as measured conversion gains. AJ's existing requirement-led identity, services and proof empty states remain.
+- D21: Prefer reusing existing service, project, enquiry, consultation and legal routes. Context carry-through, guided discovery and field/expectation improvements are proposals for their later phases, not implementation approval now.
+- D22: Separate 32 source-dev/public-proxy service journeys from four isolated-production empty-portfolio recoveries, three navigation tests, source-only observations and failed live iframe checks. Retain raw harness failures; test correction is not application repair. No fresh build or real submission claim.
+
+## Phase 3 decisions (2026-09-18)
+
+- D23: The new continuation authorizes Phase 3 inventory/planning only. Current source confirms fifteen Home content units plus public shell; no application refactor is warranted for a documentation-only request.
+- D24: Recommend keeping benefits early, moving industries before delivery, and placing technology before ownership; preserve every existing unit. This replaces the older program's planning recommendation, not the live order. All material moves require explicit approval; Phase 4 must not enact them implicitly.
+- D25: Reuse existing service/platform/FAQ/project/contact/legal content and routes. A compact future preparation/help entry is a Phase 22 proposal, not a new page or second FAQ library. Review universal benefit wording and repeated Home/footer CTAs without changing them now.
+- D26: Fixed HomeExperience remains composition authority; disconnected Builder defaults omit accepted benefits/ownership/articles. No Builder activation, saved-row mutation, invented proof or private data exposure to implement IA.
+- D27: Separate fresh live Home DOM inventory from visual/gesture claims. Screenshot returned iframe_hidden; ten HTTP 200 destinations and 431 unit tests do not verify clicks, published agreement terms, saved enquiries or backend readiness.
+
+## Phase 4 decisions (2026-09-18)
+
+- D28: Continuation authorizes foundation refinement only. Reuse the existing token/CSS/component system; no new design framework, page restructuring, hero/nav redesign or Phase 6 moving edge. Keep current Home order and all useful copy.
+- D29: Centralize explicit action-role accents/dimensions; use violet for primary icon accents, retain coherent light action faces/ink in both themes and existing status semantics. Soften icon elevation/shared lift; preserve card-specific variable resolution and default control geometry.
+- D30: Refactor CSS recipes rather than component logic. Preserve native button/link/form/loading contracts and existing field geometry; add browser-native forced-colors treatment. No new JS, dependency, persistence or security changes.
+- D31: Retain initial image-unsettled screenshot evidence; correct the harness to decode visible images and compare source-matched production builds. Automated pixel/geometry parity is distinct from human visual acceptance and cannot sign off authenticated/real-data layouts.
+- D32: Phase 4 local implementation/tests pass, but new live-preview stream errors and unavailable screenshot prevent full acceptance. Cause is unestablished; do not claim a fix from passing independent browsers or change unrelated auth/security/runtime code. Resume this gate before Phase 5.
+
+## Next authorization
+
+**STOP at Phase 4 live-preview acceptance checkpoint.** Do not skip to **Phase 5 — Responsive Brand Header + Navigation** on a repeated continuation; finish this gate first, then await a new exact command. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

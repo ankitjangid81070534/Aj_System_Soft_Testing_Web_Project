@@ -1,37 +1,32 @@
-# Phase-gated AJ System Soft Technology upgrade
+# AJ upgrade — current 30-phase program
 
-1. [Phase status / next-command gate](PHASE_STATUS.md)
-2. [Original supplied master plan](MASTER_UPGRADE_PLAN.md)
-3. [Project understanding](MASTER_PROJECT_UNDERSTANDING.md)
-4. [Regression baseline and risk register](REGRESSION_BASELINE.md)
-5. [Route/feature/action matrix](ROUTE_FEATURE_MATRIX.md)
-6. [Performance baseline](PERFORMANCE_BASELINE.md)
-7. [SEO inventory / deferred research map](SEO_KEYWORD_MAP.md)
-8. [Screenshot evidence index](evidence/SCREENSHOTS.md)
-9. [Phase 1 fixes, functional matrix and blocked checks](PHASE_1_FUNCTIONAL_AUDIT.md)
-10. [Phase 2 information architecture and movement ledger](PHASE_2_INFORMATION_ARCHITECTURE.md)
-11. [Phase 2 seven visitor journeys](PHASE_2_USER_JOURNEYS.md)
-12. [Phase 2 benchmark sources and limits](PHASE_2_BENCHMARKS.md)
-13. [Phase 3 shared design-system changes and checks](PHASE_3_DESIGN_SYSTEM.md)
-14. [Phase 3 before/after screenshots](evidence/phase-3/SCREENSHOTS.md)
-15. [Phase 4 hero, navigation and conversion checks](PHASE_4_NAVBAR_HERO.md)
-16. [Phase 4 before/after and current tablet screenshots](evidence/phase-4/SCREENSHOTS.md)
+The latest owner attachment starts a **new 0–29 program**; earlier phase-numbered reports remain evidence, not current authorization.
 
-17. [Phase 5 homepage presentation and checks](PHASE_5_HOMEPAGE_SECTIONS.md)
-18. [Phase 5 section screenshots](evidence/phase-5/SCREENSHOTS.md)
+1. [Current status and exact continuation gate](PHASE_STATUS.md)
+2. [Full latest owner prompt — verbatim](MASTER_PLAN_30_PHASES.md)
+3. [Current project understanding](MASTER_PROJECT_UNDERSTANDING.md)
+4. [Phase 0 completion report and verification limits](PHASE_0_30_PHASE_BASELINE.md)
+5. [Route and requested-feature matrix](ROUTE_FEATURE_MATRIX.md)
+6. [Admin feature matrix](ADMIN_FEATURE_MATRIX.md)
+7. [Regression / do-not-break baseline](REGRESSION_BASELINE.md)
+8. [Performance baseline](PERFORMANCE_BASELINE.md)
+9. [SEO baseline](SEO_BASELINE.md)
+10. [Design baseline and capture limitations](DESIGN_BASELINE.md)
+11. [Decisions](DECISIONS.md) / [Risks](RISKS.md)
+12. [Previous program status, preserved](archive-pre-30-phase/PHASE_STATUS.md)
 
-19. [Phase 6 motion and scroll safety](PHASE_6_MOTION.md)
-20. [Phase 6 evidence](evidence/phase-6/SCREENSHOTS.md)
+Historical detailed reports (including old Phase 16 CMS planning/hydration diagnosis) and old MASTER_UPGRADE_PLAN are preserved. The five archive copies retain their original text and relative link spelling; interpret those old links relative to this directory. They do not override current status. Existing SEO research is not republished or regenerated.
 
-21. [Phase 7 public pages](PHASE_7_PUBLIC_PAGES.md)
-22. [Phase 7 verification evidence](evidence/phase-7/SCREENSHOTS.md)
-23. [Phase 8 auth and portal UI](PHASE_8_AUTH_PORTAL.md)
-24. [Phase 8 verification evidence](evidence/phase-8/README.md)
+13. [Phase 1 data/save audit, scoped permission repair and remaining gates](PHASE_1_30_DATA_SAVE_AUDIT.md)
 
-Phase 7 public UI scope and [final responsive visual review](PHASE_7_FINAL_REVIEW.md) are complete. Phase 8 UI is implemented with public auth states verified; authenticated portal checks remain deferred. STOPPED before Phase 9. Public-page hierarchy and responsive article navigation are refined. Accepted homepage/navigation and business behavior remain preserved; material reorder approval was not received, and integration checks remain deferred.
+14. [Phase 2 professional-site benchmark — current program](PHASE_2_30_BENCHMARKS.md)
+15. [Phase 2 eight buyer journeys, friction and no-change contract](PHASE_2_30_CUSTOMER_JOURNEYS.md)
+16. [Phase 2 evidence and verification limits](evidence/phase2-30/verification.json)
 
-The owner explicitly deferred incomplete Phase 1 integration checks to permit Phase 2 planning. Phase 3 subsequently refined shared presentation tokens/components without changing live composition or business logic. This does not approve the proposed homepage reorder or waive backend/release gates.
+17. [Phase 3 current Home inventory, proposed hierarchy and approval ledger](PHASE_3_30_HOMEPAGE_PLAN.md)
+18. [Phase 3 fresh verification and limits](evidence/phase3-30/verification.json)
 
-Phase 0 contains documentation and evidence only. Actual backend/auth/DB verification and live visual sign-off have explicit blockers; they are not reported as passes. Older numbered reports elsewhere describe older programs.
+19. [Phase 4 shared foundation implementation and acceptance checkpoint](PHASE_4_30_DESIGN_SYSTEM.md)
+20. [Phase 4 verification summary and evidence](evidence/phase4-30/verification.json)
 
-Continue only on `START NEXT PHASE SAFELY`; read phase state first. Do not infer that the next phase is approved from this README or the master plan's complete list.
+**STOP at Phase 4 acceptance checkpoint.** CSS implementation/local regression passes; live-preview runtime/visual acceptance is pending (hidden screenshot and new writable-stream errors, not reproduced independently). Resume this gate before Phase 5; do not skip on a repeated continuation. Home order/content is preserved; hosted saves/RLS remain blocked. No backend migration, content move, real data writes, PR, merge or deployment authorized.

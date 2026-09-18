@@ -1,0 +1,77 @@
+
+> website@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+ ✓ src/components/design-preview/HomeHero.test.ts (17 tests) 129ms
+ ✓ src/app/(public)/terms/terms.test.ts (2 tests) 56ms
+ ✓ src/components/design-preview/HomeExperience.test.ts (13 tests) 278ms
+ ✓ src/lib/admin/growth-authorization.test.ts (16 tests) 97ms
+ ✓ src/components/ui/phase4-navigation.test.ts (5 tests) 69ms
+ ✓ src/lib/admin/actions-authorization.test.ts (12 tests) 62ms
+ ✓ src/lib/seo/refresh.test.ts (2 tests) 31ms
+ ✓ src/proxy.test.ts (16 tests) 42ms
+ ✓ src/lib/data/blog-performance.test.ts (5 tests) 59ms
+ ✓ src/components/portal/portal-ui.test.ts (12 tests) 20ms
+ ✓ src/components/admin/admin-ui.test.ts (22 tests) 46ms
+ ✓ src/app/(public)/blog/[slug]/article-performance.test.ts (2 tests) 58ms
+ ✓ src/lib/admin/quick-actions.test.ts (40 tests) 48ms
+ ✓ src/components/ui/foundation.test.ts (29 tests) 18ms
+ ✓ src/components/ui/phase15-accessibility.test.ts (6 tests) 30ms
+ ✓ src/components/ui/foundation-controls.test.ts (29 tests) 28ms
+ ✓ src/app/ajadmin/dashboard-access.test.ts (6 tests) 42ms
+ ✓ src/lib/admin/builder-authorization.test.ts (7 tests) 25ms
+ ✓ src/components/ui/reference-ui.test.ts (16 tests) 21ms
+ ✓ src/lib/admin/resources.test.ts (6 tests) 14ms
+ ✓ src/lib/validation/portal.test.ts (7 tests) 10ms
+ ✓ src/components/portal/responsive-layout.test.ts (2 tests) 14ms
+ ✓ src/components/site/image-delivery.test.ts (4 tests) 19ms
+ ✓ src/app/(public)/disclaimer/disclaimer.test.ts (3 tests) 17ms
+ ✓ src/lib/seo/foundation.test.ts (10 tests) 16ms
+ ✓ src/lib/validation/leads.test.ts (14 tests) 17ms
+ ✓ src/lib/phase15-security.test.ts (4 tests) 15ms
+ ✓ src/components/site/public-pages.test.ts (16 tests) 12ms
+ ✓ src/components/ui/Footer.test.ts (2 tests) 18ms
+ ✓ src/lib/validation/sections.test.ts (5 tests) 6ms
+ ✓ src/lib/data/projects.test.ts (5 tests) 13ms
+ ✓ src/lib/data/mappers.test.ts (6 tests) 4ms
+ ✓ src/lib/data/buyer-intent-content.test.ts (8 tests) 7ms
+ ✓ src/lib/validation/auth.test.ts (7 tests) 5ms
+ ✓ src/lib/preview-security.test.ts (4 tests) 7ms
+ ✓ src/lib/data/services.test.ts (5 tests) 7ms
+ ✓ src/lib/seo/metadata.test.ts (8 tests) 7ms
+ ✓ src/lib/seo/jsonld.test.ts (8 tests) 6ms
+ ✓ src/lib/admin/crud-ordering.test.ts (6 tests) 7ms
+ ✓ src/lib/seo/sitemap.test.ts (2 tests) 6ms
+ ✓ src/lib/env.test.ts (9 tests) 8ms
+ ✓ src/lib/bottom-navigation.test.ts (3 tests) 5ms
+ ✓ src/components/motion/frame-scheduler.test.ts (6 tests) 6ms
+ ✓ src/lib/data/ai-methods.test.ts (4 tests) 8ms
+ ✓ src/components/motion/motion-lifecycle.test.ts (10 tests) 6ms
+ ✓ src/components/ui/service-accent.test.ts (11 tests) 4ms
+ ✓ src/components/motion/motion-utils.test.ts (6 tests) 5ms
+ ✓ src/types/database.test.ts (3 tests) 4ms
+ ✓ src/lib/auth/permissions.test.ts (6 tests) 4ms
+ ✓ src/lib/data/cta.test.ts (3 tests) 3ms
+ ✓ src/lib/admin/mutation-result.test.ts (3 tests) 4ms
+ ✓ src/components/site/Markdown.test.ts (4 tests) 4ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 3ms
+
+ Test Files  53 passed (53)
+      Tests  460 passed (460)
+   Start at  12:26:16
+   Duration  4.64s (transform 1.40s, setup 0ms, import 6.56s, tests 1.45s, environment 4ms)
+
+
+> website@0.1.0 typecheck
+> tsc --noEmit
+
+
+> website@0.1.0 lint
+> eslint
+

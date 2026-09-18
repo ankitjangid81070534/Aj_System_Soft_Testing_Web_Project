@@ -1,74 +1,32 @@
-# Regression baseline — Phase 0
+# Regression baseline — 30-phase Phase 0
 
-Date: 2026-09-12. Source baseline `421447d827a2f5ec60acd2cc05e830b3acbbc92f`. App branch `upgrade-desktop-navbar`.
+2026-09-16; clean starting branch `initial-setup`, baseline `b566a40deb4f3e68fc0cbdfc82a534025aeaff73`. Earlier baseline preserved in [archive](archive-pre-30-phase/REGRESSION_BASELINE.md).
 
-## Phase 16 follow-up (original baseline retained)
-
-[Phase 16 regression report](PHASE_16_FULL_SYSTEM_REGRESSION.md) contains the current final defects table. Fixed populated-search first Escape; 415 unit + 3 browser tests pass, alongside scoped anonymous/local regressions. Full system sign-off is BLOCKED by private/hosted/manual gates and retained Builder/schema risks. Historical R03/R04/R05/R08 outcomes must be read with their later scoped fixes; none grants hosted release approval. Phase 17 has not started.
-
-## Phase 15 follow-up (original baseline retained)
-
-Scoped Phase 15 results are in [PHASE_15_ACCESSIBILITY_SECURITY_TRUST](PHASE_15_ACCESSIBILITY_SECURITY_TRUST.md): original/CMS navigation preserved while legal links were added; notification semantics and desktop dark contrast corrected. Fresh 415 tests, 60+9 automated scans and 73 independent gestures pass; live iframe legal navigation/focus also passes. No full visual, screen-reader, native-device, authenticated or remote persistence pass is claimed. Historical baseline risk rows below remain historical evidence; current gates live in PHASE_STATUS.
-
-## Phase 1 follow-up (baseline below retained)
-
-See [PHASE_1_FUNCTIONAL_AUDIT](PHASE_1_FUNCTIONAL_AUDIT.md): R04 has a code fix and role regression tests; R05 is fixed for service/project/blog families with routing tests. Newly discovered generic/Home Builder Save publication bypasses are also repaired. Real hosted authorization/persistence and R01/R02/R03 remain blocked/unresolved; none is silently marked fully verified.
-
-## Evidence and acceptance boundaries
-
-| Check | Result | Evidence/limits |
+| Check | Fresh result | Limits/evidence |
 |---|---|---|
-| Clean starting worktree | PASS | `git status --short` empty before documentation |
-| Running cloned source | PASS | Docker web healthy; Next dev on 3000; source bind mount; HTML HTTP 200 |
-| TypeScript | PASS | `npm run typecheck`; [output](evidence/checks/typecheck.txt) |
-| Repository-wide lint | PASS | `npm run lint`; [output](evidence/checks/lint.txt) |
-| Unit tests | PASS | 23 files / 146 tests; [output](evidence/checks/tests.txt) |
-| Default production build | PASS | Isolated source and **copied**, not symlinked, dependencies; `NODE_ENV=production npm run build`; [output](evidence/checks/build-default.txt) |
-| Optional webpack build | FAIL—existing bundler compatibility issue | Global-only selectors in CSS Modules; [output](evidence/checks/build.txt). Does not invalidate successful default Turbopack production build |
-| Production anonymous route/endpoint probes | 67 checked: 60 final HTTP 200, 7 HTTP 404 | [routes.json](evidence/routes.json). Three intentionally nonexistent detail slugs; four compatibility/growth probes listed below. No 5xx, browser page errors or observed horizontal overflow |
-| Sitemap service/blog detail coverage | PASS in fallback dataset | 15 service and 3 blog slugs rendered; real CMS project details unavailable |
-| Live preview nav | PASS interaction assertions | Real Services click → route/active item; Home click → home route/section. No console/network errors reported |
-| Mobile More | PASS local production gesture | 390×844; button opens native dialog and close hides it; dock 362×84 at x14/y744 |
-| Screenshots | 11 captured locally | [index](evidence/SCREENSHOTS.md). Admin/portal captures are setup/anonymous states, not authorized dashboards |
-| Live preview visual capture | BLOCKED | Screenshot renderer returned a zero-size canvas timeout. Saved local captures are evidence, not a claim of live-preview visual review |
-| Integration credentials | ABSENT | Six documented keys checked for presence only, no values printed |
-| Real auth/admin/DB/RLS/uploads/email | BLOCKED | No configured Supabase, staff/client test sessions, remote DB or email provider; no bypass attempted |
-| Source/config/migrations preserved | REQUIRED final invariant | Only docs/base44-upgrade artifacts and an AGENTS pointer may change |
-| Published production | NOT VERIFIED / Base44 app NOT PUBLISHED | Local production smoke is not deployment verification |
-
-## Baseline defect/risk register — do not fix in Phase 0
-
-| ID | Priority | Finding and evidence | Actual verification | Follow-up |
-|---|---|---|---|---|
-| B01 | Blocker for full backend QA | Supabase URL/anon/service-role absent; Resend/from/admin inbox absent | Runtime presence checks; account/admin setup states | Owner supplies existing project's configuration securely; Phase 1 tests with approved accounts/data. Do not change Supabase project or invent credentials |
-| R01 | High, functional | `getHomeSections` defined in `lib/data/sections.ts` has no caller; home renders fixed HomeExperience; builder writes page_sections | Source-confirmed disconnect; live CMS round trip blocked | Phase 1 reproduce/repair only after preserving current accepted composition/content |
-| R02 | High, schema | `ai_methods` resource/type/reader exists but no committed CREATE TABLE migration | All 16 migrations indexed; actual remote schema unknown | Phase 1 compare real schema before proposing additive migration; no speculative migration now |
-| R03 | High, conditional SEO/routes | Sitemap/growth code constructs `/offers/[slug]`, `/updates/[slug]`; no corresponding page files. `/offers` and `/updates` probes are 404 | Source + local response evidence; current absent CMS produces no such sitemap rows | Phase 1/10 resolve real references/data; no unsolicited pages/content in Phase 0 |
-| R04 | High, authorization review | Admin dashboard allows editor via layout, then service-role reads recent quote names/emails without explicit `leads:read`; editor capability list omits leads | Static potential permission mismatch, NOT exploited or reproduced with real sessions | Phase 1 role-matrix test; do not label all admin permissions verified |
-| R05 | Medium, SEO | Redirect lookup lives in proxy, whose matcher omits service/project/blog detail routes | Matcher/read path inspected; configured redirect request untested | Phase 1/10 check real changed slugs and redirect coverage |
-| R06 | Medium, portability | `next build --webpack` rejects pure-global selectors in reference.module.css and bottom-navigation.module.css | Isolated alternate build fails; default production build passes | Phase 3/17 evaluate safe global-style placement, not a Phase 0 change |
-| R07 | Medium, setup/docs | Older docs/admin notice mention migrations ending at 0010/0012, while repository includes 0016; early role default must be superseded before public signup | SQL/history inspected, applied state unknown | Owner confirms complete migration history; do not run destructive or unapproved SQL |
-| R08 | Medium, preview/indexing | Sandbox canonical/site URL is localhost; root preview noindex logic is tied to VERCEL_ENV, not every preview host | Local metadata/site config observed | Phase 10 assess preview safeguards and real production domain without changing canonical identity blindly |
-| R09 | Medium, runtime/security | Process-local rate limiter is best-effort only; global AdSense executes from root layout including private route shells | Source inspection, no abuse or external integration tests | Phase 13/15 assess production WAF/distributed policy and private-page third-party/privacy needs |
-| R10 | Compatibility note | `/portal` and `/profile` exist in proxy protected roots but have no page route; actual portal route is `/account` | 404 probes; no assertion these aliases were supported | Phase 1 verify inbound links/legacy expectations before redirects/new routes |
-| R11 | Content availability | Projects, team, reviews and AI resources empty without CMS; public agreement not published | Honest rendered empty/setup notices | Real records/legal text require owner content, never fabricate proof/claims |
-| R12 | Measurement limit | Unthrottled loopback lab LCP/CLS/TTFB cannot represent mobile field performance, real Supabase latency or INP | 12 samples documented | Phase 13 collect realistic lab traces and field data if available |
+| Existing Base44 compose | PASS: healthy live source dev, HTTP 200 under external Host | Compose/environment manifest reused unchanged; dev origin derived from environment |
+| Unit tests | PASS: 415 / 51 files | [log](evidence/phase0-30/tests.txt); mocked adapters are not hosted saves |
+| Typecheck / lint | PASS | [typecheck](evidence/phase0-30/typecheck.txt), [lint](evidence/phase0-30/lint.txt) |
+| Production build | PASS: default Next build | Isolated `/tmp/aj-phase0-production`, copied dependencies, explicit production mode; live `.next` untouched |
+| Existing browser regression | PASS: 3 tests | [log](evidence/phase0-30/e2e.txt); desktop populated search/Escape/focus/reset at 1024/1440; mobile More→Privacy→closed |
+| Anonymous route renders | PASS: 65 HTTP 200, no observed page errors | [raw evidence](evidence/phase0-30/browser.json); some are redirected/setup screens, not dashboards |
+| Screenshots/geometry | Captured local 390×844, 919×499, 1440×900; no page-wide overflow in capture states | Reduced-motion stable captures; not all-page/device visual certification |
+| User preview | Home/root render observed; mobile and tablet images reviewed | Requested first desktop capture actually showed 919px; live menu postcondition inconclusive, final call had no tab; NOT a passing iframe interaction |
+| Runtime warning | Existing AdSense script-load failure observed in user preview | No source error overlay; not concealed/fixed; independent pageerror listeners do not measure all console failures |
+| Performance | Nine unthrottled local samples | Not field CWV/INP or standardized TBT; see PERFORMANCE_BASELINE |
+| Existing keyword research | PASS count/normalized uniqueness: 5000 | Existing corpus unchanged, not re-researched or keyword-demand validated |
+| Owner production reference | Read-only HTTP 200 and canonical/index directives | Not this branch deployed; no production actions performed |
+| Hosted auth/admin/DB/storage/email | BLOCKED / NOT VERIFIED | Six optional integration names absent; owner deferral respected |
 
 ## Do-not-break list
 
-- All current route slugs, accepted content, real business identity and honest missing-data behavior.
-- Compact desktop single-row navbar; full brand at left; eight visible labels clustered centrally; desktop More absent. Existing mobile/tablet bottom dock and More behavior unchanged.
-- Instant Link navigation, active indicator, native dialogs, search/shortcuts, keyboard focus restoration, theme preference and reduced-motion support.
-- Reveal-once content remains visible; no flicker/re-arm on exit; no scroll hijacking or decorative heavy WebGL.
-- Supabase project, data, RLS, role/capability boundaries, service-role server-only isolation and client ownership.
-- Login, Google OAuth, signup/recovery, client portal, private uploads, agreements, CMS CRUD and cache/public sync. Blocked paths are not assumed safe merely because public pages render.
-- Canonicals/metadata/schema/robots/sitemap/RSS, noindex private pages, self-hosted fonts and production headers.
-- No fake clients/reviews/outcomes/rankings; no business database in localStorage; no bulk SEO pages or keyword stuffing.
+1. Accepted public text, routes/slugs, brand and honest empty states; no fabricated clients/reviews/prices/timelines.
+2. Supabase source of truth, existing records, auth/cookies, role/capability checks, ownership/RLS and server-only privileged keys.
+3. Public forms, consent/agreement semantics, truthful failure versus persistence/email success, attachments and cache/public sync.
+4. Desktop one-row navbar with visible brand/eight central links, legal links/search/login/project CTA; exactly one mobile/tablet bottom dock.
+5. Actual navigation/search/Escape/focus/active route/theme behavior; no motion-dependent controls.
+6. Reveal-once/reduced-motion/no-JS visibility and native scrolling; no hidden-again content or new heavy background loops.
+7. Metadata/canonical/JSON-LD/robots/sitemap/RSS; private and preview noindex; self-hosted fonts/security headers.
+8. Existing 5,000-query corpus stays research-only. No new browser business database, new backend, speculative SQL, fake AI or automatic deployment.
 
-## Baseline test methods and handoff
-
-Local browser checks ran against an **isolated Next production server** on container loopback port 3100, copied from the baseline source; the user's dev server remained on 3000. No cookies were imported and no security control was bypassed. Screenshots used reduced motion for stable capture; performance runs used normal motion. No external account was created and no form/save/delete action wrote a record.
-
-The first temporary default-build attempt used an out-of-root node_modules symlink and was rejected by Turbopack. That was an **audit isolation mistake**, not an app defect: replacing it with a real dependency copy yielded the passing default build. Production output never overwrote live `.next`.
-
-Unit tests and rendering do not validate DB persistence. In Phase 1, use approved reversible test records and assert UI → handler → DB → reload → public result; include owner/client/editor/admin/super-admin denial cases and cache revalidation. Destructive cases need explicit safe scope.
+No application interaction was implemented in Phase 0. Existing independent interactions above pass; final live-iframe interaction is explicitly unverified. Phase 1 must verify each permitted write through reload/public result using approved real sessions/data. No business write, account creation, migration, seed, remote mutation, manual commit/push, merge or branch switch occurred.

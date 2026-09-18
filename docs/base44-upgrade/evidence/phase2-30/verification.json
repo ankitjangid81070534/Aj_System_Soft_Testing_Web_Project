@@ -1,0 +1,43 @@
+{
+  "phase": 2,
+  "program": "0-29",
+  "dateUtc": "2026-09-18",
+  "baselineCommit": "74cc17e7bde0bd32bcf859058132e1ef044066a1",
+  "branch": "initial-setup",
+  "scope": "Resumed interrupted customer-journey benchmark; documentation only",
+  "applicationChanges": false,
+  "checks": {
+    "unitTests": { "passed": 431, "files": 52, "rerunUtc": "2026-09-18T12:03:01Z" },
+    "typecheck": "passed",
+    "lint": "passed",
+    "existingNavigationTests": { "passed": 3, "scope": "same-day interrupted phase run; existing isolated Phase 1 production build on loopback 3102" },
+    "serviceToQuoteJourneys": { "passed": 32, "personas": 8, "uniqueServiceDestinations": 7, "scope": "source-mounted development through public preview proxy" },
+    "contactFormInspections": 4,
+    "projectsEmptyRecovery": { "passed": 4, "scope": "corrected harness on source-identical existing Phase 1 isolated production build, not live iframe" },
+    "viewports": [[390,844],[662,900],[820,1180],[1440,900]],
+    "browserPageErrors": 0,
+    "browserFailedSourceRequests": 0,
+    "runtime": "existing compose reused, healthy source-mounted Next dev on port 3000; external Host HTTP 200",
+    "productionBuild": "not rerun; prior Phase 1 build reused only for explicitly scoped checks",
+    "liveIframe": "unverified: navigation_failed then one real-link retry timed out at 25 seconds",
+    "visualSignoff": "not performed; no design changes",
+    "diffCheck": "see final git diff --check and documentation-only path review"
+  },
+  "externalResearch": {
+    "method": "read-only markdown extraction; IA patterns only, no external interaction/conversion/performance verification",
+    "pages": ["https://www.thoughtworks.com/", "https://www.netguru.com/services", "https://atomicobject.com/portfolio"]
+  },
+  "optionalConfiguration": {
+    "fileAndProcessNamesChecked": true,
+    "NEXT_PUBLIC_SUPABASE_URL": "absent",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "absent",
+    "SUPABASE_SERVICE_ROLE_KEY": "absent",
+    "RESEND_API_KEY": "absent",
+    "EMAIL_FROM": "absent",
+    "EMAIL_ADMIN_TO": "absent"
+  },
+  "excluded": ["real submissions", "data writes", "migrations", "new credentials", "authenticated persistence", "email delivery", "production deployment", "conversion or field performance claims"],
+  "harnessCorrection": "Initial portfolio checks used the wrong heading role/immediate readiness. Raw initial results retained; exact text plus bounded destination waits passed. Public-proxy recovery stalled; final recovery was isolated production. No app repair.",
+  "evidence": ["browser.json", "browser-initial.json", "quality.txt"],
+  "nextPhase": "3 — Information Architecture + Homepage Plan; not started, awaits START NEXT PHASE SAFELY"
+}

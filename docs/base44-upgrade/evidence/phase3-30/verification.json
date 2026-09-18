@@ -1,0 +1,166 @@
+{
+  "phase": 3,
+  "dateUTC": "2026-09-18",
+  "scope": "Information architecture and homepage planning only; no implementation",
+  "baselineCommit": "7ae88b822249f6a8884ba1ab28d452843a433f1d",
+  "branch": "initial-setup",
+  "quality": {
+    "testFiles": 52,
+    "tests": 431,
+    "testsResult": "PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "log": "quality.txt",
+    "logTreatment": "ANSI color escapes stripped only"
+  },
+  "runtime": {
+    "sourceMountedDev": true,
+    "healthy": true,
+    "port": 3000,
+    "externalHostHomeStatus": 200,
+    "restarted": false
+  },
+  "destinationHttpChecks": [
+    {
+      "path": "/",
+      "httpStatus": 200,
+      "bytes": 360974
+    },
+    {
+      "path": "/services",
+      "httpStatus": 200,
+      "bytes": 172762
+    },
+    {
+      "path": "/projects",
+      "httpStatus": 200,
+      "bytes": 86905
+    },
+    {
+      "path": "/blog",
+      "httpStatus": 200,
+      "bytes": 92970
+    },
+    {
+      "path": "/contact",
+      "httpStatus": 200,
+      "bytes": 98523
+    },
+    {
+      "path": "/request-quote",
+      "httpStatus": 200,
+      "bytes": 91789
+    },
+    {
+      "path": "/service-agreement",
+      "httpStatus": 200,
+      "bytes": 80891
+    },
+    {
+      "path": "/privacy",
+      "httpStatus": 200,
+      "bytes": 88651
+    },
+    {
+      "path": "/terms",
+      "httpStatus": 200,
+      "bytes": 77015
+    },
+    {
+      "path": "/disclaimer",
+      "httpStatus": 200,
+      "bytes": 71437
+    }
+  ],
+  "livePreview": {
+    "path": "/",
+    "viewport": {
+      "width": 662,
+      "height": 580
+    },
+    "homePresent": true,
+    "homeSectionOrder": [
+      "hero",
+      "trust (How we work)",
+      "benefits",
+      "services introduction",
+      "service journey (#capabilities)",
+      "platforms",
+      "delivery",
+      "ownership",
+      "industries",
+      "technology",
+      "principles",
+      "insights",
+      "enquiry"
+    ],
+    "conditionalAbsent": [
+      "projects",
+      "reviews",
+      "team"
+    ],
+    "mainChildren": 2,
+    "capturedConsoleErrors": [],
+    "capturedFailedRequests": [],
+    "errorOverlay": false,
+    "screenshot": "UNVERIFIED: iframe_hidden; no retry",
+    "claims": "Current DOM inventory/runtime only; no visual or gesture sign-off"
+  },
+  "optionalIntegrations": {
+    "names": [
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "RESEND_API_KEY",
+      "EMAIL_FROM",
+      "EMAIL_ADMIN_TO"
+    ],
+    "managedFileAllAbsent": true,
+    "processAllAbsent": true,
+    "valuesReadOrLogged": false,
+    "requestedOrGenerated": false
+  },
+  "sourceDigests": {
+    "website/src/app/(public)/page.tsx": "b422aea423b7180cdc1809f154e8a9845b57a86540fd83bfd0737f5559259c33",
+    "website/src/app/(public)/layout.tsx": "3f2c57f3ad900380489a95cf661d3d098842fa25a202e82eaaa49d46cffda3f2",
+    "website/src/components/design-preview/HomeExperience.tsx": "5e3503531c2037d53e7df734762dac6c0745d4bc02284905e8b436ec8d054992",
+    "website/src/components/design-preview/HomeHero.tsx": "27095acb0a0a957f251484d832ec48aebe64c2ff3f49568f9b82d26f62dac064",
+    "website/src/components/design-preview/ServiceJourney.tsx": "ef6776ed0656678381de83ab641cd9ffc4486dc10268e5de718d92b0a9078e66",
+    "website/src/components/design-preview/DeliveryProcess.tsx": "5d36969f5b8a5264b43086ea3e65b772d0a1ca18e163edd28749ec2d357dddcf",
+    "website/src/components/site/PublicSiteFrame.tsx": "feb771a845b4b55340c19ee767106f49a0b64523f967210cf71b065f1a379d7c",
+    "website/src/components/site/TrustStrip.tsx": "1d9168f299b6ea431993dbdf0223a566f7b2c5280e787531430cb7152b681fa8",
+    "website/src/components/site/PlatformsShowcase.tsx": "bdb2c760e8aa59737819c08825287d3ece980656a25e9d6f884e39d1c9c7241f",
+    "website/src/components/site/FeaturedProjects.tsx": "d925c9afe511c0206ebed9008d500930136f3a833f15f675a7877499b7e99798",
+    "website/src/components/site/Industries.tsx": "e07efaff85b421548f0b43c68a4119740b4edafc519c531775e746a2b0a545df",
+    "website/src/components/site/TechCapabilities.tsx": "47bbb9722dddb1d843321f9601b7926fff0f7e08ee43553cbe5288a90ddc8b69",
+    "website/src/components/site/WhyUs.tsx": "717024f86768075f3dae5ecbee607d6b565457ab81db6d55cfb9668abff875dc",
+    "website/src/components/site/TestimonialsSection.tsx": "35fed1b5983edae67a43efc10895b9f4f31343058598dff3f0d3d9b115ba61de",
+    "website/src/components/site/TeamSection.tsx": "a159d7ab3c0b27fc1c5a0f6fa2f1f3ac37b7a5bd59640f76cae7dc16d731bd50",
+    "website/src/components/site/BlogPreviewSection.tsx": "adc8395481dcc6a202b25447d200f047f174527ba877246ca1e9d99bd949cb13",
+    "website/src/components/ui/Footer.tsx": "dff0bcb580169b483142ffa4ea9fcaf42c3e3e28f7a7b140954b2737ebb33ddf",
+    "website/src/lib/data/home.ts": "aba78e59dcf0836f125ef4c2c3e9d1cf03b1eaa99103b591bbc9d390101f25ec",
+    "website/src/lib/data/growth.ts": "5baaaadbeb99056b94b765693bcd5239dc25364e6e54d40f2cbea2fcce5029f5",
+    "website/src/lib/data/sections.ts": "52dc210d0a6f6c456954f3eac6e416bd8074526325f04c82b9ec849e99538c21",
+    "website/src/lib/navigation.ts": "8321e8282585b1c0426f6684f1d38a2d37b7c1cb95a53ef2e7dd4472f5a8ce45"
+  },
+  "preservation": {
+    "appConfigTrackedDiffPaths": [],
+    "whitespaceExitCode": 0,
+    "dataWrites": false,
+    "sqlExecuted": false,
+    "newDependencies": false,
+    "businessStorageAdded": false,
+    "routesChanged": false,
+    "materialMovesApplied": false,
+    "interactionsImplemented": []
+  },
+  "limitations": [
+    "No fresh production build",
+    "No responsive visual or gesture regression run",
+    "No populated hosted data, authenticated save, row reload, upload or email verification",
+    "HTTP 200 agreement route can be unpublished notice",
+    "No measured conversion or performance improvement",
+    "No PR, merge, publication or deployment"
+  ],
+  "nextPhase": "4 \u2014 Design System Foundation; requires new exact START NEXT PHASE SAFELY; material moves require separate approval"
+}
