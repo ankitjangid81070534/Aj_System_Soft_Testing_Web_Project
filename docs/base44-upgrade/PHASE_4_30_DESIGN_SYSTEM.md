@@ -1,6 +1,6 @@
 # Phase 4 — Design system foundation
 
-2026-09-18 UTC. **Implementation and local regression complete; live-preview visual/runtime acceptance PENDING. Do not advance automatically.** Authorized by the new `START NEXT PHASE SAFELY` after Phase 3. Pre-edit commit: `9c348a82577b2b417334a2edb88922ff84898ab4`, branch `initial-setup`.
+2026-09-18 UTC. **UPDATE: Scoped public-UI acceptance completed in [visible acceptance](PHASE_4_30_VISIBLE_ACCEPTANCE.md); Phase 5 awaits a new continuation.** The initial pending checkpoint and evidence below are retained historically, not the current phase gate. Authorized by the new `START NEXT PHASE SAFELY` after Phase 3. Pre-edit commit: `9c348a82577b2b417334a2edb88922ff84898ab4`, branch `initial-setup`.
 
 ## Scope and preservation
 

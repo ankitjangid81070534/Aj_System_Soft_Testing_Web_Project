@@ -1,0 +1,68 @@
+[
+  {
+    "requestedWidth": 374,
+    "requestedTheme": "light",
+    "path": "/request-quote",
+    "width": 374,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "requestedWidth": 374,
+    "requestedTheme": "dark",
+    "path": "/request-quote",
+    "width": 374,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "requestedWidth": 919,
+    "requestedTheme": "light",
+    "path": "/request-quote",
+    "width": 919,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "requestedWidth": 919,
+    "requestedTheme": "dark",
+    "path": "/request-quote",
+    "width": 919,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "requestedWidth": 1440,
+    "requestedTheme": "light",
+    "path": "/request-quote",
+    "width": 1440,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "requestedWidth": 1440,
+    "requestedTheme": "dark",
+    "path": "/request-quote",
+    "width": 1440,
+    "overflow": false,
+    "injected": 0,
+    "gesturePassed": true,
+    "errors": [],
+    "failed": []
+  }
+]

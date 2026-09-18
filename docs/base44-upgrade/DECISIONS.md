@@ -49,4 +49,6 @@
 
 ## Next authorization
 
-**STOP at Phase 4 live-preview acceptance checkpoint.** Do not skip to **Phase 5 — Responsive Brand Header + Navigation** on a repeated continuation; finish this gate first, then await a new exact command. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+D33: The later visible continuation completes scoped Phase 4 public-UI acceptance: reviewed mobile images and real mobile enquiry/field/return gestures now pass. Keep browser-injection/ad warnings, unverified wider live gesture, short-height dock reachability and backend/release limits explicit; an unreproduced stream error is not a claimed fix. See [visible acceptance](PHASE_4_30_VISIBLE_ACCEPTANCE.md).
+
+**STOP after Phase 4; await a new exact command before Phase 5 — Responsive Brand Header + Navigation.** This continuation completed acceptance only; no Phase 5 application work. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

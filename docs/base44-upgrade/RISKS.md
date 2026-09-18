@@ -1,6 +1,10 @@
 # Retained risks and blockers — 30-phase program
 
-## Phase 4 checkpoint (2026-09-18)
+## Phase 4 acceptance update (2026-09-18, later)
+
+[Visible acceptance](PHASE_4_30_VISIBLE_ACCEPTANCE.md) closes the scoped foundation checkpoint, not whole-app release. Mobile screenshots and live enquiry/field/return checks pass; fresh six independent journeys and 460 tests/type/lint pass. R16 is now monitored/unreproduced in these checks, not fixed. Current full hydration diff shows external `bis_*`/processed body attributes; clean independent browsers have none. Owner browser cleanup and AdSense delivery remain unresolved. Actual wider screenshot is 919×499, not desktop; fixed dock covers part of hero CTAs at rest, to verify for short-height reachability in Phase 5. An additional wider gesture timed out while hidden and stays unverified. No fresh desktop/dark/full-page/private visual acceptance. All backend/release gates persist.
+
+## Historical initial Phase 4 checkpoint (2026-09-18)
 
 [Foundation refinement](PHASE_4_30_DESIGN_SYSTEM.md) preserves business behavior, Home order and component APIs. Local tests/type/lint/build and independent browser cases pass; these do not prove hosted saves or private CMS layouts. R16: live preview produced three new Next client writable-stream close/write errors after a timed-out enquiry click. Quote still mounts with no failed requests/overlay; fresh independent dev/production contexts do not reproduce it. Cause is unestablished; runtime sign-off remains pending, no repair claimed. Screenshot also returned iframe_hidden: human visual acceptance is unavailable. **Hold Phase 4 acceptance before Phase 5.**
 
