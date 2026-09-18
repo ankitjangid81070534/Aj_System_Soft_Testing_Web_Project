@@ -1,6 +1,13 @@
 # Base44 Dev Environment
 
-## Current 30-phase program — Phase 2 benchmark (2026-09-18 UTC)
+## Current 30-phase program — Phase 3 Home plan (2026-09-18 UTC)
+- Read `PHASE_STATUS.md` and `PHASE_3_30_HOMEPAGE_PLAN.md`. New continuation completed Phase 3 planning only. STOP until new exact `START NEXT PHASE SAFELY` before Phase 4 Design System Foundation; retain live Home order unless explicit material-move approval is given.
+- Fifteen content units plus shell mapped. Recommendation keeps benefits early, industries before delivery, technology before ownership; preserve every unit. This differs from old program IA and is NOT implemented. Footer has its own full CTA immediately after Home finale; compaction and universal-benefit/qualified-description copy need separate approval.
+- Do not wire `getHomeSections`: its defaults omit benefits, ownership and articles. Existing optional proof hides cleanly; no fabricated records, second catalogue/FAQ library or speculative help route. Backend/source/save gates and credential deferral persist.
+- Fresh 431 tests/52 files, typecheck/lint, ten destination HTTP 200 checks pass. Live Home at 662x580 contains thirteen section elements, no captured errors/failed requests/overlay. Screenshot returned iframe_hidden; no visual/responsive/gesture or fresh build sign-off. Evidence in `evidence/phase3-30/`; documentation-only, no app/config/data/secret changes, PR/merge/deploy.
+- Pre-documentation baseline `7ae88b822249f6a8884ba1ab28d452843a433f1d` is not the automatic completion commit. Current phase status supersedes all historical stop gates below.
+
+## Historical 30-phase program — Phase 2 benchmark (2026-09-18 UTC)
 - The repeated continuation finished interrupted Phase 2; do not skip to Phase 3. Planning is complete in `PHASE_2_30_BENCHMARKS.md` and `PHASE_2_30_CUSTOMER_JOURNEYS.md`. Current `PHASE_STATUS.md` supersedes the Phase 1 gate below. STOP until new exact `START NEXT PHASE SAFELY` before Phase 3 (Home inventory/proposal only).
 - Three external IA references, eight buyer perspectives, J01–J08 friction and no-change contract are documented. No app/config/schema/data changes. Do not redesign navigation, duplicate services, fabricate proof/contacts, drop consent, activate Builder or connect deferred integrations. Source/backend release gates remain blocked.
 - Evidence `evidence/phase2-30/`: 32 service-to-quote real gestures on source dev/public proxy at 390/662/820/1440, four contact inspections, four corrected portfolio-empty exits on existing Phase 1 isolated production, three existing navigation tests. Initial harness errors are retained: EmptyState title is text, not necessarily a heading; wait for destination content, not immediate isVisible. No app fix or fresh build claimed.

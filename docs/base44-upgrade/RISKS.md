@@ -1,5 +1,11 @@
 # Retained risks and blockers — 30-phase program
 
+## Phase 3 update (2026-09-18)
+
+[Home inventory/proposal](PHASE_3_30_HOMEPAGE_PLAN.md) is documentation only; no repair or order change. R14: launch benefits' universal heading coexists with eligibility/where-applicable qualifications and unpublished fallback agreement terms; owner must approve exact promises before copy changes. R15: Home finale and shared footer both contain large project CTAs; proposed Home-only compaction needs approval and must not remove unique consultation/navigation/legal content or alter inner-page footer behavior. These are source/content findings, not measured conversion failures.
+
+Material moves, new help content and Builder activation remain separately gated. Old IA orders are not current instructions. Source confirms Builder defaults omit benefits/ownership/articles; adopting them would risk content loss. Fresh tests/type/lint and live Home DOM checks pass, but screenshot returned iframe_hidden: no visual or multi-breakpoint/gesture sign-off. Existing backend, proof/consent, channels, upload and release blockers remain unchanged.
+
 ## Phase 2 update (2026-09-18)
 
 Planning only; no repairs. [Journey ledger J01–J08](PHASE_2_30_CUSTOMER_JOURNEYS.md) distinguishes observed form/navigation friction from inferred buyer difficulty. Quote loses service context; contact requires phone/company while consultation promises a call with phone optional. Required agreement points to unpublished fallback terms; direct contact settings and approved portfolio records are unavailable here. None establishes production absence or a measured conversion loss. Do not drop consent or invent contacts/proof/response promises to hide these gates.

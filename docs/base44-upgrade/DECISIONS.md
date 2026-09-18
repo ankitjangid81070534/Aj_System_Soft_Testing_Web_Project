@@ -31,6 +31,14 @@
 - D21: Prefer reusing existing service, project, enquiry, consultation and legal routes. Context carry-through, guided discovery and field/expectation improvements are proposals for their later phases, not implementation approval now.
 - D22: Separate 32 source-dev/public-proxy service journeys from four isolated-production empty-portfolio recoveries, three navigation tests, source-only observations and failed live iframe checks. Retain raw harness failures; test correction is not application repair. No fresh build or real submission claim.
 
+## Phase 3 decisions (2026-09-18)
+
+- D23: The new continuation authorizes Phase 3 inventory/planning only. Current source confirms fifteen Home content units plus public shell; no application refactor is warranted for a documentation-only request.
+- D24: Recommend keeping benefits early, moving industries before delivery, and placing technology before ownership; preserve every existing unit. This replaces the older program's planning recommendation, not the live order. All material moves require explicit approval; Phase 4 must not enact them implicitly.
+- D25: Reuse existing service/platform/FAQ/project/contact/legal content and routes. A compact future preparation/help entry is a Phase 22 proposal, not a new page or second FAQ library. Review universal benefit wording and repeated Home/footer CTAs without changing them now.
+- D26: Fixed HomeExperience remains composition authority; disconnected Builder defaults omit accepted benefits/ownership/articles. No Builder activation, saved-row mutation, invented proof or private data exposure to implement IA.
+- D27: Separate fresh live Home DOM inventory from visual/gesture claims. Screenshot returned iframe_hidden; ten HTTP 200 destinations and 431 unit tests do not verify clicks, published agreement terms, saved enquiries or backend readiness.
+
 ## Next authorization
 
-Wait for a new **START NEXT PHASE SAFELY** before **Phase 3 — Information Architecture + Homepage Plan**, planning only. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+Wait for a new **START NEXT PHASE SAFELY** before **Phase 4 — Design System Foundation**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

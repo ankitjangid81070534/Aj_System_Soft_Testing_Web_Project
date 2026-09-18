@@ -23,4 +23,7 @@ Historical detailed reports (including old Phase 16 CMS planning/hydration diagn
 15. [Phase 2 eight buyer journeys, friction and no-change contract](PHASE_2_30_CUSTOMER_JOURNEYS.md)
 16. [Phase 2 evidence and verification limits](evidence/phase2-30/verification.json)
 
-**STOP after Phase 2.** Research/journey planning complete; hosted saves/RLS remain blocked, not passed. Continue only on a new **START NEXT PHASE SAFELY** to Phase 3 Information Architecture + Homepage Plan. No backend migration, public redesign, real data writes or deployment authorized.
+17. [Phase 3 current Home inventory, proposed hierarchy and approval ledger](PHASE_3_30_HOMEPAGE_PLAN.md)
+18. [Phase 3 fresh verification and limits](evidence/phase3-30/verification.json)
+
+**STOP after Phase 3.** Home planning complete; no hierarchy changes applied or approved. Hosted saves/RLS remain blocked, not passed. Continue only on a new **START NEXT PHASE SAFELY** to Phase 4 Design System Foundation. Preserve current live order; no backend migration, content move, real data writes or deployment authorized.

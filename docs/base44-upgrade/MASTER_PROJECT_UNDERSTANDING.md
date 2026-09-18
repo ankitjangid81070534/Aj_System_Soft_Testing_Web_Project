@@ -59,6 +59,12 @@ The interrupted benchmark is now complete as **planning only**: [three professio
 
 Recovered same-day evidence records 32 source-dev service-to-quote gestures, four contact inspections, four corrected empty-portfolio exits and three existing navigation tests (the latter checks reused isolated Phase 1 production). Fresh resumed 431 tests/52 files, typecheck and lint pass. Initial harness results retained; live iframe navigation/real-link retry failed to complete, so no iframe or visual sign-off. No fresh build or successful submitted/saved enquiry claimed.
 
+## Phase 3 update (2026-09-18)
+
+[Current Home inventory and hierarchy proposal](PHASE_3_30_HOMEPAGE_PLAN.md) maps fifteen content units plus the shared shell, including the extra footer CTA. Current recommendation retains benefits early, proposes industries before delivery and technology before ownership, and preserves all other useful content. This is not an enacted reorder or approval of the older program's plan. Compact help/preparation and Home-only footer CTA compaction remain separately gated proposals; benefit eligibility wording needs owner confirmation. No code refactor, routes, data or configuration changed.
+
+Fresh 431 tests/52 files, typecheck, lint and ten anonymous destination HTTP checks pass. Live Home document at 662x580 contains thirteen section elements (services has two, projects/reviews/team absent), with no captured runtime errors or failed requests. Screenshot failed iframe_hidden; no visual/responsive/gesture sign-off or fresh production build claimed. Six optional integration values remain absent. Builder activation and all hosted save/release gates remain blocked.
+
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP before Phase 3 — Information Architecture + Homepage Plan** until a new exact continuation command. Phase 1 hosted functional sign-off remains blocked. Earlier baseline evidence is historical, not a new full visual/route sweep.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP before Phase 4 — Design System Foundation** until a new exact continuation command. Phase 4 must retain current live Home order unless specific material moves are separately approved. Phase 1 hosted functional sign-off remains blocked. Earlier baseline evidence is historical, not a new full visual/route sweep.
