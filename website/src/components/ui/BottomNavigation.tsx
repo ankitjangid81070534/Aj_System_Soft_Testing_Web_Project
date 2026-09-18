@@ -14,6 +14,8 @@ import { NavBar, type NavItem } from "./tubelight-navbar";
 import { isNavigationActive, splitNavigation } from "@/lib/bottom-navigation";
 import { isLegalNavigationLink, withLegalNavigation } from "@/lib/navigation";
 import styles from "./bottom-navigation.module.css";
+import projectEdge from "./project-edge.module.css";
+import { ProjectEdge } from "./ProjectEdge";
 
 // Native links work before hydration; dialog buttons cannot. Keep them honestly
 // disabled in server HTML, then enable with React's hydration snapshot (no timer).
@@ -183,7 +185,7 @@ export function BottomNavigation({
             aria-label="Search navigation" title="Search pages (Ctrl K / ⌘ K)" aria-keyshortcuts="Meta+K Control+K" aria-haspopup="dialog" aria-controls="more-navigation" aria-expanded={open}>
             <Search aria-hidden="true" size={19} /><kbd>⌘ K</kbd>
           </button>
-          <Link href={ctaHref} className={styles.desktopCta}>{ctaLabel}<ArrowUpRight aria-hidden="true" size={17} /></Link>
+          <Link href={ctaHref} className={`${styles.desktopCta} ${projectEdge.edge}`}><ProjectEdge />{ctaLabel}<ArrowUpRight aria-hidden="true" size={17} /></Link>
         </div>
       </nav>
 
@@ -234,8 +236,8 @@ export function BottomNavigation({
             </button>
             <div className={styles.theme}><span>Appearance</span><ThemeToggle /></div>
           </div>
-          <Button href={ctaHref} className={styles.cta} onClick={closeMenu}>
-            <Sparkles aria-hidden="true" size={16} />{ctaLabel}
+          <Button href={ctaHref} className={`${styles.cta} ${projectEdge.edge}`} onClick={closeMenu}>
+            <ProjectEdge /><Sparkles aria-hidden="true" size={16} />{ctaLabel}
           </Button>
         </div>
       </dialog>
