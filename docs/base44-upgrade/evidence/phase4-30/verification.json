@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-18",
+  "phase": 4,
+  "status": "implementation and local regression complete; live-preview runtime/visual acceptance pending",
+  "baselineCommit": "9c348a82577b2b417334a2edb88922ff84898ab4",
+  "branch": "initial-setup",
+  "baselineTests": { "passed": 431, "files": 52 },
+  "finalTests": { "passed": 460, "files": 53, "new": 29 },
+  "typecheck": "pass",
+  "lint": "pass",
+  "productionBuild": "pass; fresh isolated /tmp/aj-phase4-production, server loopback 3104",
+  "navigationTests": { "passed": 3, "scope": "desktop populated-search Escape/focus and mobile More to Privacy" },
+  "sourceDev": { "beforeCases": 32, "afterCases": 32, "serviceQuoteFieldGestures": 8, "widths": [390,662,820,1440], "themes": ["light","dark"], "pageErrors": [], "failedSourceRequests": [], "overflowCases": 0 },
+  "productionAccessibility": { "keyboardMotionForcedColorsCases": 8, "noJavaScriptNavigationCases": 2, "pageErrors": [], "assertionsPassed": true },
+  "visualComparison": {
+    "initialMethod": "source-dev, fonts/headings ready, visible image decode not awaited",
+    "initialLimitation": "Login light pixel differences up to 8.69%; initial evidence retained, not sign-off",
+    "correctedMethod": "32 matched isolated-production viewports, fonts and visible images decoded, reduced motion; raw pixel channel delta >12",
+    "baselineSourceComparison": "Phase 1 isolated production src vs fresh Phase 4 src differ only in 3 edited CSS files and new test",
+    "maximumChangedPixelPercent": 0.833,
+    "dimensionsHeadingsLinksSectionOrderNavGeometryAndSampleActionSizesPreserved": true,
+    "humanVisualReview": "not verified",
+    "screenshots": "temporary container /tmp/phase4-*.png, not committed binaries or durable CDN captures"
+  },
+  "livePreview": {
+    "before": { "path": "/", "viewport": [662,580], "mainChildren": 2, "errors": [], "failedRequests": [], "overlay": false },
+    "screenshot": "iframe_hidden; not retried",
+    "enquiryGesture": "20-second evaluation timeout; not automatically verified",
+    "after": { "path": "/request-quote", "width": 662, "mainChildren": 2, "failedRequests": [], "overlay": false, "openDialogs": 0 },
+    "newBufferedErrors": ["Cannot write to a closing writable stream", "Cannot write to a CLOSED writable stream", "Cannot close a CLOSED writable stream"],
+    "errorSource": "Next client chunk; cause unestablished, not reproduced in independent fresh dev/production browser runs",
+    "runtimeSignoff": "pending; no error fix claimed"
+  },
+  "externalHostHomeHTTP": 200,
+  "optionalIntegrationPresence": "all six absent in managed file and process; no setup request or generation",
+  "appImplementationChanged": ["website/src/app/foundation-tokens.css", "website/src/app/action-surfaces.css", "website/src/app/surface-system.css"],
+  "newTest": "website/src/components/ui/foundation-controls.test.ts",
+  "preserved": ["Home order/content", "routes and anchors", "nav geometry/behavior", "component APIs", "business logic", "data persistence", "auth", "permissions", "SEO", "dependencies", "configuration"],
+  "noRemoteWritesSubmissionsSQLOrAuthBypass": true,
+  "noPRMergeOrDeployment": true,
+  "productionStatus": "Base44 app unpublished",
+  "next": "finish Phase 4 live-preview acceptance before Phase 5; do not advance automatically"
+}

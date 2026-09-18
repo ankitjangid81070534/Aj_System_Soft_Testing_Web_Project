@@ -65,6 +65,14 @@ Recovered same-day evidence records 32 source-dev service-to-quote gestures, fou
 
 Fresh 431 tests/52 files, typecheck, lint and ten anonymous destination HTTP checks pass. Live Home document at 662x580 contains thirteen section elements (services has two, projects/reviews/team absent), with no captured runtime errors or failed requests. Screenshot failed iframe_hidden; no visual/responsive/gesture sign-off or fresh production build claimed. Six optional integration values remain absent. Builder activation and all hosted save/release gates remain blocked.
 
+## Phase 4 checkpoint (2026-09-18)
+
+[Design-system foundation](PHASE_4_30_DESIGN_SYSTEM.md) is implemented and locally tested: shared action semantic accents/dimensions, violet primary icon, readable action line-height, softer icon elevation, 3px shared card lift, theme-aware field shadows and native forced-colors treatment. Existing identity, type scale, geometry, component APIs, Home order/content, routes and business/persistence logic remain. No new dependencies, data, configuration or TSX implementation.
+
+Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight service→quote/field journeys and ten focus/motion/forced-colors/no-JS cases pass. Four routes at four widths in two themes give 32 before/after source-dev cases, clean runtime and preserved sampled geometry/content. Corrected image-decoded production screenshot comparison differs by at most 0.833%; initial image-unsettled login comparisons are retained, not treated as application regressions.
+
+**Live-preview acceptance remains pending:** screenshot hidden, click evaluation timeout, and three new Next client writable-stream errors despite a mounted quote page without failed requests/overlay. Independent browsers did not reproduce the errors; no live runtime repair or human visual sign-off claimed. Six optional integration values remain absent; all hosted save/RLS/release gates persist.
+
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP before Phase 4 — Design System Foundation** until a new exact continuation command. Phase 4 must retain current live Home order unless specific material moves are separately approved. Phase 1 hosted functional sign-off remains blocked. Earlier baseline evidence is historical, not a new full visual/route sweep.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP at Phase 4 acceptance checkpoint; do not automatically begin Phase 5.** A repeated continuation first resumes the unfinished live-preview runtime/visual gate. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

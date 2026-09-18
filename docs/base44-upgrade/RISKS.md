@@ -1,5 +1,11 @@
 # Retained risks and blockers — 30-phase program
 
+## Phase 4 checkpoint (2026-09-18)
+
+[Foundation refinement](PHASE_4_30_DESIGN_SYSTEM.md) preserves business behavior, Home order and component APIs. Local tests/type/lint/build and independent browser cases pass; these do not prove hosted saves or private CMS layouts. R16: live preview produced three new Next client writable-stream close/write errors after a timed-out enquiry click. Quote still mounts with no failed requests/overlay; fresh independent dev/production contexts do not reproduce it. Cause is unestablished; runtime sign-off remains pending, no repair claimed. Screenshot also returned iframe_hidden: human visual acceptance is unavailable. **Hold Phase 4 acceptance before Phase 5.**
+
+R17: screenshot comparisons require visible-image decoding, not fonts/heading readiness alone. Initial light Login differences reached 8.69% and are retained as inconclusive. Corrected source-matched isolated-production captures differ <=0.833% with content/order/sampled geometry preserved; automated pixel comparison is not human visual or full-page/private-data approval. Temporary PNGs remain in container /tmp, not durable Git images. Semantic status colors, forced-color focus and reduced-motion tests do not certify whole-site WCAG conformance. Six optional credentials and all previous backend/release gates remain deferred.
+
 ## Phase 3 update (2026-09-18)
 
 [Home inventory/proposal](PHASE_3_30_HOMEPAGE_PLAN.md) is documentation only; no repair or order change. R14: launch benefits' universal heading coexists with eligibility/where-applicable qualifications and unpublished fallback agreement terms; owner must approve exact promises before copy changes. R15: Home finale and shared footer both contain large project CTAs; proposed Home-only compaction needs approval and must not remove unique consultation/navigation/legal content or alter inner-page footer behavior. These are source/content findings, not measured conversion failures.

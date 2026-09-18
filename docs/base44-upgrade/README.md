@@ -26,4 +26,7 @@ Historical detailed reports (including old Phase 16 CMS planning/hydration diagn
 17. [Phase 3 current Home inventory, proposed hierarchy and approval ledger](PHASE_3_30_HOMEPAGE_PLAN.md)
 18. [Phase 3 fresh verification and limits](evidence/phase3-30/verification.json)
 
-**STOP after Phase 3.** Home planning complete; no hierarchy changes applied or approved. Hosted saves/RLS remain blocked, not passed. Continue only on a new **START NEXT PHASE SAFELY** to Phase 4 Design System Foundation. Preserve current live order; no backend migration, content move, real data writes or deployment authorized.
+19. [Phase 4 shared foundation implementation and acceptance checkpoint](PHASE_4_30_DESIGN_SYSTEM.md)
+20. [Phase 4 verification summary and evidence](evidence/phase4-30/verification.json)
+
+**STOP at Phase 4 acceptance checkpoint.** CSS implementation/local regression passes; live-preview runtime/visual acceptance is pending (hidden screenshot and new writable-stream errors, not reproduced independently). Resume this gate before Phase 5; do not skip on a repeated continuation. Home order/content is preserved; hosted saves/RLS remain blocked. No backend migration, content move, real data writes, PR, merge or deployment authorized.

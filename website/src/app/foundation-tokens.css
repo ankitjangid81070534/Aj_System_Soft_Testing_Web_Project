@@ -1,5 +1,5 @@
-/* Phase 3: shared dimensions and surface recipes. Existing layouts, fonts,
-   navigation geometry and semantic component APIs are intentionally retained. */
+/* Shared foundation: dimensions, semantic control accents and soft elevation.
+   Keep layout geometry, component APIs and content separate from these recipes. */
 @theme {
   --text-label: 0.75rem;
   --text-label--line-height: 1rem;
@@ -26,7 +26,35 @@
   --focus-separator: #ffffff;
   --duration-control: 220ms;
   --duration-surface: 320ms;
-  --surface-lift: -4px;
+  --surface-lift: -3px;
+  /* Explicit roles, not position-based colors. Keep the light action face in
+     both themes; its ink and icon accents must therefore remain paired. */
+  --action-accent-primary: #6d28d9;
+  --action-accent-primary-light: #dfcaff;
+  --action-accent-secondary: #8852d5;
+  --action-accent-secondary-light: #d5a5ff;
+  --action-accent-success: #1caf78;
+  --action-accent-success-light: #9ff7bc;
+  --action-accent-danger: #c73051;
+  --action-accent-danger-light: #ffadc0;
+  --action-accent-quiet: #53657d;
+  --action-accent-quiet-light: #d2deef;
+  --action-line-height: 1.4;
+  --action-gap: 0.625rem;
+  --control-height: 2.75rem;
+  --control-height-sm: 2.375rem;
+  --control-height-xs: 2.125rem;
+  --action-icon-size: 2rem;
+  --action-icon-size-sm: 1.75rem;
+  --action-icon-size-xs: 1.5625rem;
+  --action-icon-padding: 0.4375rem;
+  --action-icon-padding-sm: 0.375rem;
+  --action-icon-padding-xs: 0.3125rem;
+  --action-icon-radius: 0.8125rem;
+  --action-icon-radius-sm: 0.6875rem;
+  --action-icon-radius-xs: 0.625rem;
+  --shadow-action-icon: inset 0 1px 1px #ffffff50, inset 0 -1px 2px #0003, 0 3px 7px -4px #14213d40;
+  --field-shadow: inset 0 2px 4px #51316e05, 0 1px 0 #ffffff90;
   --action-ink: #151923;
   --action-muted: #4d5666;
   --action-inverse: #f4f7ff;
@@ -47,6 +75,7 @@
 .dark {
   --focus-color: #93c5fd;
   --focus-separator: #15101e;
+  --field-shadow: inset 0 1px 0 #ffffff05;
   --surface-sheen: linear-gradient(145deg, #20182d 10%, #15101f);
   --shadow-sculpted: inset 0 1px 0 #ffffff0c, 0 14px 36px -18px #0008;
   --shadow-sculpted-hover: inset 0 1px 0 #ffffff18, 0 25px 55px -18px #000b;

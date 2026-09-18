@@ -1,6 +1,13 @@
 # Base44 Dev Environment
 
-## Current 30-phase program — Phase 3 Home plan (2026-09-18 UTC)
+## Current 30-phase program — Phase 4 foundation checkpoint (2026-09-18 UTC)
+- Read `PHASE_STATUS.md` and `PHASE_4_30_DESIGN_SYSTEM.md`. Phase 4 CSS implementation/local regression is complete, but live-preview runtime/visual acceptance is PENDING; resume this gate before Phase 5, do not skip on a repeated continuation.
+- Shared action accent/dimension/elevation tokens live in foundation-tokens.css. Primary icon pair is violet; light action face/ink remain paired in both themes. Field shadow is theme-aware. Action line-height is 1.4, shared hover lift -3px. Preserve per-card shadow-variable resolution, native semantics, Home order and accepted nav geometry. No TSX/business/data/config/dependency changes.
+- Fresh 460 tests/53 files, type/lint, isolated production build, three nav tests, eight service→quote/field journeys and ten focus/motion/forced-color/no-JS cases pass. 32 source-dev cases per side are clean. Corrected 32 production screenshot pairs preserve content/nav/control geometry, max pixel difference 0.833%; this is NOT human visual review. Wait for visible images to decode: initial login light comparisons reached 8.69% and are retained as inconclusive harness evidence.
+- Live screenshot returned iframe_hidden; click call timed out. Passive check found quote mounted with no failed requests/overlay but three new Next client writable-stream errors. Cause unestablished, not reproduced independently; no error fix/live gesture/visual sign-off claimed. Do not restart healthy dev or weaken security for a hidden preview. Evidence in `evidence/phase4-30/`; production test server is isolated `/tmp/aj-phase4-production`, loopback 3104.
+- Six optional values still absent; backend/save/RLS and all prior content/approval gates persist. No secret/data/SQL/PR/merge/deploy. Baseline `9c348a82577b2b417334a2edb88922ff84898ab4` is not the automatic end-of-turn commit.
+
+## Historical 30-phase program — Phase 3 Home plan (2026-09-18 UTC)
 - Read `PHASE_STATUS.md` and `PHASE_3_30_HOMEPAGE_PLAN.md`. New continuation completed Phase 3 planning only. STOP until new exact `START NEXT PHASE SAFELY` before Phase 4 Design System Foundation; retain live Home order unless explicit material-move approval is given.
 - Fifteen content units plus shell mapped. Recommendation keeps benefits early, industries before delivery, technology before ownership; preserve every unit. This differs from old program IA and is NOT implemented. Footer has its own full CTA immediately after Home finale; compaction and universal-benefit/qualified-description copy need separate approval.
 - Do not wire `getHomeSections`: its defaults omit benefits, ownership and articles. Existing optional proof hides cleanly; no fabricated records, second catalogue/FAQ library or speculative help route. Backend/source/save gates and credential deferral persist.

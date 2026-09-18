@@ -39,6 +39,14 @@
 - D26: Fixed HomeExperience remains composition authority; disconnected Builder defaults omit accepted benefits/ownership/articles. No Builder activation, saved-row mutation, invented proof or private data exposure to implement IA.
 - D27: Separate fresh live Home DOM inventory from visual/gesture claims. Screenshot returned iframe_hidden; ten HTTP 200 destinations and 431 unit tests do not verify clicks, published agreement terms, saved enquiries or backend readiness.
 
+## Phase 4 decisions (2026-09-18)
+
+- D28: Continuation authorizes foundation refinement only. Reuse the existing token/CSS/component system; no new design framework, page restructuring, hero/nav redesign or Phase 6 moving edge. Keep current Home order and all useful copy.
+- D29: Centralize explicit action-role accents/dimensions; use violet for primary icon accents, retain coherent light action faces/ink in both themes and existing status semantics. Soften icon elevation/shared lift; preserve card-specific variable resolution and default control geometry.
+- D30: Refactor CSS recipes rather than component logic. Preserve native button/link/form/loading contracts and existing field geometry; add browser-native forced-colors treatment. No new JS, dependency, persistence or security changes.
+- D31: Retain initial image-unsettled screenshot evidence; correct the harness to decode visible images and compare source-matched production builds. Automated pixel/geometry parity is distinct from human visual acceptance and cannot sign off authenticated/real-data layouts.
+- D32: Phase 4 local implementation/tests pass, but new live-preview stream errors and unavailable screenshot prevent full acceptance. Cause is unestablished; do not claim a fix from passing independent browsers or change unrelated auth/security/runtime code. Resume this gate before Phase 5.
+
 ## Next authorization
 
-Wait for a new **START NEXT PHASE SAFELY** before **Phase 4 — Design System Foundation**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+**STOP at Phase 4 live-preview acceptance checkpoint.** Do not skip to **Phase 5 — Responsive Brand Header + Navigation** on a repeated continuation; finish this gate first, then await a new exact command. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

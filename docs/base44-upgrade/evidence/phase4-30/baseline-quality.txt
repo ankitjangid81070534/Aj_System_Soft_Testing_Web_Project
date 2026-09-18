@@ -1,0 +1,76 @@
+
+> website@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /app
+
+ ✓ src/lib/admin/growth-authorization.test.ts (16 tests) 84ms
+ ✓ src/components/design-preview/HomeHero.test.ts (17 tests) 113ms
+ ✓ src/lib/admin/quick-actions.test.ts (40 tests) 46ms
+ ✓ src/components/design-preview/HomeExperience.test.ts (13 tests) 308ms
+ ✓ src/components/ui/phase4-navigation.test.ts (5 tests) 87ms
+ ✓ src/lib/data/blog-performance.test.ts (5 tests) 63ms
+ ✓ src/lib/admin/actions-authorization.test.ts (12 tests) 73ms
+ ✓ src/app/(public)/terms/terms.test.ts (2 tests) 93ms
+ ✓ src/app/(public)/blog/[slug]/article-performance.test.ts (2 tests) 59ms
+ ✓ src/components/admin/admin-ui.test.ts (22 tests) 51ms
+ ✓ src/proxy.test.ts (16 tests) 68ms
+ ✓ src/app/ajadmin/dashboard-access.test.ts (6 tests) 45ms
+ ✓ src/lib/seo/refresh.test.ts (2 tests) 67ms
+ ✓ src/lib/admin/builder-authorization.test.ts (7 tests) 35ms
+ ✓ src/components/ui/phase15-accessibility.test.ts (6 tests) 34ms
+ ✓ src/components/portal/portal-ui.test.ts (12 tests) 46ms
+ ✓ src/components/ui/reference-ui.test.ts (16 tests) 41ms
+ ✓ src/components/site/image-delivery.test.ts (4 tests) 19ms
+ ✓ src/components/ui/foundation.test.ts (29 tests) 24ms
+ ✓ src/components/ui/Footer.test.ts (2 tests) 16ms
+ ✓ src/lib/validation/leads.test.ts (14 tests) 17ms
+ ✓ src/components/portal/responsive-layout.test.ts (2 tests) 22ms
+ ✓ src/lib/admin/resources.test.ts (6 tests) 32ms
+ ✓ src/lib/phase15-security.test.ts (4 tests) 16ms
+ ✓ src/lib/seo/foundation.test.ts (10 tests) 18ms
+ ✓ src/app/(public)/disclaimer/disclaimer.test.ts (3 tests) 19ms
+ ✓ src/lib/data/projects.test.ts (5 tests) 12ms
+ ✓ src/components/site/public-pages.test.ts (16 tests) 15ms
+ ✓ src/lib/validation/portal.test.ts (7 tests) 19ms
+ ✓ src/lib/validation/sections.test.ts (5 tests) 11ms
+ ✓ src/lib/preview-security.test.ts (4 tests) 8ms
+ ✓ src/lib/data/buyer-intent-content.test.ts (8 tests) 11ms
+ ✓ src/components/motion/motion-lifecycle.test.ts (10 tests) 6ms
+ ✓ src/lib/seo/jsonld.test.ts (8 tests) 7ms
+ ✓ src/lib/data/services.test.ts (5 tests) 9ms
+ ✓ src/lib/validation/auth.test.ts (7 tests) 9ms
+ ✓ src/lib/env.test.ts (9 tests) 6ms
+ ✓ src/lib/admin/crud-ordering.test.ts (6 tests) 7ms
+ ✓ src/lib/seo/sitemap.test.ts (2 tests) 6ms
+ ✓ src/lib/data/ai-methods.test.ts (4 tests) 6ms
+ ✓ src/lib/seo/metadata.test.ts (8 tests) 7ms
+ ✓ src/components/motion/frame-scheduler.test.ts (6 tests) 6ms
+ ✓ src/components/motion/motion-utils.test.ts (6 tests) 5ms
+ ✓ src/lib/bottom-navigation.test.ts (3 tests) 6ms
+ ✓ src/lib/data/mappers.test.ts (6 tests) 11ms
+ ✓ src/components/ui/service-accent.test.ts (11 tests) 5ms
+ ✓ src/lib/auth/permissions.test.ts (6 tests) 4ms
+ ✓ src/lib/data/cta.test.ts (3 tests) 4ms
+ ✓ src/types/database.test.ts (3 tests) 4ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 3ms
+ ✓ src/lib/admin/mutation-result.test.ts (3 tests) 3ms
+ ✓ src/components/site/Markdown.test.ts (4 tests) 5ms
+
+ Test Files  52 passed (52)
+      Tests  431 passed (431)
+   Start at  12:24:11
+   Duration  5.98s (transform 1.60s, setup 0ms, import 8.51s, tests 1.69s, environment 4ms)
+
+
+> website@0.1.0 typecheck
+> tsc --noEmit
+
+
+> website@0.1.0 lint
+> eslint
+

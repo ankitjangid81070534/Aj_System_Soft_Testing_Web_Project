@@ -1,0 +1,3952 @@
+{
+  "stage": "after",
+  "mode": "source dev via public proxy",
+  "cases": [
+    {
+      "name": "390-light-home",
+      "route": "/",
+      "width": 390,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 192,
+        "height": 48,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(15, 23, 42, 0.06) 0px 2px 5px 0px, rgba(15, 23, 42, 0.07) 0px 10px 24px 0px, rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "card": {
+        "width": 342,
+        "height": 226.578125,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(32, 26, 44)",
+        "shadow": "rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(36, 51, 76, 0.19) 0px 5px 14px -9px",
+        "outline": "rgb(32, 26, 44)"
+      },
+      "field": null,
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-390-light-home.png"
+    },
+    {
+      "name": "390-light-services",
+      "route": "/services",
+      "width": 390,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(29, 78, 216)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "card": {
+        "width": 358,
+        "height": 249.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -1px 2px 0px inset, rgba(16, 28, 59, 0.376) 0px 6px 12px -8px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-390-light-services.png"
+    },
+    {
+      "name": "390-light-contact",
+      "route": "/contact",
+      "width": 390,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 316,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgba(81, 49, 110, 0.02) 0px 2px 4px 0px inset, rgba(255, 255, 255, 0.565) 0px 1px 0px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-390-light-contact.png"
+    },
+    {
+      "name": "390-light-login",
+      "route": "/login",
+      "width": 390,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 296,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 296,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "color(srgb 0.376471 0.647059 0.980392 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-390-light-login.png"
+    },
+    {
+      "name": "gesture-390-light",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "390-dark-home",
+      "route": "/",
+      "width": 390,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 192,
+        "height": 48,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(7, 16, 31)",
+        "shadow": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.35) 0px 8px 20px 0px",
+        "outline": "rgb(7, 16, 31)"
+      },
+      "card": {
+        "width": 342,
+        "height": 226.578125,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(243, 238, 251)",
+        "shadow": "rgba(255, 255, 255, 0.07) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.6) 0px 5px 14px -9px",
+        "outline": "rgb(243, 238, 251)"
+      },
+      "field": null,
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-390-dark-home.png"
+    },
+    {
+      "name": "390-dark-services",
+      "route": "/services",
+      "width": 390,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(191, 219, 254)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(191, 219, 254)"
+      },
+      "card": {
+        "width": 358,
+        "height": 249.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -1px 2px 0px inset, rgba(16, 28, 59, 0.376) 0px 6px 12px -8px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-390-dark-services.png"
+    },
+    {
+      "name": "390-dark-contact",
+      "route": "/contact",
+      "width": 390,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 316,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "rgba(255, 255, 255, 0.02) 0px 1px 0px 0px inset",
+        "outline": "rgb(246, 241, 252)"
+      },
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-390-dark-contact.png"
+    },
+    {
+      "name": "390-dark-login",
+      "route": "/login",
+      "width": 390,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 296,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 296,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "color(srgb 0.447059 0.654902 0.92549 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(147, 197, 253)"
+      },
+      "nav": {
+        "width": 362,
+        "height": 84,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-390-dark-login.png"
+    },
+    {
+      "name": "gesture-390-dark",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "662-light-home",
+      "route": "/",
+      "width": 662,
+      "theme": "light",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 192,
+        "height": 48,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(15, 23, 42, 0.06) 0px 2px 5px 0px, rgba(15, 23, 42, 0.07) 0px 10px 24px 0px, rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "card": {
+        "width": 297,
+        "height": 226.578125,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(32, 26, 44)",
+        "shadow": "rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(36, 51, 76, 0.19) 0px 5px 14px -9px",
+        "outline": "rgb(32, 26, 44)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-662-light-home.png"
+    },
+    {
+      "name": "662-light-services",
+      "route": "/services",
+      "width": 662,
+      "theme": "light",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(29, 78, 216)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "card": {
+        "width": 297,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -1px 2px 0px inset, rgba(16, 28, 59, 0.376) 0px 6px 12px -8px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-662-light-services.png"
+    },
+    {
+      "name": "662-light-contact",
+      "route": "/contact",
+      "width": 662,
+      "theme": "light",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 266,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgba(81, 49, 110, 0.02) 0px 2px 4px 0px inset, rgba(255, 255, 255, 0.565) 0px 1px 0px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-662-light-contact.png"
+    },
+    {
+      "name": "662-light-login",
+      "route": "/login",
+      "width": 662,
+      "theme": "light",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 418,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 418,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "color(srgb 0.376471 0.647059 0.980392 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-662-light-login.png"
+    },
+    {
+      "name": "gesture-662-light",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "662-dark-home",
+      "route": "/",
+      "width": 662,
+      "theme": "dark",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 192,
+        "height": 48,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(7, 16, 31)",
+        "shadow": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.35) 0px 8px 20px 0px",
+        "outline": "rgb(7, 16, 31)"
+      },
+      "card": {
+        "width": 297,
+        "height": 226.578125,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(243, 238, 251)",
+        "shadow": "rgba(255, 255, 255, 0.07) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.6) 0px 5px 14px -9px",
+        "outline": "rgb(243, 238, 251)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-662-dark-home.png"
+    },
+    {
+      "name": "662-dark-services",
+      "route": "/services",
+      "width": 662,
+      "theme": "dark",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(191, 219, 254)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(191, 219, 254)"
+      },
+      "card": {
+        "width": 297,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -1px 2px 0px inset, rgba(16, 28, 59, 0.376) 0px 6px 12px -8px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-662-dark-services.png"
+    },
+    {
+      "name": "662-dark-contact",
+      "route": "/contact",
+      "width": 662,
+      "theme": "dark",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 266,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "rgba(255, 255, 255, 0.02) 0px 1px 0px 0px inset",
+        "outline": "rgb(246, 241, 252)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-662-dark-contact.png"
+    },
+    {
+      "name": "662-dark-login",
+      "route": "/login",
+      "width": 662,
+      "theme": "dark",
+      "viewport": {
+        "width": 662,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 418,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 418,
+        "height": 44,
+        "font": "16px",
+        "lineHeight": "22.8571px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "color(srgb 0.447059 0.654902 0.92549 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(147, 197, 253)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-662-dark-login.png"
+    },
+    {
+      "name": "gesture-662-dark",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "820-light-home",
+      "route": "/",
+      "width": 820,
+      "theme": "light",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 203,
+        "height": 48,
+        "font": "15px",
+        "lineHeight": "21px",
+        "radius": "9999px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(15, 23, 42, 0.06) 0px 2px 5px 0px, rgba(15, 23, 42, 0.07) 0px 10px 24px 0px, rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "card": {
+        "width": 368,
+        "height": 236.46875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(32, 26, 44)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(199, 216, 236, 0.44) 0px -1px 0px 0px inset, rgba(68, 34, 104, 0.024) 0px 2px 5px 0px, rgba(40, 100, 155, 0.19) 0px 14px 36px -18px",
+        "outline": "rgb(32, 26, 44)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-820-light-home.png"
+    },
+    {
+      "name": "820-light-services",
+      "route": "/services",
+      "width": 820,
+      "theme": "light",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(29, 78, 216)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "card": {
+        "width": 376,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.51) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -2px 4px 0px inset, rgba(16, 28, 59, 0.4) 0px 6px 12px -7px, color(srgb 0.407843 0.643137 1 / 0.65) 0px 16px 28px -20px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-820-light-services.png"
+    },
+    {
+      "name": "820-light-contact",
+      "route": "/contact",
+      "width": 820,
+      "theme": "light",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 345,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgba(81, 49, 110, 0.02) 0px 2px 4px 0px inset, rgba(255, 255, 255, 0.565) 0px 1px 0px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-820-light-contact.png"
+    },
+    {
+      "name": "820-light-login",
+      "route": "/login",
+      "width": 820,
+      "theme": "light",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 310.46875,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 310.46875,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "color(srgb 0.376471 0.647059 0.980392 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(23, 23, 23)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(0, 0, 0, 0.09) 0px 12px 40px 0px, rgba(0, 0, 0, 0.02) 0px 2px 5px 0px",
+        "outline": "rgb(23, 23, 23)"
+      },
+      "shot": "/tmp/phase4-after-820-light-login.png"
+    },
+    {
+      "name": "gesture-820-light",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "820-dark-home",
+      "route": "/",
+      "width": 820,
+      "theme": "dark",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 203,
+        "height": 48,
+        "font": "15px",
+        "lineHeight": "21px",
+        "radius": "9999px",
+        "color": "rgb(7, 16, 31)",
+        "shadow": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.35) 0px 8px 20px 0px",
+        "outline": "rgb(7, 16, 31)"
+      },
+      "card": {
+        "width": 368,
+        "height": 236.46875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(243, 238, 251)",
+        "shadow": "rgba(255, 255, 255, 0.047) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.533) 0px 14px 36px -18px",
+        "outline": "rgb(243, 238, 251)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-820-dark-home.png"
+    },
+    {
+      "name": "820-dark-services",
+      "route": "/services",
+      "width": 820,
+      "theme": "dark",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(191, 219, 254)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(191, 219, 254)"
+      },
+      "card": {
+        "width": 376,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.51) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -2px 4px 0px inset, rgba(16, 28, 59, 0.4) 0px 6px 12px -7px, color(srgb 0.407843 0.643137 1 / 0.65) 0px 16px 28px -20px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-820-dark-services.png"
+    },
+    {
+      "name": "820-dark-contact",
+      "route": "/contact",
+      "width": 820,
+      "theme": "dark",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 345,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "rgba(255, 255, 255, 0.02) 0px 1px 0px 0px inset",
+        "outline": "rgb(246, 241, 252)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-820-dark-contact.png"
+    },
+    {
+      "name": "820-dark-login",
+      "route": "/login",
+      "width": 820,
+      "theme": "dark",
+      "viewport": {
+        "width": 820,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 310.46875,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 310.46875,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "color(srgb 0.447059 0.654902 0.92549 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(147, 197, 253)"
+      },
+      "nav": {
+        "width": 470,
+        "height": 93.1875,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "999px",
+        "color": "rgb(244, 244, 244)",
+        "shadow": "rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.4) 0px 12px 40px 0px",
+        "outline": "rgb(244, 244, 244)"
+      },
+      "shot": "/tmp/phase4-after-820-dark-login.png"
+    },
+    {
+      "name": "gesture-820-dark",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "1440-light-home",
+      "route": "/",
+      "width": 1440,
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 203,
+        "height": 48,
+        "font": "15px",
+        "lineHeight": "21px",
+        "radius": "9999px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(15, 23, 42, 0.06) 0px 2px 5px 0px, rgba(15, 23, 42, 0.07) 0px 10px 24px 0px, rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "card": {
+        "width": 389.46875,
+        "height": 246.0625,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(32, 26, 44)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(199, 216, 236, 0.44) 0px -1px 0px 0px inset, rgba(68, 34, 104, 0.024) 0px 2px 5px 0px, rgba(40, 100, 155, 0.19) 0px 14px 36px -18px",
+        "outline": "rgb(32, 26, 44)"
+      },
+      "field": null,
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-light-home.png"
+    },
+    {
+      "name": "1440-light-services",
+      "route": "/services",
+      "width": 1440,
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(29, 78, 216)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "card": {
+        "width": 376,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.51) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -2px 4px 0px inset, rgba(16, 28, 59, 0.4) 0px 6px 12px -7px, color(srgb 0.407843 0.643137 1 / 0.65) 0px 16px 28px -20px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-light-services.png"
+    },
+    {
+      "name": "1440-light-contact",
+      "route": "/contact",
+      "width": 1440,
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 308.53125,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgba(81, 49, 110, 0.02) 0px 2px 4px 0px inset, rgba(255, 255, 255, 0.565) 0px 1px 0px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-light-contact.png"
+    },
+    {
+      "name": "1440-light-login",
+      "route": "/login",
+      "width": 1440,
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 405.25,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 405.25,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "color(srgb 0.376471 0.647059 0.980392 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(29, 78, 216)"
+      },
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-light-login.png"
+    },
+    {
+      "name": "gesture-1440-light",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    },
+    {
+      "name": "1440-dark-home",
+      "route": "/",
+      "width": 1440,
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software built aroundyour requirements.",
+        "What's included with every project",
+        "6 Months Support",
+        "6 Months Eligible Customization",
+        "1 Year Android App Offer",
+        "SEO / Search Setup Assistance",
+        "Client / Admin Portal",
+        "Custom Requirement-Based Development",
+        "What we can build for you",
+        "Custom Software Development",
+        "Custom Software Development",
+        "Web Application Development",
+        "SaaS Development",
+        "SaaS Development",
+        "Android App Development",
+        "ERP & Business Software",
+        "ERP & Business Software",
+        "Hospital & Clinic Software",
+        "One team, every platformOne team, every platform ",
+        "Websites & Web Apps",
+        "SaaS Platforms",
+        "Android & iOS Apps",
+        "Windows Desktop & EXE",
+        "ERP, CRM & Admin Panels",
+        "Industry-Specific Software",
+        "From your requirement to a working product",
+        "You own your software.We help it grow.",
+        "Software for the way your industry worksSoftware for the way your industry works ",
+        "A modern, maintainable stackA modern, maintainable stack ",
+        "Web & frontend",
+        "Mobile",
+        "Backend & data",
+        "Desktop & cloud",
+        "Why teams choose AJ System Soft TechnologyWhy teams choose AJ System Soft Technology ",
+        "Requirements lead, code follows",
+        "End-to-end delivery",
+        "Built to be maintained",
+        "Security & ownership",
+        "Engineering & architecture notesEngineering & architecture notes ",
+        "What ERP digitisation actually means for small businesses",
+        "Web app or mobile app: choosing the right platform",
+        "How to plan a custom software project",
+        "Ready to build software around your requirements?Ready to build software around your requirements? "
+      ],
+      "links": [
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Explore Projects ",
+          "/projects"
+        ],
+        [
+          "Explore what we build ",
+          "#home-services"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "Learn more ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/custom-software-development"
+        ],
+        [
+          "Explore service ",
+          "/services/web-application-development"
+        ],
+        [
+          "Learn more ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/saas-development"
+        ],
+        [
+          "Explore service ",
+          "/services/android-app-development"
+        ],
+        [
+          "Learn more ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/erp-business-software"
+        ],
+        [
+          "Explore service ",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Explore all services ",
+          "/services"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Business systems3 min readWhat ERP digitisation actually means for small businessesERP is not one giant system you must swallow whole. A staged approach: inventory and billing first, departments next, dashboards last.Aug 30, 2026Read note",
+          "/blog/what-erp-digitization-actually-means-for-small-businesses"
+        ],
+        [
+          "Platforms3 min readWeb app or mobile app: choosing the right platformThe platform question is really a user question. Four checks that decide whether you need a web app, a mobile app, or both.Aug 30, 2026Read note",
+          "/blog/web-app-or-mobile-app-choosing-the-right-platform"
+        ],
+        [
+          "Planning3 min readHow to plan a custom software projectA practical checklist for the first four weeks of a custom software project — before a single line of code is written.Aug 30, 2026Read note",
+          "/blog/how-to-plan-a-custom-software-project"
+        ],
+        [
+          "View all articles",
+          "/blog"
+        ],
+        [
+          "Start Your Project ",
+          "/request-quote"
+        ],
+        [
+          "Request a Consultation ",
+          "/contact"
+        ]
+      ],
+      "sectionOrder": [
+        "",
+        "",
+        "included",
+        "home-services",
+        "capabilities",
+        "",
+        "delivery",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "action": {
+        "width": 203,
+        "height": 48,
+        "font": "15px",
+        "lineHeight": "21px",
+        "radius": "9999px",
+        "color": "rgb(7, 16, 31)",
+        "shadow": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.35) 0px 8px 20px 0px",
+        "outline": "rgb(7, 16, 31)"
+      },
+      "card": {
+        "width": 389.46875,
+        "height": 246.0625,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(243, 238, 251)",
+        "shadow": "rgba(255, 255, 255, 0.047) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.533) 0px 14px 36px -18px",
+        "outline": "rgb(243, 238, 251)"
+      },
+      "field": null,
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-dark-home.png"
+    },
+    {
+      "name": "1440-dark-services",
+      "route": "/services",
+      "width": 1440,
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Software services built around your requirements",
+        "Software & Applications",
+        "Custom Software Development",
+        "SaaS Development",
+        "Web Application Development",
+        "Website Development",
+        "Ecommerce Development",
+        "Mobile & Desktop",
+        "Android App Development",
+        "iOS App Development",
+        "Desktop Software Development",
+        "Business Systems",
+        "ERP & Business Software",
+        "API & System Integrations",
+        "Cloud Deployment & Maintenance",
+        "Industry Solutions",
+        "Hospital & Clinic Software",
+        "Pharmacy Software",
+        "Retail POS & Inventory",
+        "Hotel Management Software",
+        "Describe the problem — we will propose the solution."
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Software & Applications",
+          "#category-software-applications"
+        ],
+        [
+          "Mobile & Desktop",
+          "#category-mobile-desktop"
+        ],
+        [
+          "Business Systems",
+          "#category-business-systems"
+        ],
+        [
+          "Industry Solutions",
+          "#category-industry-solutions"
+        ],
+        [
+          "Custom Software DevelopmentSoftware designed and built around your exact business requirements, from first draft to deployment.Learn more",
+          "/services/custom-software-development"
+        ],
+        [
+          "SaaS DevelopmentMulti-tenant SaaS products with subscriptions, roles, dashboards and the APIs your customers expect.Learn more",
+          "/services/saas-development"
+        ],
+        [
+          "Web Application DevelopmentFast, secure web applications for daily operations — portals, dashboards, workflows and reporting.Learn more",
+          "/services/web-application-development"
+        ],
+        [
+          "Website DevelopmentProfessional, fast-loading company websites that build trust and turn visitors into enquiries.Learn more",
+          "/services/website-development"
+        ],
+        [
+          "Ecommerce DevelopmentOnline stores with clean product catalogues, smooth checkout, payments and order management.Learn more",
+          "/services/ecommerce-development"
+        ],
+        [
+          "Android App DevelopmentNative Android apps — customer-facing products and internal field tools that work reliably on real devices.Learn more",
+          "/services/android-app-development"
+        ],
+        [
+          "iOS App DevelopmentNative iOS apps that feel at home on iPhone and iPad — polished, secure and App Store ready.Learn more",
+          "/services/ios-app-development"
+        ],
+        [
+          "Desktop Software DevelopmentWindows desktop and EXE software for shops, offices and labs that need dependable local machines.Learn more",
+          "/services/desktop-software-development"
+        ],
+        [
+          "ERP & Business SoftwareERP, CRM and inventory systems that bring sales, stock, accounts and reporting into one place.Learn more",
+          "/services/erp-business-software"
+        ],
+        [
+          "API & System IntegrationsConnecting the software you already use — payments, WhatsApp, accounting, marketplaces and legacy systems.Learn more",
+          "/services/api-system-integrations"
+        ],
+        [
+          "Cloud Deployment & MaintenanceReliable hosting, deployments, backups, monitoring and ongoing maintenance for business software.Learn more",
+          "/services/cloud-deployment-maintenance"
+        ],
+        [
+          "Hospital & Clinic SoftwareOPD, IPD, appointments, prescriptions and billing — software shaped by clinical workflows.Learn more",
+          "/services/hospital-clinic-software"
+        ],
+        [
+          "Pharmacy SoftwareMedicine stock, batches, expiry tracking, substitutions and counter billing for pharmacies.Learn more",
+          "/services/pharmacy-software"
+        ],
+        [
+          "Retail POS & InventoryBilling counters and stockrooms working from the same numbers — POS, inventory and daily closing.Learn more",
+          "/services/retail-pos-inventory"
+        ],
+        [
+          "Hotel Management SoftwareFront desk, room availability, check-ins, housekeeping and billing for hotels and guest houses.Learn more",
+          "/services/hotel-management-software"
+        ],
+        [
+          "Request a Quote",
+          "/request-quote"
+        ],
+        [
+          "View Projects",
+          "/projects"
+        ]
+      ],
+      "sectionOrder": [
+        "category-software-applications",
+        "category-mobile-desktop",
+        "category-business-systems",
+        "category-industry-solutions",
+        ""
+      ],
+      "action": {
+        "width": 198,
+        "height": 48,
+        "font": "16px",
+        "lineHeight": "22.4px",
+        "radius": "9999px",
+        "color": "rgb(191, 219, 254)",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.45) 0px 10px 30px -8px",
+        "outline": "rgb(191, 219, 254)"
+      },
+      "card": {
+        "width": 376,
+        "height": 257.75,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "24px",
+        "color": "rgb(255, 255, 255)",
+        "shadow": "rgba(255, 255, 255, 0.51) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px -2px 4px 0px inset, rgba(16, 28, 59, 0.4) 0px 6px 12px -7px, color(srgb 0.407843 0.643137 1 / 0.65) 0px 16px 28px -20px",
+        "outline": "rgb(255, 255, 255)"
+      },
+      "field": null,
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-dark-services.png"
+    },
+    {
+      "name": "1440-dark-contact",
+      "route": "/contact",
+      "width": 1440,
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Tell us what you need built",
+        "Send a message",
+        "Direct contact",
+        "Prefer a guided conversation?",
+        "Request a consultation"
+      ],
+      "links": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "View Agreement",
+          "/service-agreement"
+        ],
+        [
+          "Request a quote instead",
+          "/request-quote"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 166,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 308.53125,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "rgba(255, 255, 255, 0.02) 0px 1px 0px 0px inset",
+        "outline": "rgb(246, 241, 252)"
+      },
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-dark-contact.png"
+    },
+    {
+      "name": "1440-dark-login",
+      "route": "/login",
+      "width": 1440,
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "headings": [
+        "Welcome back!"
+      ],
+      "links": [
+        [
+          " Back to website",
+          "/"
+        ],
+        [
+          "AJAJS Technology",
+          "/"
+        ],
+        [
+          "Forgot password?",
+          "/forgot-password"
+        ],
+        [
+          "Create an account",
+          "/signup"
+        ]
+      ],
+      "sectionOrder": [
+        ""
+      ],
+      "action": {
+        "width": 405.25,
+        "height": 45,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "radius": "9999px",
+        "color": "rgb(21, 25, 35)",
+        "shadow": "rgb(255, 255, 255) 0px 1px 1px 0px inset, rgba(21, 40, 79, 0.4) 0px 7px 18px -12px, rgba(20, 33, 61, 0.07) 0px 2px 5px 0px",
+        "outline": "rgb(21, 25, 35)"
+      },
+      "card": null,
+      "field": {
+        "width": 405.25,
+        "height": 44,
+        "font": "14px",
+        "lineHeight": "20px",
+        "radius": "12px",
+        "color": "rgb(246, 241, 252)",
+        "shadow": "color(srgb 0.447059 0.654902 0.92549 / 0.14) 0px 0px 0px 4px",
+        "outline": "rgb(147, 197, 253)"
+      },
+      "nav": {
+        "width": 1408,
+        "height": 82,
+        "font": "16px",
+        "lineHeight": "24px",
+        "radius": "26px",
+        "color": "rgb(23, 19, 30)",
+        "shadow": "rgb(255, 255, 255) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 24px 0px, rgba(34, 34, 34, 0.07) 0px 12px 40px 0px, rgba(124, 58, 237, 0.08) 0px 3px 10px 0px",
+        "outline": "rgb(23, 19, 30)"
+      },
+      "shot": "/tmp/phase4-after-1440-dark-login.png"
+    },
+    {
+      "name": "gesture-1440-dark",
+      "pass": true,
+      "serviceToQuote": true,
+      "editableField": true,
+      "optionalBudget": true
+    }
+  ],
+  "errors": [],
+  "failedSource": []
+}
