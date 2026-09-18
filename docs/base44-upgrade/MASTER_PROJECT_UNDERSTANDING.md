@@ -1,5 +1,11 @@
 # Master project understanding — current 30-phase baseline
 
+## Current checkpoint — Phase 5 complete (2026-09-18)
+
+[PHASE_STATUS](PHASE_STATUS.md) is authoritative over historical continuation gates below. Phase 4 was independently accepted, then exact continuation authorized and completed [Phase 5 public-header refinement](PHASE_5_30_HEADER_NAVIGATION.md): full phone brand, >=44px masthead targets, always-visible desktop links, honest hydration-ready dialog controls and breakpoint focus recovery. Existing navigation, CMS settings, auth/session architecture, Home order and persistence remain. No RGB edge yet; STOP before Phase 6 until the next exact continuation.
+
+Fresh 464 tests/54 files, typecheck/zero-warning lint/build, 10 source and 10 production reusable browser cases, 24 independent responsive/theme/no-JS cases and four short-window cases pass. Independent desktop and phone/tablet light/dark captures were reviewed; no live iframe tab was available. All six optional values are still absent, with no credentials or backend mutations. Hosted/private/content/native/field-metric/release gates persist. Starting Phase 5 HEAD `996e02810a0192a40d02286e190f923c421f1534` is not its automatic completion commit.
+
 Date: 2026-09-16 UTC / 2026-09-17 IST. Branch `initial-setup`; pre-edit commit `b566a40deb4f3e68fc0cbdfc82a534025aeaff73`. Authority: [latest full prompt](MASTER_PLAN_30_PHASES.md), [current gate](PHASE_STATUS.md). Historical understanding is preserved in [archive](archive-pre-30-phase/MASTER_PROJECT_UNDERSTANDING.md).
 
 ## Scope and evidence

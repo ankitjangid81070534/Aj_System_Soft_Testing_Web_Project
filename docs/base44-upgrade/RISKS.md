@@ -1,5 +1,11 @@
 # Retained risks and blockers — 30-phase program
 
+## Current Phase 5 disposition (2026-09-18)
+
+[Current status](PHASE_STATUS.md) supersedes historical stop gates below. Phase 4 was independently accepted; [Phase 5](PHASE_5_30_HEADER_NAVIGATION.md) is now complete at public-header scope. Its early-click risk is addressed with server-disabled dialog triggers enabled at hydration, not a claim that JavaScript-free dialogs or instant network responses exist. Native links remain usable. Breakpoint focus is restored to a visible counterpart; desktop entrance hiding is removed.
+
+Fresh 464 tests/typecheck/zero-warning lint/build, 10 source + 10 production browser tests, 24 responsive cases and four short-window checks pass. Independent phone/tablet/desktop images were reviewed. Editor iframe still has no tab; no iframe sign-off or owner-environment repair. Fixed dock overlap at short first-fold height is preserved and scroll reachability is tested, not claimed absent. Hosted saves/RLS/auth/email/custom CMS, true native-device/zoom, field metrics, content/legal and release gates below remain. No new provider, credentials, data writes or SQL. Phase 6 awaits exact continuation.
+
 ## Phase 4 checkpoint (2026-09-18)
 
 [Foundation refinement](PHASE_4_30_DESIGN_SYSTEM.md) preserves business behavior, Home order and component APIs. Local tests/type/lint/build and independent browser cases pass; these do not prove hosted saves or private CMS layouts. R16: live preview produced three new Next client writable-stream close/write errors after a timed-out enquiry click. Quote still mounts with no failed requests/overlay; fresh independent dev/production contexts do not reproduce it. Cause is unestablished; runtime sign-off remains pending, no repair claimed. Screenshot also returned iframe_hidden: human visual acceptance is unavailable. **Hold Phase 4 acceptance before Phase 5.**

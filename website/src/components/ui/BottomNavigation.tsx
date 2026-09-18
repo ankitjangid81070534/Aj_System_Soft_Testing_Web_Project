@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import {
   ArrowUpRight, BriefcaseBusiness, CircleHelp, Cpu, House, Info,
   LayoutGrid, MessageCircle, Plus, Search, Sparkles, Star, User, Users, X,
@@ -14,6 +14,12 @@ import { NavBar, type NavItem } from "./tubelight-navbar";
 import { isNavigationActive, splitNavigation } from "@/lib/bottom-navigation";
 import { isLegalNavigationLink, withLegalNavigation } from "@/lib/navigation";
 import styles from "./bottom-navigation.module.css";
+
+// Native links work before hydration; dialog buttons cannot. Keep them honestly
+// disabled in server HTML, then enable with React's hydration snapshot (no timer).
+const subscribeToHydration = () => () => {};
+const clientReady = () => true;
+const serverReady = () => false;
 
 const icons: Record<string, typeof House> = {
   "/": House, "/services": LayoutGrid, "/projects": BriefcaseBusiness,
@@ -36,6 +42,7 @@ export function BottomNavigation({
   ctaHref: string;
 }) {
   const pathname = usePathname();
+  const interactive = useSyncExternalStore(subscribeToHydration, clientReady, serverReady);
   const portalDisclosure = authenticated ? {} : {
     "aria-haspopup": "dialog" as const,
     "aria-expanded": portalOpen,
@@ -47,6 +54,7 @@ export function BottomNavigation({
   const { primary, overflow } = splitNavigation(links);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const moreRef = useRef<HTMLButtonElement>(null);
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
   const searchRequested = useRef(false);
@@ -94,6 +102,7 @@ export function BottomNavigation({
     if (!dialog || !open) return;
     const previousOverflow = document.body.style.overflow;
     const moreTrigger = moreRef.current;
+    const searchTrigger = searchButtonRef.current;
     returnFocusRef.current = document.activeElement instanceof HTMLElement && document.activeElement !== document.body
       ? document.activeElement : moreTrigger;
     dialog.showModal();
@@ -103,9 +112,11 @@ export function BottomNavigation({
       document.body.style.overflow = previousOverflow;
       if (dialog.open) dialog.close();
       searchRequested.current = false;
-      const trigger = returnFocusRef.current;
-      if (trigger?.isConnected && trigger.getClientRects().length) trigger.focus({ preventScroll: true });
-      else moreTrigger?.focus({ preventScroll: true });
+      // A breakpoint change can hide the opener. Restore to the visible
+      // counterpart instead of leaving keyboard focus on the document body.
+      const trigger = [returnFocusRef.current, moreTrigger, searchTrigger]
+        .find(element => element?.isConnected && element.getClientRects().length);
+      trigger?.focus({ preventScroll: true });
     };
   }, [open]);
 
@@ -123,7 +134,7 @@ export function BottomNavigation({
   function renderNavItem(item: NavItem, isActive: boolean, lamp: ReactNode) {
     if (item.url === "#more-navigation") {
       return (
-        <button ref={moreRef} type="button" className={styles.more} onClick={onOpen}
+        <button ref={moreRef} type="button" className={styles.more} onClick={onOpen} disabled={!interactive}
           aria-label="More navigation options" aria-haspopup="dialog" aria-expanded={open}
           aria-controls="more-navigation" data-active={moreActive || undefined}>
           <span className={styles.moreOrb}><Plus aria-hidden="true" strokeWidth={1.8} /></span>
@@ -165,10 +176,10 @@ export function BottomNavigation({
         <NavBar items={desktopLinks.map(toNavItem)} embedded
           className={styles.desktopLinks} renderItem={renderNavItem} />
         <div className={styles.dockActions}>
-          <button type="button" className={styles.accountTrigger} onClick={onPortal} {...portalDisclosure}>
+          <button type="button" className={styles.accountTrigger} onClick={onPortal} disabled={!interactive} {...portalDisclosure}>
             <User aria-hidden="true" size={17} />{authenticated ? "Open Account" : "Client Login"}
           </button>
-          <button type="button" className={styles.searchTrigger} onClick={openSearch}
+          <button ref={searchButtonRef} type="button" className={styles.searchTrigger} onClick={openSearch} disabled={!interactive}
             aria-label="Search navigation" title="Search pages (Ctrl K / ⌘ K)" aria-keyshortcuts="Meta+K Control+K" aria-haspopup="dialog" aria-controls="more-navigation" aria-expanded={open}>
             <Search aria-hidden="true" size={19} /><kbd>⌘ K</kbd>
           </button>

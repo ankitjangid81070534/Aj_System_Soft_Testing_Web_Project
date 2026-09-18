@@ -47,6 +47,14 @@
 - D31: Retain initial image-unsettled screenshot evidence; correct the harness to decode visible images and compare source-matched production builds. Automated pixel/geometry parity is distinct from human visual acceptance and cannot sign off authenticated/real-data layouts.
 - D32: Phase 4 local implementation/tests pass, but new live-preview stream errors and unavailable screenshot prevent full acceptance. Cause is unestablished; do not claim a fix from passing independent browsers or change unrelated auth/security/runtime code. Resume this gate before Phase 5.
 
+## Phase 5 decisions (2026-09-18)
+
+- D33: Phase 4's independent acceptance supersedes D32's historical pending gate. The next exact continuation authorizes Phase 5 only. Preserve the accepted desktop row/mobile dock; no template, new routes, Home moves or Phase 6 RGB edge.
+- D34: Improve the existing phone masthead with full-brand visibility and >=44px touch targets using current tokens/Button. Keep CMS props/fallbacks and non-sticky mobile header; desktop spacing and dock geometry remain.
+- D35: Remove desktop link entrance hiding. Reproduced pre-hydration lost clicks warrant disabled dialog triggers in server HTML, enabled by hydration snapshot, not timers or fake interaction success. Native links stay available; no claim that unavailable JavaScript or network/auth latency is eliminated.
+- D36: Reuse existing native-menu cleanup/reset and restore the visible More/search counterpart on breakpoint changes. Leave auth/session/account and data handlers intact.
+- D37: Separate independent browser/visual acceptance from unavailable iframe checks. Preserve initial app-click failures and harness-only dialog-transition locator races. Final 464 tests, build/type/lint, 10 source + 10 production reusable cases, 24 responsive cases and four short-screen checks pass at scope; these do not prove hosted saves or field responsiveness.
+
 ## Next authorization
 
-**STOP at Phase 4 live-preview acceptance checkpoint.** Do not skip to **Phase 5 — Responsive Brand Header + Navigation** on a repeated continuation; finish this gate first, then await a new exact command. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+**STOP after Phase 5.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 6 — RGB Moving-Edge Primary CTA**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

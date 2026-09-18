@@ -87,13 +87,13 @@ export function MarketingHeader({
   return (
     <header>
       <ScrollProgress />
-      <div className={styles.brandBar}>
+      <div className={styles.brandBar} data-brand-header>
         <Link href="/" className={`${styles.brand} focus-ring`} aria-label={`${safeBrandName} — home`}>
           <span aria-hidden="true" className={styles.brandMark}>AJ</span>
           <span className={styles.fullName}>{safeBrandName}</span>
           <span className={styles.shortName}>{safeBrandShortName}</span>
         </Link>
-        <Button href={safeCtaHref} size="sm">{safeCtaLabel}</Button>
+        <Button href={safeCtaHref} size="sm" className={styles.headerCta}>{safeCtaLabel}</Button>
       </div>
       <BottomNavigation
         navLinks={navLinks}
