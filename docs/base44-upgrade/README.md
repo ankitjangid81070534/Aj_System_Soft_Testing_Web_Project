@@ -19,4 +19,8 @@ Historical detailed reports (including old Phase 16 CMS planning/hydration diagn
 
 13. [Phase 1 data/save audit, scoped permission repair and remaining gates](PHASE_1_30_DATA_SAVE_AUDIT.md)
 
-**STOP after Phase 1.** Source audit/scoped repair complete; hosted saves/RLS remain blocked, not passed. Continue only on **START NEXT PHASE SAFELY** to Phase 2 journey benchmark planning. No backend migration, public redesign, real data writes or deployment authorized.
+14. [Phase 2 professional-site benchmark — current program](PHASE_2_30_BENCHMARKS.md)
+15. [Phase 2 eight buyer journeys, friction and no-change contract](PHASE_2_30_CUSTOMER_JOURNEYS.md)
+16. [Phase 2 evidence and verification limits](evidence/phase2-30/verification.json)
+
+**STOP after Phase 2.** Research/journey planning complete; hosted saves/RLS remain blocked, not passed. Continue only on a new **START NEXT PHASE SAFELY** to Phase 3 Information Architecture + Homepage Plan. No backend migration, public redesign, real data writes or deployment authorized.

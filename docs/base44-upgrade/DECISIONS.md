@@ -24,6 +24,13 @@
 - D17: Before/after mocked-action tests prove the local repair, not direct RLS parity. Committed editor write policies remain a release blocker until sanitized existing-schema review and separate approved policy work.
 - D18: Do not resolve non-atomic operations, Builder composition, upload-capacity policy, agreement semantics or identity linkage by speculative migrations/configuration changes. Record each finding and its acceptance gate in the current Phase 1 report.
 
+## Phase 2 decisions (2026-09-18)
+
+- D19: Resume the interrupted Phase 2 and persist its evidence/report before any next phase. Repeated continuation does not skip unfinished checkpoints or authorize two phases.
+- D20: Benchmark patterns only from Thoughtworks Home, Netguru services and Atomic Object portfolio; do not copy brand/content/claims or present research as measured conversion gains. AJ's existing requirement-led identity, services and proof empty states remain.
+- D21: Prefer reusing existing service, project, enquiry, consultation and legal routes. Context carry-through, guided discovery and field/expectation improvements are proposals for their later phases, not implementation approval now.
+- D22: Separate 32 source-dev/public-proxy service journeys from four isolated-production empty-portfolio recoveries, three navigation tests, source-only observations and failed live iframe checks. Retain raw harness failures; test correction is not application repair. No fresh build or real submission claim.
+
 ## Next authorization
 
-Wait for **START NEXT PHASE SAFELY** before **Phase 2 — Professional Site / Customer-Journey Benchmark**, planning only. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+Wait for a new **START NEXT PHASE SAFELY** before **Phase 3 — Information Architecture + Homepage Plan**, planning only. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

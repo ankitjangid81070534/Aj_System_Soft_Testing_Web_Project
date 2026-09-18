@@ -1,5 +1,11 @@
 # Retained risks and blockers — 30-phase program
 
+## Phase 2 update (2026-09-18)
+
+Planning only; no repairs. [Journey ledger J01–J08](PHASE_2_30_CUSTOMER_JOURNEYS.md) distinguishes observed form/navigation friction from inferred buyer difficulty. Quote loses service context; contact requires phone/company while consultation promises a call with phone optional. Required agreement points to unpublished fallback terms; direct contact settings and approved portfolio records are unavailable here. None establishes production absence or a measured conversion loss. Do not drop consent or invent contacts/proof/response promises to hide these gates.
+
+Fresh resumed tests/type/lint pass; recovered independent journey evidence is scoped by runtime. Current live iframe route helper failed to render and real-link retry timed out: no iframe/visual sign-off. External-host service remains healthy. Earlier save/RLS/upload/data gates stay blocked. Phase 3 must propose only; do not activate Builder defaults, duplicate useful Home sections or copy competitor claims.
+
 ## Phase 1 update (2026-09-18)
 
 The [current data/save audit](PHASE_1_30_DATA_SAVE_AUDIT.md) contains P1-F01–P1-F14 and the full action/resource trace. **Fixed locally:** offers/announcements Save publication bypass; 16 new action tests pass. **Not fixed by that change:** direct RLS publication policies, Builder/public composition, atomic ordering, upload capacity, partial-save semantics or real persisted/reloaded results.

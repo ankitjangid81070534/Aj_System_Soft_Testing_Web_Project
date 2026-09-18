@@ -1,0 +1,634 @@
+{
+  "date": "2026-09-18T11:11:26.542Z",
+  "mode": "source-mounted development via public preview proxy",
+  "scope": "read-only anonymous gestures; no submissions",
+  "cases": [
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "startup",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "retail",
+      "slug": "retail-pos-inventory",
+      "serviceHeading": "Retail POS & Inventory",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "hospital-clinic",
+      "slug": "hospital-clinic-software",
+      "serviceHeading": "Hospital & Clinic Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "pharmacy",
+      "slug": "pharmacy-software",
+      "serviceHeading": "Pharmacy Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "business-owner",
+      "slug": "erp-business-software",
+      "serviceHeading": "ERP & Business Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "saas-founder",
+      "slug": "saas-development",
+      "serviceHeading": "SaaS Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "website-customer",
+      "slug": "website-development",
+      "serviceHeading": "Website Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "persona": "custom-software-customer",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "kind": "contact-read",
+      "required": [
+        "c-name",
+        "c-email",
+        "c-phone",
+        "c-company",
+        "c-message",
+        "c-agreement",
+        "a-name",
+        "a-email"
+      ],
+      "directContactConfigured": 0
+    },
+    {
+      "width": 390,
+      "kind": "projects-empty-recovery",
+      "pass": false
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "startup",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "retail",
+      "slug": "retail-pos-inventory",
+      "serviceHeading": "Retail POS & Inventory",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "hospital-clinic",
+      "slug": "hospital-clinic-software",
+      "serviceHeading": "Hospital & Clinic Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "pharmacy",
+      "slug": "pharmacy-software",
+      "serviceHeading": "Pharmacy Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "business-owner",
+      "slug": "erp-business-software",
+      "serviceHeading": "ERP & Business Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "saas-founder",
+      "slug": "saas-development",
+      "serviceHeading": "SaaS Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "website-customer",
+      "slug": "website-development",
+      "serviceHeading": "Website Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 900,
+      "persona": "custom-software-customer",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 662,
+      "kind": "contact-read",
+      "required": [
+        "c-name",
+        "c-email",
+        "c-phone",
+        "c-company",
+        "c-message",
+        "c-agreement",
+        "a-name",
+        "a-email"
+      ],
+      "directContactConfigured": 0
+    },
+    {
+      "width": 662,
+      "kind": "projects-empty-recovery",
+      "pass": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "startup",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "retail",
+      "slug": "retail-pos-inventory",
+      "serviceHeading": "Retail POS & Inventory",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "hospital-clinic",
+      "slug": "hospital-clinic-software",
+      "serviceHeading": "Hospital & Clinic Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "pharmacy",
+      "slug": "pharmacy-software",
+      "serviceHeading": "Pharmacy Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "business-owner",
+      "slug": "erp-business-software",
+      "serviceHeading": "ERP & Business Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "saas-founder",
+      "slug": "saas-development",
+      "serviceHeading": "SaaS Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "website-customer",
+      "slug": "website-development",
+      "serviceHeading": "Website Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "persona": "custom-software-customer",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 820,
+      "kind": "contact-read",
+      "required": [
+        "c-name",
+        "c-email",
+        "c-phone",
+        "c-company",
+        "c-message",
+        "c-agreement",
+        "a-name",
+        "a-email"
+      ],
+      "directContactConfigured": 0
+    },
+    {
+      "width": 820,
+      "kind": "projects-empty-recovery",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "startup",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "retail",
+      "slug": "retail-pos-inventory",
+      "serviceHeading": "Retail POS & Inventory",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "hospital-clinic",
+      "slug": "hospital-clinic-software",
+      "serviceHeading": "Hospital & Clinic Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "pharmacy",
+      "slug": "pharmacy-software",
+      "serviceHeading": "Pharmacy Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "business-owner",
+      "slug": "erp-business-software",
+      "serviceHeading": "ERP & Business Software",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "saas-founder",
+      "slug": "saas-development",
+      "serviceHeading": "SaaS Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "website-customer",
+      "slug": "website-development",
+      "serviceHeading": "Website Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "persona": "custom-software-customer",
+      "slug": "custom-software-development",
+      "serviceHeading": "Custom Software Development",
+      "required": [
+        "q-name",
+        "q-email",
+        "q-requirements",
+        "q-consent",
+        "q-agreement"
+      ],
+      "budgetRequired": false,
+      "selectedProjectType": "",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "kind": "contact-read",
+      "required": [
+        "c-name",
+        "c-email",
+        "c-phone",
+        "c-company",
+        "c-message",
+        "c-agreement",
+        "a-name",
+        "a-email"
+      ],
+      "directContactConfigured": 0
+    },
+    {
+      "width": 1440,
+      "kind": "projects-empty-recovery",
+      "pass": false
+    }
+  ],
+  "pageErrors": [],
+  "failedSourceRequests": [],
+  "thirdPartyFailures": []
+}

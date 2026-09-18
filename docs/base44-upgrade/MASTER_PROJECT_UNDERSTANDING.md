@@ -53,6 +53,12 @@ Metadata, canonical helpers, noindex private/preview rules, robots/sitemap/RSS a
 
 Other newly documented risks include blog timestamp-order mismatch, global action body limit versus advertised upload sizes, partial multi-step saves, missing affected-row confirmation, consent-version timing and audit attribution. No redesign, new business database, SQL, real data writes or credentials. Live source dev and all prior approved UI remain intact.
 
+## Phase 2 update (2026-09-18)
+
+The interrupted benchmark is now complete as **planning only**: [three professional IA references](PHASE_2_30_BENCHMARKS.md), [eight buyer journeys, friction and no-change contract](PHASE_2_30_CUSTOMER_JOURNEYS.md). All eight perspectives reach existing relevant services and quote; service context is not carried into the form. Optional budget is preserved. Unconfigured direct contacts, agreement and real portfolio evidence remain distinct data/operational gates, not permission to invent content. No source or persistence changes.
+
+Recovered same-day evidence records 32 source-dev service-to-quote gestures, four contact inspections, four corrected empty-portfolio exits and three existing navigation tests (the latter checks reused isolated Phase 1 production). Fresh resumed 431 tests/52 files, typecheck and lint pass. Initial harness results retained; live iframe navigation/real-link retry failed to complete, so no iframe or visual sign-off. No fresh build or successful submitted/saved enquiry claimed.
+
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). Phase 1 source audit/scoped repair is complete; hosted functional sign-off remains blocked. STOP before Phase 2 journey benchmark planning until the next exact continuation command. Phase 0 evidence above remains historical, not a claim of a new full visual/route sweep.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP before Phase 3 — Information Architecture + Homepage Plan** until a new exact continuation command. Phase 1 hosted functional sign-off remains blocked. Earlier baseline evidence is historical, not a new full visual/route sweep.
