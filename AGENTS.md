@@ -1,6 +1,11 @@
 # Base44 Dev Environment
 
-## Latest progress recovery — system-upgrade (2026-09-18 UTC)
+## Latest continuation gate — system-upgrade (2026-09-18 UTC)
+- Read `PHASE_STATUS.md` and `PHASE_4_30_CONTINUATION_GATE.md`. Starting HEAD `2e70cbcdde` was clean. Resumed Phase 4 acceptance; Phase 5 NOT started, no application changes.
+- Fresh 460 tests/53 files, typecheck/lint and external-Host Home pass. Current visible Home has zero `bis_size` attributes and no captured hydration/stream errors; an AdSense script-load error remains. This is not a code fix or a controlled clean-profile initial-load test.
+- Live Start Project → visible quote form and Home → Home section gestures pass with no new errors/failed requests/dialogs. Tablet Home/mobile quote reviewed. Desktop-requested capture still measured 919×499; mobile measured 374×666. Actual desktop visual acceptance remains open; obtain a genuinely wider preview rather than repeating tests or changing CSS/security for tool clamping. No backend/credential/release changes.
+
+## Historical progress recovery — system-upgrade (2026-09-18 UTC)
 - Read current `PHASE_STATUS.md` and `PHASE_PROGRESS_RECHECK_2026-09-18.md` first. Starting HEAD `e9b3b9aacb` contains Phase 4 implementation and prior acceptance notes. No Phase 0 reset or Phase 5 start. Three phases complete at documented scope (0, 2, 3); Phase 1 hosted gates blocked; Phase 4 implemented/acceptance pending.
 - Fresh 460 tests/53 files, typecheck/lint and source-dev external Host HTTP 200 pass. Live visible 919×499 Home → Start Project → visible quote form and quote → Home gestures pass; no new quote errors/failed requests/open dialogs. Home tablet and quote mobile visually reviewed. Requested desktop capture stayed 919×499; do not call it a desktop pass.
 - Initial hydration warning has 1,542 browser `bis_size` attributes versus zero in fresh server HTML; same injection pattern as HYDRATION_DIAGNOSIS.md. Exact injector unknown; clean-profile initial render and actual desktop review remain acceptance gates. Old stream errors did not recur, not fixed. Do not suppress warnings, strip attributes or change security/ads. Six optional values absent; no integrations/data/source/config changes or release. Prior hidden-preview notes below are historical, not current visibility.
