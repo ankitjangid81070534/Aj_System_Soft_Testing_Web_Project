@@ -1,0 +1,1064 @@
+{
+  "baseline_commit": "a3fb93421d052217dbce84d68e3b9c3558a16d27",
+  "scope": "Static inventory, not authenticated persistence or effective hosted schema",
+  "actions": [
+    {
+      "name": "upsertResourceAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 249,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceForm.tsx",
+          "lines": [
+            18,
+            167
+          ]
+        }
+      ]
+    },
+    {
+      "name": "setResourceStatusAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 388,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceForm.tsx",
+          "lines": [
+            16,
+            215
+          ]
+        }
+      ]
+    },
+    {
+      "name": "toggleResourceActiveAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 423,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceForm.tsx",
+          "lines": [
+            17,
+            227
+          ]
+        },
+        {
+          "path": "website/src/components/admin/ResourceList.tsx",
+          "lines": [
+            13,
+            205
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deleteResourceAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 456,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceForm.tsx",
+          "lines": [
+            14,
+            250
+          ]
+        },
+        {
+          "path": "website/src/components/admin/ResourceList.tsx",
+          "lines": [
+            10,
+            243
+          ]
+        }
+      ]
+    },
+    {
+      "name": "restoreResourceAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 497,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceForm.tsx",
+          "lines": [
+            15,
+            239
+          ]
+        },
+        {
+          "path": "website/src/components/admin/ResourceList.tsx",
+          "lines": [
+            12,
+            218
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reorderResourceAction",
+      "path": "website/src/lib/admin/actions.ts",
+      "line": 531,
+      "references": [
+        {
+          "path": "website/src/components/admin/ResourceList.tsx",
+          "lines": [
+            11,
+            178,
+            190
+          ]
+        }
+      ]
+    },
+    {
+      "name": "createAgreementAction",
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "line": 66,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/agreements/page.tsx",
+          "lines": [
+            13,
+            127
+          ]
+        }
+      ]
+    },
+    {
+      "name": "createAgreementVersionAction",
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "line": 121,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/agreements/page.tsx",
+          "lines": [
+            14,
+            277
+          ]
+        }
+      ]
+    },
+    {
+      "name": "activateAgreementVersionAction",
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "line": 188,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/agreements/page.tsx",
+          "lines": [
+            11,
+            244
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generateAgreementVersionPdfAction",
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "line": 239,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/agreements/page.tsx",
+          "lines": [
+            15,
+            253
+          ]
+        }
+      ]
+    },
+    {
+      "name": "archiveAgreementAction",
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "line": 313,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/agreements/page.tsx",
+          "lines": [
+            12,
+            174
+          ]
+        }
+      ]
+    },
+    {
+      "name": "toggleSectionVisibilityAction",
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "line": 44,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/home/page.tsx",
+          "lines": [
+            11,
+            137
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reorderSectionAction",
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "line": 65,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/home/page.tsx",
+          "lines": [
+            11,
+            146,
+            158
+          ]
+        }
+      ]
+    },
+    {
+      "name": "setSectionStatusAction",
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "line": 99,
+      "references": []
+    },
+    {
+      "name": "saveSectionAction",
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "line": 150,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/home/[id]/page.tsx",
+          "lines": [
+            13,
+            132
+          ]
+        }
+      ]
+    },
+    {
+      "name": "createSectionAction",
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "line": 225,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/home/new/page.tsx",
+          "lines": [
+            10,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "name": "uploadMediaAction",
+      "path": "website/src/lib/admin/media-actions.ts",
+      "line": 36,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/media/page.tsx",
+          "lines": [
+            12,
+            97
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deleteMediaAction",
+      "path": "website/src/lib/admin/media-actions.ts",
+      "line": 95,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/media/page.tsx",
+          "lines": [
+            12,
+            182
+          ]
+        }
+      ]
+    },
+    {
+      "name": "updateSettingsAction",
+      "path": "website/src/lib/admin/settings-actions.ts",
+      "line": 45,
+      "references": [
+        {
+          "path": "website/src/components/admin/BrandSettingsForm.tsx",
+          "lines": [
+            8,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "name": "createUserAction",
+      "path": "website/src/lib/admin/user-actions.ts",
+      "line": 40,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/users/page.tsx",
+          "lines": [
+            11,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resetUserPasswordAction",
+      "path": "website/src/lib/admin/user-actions.ts",
+      "line": 158,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/users/page.tsx",
+          "lines": [
+            12,
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "name": "changeUserRoleAction",
+      "path": "website/src/lib/admin/user-actions.ts",
+      "line": 190,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/users/page.tsx",
+          "lines": [
+            10,
+            258
+          ]
+        }
+      ]
+    },
+    {
+      "name": "updateAdminUsernameAction",
+      "path": "website/src/lib/admin/user-actions.ts",
+      "line": 222,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/users/page.tsx",
+          "lines": [
+            13,
+            284
+          ]
+        }
+      ]
+    },
+    {
+      "name": "signInAction",
+      "path": "website/src/lib/auth/actions.ts",
+      "line": 55,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/login/login-form.tsx",
+          "lines": [
+            4,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "name": "signOutAction",
+      "path": "website/src/lib/auth/actions.ts",
+      "line": 103,
+      "references": [
+        {
+          "path": "website/src/app/ajadmin/page.tsx",
+          "lines": [
+            19,
+            237
+          ]
+        },
+        {
+          "path": "website/src/components/admin/AdminShell.tsx",
+          "lines": [
+            12,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "name": "submitContactAction",
+      "path": "website/src/lib/leads/actions.ts",
+      "line": 86,
+      "references": [
+        {
+          "path": "website/src/components/site/LeadForms.tsx",
+          "lines": [
+            9,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "name": "submitQuoteAction",
+      "path": "website/src/lib/leads/actions.ts",
+      "line": 169,
+      "references": [
+        {
+          "path": "website/src/components/site/LeadForms.tsx",
+          "lines": [
+            10,
+            251
+          ]
+        }
+      ]
+    },
+    {
+      "name": "requestAppointmentAction",
+      "path": "website/src/lib/leads/actions.ts",
+      "line": 298,
+      "references": [
+        {
+          "path": "website/src/components/site/LeadForms.tsx",
+          "lines": [
+            8,
+            425
+          ]
+        }
+      ]
+    },
+    {
+      "name": "updateLeadAction",
+      "path": "website/src/lib/leads/admin-actions.ts",
+      "line": 23,
+      "references": [
+        {
+          "path": "website/src/components/admin/LeadEditForm.tsx",
+          "lines": [
+            7,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "name": "clientLoginAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 113,
+      "references": [
+        {
+          "path": "website/src/components/portal/AuthForms.tsx",
+          "lines": [
+            7,
+            214
+          ]
+        }
+      ]
+    },
+    {
+      "name": "clientSignupAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 143,
+      "references": [
+        {
+          "path": "website/src/components/portal/AuthForms.tsx",
+          "lines": [
+            8,
+            267
+          ]
+        }
+      ]
+    },
+    {
+      "name": "googleOAuthReadyAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 231,
+      "references": [
+        {
+          "path": "website/src/components/portal/AuthForms.tsx",
+          "lines": [
+            10,
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "name": "forgotPasswordAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 240,
+      "references": [
+        {
+          "path": "website/src/components/portal/AuthForms.tsx",
+          "lines": [
+            9,
+            391
+          ]
+        }
+      ]
+    },
+    {
+      "name": "updatePasswordAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 307,
+      "references": [
+        {
+          "path": "website/src/components/portal/AuthForms.tsx",
+          "lines": [
+            11,
+            425
+          ]
+        }
+      ]
+    },
+    {
+      "name": "updateProfileAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 340,
+      "references": [
+        {
+          "path": "website/src/components/portal/AccountForms.tsx",
+          "lines": [
+            8,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "name": "completeProfileAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 379,
+      "references": [
+        {
+          "path": "website/src/components/portal/AccountForms.tsx",
+          "lines": [
+            6,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "name": "uploadAvatarAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 480,
+      "references": [
+        {
+          "path": "website/src/components/portal/AccountForms.tsx",
+          "lines": [
+            9,
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "name": "submitVerifiedReviewAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 513,
+      "references": [
+        {
+          "path": "website/src/components/portal/AccountForms.tsx",
+          "lines": [
+            7,
+            171
+          ]
+        }
+      ]
+    },
+    {
+      "name": "clientSignOutAction",
+      "path": "website/src/lib/portal/actions.ts",
+      "line": 584,
+      "references": [
+        {
+          "path": "website/src/app/(public)/account/page.tsx",
+          "lines": [
+            31,
+            252
+          ]
+        }
+      ]
+    }
+  ],
+  "action_count": 39,
+  "action_module_count": 10,
+  "source_digests": [
+    {
+      "path": "website/src/app/ajadmin/agreements/page.tsx",
+      "sha256": "b073bf0fc2ffde59445ae9d1820753e4b7904ea611a78122b47f23f076c184b3"
+    },
+    {
+      "path": "website/src/app/ajadmin/leads/page.tsx",
+      "sha256": "d10dc0c6070016e0f866dc237db6f7d3540589c162abcbaba323bbfd9e3a0d14"
+    },
+    {
+      "path": "website/src/components/admin/AdminActionForm.tsx",
+      "sha256": "0360767e78d8172b810217451755928d85c590de77659d72afb7ebcce84412c6"
+    },
+    {
+      "path": "website/src/components/admin/AdminFeedback.tsx",
+      "sha256": "c7046d17c12e4374acf7ac95aa323192fd07de613d409259c955c2f65a768801"
+    },
+    {
+      "path": "website/src/components/admin/AdminNav.tsx",
+      "sha256": "d23f2a34e20c2f5d396ef330974f8846b41a057bfaea460548858bf614009b1d"
+    },
+    {
+      "path": "website/src/components/admin/AdminShell.tsx",
+      "sha256": "37fb2893d5625d3271623bec9f47ff1ecd208a8004f87c963f8bfb1f6b2887e6"
+    },
+    {
+      "path": "website/src/components/admin/AdminSubmitButton.tsx",
+      "sha256": "ff8b1c9ed06fd2244510f852d90188a4a103598120cf8825807a47c4aacb459e"
+    },
+    {
+      "path": "website/src/components/admin/AdminTableRegion.tsx",
+      "sha256": "cb73a6adfd916b2990825683c3f49acbfdef9895e6878fd5e9e833dfba3b7e77"
+    },
+    {
+      "path": "website/src/components/admin/BrandSettingsForm.tsx",
+      "sha256": "7b398709fc3313364aa057c86c23973b33c55ed8110a47f9ea796dd33d3d882b"
+    },
+    {
+      "path": "website/src/components/admin/ConfirmButton.tsx",
+      "sha256": "468970750d0b877d76a26aa4db190bba64ff6f698adc9b6ccaf4c92a689ba27c"
+    },
+    {
+      "path": "website/src/components/admin/LeadEditForm.tsx",
+      "sha256": "973246bb168501d49b7e11cdbb11a62e6439b8ffecd79fa808c0aae8074dbc82"
+    },
+    {
+      "path": "website/src/components/admin/ResourceForm.tsx",
+      "sha256": "3649081969f642ab38d13833adb8a5d2786882fc0a1bc47a9e2169a3199630e7"
+    },
+    {
+      "path": "website/src/components/admin/ResourceList.tsx",
+      "sha256": "d0ecbd341aa3e041d03470a2e240664d552f8e091a2feb2244141b6a682c66b8"
+    },
+    {
+      "path": "website/src/components/admin/SetupNotice.tsx",
+      "sha256": "d4b103dfe4b2f0ba539c215fea51a090cfe0a06a34ac2c933b962ba6441784f3"
+    },
+    {
+      "path": "website/src/components/admin/admin-ui.test.ts",
+      "sha256": "32cc830686dd82dcd1bc23da72ecfc67604c215036bf074739969281c5829a9e"
+    },
+    {
+      "path": "website/src/components/portal/AccountForms.tsx",
+      "sha256": "f2251aed083614e8d347bc80d9841eb39b538b1067f34e27835b5cdead817543"
+    },
+    {
+      "path": "website/src/components/portal/AccountNavigation.tsx",
+      "sha256": "1f13a8b07fd116fedfd444a9deb2f16b50d5c98f6ff4b14ba43001885f4f3017"
+    },
+    {
+      "path": "website/src/components/portal/AgreementsHistory.tsx",
+      "sha256": "664542ee1f09f23988a236b85e8ef9cdbf2125b0abf31acd76fc218dc831bb14"
+    },
+    {
+      "path": "website/src/components/portal/AuthCard.tsx",
+      "sha256": "b6df24d3501bbb0d922ad95ef3cdb64dd6b4aa9ff5da9250f9ef2e2a090489a0"
+    },
+    {
+      "path": "website/src/components/portal/AuthForms.tsx",
+      "sha256": "2943710b55796180aa005c4102e4c74476dd0b29c1e53c84a71b2d506414e350"
+    },
+    {
+      "path": "website/src/components/portal/LoginExperience.tsx",
+      "sha256": "f2344a8905f5f7b719d0dca6a739a1bcaed1d5c47aac10e62093d0a9799a47a7"
+    },
+    {
+      "path": "website/src/components/portal/LoginPasswordField.tsx",
+      "sha256": "58b308445b76d1384455f8d6daa2a0e53a9e3f5e91708540640de60f8316b896"
+    },
+    {
+      "path": "website/src/components/portal/PasswordField.tsx",
+      "sha256": "c2aa8fcc6fbd44f62df3d7bc81fda357be9aca0646642f9f6cc629d2ea40b2b5"
+    },
+    {
+      "path": "website/src/components/portal/PortalFeedback.tsx",
+      "sha256": "3d9de3f9b36593af5be4eec2b8691b5f1bad02979f92eb7aea6a815687bbfa78"
+    },
+    {
+      "path": "website/src/components/portal/PortalLoginModal.tsx",
+      "sha256": "dffe2a2922f59a07a2dbff9f857c5ad3bf5d5e0bc126971a88aacc7cf64263f8"
+    },
+    {
+      "path": "website/src/components/portal/portal-ui.test.ts",
+      "sha256": "fcc840fc615f71cf1dacf77fda0e79cb33b5b62463a34108140ee05fe2ee576e"
+    },
+    {
+      "path": "website/src/components/portal/responsive-layout.test.ts",
+      "sha256": "6b0eea6ecf19a347ec08bd3ae949432a0add6817a1c441a7f8a2b2ebf3cf258f"
+    },
+    {
+      "path": "website/src/lib/admin/actions-authorization.test.ts",
+      "sha256": "0dc2a991dc5a3aaeea8ee1dafd65a3068a1d2f226d8e05688791f6edd9cfef42"
+    },
+    {
+      "path": "website/src/lib/admin/actions.ts",
+      "sha256": "b3015b3f4700666053bf283937d047b6e1264e853f5d00e2c2b85bf24de5c59c"
+    },
+    {
+      "path": "website/src/lib/admin/agreement-actions.ts",
+      "sha256": "012a63eda05eeec5391ca0a2da5e6f14fc6ae54aab94f4794ad430d205d9a704"
+    },
+    {
+      "path": "website/src/lib/admin/builder-actions.ts",
+      "sha256": "52111ad30dc3c41ece640490c8515ef37e3b2443a0e9f7d284a4ba2412bd2a22"
+    },
+    {
+      "path": "website/src/lib/admin/builder-authorization.test.ts",
+      "sha256": "f91a6702ae4a0b145358fbdf987437936d680192d6941c25239b88aceb278279"
+    },
+    {
+      "path": "website/src/lib/admin/builder-labels.ts",
+      "sha256": "3a98724cda402751f3bbfe11c76dfbf96e70ef7aef68e79c309eda3c8cc50f47"
+    },
+    {
+      "path": "website/src/lib/admin/crud-ordering.test.ts",
+      "sha256": "08e512330956a2f489792fe96cc69a1ba4f2bebdc7efbb9445936a24912e8e96"
+    },
+    {
+      "path": "website/src/lib/admin/crud.ts",
+      "sha256": "03c605b71663eb859141ae9885dfe749dc205d48ad15bc6909591a9fe07cf2a8"
+    },
+    {
+      "path": "website/src/lib/admin/growth-authorization.test.ts",
+      "sha256": "5407445a4102557f786b2ab7e2602649f3487cad3faed34b16c7505b631ee5a0"
+    },
+    {
+      "path": "website/src/lib/admin/media-actions.ts",
+      "sha256": "1c286137f1f3975eeeb2cddb94bbbf3dda0765266572f9977977e77dce7d9a83"
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.test.ts",
+      "sha256": "d2c4fb4fc192a991b1aa934017cedb8ca3069a8fc292d455fc84153a9fa5620d"
+    },
+    {
+      "path": "website/src/lib/admin/mutation-result.ts",
+      "sha256": "183f8f1dc195a9f30f1d0f5de1893bf3e1f117cead0f04bd68b5e214769ab471"
+    },
+    {
+      "path": "website/src/lib/admin/quick-actions.test.ts",
+      "sha256": "d0eb2606aba53379c4727de5c36520d1cdd4e65c7077453ae0853231d2c42310"
+    },
+    {
+      "path": "website/src/lib/admin/resources.test.ts",
+      "sha256": "3db9463ffd9f76ddbea244afa077c747e7a96d2659fab6965448097b357abe4f"
+    },
+    {
+      "path": "website/src/lib/admin/resources.ts",
+      "sha256": "0f3c9ca6bc02e8e6e73a0bbbd6ce5d085378698d5706303710992214bdfc6c6c"
+    },
+    {
+      "path": "website/src/lib/admin/settings-actions.ts",
+      "sha256": "0bc169c934f6a019045ace0744efcf6665b41fe9b52b21af9b7e4723cfd8932b"
+    },
+    {
+      "path": "website/src/lib/admin/user-actions.ts",
+      "sha256": "223caabf7d8cd4764b10c7dbfc88bc6139104275a8bd35300a0a5aa99e9ef702"
+    },
+    {
+      "path": "website/src/lib/agreements/acceptance.ts",
+      "sha256": "1b9176ef81d94183e0b8842d475bf0278f49348e818d7b817828d6c709dfb511"
+    },
+    {
+      "path": "website/src/lib/agreements/data.ts",
+      "sha256": "bc19ba5a6be2356c959c66c12edd532ad45f105f28cce5a677c3d8472a4786c1"
+    },
+    {
+      "path": "website/src/lib/auth/actions.ts",
+      "sha256": "0da51d17d16a76746f5b0e20c24fdc0f5eb70650518dfe9bc5d86f7411fdb3a5"
+    },
+    {
+      "path": "website/src/lib/auth/permissions.test.ts",
+      "sha256": "cf4a31cfaf240afafc2aa960868eab712ebb1b6cd3caf1fa7c4c9df020fe074e"
+    },
+    {
+      "path": "website/src/lib/auth/permissions.ts",
+      "sha256": "27d931bfea8df2e6252c954a3395fd7bb82b9aa18dd31fac60aaf9c862a8640c"
+    },
+    {
+      "path": "website/src/lib/auth/recovery.ts",
+      "sha256": "2633c5fff9c4874543256315ac7dcf064bdb8f47846dd852f74345643d28a153"
+    },
+    {
+      "path": "website/src/lib/auth/session.ts",
+      "sha256": "38571992634fd7df23a572e0583a1178906650040260fc1f9000edec9d130a9c"
+    },
+    {
+      "path": "website/src/lib/data/admin-leads.ts",
+      "sha256": "70b87c3aae767a57ddcc1e34181c3f272283a0f60cd41f17dae5dd38544f0a5f"
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.test.ts",
+      "sha256": "908fdea6f2020cc27509b24d83fe3b147ea68923e3a5f3c0706f6eb0b82dc75b"
+    },
+    {
+      "path": "website/src/lib/data/ai-methods.ts",
+      "sha256": "4692b1f6adde50ddebf965d7b9b0c3757735235afe0047d8d5aa0771c60c6c0a"
+    },
+    {
+      "path": "website/src/lib/data/blog-fallback.ts",
+      "sha256": "4f56ca92b125536fab9c72d313fb405a2f4d56a84cf2659327ed8afcc0a1b722"
+    },
+    {
+      "path": "website/src/lib/data/blog-performance.test.ts",
+      "sha256": "3f99b40124d6f22281fcb5b834a05465266d3b854889267b82390477ab408eb3"
+    },
+    {
+      "path": "website/src/lib/data/blog.ts",
+      "sha256": "73ba0a53473e8bf6dd5e5cad7e1787a6f123c6a5de32c094ed550fbd269d3be8"
+    },
+    {
+      "path": "website/src/lib/data/buyer-intent-content.test.ts",
+      "sha256": "b02859b28f8682f5d726d3c2b185ea9528ddf08a21f2bb4c90665efebaeeb70b"
+    },
+    {
+      "path": "website/src/lib/data/cta.test.ts",
+      "sha256": "2c21ff60271ff69a7f5cd8909e9767a669ccdba679498a0f8e4d8a088afa11b2"
+    },
+    {
+      "path": "website/src/lib/data/cta.ts",
+      "sha256": "2c252b6c20149a57eb6cc2bf349a296297caa4f9176b6a485037c9f625c9c8dc"
+    },
+    {
+      "path": "website/src/lib/data/growth.ts",
+      "sha256": "5baaaadbeb99056b94b765693bcd5239dc25364e6e54d40f2cbea2fcce5029f5"
+    },
+    {
+      "path": "website/src/lib/data/home.ts",
+      "sha256": "aba78e59dcf0836f125ef4c2c3e9d1cf03b1eaa99103b591bbc9d390101f25ec"
+    },
+    {
+      "path": "website/src/lib/data/jsonb.ts",
+      "sha256": "22be6dfae14d831ef7f568c71230c4c9273eeb00d7864383d175db7df0b3804d"
+    },
+    {
+      "path": "website/src/lib/data/mappers.test.ts",
+      "sha256": "1aa8d3789ab141f63701e3b228701f1fc64158905df957280a65ccbb52e982c7"
+    },
+    {
+      "path": "website/src/lib/data/mappers.ts",
+      "sha256": "ee539919d04ea286f8c690f12725dd0070a1daa3a4aec850edaf73285c60bcfa"
+    },
+    {
+      "path": "website/src/lib/data/navigation.ts",
+      "sha256": "d41a3b1a848a8a431ffdca6ed9f58320ab15c234652cf56277e6e64a4f3e7757"
+    },
+    {
+      "path": "website/src/lib/data/projects.test.ts",
+      "sha256": "9c065b28cd152601fde21ed428f838563b6a7a9119eb0353ee6e62445d75cfe8"
+    },
+    {
+      "path": "website/src/lib/data/projects.ts",
+      "sha256": "3c40f2422a4ebbd84ea6475e324d80ada9236aa0b5095795c9c8cc967d200c93"
+    },
+    {
+      "path": "website/src/lib/data/sections.ts",
+      "sha256": "52dc210d0a6f6c456954f3eac6e416bd8074526325f04c82b9ec849e99538c21"
+    },
+    {
+      "path": "website/src/lib/data/services-fallback.ts",
+      "sha256": "b19dfc7146134960cb67ee440ce7b7cde7f4f43a984c44cf69ad2e9a2fc03c78"
+    },
+    {
+      "path": "website/src/lib/data/services.test.ts",
+      "sha256": "302a9494b861985849e1ac4acb5a3c7cfcec59f177b0a54fb49be653bff0bf2a"
+    },
+    {
+      "path": "website/src/lib/data/services.ts",
+      "sha256": "6b459bd0033626f48bd66c6a59dd0197b47dbac2ca59b68344a9a7502a2f9d4e"
+    },
+    {
+      "path": "website/src/lib/data/settings.ts",
+      "sha256": "764ed4b5f69913f8bcc04e395ef6c8c6c5bbab14ff47179901e49e93d8790740"
+    },
+    {
+      "path": "website/src/lib/data/team.ts",
+      "sha256": "7e427612d8fce07cff9d7edaa639980eb02419acfd47c07964bfee790a499b39"
+    },
+    {
+      "path": "website/src/lib/leads/actions.ts",
+      "sha256": "68e6bf30e842004590fa4c53964c7a0d58300cb7837164a5603bcbf04fb66e4a"
+    },
+    {
+      "path": "website/src/lib/leads/admin-actions.ts",
+      "sha256": "4a941bc00df4bf7fa38dabc2c86abd14dfaa2c1a6f50b1df94c72f2128d61ea6"
+    },
+    {
+      "path": "website/src/lib/portal/actions.ts",
+      "sha256": "fae930da1c91960be7496b2dbbeb5aad347ad5aba8f0e1b82168b52d435bd67f"
+    },
+    {
+      "path": "website/src/lib/supabase/admin.ts",
+      "sha256": "9c5e7eb697e793386852a0e741a3ac7ea8a250f1142cac44fe88586eb7f09968"
+    },
+    {
+      "path": "website/src/lib/supabase/client.ts",
+      "sha256": "a6435bc3b36ee9b11dbb4cac8da811ad499eb835f3ef1dab2730245ffd62402d"
+    },
+    {
+      "path": "website/src/lib/supabase/public.ts",
+      "sha256": "0a1a425bff91fcd7cb1e89271d1bd775d7e4bfe248fd9369bdc470660fda2fc1"
+    },
+    {
+      "path": "website/src/lib/supabase/server.ts",
+      "sha256": "c84b505db621a18d9a89be1568745c6656e603978ba61e21980bdb58bd860541"
+    },
+    {
+      "path": "website/src/lib/validation/auth.test.ts",
+      "sha256": "6dead56e201992ad8f289e3b3aff5eade9a5c9f104baeb35c5722a7f4aa646db"
+    },
+    {
+      "path": "website/src/lib/validation/auth.ts",
+      "sha256": "6d538f0d089e0f65f1dbaf0f2f6e763219ea302b8464ee373764d074dd9b9d29"
+    },
+    {
+      "path": "website/src/lib/validation/leads.test.ts",
+      "sha256": "3854281eb97aa1ba3e7e8988be04c7707b8824e6093eae058af6f5f9d3cedfaa"
+    },
+    {
+      "path": "website/src/lib/validation/leads.ts",
+      "sha256": "79605f01f8530df0fbcbb99ba2020690ad2faded10c21a05f50ce54fd312c47f"
+    },
+    {
+      "path": "website/src/lib/validation/portal.test.ts",
+      "sha256": "874c4dbc2f9887238653d307de79a590d6b908138f3c0c7cba991a31643e0322"
+    },
+    {
+      "path": "website/src/lib/validation/portal.ts",
+      "sha256": "04ae5cd85dfab69c19aedabc6785700dbc5a64b2fc91bc08a7f3e9982d6a5eb0"
+    },
+    {
+      "path": "website/src/lib/validation/sections.test.ts",
+      "sha256": "b29373f16519a36f7b28c972fbc8c31bb9a4796735e51d7f8ed22891020747ef"
+    },
+    {
+      "path": "website/src/lib/validation/sections.ts",
+      "sha256": "16ef728b17f29da85a97475ee9caa8689f16a3286f2de6ae000a26599bfdc003"
+    },
+    {
+      "path": "website/src/proxy.ts",
+      "sha256": "907b82ee0f852b02582e112e004967d0bd1e0b5a350fd8bcbe38edfc3d09f160"
+    }
+  ],
+  "migrations": [
+    {
+      "path": "website/supabase/migrations/0001_roles_and_profiles.sql",
+      "sha256": "81fc31b124169a419567e9ac5519fcea7d7591681a91c85348f1e2cdae7858f4",
+      "creates_tables": [
+        "profiles"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0002_site_config.sql",
+      "sha256": "b4f70e4f64483faa04dacde762f91fcf0b457e86e1f374d171e50295decaea5b",
+      "creates_tables": [
+        "site_settings",
+        "navigation_items",
+        "page_sections",
+        "seo_metadata",
+        "redirects"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0003_services.sql",
+      "sha256": "82ef1e06609e6ba0b2b7986fc057dcefb6be40a20eca74af0e3551e830287818",
+      "creates_tables": [
+        "services",
+        "service_faqs"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0004_clients_projects.sql",
+      "sha256": "85a3ab049e82d2a2fd5a5c172528ea6441efe184094ac518aba21deacb72b10a",
+      "creates_tables": [
+        "clients",
+        "projects",
+        "project_media"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0005_team_testimonials.sql",
+      "sha256": "1ddfd1f6a083d7a277ecfdcb91d07db87c53b03eb1a049a0abd544da07458a40",
+      "creates_tables": [
+        "team_members",
+        "testimonials"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0006_blog.sql",
+      "sha256": "dfb3312e0915a12b026e1dc0600ac0632dc87e48bf572a4b7c70cb203bf5a69e",
+      "creates_tables": [
+        "blog_categories",
+        "blog_tags",
+        "blog_posts",
+        "blog_post_tags"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0007_leads_ops_audit.sql",
+      "sha256": "af42313561153130a9a47fa2e6736864d1d610a1c74c8cbadab0b7e8eeb8c19e",
+      "creates_tables": [
+        "contact_submissions",
+        "quote_requests",
+        "appointment_requests",
+        "payment_links",
+        "media_assets",
+        "audit_logs"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0008_storage.sql",
+      "sha256": "f10f79544ea3055201ff8e7ea0d353f8f95616833f071d718b8875aa98ec9710",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0009_lead_attachments.sql",
+      "sha256": "b8ca817f048018b5fe8cc4cefad626cb47e5c7ce24a0dae17e4991990875bc48",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0010_admin_cms.sql",
+      "sha256": "db711e579d2970867bec28c4ec3157c45467c6a33c2e5f6466b809b12f48f6cf",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0011_client_portal_and_reviews.sql",
+      "sha256": "7902d9f493614d069e44307d2de0b34e532eec82c2757b1c5ae39e65c65f0af8",
+      "creates_tables": [
+        "client_portal_documents",
+        "client_messages"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0012_portal_auth_and_admin_security.sql",
+      "sha256": "25fdf0cdf1937fd27216a713e641eebdbde9f04fbd470d8dc268a365cbe05519",
+      "creates_tables": [
+        "admin_usernames"
+      ]
+    },
+    {
+      "path": "website/supabase/migrations/0013_admin_persistence_repair.sql",
+      "sha256": "1557831967743da70f021413637b24822e83f330ec646a4fc75bf1a41f510e96",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0014_portal_performance_indexes.sql",
+      "sha256": "ec0525d0bedd30dbe06e0e11f163421754a11b9d7fb41b737251c25fcb69fd79",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0015_admin_mutation_resilience.sql",
+      "sha256": "1ab4369ad4ccc078f09b669c7cbb906e4745a2118135cd86d62e8e0f6ad86355",
+      "creates_tables": []
+    },
+    {
+      "path": "website/supabase/migrations/0016_offers_updates_agreements.sql",
+      "sha256": "c6143a6ce8661b497209fa458db13487d854b70c19c9e1c813d721f9323811c5",
+      "creates_tables": [
+        "social_links",
+        "offers",
+        "announcements",
+        "launch_benefits",
+        "agreements",
+        "agreement_versions",
+        "agreement_acceptances",
+        "user_addresses"
+      ]
+    }
+  ]
+}

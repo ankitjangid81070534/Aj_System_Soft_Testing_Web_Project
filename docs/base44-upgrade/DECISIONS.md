@@ -17,6 +17,13 @@
 | D13 | Keep latest master verbatim, including full phase list | `MASTER_PLAN_30_PHASES.md` is a byte-exact copy of the attachment; earlier masters remain historical. |
 | D14 | Do not use old README migration claims as execution permission | Effective hosted schema/history is unknown; migration 0016 may include data effects. No automatic SQL replay. |
 
+## Phase 1 decisions (2026-09-18)
+
+- D15: The repeated continuation resumed the interrupted Phase 1; it did not skip to Phase 2. Source audit/scoped repair is complete; hosted functional sign-off remains blocked.
+- D16: Fix the demonstrated offers/announcements Save permission bypass using the resource status field rather than UI quick-publish visibility. Preserve editor draft creation/content edits and admin publication. No UI, schema or activation-only resource change.
+- D17: Before/after mocked-action tests prove the local repair, not direct RLS parity. Committed editor write policies remain a release blocker until sanitized existing-schema review and separate approved policy work.
+- D18: Do not resolve non-atomic operations, Builder composition, upload-capacity policy, agreement semantics or identity linkage by speculative migrations/configuration changes. Record each finding and its acceptance gate in the current Phase 1 report.
+
 ## Next authorization
 
-Wait for **START NEXT PHASE SAFELY**. That permits only Phase 1 source/data/save architecture audit. It does not waive remote-access/data-mutation/migration/content-move or release approvals. If a future feature cannot persist safely through the existing backend, report the blocker.
+Wait for **START NEXT PHASE SAFELY** before **Phase 2 — Professional Site / Customer-Journey Benchmark**, planning only. No remote-access/data-mutation/migration/content-move or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

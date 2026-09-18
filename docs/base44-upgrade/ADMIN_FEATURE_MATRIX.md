@@ -1,4 +1,8 @@
-# Admin feature matrix — 30-phase Phase 0
+# Admin feature matrix — 30-phase program
+
+## Phase 1 audit checkpoint (2026-09-18)
+
+See [the current data/save audit](PHASE_1_30_DATA_SAVE_AUDIT.md) for the UI → action → persistence → response → reload trace of all 39 actions and 17 resources. Offers/announcements Save now enforces the existing publication capability even without a quick Publish control; editor same-status edits omit status. All actual hosted saves remain BACKEND_DEPENDENT. Direct RLS parity, Builder integration, transactions, upload limits and affected-row checks remain open; 431 passing local tests do not close them.
 
 All generic resources use `/ajadmin/c/[resource]`, `/new`, `/[id]`, `ResourceList`/`ResourceForm` and existing admin actions/CRUD. Existing list/search/field validation/status/loading/error patterns must be preserved. The table inventories **configured capability**, not a passed save. Actual list/create/update/delete/publish/media/reload/public effect is **BACKEND_DEPENDENT** for every row until approved existing-project sessions/data are available.
 

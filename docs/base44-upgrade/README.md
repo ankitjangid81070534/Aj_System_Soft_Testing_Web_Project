@@ -17,4 +17,6 @@ The latest owner attachment starts a **new 0–29 program**; earlier phase-numbe
 
 Historical detailed reports (including old Phase 16 CMS planning/hydration diagnosis) and old MASTER_UPGRADE_PLAN are preserved. The five archive copies retain their original text and relative link spelling; interpret those old links relative to this directory. They do not override current status. Existing SEO research is not republished or regenerated.
 
-**STOP after Phase 0.** Continue only on **START NEXT PHASE SAFELY**. No design/features/backend migration or deployment in this baseline.
+13. [Phase 1 data/save audit, scoped permission repair and remaining gates](PHASE_1_30_DATA_SAVE_AUDIT.md)
+
+**STOP after Phase 1.** Source audit/scoped repair complete; hosted saves/RLS remain blocked, not passed. Continue only on **START NEXT PHASE SAFELY** to Phase 2 journey benchmark planning. No backend migration, public redesign, real data writes or deployment authorized.

@@ -47,6 +47,12 @@ Metadata, canonical helpers, noindex private/preview rules, robots/sitemap/RSS a
 
 [Performance](PERFORMANCE_BASELINE.md) records fresh **unthrottled loopback** numbers; no field INP/CWV, real backend latency, ranking or production speed claim. Root AdSense load failure was observed in the user preview, not fixed or hidden.
 
+## Phase 1 update (2026-09-18)
+
+[Current data/save audit](PHASE_1_30_DATA_SAVE_AUDIT.md) traces 39 actions/10 modules and every generic resource, without a backend connection or migration. Offers/announcements Save publication checks now use the existence of a status field rather than quick-action visibility, closing a reproduced editor bypass. Existing editor content edits/drafts and admin publishing remain allowed; direct hosted RLS publication enforcement is **not** established. New tests: 16 permission regressions; full suite now 431 tests/52 files. Typecheck, lint, isolated build and three navigation tests pass. Twenty anonymous route/redirect checks are not saved-record verification.
+
+Other newly documented risks include blog timestamp-order mismatch, global action body limit versus advertised upload sizes, partial multi-step saves, missing affected-row confirmation, consent-version timing and audit attribution. No redesign, new business database, SQL, real data writes or credentials. Live source dev and all prior approved UI remain intact.
+
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). Read current phase state before any edit. Phase 0 changes documentation only; next phase requires the exact command.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). Phase 1 source audit/scoped repair is complete; hosted functional sign-off remains blocked. STOP before Phase 2 journey benchmark planning until the next exact continuation command. Phase 0 evidence above remains historical, not a claim of a new full visual/route sweep.
