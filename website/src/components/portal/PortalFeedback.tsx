@@ -8,16 +8,18 @@ import type { PortalActionState } from "@/lib/portal/actions";
 export function PortalFeedback({
   state,
   focusOnError = false,
+  pending = false,
 }: {
   state: PortalActionState;
   focusOnError?: boolean;
+  pending?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (focusOnError && state.status === "error" && state.message) ref.current?.focus();
-  }, [state, focusOnError]);
+    if (!pending && focusOnError && state.status === "error" && state.message) ref.current?.focus();
+  }, [state, focusOnError, pending]);
 
-  if (!state.message) return null;
+  if (pending || !state.message) return null;
   const error = state.status === "error";
   const Icon = error ? CircleAlert : CheckCircle2;
   return (

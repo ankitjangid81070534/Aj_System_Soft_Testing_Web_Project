@@ -79,14 +79,15 @@ export function ProjectCard({
         <h3 className="font-semibold tracking-tight text-ink transition-colors group-hover:text-brand-700 dark:group-hover:text-brand-400">
           {name}
         </h3>
-        {summary ? <p className="line-clamp-2 text-sm text-ink-muted">{summary}</p> : null}
-        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-2 text-xs text-ink-muted">
-          {clientName ? <span>{clientName}</span> : null}
-          {industry ? <span aria-hidden="true">·</span> : null}
-          {industry ? <span>{industry}</span> : null}
-          {platformType ? <span aria-hidden="true">·</span> : null}
-          {platformType ? <span>{platformType}</span> : null}
-        </div>
+        {summary ? <p className="text-sm leading-relaxed text-ink-muted">{summary}</p> : null}
+        {clientName || industry || platformType ? (
+          <ul className="mt-2 flex flex-wrap gap-2 text-xs text-ink-muted" aria-label="Project details">
+            {[clientName, industry, platformType].filter(Boolean).map((value, index) => (
+              <li key={`${index}-${value}`} className="rounded-full border border-line px-2.5 py-1">{value}</li>
+            ))}
+          </ul>
+        ) : null}
+        {href ? <span className="mt-auto pt-4 text-sm font-semibold text-brand-600 dark:text-brand-400">Read case study <span aria-hidden="true">→</span></span> : null}
       </div>
     </>
   );

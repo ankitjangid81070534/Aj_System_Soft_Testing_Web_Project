@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ExternalLink, LogOut, Menu, ShieldCheck } from "lucide-react";
 import { AdminNav, adminPageLabel } from "@/components/admin/AdminNav";
 import { Drawer } from "@/components/ui/Drawer";
@@ -51,8 +51,29 @@ export function AdminShell({
   roleLabel: string;
 }) {
   const [open, setOpen] = useState(false);
+  const mainRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
   const pageLabel = adminPageLabel(pathname);
+
+  useEffect(() => {
+    // Match the existing lg sidebar breakpoint. CSS hiding a native modal
+    // does not close it or release its inert background.
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpen(false);
+    };
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => desktop.removeEventListener("change", closeOnDesktop);
+  }, []);
+
+  function closeNavigation() {
+    setOpen(false);
+    // The native close event runs after dialog.close(), when main is no
+    // longer inert. The mobile opener is hidden at desktop widths.
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      mainRef.current?.focus({ preventScroll: true });
+    }
+  }
 
   return (
     <div
@@ -136,7 +157,12 @@ export function AdminShell({
           </Link>
           <div className="flex items-center gap-1.5">
             <ThemeToggle />
-            <IconButton aria-label="Open admin navigation" onClick={() => setOpen(true)}>
+            <IconButton
+              aria-label="Open admin navigation"
+              aria-haspopup="dialog"
+              aria-expanded={open}
+              onClick={() => setOpen(true)}
+            >
               <Menu aria-hidden="true" className="h-5 w-5" />
             </IconButton>
           </div>
@@ -145,6 +171,7 @@ export function AdminShell({
         <main
           id="admin-main"
           tabIndex={-1}
+          ref={mainRef}
           className="min-w-0 scroll-mt-24 px-4 py-6 focus:outline-none sm:px-6 sm:py-8 xl:px-10 xl:py-10"
         >
           {children}
@@ -153,7 +180,7 @@ export function AdminShell({
 
       <Drawer
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={closeNavigation}
         title="AJS Admin"
         className="lg:hidden"
         footer={

@@ -1,0 +1,49 @@
+/* Opt-in project CTA decoration. The fixed mask clips a transform-only color
+   layer; control geometry, face, focus, text and routing are unchanged. */
+.edge.edge { position: relative; }
+.edge > :global(.action-content) { border-radius: inherit; }
+.ring { display: none; }
+
+@supports (background: conic-gradient(#537bd5, #8860c9)) and (mask-composite: exclude) {
+  .ring {
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    overflow: hidden;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .ring::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200%;
+    aspect-ratio: 1;
+    background: conic-gradient(#537bd5, #8860c9, #d98b72, #55a99e, #537bd5);
+    transform: translate(-50%, -50%) rotate(0turn);
+  }
+}
+
+/* One short sweep settles to a quiet border, avoiding perpetual layers/work.
+   Interaction can replay it, but never gates clicks or changes focus. */
+@media (prefers-reduced-motion: no-preference) {
+  .ring::before { animation: travel 4s linear 1; }
+  .edge:is(:hover, :focus-visible) .ring::before { animation-name: travelActive; }
+}
+
+@keyframes travel { to { transform: translate(-50%, -50%) rotate(1turn); } }
+@keyframes travelActive { to { transform: translate(-50%, -50%) rotate(1turn); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ring::before { animation: none; }
+}
+
+@media (forced-colors: active) {
+  .edge.edge { border-color: ButtonText; }
+  .ring { display: none; }
+  .ring::before { content: none; animation: none; }
+}

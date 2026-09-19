@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/site/PageHero";
+import { ServiceMatcher } from "@/components/site/ServiceMatcher";
+import { SolutionComparison } from "@/components/site/SolutionComparison";
+import { SectionJumpLink } from "@/components/site/SectionJumpLink";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTA } from "@/components/ui/CTA";
 import { Reveal } from "@/components/site/Reveal";
@@ -37,23 +41,45 @@ export default async function ServicesPage() {
         title="Software services built around your requirements"
         description="Pick the closest match below — or simply tell us your problem and we will propose the right approach. Every engagement starts with your requirements, not our price list."
       >
+        <Link
+          href="#service-matcher"
+          className="inline-flex min-h-11 items-center rounded-lg text-sm font-semibold text-brand-700 underline underline-offset-4 focus-ring dark:text-brand-400"
+        >
+          Not sure? Find a service for your project
+        </Link>
+        <SectionJumpLink
+          id="solution-comparison"
+          className="ml-0 inline-flex min-h-11 items-center rounded-lg text-sm font-semibold text-brand-700 underline underline-offset-4 focus-ring sm:ml-6 dark:text-brand-400"
+        >
+          Compare solution approaches
+        </SectionJumpLink>
         {categories.length > 1 ? (
           <nav aria-label="Service categories" className="mt-2 flex flex-wrap gap-2">
             {categories.map((category) => (
-              <a
+              <Link
                 key={category}
                 href={`#${categoryId(category)}`}
                 className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-medium text-ink-soft shadow-e1 transition-[transform,border-color,color,box-shadow] duration-200 ease-soft hover:-translate-y-0.5 hover:border-brand-200 hover:text-brand-700 hover:shadow-e2 focus-ring dark:hover:text-brand-400"
               >
                 {category}
-              </a>
+                <span className="ml-2 text-xs text-ink-muted">
+                  ({services.filter((service) => service.category === category).length})
+                </span>
+              </Link>
             ))}
           </nav>
         ) : null}
       </PageHero>
 
       <div className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">
-        <div className="flex flex-col gap-16">
+        <ServiceMatcher services={services} />
+        <SolutionComparison services={services} />
+        <div id="service-catalogue" className="flex scroll-mt-28 flex-col gap-16">
+          {services.length === 0 ? (
+            <p className="text-ink-muted">
+              No services are currently listed. You can still discuss your requirements below.
+            </p>
+          ) : null}
           {categories.map((category, categoryIndex) => {
             const categoryServices = services.filter((service) => service.category === category);
             if (categoryServices.length === 0) return null;

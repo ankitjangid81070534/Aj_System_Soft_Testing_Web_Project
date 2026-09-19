@@ -84,6 +84,10 @@
   --text-eyebrow--letter-spacing: 0.08em;
   --text-display-sm: clamp(1.75rem, 1.2rem + 1.8vw, 2.375rem);
   --text-display-sm--line-height: 1.12;
+  --text-display-sm--letter-spacing: -0.035em;
+  --text-display-md--letter-spacing: -0.04em;
+  --text-display-lg--letter-spacing: -0.045em;
+  --text-display-xl--letter-spacing: -0.045em;
   --text-display-md: clamp(2.125rem, 1.4rem + 2.6vw, 3rem);
   --text-display-md--line-height: 1.08;
   --text-display-lg: clamp(2.5rem, 1.6rem + 3.8vw, 4.25rem);
@@ -370,12 +374,13 @@
   --color-on-brand: #07101f; /* dark ink on the lighter filled buttons */
   --color-on-danger: #200505;
 
-  --color-canvas: #0c0912;
-  --color-canvas-raised: #1b1425;
-  --color-surface: #15101e;
-  --color-ink: #f6f1fc;
-  --color-ink-soft: #d6cce2;
-  --color-ink-muted: #afa0c0;
+  /* Neutral near-black dark canvas (reference design): no purple cast. */
+  --color-canvas: #0b0b0b;
+  --color-canvas-raised: #1a1a1a;
+  --color-surface: #131313;
+  --color-ink: #f7f7f7;
+  --color-ink-soft: #d4d4d4;
+  --color-ink-muted: #a3a3a3;
   --color-line: rgba(255, 255, 255, 0.08);
   --color-line-strong: rgba(255, 255, 255, 0.16);
 
@@ -406,8 +411,8 @@
     0 10px 24px -6px rgb(92 146 255 / 0.45);
 
   --focus-ring: 0 0 0 2px var(--color-canvas), 0 0 0 4px var(--color-brand-500);
-  --glass: rgb(13 19 33 / 0.62);
-  --glass-strong: rgb(13 19 33 / 0.82);
+  --glass: rgb(16 16 16 / 0.66);
+  --glass-strong: rgb(16 16 16 / 0.85);
   --glass-border: rgb(255 255 255 / 0.1);
   --grid-line: rgb(255 255 255 / 0.05);
   --aurora-a: rgb(79 134 255 / 0.22);

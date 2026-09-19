@@ -50,7 +50,7 @@ export function ServiceCard({
           {title}
         </h3>
         {description ? (
-          <p className="line-clamp-3 text-sm leading-relaxed text-ink-muted">{description}</p>
+          <p className="text-sm leading-relaxed text-ink-muted">{description}</p>
         ) : null}
       </div>
       <div className="relative z-10 mt-auto flex items-center justify-between pt-2">
@@ -62,7 +62,7 @@ export function ServiceCard({
           <span />
         )}
         <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 dark:text-brand-400">
-          Learn more
+          Explore service
           <span
             aria-hidden="true"
             className="block h-px w-0 bg-current transition-[width] duration-300 ease-soft group-hover:w-5"

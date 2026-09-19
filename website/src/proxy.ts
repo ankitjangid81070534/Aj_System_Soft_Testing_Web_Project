@@ -84,6 +84,15 @@ export async function proxy(request: NextRequest) {
     if (isAdminPath || isClientPath) {
       console.warn("[auth] Supabase not configured — session checks unavailable for this protected route.");
     }
+    // UsersPage already redirects every unconfigured visit to staff login.
+    // Do it before streaming: React's dev timing for the rejected UsersPage
+    // can otherwise emit a negative Performance.measure end timestamp.
+    if (pathname === `${ADMIN_ROOT}/users`) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = LOGIN_PATH;
+      loginUrl.search = "";
+      return NextResponse.redirect(loginUrl);
+    }
     return NextResponse.next();
   }
 

@@ -83,6 +83,51 @@ describe("configured redirect and session routing (mocked provider)", () => {
       warning.mockRestore();
     }
   });
+  it("redirects unconfigured users requests before rendering the rejected page", async () => {
+    mocks.configured = false;
+    const warning = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const { config, proxy } = await import("./proxy");
+      expect(unstable_doesProxyMatch({ config, nextConfig: {}, url: "/ajadmin/users" })).toBe(true);
+      const response = await proxy(new NextRequest("https://site.example/ajadmin/users?notice=test"));
+      expect(response.status).toBe(307);
+      expect(response.headers.get("location")).toBe("https://site.example/ajadmin/login");
+      expect(fetch).not.toHaveBeenCalled();
+      expect(mocks.client).not.toHaveBeenCalled();
+    } finally {
+      warning.mockRestore();
+    }
+  });
+  it("keeps the unconfigured staff login available without a redirect loop", async () => {
+    mocks.configured = false;
+    const warning = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const { proxy } = await import("./proxy");
+      const response = await proxy(new NextRequest("https://site.example/ajadmin/login"));
+      expect(response.status).toBe(200);
+      expect(response.headers.get("location")).toBeNull();
+      expect(mocks.client).not.toHaveBeenCalled();
+    } finally {
+      warning.mockRestore();
+    }
+  });
+  it("preserves configured users redirects and the return path", async () => {
+    const { proxy } = await import("./proxy");
+    const response = await proxy(new NextRequest("https://site.example/ajadmin/users?notice=test"));
+    expect(response.status).toBe(307);
+    const destination = new URL(response.headers.get("location")!);
+    expect(destination.pathname).toBe("/ajadmin/login");
+    expect(destination.searchParams.get("next")).toBe("/ajadmin/users?notice=test");
+    expect(mocks.getUser).toHaveBeenCalledOnce();
+  });
+  it("leaves signed-in users requests to the existing page role guards", async () => {
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "unit-test-user" } } });
+    const { proxy } = await import("./proxy");
+    const response = await proxy(new NextRequest("https://site.example/ajadmin/users"));
+    expect(response.status).toBe(200);
+    expect(response.headers.get("location")).toBeNull();
+    expect(mocks.getUser).toHaveBeenCalledOnce();
+  });
   it("keeps public fallback pages available without configuration", async () => {
     mocks.configured = false;
     const { proxy } = await import("./proxy");

@@ -1,0 +1,51 @@
+{
+  "phase": 8,
+  "program": "0-29",
+  "date": "2026-09-19",
+  "branch": "system-upgrade",
+  "startingHead": "bf4ea21a580157666c20d6085b1bd327c163a22e",
+  "scope": "Public service discovery only; no persistence writes or release",
+  "unit": {"passed": 487, "files": 56, "newTests": 18},
+  "typecheck": "pass",
+  "lint": "pass",
+  "whitespace": "pass",
+  "isolatedProductionBuild": "pass",
+  "sourceBrowser": {"passed": 26, "failed": 0, "evidence": "phase8-final-source-e2e.json"},
+  "productionBrowser": {"passed": 26, "failed": 0, "evidence": "phase8-final-production-e2e.json"},
+  "independentMatrix": {"passed": 14, "failed": 0, "consoleOrPageErrors": 0, "nonCancelledSameOriginFailures": 0, "cancelledRequests": 14, "evidence": "phase8-review.json"},
+  "visualReview": {
+    "method": "Independent actual-size browser captures reviewed via temporary read-only viewer",
+    "reviewed": ["390 light matcher and service cards", "662 dark matcher and service cards", "1440 light matcher and service cards"],
+    "iframeScreenshot": "unverified: iframe_hidden",
+    "limitation": "Fixed dock crosses portions of tall element captures; native scrolling and actual control gestures pass. Not an all-content-above-dock claim."
+  },
+  "interactions": {
+    "nineGoalChoices": "pass",
+    "recommendationToService": "pass",
+    "unsureToQuoteForm": "pass; no submission",
+    "allFifteenCatalogueToDetailToQuote": "pass; no submission",
+    "categoryAndCatalogueAnchors": "pass independently; final iframe catalogue gesture unverified",
+    "browserBackAfterServiceAnchors": "pass after Next Link repair",
+    "keyboardOpenFollowClose": "pass",
+    "noJavaScriptPhoneAndDesktop": "pass",
+    "themeChoiceAndDialogClose": "pass independently"
+  },
+  "initialResultsRetained": {
+    "source": "30 passed, 2 failed; phase8-source-e2e.json",
+    "retry": "2 passed, 1 failed; phase8-retry-e2e.json",
+    "targetedPostRepair": "1 passed; phase8-fragment-fix.json",
+    "production": "Incomplete batch; transport timeout at 300 seconds, process later explicitly stopped; ten failure contexts captured, no final total",
+    "diagnosis": "Plain fragment link left history.state null; browser Back changed services hash URL but retained quote content. Service fragments changed to existing Next Link."
+  },
+  "iframe": {
+    "passed": ["goal opens", "recommendation becomes visible", "Android destination heading appears", "return to services", "website goal opens"],
+    "limits": ["destination script returned pre-transition pathname", "catalogue hash assertion did not settle; retry timed out", "screenshot hidden"],
+    "finalPassiveSnapshot": {"failedRequests": 0, "overlay": false, "mainChildren": 2, "openDialogs": 0},
+    "bufferedErrors": "Two transient opening/closing-tag compile messages, corrected before final passing build/tests; no claim of clearing historical logs"
+  },
+  "optionalIntegrations": {"configured": 0, "absentAndDeferred": 6, "generatedOrRequested": 0},
+  "preserved": ["Existing persistence and auth", "Service readers and CMS precedence", "All current routes", "Home section order", "Compact desktop navbar and mobile dock", "Metadata and SEO", "Consent and quote behavior"],
+  "notClaimed": ["Hosted saved records", "Private/custom-CMS verification", "Field performance improvement", "Conversion improvement", "Native-device or full accessibility certification", "Iframe visual sign-off", "Publication or deployment"],
+  "nextPhase": 9,
+  "stopRequired": true
+}

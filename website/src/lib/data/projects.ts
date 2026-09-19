@@ -204,7 +204,7 @@ export function buildFilterHref(
   value: string,
 ): string {
   const next: ProjectFilters = { ...current };
-  if (current[key] === value) delete next[key];
+  if (current[key]?.toLowerCase() === value.toLowerCase()) delete next[key];
   else next[key] = value;
   const params = new URLSearchParams();
   if (next.platform) params.set("platform", next.platform);

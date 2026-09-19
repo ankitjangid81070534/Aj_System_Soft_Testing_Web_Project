@@ -46,6 +46,17 @@ describe("requirements-led hero contracts", () => {
     expect(icons).toHaveLength(5);
     for (const icon of icons) expect(icon).toContain('aria-hidden="true"');
   });
+  it("keeps conversion copy still and avoids an unverified availability promise", () => {
+    const html = renderToStaticMarkup(React.createElement(HomeHero));
+    expect(html).not.toContain("available for new projects");
+    expect(html).toContain('aria-describedby="home-project-next-step"');
+    expect(html).toContain('id="home-project-next-step"');
+    expect(html).toContain("Tell us your goals, platforms and key features.");
+    expect(source).not.toContain("data-hero-entrance");
+    expect(css).toMatch(/\.hero \.copy \{[^}]*animation: none;/);
+    expect(css).toContain("(max-height: 600px)");
+    expect(css).toContain("Keep desktop decoration below the full copy");
+  });
   it("keeps primary text contrast AA for both themes and hover colors", () => {
     const sections = css.split(':global(.dark) .hero.hero');
     for (const section of sections.slice(0, 2)) {

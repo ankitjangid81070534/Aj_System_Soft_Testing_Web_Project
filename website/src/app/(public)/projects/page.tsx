@@ -81,8 +81,8 @@ export default async function ProjectsPage({
         <div className="mt-8">
           <EmptyState
             icon={<FolderOpen aria-hidden="true" className="h-6 w-6" />}
-            title="Case studies are being prepared"
-            description="We publish a project only after the client agrees to make it public. Meanwhile, the services page shows exactly what we can build for you."
+            title="No public case studies yet"
+            description="There are no public case studies to show here right now. Explore our services or contact us to discuss your requirements."
             action={
               <div className="mt-2 flex flex-wrap justify-center gap-3">
                 <Button href="/services" variant="secondary">

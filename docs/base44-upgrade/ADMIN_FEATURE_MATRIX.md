@@ -1,5 +1,9 @@
 # Admin feature matrix — 30-phase program
 
+## Phase 9 project checkpoint (2026-09-19)
+
+[Current project audit](PHASE_9_30_PROJECTS.md) confirms existing generic project writes and public readers are preserved, not proven operational. `client_id` is absent from generic project fields; media upload indexes `media_assets`, not project gallery rows; explicit project-consent evidence and publication-date contracts are not present in the inspected model; project SEO fields are not consumed by detail metadata; generic Preview is published-only despite the staff reader's draft capability. These are deferred parity/access gates, not implemented repairs. No real admin save/media/publish/reload/public-effect test was possible, no schema or record was changed, and Phase 9 is not fully complete.
+
 ## Phase 1 audit checkpoint (2026-09-18)
 
 See [the current data/save audit](PHASE_1_30_DATA_SAVE_AUDIT.md) for the UI → action → persistence → response → reload trace of all 39 actions and 17 resources. Offers/announcements Save now enforces the existing publication capability even without a quick Publish control; editor same-status edits omit status. All actual hosted saves remain BACKEND_DEPENDENT. Direct RLS parity, Builder integration, transactions, upload limits and affected-row checks remain open; 431 passing local tests do not close them.

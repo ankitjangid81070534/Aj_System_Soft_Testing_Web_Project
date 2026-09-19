@@ -1,9 +1,11 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useId, useState, type Ref } from "react";
+import { useLeadForm } from "./useLeadForm";
 import { CheckCircle2, Send } from "lucide-react";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { QuoteWizard } from "./QuoteWizard";
 import {
   requestAppointmentAction,
   submitContactAction,
@@ -56,14 +58,15 @@ export function AgreementCheckbox({ id, className }: { id: string; className?: s
  * timestamp used as a minimum fill-time check on the server.
  */
 function GuardFields({ startedAt }: { startedAt: number }) {
+  const honeypotId = useId();
   return (
     <>
       <div
         aria-hidden="true"
         className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
       >
-        <label htmlFor="website-hp">Website</label>
-        <input id="website-hp" type="text" name="website" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={honeypotId}>Website</label>
+        <input id={honeypotId} type="text" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <input type="hidden" name="startedAt" value={startedAt} />
     </>
@@ -96,23 +99,19 @@ function SuccessPanel({
   );
 }
 
-function ErrorNote({ message }: { message?: string }) {
+function ErrorNote({ message, errorRef }: { message?: string; errorRef: Ref<HTMLParagraphElement> }) {
   if (!message) return null;
   return (
     <p
+      ref={errorRef}
+      tabIndex={-1}
       role="alert"
       aria-live="polite"
-      className="rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger"
+      className="rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger focus-ring"
     >
       {message}
     </p>
   );
-}
-
-function useLeadForm(action: (state: LeadFormState, formData: FormData) => Promise<LeadFormState>) {
-  const [state, formAction, pending] = useActionState(action, idleLeadState);
-  const [formKey, setFormKey] = useState(0);
-  return { state, formAction, pending, formKey, reset: () => setFormKey((key) => key + 1) };
 }
 
 const CONTACT_TYPE_OPTIONS = [
@@ -169,20 +168,31 @@ const TIMELINE_OPTIONS = [
 ] as const;
 
 export function ContactForm({ startedAt }: { startedAt: number }) {
-  const { state, formAction, pending, formKey, reset } = useLeadForm(submitContactAction);
+  const [attempt, setAttempt] = useState(0);
+  return (
+    <ContactFormAttempt
+      key={attempt}
+      startedAt={startedAt}
+      onReset={() => setAttempt((value) => value + 1)}
+    />
+  );
+}
+
+function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
 
   if (state.status === "success") {
     return (
       <SuccessPanel
         message={state.message ?? "Message sent."}
-        onReset={reset}
+        onReset={onReset}
         resetLabel="Send another message"
       />
     );
   }
 
   return (
-    <form key={formKey} action={formAction} className="flex flex-col gap-4" noValidate={false}>
+    <form action={formAction} {...formProps} className="flex flex-col gap-4">
       <GuardFields startedAt={startedAt} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="c-name" required>
@@ -192,7 +202,7 @@ export function ContactForm({ startedAt }: { startedAt: number }) {
             autoComplete="name"
             required
             maxLength={120}
-            invalid={state.status === "error" && !state.message?.includes("message")}
+            minLength={2}
           />
         </Field>
         <Field label="Email" htmlFor="c-email" required>
@@ -233,10 +243,10 @@ export function ContactForm({ startedAt }: { startedAt: number }) {
         required
         hint="A couple of sentences about what you need built or fixed."
       >
-        <Textarea id="c-message" name="message" required rows={5} maxLength={4000} />
+        <Textarea id="c-message" name="message" required minLength={10} rows={5} maxLength={4000} />
       </Field>
       <AgreementCheckbox id="c-agreement" />
-      <ErrorNote message={state.message} />
+      <ErrorNote message={state.message} errorRef={errorRef} />
       <div>
         <Button type="submit" loading={pending}>
           <Send aria-hidden="true" className="h-4 w-4" />
@@ -248,198 +258,244 @@ export function ContactForm({ startedAt }: { startedAt: number }) {
 }
 
 export function QuoteForm({ startedAt }: { startedAt: number }) {
-  const { state, formAction, pending, formKey, reset } = useLeadForm(submitQuoteAction);
+  const [attempt, setAttempt] = useState(0);
+  return (
+    <QuoteFormAttempt
+      key={attempt}
+      startedAt={startedAt}
+      onReset={() => setAttempt((value) => value + 1)}
+    />
+  );
+}
+
+function QuoteFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+  const [state, formAction, pending] = useActionState(submitQuoteAction, idleLeadState);
 
   if (state.status === "success") {
     return (
       <SuccessPanel
         message={state.message ?? "Request sent."}
-        onReset={reset}
+        onReset={onReset}
         resetLabel="Submit another request"
       />
     );
   }
 
   return (
-    <form key={formKey} action={formAction} className="flex flex-col gap-6" noValidate={false}>
-      <GuardFields startedAt={startedAt} />
-
-      <fieldset className="flex flex-col gap-4" disabled={pending}>
-        <legend className="text-sm font-semibold text-ink">1 · About you</legend>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Full name" htmlFor="q-name" required>
-            <Input id="q-name" name="fullName" autoComplete="name" required maxLength={120} />
-          </Field>
-          <Field label="Company / business (optional)" htmlFor="q-company">
-            <Input id="q-company" name="company" autoComplete="organization" maxLength={160} />
-          </Field>
-          <Field label="Email" htmlFor="q-email" required>
-            <Input
-              id="q-email"
-              name="email"
-              type="email"
-              autoComplete="email"
+    <QuoteWizard
+      action={formAction}
+      pending={pending}
+      message={state.message}
+      guards={<GuardFields startedAt={startedAt} />}
+      project={
+        <fieldset className="flex flex-col gap-4" disabled={pending}>
+          <legend className="text-sm font-semibold text-ink">1 · Project</legend>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field label="Project type" htmlFor="q-type" hint="Pick the closest match.">
+              <Select id="q-type" name="projectType" defaultValue="">
+                <option value="" disabled>
+                  Select a type…
+                </option>
+                {CONTACT_TYPE_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+            <Field label="Target platform" htmlFor="q-platform">
+              <Select id="q-platform" name="platform" defaultValue="">
+                <option value="" disabled>
+                  Select a platform…
+                </option>
+                {PLATFORM_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+            <Field label="Industry" htmlFor="q-industry">
+              <Select id="q-industry" name="industry" defaultValue="">
+                <option value="" disabled>
+                  Select an industry…
+                </option>
+                {INDUSTRY_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+            <Field label="Budget range (optional)" htmlFor="q-budget">
+              <Select id="q-budget" name="budgetRange" defaultValue="">
+                <option value="" disabled>
+                  Select a range…
+                </option>
+                {BUDGET_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+            <Field label="Timeline (optional)" htmlFor="q-timeline">
+              <Select id="q-timeline" name="timeline" defaultValue="">
+                <option value="" disabled>
+                  Select a timeline…
+                </option>
+                {TIMELINE_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+          </div>
+        </fieldset>
+      }
+      requirements={
+        <fieldset className="flex flex-col gap-4" disabled={pending}>
+          <legend className="text-sm font-semibold text-ink">2 · Requirements</legend>
+          <Field
+            label="Project requirements"
+            htmlFor="q-requirements"
+            required
+            hint="Include the business problem, who will use it, key features and any integrations. You can use labelled paragraphs or a bullet list (20–8,000 characters)."
+          >
+            <Textarea
+              id="q-requirements"
+              name="requirements"
               required
-              maxLength={200}
+              minLength={20}
+              rows={8}
+              maxLength={8000}
             />
           </Field>
-          <Field label="Phone (optional)" htmlFor="q-phone">
-            <Input id="q-phone" name="phone" type="tel" autoComplete="tel" maxLength={20} />
+          <Field
+            label="Attachment (optional)"
+            htmlFor="q-attachment"
+            hint="PDF, image or Word file, up to 10 MB — e.g. an existing spec or scope document."
+          >
+            <input
+              id="q-attachment"
+              name="attachment"
+              type="file"
+              accept=".pdf,.png,.jpg,.jpeg,.webp,.docx"
+              className="block w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-full file:border-0 file:bg-brand-50 file:px-4 file:py-1.5 file:text-sm file:font-medium file:text-brand-700"
+            />
           </Field>
-          <Field label="WhatsApp (optional)" htmlFor="q-whatsapp">
-            <Input id="q-whatsapp" name="whatsapp" type="tel" maxLength={20} />
-          </Field>
-          <Field label="Location / city (optional)" htmlFor="q-location">
-            <Input id="q-location" name="location" maxLength={160} />
-          </Field>
-        </div>
-      </fieldset>
-
-      <fieldset className="flex flex-col gap-4" disabled={pending}>
-        <legend className="text-sm font-semibold text-ink">2 · About the project</legend>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Project type" htmlFor="q-type" hint="Pick the closest match.">
-            <Select id="q-type" name="projectType" defaultValue="">
-              <option value="" disabled>
-                Select a type…
-              </option>
-              {CONTACT_TYPE_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field label="Target platform" htmlFor="q-platform">
-            <Select id="q-platform" name="platform" defaultValue="">
-              <option value="" disabled>
-                Select a platform…
-              </option>
-              {PLATFORM_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field label="Industry" htmlFor="q-industry">
-            <Select id="q-industry" name="industry" defaultValue="">
-              <option value="" disabled>
-                Select an industry…
-              </option>
-              {INDUSTRY_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field label="Budget range (optional)" htmlFor="q-budget">
-            <Select id="q-budget" name="budgetRange" defaultValue="">
-              <option value="" disabled>
-                Select a range…
-              </option>
-              {BUDGET_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field label="Timeline (optional)" htmlFor="q-timeline">
-            <Select id="q-timeline" name="timeline" defaultValue="">
-              <option value="" disabled>
-                Select a timeline…
-              </option>
-              {TIMELINE_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field label="Preferred contact method" htmlFor="q-preferred">
-            <Select id="q-preferred" name="preferredContact" defaultValue="email">
-              <option value="email">Email</option>
-              <option value="phone">Phone call</option>
-              <option value="whatsapp">WhatsApp</option>
-            </Select>
-          </Field>
-        </div>
-        <Field
-          label="Project requirements"
-          htmlFor="q-requirements"
-          required
-          hint="What should the software do? Who will use it? What problems should it solve?"
-        >
-          <Textarea id="q-requirements" name="requirements" required rows={6} maxLength={8000} />
-        </Field>
-        <Field
-          label="Attachment (optional)"
-          htmlFor="q-attachment"
-          hint="PDF, image or Word file, up to 10 MB — e.g. an existing spec or scope document."
-        >
-          <input
-            id="q-attachment"
-            name="attachment"
-            type="file"
-            accept=".pdf,.png,.jpg,.jpeg,.webp,.docx"
-            className="block w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-full file:border-0 file:bg-brand-50 file:px-4 file:py-1.5 file:text-sm file:font-medium file:text-brand-700"
-          />
-        </Field>
-      </fieldset>
-
-      <fieldset className="flex flex-col gap-2" disabled={pending}>
-        <legend className="text-sm font-semibold text-ink">3 · Consent</legend>
-        <label
-          htmlFor="q-consent"
-          className="flex max-w-xl items-start gap-2.5 text-sm text-ink-muted"
-        >
-          <input
-            id="q-consent"
-            name="consent"
-            type="checkbox"
-            required
-            className="mt-1 h-4 w-4 accent-brand-600"
-          />
-          <span>
-            I agree that {`AJ System Soft Technology`} may use these details to respond to my
-            enquiry. No marketing lists, no sharing with third parties.
-          </span>
-        </label>
-        <AgreementCheckbox id="q-agreement" className="mt-1" />
-      </fieldset>
-
-      <ErrorNote message={state.message} />
-      <div>
-        <Button type="submit" loading={pending}>
-          <Send aria-hidden="true" className="h-4 w-4" />
-          {pending ? "Submitting…" : "Request a quote"}
-        </Button>
-      </div>
-    </form>
+        </fieldset>
+      }
+      contact={
+        <fieldset className="flex flex-col gap-4" disabled={pending}>
+          <legend className="text-sm font-semibold text-ink">3 · Contact</legend>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field label="Full name" htmlFor="q-name" required>
+              <Input
+                id="q-name"
+                name="fullName"
+                autoComplete="name"
+                required
+                minLength={2}
+                maxLength={120}
+              />
+            </Field>
+            <Field label="Company / business (optional)" htmlFor="q-company">
+              <Input id="q-company" name="company" autoComplete="organization" maxLength={160} />
+            </Field>
+            <Field label="Email" htmlFor="q-email" required>
+              <Input
+                id="q-email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                maxLength={200}
+              />
+            </Field>
+            <Field label="Phone (optional)" htmlFor="q-phone">
+              <Input
+                id="q-phone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                minLength={6}
+                maxLength={20}
+              />
+            </Field>
+            <Field label="WhatsApp (optional)" htmlFor="q-whatsapp">
+              <Input id="q-whatsapp" name="whatsapp" type="tel" maxLength={20} />
+            </Field>
+            <Field label="Location / city (optional)" htmlFor="q-location">
+              <Input id="q-location" name="location" maxLength={160} />
+            </Field>
+            <Field label="Preferred contact method" htmlFor="q-preferred">
+              <Select id="q-preferred" name="preferredContact" defaultValue="email">
+                <option value="email">Email</option>
+                <option value="phone">Phone call</option>
+                <option value="whatsapp">WhatsApp</option>
+              </Select>
+            </Field>
+          </div>
+        </fieldset>
+      }
+      consent={
+        <fieldset className="flex flex-col gap-2" disabled={pending}>
+          <legend className="text-sm font-semibold text-ink">4 · Consent</legend>
+          <label
+            htmlFor="q-consent"
+            className="flex max-w-xl items-start gap-2.5 text-sm text-ink-muted"
+          >
+            <input
+              id="q-consent"
+              name="consent"
+              type="checkbox"
+              required
+              className="mt-1 h-4 w-4 accent-brand-600"
+            />
+            <span>
+              I agree that {`AJ System Soft Technology`} may use these details to respond to my
+              enquiry. No marketing lists, no sharing with third parties.
+            </span>
+          </label>
+          <AgreementCheckbox id="q-agreement" className="mt-1" />
+        </fieldset>
+      }
+    />
   );
 }
 
 export function AppointmentForm({ startedAt }: { startedAt: number }) {
-  const { state, formAction, pending, formKey, reset } = useLeadForm(requestAppointmentAction);
+  const [attempt, setAttempt] = useState(0);
+  return (
+    <AppointmentFormAttempt
+      key={attempt}
+      startedAt={startedAt}
+      onReset={() => setAttempt((value) => value + 1)}
+    />
+  );
+}
+
+function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(requestAppointmentAction);
 
   if (state.status === "success") {
     return (
       <SuccessPanel
         message={state.message ?? "Request sent."}
-        onReset={reset}
+        onReset={onReset}
         resetLabel="Request another slot"
       />
     );
   }
 
   return (
-    <form key={formKey} action={formAction} className="flex flex-col gap-4">
+    <form action={formAction} {...formProps} className="flex flex-col gap-4">
       <GuardFields startedAt={startedAt} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="a-name" required>
-          <Input id="a-name" name="name" autoComplete="name" required maxLength={120} />
+          <Input id="a-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />
         </Field>
         <Field label="Email" htmlFor="a-email" required>
           <Input
@@ -452,7 +508,7 @@ export function AppointmentForm({ startedAt }: { startedAt: number }) {
           />
         </Field>
         <Field label="Phone (optional)" htmlFor="a-phone">
-          <Input id="a-phone" name="phone" type="tel" maxLength={20} />
+          <Input id="a-phone" name="phone" type="tel" minLength={6} maxLength={20} />
         </Field>
         <Field label="Preferred date (optional)" htmlFor="a-date">
           <Input id="a-date" name="preferredDate" type="date" />
@@ -477,7 +533,7 @@ export function AppointmentForm({ startedAt }: { startedAt: number }) {
       <Field label="Anything to prepare? (optional)" htmlFor="a-message">
         <Textarea id="a-message" name="message" rows={3} maxLength={2000} />
       </Field>
-      <ErrorNote message={state.message} />
+      <ErrorNote message={state.message} errorRef={errorRef} />
       <div>
         <Button type="submit" loading={pending} variant="secondary">
           {pending ? "Requesting…" : "Request a consultation"}

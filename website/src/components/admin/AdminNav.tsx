@@ -79,11 +79,13 @@ const NAV_GROUPS = [
   },
 ] as const;
 
+function isActiveRoute(pathname: string, href: string): boolean {
+  return pathname === href || (href !== "/ajadmin" && pathname.startsWith(`${href}/`));
+}
+
 export function adminPageLabel(pathname: string): string {
   const item = NAV_GROUPS.flatMap((group) => [...group.items]).find(
-    (entry) =>
-      pathname === entry.href ||
-      (entry.href !== "/ajadmin" && pathname.startsWith(`${entry.href}/`)),
+    (entry) => isActiveRoute(pathname, entry.href),
   );
   if (!item) return "Admin workspace";
   if (pathname === item.href) return item.label;
@@ -102,10 +104,7 @@ export function AdminNav({ onNavigate }: { onNavigate?: () => void }) {
           </p>
           <ul className="mt-2 flex flex-col gap-0.5">
             {group.items.map((item) => {
-              const active =
-                item.href === "/ajadmin"
-                  ? pathname === "/ajadmin"
-                  : pathname.startsWith(`${item.href}/`);
+              const active = isActiveRoute(pathname, item.href);
               return (
                 <li key={item.href}>
                   <Link

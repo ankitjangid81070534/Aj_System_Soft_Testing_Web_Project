@@ -20,6 +20,7 @@ import { PasswordField } from "./PasswordField";
 import { PortalFeedback as Feedback } from "./PortalFeedback";
 import styles from "./portal-ui.module.css";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
+import { useAuthFormFeedback } from "./useAuthFormFeedback";
 
 const initialState: PortalActionState = { status: "idle" };
 
@@ -212,10 +213,11 @@ export function ClientLoginForm({
   notice?: string;
 }) {
   const [state, action, pending] = useActionState(clientLoginAction, initialState);
+  const formFeedback = useAuthFormFeedback(state.status, pending);
 
   return (
     <div className={`${styles.form} space-y-5`} data-client-login>
-      <form action={action} aria-busy={pending} className="space-y-4">
+      <form action={action} {...formFeedback} aria-busy={pending} className="space-y-4">
         <input type="hidden" name="next" value={nextPath} />
         <Field label="Email address" htmlFor="client-email" required>
           <div className="relative">
@@ -245,7 +247,7 @@ export function ClientLoginForm({
         </div>
         {notice ? <Feedback state={{ status: "success", message: notice }} /> : null}
         {error ? <Feedback state={{ status: "error", message: error }} /> : null}
-        <Feedback state={state} focusOnError />
+        <Feedback state={state} pending={pending} focusOnError />
         <SubmitButton pending={pending} idle="Sign in to client portal" busy="Signing in…" />
       </form>
       <Divider label="or" />
@@ -265,12 +267,13 @@ export function ClientLoginForm({
 
 export function ClientSignupForm() {
   const [state, action, pending] = useActionState(clientSignupAction, initialState);
+  const formFeedback = useAuthFormFeedback(state.status, pending);
 
   return (
     <div className={`${styles.form} space-y-5`}>
       <GoogleButton label="Sign up with Google" />
       <Divider />
-      <form action={action} aria-busy={pending} className="space-y-4">
+      <form action={action} {...formFeedback} aria-busy={pending} className="space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <Field label="Full name" htmlFor="signup-name" required>
             <div className="relative">
@@ -371,7 +374,7 @@ export function ClientSignupForm() {
           </span>
         </label>
         <AgreementCheckbox id="signup-agreement" className="text-xs leading-5" />
-        <Feedback state={state} focusOnError />
+        <Feedback state={state} pending={pending} focusOnError />
         <SubmitButton pending={pending} idle="Create secure account" busy="Creating account…" />
       </form>
       <p className="text-center text-sm text-ink-muted">
@@ -389,8 +392,9 @@ export function ClientSignupForm() {
 
 export function ForgotPasswordForm() {
   const [state, action, pending] = useActionState(forgotPasswordAction, initialState);
+  const formFeedback = useAuthFormFeedback(state.status, pending);
   return (
-    <form action={action} aria-busy={pending} className={`${styles.form} space-y-5`}>
+    <form action={action} {...formFeedback} aria-busy={pending} className={`${styles.form} space-y-5`}>
       <Field label="Account email" htmlFor="recovery-email" required>
         <Input
           id="recovery-email"
@@ -401,7 +405,7 @@ export function ForgotPasswordForm() {
           autoFocus
         />
       </Field>
-      <Feedback state={state} focusOnError />
+      <Feedback state={state} pending={pending} focusOnError />
       <SubmitButton pending={pending} idle="Send recovery link" busy="Sending…" />
       <p className="text-center text-sm text-ink-muted">
         <Link
@@ -423,6 +427,7 @@ export function ResetPasswordForm({
   recoveryReady: boolean;
 }) {
   const [state, action, pending] = useActionState(updatePasswordAction, initialState);
+  const formFeedback = useAuthFormFeedback(state.status, pending);
   const [linkError, setLinkError] = useState<string | undefined>(initialError);
 
   useEffect(() => {
@@ -449,7 +454,7 @@ export function ResetPasswordForm({
   }, []);
 
   return (
-    <form action={action} aria-busy={pending} className={`${styles.form} space-y-5`}>
+    <form action={action} {...formFeedback} aria-busy={pending} className={`${styles.form} space-y-5`}>
       <PasswordField
         label="New password"
         hint="8+ characters with a letter and number."
@@ -471,7 +476,7 @@ export function ResetPasswordForm({
         minLength={8}
       />
       {linkError ? <Feedback state={{ status: "error", message: linkError }} /> : null}
-      <Feedback state={state} focusOnError />
+      <Feedback state={state} pending={pending} focusOnError />
       {recoveryReady ? (
         <SubmitButton pending={pending} idle="Update password" busy="Updating…" />
       ) : null}

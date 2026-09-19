@@ -1,0 +1,959 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/app/node_modules/.bin/playwright",
+      "test",
+      "e2e/project-edge.spec.ts",
+      "e2e/brand-header.spec.ts",
+      "e2e/navigation.spec.ts",
+      "--workers=1",
+      "--reporter=json",
+      "--output=/tmp/phase6-source-e2e"
+    ],
+    "rootDir": "/app",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/phase6-source-e2e",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/app",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e/brand-header.spec.ts",
+      "file": "e2e/brand-header.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "brand and project CTA fit and navigate at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:28:45.322Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-700b733e1ce0b8cd2421",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "brand and project CTA fit and navigate at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:28:50.782Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-656442d38c0def6d4915",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "brand and project CTA fit and navigate at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:28:55.900Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-7b0bd180fce4b10bd697",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "brand and project CTA fit and navigate at 919px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:01.682Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-dcf52818d94447f64fe6",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "breakpoint changes close menus and restore visible keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5912,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:06.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-7431af8096284f2deba6",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 40,
+          "column": 5
+        },
+        {
+          "title": "desktop links stay visible and clickable with reduce motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3308,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:12.894Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-6864b17e6269ba71607b",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 61,
+          "column": 7
+        },
+        {
+          "title": "desktop links stay visible and clickable with no-preference motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:16.212Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11dd350116e23b68cda7-8e635bde0918e8db6bd3",
+          "file": "e2e/brand-header.spec.ts",
+          "line": 61,
+          "column": 7
+        }
+      ]
+    },
+    {
+      "title": "e2e/navigation.spec.ts",
+      "file": "e2e/navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "first Escape closes populated navigation search at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:21.017Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-0ac3c189fabadafb98dc",
+          "file": "e2e/navigation.spec.ts",
+          "line": 8,
+          "column": 7
+        },
+        {
+          "title": "first Escape closes populated navigation search at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4456,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:25.673Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-d6db96dcc3e85b4559a3",
+          "file": "e2e/navigation.spec.ts",
+          "line": 8,
+          "column": 7
+        },
+        {
+          "title": "mobile More still navigates to Privacy and closes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:30.140Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-36d47db02287bce58989",
+          "file": "e2e/navigation.spec.ts",
+          "line": 27,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e/project-edge.spec.ts",
+      "file": "e2e/project-edge.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "project edge preserves click and geometry at 390px / no-preference",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2018,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:33.483Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-0effa-etry-at-390px-no-preference/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-87d1c044a975e8ea655d",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "project edge preserves click and geometry at 390px / reduce",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1364,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:36.069Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-b6abe-nd-geometry-at-390px-reduce/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-82a1cd2301bbbb6d0827",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "project edge preserves click and geometry at 919px / no-preference",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1920,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:38.115Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-81fa8-etry-at-919px-no-preference/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-5d6811b24de326490c13",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "project edge preserves click and geometry at 919px / reduce",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1603,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:40.615Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-5b240-nd-geometry-at-919px-reduce/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-7fb1657b36daa9ae1c12",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "project edge preserves click and geometry at 1440px / no-preference",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2131,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:42.817Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-6b1be-try-at-1440px-no-preference/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-f9c6241a8680eeda60bf",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "project edge preserves click and geometry at 1440px / reduce",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1896,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n    at /app/e2e/project-edge.spec.ts:27:26",
+                    "location": {
+                      "file": "/app/e2e/project-edge.spec.ts",
+                      "column": 26,
+                      "line": 27
+                    },
+                    "snippet": "  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/project-edge.spec.ts",
+                        "column": 26,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"exclude\"\u001b[39m\nReceived: \u001b[31m\"exclude\u001b[7m, exclude\u001b[27m\"\u001b[39m\n\n  25 |       });\n  26 |       expect(style.background).toContain(\"conic-gradient\");\n> 27 |       expect(style.mask).toBe(\"exclude\");\n     |                          ^\n  28 |       expect(style.pointer).toBe(\"none\");\n  29 |       expect(style.filter).toBe(\"none\");\n  30 |       if (reducedMotion === \"reduce\") expect(style.animation).toBe(\"none\");\n    at /app/e2e/project-edge.spec.ts:27:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:45.525Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase6-source-e2e/e2e-project-edge-project-e-86eca-d-geometry-at-1440px-reduce/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/project-edge.spec.ts",
+                    "column": 26,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-615b5d6db7c3765ae4bd",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 9,
+          "column": 9
+        },
+        {
+          "title": "hero edge remains keyboard navigable in forced colors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3516,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:48.350Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-2072fdfd2aca1c7633d1",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "project links work without JavaScript or moving decoration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:52.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-afc17e46c8b7d10d6ec8",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "More project link closes menu and finale link keeps its destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:53.233Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-e9bde0c8ea07540ec42d",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "throttled phone keeps edge bounded and project click available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10107,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-18T19:29:57.517Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a5359e0b41f0f92d383-492b493716c1ed9ec1ba",
+          "file": "e2e/project-edge.spec.ts",
+          "line": 88,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-18T19:28:44.645Z",
+    "duration": 83054.49799999999,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

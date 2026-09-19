@@ -56,7 +56,11 @@ describe("Phase 5 homepage preservation", () => {
     const html = render();
     const industries = html.split('data-home-section="industries"')[1].split("</section>")[0];
     expect(industries.match(/class="icon-tile/g)).toHaveLength(8);
-    expect(industries).not.toContain("<a ");
+    // Phase 10 adds two explicit navigation links after the descriptive tiles.
+    expect(industries).not.toMatch(/<a\b[^>]*class="[^"]*card-3d/);
+    expect(industries.match(/<a\b/g)).toHaveLength(2);
+    expect(industries).toContain('href="/services#service-matcher"');
+    expect(industries).toContain('href="/services#solution-comparison"');
     expect(industries).not.toContain("<button");
   });
   it("scopes new presentation without replacing the hero or motion implementation", () => {
