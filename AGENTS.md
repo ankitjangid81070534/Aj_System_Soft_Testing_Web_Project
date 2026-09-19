@@ -1,5 +1,12 @@
 # Base44 Dev Environment
 
+## Latest Phase 19 AI support foundation (2026-09-20)
+- Read `docs/base44-upgrade/PHASE_19_30_AI_SUPPORT_FOUNDATION.md` and current status. Documentation only: the repository has NO AI provider dependency, no AI env value, no embeddings/pgvector and no conversation table, so the contract's "document setup before live execution" path applies. STOP before Phase 20; do not repeat the audit.
+- Phase 20 is BLOCKED until the owner supplies a server-only provider key. This phase deliberately did NOT request credentials (earlier deferral stands) and no placeholder would make inference work. Never put an AI credential in `NEXT_PUBLIC_*`.
+- Retrieval must project the EXISTING public readers (services + service_faqs, projects, published posts, team, settings, legal pages, schedule-filtered offers/announcements). Leads, portal/account data, admin users, drafts and `/ajadmin` are permanently excluded; no new table, scraped corpus or embedding store.
+- Zero retrieved candidates means no generation — return the escalation response; reject any answer containing a price, duration or legal term absent from the candidates. Escalation reuses the existing consented lead actions and WhatsApp, never a new channel. No transcript storage without its own schema, retention, consent copy and Privacy update.
+- `lib/rate-limit.ts` is per-instance only; strengthen abuse control before exposing any AI endpoint. 598 tests/67 files and typecheck pass on unchanged source; `/` HTTP 200. No AI request, provider contact, source/config/dependency/SQL/data/secret change.
+
 ## Latest Phase 18 updates / offers (2026-09-20)
 - Read `docs/base44-upgrade/PHASE_18_30_UPDATES_OFFERS.md` and current status. Records, scheduling, priority, CTA, popup frequency, dismissal and admin editing already existed; two defects repaired. Phase 18 remains PARTIAL; STOP before Phase 19. Do not repeat the audit or repair.
 - Keep the schedule window OUTSIDE the cached readers: `getPublishableOffers` / `getPublishableAnnouncements` are the `unstable_cache` reads, and `getLiveOffers` / `getLiveAnnouncements` apply `withinWindow` per request. Moving it back inside re-freezes expiry for five minutes.
