@@ -1,0 +1,298 @@
+Phase 12 source-only hub verification — 2026-09-19 UTC
+Initial harness outcomes are retained below, followed by accepted reruns.
+
+
+Running 8 tests using 1 worker
+
+[1/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320
+  1) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320 ───────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-320/error-context.md
+
+
+[2/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390
+  2) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390 ───────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-390/error-context.md
+
+
+[3/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662
+  3) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662 ───────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-662/error-context.md
+
+
+[4/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820
+  4) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820 ───────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-820/error-context.md
+
+
+[5/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024
+  5) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024 ──────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-1024/error-context.md
+
+
+[6/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440
+  6) e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440 ──────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('h1')
+    Expected substring: "Services"
+    Received string:    "Software services built around your requirements"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 class="text-display-md font-medium tracking-[-0.02em] text-ink text-balance">…</h1>
+           - unexpected value "Software services built around your requirements"
+
+
+      63 |     await expect(hub).toHaveCount(0);
+      64 |     await page.goBack();
+    > 65 |     await expect(page.locator("h1")).toContainText("Services");
+         |                                      ^
+      66 |     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+      67 |     await trigger.click();
+      68 |     await panel.getByRole("link", { name: "Discuss your project" }).click();
+        at /app/e2e/contact-hub.spec.ts:65:38
+
+    Error Context: ../tmp/phase12-hub-e2e/e2e-contact-hub-contact-hub-gestures-and-clearance-at-1440/error-context.md
+
+
+[7/8] e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes
+[8/8] e2e/contact-hub.spec.ts:93:5 › short-height and dark-theme panel stays reachable
+  6 failed
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320 ────────────────────────
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390 ────────────────────────
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662 ────────────────────────
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820 ────────────────────────
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024 ───────────────────────
+    e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440 ───────────────────────
+  2 passed (1.1m)
+
+Running 8 tests using 1 worker
+
+[1/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320
+[2/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390
+[3/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662
+[4/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820
+[5/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024
+[6/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440
+[7/8] e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes
+  1) e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes ───────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('a[href="/contact"]').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('a[href="/contact"]').first()
+        14 × locator resolved to <a href="/contact" class="bottom-navigation-module__JWf-0a__item">…</a>
+           - unexpected value "hidden"
+
+
+      82 |     await fallback.goto(`${baseURL}/services`, { waitUntil: "domcontentloaded" });
+      83 |     await expect(fallback.locator("[data-contact-hub]")).toHaveCount(0);
+    > 84 |     await expect(fallback.locator('a[href="/contact"]').first()).toBeVisible();
+         |                                                                  ^
+      85 |   } finally { await context.close(); }
+      86 |   for (const route of ["/contact", "/request-quote", "/login", "/account", "/privacy"]) {
+      87 |     await page.goto(route, { waitUntil: "domcontentloaded" });
+        at /app/e2e/contact-hub.spec.ts:84:66
+
+    Error Context: ../tmp/phase12-hub-production/e2e-contact-hub-no-JS-contact-fallback-and-restricted-routes/error-context.md
+
+
+[8/8] e2e/contact-hub.spec.ts:93:5 › short-height and dark-theme panel stays reachable
+  1 failed
+    e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes ────────────────────
+  7 passed (17.5s)
+
+Running 8 tests using 1 worker
+
+[1/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320
+[2/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390
+[3/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662
+[4/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820
+[5/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024
+[6/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440
+[7/8] e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes
+[8/8] e2e/contact-hub.spec.ts:93:5 › short-height and dark-theme panel stays reachable
+  8 passed (28.7s)
+
+Running 8 tests using 1 worker
+
+[1/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 320
+[2/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 390
+[3/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 662
+[4/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 820
+[5/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1024
+[6/8] e2e/contact-hub.spec.ts:7:7 › contact hub gestures and clearance at 1440
+[7/8] e2e/contact-hub.spec.ts:78:5 › no-JS contact fallback and restricted routes
+[8/8] e2e/contact-hub.spec.ts:93:5 › short-height and dark-theme panel stays reachable
+  8 passed (12.4s)
+ ✓ src/components/site/Markdown.test.ts (4 tests) 5ms
+ ✓ src/lib/utils/cn.test.ts (3 tests) 3ms
+
+ Test Files  61 passed (61)
+      Tests  564 passed (564)
+   Start at  10:55:52
+   Duration  6.45s (transform 1.48s, setup 0ms, import 9.29s, tests 2.00s, environment 6ms)
+
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "actualTheme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+    "errors": [],
+    "file": "hub-390-844.png"
+  },
+  {
+    "width": 662,
+    "height": 900,
+    "dark": false,
+    "actualTheme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+    "errors": [],
+    "file": "hub-662-900.png"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dark": false,
+    "actualTheme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+    "errors": [],
+    "file": "hub-1440-900.png"
+  },
+  {
+    "width": 662,
+    "height": 480,
+    "dark": true,
+    "actualTheme": "geistsans_d5a4f12f-module__Ur3q_a__variable dark",
+    "errors": [],
+    "file": "hub-662-480.png"
+  }
+]

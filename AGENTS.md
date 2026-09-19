@@ -1,6 +1,12 @@
 # Base44 Dev Environment
 
-## Latest Phase 12 audit checkpoint — system-upgrade (2026-09-19 UTC)
+## Latest Phase 12 navigation-only hub checkpoint — system-upgrade (2026-09-19 UTC)
+- Exact continuation implemented the bounded audit contract. Read `PHASE_12_30_CONTACT_HUB_UI.md` and current status. Hub exists; full Phase 12 remains PARTIAL at admin configuration/hosted acceptance. STOP before Phase 13; do not repeat implementation/audit or declined credentials.
+- One public-layout ContactHub consumes validated actions from already-loaded settings. Native auto popover, route-keyed cleanup, modal precedence, discovery allowlist, no-JS existing-link fallback. Dedicated hub settings/AI are absent, not faked. Full settings action remains untouched; never post partial settings.
+- Native toggle event is asynchronous; wait for aria-expanded before asserting it. No-JS tests must select visible accessible links, not the hidden mobile copy. Theme preference key is `ajs-theme`, not `theme`. Mobile bottom clearance is 128px plus safe area; <=360px height hides the enhancement, preserving ordinary contact links.
+- Fresh 564 tests/61 files, type/lint/isolated build, 8 source + 8 production browser cases pass. Independent 390/662/1440 light and 662x480 dark screenshots reviewed; iframe gestures/runtime pass but screenshot hidden. External delivery, actual offer/portal coexistence, hosted saves and native/field/release gates remain unverified. No config/dependency/SQL/data/secrets/PR/merge/deploy; production copy in `/tmp/aj-phase12-production` at 3114, source dev 3000 unchanged.
+
+## Historical Phase 12 audit checkpoint — system-upgrade (2026-09-19 UTC)
 - After Phase 11 gate disclosure, owner delegated safe scope; chosen scope is audit/planning only. Read `PHASE_12_30_CONTACT_HUB_AUDIT.md` and current status. No contact hub/admin controls implemented; Phase 11 hosted acceptance remains BLOCKED. STOP before implementation/Phase 13; next continuation resumes this contract, not another identical audit or credential request.
 - Existing contact/global CTA settings are reusable. Dedicated hub configuration is unconfirmed; AI Methods is a resource directory, not chat. Never submit a partial hub form to `updateSettingsAction`: absent allowlisted fields become empty strings. Do not copy contact values from migrations or repurpose Builder/social/offer storage.
 - Documentation only. Fresh 516 tests/60 files, typecheck/lint and three HTTP 200 probes pass; dev container healthy. No fresh browser/visual/build/save verification, credentials/SQL/data/config/dependencies, PR/merge/deploy. Temporary test logs in container `/tmp/phase12-audit-*`.

@@ -9,6 +9,8 @@ import { getTopBarAnnouncement, getPopupOffer } from "@/lib/data/growth";
 import { AnnouncementBar } from "@/components/site/AnnouncementBar";
 import { OfferPopup } from "@/components/site/OfferPopup";
 import { PublicSiteFrame } from "@/components/site/PublicSiteFrame";
+import { ContactHub } from "@/components/site/ContactHub";
+import { getContactHubActions } from "@/lib/contact-hub";
 
 export default async function PublicLayout({ children }: { children: ReactNode }) {
   const [settings, navigation, topBarAnnouncement, popupOffer] = await Promise.all([
@@ -38,7 +40,10 @@ export default async function PublicLayout({ children }: { children: ReactNode }
         ctaHref={settings?.globalCtaHref}
       />}
       footer={<Footer settings={settings} managedLinks={navigation.footer} />}
-      afterFooter={popupOffer && <OfferPopup offer={popupOffer} />}
+      afterFooter={<>
+        <ContactHub actions={getContactHubActions(settings)} />
+        {popupOffer && <OfferPopup offer={popupOffer} />}
+      </>}
     >
       {children}
     </PublicSiteFrame>

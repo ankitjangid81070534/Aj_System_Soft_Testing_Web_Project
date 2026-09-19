@@ -1,6 +1,12 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 12 audit disposition (2026-09-19)
+## Current Phase 12 bounded implementation disposition (2026-09-19)
+
+[Navigation-only hub](PHASE_12_30_CONTACT_HUB_UI.md) now exists; full Phase 12 remains PARTIAL. Only existing contact/global CTA settings are managed. No confirmed enable/position/actions/pages/animation persistence, no new settings form, no live AI. Hosted saves and actual configured phone/email/WhatsApp delivery remain unverified. Native popover unsupported/no-JS and <=360px height use existing contact links; ordinary modals take precedence. Existing More/search coexistence is tested, actual populated offers and portal coexistence are not.
+
+564 unit tests, type/lint/build, 8+8 browser cases and selected independent phone/tablet/desktop light/short-dark visual review pass. Iframe gestures/runtime pass but screenshot hidden; no iframe visual, native-device, field-performance or hosted acceptance claim. Phase 1/9/11 and prior gates remain; STOP before Phase 13. No credentials, SQL, data, backend/config/dependency or deployment changes.
+
+## Historical Phase 12 audit disposition (2026-09-19)
 
 [Contact-hub audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) is planning only after owner delegation; no widget or admin controls are implemented. Reusable contact fields exist, but hub enable/position/actions/pages/animation have no confirmed persistence contract. Do not repurpose Builder/social/offer fields or use browser storage as configuration. A partial form submitted to the existing full settings action would blank missing allowlisted values; its cache-refresh failure is logged separately from successful save. AI Methods is not a chatbot; live AI remains gated.
 

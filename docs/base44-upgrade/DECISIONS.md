@@ -99,6 +99,12 @@
 - D62: Reuse existing site contact/global CTA source in any future bounded hub; no copied migration contacts, second settings store, partial submission to the full settings action, or AI Methods relabelled as live help. Dedicated hub settings need a confirmed persistence contract before admin controls.
 - D63: Document a navigation-only first slice and acceptance matrix; do not implement it or claim full admin configurability this turn. Fresh 516 tests/type/lint and three HTTP probes cover unchanged app, not hub interactions or hosted saves.
 
+## Phase 12 navigation-only implementation decisions (2026-09-19)
+
+- D64: Exact continuation resumes the documented first slice, not Phase 13. One public-shell hub reuses existing public settings; no schema, full-settings partial post, business storage or fake contact/AI.
+- D65: Choose native auto popover rather than another modal navigation system. Key by pathname, yield to existing native dialogs, reserve mobile dock clearance and omit from forms/private/legal/unknown routes. No auto opening or continuous motion; no-JS/unsupported browsers retain existing links.
+- D66: Dedicated settings/hosted acceptance remain gated. Separate passing 564 unit tests, 8+8 browser cases, independent captures and live gestures from hidden iframe screenshot, actual delivery, native devices and saved-record verification. Initial heading/hidden-link/theme-key harness errors are retained, not app-fix claims.
+
 ## Next authorization
 
-Read [Phase 12 audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) and current status. **Audit complete; STOP before implementation/Phase 13.** Next continuation resumes its implementation boundary without repeating the same audit or credential request. Phase 11 remains partial; Phase 1/9 hosted gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 12 UI report](PHASE_12_30_CONTACT_HUB_UI.md) and current status. **Navigation-only hub implemented; full Phase 12 remains PARTIAL. STOP before Phase 13.** Next continuation resumes the configuration/acceptance boundary without repeating implementation, audit or credential requests. Phase 11 remains partial; Phase 1/9 hosted gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.

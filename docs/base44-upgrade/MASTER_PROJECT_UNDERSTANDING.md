@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 12 audit only (2026-09-19)
+## Current checkpoint — Phase 12 navigation-only hub (2026-09-19)
+
+Exact continuation resumed the audit contract and implemented [one bounded public contact hub](PHASE_12_30_CONTACT_HUB_UI.md). It reuses already-loaded contact/global CTA settings, validates legacy targets, hides unavailable channels, avoids duplicate destinations and uses a native popover on discovery pages only. Existing forms/private/legal routes are excluded. No business persistence/admin action/schema, AI, dependency, credentials or Home/nav changes.
+
+Fresh 564 unit tests/61 files, type/lint/isolated build and 8 source + 8 production browser cases pass. Live opening/close/focus/reopen/consultation/runtime pass; screenshot hidden. Independent 390/662/1440 light and short 662 dark visual review completed. Full Phase 12 remains PARTIAL: dedicated hub settings and hosted saved/reloaded/public effect are unverified, as are Phase 11 and earlier hosted gates. STOP before Phase 13. Do not repeat the implementation/audit or credential request.
+
+## Historical checkpoint — Phase 12 audit only (2026-09-19)
 
 After Phase 11 blocker disclosure, owner delegated safe next work. The chosen [Phase 12 contact-hub audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) maps existing contact/global CTA settings and their full-form save/read path. Floating hub and its dedicated configuration are not implemented; AI Methods is not live chat. Do not submit a partial settings form: missing allowlisted keys become empty strings. A navigation-only first slice is proposed, with no new persistence and no claim of full admin configurability.
 
@@ -111,4 +117,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 12 audit is complete; hub implementation is not started. STOP before implementation/Phase 13. Phase 11 source-only wizard remains implemented with hosted acceptance blocked.** Read the Phase 12 audit contract on next continuation rather than repeating historical audits or credential requests. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 12 navigation-only hub is implemented; full configuration/hosted acceptance remains PARTIAL. STOP before Phase 13. Phase 11 source-only wizard remains implemented with hosted acceptance blocked.** Read the Phase 12 audit contract on next continuation rather than repeating historical audits or credential requests. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
