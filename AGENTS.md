@@ -1,5 +1,14 @@
 # Base44 Dev Environment
 
+## Latest Phase 8 checkpoint — system-upgrade (2026-09-19 UTC)
+- Current `PHASE_STATUS.md` and `PHASE_8_30_SERVICE_DISCOVERY.md` supersede prior phase gates. Services discovery is complete at public-UI scope; STOP before Phase 9 until next exact continuation.
+- Matcher is server-rendered native details, one question/nine goals, intersecting editorial slug guidance with the existing public index. Never import fallback records to resurrect unavailable services or infer new CMS capability from keywords. Unknown slugs remain in the catalogue; no new business persistence or AI.
+- Use Next Link for service fragments: reproduced plain-anchor null history state made browser Back restore `/services#...` URL while quote content stayed mounted. Final source and production suites pass after the scoped repair; no global router/hero patch. Keep no-JS native navigation.
+- Full service summaries now replace line clamping. Preserve existing card colors/icons/destinations and all Home/nav/backend/SEO contracts.
+- Fresh 487 tests/56 files, type/lint/build, 26 source + 26 production browser cases and 14 independent responsive/theme cases pass. Actual 390/662/1440 images reviewed. Initial failures and incomplete pre-fix production timeout evidence retained; obsolete test process stopped. No speed/save/release claim.
+- Iframe goal/detail-heading/return gestures passed; final catalogue jump timed out and screenshot hidden. Buffered transient tag-edit compile errors were corrected before final build/tests; independent matrix has no console/page errors or non-cancelled same-origin failures (14 cancellations retained). Tall element captures include the fixed dock; native scrolling remains required.
+- Six optional integrations remain absent/deferred; no secret/data/SQL/config/dependency changes, PR/merge/deploy. One-off scripts/PNGs/viewer stay /tmp; viewer stopped. Existing hosted/private/content/release gates persist.
+
 ## Latest Phase 7 checkpoint — system-upgrade (2026-09-19 UTC)
 - Current `PHASE_STATUS.md` and `PHASE_7_30_HERO.md` supersede all historical gates below. Resumed interrupted Phase 7; Phase 6 code was already at HEAD `9354b3d`, but both reports/status were missing. Recovered Phase 6 evidence separately, did not repeat its implementation or start Phase 8. STOP before Phase 8 until next exact continuation.
 - Hero copy is server-rendered and still: no hero-settle transform or data-hero-entrance hooks. Preserve existing destinations/capabilities and aria-describedby next-step guidance. No new client state, promises or business logic.

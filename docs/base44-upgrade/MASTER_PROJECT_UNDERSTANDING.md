@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 7 complete (2026-09-19)
+## Current checkpoint — Phase 8 complete (2026-09-19)
+
+[PHASE_STATUS](PHASE_STATUS.md) and [Phase 8 service discovery](PHASE_8_30_SERVICE_DISCOVERY.md) supersede earlier stop gates. The existing Services hub now offers a native one-question/nine-choice matcher, intersecting editorial route guidance with public-index records, without collecting answers or adding persistence. Category counts, full card summaries and scoped Next Link fragment-history repair preserve all service readers/routes, Home order, navbar, auth and backend contracts.
+
+Fresh 487 tests/56 files, typecheck/lint/build, 26 source + 26 production browser cases and 14 independent responsive/theme cases pass. Actual phone/tablet/desktop service captures reviewed; live iframe goal/detail-heading/return gestures are partial, final catalogue jump and hidden screenshot unverified. Initial failures retained. Six optional values remain absent/deferred; no credentials/data/SQL/config/dependency/SEO changes, PR, merge or deployment. STOP before Phase 9 pending exact continuation.
+
+## Historical checkpoint — Phase 7 complete (2026-09-19)
 
 [PHASE_STATUS](PHASE_STATUS.md) supersedes historical gates below. Interrupted Phase 7 is now finished; Phase 6 implementation was already in `9354b3d` while its report/status were missing. Both phase reports and evidence are now durable. No reset, repeat implementation or Phase 8 work.
 
@@ -87,4 +93,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP after Phase 7; do not automatically begin Phase 8.** Phase 4/5 historical gates above have been superseded by documented independent acceptance and subsequent authorized phases; Phase 6/7 recovery is complete. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP after Phase 8; do not automatically begin Phase 9.** Earlier gates above are historical and superseded by the current status and subsequent authorized phases; Phase 6/7 recovery and Phase 8 service discovery are complete at their documented scopes. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

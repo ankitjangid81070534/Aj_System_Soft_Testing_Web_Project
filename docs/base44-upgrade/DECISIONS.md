@@ -63,6 +63,14 @@
 - D41: Limit short-tablet layout repair to the hero; preserve fixed navigation. Reserve desktop decoration below the copy after actual visual review demonstrated artwork crossing labels. No Home content reorder or unrelated artwork changes.
 - D42: Independent source/production gestures and screenshot review support scoped acceptance; iframe primary/anchor passes do not imply the timed-out projects retry or hidden screenshot passed. External Google report-only diagnostics and cancelled RSC prefetches remain explicit in evidence. No performance, saved-record or release certification.
 
+## Phase 8 decisions (2026-09-19)
+
+- D43: Exact continuation authorizes Phase 8 only. Refine the existing service hub/cards, preserve Home order and backend, and add the missing matcher on `/services` rather than create another catalogue or route.
+- D44: Use one question/nine browser-native disclosures. Editorial mapping intersects only the existing public index; do not invent results for custom/hidden slugs. CMS names remain authoritative. No client engine, AI, captured answers or business persistence needed for this guidance-only feature.
+- D45: Keep service descriptions fully visible and use an explicit detail-link label; reuse current card colors/icons/elevation rather than redesign shared surfaces.
+- D46: Repair the reproduced null-history service-fragment/back-navigation issue with existing Next Link. Preserve native no-JS HTML. Do not patch global routing or unrelated hero behavior based on a single initial anchor failure.
+- D47: Separate passing independent source/production gestures and visual review from partial iframe results. Preserve initial failures, incomplete old production timeouts and buffered transient edit errors; final catalogue iframe assertion and hidden screenshot remain unverified. No hosted-save, field-performance or deployment claim.
+
 ## Next authorization
 
-**STOP after Phase 7.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 8 — Services / Capability Discovery**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+**STOP after Phase 8.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 9 — Projects / Case-study Experience**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

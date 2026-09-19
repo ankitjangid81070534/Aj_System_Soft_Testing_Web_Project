@@ -1,0 +1,376 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/request-quote?_rsc=1RpmAqYJEMFF4n7A",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 320,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 320,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/projects?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 580,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 662,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 580,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 662,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 820,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/projects?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 820,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 919,
+      "height": 499,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 919,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 919,
+      "height": 499,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 919,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/projects?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 1024,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/request-quote?_rsc=1RpmAqYJEMFF4n7A",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=1RpmAqYJEMFF4n7A",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/request-quote?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/projects?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 1024,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        {
+          "url": "http://127.0.0.1:3110/contact?_rsc=Ktn5x2ERov_cBgED",
+          "reason": "net::ERR_ABORTED"
+        }
+      ],
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "inside": true,
+        "smallTargets": 0,
+        "hiddenText": [],
+        "surface": "rgba(0, 0, 0, 0)"
+      },
+      "card": {
+        "clamp": "none",
+        "description": "Software designed and built around your exact business requirements, from first draft to deployment."
+      },
+      "gesturePassed": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

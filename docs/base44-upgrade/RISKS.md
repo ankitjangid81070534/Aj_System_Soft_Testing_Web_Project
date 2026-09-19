@@ -1,6 +1,16 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 7 disposition (2026-09-19)
+## Current Phase 8 disposition (2026-09-19)
+
+[Current status](PHASE_STATUS.md) and [service discovery report](PHASE_8_30_SERVICE_DISCOVERY.md) supersede earlier gates. Public service discovery complete; STOP before Phase 9. Matcher is native, server-rendered guidance using only available service-index records, not AI or collected/stored answers. Explicit mappings do not infer newly renamed/custom CMS slugs; full catalogue and human enquiry remain available. Actual hosted records are still deferred.
+
+Service anchor/browser-back issue was reproduced with null history state and quote content behind a services URL, then repaired locally using existing Next Link. Final 487 tests/type/lint/build, 26 source + 26 production browser cases and 14 independent responsive/theme cases pass. Initial failures/incomplete production timeout contexts remain in evidence; obsolete test run stopped. Unchanged hero anchor failed once initially and passed on retry; no unrelated hero repair claimed.
+
+Independent phone/tablet/desktop screenshots reviewed, not an iframe visual pass. Live goal/detail-heading/return gestures passed at partial scope; catalogue hash assertion did not settle and retry timed out, screenshot hidden. Buffered transient tag-edit compile errors predate the final passing build. Matrix has no console/page errors or non-cancelled same-origin failures; 14 cancellations retained. Fixed dock crosses tall captures; controls remain reachable by scrolling. No field-speed, conversion, native-device/full-accessibility or owner-browser repair claim.
+
+All hosted auth/CRUD/RLS/upload/email/custom-CMS, Builder/atomicity, content/legal/consent and release gates persist. Six integrations remain absent/deferred. No credentials, data writes, SQL, PR, merge or deployment.
+
+## Historical Phase 7 disposition (2026-09-19)
 
 [Current status](PHASE_STATUS.md) and [Phase 7 report](PHASE_7_30_HERO.md) supersede historical stop gates below. Missing Phase 6/7 reports were recovered; interrupted Phase 7 is complete at public-hero scope, Phase 8 not started. Existing business/persistence architecture remains unconnected and unchanged.
 
