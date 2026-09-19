@@ -250,6 +250,56 @@
   .desktopCta:hover { color: var(--dock-accent); background: var(--dock-soft); border-color: var(--dock-accent); }
   .panel .menuLink:hover { background: var(--dock-soft); border-color: var(--dock-line); }
 }
+/* ---------------------------------------------------------------------------
+   Desktop reference styling (>=1024px ONLY): quiet text links with a single
+   solid accent pill, plus a true near-black dock in the dark theme. Phone and
+   tablet geometry, colors and every existing transition stay untouched.
+   ------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .dock, .panel, :global(.dark) .dock, :global(.dark) .panel {
+    --dock-accent: #ff4a00;
+    --dock-soft: #fff1ea;
+    --dock-line: #ffd9c9;
+  }
+  .dock .item { border-color: transparent; background: transparent; letter-spacing: -.01em; }
+  .dock .item[aria-current="page"] { color: var(--dock-ink); background: transparent; border-color: transparent; font-weight: 650; }
+  .accountTrigger { border-radius: 999px; }
+  .desktopCta {
+    border-color: transparent;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #ff5b16, #f03d00);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 6px 18px #ff4a0038;
+  }
+}
+@media (min-width: 1024px) {
+  :global(.dark) .dock, :global(.dark) .panel {
+    --dock-ink: #f7f7f7;
+    --dock-muted: #a3a3a3;
+    --dock-line: #2a2a2a;
+    --dock-surface: #111111;
+  }
+  :global(.dark) .dock {
+    border-color: #ffffff14;
+    background: linear-gradient(120deg, #101010f2, #0b0b0bf2);
+    box-shadow: inset 0 1px #ffffff0f, 0 12px 40px #00000066;
+  }
+  :global(.dark) .dock[data-scrolled="true"] { background: #0b0b0bf7; box-shadow: inset 0 1px #ffffff0d, 0 12px 36px #00000073; }
+  :global(.dark) .dockMark { color: #ff6a2c; border-color: #2a2a2a; background: linear-gradient(135deg, #1c1c1c, #111111); }
+  :global(.dark) .dockMark > span { background: #ff4a00; box-shadow: 0 0 0 3px #0e0e0e; }
+  :global(.dark) .dockActions { border-left-color: #262626; }
+  :global(.dark) .accountTrigger { color: #f0f0f0; background: #161616; border-color: #2a2a2a; }
+  :global(.dark) .panel { background: #111111f7; border-color: #ffffff14; box-shadow: inset 0 1px #ffffff0d, 0 24px 80px #000000a6; }
+  :global(.dark) .panel .menuLink { background: linear-gradient(135deg, #171717, transparent); }
+  :global(.dark) .searchField { background: #161616; border-color: #2a2a2a; }
+}
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .dock .item:hover, .dock .more:hover { color: var(--dock-ink); background: #00000008; border-color: transparent; }
+  .desktopCta:hover { color: #fff; background: linear-gradient(180deg, #ff6a2c, #ff4a00); border-color: transparent; }
+  :global(.dark) .dock .item:hover, :global(.dark) .dock .more:hover { color: #ffffff; background: #ffffff0f; }
+  :global(.dark) .searchTrigger:hover { color: #ffffff; background: #ffffff12; }
+}
 /* Navigation is visible from first paint; only its decorative lamp moves. */
 @media (prefers-reduced-motion: reduce) {
   .dock, .dock *, .panel, .panel *, .panel::backdrop { transition: none !important; animation: none !important; }

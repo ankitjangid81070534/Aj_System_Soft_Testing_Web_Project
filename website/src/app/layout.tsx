@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { GeistSans } from "geist/font/sans";
+import { Inter_Tight } from "next/font/google";
 import { buildRootMetadata } from "@/lib/seo/metadata";
 import { RevealObserver } from "@/components/site/RevealObserver";
 import { SceneMotion } from "@/components/motion/SceneMotion";
@@ -11,6 +11,17 @@ import "./accent-surfaces.css";
 import "./action-surfaces.css";
 
 export const metadata: Metadata = buildRootMetadata();
+
+/**
+ * Site typeface: a tight geometric grotesque (Inter Tight). It is published under
+ * the existing `--font-geist-sans` variable name, so every token, CSS module and
+ * utility that already referenced it picks up the new family unchanged.
+ */
+const siteSans = Inter_Tight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist-sans",
+});
 
 /**
  * Runs before first paint. Theme: LIGHT is the default; dark is applied only
@@ -29,7 +40,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={GeistSans.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={siteSans.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script
           async

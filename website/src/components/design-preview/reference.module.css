@@ -30,9 +30,9 @@
 /* Reserve footer clearance only while the navigation is a bottom dock. */
 .footerFrame { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
 @media (min-width: 1024px) { .footerFrame { padding-bottom: 0; } }
-.headerFrame[data-scene-tone="dark"] { background: #100c1d; }
+.headerFrame[data-scene-tone="dark"] { background: #0b0b0b; }
 .headerFrame[data-scene-tone="dark"] > header { --color-ink: #f4ecff; --color-ink-muted: #c5b5d8; --color-ink-soft: #e2d3f3; }
-.headerFrame[data-scene-tone="dark"] :global(.glass-strong) { background: #100c1de8; transition: background-color 450ms ease; }
+.headerFrame[data-scene-tone="dark"] :global(.glass-strong) { background: #0b0b0be8; transition: background-color 450ms ease; }
 .headerFrame[data-scene-tone="dark"] :global(.icon-bead) { background: #241a33; color: #f0dfff; border-color: #6f4b9b70; }
 .headerFrame > header { position: relative; }
 .headerFrame > header > div:nth-child(2) { max-width: 1320px; padding: 0 28px; }
@@ -278,12 +278,12 @@
 }
 @media (max-width: 360px) { .hero h1 { font-size: 36px; } .benefitBento { grid-template-columns: 1fr; } .detailColumns ul { grid-template-columns: 1fr; } }
 /* Honor the existing opt-in theme toggle; the default remains clean white. */
-:global(.dark) .page { --ink: #f5f0fc; --muted: #b7a9c6; --color-ink: #f5f0fc; --color-ink-muted: #b7a9c6; --color-ink-soft: #d5c9e1; --color-surface: #171120; --color-canvas: #171120; --color-line: #352842; background: #171120; }
-:global(.dark) .page .hero, :global(.dark) .headerFrame, :global(.dark) .headerFrame :global(.glass-strong) { background: #171120; }
-:global(.dark) .page .heroBadge { background: #241b30; border-color: #463454; }
+:global(.dark) .page { --ink: #f5f0fc; --muted: #b7a9c6; --color-ink: #f5f0fc; --color-ink-muted: #b7a9c6; --color-ink-soft: #d5c9e1; --color-surface: #0b0b0b; --color-canvas: #0b0b0b; --color-line: #2a2a2a; background: #0b0b0b; }
+:global(.dark) .page .hero, :global(.dark) .headerFrame, :global(.dark) .headerFrame :global(.glass-strong) { background: #0b0b0b; }
+:global(.dark) .page .heroBadge { background: #1a1a1a; border-color: #2e2e2e; }
 :global(.dark) .page .heroDescription, :global(.dark) .page .secondaryButton { color: #d5c7e4; }
 :global(.dark) .page .stepButton[aria-pressed="true"] { color: #f3eaff; }
-:global(.dark) .headerFrame :global(.icon-bead), :global(.dark) .footerFrame :global(.icon-bead) { background: #241b30; color: #ddc3f8; border-color: #463454; }
+:global(.dark) .headerFrame :global(.icon-bead), :global(.dark) .footerFrame :global(.icon-bead) { background: #1a1a1a; color: #ddc3f8; border-color: #2e2e2e; }
 @media (prefers-reduced-motion: reduce) {
   .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

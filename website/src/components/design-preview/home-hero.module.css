@@ -134,10 +134,10 @@
   --hero-action: #bfdbfe;
   --hero-on-action: #07101f;
   --hero-action-hover: #dbeafe;
-  background: #171120;
+  background: #0b0b0b;
 }
 :global(.dark) .hero .copy::before { opacity: .16; }
-:global(.dark) .hero .badge { background: #241b30; border-color: #463454; }
+:global(.dark) .hero .badge { background: #1a1a1a; border-color: #2e2e2e; }
 :global(.dark) .hero .points svg { color: #6ee7b7; }
 @media (prefers-reduced-motion: reduce) {
   .hero .copy { animation: none; }

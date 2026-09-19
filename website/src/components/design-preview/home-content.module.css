@@ -53,5 +53,5 @@
   .serviceIntro { padding: 60px 24px 40px; }
 }
 
-:global(.dark) .legacy > section, :global(.dark) .legacy :global(.glass-strong) { background: #171120; border-color: #34273f; }
+:global(.dark) .legacy > section, :global(.dark) .legacy :global(.glass-strong) { background: #0b0b0b; border-color: #262626; }
 :global(.dark) .legacy { --color-brand-50: #271a39; --color-brand-100: #342348; --color-brand-200: #64487d; --color-brand-600: #b895e6; --color-brand-700: #d5b8f5; }
