@@ -1,5 +1,7 @@
 # Phase 11 — Project Requirement Wizard: persistence preflight
 
+> Historical preflight. The owner subsequently authorized safe source-only UI work after declining credentials again; see [current wizard checkpoint](PHASE_11_30_WIZARD_UI.md). The implementation-stop wording below describes this earlier checkpoint, not the current UI. Hosted saving remains unverified.
+
 Date: 2026-09-19 UTC. Branch `system-upgrade`. Starting HEAD `e1b2ce4ec48ffe9a666312461d79f6cf062938dd`.
 
 **STARTED / BLOCKED before wizard implementation — not complete.** Owner's `START NEXT PHASE SAFELY` authorizes Phase 11 only. The master requires existing lead persistence, an admin-readable brief and real saved/reloaded verification; if persistence cannot be established safely, report the blocker rather than substitute browser storage. This checkpoint audits that contract without claiming a working wizard or changing the existing quote form. Phase 12 has not started.

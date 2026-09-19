@@ -2,11 +2,11 @@
 
 ## Current Phase 11 disposition (2026-09-19)
 
-[Phase 11 persistence preflight](PHASE_11_30_REQUIREMENT_WIZARD.md) is complete as an audit, **not a completed wizard phase**. All six optional values remain absent/deferred; successful lead persistence and authorized admin reload cannot be verified in this environment. Existing quote fields/admin reader support a no-migration proposal, but no wizard or new save behavior was shipped. Do not mistake healthy fallback forms or 513 passing source tests for working hosted submissions.
+[Phase 11 source-only wizard](PHASE_11_30_WIZARD_UI.md) is implemented after owner delegation, **not a fully accepted persistence phase**. All six optional values remain absent and setup was rejected again. Existing quote action/schema/admin reader remain unchanged; four-step UI uses existing fields and multiline requirements, not new structured columns. Successful stored/admin-reloaded brief, upload/email and actual success/reset remain unverified.
 
-Existing action risks remain: insert-ID confirmation, separate upload/lead/agreement/evidence/email outcomes, agreement-version timing and the 10 MB advertised attachment versus unraised action-body limit. No policy/SQL/transport/legal repair is implied. Three read-only source-browser cases at 390/662/1440 pass field retention/clearing/validity and consent-default checks with no same-origin POST; iframe navigation/recovery remains unverified. No visual, fresh build, backend or release certification.
+Existing action risks remain: insert-ID confirmation, separate upload/lead/agreement/evidence/email outcomes, agreement-version timing and 10 MB attachment copy versus unraised action-body limit. No policy/SQL/transport/legal repair is implied. Fresh 516 tests, type/lint/build, 9 source and 8 production read-only browser cases pass. One opted-in unconfigured source POST verifies error focus/retention and disabled pending controls only, never a saved record; production POST skipped. Iframe gestures/runtime pass, screenshot hidden; independent first-step light captures reviewed at 390/662/1440, not full-flow/theme/native/hosted certification.
 
-STOP before Phase 12; resume Phase 11 with explicit source-only scope retaining acceptance gates or authorized existing-backend verification. No automatic re-request of declined credentials, new database or browser-local substitute. All Phase 1/9 and previous release/content/private gates persist.
+STOP before Phase 12. Source-only authorization is no longer missing; do not reimplement or repeat the same audit. Hosted acceptance requires actual approved evidence, without automatically requesting declined credentials, a new database or browser-local substitute. All Phase 1/9 and previous release/content/private gates persist.
 
 ## Historical Phase 10 disposition (2026-09-19)
 

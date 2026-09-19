@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-19",
+  "branch": "system-upgrade",
+  "startingCommit": "9cdc2fbea5",
+  "scope": "Phase 11 source-only wizard; existing server persistence unchanged",
+  "unit": {"files": 60, "testsPassed": 516},
+  "typecheck": "passed",
+  "lint": "passed",
+  "isolatedProductionBuild": "passed",
+  "sourceBrowser": {"passed": 9, "widths": [320, 390, 662, 820, 1024, 1440], "noJavaScriptWidths": [390, 1440], "unconfiguredFailurePosts": 1, "savedRecord": false},
+  "productionBrowser": {"passed": 8, "unconfiguredSubmissionTest": "skipped by default"},
+  "interactionsPassed": ["Continue", "trim-aware required brief validation", "name/email validation", "Back retention", "review Edit retention", "file selection retention", "updated review", "input Enter advances without early POST", "textarea Enter remains newline", "two explicit consent gates", "pending controls disabled", "one unconfigured failure POST", "error focus and brief/file retention", "live Home return"],
+  "iframe": {"initialNavigateHelper": "failed; real-link recovery passed", "gestures": "passed at documented scope", "errors": [], "failedRequests": [], "overlay": false, "rootChildCount": 2, "screenshot": "iframe_hidden"},
+  "independentVisualReview": {"widths": [390, 662, 1440], "scope": "first step, light theme, production browser captures", "temporaryViewer": "stopped", "durableImages": false},
+  "contactAndAppointmentForms": "byte-identical to starting HEAD",
+  "serverActionsSchemasAdminReaders": "unchanged",
+  "credentials": "six optional names absent; declined setup respected",
+  "hostedPersistence": "UNVERIFIED",
+  "successfulSubmissionAndReset": "UNVERIFIED",
+  "phase": "11 partial; stop before 12",
+  "published": false
+}
