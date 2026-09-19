@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 13 bounded form safety (2026-09-19)
+## Current checkpoint — Phase 14 read-only auth audit (2026-09-19)
+
+After Phase 13 blocker disclosure and three next-scope choices, owner delegated safe judgment. Chosen [Phase 14 auth/portal audit](PHASE_14_30_AUTH_AUDIT.md) maps existing login/signup/Google/recovery/account/profile/logout without changing application code. First proposed bounded repair is non-sensitive auth-form error recovery/feedback; passwords need an explicit reset policy. Recovery provenance/origins, exact agreement identity, partial writes and logout outcomes remain separately reviewed functional risks. No UI polish before functionality acceptance.
+
+Fresh 567 tests/62 files, typecheck/lint, eight anonymous pages and live Client Login link/password show-hide pass. Two token-free callback GETs return 307 with internal direct-probe locations retained as a finding. Initial navigate-helper failure recovered through a real link; no new screenshot/build or authenticated saving/delivery claim. Six optional values absent/deferred. Full Phase 14 PARTIAL; STOP before Phase 15. Phase 13/12/11/9/1 gates remain open, not passed by advancement. Documentation only; no credentials/data/SQL/config/PR/merge/deploy.
+
+## Historical checkpoint — Phase 13 bounded form safety (2026-09-19)
 
 Exact continuation implemented [contact/consultation recovery, validation and accessibility](PHASE_13_30_FORM_SAFETY.md). Keyed attempts reset action-state ownership; resolved errors retain input and focus generic feedback; pending guards, native/trim minimums and instance-specific spam IDs preserve the existing action/schema/payload/consent contracts. Quote wizard, Home/nav/auth/SEO and backend remain unchanged.
 
@@ -129,4 +135,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 13 bounded form safety is implemented and locally tested; hosted acceptance remains blocked. STOP before Phase 14. Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their configuration/hosted gates open.** Read the Phase 13 form-safety report on next continuation; resume acceptance or explicitly scope remaining decisions, not another implementation/audit or credential request. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 14 read-only auth audit is complete; full functional acceptance remains blocked. STOP before Phase 15. Phase 13 bounded form safety, Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their acceptance gates open.** Read the Phase 14 auth-audit report on next continuation; explicitly scope bounded feedback/recovery work or resume genuine acceptance, not another identical audit or credential request. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

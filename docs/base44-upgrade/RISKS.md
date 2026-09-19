@@ -1,6 +1,14 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 13 form-safety disposition (2026-09-19)
+## Current Phase 14 auth-audit disposition (2026-09-19)
+
+[Read-only auth/portal audit](PHASE_14_30_AUTH_AUDIT.md) traces existing flows without repairs or redesign. Source findings: uncontrolled auth/account forms can reset on resolved errors; hash recovery does not establish server recovery readiness; recovery marker provenance and callback/public origin need review; account reads can hide errors; agreement acceptance compares version numbers rather than exact version identity; profile/media/evidence saves are non-atomic or lack row confirmation; sign-out ignores returned errors. These are source risks, not authenticated exploit findings or verified hosted failures.
+
+Direct-container token-free callbacks return 307 locations using internal `0.0.0.0` origin; externally routed provider behavior remains unverified. Raw `invalid_email_link` currently reaches login copy. Recommended next slice is non-sensitive form recovery/feedback with explicit password policy, not a security rewrite or blind lead-hook reuse. Avatar transport and existing legal/save gates remain.
+
+Fresh 567 tests/62 files, type/lint, eight HTTP 200 pages and live password show/hide pass; two handler redirects recorded with the origin caveat. Initial navigate-helper failure followed by real-link recovery retained. No POST, fresh build, screenshot, native-device, real auth, mail or saved-record acceptance. Six optional values absent/deferred; Phase 13/12/11/9/1 blockers remain. Full Phase 14 PARTIAL; STOP before Phase 15.
+
+## Historical Phase 13 form-safety disposition (2026-09-19)
 
 [Bounded form safety](PHASE_13_30_FORM_SAFETY.md) repairs contact/consultation action-state ownership, error retention/focus, pending guard, native/trim validation and shared honeypot IDs. Actual success-to-another-enquiry remains source-covered only until a genuine hosted save is approved and verified. Four real unconfigured error POSTs prove retention/retry/pending behavior, not persistence or delivery.
 

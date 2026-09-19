@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Latest Phase 14 auth-audit checkpoint — system-upgrade (2026-09-19 UTC)
+- Owner delegated safe scope after Phase 13 blockers/three choices; chosen read-only Phase 14 audit. Read `PHASE_14_30_AUTH_AUDIT.md` and current status. Full Phase 14 PARTIAL; STOP before Phase 15. Do not repeat audit/credentials or mark Phase 13/12/11/9/1 gates passed.
+- Proposed next slice is non-sensitive auth-form error recovery/feedback, with explicit password clearing, not blindly reusing the lead hook. No auth/UI implementation yet. Recovery hash/marker provenance, callback origins, agreement exact-version identity, partial writes and ignored sign-out errors require separate reviewed functional scope.
+- Eight pages HTTP 200, 567 tests/62 files/type/lint pass. Token-free callback/confirm GETs return 307 with internal `0.0.0.0` origin in direct probes; not a passing external OAuth flow. Live real Client Login link/password show-hide pass after initial navigate-helper failure, errors/failed requests/dialogs empty. No POST, fresh build/screenshot or authenticated acceptance.
+- Six optional values absent/deferred. Source dev remains healthy on 3000; no source/config/dependency/data/SQL/secrets/PR/merge/deploy. Temporary logs in container `/tmp/phase14-auth-audit-*`.
+
 ## Latest Phase 13 form-safety checkpoint — system-upgrade (2026-09-19 UTC)
 - Exact continuation shipped the audit's bounded slice; read `PHASE_13_30_FORM_SAFETY.md` and current status. Full Phase 13 remains PARTIAL at hosted acceptance; STOP before Phase 14. Do not repeat implementation/audit/declined credentials.
 - Contact/Appointment action state now lives in keyed attempt children. `useLeadForm.ts` prevents resolved-error reset, focuses generic feedback (including equal-error retries), guards pending sends and validates trim-aware minimums/phone format. Keep native constraints, requiredness/consent and server schema unchanged. Shared spam IDs use `useId`, payload/timestamp unchanged; Quote wizard preserved.

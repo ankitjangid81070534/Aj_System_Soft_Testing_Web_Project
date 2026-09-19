@@ -119,6 +119,13 @@
 - D73: Confirm absent configuration before opting into real failure-only browser POSTs. Four actual failure/retry POSTs are not successful saves; success/reset remains source-only evidence. No mocked browser response or fabricated persistence.
 - D74: Separate 567 passing unit tests/type/lint/build, 15 distinct source cases, 13 production read-only cases and independent light form crops from unavailable iframe screenshot, inconclusive native-minimum helper check and hosted/native/full-state gates. Retain initial matcher/attribute-order harness failures. Full Phase 13 stays PARTIAL.
 
+## Phase 14 read-only audit decisions (2026-09-19)
+
+- D75: After Phase 13 blocker disclosure and three offered scopes, owner delegated safe judgment. Choose recommended Phase 14 auth/portal audit only; retain Phase 13/12/11/9/1 acceptance blockers. No redesign, auth change or automatic next phase.
+- D76: Trace existing login/signup/OAuth/recovery/account/profile/logout architecture before proposing repair. Recommended first slice is non-sensitive auth-form error recovery/feedback; password clearing must be explicit, not inherited blindly from lead-form reset behavior. No credential storage or mocked browser success.
+- D77: Recovery provenance/hash parity, callback origins, exact agreement identity, partial writes and logout outcomes need separately reviewed functional work. Direct-container 307 internal origins are probe findings, not externally reproduced OAuth failure or a security exploit claim.
+- D78: Separate 567 passing tests/type/lint, eight page probes, two token-free handler probes and actual password show/hide from unavailable hosted auth/persistence. Initial navigate-helper failure remains; real-link recovery passes. No fresh build/visual sign-off; no secrets requested or generated.
+
 ## Next authorization
 
-Read [Phase 13 form safety](PHASE_13_30_FORM_SAFETY.md) and current status. **Bounded implementation/local acceptance complete; hosted Phase 13 acceptance blocked. STOP before Phase 14.** Next continuation resumes acceptance or explicitly scopes remaining decisions; do not repeat the shipped slice, audit or declined credentials. Phase 12 dedicated configuration/hosted acceptance, Phase 11 and Phase 1/9 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 14 auth audit](PHASE_14_30_AUTH_AUDIT.md) and current status. **Read-only audit complete; full Phase 14 PARTIAL. STOP before Phase 15.** Next continuation explicitly scopes a bounded repair or resumes actual acceptance; do not repeat the audit or declined credentials. Phase 13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
