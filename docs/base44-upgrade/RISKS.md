@@ -1,6 +1,14 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 12 bounded implementation disposition (2026-09-19)
+## Current Phase 13 audit disposition (2026-09-19)
+
+[Form audit](PHASE_13_30_FORM_AUDIT.md) is complete at read-only scope after owner delegation; implementation and hosted acceptance remain pending. Source findings: contact/consultation reset changes only an unmounted form key, lacks quote's error-retention guard, guesses a name error from general message text and reuses an expiring timestamp. Live Contact field checks confirm missing browser minimum and duplicate honeypot IDs. No defect repaired this turn; actual success/reset remains unverified.
+
+Next bounded slice is contact/consultation recovery, validation parity and unique IDs without changing actions, consent or persistence. Requiredness/channel policy, consultation scheduling/promises, expiry renewal, agreement version consistency, 10 MB transport mismatch and partial writes need separate review. Phase 12 configuration/hosted acceptance and Phase 11/9/1 gates remain open, not waived by advancement.
+
+Fresh 564 tests/typecheck/lint, four HTTP probes and live Contact link/fill/clear pass; initial navigate-helper failure retained. No new visual/build/save/upload/email/performance claim. Six optional values remain absent/deferred; no credential request or backend change. STOP before Phase 14; next continuation resumes the documented implementation slice, not another audit.
+
+## Historical Phase 12 bounded implementation disposition (2026-09-19)
 
 [Navigation-only hub](PHASE_12_30_CONTACT_HUB_UI.md) now exists; full Phase 12 remains PARTIAL. Only existing contact/global CTA settings are managed. No confirmed enable/position/actions/pages/animation persistence, no new settings form, no live AI. Hosted saves and actual configured phone/email/WhatsApp delivery remain unverified. Native popover unsupported/no-JS and <=360px height use existing contact links; ordinary modals take precedence. Existing More/search coexistence is tested, actual populated offers and portal coexistence are not.
 

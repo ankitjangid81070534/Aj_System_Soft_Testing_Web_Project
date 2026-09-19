@@ -1,6 +1,12 @@
 # Base44 Dev Environment
 
-## Latest Phase 12 navigation-only hub checkpoint — system-upgrade (2026-09-19 UTC)
+## Latest Phase 13 form-audit checkpoint — system-upgrade (2026-09-19 UTC)
+- After Phase 12 gate disclosure, owner delegated safe scope; chosen Phase 13 audit only. Read `PHASE_13_30_FORM_AUDIT.md` and current status. Next continuation resumes bounded contact/consultation form recovery/validation, NOT Phase 14 or another identical audit. Phase 12/11 and earlier hosted gates remain deferred.
+- `useLeadForm.reset` changes only the form key while success unmounts that form; action state stays success. Contact/consultation also lack quote's error-retention guard. Treat success behavior as source evidence until genuine saving is tested; never synthesize persistence. Preserve keyed QuoteFormAttempt and wizard.
+- Live Contact link/fill/clear confirms browser accepts one-character name and Contact has two `website-hp` IDs. Keep spam payload name/timestamp, requiredness and consent unchanged in future repairs. Legal/version, expiry recovery, scheduling/channel rules, upload limits and partial-write semantics are separate gates.
+- Fresh unchanged-source 564 tests/61 files, typecheck/lint, four HTTP 200s and recovered real Contact gesture pass. Initial navigate-helper failure retained; no screenshot/build/save/delivery claim. Six optional values absent in file/process; no credential request, source/config/data/SQL/PR/merge/deploy. Temporary logs `/tmp/phase13-audit-*` in container; dev 3000 unchanged.
+
+## Historical Phase 12 navigation-only hub checkpoint — system-upgrade (2026-09-19 UTC)
 - Exact continuation implemented the bounded audit contract. Read `PHASE_12_30_CONTACT_HUB_UI.md` and current status. Hub exists; full Phase 12 remains PARTIAL at admin configuration/hosted acceptance. STOP before Phase 13; do not repeat implementation/audit or declined credentials.
 - One public-layout ContactHub consumes validated actions from already-loaded settings. Native auto popover, route-keyed cleanup, modal precedence, discovery allowlist, no-JS existing-link fallback. Dedicated hub settings/AI are absent, not faked. Full settings action remains untouched; never post partial settings.
 - Native toggle event is asynchronous; wait for aria-expanded before asserting it. No-JS tests must select visible accessible links, not the hidden mobile copy. Theme preference key is `ajs-theme`, not `theme`. Mobile bottom clearance is 128px plus safe area; <=360px height hides the enhancement, preserving ordinary contact links.

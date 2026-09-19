@@ -105,6 +105,13 @@
 - D65: Choose native auto popover rather than another modal navigation system. Key by pathname, yield to existing native dialogs, reserve mobile dock clearance and omit from forms/private/legal/unknown routes. No auto opening or continuous motion; no-JS/unsupported browsers retain existing links.
 - D66: Dedicated settings/hosted acceptance remain gated. Separate passing 564 unit tests, 8+8 browser cases, independent captures and live gestures from hidden iframe screenshot, actual delivery, native devices and saved-record verification. Initial heading/hidden-link/theme-key harness errors are retained, not app-fix claims.
 
+## Phase 13 audit decisions (2026-09-19)
+
+- D67: After Phase 12's incomplete configuration/hosted acceptance was disclosed and three choices offered, owner delegated safe judgment. Choose the recommended Phase 13 read-only audit. Advancement explicitly carries Phase 12/11 and earlier blockers, never marks them passed.
+- D68: First proposed repair slice is contact/consultation attempt reset, error retention/focus, pending guard, existing-validation parity and unique spam-input IDs. Reuse current quote patterns without duplicating the wizard or changing server actions, field names, requiredness, consent or persistence. This turn documents the slice only.
+- D69: Channel requirements, consultation scheduling/promises, expiry renewal, agreement versions, attachment body limits and partial-save semantics remain separate decisions. No guessed phone/contact, new database, automatic timestamp refresh, fake success or legal assumption.
+- D70: Separate source-only reset/error findings from live browser validity/duplicate-ID observations. Fresh 564 tests/type/lint, four HTTP probes and real Contact link/fill/clear pass; initial navigate-helper failure remains recorded. No new screenshot/build, POST, stored/admin-reloaded result or delivery claim.
+
 ## Next authorization
 
-Read [Phase 12 UI report](PHASE_12_30_CONTACT_HUB_UI.md) and current status. **Navigation-only hub implemented; full Phase 12 remains PARTIAL. STOP before Phase 13.** Next continuation resumes the configuration/acceptance boundary without repeating implementation, audit or credential requests. Phase 11 remains partial; Phase 1/9 hosted gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 13 form audit](PHASE_13_30_FORM_AUDIT.md) and current status. **Audit complete; implementation and full Phase 13 acceptance pending. STOP before Phase 14.** Next continuation resumes the bounded contact/consultation form-safety slice, not another audit or credential request. Phase 12 dedicated configuration/hosted acceptance, Phase 11 and Phase 1/9 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
