@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 10 public guidance complete (2026-09-19)
+## Current checkpoint — Phase 11 started / persistence gate blocked (2026-09-19)
+
+Exact continuation authorized [Phase 11](PHASE_11_30_REQUIREMENT_WIZARD.md). Existing quote form → action → quote_requests → authorized admin detail is mapped; the wizard itself is not implemented. Proposed steps reuse existing fields, optional budget and multiline requirements rather than new tables/browser storage. Six optional values are still absent in file/process; no approved test backend/session/data-write authority, so successful submit/admin-reload remains blocked. This does not establish a production outage or require a new Supabase connection.
+
+Documentation only. Fresh 513 tests/59 files, typecheck/lint and three independent read-only quote checks (390/662/1440) pass; no same-origin POST. Iframe navigation changed URL without rendering, then a recovery link was absent. No iframe, visual, fresh build or save claim. Existing partial-write/insert-ID/agreement-version/upload-limit findings remain untouched. Phase 10 stays last completed scoped phase; resume Phase 11's gate and STOP before Phase 12. Preserve credential deferral and all prior blockers; no PR/merge/deploy.
+
+## Historical checkpoint — Phase 10 public guidance complete (2026-09-19)
 
 See [current status](PHASE_STATUS.md) and [Phase 10](PHASE_10_30_INDUSTRIES_COMPARISON.md). Owner delegated safe continuation after the [Phase 9](PHASE_9_30_PROJECTS.md) blocker disclosure; project/admin scope remains PARTIAL, not passed. Existing Industries gains practical workflow examples and existing Services exits; five native comparison disclosures supplement—not replace—the matcher/catalogue. No industry pages, invented proof, CMS module, persistence or Home reorder. Only the new repeated-fragment shortcut needs a small client Link scroll handler.
 
@@ -99,4 +105,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP after Phase 10; do not automatically begin Phase 11.** Earlier gates above are historical and superseded by current status. Phase 9 remains partial; the owner delegated progression past its disclosed blockers, not completion of backend checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 11 is started but blocked before implementation; STOP before Phase 12.** Resume its documented persistence gate, not the older Phase 10 stop. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

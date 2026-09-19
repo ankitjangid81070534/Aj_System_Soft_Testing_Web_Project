@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Latest Phase 11 checkpoint — system-upgrade (2026-09-19 UTC)
+- Exact continuation started Phase 11 persistence preflight; read current `PHASE_STATUS.md` and `PHASE_11_30_REQUIREMENT_WIZARD.md`. Phase 11 is BLOCKED before implementation, not complete; Phase 10 remains last completed scope. STOP before Phase 12; repeated continuation must resume this gate.
+- Existing quote action/table/admin detail can carry a labelled multiline requirements brief without new schema, but no wizard was shipped. Do not mistake the proposal for structured columns or verified saving. No business browser storage, new backend, SQL or fake success.
+- Six optional values remain absent in file/process and prior credential deferral stands. No approved staff session/test-record authority; source-only implementation must retain hosted acceptance gates. Existing insert-ID, upload/lead/evidence partial writes, agreement-version and action-body-limit findings remain, not repaired.
+- Documentation only; fresh unchanged-source 513 tests/59 files, type/lint and 3 independent read-only quote cases (390/662/1440) pass, no same-origin POST. Iframe route helper failed to render; one recovery link absent. No iframe, visual, fresh build, saved-record or release claim. Evidence in `evidence/phase11-30/`; scripts in /tmp. App/config/dependencies/compose unchanged, no PR/merge/deploy.
+
 ## Latest Phase 10 checkpoint — system-upgrade (2026-09-19 UTC)
 - Current `PHASE_STATUS.md` and `PHASE_10_30_INDUSTRIES_COMPARISON.md` supersede historical gates. Owner delegated continuation after Phase 9 blockers were disclosed; those remain PARTIAL, not passed. STOP before Phase 11 until new continuation.
 - Existing eight Industries tiles now have workflow examples, not project/compliance claims, and two explicit Services fragment exits. Tiles stay non-clickable; Home order/nav untouched. Five native comparisons on `/services` use public-index records only; no new route, catalogue, persistence or fallback import.
