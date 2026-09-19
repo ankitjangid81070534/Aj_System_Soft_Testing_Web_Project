@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Users redirect timing repair (2026-09-19)
+- See `docs/base44-upgrade/USERS_REDIRECT_TIMING_FIX.md`. Unconfigured `/ajadmin/users` now redirects in proxy before streaming the rejected UsersPage, avoiding Next/React dev negative timing entries. Keep configured auth and page role guards intact; no global Performance patch. Five fresh browser redirects and 582 unit tests pass. Phase 15 remains audit-only apart from this owner-requested incident repair.
+
 ## Latest Phase 15 admin UI audit — system-upgrade (2026-09-19 UTC)
 - Owner explicitly requested Audit Phase 15. Read `PHASE_15_30_ADMIN_UI_AUDIT.md` and current status. Documentation only; full Phase 15 PARTIAL. STOP before implementation/Phase 16; prior Phase 14/13/12/11/9/1 gates remain open.
 - Actual AdminNav isolated renders reproduce missing active markers on exact non-dashboard module paths. Proposed first slice is navigation/accessibility correctness, not a redesign. Drawer lacks explicit accessible name and breakpoint open-state cleanup; private resize behavior remains source-only risk.
