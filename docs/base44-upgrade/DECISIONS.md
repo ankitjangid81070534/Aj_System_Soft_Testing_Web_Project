@@ -112,6 +112,13 @@
 - D69: Channel requirements, consultation scheduling/promises, expiry renewal, agreement versions, attachment body limits and partial-save semantics remain separate decisions. No guessed phone/contact, new database, automatic timestamp refresh, fake success or legal assumption.
 - D70: Separate source-only reset/error findings from live browser validity/duplicate-ID observations. Fresh 564 tests/type/lint, four HTTP probes and real Contact link/fill/clear pass; initial navigate-helper failure remains recorded. No new screenshot/build, POST, stored/admin-reloaded result or delivery claim.
 
+## Phase 13 bounded implementation decisions (2026-09-19)
+
+- D71: Exact continuation implements the documented contact/consultation safety slice, not Phase 14. Reuse keyed attempts and a focused hook; leave Quote wizard, server actions/schema, consent/requiredness, spam timestamps and existing persistence intact.
+- D72: Cancel native resolved-action reset so genuine errors retain answers; focus generic feedback rather than guessing a name-field error. Native and trim-aware minimums/phone checks supplement—not replace—server validation. Unique spam IDs do not change payloads.
+- D73: Confirm absent configuration before opting into real failure-only browser POSTs. Four actual failure/retry POSTs are not successful saves; success/reset remains source-only evidence. No mocked browser response or fabricated persistence.
+- D74: Separate 567 passing unit tests/type/lint/build, 15 distinct source cases, 13 production read-only cases and independent light form crops from unavailable iframe screenshot, inconclusive native-minimum helper check and hosted/native/full-state gates. Retain initial matcher/attribute-order harness failures. Full Phase 13 stays PARTIAL.
+
 ## Next authorization
 
-Read [Phase 13 form audit](PHASE_13_30_FORM_AUDIT.md) and current status. **Audit complete; implementation and full Phase 13 acceptance pending. STOP before Phase 14.** Next continuation resumes the bounded contact/consultation form-safety slice, not another audit or credential request. Phase 12 dedicated configuration/hosted acceptance, Phase 11 and Phase 1/9 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 13 form safety](PHASE_13_30_FORM_SAFETY.md) and current status. **Bounded implementation/local acceptance complete; hosted Phase 13 acceptance blocked. STOP before Phase 14.** Next continuation resumes acceptance or explicitly scopes remaining decisions; do not repeat the shipped slice, audit or declined credentials. Phase 12 dedicated configuration/hosted acceptance, Phase 11 and Phase 1/9 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.

@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 13 form audit (2026-09-19)
+## Current checkpoint — Phase 13 bounded form safety (2026-09-19)
+
+Exact continuation implemented [contact/consultation recovery, validation and accessibility](PHASE_13_30_FORM_SAFETY.md). Keyed attempts reset action-state ownership; resolved errors retain input and focus generic feedback; pending guards, native/trim minimums and instance-specific spam IDs preserve the existing action/schema/payload/consent contracts. Quote wizard, Home/nav/auth/SEO and backend remain unchanged.
+
+Fresh 567 tests/62 files, type/lint/build, 15 distinct source browser cases and 13 production read-only cases pass. Four genuine unconfigured error POSTs verify failure/retry retention, not persistence. Independent light form crops at 390/662/1440 reviewed; live trim-validation/focus/cleanup/runtime pass, screenshot hidden and first native-minimum helper check inconclusive. Full Phase 13 remains PARTIAL: actual save/admin readback/success-reset and all separately gated business/legal/transport decisions remain unverified. Six optional values absent/deferred. STOP before Phase 14; do not repeat the implemented slice or credentials.
+
+## Historical checkpoint — Phase 13 form audit (2026-09-19)
 
 After Phase 12 unfinished-gate disclosure, owner delegated safe scope; chosen [Phase 13 audit](PHASE_13_30_FORM_AUDIT.md) is read-only. Existing contact/quote/consultation actions, lead tables, consent/evidence and authorized admin read paths remain unchanged. Source identifies contact/consultation action-state reset and error-retention risks; live Contact checks confirm missing browser minimum and duplicate honeypot IDs. Recommended next slice repairs only form recovery/validation/accessibility, not business or save semantics.
 
@@ -123,4 +129,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 13 form audit is complete; bounded implementation and hosted acceptance remain pending. STOP before Phase 14. Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their configuration/hosted gates open.** Read the Phase 13 form-safety slice on next continuation rather than repeating this audit or credential requests. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 13 bounded form safety is implemented and locally tested; hosted acceptance remains blocked. STOP before Phase 14. Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their configuration/hosted gates open.** Read the Phase 13 form-safety report on next continuation; resume acceptance or explicitly scope remaining decisions, not another implementation/audit or credential request. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

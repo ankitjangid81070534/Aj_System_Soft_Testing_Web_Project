@@ -1,5 +1,7 @@
 # Phase 13 — Contact, quote and consultation audit
 
+> Historical audit snapshot. The next exact continuation implemented its bounded first slice; see [Phase 13 form safety](PHASE_13_30_FORM_SAFETY.md) and current status. Findings below describe the pre-repair source, not today's implementation. Hosted and separate business/legal/transport gates remain open.
+
 Date: 2026-09-19 UTC. Branch: `system-upgrade`. Starting HEAD: `dfd083d184` (not the automatic completion commit).
 
 **AUDIT COMPLETE; IMPLEMENTATION AND HOSTED ACCEPTANCE PENDING. Full Phase 13 is not complete.** After disclosure of Phase 12's unfinished configuration/hosted gates and three continuation choices, the owner delegated safe scope: “jo aapko shi lage vo update kro safle hre vo ok”. Chosen scope is the recommended Phase 13 read-only form audit, not a settings schema, another Phase 12 audit or Phase 14. Phase 12 remains partial and Phase 11 hosted acceptance remains blocked.

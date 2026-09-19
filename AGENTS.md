@@ -1,6 +1,13 @@
 # Base44 Dev Environment
 
-## Latest Phase 13 form-audit checkpoint — system-upgrade (2026-09-19 UTC)
+## Latest Phase 13 form-safety checkpoint — system-upgrade (2026-09-19 UTC)
+- Exact continuation shipped the audit's bounded slice; read `PHASE_13_30_FORM_SAFETY.md` and current status. Full Phase 13 remains PARTIAL at hosted acceptance; STOP before Phase 14. Do not repeat implementation/audit/declined credentials.
+- Contact/Appointment action state now lives in keyed attempt children. `useLeadForm.ts` prevents resolved-error reset, focuses generic feedback (including equal-error retries), guards pending sends and validates trim-aware minimums/phone format. Keep native constraints, requiredness/consent and server schema unchanged. Shared spam IDs use `useId`, payload/timestamp unchanged; Quote wizard preserved.
+- `LEAD_UNCONFIGURED_TESTS=1` only after confirming target has no backend configuration. Two real-error tests each retry once: four POSTs, no saved record. Actual success/reset/admin readback remains unverified; never fake action outcomes. Expiry/legal/channel/scheduling/transport/partial-write gates remain separate.
+- Fresh 567 tests/62 files, type/lint/build, 15 distinct source + 13 production read-only browser cases pass. Initial attribute-order/readiness-name harness failures retained. Live trim-validation/focus/cleanup/runtime pass; helper one-character native-minimum check inconclusive and screenshot hidden. Independent light form crops at 390/662/1440 reviewed, not full-state/native/hosted acceptance.
+- Source dev 3000 unchanged. Isolated production `/tmp/aj-phase13-safety-production` at internal 3115; test logs/captures/scripts in /tmp, temporary viewer stopped. Six optional values absent/deferred; no SQL/data/secrets/config/dependency/PR/merge/deploy changes.
+
+## Historical Phase 13 form-audit checkpoint — system-upgrade (2026-09-19 UTC)
 - After Phase 12 gate disclosure, owner delegated safe scope; chosen Phase 13 audit only. Read `PHASE_13_30_FORM_AUDIT.md` and current status. Next continuation resumes bounded contact/consultation form recovery/validation, NOT Phase 14 or another identical audit. Phase 12/11 and earlier hosted gates remain deferred.
 - `useLeadForm.reset` changes only the form key while success unmounts that form; action state stays success. Contact/consultation also lack quote's error-retention guard. Treat success behavior as source evidence until genuine saving is tested; never synthesize persistence. Preserve keyed QuoteFormAttempt and wizard.
 - Live Contact link/fill/clear confirms browser accepts one-character name and Contact has two `website-hp` IDs. Keep spam payload name/timestamp, requiredness and consent unchanged in future repairs. Legal/version, expiry recovery, scheduling/channel rules, upload limits and partial-write semantics are separate gates.

@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useId, useState, type Ref } from "react";
+import { useLeadForm } from "./useLeadForm";
 import { CheckCircle2, Send } from "lucide-react";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
@@ -57,14 +58,15 @@ export function AgreementCheckbox({ id, className }: { id: string; className?: s
  * timestamp used as a minimum fill-time check on the server.
  */
 function GuardFields({ startedAt }: { startedAt: number }) {
+  const honeypotId = useId();
   return (
     <>
       <div
         aria-hidden="true"
         className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
       >
-        <label htmlFor="website-hp">Website</label>
-        <input id="website-hp" type="text" name="website" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={honeypotId}>Website</label>
+        <input id={honeypotId} type="text" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <input type="hidden" name="startedAt" value={startedAt} />
     </>
@@ -97,23 +99,19 @@ function SuccessPanel({
   );
 }
 
-function ErrorNote({ message }: { message?: string }) {
+function ErrorNote({ message, errorRef }: { message?: string; errorRef: Ref<HTMLParagraphElement> }) {
   if (!message) return null;
   return (
     <p
+      ref={errorRef}
+      tabIndex={-1}
       role="alert"
       aria-live="polite"
-      className="rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger"
+      className="rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger focus-ring"
     >
       {message}
     </p>
   );
-}
-
-function useLeadForm(action: (state: LeadFormState, formData: FormData) => Promise<LeadFormState>) {
-  const [state, formAction, pending] = useActionState(action, idleLeadState);
-  const [formKey, setFormKey] = useState(0);
-  return { state, formAction, pending, formKey, reset: () => setFormKey((key) => key + 1) };
 }
 
 const CONTACT_TYPE_OPTIONS = [
@@ -170,20 +168,31 @@ const TIMELINE_OPTIONS = [
 ] as const;
 
 export function ContactForm({ startedAt }: { startedAt: number }) {
-  const { state, formAction, pending, formKey, reset } = useLeadForm(submitContactAction);
+  const [attempt, setAttempt] = useState(0);
+  return (
+    <ContactFormAttempt
+      key={attempt}
+      startedAt={startedAt}
+      onReset={() => setAttempt((value) => value + 1)}
+    />
+  );
+}
+
+function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
 
   if (state.status === "success") {
     return (
       <SuccessPanel
         message={state.message ?? "Message sent."}
-        onReset={reset}
+        onReset={onReset}
         resetLabel="Send another message"
       />
     );
   }
 
   return (
-    <form key={formKey} action={formAction} className="flex flex-col gap-4" noValidate={false}>
+    <form action={formAction} {...formProps} className="flex flex-col gap-4">
       <GuardFields startedAt={startedAt} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="c-name" required>
@@ -193,7 +202,7 @@ export function ContactForm({ startedAt }: { startedAt: number }) {
             autoComplete="name"
             required
             maxLength={120}
-            invalid={state.status === "error" && !state.message?.includes("message")}
+            minLength={2}
           />
         </Field>
         <Field label="Email" htmlFor="c-email" required>
@@ -234,10 +243,10 @@ export function ContactForm({ startedAt }: { startedAt: number }) {
         required
         hint="A couple of sentences about what you need built or fixed."
       >
-        <Textarea id="c-message" name="message" required rows={5} maxLength={4000} />
+        <Textarea id="c-message" name="message" required minLength={10} rows={5} maxLength={4000} />
       </Field>
       <AgreementCheckbox id="c-agreement" />
-      <ErrorNote message={state.message} />
+      <ErrorNote message={state.message} errorRef={errorRef} />
       <div>
         <Button type="submit" loading={pending}>
           <Send aria-hidden="true" className="h-4 w-4" />
@@ -458,24 +467,35 @@ function QuoteFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: 
 }
 
 export function AppointmentForm({ startedAt }: { startedAt: number }) {
-  const { state, formAction, pending, formKey, reset } = useLeadForm(requestAppointmentAction);
+  const [attempt, setAttempt] = useState(0);
+  return (
+    <AppointmentFormAttempt
+      key={attempt}
+      startedAt={startedAt}
+      onReset={() => setAttempt((value) => value + 1)}
+    />
+  );
+}
+
+function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(requestAppointmentAction);
 
   if (state.status === "success") {
     return (
       <SuccessPanel
         message={state.message ?? "Request sent."}
-        onReset={reset}
+        onReset={onReset}
         resetLabel="Request another slot"
       />
     );
   }
 
   return (
-    <form key={formKey} action={formAction} className="flex flex-col gap-4">
+    <form action={formAction} {...formProps} className="flex flex-col gap-4">
       <GuardFields startedAt={startedAt} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="a-name" required>
-          <Input id="a-name" name="name" autoComplete="name" required maxLength={120} />
+          <Input id="a-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />
         </Field>
         <Field label="Email" htmlFor="a-email" required>
           <Input
@@ -488,7 +508,7 @@ export function AppointmentForm({ startedAt }: { startedAt: number }) {
           />
         </Field>
         <Field label="Phone (optional)" htmlFor="a-phone">
-          <Input id="a-phone" name="phone" type="tel" maxLength={20} />
+          <Input id="a-phone" name="phone" type="tel" minLength={6} maxLength={20} />
         </Field>
         <Field label="Preferred date (optional)" htmlFor="a-date">
           <Input id="a-date" name="preferredDate" type="date" />
@@ -513,7 +533,7 @@ export function AppointmentForm({ startedAt }: { startedAt: number }) {
       <Field label="Anything to prepare? (optional)" htmlFor="a-message">
         <Textarea id="a-message" name="message" rows={3} maxLength={2000} />
       </Field>
-      <ErrorNote message={state.message} />
+      <ErrorNote message={state.message} errorRef={errorRef} />
       <div>
         <Button type="submit" loading={pending} variant="secondary">
           {pending ? "Requesting…" : "Request a consultation"}

@@ -1,6 +1,12 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 13 audit disposition (2026-09-19)
+## Current Phase 13 form-safety disposition (2026-09-19)
+
+[Bounded form safety](PHASE_13_30_FORM_SAFETY.md) repairs contact/consultation action-state ownership, error retention/focus, pending guard, native/trim validation and shared honeypot IDs. Actual success-to-another-enquiry remains source-covered only until a genuine hosted save is approved and verified. Four real unconfigured error POSTs prove retention/retry/pending behavior, not persistence or delivery.
+
+567 tests/type/lint/build, 15 distinct source + 13 production read-only browser cases pass; independent light form crops reviewed at 390/662/1440. Initial harness failures, inconclusive iframe native-minimum check and hidden screenshot are retained, not app-fix claims. No dark/error/success-state visual, native-device, hosted-save or performance certification. Expiry/channel/scheduling/legal/version/transport/partial-write gates remain unchanged; six optional values absent/deferred. Phase 13 remains PARTIAL; STOP before Phase 14 without repeating this shipped slice or credential requests.
+
+## Historical Phase 13 audit disposition (2026-09-19)
 
 [Form audit](PHASE_13_30_FORM_AUDIT.md) is complete at read-only scope after owner delegation; implementation and hosted acceptance remain pending. Source findings: contact/consultation reset changes only an unmounted form key, lacks quote's error-retention guard, guesses a name error from general message text and reuses an expiring timestamp. Live Contact field checks confirm missing browser minimum and duplicate honeypot IDs. No defect repaired this turn; actual success/reset remains unverified.
 
