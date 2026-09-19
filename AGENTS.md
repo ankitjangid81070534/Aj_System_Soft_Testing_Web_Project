@@ -1,6 +1,11 @@
 # Base44 Dev Environment
 
-## Latest Phase 11 source-only UI checkpoint — system-upgrade (2026-09-19 UTC)
+## Latest Phase 12 audit checkpoint — system-upgrade (2026-09-19 UTC)
+- After Phase 11 gate disclosure, owner delegated safe scope; chosen scope is audit/planning only. Read `PHASE_12_30_CONTACT_HUB_AUDIT.md` and current status. No contact hub/admin controls implemented; Phase 11 hosted acceptance remains BLOCKED. STOP before implementation/Phase 13; next continuation resumes this contract, not another identical audit or credential request.
+- Existing contact/global CTA settings are reusable. Dedicated hub configuration is unconfirmed; AI Methods is a resource directory, not chat. Never submit a partial hub form to `updateSettingsAction`: absent allowlisted fields become empty strings. Do not copy contact values from migrations or repurpose Builder/social/offer storage.
+- Documentation only. Fresh 516 tests/60 files, typecheck/lint and three HTTP 200 probes pass; dev container healthy. No fresh browser/visual/build/save verification, credentials/SQL/data/config/dependencies, PR/merge/deploy. Temporary test logs in container `/tmp/phase12-audit-*`.
+
+## Historical Phase 11 source-only UI checkpoint — system-upgrade (2026-09-19 UTC)
 - Owner delegated credential-free implementation after rejecting secrets again. Read `PHASE_11_30_WIZARD_UI.md` and current status: wizard UI exists; Phase 11 remains PARTIAL at hosted-save acceptance. STOP before Phase 12. Do not ask for source-only authorization again, reimplement the wizard or repeat declined credentials.
 - `QuoteWizard` enhances the existing quote fields to Project/Requirements/Contact/Review, keeping every input mounted in one form. No-JS full form stays visible. Use the existing multiline requirements value, not new columns/JSON/browser storage. Quote action/schema/admin reader and Contact/Appointment forms are unchanged.
 - Cancel React's resolved-action native reset so errors retain uncontrolled brief/file; genuine success unmounts the form. Quote-only keyed attempt resets action state on another request. Current-step validation and final all-step validation must reveal invalid controls before focus; do not disable hidden-step inputs (they must submit).

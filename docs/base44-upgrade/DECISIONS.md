@@ -93,6 +93,12 @@
 - D59: Scope progressive enhancement, focus/validation, pending guard and error retention to `QuoteWizard`. Cancel native automatic reset on action error; use a quote-only keyed attempt after genuine success. Contact and consultation remain byte-identical. Success/reset is source-covered but not proven against hosted saving.
 - D60: Separate real unconfigured-action failure (one source POST) from persistence. 516 unit tests, source/production browser journeys and first-step independent captures are not authenticated save, full visual/native or performance certification. See current report/evidence.
 
+## Phase 12 audit decisions (2026-09-19)
+
+- D61: After the exact continuation and Phase 11 gate disclosure, owner delegated safe scope. Choose Phase 12 audit/planning only from the offered alternatives; retain Phase 11 hosted acceptance as blocked, not passed.
+- D62: Reuse existing site contact/global CTA source in any future bounded hub; no copied migration contacts, second settings store, partial submission to the full settings action, or AI Methods relabelled as live help. Dedicated hub settings need a confirmed persistence contract before admin controls.
+- D63: Document a navigation-only first slice and acceptance matrix; do not implement it or claim full admin configurability this turn. Fresh 516 tests/type/lint and three HTTP probes cover unchanged app, not hub interactions or hosted saves.
+
 ## Next authorization
 
-**Phase 11 UI implemented; hosted acceptance BLOCKED. STOP before Phase 12.** Read [current checkpoint](PHASE_11_30_WIZARD_UI.md), not the historical implementation-stop note. Source-only work no longer needs another authorization; do not reimplement or repeatedly request declined credentials. Phase 9 remains partial; Phase 1 hosted gates remain blocked. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 12 audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) and current status. **Audit complete; STOP before implementation/Phase 13.** Next continuation resumes its implementation boundary without repeating the same audit or credential request. Phase 11 remains partial; Phase 1/9 hosted gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.

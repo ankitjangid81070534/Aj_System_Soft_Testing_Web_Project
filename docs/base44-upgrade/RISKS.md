@@ -1,6 +1,12 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 11 disposition (2026-09-19)
+## Current Phase 12 audit disposition (2026-09-19)
+
+[Contact-hub audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) is planning only after owner delegation; no widget or admin controls are implemented. Reusable contact fields exist, but hub enable/position/actions/pages/animation have no confirmed persistence contract. Do not repurpose Builder/social/offer fields or use browser storage as configuration. A partial form submitted to the existing full settings action would blank missing allowlisted values; its cache-refresh failure is logged separately from successful save. AI Methods is not a chatbot; live AI remains gated.
+
+Phase 11 hosted acceptance and all earlier blockers remain open. Fresh unchanged-source 516 tests/type/lint and three HTTP probes pass, not new browser/visual/build, settings-save or hub acceptance. STOP before implementation/Phase 13; next continuation must use this audit rather than repeat credential requests. No source, SQL, secret, record or deployment changes.
+
+## Historical Phase 11 disposition (2026-09-19)
 
 [Phase 11 source-only wizard](PHASE_11_30_WIZARD_UI.md) is implemented after owner delegation, **not a fully accepted persistence phase**. All six optional values remain absent and setup was rejected again. Existing quote action/schema/admin reader remain unchanged; four-step UI uses existing fields and multiline requirements, not new structured columns. Successful stored/admin-reloaded brief, upload/email and actual success/reset remain unverified.
 

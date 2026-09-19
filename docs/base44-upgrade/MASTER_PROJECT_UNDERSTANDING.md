@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 11 source-only UI / hosted acceptance blocked (2026-09-19)
+## Current checkpoint — Phase 12 audit only (2026-09-19)
+
+After Phase 11 blocker disclosure, owner delegated safe next work. The chosen [Phase 12 contact-hub audit](PHASE_12_30_CONTACT_HUB_AUDIT.md) maps existing contact/global CTA settings and their full-form save/read path. Floating hub and its dedicated configuration are not implemented; AI Methods is not live chat. Do not submit a partial settings form: missing allowlisted keys become empty strings. A navigation-only first slice is proposed, with no new persistence and no claim of full admin configurability.
+
+Fresh unchanged-source 516 tests/60 files, typecheck/lint and three HTTP probes pass. Documentation only; no new browser/visual/build or hosted-save acceptance. Phase 11 stays partial; Phase 12 implementation and Phase 13 are not started. Current status supersedes older stop notes; no credentials, SQL, data, configuration, PR, merge or deployment changes.
+
+## Historical checkpoint — Phase 11 source-only UI / hosted acceptance blocked (2026-09-19)
 
 Owner delegated safe credential-free implementation after rejecting setup again. [Phase 11 wizard UI](PHASE_11_30_WIZARD_UI.md) now groups the existing quote controls into four accessible steps with review/Edit, field/file retention, validation/focus and pending/error handling. One native form, unchanged action/schema/admin reader, existing multiline requirements, optional budget and explicit consent; no new columns, browser storage or backend. Six optional values remain absent and actual submit → stored/admin-reloaded brief is unverified. Prior preflight is historical, not authority to claim the wizard is still unimplemented.
 
@@ -105,4 +111,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 11 source-only wizard is implemented; hosted acceptance remains blocked. STOP before Phase 12.** Read its UI checkpoint rather than repeating historical preflight/implementation gates. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 12 audit is complete; hub implementation is not started. STOP before implementation/Phase 13. Phase 11 source-only wizard remains implemented with hosted acceptance blocked.** Read the Phase 12 audit contract on next continuation rather than repeating historical audits or credential requests. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
