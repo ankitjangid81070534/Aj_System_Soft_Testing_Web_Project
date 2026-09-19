@@ -1,0 +1,44 @@
+{
+  "scope": "Existing quote form only; no submit, persistence or visual sign-off",
+  "results": [
+    {
+      "width": 390,
+      "http": 200,
+      "retained": true,
+      "invalidEmail": true,
+      "validEmail": true,
+      "consentUnchecked": true,
+      "cleared": true,
+      "budgetOptional": true,
+      "overflow": false,
+      "errors": [],
+      "writes": []
+    },
+    {
+      "width": 662,
+      "http": 200,
+      "retained": true,
+      "invalidEmail": true,
+      "validEmail": true,
+      "consentUnchecked": true,
+      "cleared": true,
+      "budgetOptional": true,
+      "overflow": false,
+      "errors": [],
+      "writes": []
+    },
+    {
+      "width": 1440,
+      "http": 200,
+      "retained": true,
+      "invalidEmail": true,
+      "validEmail": true,
+      "consentUnchecked": true,
+      "cleared": true,
+      "budgetOptional": true,
+      "overflow": false,
+      "errors": [],
+      "writes": []
+    }
+  ]
+}

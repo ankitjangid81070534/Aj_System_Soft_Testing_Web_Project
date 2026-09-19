@@ -198,8 +198,10 @@ export function ResourceForm({
   }, [state, toast, isCreate, router, config.section]);
 
   const published = row?.status === "published";
+  // Staff with content read access also see unpublished detail pages, so drafts
+  // are previewable before publication; only the label changes.
   const previewHref =
-    config.publicBase && published && row && typeof row.slug === "string"
+    config.publicBase && row && typeof row.slug === "string" && row.slug !== ""
       ? `${config.publicBase}/${row.slug}`
       : null;
   return (
@@ -208,7 +210,7 @@ export function ResourceForm({
         {previewHref ? (
           <Button href={previewHref} variant="secondary" target="_blank" size="sm">
             <Eye aria-hidden="true" className="h-4 w-4" />
-            Preview
+            {published ? "Preview" : "Preview draft"}
           </Button>
         ) : null}
         {config.supports.publish && !isCreate ? (

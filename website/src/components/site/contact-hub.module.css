@@ -1,0 +1,70 @@
+.hub {
+  --hub-bottom: calc(128px + env(safe-area-inset-bottom));
+  --hub-right: max(16px, env(safe-area-inset-right));
+  position: fixed;
+  right: var(--hub-right);
+  bottom: var(--hub-bottom);
+  z-index: 40;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+/* Native dialogs own attention. Existing forms/private pages never mount the hub. */
+:global(body:has(dialog[open])) .hub { visibility: hidden; }
+.trigger, .close, .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.trigger {
+  min-height: 48px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 5px 20px color-mix(in srgb, var(--color-ink) 12%, transparent);
+}
+.trigger svg, .action > svg:first-child { color: var(--color-accent-600); flex-shrink: 0; }
+.panel {
+  position: fixed;
+  inset: auto var(--hub-right) calc(var(--hub-bottom) + 60px) auto;
+  width: min(340px, calc(100vw - 32px));
+  max-height: calc(100dvh - var(--hub-bottom) - 80px);
+  margin: 0;
+  padding: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--color-line);
+  border-radius: 20px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 16px 48px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+.heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.heading h2 { margin: 0; font-size: 18px; font-weight: 650; line-height: 1.4; letter-spacing: -.02em; }
+.close { width: 44px; flex-shrink: 0; border-radius: 50%; }
+.intro { margin: 4px 0 16px; color: var(--color-muted); font-size: 14px; line-height: 1.5; }
+.actions { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.action { justify-content: flex-start; padding: 12px; border-radius: 12px; text-decoration: none; }
+.action span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.action > svg:last-child { flex-shrink: 0; }
+.hub :is(button, a):focus-visible { outline: 2px solid var(--color-accent-600); outline-offset: 3px; }
+:global(.dark) .trigger svg, :global(.dark) .action > svg:first-child { color: var(--color-accent-400); }
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover, .close:hover, .action:hover { background: color-mix(in srgb, var(--color-accent-500) 8%, var(--color-surface)); }
+}
+@media (min-width: 1024px) {
+  .hub { --hub-bottom: max(24px, env(safe-area-inset-bottom)); --hub-right: max(24px, env(safe-area-inset-right)); }
+}
+@media (max-height: 360px) {
+  .hub { display: none; }
+}
+@media (forced-colors: active) {
+  .trigger, .panel, .action, .close { border-color: ButtonText; }
+}

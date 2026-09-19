@@ -2,7 +2,9 @@
 
 import { useActionState } from "react";
 import { signInAction, type SignInState } from "@/lib/auth/actions";
-import { Lock, User, KeyRound, Loader2, ArrowRight } from "lucide-react";
+import { User, KeyRound, Loader2, ArrowRight } from "lucide-react";
+import { PortalFeedback } from "@/components/portal/PortalFeedback";
+import { useAuthFormFeedback } from "@/components/portal/useAuthFormFeedback";
 
 const initialState: SignInState = {};
 
@@ -12,8 +14,10 @@ export function LoginForm({ nextPath }: { nextPath: string }) {
     initialState,
   );
 
+  const formFeedback = useAuthFormFeedback(state.error ? "error" : "idle", pending);
+
   return (
-    <form action={formAction} className="flex flex-col gap-4">
+    <form action={formAction} {...formFeedback} aria-busy={pending} className="flex flex-col gap-4">
       <input type="hidden" name="next" value={nextPath} />
 
       <div className="flex flex-col gap-1.5">
@@ -70,16 +74,11 @@ export function LoginForm({ nextPath }: { nextPath: string }) {
         </div>
       </div>
 
-      {state.error ? (
-        <div
-          role="alert"
-          aria-live="polite"
-          className="flex items-center gap-2 rounded-xl border border-danger/20 bg-danger-soft px-3.5 py-2.5 text-xs font-medium text-danger"
-        >
-          <Lock className="h-3.5 w-3.5 shrink-0" />
-          <span>{state.error}</span>
-        </div>
-      ) : null}
+      <PortalFeedback
+        state={{ status: state.error ? "error" : "idle", message: state.error }}
+        pending={pending}
+        focusOnError
+      />
 
       <button
         type="submit"

@@ -22,6 +22,8 @@ import contentStyles from "./home-content.module.css";
 import pearlStyles from "./pearl-benefits.module.css";
 import sectionStyles from "./home-sections.module.css";
 import motionStyles from "./home-motion.module.css";
+import projectEdge from "@/components/ui/project-edge.module.css";
+import { ProjectEdge } from "@/components/ui/ProjectEdge";
 
 /** Shared by the live homepage and preview: public data is fetched by the route.
  * Original section components retain complete descriptions, media and links.
@@ -68,7 +70,7 @@ export function HomeExperience({ content, benefits }: { content: HomeContent; be
         <div className={styles.finaleCopy} data-section-copy data-home-reveal>
           <p className={styles.eyebrow}>Start a project</p><h2><MotionWords text="Ready to build software around your requirements?" /></h2>
           <p>Tell us what you need — we will propose the right platform, a clear plan and a transparent estimate.</p>
-          <div className={styles.heroActions}><Link className={`${styles.primaryButton} action-control action-primary`} href="/request-quote">Start Your Project <ArrowUpRight size={15} /></Link><Link className={`${contentStyles.finaleSecondary} action-control action-secondary`} href="/contact">Request a Consultation <ArrowUpRight size={15} /></Link></div>
+          <div className={styles.heroActions}><Link className={`${styles.primaryButton} ${projectEdge.edge} action-control action-primary`} href="/request-quote"><ProjectEdge />Start Your Project <ArrowUpRight size={15} /></Link><Link className={`${contentStyles.finaleSecondary} action-control action-secondary`} href="/contact">Request a Consultation <ArrowUpRight size={15} /></Link></div>
         </div>
       </section>
     </div>

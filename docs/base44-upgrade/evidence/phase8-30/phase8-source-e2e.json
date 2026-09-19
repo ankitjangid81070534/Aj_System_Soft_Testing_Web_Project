@@ -1,0 +1,1247 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/app/node_modules/.bin/playwright",
+      "test",
+      "e2e/service-discovery.spec.ts",
+      "e2e/navigation.spec.ts",
+      "e2e/home-hero.spec.ts",
+      "--workers=1",
+      "--reporter=json",
+      "--output=/tmp/phase8-source-e2e"
+    ],
+    "rootDir": "/app",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/phase8-source-e2e",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/app",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e/home-hero.spec.ts",
+      "file": "e2e/home-hero.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero remains readable and routes correctly at 320 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:25.062Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-637db5d5c3781817f4d0",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 320 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:32.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-bd653ccf1aa261523cd0",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 390 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:37.951Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-f93c4c170890488a81e8",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 390 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3666,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:42.966Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-ba9b919477e89283d07c",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 662 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:46.650Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-5e5332a9fab4061ac49c",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 662 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:50.946Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-cb09cad265960bddd8e8",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 919 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4752,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:54.151Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-42d3687ce1653d371843",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 919 / reduce",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9425,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#home-services')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#home-services')\u001b[22m\n\u001b[2m    5 × locator resolved to <section id=\"home-services\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n\u001b[2m    9 × locator resolved to <section id=\"home-services\" data-reveal-cycle=\"1\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#home-services')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#home-services')\u001b[22m\n\u001b[2m    5 × locator resolved to <section id=\"home-services\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n\u001b[2m    9 × locator resolved to <section id=\"home-services\" data-reveal-cycle=\"1\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /app/e2e/home-hero.spec.ts:41:52",
+                    "location": {
+                      "file": "/app/e2e/home-hero.spec.ts",
+                      "column": 52,
+                      "line": 41
+                    },
+                    "snippet": "  39 |       await hero.getByRole(\"link\", { name: \"Explore what we build\", exact: true }).click();\n  40 |       await expect(page).toHaveURL(/\\/#home-services$/);\n> 41 |       await expect(page.locator(\"#home-services\")).toBeInViewport();\n     |                                                    ^\n  42 |     });\n  43 |   }\n  44 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/home-hero.spec.ts",
+                        "column": 52,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#home-services')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#home-services')\u001b[22m\n\u001b[2m    5 × locator resolved to <section id=\"home-services\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n\u001b[2m    9 × locator resolved to <section id=\"home-services\" data-reveal-cycle=\"1\" data-home-reveal=\"true\" data-home-section=\"services\" class=\"home-content-module__udWGhG__serviceIntro\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  39 |       await hero.getByRole(\"link\", { name: \"Explore what we build\", exact: true }).click();\n  40 |       await expect(page).toHaveURL(/\\/#home-services$/);\n> 41 |       await expect(page.locator(\"#home-services\")).toBeInViewport();\n     |                                                    ^\n  42 |     });\n  43 |   }\n  44 | }\n    at /app/e2e/home-hero.spec.ts:41:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:32:58.916Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase8-source-e2e/e2e-home-hero-hero-remains-797fe-tes-correctly-at-919-reduce/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/home-hero.spec.ts",
+                    "column": 52,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-43cecfa8c427d2617bd0",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 1024 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5829,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:08.874Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-083f73278158cd75541d",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 1024 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5089,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:14.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-ba229ba718503dda8ee8",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 1440 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:19.906Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-e6710c4073606600febe",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "hero remains readable and routes correctly at 1440 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3213,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:25.125Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-c0d27a889a05fb7b869a",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 8,
+          "column": 9
+        },
+        {
+          "title": "server-rendered hero works without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1050,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:28.349Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5b451c2345833bfc2b-ed6bc517f8b1a64f8395",
+          "file": "e2e/home-hero.spec.ts",
+          "line": 46,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e/navigation.spec.ts",
+      "file": "e2e/navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "first Escape closes populated navigation search at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:29.412Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-0ac3c189fabadafb98dc",
+          "file": "e2e/navigation.spec.ts",
+          "line": 8,
+          "column": 7
+        },
+        {
+          "title": "first Escape closes populated navigation search at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3990,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:33.313Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-d6db96dcc3e85b4559a3",
+          "file": "e2e/navigation.spec.ts",
+          "line": 8,
+          "column": 7
+        },
+        {
+          "title": "mobile More still navigates to Privacy and closes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2705,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:37.314Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e99b8f6c3cad4665a83-36d47db02287bce58989",
+          "file": "e2e/navigation.spec.ts",
+          "line": 27,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e/service-discovery.spec.ts",
+      "file": "e2e/service-discovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "service discovery at 320 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11907,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:40.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-9d1449b06ecb4fe27d0d",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 320 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:51.955Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-de7bd8162f9890bd5271",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 390 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12718,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:33:56.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-c9604c3788d80ad1c412",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 390 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3576,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:08.835Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-3313620d9553b40bde55",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 662 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12921,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:12.420Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-32267d0ba04a2be1b120",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 662 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:25.351Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-4a3480547ec5e886f302",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 820 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:28.771Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-25f50aba4beb4d64a8db",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 820 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3486,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:42.442Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-94a6294f8f765f3e5618",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 1024 / no-preference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:45.939Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-b08265866f51808d0223",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 1024 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3606,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:55.015Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-e150333dddbf722e7740",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 1440 / no-preference",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9988,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#category-software-applications')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#category-software-applications')\u001b[22m\n\u001b[2m    13 × locator resolved to <section class=\"scroll-mt-28\" id=\"category-software-applications\" aria-labelledby=\"category-software-applications-heading\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#category-software-applications')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#category-software-applications')\u001b[22m\n\u001b[2m    13 × locator resolved to <section class=\"scroll-mt-28\" id=\"category-software-applications\" aria-labelledby=\"category-software-applications-heading\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /app/e2e/service-discovery.spec.ts:45:42",
+                    "location": {
+                      "file": "/app/e2e/service-discovery.spec.ts",
+                      "column": 42,
+                      "line": 45
+                    },
+                    "snippet": "  43 |       for (const href of links) {\n  44 |         await page.getByRole(\"navigation\", { name: \"Service categories\" }).locator(`a[href=\"${href}\"]`).click();\n> 45 |         await expect(page.locator(href)).toBeInViewport();\n     |                                          ^\n  46 |       }\n  47 |     });\n  48 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/app/e2e/service-discovery.spec.ts",
+                        "column": 42,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#category-software-applications')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#category-software-applications')\u001b[22m\n\u001b[2m    13 × locator resolved to <section class=\"scroll-mt-28\" id=\"category-software-applications\" aria-labelledby=\"category-software-applications-heading\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  43 |       for (const href of links) {\n  44 |         await page.getByRole(\"navigation\", { name: \"Service categories\" }).locator(`a[href=\"${href}\"]`).click();\n> 45 |         await expect(page.locator(href)).toBeInViewport();\n     |                                          ^\n  46 |       }\n  47 |     });\n  48 |   }\n    at /app/e2e/service-discovery.spec.ts:45:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:34:58.632Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/phase8-source-e2e/e2e-service-discovery-serv-b7b25-overy-at-1440-no-preference/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/app/e2e/service-discovery.spec.ts",
+                    "column": 42,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-b995ec4c71649000bb8e",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "service discovery at 1440 / reduce",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3595,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:35:09.123Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-050197b5b067f30d270b",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 10,
+          "column": 9
+        },
+        {
+          "title": "native matcher works without JavaScript at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:35:12.818Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-263d5cd8378dc8d55088",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 52,
+          "column": 7
+        },
+        {
+          "title": "native matcher works without JavaScript at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1016,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:35:13.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-168996811f43fa3b46a9",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 52,
+          "column": 7
+        },
+        {
+          "title": "keyboard can open, follow and collapse a choice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2607,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:35:14.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-a833227bd6767e1cd2fe",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "all catalogue cards preserve their detail and enquiry journeys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 41541,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T06:35:17.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0f824f811fa5d634a697-db25d1d9cae60a6c838f",
+          "file": "e2e/service-discovery.spec.ts",
+          "line": 88,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-19T06:32:24.411Z",
+    "duration": 214739.31000000003,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

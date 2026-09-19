@@ -50,6 +50,13 @@ describe("buildFilterHref — chip toggle semantics", () => {
   });
 });
 
+describe("filter recovery", () => {
+  it("removes a selected chip regardless of URL letter case", () => {
+    expect(buildFilterHref({ platform: "web", industry: "Retail" }, "platform", "Web")).toBe("/projects?industry=Retail");
+    expect(buildFilterHref({ industry: "RETAIL" }, "industry", "Retail")).toBe("/projects");
+  });
+});
+
 describe("applyFilters — case-insensitive match", () => {
   const list = [
     project({ id: "1", platformType: "Web", industry: "Healthcare" }),

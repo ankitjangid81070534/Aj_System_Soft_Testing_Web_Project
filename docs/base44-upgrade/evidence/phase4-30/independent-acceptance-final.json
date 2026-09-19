@@ -1,0 +1,203 @@
+{
+  "date": "2026-09-18T19:03:40.937Z",
+  "source": "source-mounted development via public preview origin; fresh independent browser contexts, not editor iframe",
+  "scenarios": [
+    {
+      "width": 1024,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1024,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1024,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "themeToggleAndReload": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1024,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable dark",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1024,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1440,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "themeToggleAndReload": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1440,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable dark",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "colorScheme": "light",
+      "reducedMotion": false,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1920,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1920,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "colorScheme": "dark",
+      "reducedMotion": true,
+      "errors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "homeStatus": 200,
+      "hydratedScrollResponse": true,
+      "themeToggleAndReload": true,
+      "searchEscapeFocus": true,
+      "home": {
+        "width": 1920,
+        "height": 900,
+        "desktop": true,
+        "overflow": false,
+        "injected": 0,
+        "theme": "geistsans_d5a4f12f-module__Ur3q_a__variable dark",
+        "openDialogs": 0
+      },
+      "startProjectToQuote": true,
+      "fieldEditable": true,
+      "quote": {
+        "width": 1920,
+        "height": 900,
+        "overflow": false,
+        "injected": 0,
+        "openDialogs": 0
+      },
+      "returnHome": true,
+      "pass": true
+    }
+  ],
+  "allPassed": true,
+  "noSubmissions": true
+}

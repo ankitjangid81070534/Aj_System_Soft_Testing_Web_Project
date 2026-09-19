@@ -55,10 +55,10 @@ export function ProjectFiltersBar({
 }) {
   const hasAnyFacet = facets.platforms.length > 0 || facets.industries.length > 0;
   const hasActiveFilter = Boolean(current.platform || current.industry);
-  if (!hasAnyFacet) return null;
+  if (!hasAnyFacet && !hasActiveFilter) return null;
 
   return (
-    <div className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4 shadow-e1 sm:p-5">
+    <nav aria-label="Project filters" className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4 shadow-e1 sm:p-5">
       {facets.platforms.length > 0 ? (
         <ChipGroup
           label="Platform"
@@ -77,17 +77,16 @@ export function ProjectFiltersBar({
           paramKey="industry"
         />
       ) : null}
-      <p className="text-xs text-ink-muted" role="status">
-        {resultCount} {resultCount === 1 ? "project" : "projects"}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className="text-sm text-ink-muted" role="status">
+          {resultCount} {resultCount === 1 ? "project" : "projects"}
+        </p>
         {hasActiveFilter ? (
-          <>
-            {" · "}
-            <Link href="/projects" className="font-medium text-brand-600 hover:text-brand-700">
-              Clear filters
-            </Link>
-          </>
+          <Link href="/projects" className="focus-ring inline-flex min-h-11 items-center rounded-full px-3.5 text-sm font-medium text-brand-600 hover:text-brand-700">
+            Clear filters
+          </Link>
         ) : null}
-      </p>
-    </div>
+      </div>
+    </nav>
   );
 }

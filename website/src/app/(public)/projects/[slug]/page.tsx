@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ExternalLink, PlayCircle, Quote } from "lucide-react";
+import { ExternalLink, Quote } from "lucide-react";
+import { ProjectGallery } from "@/components/site/ProjectGallery";
 import { PageHero } from "@/components/site/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
@@ -115,7 +116,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <dl className="mt-2">
                 <MetaRow
                   label="Client"
-                  value={project.clientName ?? "Confidential — withheld at the client's request"}
+                  value={project.clientName ?? "Not publicly listed"}
                 />
                 <MetaRow label="Industry" value={project.industry} />
                 <MetaRow label="Platform" value={project.platformType} />
@@ -225,58 +226,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
         ) : null}
 
-        {project.gallery.length > 0 ? (
-          <section
-            className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14"
-            aria-labelledby="gallery"
-          >
-            <Reveal>
-              <SectionHeader
-                eyebrow="Screenshots"
-                title={<span id="gallery">Inside the application</span>}
-              />
-            </Reveal>
-            <div className="mt-6 grid gap-5 md:grid-cols-2">
-              {project.gallery.map((media, index) => (
-                <Reveal key={media.id} delay={index * 50}>
-                  <MediaFrame
-                    src={media.type === "image" ? media.url : undefined}
-                    alt={media.alt || `${project.name} screenshot ${index + 1}`}
-                    label={`Screenshot ${index + 1}`}
-                    aspect="16/10"
-                  >
-                    {media.type === "video" ? (
-                      <div className="flex h-full w-full items-center justify-center bg-canvas">
-                        <a
-                          href={media.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-medium text-on-brand hover:bg-brand-700 focus-ring"
-                        >
-                          <PlayCircle aria-hidden="true" className="h-5 w-5" />
-                          Watch demo clip
-                        </a>
-                      </div>
-                    ) : null}
-                  </MediaFrame>
-                </Reveal>
-              ))}
-            </div>
-            {project.videoUrl ? (
-              <Reveal>
-                <a
-                  href={project.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 focus-ring rounded-sm"
-                >
-                  <PlayCircle aria-hidden="true" className="h-4 w-4" />
-                  Watch the full walkthrough
-                </a>
-              </Reveal>
-            ) : null}
-          </section>
-        ) : null}
+        <ProjectGallery name={project.name} gallery={project.gallery} videoUrl={project.videoUrl} />
 
         {project.impactResults.length > 0 ? (
           <section className="border-y border-line bg-surface" aria-labelledby="results">

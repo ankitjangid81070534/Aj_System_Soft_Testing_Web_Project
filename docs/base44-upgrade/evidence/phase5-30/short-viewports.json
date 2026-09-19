@@ -1,0 +1,30 @@
+[
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "pass": true
+  },
+  {
+    "viewport": {
+      "width": 919,
+      "height": 499
+    },
+    "pass": true
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "pass": true
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 500
+    },
+    "pass": true
+  }
+]

@@ -5,6 +5,7 @@ import { ClientLoginForm } from "@/components/portal/AuthForms";
 import { getCurrentUser } from "@/lib/auth/session";
 import { isSupabaseConfigured } from "@/lib/env";
 import { safePortalPath } from "@/lib/validation/portal";
+import { loginErrorMessage } from "@/lib/auth/login-feedback";
 
 export const dynamic = "force-dynamic";
 
@@ -22,10 +23,7 @@ export default async function ClientLoginPage({
   const params = await searchParams;
   const nextPath = safePortalPath(params.next);
   if (isSupabaseConfigured && (await getCurrentUser())) redirect(nextPath);
-  const error =
-    params.error === "oauth_callback"
-      ? "Google sign-in could not be completed. Please try again."
-      : params.error;
+  const error = loginErrorMessage(params.error);
 
   return (
     <LoginExperience>

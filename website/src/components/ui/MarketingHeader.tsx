@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import styles from "./bottom-navigation.module.css";
+import projectEdge from "./project-edge.module.css";
+import { ProjectEdge } from "./ProjectEdge";
+import { ActionIcon } from "./ActionIcon";
 import { NAV_LINKS } from "@/lib/navigation";
 import { BRAND } from "@/lib/seo/site";
 import { Button } from "@/components/ui/Button";
@@ -87,13 +90,13 @@ export function MarketingHeader({
   return (
     <header>
       <ScrollProgress />
-      <div className={styles.brandBar}>
+      <div className={styles.brandBar} data-brand-header>
         <Link href="/" className={`${styles.brand} focus-ring`} aria-label={`${safeBrandName} — home`}>
           <span aria-hidden="true" className={styles.brandMark}>AJ</span>
           <span className={styles.fullName}>{safeBrandName}</span>
           <span className={styles.shortName}>{safeBrandShortName}</span>
         </Link>
-        <Button href={safeCtaHref} size="sm">{safeCtaLabel}</Button>
+        <Button href={safeCtaHref} size="sm" className={`${styles.headerCta} ${projectEdge.edge}`}><ProjectEdge /><ActionIcon label={safeCtaLabel} />{safeCtaLabel}</Button>
       </div>
       <BottomNavigation
         navLinks={navLinks}

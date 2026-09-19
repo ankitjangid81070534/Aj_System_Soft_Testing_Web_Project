@@ -1,0 +1,42 @@
+{
+  "phase": 10,
+  "date": "2026-09-19",
+  "startingHead": "bab198501f1aeb8368802258a620d70d1082dacd",
+  "branch": "system-upgrade",
+  "scope": "Existing Industries and Services public guidance; no new routes or persistence",
+  "authorization": "Owner delegated safe continuation after Phase 9 blocker disclosure; gates remain unresolved",
+  "status": "Complete at public guidance/UI scope; stop before Phase 11",
+  "unit": { "passed": 513, "files": 59, "log": "final-checks.log" },
+  "typecheck": "pass",
+  "lint": "pass",
+  "build": { "status": "pass", "log": "build.log", "location": "/tmp/aj-phase10-production", "internalPort": 3112 },
+  "browserSource": { "passed": 35, "failed": 0, "log": "source-browser.log" },
+  "browserProduction": { "passed": 35, "failed": 0, "log": "production-browser.log" },
+  "responsiveThemes": { "passed": 6, "failed": 0, "widths": [390, 662, 1440], "file": "responsive-review.json", "consoleOrPageErrors": 0, "nonCancelledSameOriginFailures": 0 },
+  "visual": {
+    "method": "Independent production Chromium section captures, viewed through temporary read-only image viewer",
+    "reviewed": ["Industries 390 light", "Industries 662 dark", "Industries 1440 light", "Comparison 390 light", "Comparison 662 dark", "Comparison 1440 light"],
+    "limit": "Visible capture portions reviewed; tall images contain fixed dock, desktop displayed half-scale; not a complete full-page or iframe visual pass",
+    "temporaryPngs": "/tmp/phase10-review",
+    "viewerStopped": true
+  },
+  "iframe": {
+    "servicesLinkAndComparisonOpen": "pass",
+    "finalRuntime": { "errors": [], "failedRequests": [], "overlay": false, "mainChildren": 2, "openDialogs": 0 },
+    "detailTransition": "unverified: click performed but path still /services when heading helper returned",
+    "screenshot": "unverified: iframe_hidden",
+    "initialNavigation": "helper changed URL without content; recovered via real Services link"
+  },
+  "initialFindings": {
+    "unit": "512 pass / 1 historical no-anchor expectation; updated for new explicit exits while retaining non-linked tile guard",
+    "sourceBrowser": "29 pass / 6 fail; five repeated-fragment scrolling failures fixed by scoped SectionJumpLink; one old test Back timing failure corrected with destination waits",
+    "logs": ["initial-checks.log", "initial-source-browser.log"]
+  },
+  "health": { "externalHostServicesStatus": 200, "liveSourceDev": true, "sixOptionalIntegrations": "absent in managed file and running process" },
+  "retainedGates": ["Phase 9 admin/media/client/consent/date/SEO parity", "Hosted persistence and RLS", "Auth, uploads and email", "Approved content and operational terms", "Native devices and field performance", "Release"],
+  "dataWrites": false,
+  "schemaChanges": false,
+  "credentialsChanged": false,
+  "prOrMerge": false,
+  "deployed": false
+}
