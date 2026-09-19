@@ -1,6 +1,12 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 8 disposition (2026-09-19)
+## Current Phase 9 disposition (2026-09-19)
+
+[Phase 9](PHASE_9_30_PROJECTS.md) public/source checkpoint is verified, but full project/admin scope is PARTIAL / BACKEND-DEPENDENT. Preserve existing backend and credential deferral. Gallery assignment, client linkage, explicit consent evidence, publication-date and detail SEO-field parity remain incomplete. No real project record, card/detail/gallery gesture or authenticated saved/reloaded/public effect was verified; no fake portfolio was seeded. Close or explicitly accept carrying forward these gates before Phase 10.
+
+Fresh 502 tests/type/lint/build, 25 source + 25 production browser cases and 14 responsive/theme/keyboard cases pass. Actual phone/tablet/desktop empty-state captures reviewed independently; iframe screenshot hidden. Live Projects/services/return gestures pass after navigate-helper failure; historical/transient tag-edit buffer predates final passing source checks. Matrix has no runtime/non-cancelled same-origin failures; 14 cancellations retained. Native scrolling still required near fixed dock; no populated-page, native-device, field-performance, saved-data or release claim. All earlier backend/content/operational blockers persist.
+
+## Historical Phase 8 disposition (2026-09-19)
 
 [Current status](PHASE_STATUS.md) and [service discovery report](PHASE_8_30_SERVICE_DISCOVERY.md) supersede earlier gates. Public service discovery complete; STOP before Phase 9. Matcher is native, server-rendered guidance using only available service-index records, not AI or collected/stored answers. Explicit mappings do not infer newly renamed/custom CMS slugs; full catalogue and human enquiry remain available. Actual hosted records are still deferred.
 
