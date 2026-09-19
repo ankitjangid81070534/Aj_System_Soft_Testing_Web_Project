@@ -6,6 +6,15 @@ import { Dialog } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
 import styles from "./offer-popup.module.css";
 
+function recordShown(offer: Offer) {
+  const storageKey = `ajs_offer_popup_${offer.id}`;
+  if (offer.popupFrequency === "once_per_session") {
+    sessionStorage.setItem(storageKey, "1");
+  } else if (offer.popupFrequency === "once_per_day" || offer.popupFrequency === "custom") {
+    localStorage.setItem(storageKey, Date.now().toString());
+  }
+}
+
 export function OfferPopup({ offer }: { offer: Offer }) {
   const [open, setOpen] = useState(false);
 
@@ -42,6 +51,10 @@ export function OfferPopup({ offer }: { offer: Offer }) {
       // Delay opening slightly so it isn't jarring on page load
       const timer = setTimeout(() => {
         setOpen(true);
+        // Record the view as soon as it is shown. Recording it only on close
+        // let the popup reappear on every navigation when the visitor ignored
+        // it instead of dismissing it.
+        recordShown(offer);
       }, 2000);
       return () => clearTimeout(timer);
     }
@@ -49,17 +62,6 @@ export function OfferPopup({ offer }: { offer: Offer }) {
 
   const handleClose = () => {
     setOpen(false);
-    
-    // Record view
-    const storageKey = `ajs_offer_popup_${offer.id}`;
-    if (offer.popupFrequency === "once_per_session") {
-      sessionStorage.setItem(storageKey, "1");
-    } else if (
-      offer.popupFrequency === "once_per_day" || 
-      offer.popupFrequency === "custom"
-    ) {
-      localStorage.setItem(storageKey, Date.now().toString());
-    }
   };
 
   return (

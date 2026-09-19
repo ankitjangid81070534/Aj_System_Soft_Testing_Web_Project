@@ -1,5 +1,12 @@
 # Base44 Dev Environment
 
+## Latest Phase 18 updates / offers (2026-09-20)
+- Read `docs/base44-upgrade/PHASE_18_30_UPDATES_OFFERS.md` and current status. Records, scheduling, priority, CTA, popup frequency, dismissal and admin editing already existed; two defects repaired. Phase 18 remains PARTIAL; STOP before Phase 19. Do not repeat the audit or repair.
+- Keep the schedule window OUTSIDE the cached readers: `getPublishableOffers` / `getPublishableAnnouncements` are the `unstable_cache` reads, and `getLiveOffers` / `getLiveAnnouncements` apply `withinWindow` per request. Moving it back inside re-freezes expiry for five minutes.
+- `OfferPopup` records its frequency marker when the popup is SHOWN, not on close; recording on close let an ignored popup reappear on every navigation. Same storage keys and frequency semantics.
+- `display_position` homepage/side_floating/update_center/footer are stored but not rendered, and there is still no public offer/update detail route (Phase 10 forbids advertising them in the sitemap). Those and the optional featured edge highlight need owner placement approval, not improvisation.
+- 598 tests/67 files (two new schedule cases), typecheck, lint and `/` HTTP 200 pass. No records, staff session, hosted scheduling/popup verification, screenshot, production build, SQL, data or secrets.
+
 ## Latest Phase 17 blog CMS (2026-09-19)
 - Read `docs/base44-upgrade/PHASE_17_30_BLOG_CMS.md` and current status. Draft/publish, SEO, categories, cover and dates already existed; two defects repaired. Phase 17 remains PARTIAL; STOP before Phase 18. Do not repeat the audit or repair.
 - `getPublishedPosts` now filters `status = published` and `is_active`, matching the detail page and sitemap — drafts previously appeared on `/blog`. Keep the category filter, pagination, teaser projection and fallback behaviour intact.

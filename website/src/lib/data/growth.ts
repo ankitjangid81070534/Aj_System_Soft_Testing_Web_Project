@@ -270,8 +270,13 @@ function withinWindow(startAt: string | null, endAt: string | null, now = Date.n
   return true;
 }
 
-/** All live offers (published, active, inside their schedule), ordered for display. */
-export const getLiveOffers = unstable_cache(
+/**
+ * Published + active offers, ordered for display. The schedule window is NOT
+ * applied here: this result is cached for five minutes, so freezing a
+ * time-dependent filter into it would keep an expired offer live (or a started
+ * one hidden) until the next revalidation. `getLiveOffers` filters per request.
+ */
+const getPublishableOffers = unstable_cache(
   async (): Promise<Offer[]> => {
     if (!isSupabaseConfigured) return [];
     try {
@@ -286,10 +291,7 @@ export const getLiveOffers = unstable_cache(
         .order("sort_order", { ascending: true })
         .limit(50);
       if (error || !data) return [];
-      return (data as Row[])
-        .map(toOffer)
-        .filter((offer): offer is Offer => offer !== null)
-        .filter((offer) => withinWindow(offer.startAt, offer.endAt));
+      return (data as Row[]).map(toOffer).filter((offer): offer is Offer => offer !== null);
     } catch {
       return [];
     }
@@ -297,6 +299,12 @@ export const getLiveOffers = unstable_cache(
   ["offers-live"],
   { tags: ["offers"], revalidate: 300 },
 );
+
+/** All live offers (published, active, inside their schedule right now). */
+export async function getLiveOffers(): Promise<Offer[]> {
+  const offers = await getPublishableOffers();
+  return offers.filter((offer) => withinWindow(offer.startAt, offer.endAt));
+}
 
 export async function getOfferBySlug(slug: string): Promise<Offer | null> {
   const offers = await getLiveOffers();
@@ -311,7 +319,12 @@ export async function getPopupOffer(): Promise<Offer | null> {
   return candidates.sort((a, b) => b.popupPriority - a.popupPriority)[0] ?? null;
 }
 
-export const getLiveAnnouncements = unstable_cache(
+/**
+ * Published + active announcements. As with offers, the schedule window stays
+ * outside the cached read so a scheduled start/end takes effect immediately
+ * instead of waiting for the next revalidation.
+ */
+const getPublishableAnnouncements = unstable_cache(
   async (): Promise<Announcement[]> => {
     if (!isSupabaseConfigured) return [];
     try {
@@ -329,8 +342,7 @@ export const getLiveAnnouncements = unstable_cache(
       if (error || !data) return [];
       return (data as Row[])
         .map(toAnnouncement)
-        .filter((item): item is Announcement => item !== null)
-        .filter((item) => withinWindow(item.startAt, item.endAt));
+        .filter((item): item is Announcement => item !== null);
     } catch {
       return [];
     }
@@ -338,6 +350,12 @@ export const getLiveAnnouncements = unstable_cache(
   ["announcements-live"],
   { tags: ["announcements"], revalidate: 300 },
 );
+
+/** All live announcements (published, active, inside their schedule right now). */
+export async function getLiveAnnouncements(): Promise<Announcement[]> {
+  const items = await getPublishableAnnouncements();
+  return items.filter((item) => withinWindow(item.startAt, item.endAt));
+}
 
 export async function getAnnouncementBySlug(slug: string): Promise<Announcement | null> {
   const items = await getLiveAnnouncements();
