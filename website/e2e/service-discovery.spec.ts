@@ -97,6 +97,8 @@ test("all catalogue cards preserve their detail and enquiry journeys", async ({ 
     await expect(page).toHaveURL(/\/request-quote$/);
     await expect(page.locator("main form")).toBeVisible();
     await page.goBack();
+    await expect(page.locator("main h1")).toHaveText(service.name);
     await page.goBack();
+    await expect(page.locator("#service-catalogue")).toBeVisible();
   }
 });

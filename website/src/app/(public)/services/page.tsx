@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/site/PageHero";
 import { ServiceMatcher } from "@/components/site/ServiceMatcher";
+import { SolutionComparison } from "@/components/site/SolutionComparison";
+import { SectionJumpLink } from "@/components/site/SectionJumpLink";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTA } from "@/components/ui/CTA";
 import { Reveal } from "@/components/site/Reveal";
@@ -45,6 +47,12 @@ export default async function ServicesPage() {
         >
           Not sure? Find a service for your project
         </Link>
+        <SectionJumpLink
+          id="solution-comparison"
+          className="ml-0 inline-flex min-h-11 items-center rounded-lg text-sm font-semibold text-brand-700 underline underline-offset-4 focus-ring sm:ml-6 dark:text-brand-400"
+        >
+          Compare solution approaches
+        </SectionJumpLink>
         {categories.length > 1 ? (
           <nav aria-label="Service categories" className="mt-2 flex flex-wrap gap-2">
             {categories.map((category) => (
@@ -65,6 +73,7 @@ export default async function ServicesPage() {
 
       <div className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">
         <ServiceMatcher services={services} />
+        <SolutionComparison services={services} />
         <div id="service-catalogue" className="flex scroll-mt-28 flex-col gap-16">
           {services.length === 0 ? (
             <p className="text-ink-muted">

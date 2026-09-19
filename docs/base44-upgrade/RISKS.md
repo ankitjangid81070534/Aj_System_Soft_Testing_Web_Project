@@ -1,6 +1,14 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 9 disposition (2026-09-19)
+## Current Phase 10 disposition (2026-09-19)
+
+Owner delegated continuation after Phase 9 blockers were disclosed. Its unfinished gallery/client/consent/date/SEO and hosted saved-record gates remain unresolved, not waived. [Phase 10](PHASE_10_30_INDUSTRIES_COMPARISON.md) is complete at public guidance/UI scope only; STOP before Phase 11.
+
+Five comparisons are source-managed editorial guidance, not quotes, packages, compliance claims or a new admin-editable workflow. Public-index-only related links intentionally omit unknown/renamed CMS slugs; existing catalogue/enquiry remain available. Industries examples do not assert completed projects. Home order, auth and backend untouched; no new route, schema, secret, data or provider.
+
+Fresh 513 tests/type/lint/build, 35 source + 35 production browser cases and six theme/layout cases pass. A repeated same-fragment scrolling defect is fixed only for the new comparison shortcut. Independent visible-scope captures reviewed; fixed dock crosses tall captures and native scrolling remains necessary. Iframe comparison-open passes; final detail click returned before a confirmed path change, so it is not a detail-transition pass. Hidden iframe screenshot and all real-device, hosted-save, field-metric and release gates persist.
+
+## Historical Phase 9 disposition (2026-09-19)
 
 [Phase 9](PHASE_9_30_PROJECTS.md) public/source checkpoint is verified, but full project/admin scope is PARTIAL / BACKEND-DEPENDENT. Preserve existing backend and credential deferral. Gallery assignment, client linkage, explicit consent evidence, publication-date and detail SEO-field parity remain incomplete. No real project record, card/detail/gallery gesture or authenticated saved/reloaded/public effect was verified; no fake portfolio was seeded. Close or explicitly accept carrying forward these gates before Phase 10.
 

@@ -1,5 +1,13 @@
 # Base44 Dev Environment
 
+## Latest Phase 10 checkpoint — system-upgrade (2026-09-19 UTC)
+- Current `PHASE_STATUS.md` and `PHASE_10_30_INDUSTRIES_COMPARISON.md` supersede historical gates. Owner delegated continuation after Phase 9 blockers were disclosed; those remain PARTIAL, not passed. STOP before Phase 11 until new continuation.
+- Existing eight Industries tiles now have workflow examples, not project/compliance claims, and two explicit Services fragment exits. Tiles stay non-clickable; Home order/nav untouched. Five native comparisons on `/services` use public-index records only; no new route, catalogue, persistence or fallback import.
+- Repeated comparison shortcut after Back reproduced no scrolling for an already-current fragment. `SectionJumpLink` keeps Next Link and no-JS href, adds only an unmodified-primary-click repeat scroll. Do not revert to plain anchors (earlier router-history bug), or add timers/state/global router changes. Scoped only to new comparison shortcut.
+- Fresh 513 tests/59 files, type/lint/build, 35 source + 35 production browser cases and six theme/layout cases pass. Existing catalogue test needed destination waits between two Back gestures; historical Industries test now checks two explicit exits while forbidding linked tile wrappers. Initial failures preserved.
+- Independent phone/662px/desktop section images reviewed at visible scope; tall captures include fixed dock. Iframe Services/comparison-open passed; final detail click not proven because heading matcher returned while path still `/services`; iframe screenshot hidden. No complete iframe, hosted-save or performance claim.
+- Six optional integrations absent/deferred. No secrets/data/SQL/config/dependency changes, PR/merge/deploy. Evidence in `evidence/phase10-30/`; `/tmp/aj-phase10-production` on internal 3112, scripts/PNGs in /tmp, temporary viewer stopped. Phase 9 consent/media/client/date/SEO and all earlier hosted/private/release gates remain.
+
 ## Latest Phase 8 checkpoint — system-upgrade (2026-09-19 UTC)
 - Current `PHASE_STATUS.md` and `PHASE_8_30_SERVICE_DISCOVERY.md` supersede prior phase gates. Services discovery is complete at public-UI scope; STOP before Phase 9 until next exact continuation.
 - Matcher is server-rendered native details, one question/nine goals, intersecting editorial slug guidance with the existing public index. Never import fallback records to resurrect unavailable services or infer new CMS capability from keywords. Unknown slugs remain in the catalogue; no new business persistence or AI.

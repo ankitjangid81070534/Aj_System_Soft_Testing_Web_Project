@@ -71,6 +71,14 @@
 - D46: Repair the reproduced null-history service-fragment/back-navigation issue with existing Next Link. Preserve native no-JS HTML. Do not patch global routing or unrelated hero behavior based on a single initial anchor failure.
 - D47: Separate passing independent source/production gestures and visual review from partial iframe results. Preserve initial failures, incomplete old production timeouts and buffered transient edit errors; final catalogue iframe assertion and hidden screenshot remain unverified. No hosted-save, field-performance or deployment claim.
 
+## Phase 9/10 continuation decisions (2026-09-19)
+
+- D48: Phase 9 public/source work is recorded in `PHASE_9_30_PROJECTS.md`; full project/admin scope remains PARTIAL. Its older checkpoint was committed at `bab198501f`; missing Phase 9 updates in this ledger/understanding do not override the authoritative phase status/report.
+- D49: After disclosure of Phase 9 blockers and three continuation choices, owner said “AAPKE HISAB SE CONTIUEN KRO OK”. Use delegated judgment to proceed with independent Phase 10 while retaining all backend/media/consent gates unresolved. This is not blanket approval for further phases, credentials, SQL, records or release.
+- D50: Refine existing eight Industries tiles and add comparison guidance to existing Services, not industry doorway pages or a second catalogue/CMS. Workflow examples are not completed work or compliance claims. Keep public-index names and links; no guessed slugs or fallback resurrection.
+- D51: Native server-rendered disclosures handle comparison selection without captured answers/state/AI. A small client Next Link wrapper fixes the reproduced already-current-fragment scroll issue only on the new shortcut; preserve modified clicks and router history.
+- D52: Initial requirement-test and Back timing failures remain recorded separately from reproduced app scrolling failures. Final 513 unit tests, 35 source + 35 production browser cases, six theme/layout cases and visible-scope independent screenshots pass. Partial iframe assertions do not prove the final detail transition or hidden screenshot. No backend, field-performance or release claim.
+
 ## Next authorization
 
-**STOP after Phase 8.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 9 — Projects / Case-study Experience**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+**STOP after Phase 10 at public guidance/UI scope.** Await new continuation before **Phase 11 — Project Requirement Wizard**. Phase 9 remains partial; Phase 1 hosted gates remain blocked. Preserve live Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. If a future feature cannot persist safely through the existing backend, report the blocker.

@@ -1,0 +1,353 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        "net::ERR_ABORTED",
+        "net::ERR_ABORTED"
+      ],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          },
+          {
+            "width": 342,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 580,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        "net::ERR_ABORTED",
+        "net::ERR_ABORTED"
+      ],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 662,
+      "height": 580,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        "net::ERR_ABORTED",
+        "net::ERR_ABORTED"
+      ],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          },
+          {
+            "width": 614,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        "net::ERR_ABORTED"
+      ],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 299.09375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.09375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "errors": [],
+      "failed": [],
+      "cancelled": [
+        "net::ERR_ABORTED"
+      ],
+      "industryLayout": {
+        "overflow": false,
+        "tiles": [
+          {
+            "width": 299.09375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.09375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          },
+          {
+            "width": 299.109375,
+            "overflow": false
+          }
+        ]
+      },
+      "comparisonLayout": {
+        "overflow": false,
+        "summaryHeights": [
+          56,
+          56,
+          56,
+          56,
+          56
+        ]
+      },
+      "pass": true
+    }
+  ]
+}
