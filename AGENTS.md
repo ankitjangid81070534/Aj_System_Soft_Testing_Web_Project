@@ -1,5 +1,12 @@
 # Base44 Dev Environment
 
+## Latest Phase 17 blog CMS (2026-09-19)
+- Read `docs/base44-upgrade/PHASE_17_30_BLOG_CMS.md` and current status. Draft/publish, SEO, categories, cover and dates already existed; two defects repaired. Phase 17 remains PARTIAL; STOP before Phase 18. Do not repeat the audit or repair.
+- `getPublishedPosts` now filters `status = published` and `is_active`, matching the detail page and sitemap — drafts previously appeared on `/blog`. Keep the category filter, pagination, teaser projection and fallback behaviour intact.
+- `ResourceForm` shows the preview link for any saved row with a slug ("Preview draft" until published) because posts/services/projects detail readers already grant staff `content:read` preview. No permission or route change.
+- Next slice: a `blog_post_tags` writer for per-post tags and option sources for the `author_id`/`category_id` selects. Future-dated scheduling belongs to Phase 18.
+- 596 tests/66 files (two new publication cases), typecheck, lint and `/blog` HTTP 200 pass. No authenticated publish/preview, screenshot or production build; no schema, SQL, data or secrets.
+
 ## Latest Phase 16 admin save QA (2026-09-19)
 - Read `docs/base44-upgrade/PHASE_16_30_ADMIN_SAVE_QA.md` and current status. Module matrix produced from source; two media root causes repaired. Phase 16 remains PARTIAL at authenticated acceptance; STOP before Phase 17. Do not repeat the matrix or the media repair.
 - The media library page is an async Server Component: clipboard copy now lives in `components/admin/CopyUrlButton.tsx` (`"use client"`). Never pass an event handler from that page again. Its listing surfaces read errors instead of "No media uploaded yet".

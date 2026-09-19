@@ -142,7 +142,11 @@ export const getPublishedPosts = cache(
       let query = supabase
         .from("blog_posts")
         .select(POST_TEASER_COLUMNS, { count: "exact" })
-        .is("deleted_at", null);
+        .is("deleted_at", null)
+        // The public index must honour the admin publication state: drafts and
+        // deactivated posts are readable only through the staff detail preview.
+        .eq("status", "published")
+        .eq("is_active", true);
       if (categoryId) query = query.eq("category_id", categoryId);
 
       const page = Math.max(1, options.page ?? 1);
