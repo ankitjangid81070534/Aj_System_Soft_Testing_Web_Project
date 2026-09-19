@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Latest Phase 15 navigation safety (2026-09-19)
+- Owner delegated safe judgment and requested no further questions. Read `docs/base44-upgrade/PHASE_15_30_NAVIGATION_SAFETY.md` and current status; this supersedes the audit-only stop below. Active-route matching and native drawer naming/resize/focus are implemented; full Phase 15 remains PARTIAL, Phase 16 not started.
+- Sidebar and header share exact/segment-descendant matching; Dashboard stays exact-only. Drawer is named by a unique heading ID, ignores stale native close events and closes when crossing 1024px; native close restores main focus if the opener is hidden. Preserve auth/layout/Next Links/actions and source dev 3000.
+- 594 tests/65 files/type/lint and seven actual-component browser cases pass; resize bug reproduced before repair. Fixture stubs routing/sign-out, so no authenticated gesture/save/visual claim. Live Home healthy, old AdSense error only; no private shell. No screenshot/fresh build. Harness close-event/hidden-locator/test-type corrections are in the report.
+- P15-03–09/bespoke semantics and all hosted/native/legal/transport gates remain. Do not repeat repaired navigation, the audit or declined credentials. One-off loopback fixture/scripts/logs stay `/tmp`; no new route, service, dependency, data, SQL, secrets, PR/merge/deploy.
+
 ## Users redirect timing repair (2026-09-19)
 - See `docs/base44-upgrade/USERS_REDIRECT_TIMING_FIX.md`. Unconfigured `/ajadmin/users` now redirects in proxy before streaming the rejected UsersPage, avoiding Next/React dev negative timing entries. Keep configured auth and page role guards intact; no global Performance patch. Five fresh browser redirects and 582 unit tests pass. Phase 15 remains audit-only apart from this owner-requested incident repair.
 

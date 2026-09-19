@@ -140,6 +140,13 @@
 - D85: Required-star metadata is not sufficient to add native constraints indiscriminately: blank slugs are intentionally server-generated. Preserve payloads, full settings submission, editor publication protection and genuine save/reset contracts.
 - D86: Separate reproduced isolated active-route defects and passing anonymous checks from source-only private UI risks. 578 tests/type/lint, twelve HTTP probes and four independent browser cases do not prove authenticated CRUD, populated-media rendering, visual quality or persistence. Initial harness errors and failed live iframe navigation/recovery are retained; no app repair claimed.
 
-## Next authorization
+## Phase 15 delegated navigation safety (2026-09-19)
 
-Read [Phase 15 admin UI audit](PHASE_15_30_ADMIN_UI_AUDIT.md) and current status. **Audit complete; full Phase 15 PARTIAL. STOP before implementation and Phase 16.** Approve a bounded next slice; do not repeat this audit, earlier implementations or declined credentials. Phase 14/13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+- D87: After offering three scopes, owner delegated safe judgment and explicitly requested no further questions. Choose recommended navigation/accessibility work, bounded to reproduced P15-01/P15-02; do not start Phase 16 or expand into draft/save/media/Builder logic.
+- D88: Reuse exact/segment-descendant matching for labels/current markers and existing native dialog/focus targets. Drawer has one current consumer. Add heading-based naming and desktop native-close cleanup, not a replacement modal/router or responsive redesign.
+- D89: Isolated actual-component browser gestures reproduce and verify modal resize/focus without a staff account or auth bypass. Next routing and sign-out are stubbed only in a temporary fixture; seven passes are not authenticated navigation, screenshots or persisted-save evidence. Keep all acceptance levels explicit.
+- D90: Preserve initial harness/type/lint failures in the focused report; final 594 tests/type/lint pass. Respect the no-repeat-question preference without treating it as permission for secrets/data/SQL/security/release changes.
+
+## Continuation boundary
+
+Read [Phase 15 navigation safety](PHASE_15_30_NAVIGATION_SAFETY.md) and current status. **Bounded navigation slice implemented; full Phase 15 PARTIAL; Phase 16 not started.** Remaining audit findings and all Phase 14/13/12/11/9/1 gates persist. Do not repeat the implementation/audit or declined credentials. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.

@@ -1,6 +1,14 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 15 admin UI audit disposition (2026-09-19)
+## Current Phase 15 navigation safety disposition (2026-09-19)
+
+The owner delegated safe scope and requested no further questions. [Navigation safety](PHASE_15_30_NAVIGATION_SAFETY.md) repairs P15-01/P15-02 at source/isolated-component scope: active index markers, native drawer name, desktop close and focus recovery. Resize was reproduced on the actual isolated shell before repair. Do not report these as still unimplemented from the historical audit below.
+
+594 unit tests/65 files/type/lint and seven component/browser cases pass. The temporary fixture uses actual components/CSS but stubs Next routing/sign-out; it does not prove staff access, real page transitions, populated layout quality or persistence. No screenshots/fresh production build/native-device/screen-reader/no-JS sign-off. Real Users login redirect remains clean; live Home remains healthy with an older AdSense error and no authorized staff shell. Harness event-timing/hidden-locator/type/lint corrections are recorded, not disguised as app fixes.
+
+P15-03–09, bespoke labels/filter/table semantics and all earlier Phase 14/13/12/11/9/1 gates remain. Six optional values absent in process; credential deferral stands. Full Phase 15 PARTIAL; Phase 16 not started. No backend/auth/save/security/SQL/data/config/dependency/release change. Do not repeat repaired navigation/audit or ask declined credential questions.
+
+## Historical Phase 15 admin UI audit disposition (2026-09-19)
 
 [Admin UI audit](PHASE_15_30_ADMIN_UI_AUDIT.md) is complete at documentation-only scope. P15-01 reproduces missing current-navigation markers on exact Services/Leads routes through actual-component isolated rendering. P15-02–09 record source-only drawer naming/resize, uncontrolled admin draft reset, required-indicator parity, labels/filter/table semantics, false-empty/read outcomes, Builder copy/public-effect mismatch, populated-media Server Component event handling and publication/preview affordance gaps. No application repair or private hosted reproduction is claimed.
 

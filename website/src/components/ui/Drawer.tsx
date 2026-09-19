@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useId, useRef, type ReactNode } from "react";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { IconButton } from "@/components/ui/IconButton";
@@ -24,6 +24,7 @@ export function Drawer({
   className?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -35,7 +36,11 @@ export function Drawer({
   return (
     <dialog
       ref={dialogRef}
-      onClose={onClose}
+      aria-labelledby={titleId}
+      onClose={() => {
+        // Ignore a queued close event if the panel has already reopened.
+        if (!dialogRef.current?.open) onClose();
+      }}
       onClick={(event) => {
         if (event.target === dialogRef.current) onClose();
       }}
@@ -47,7 +52,7 @@ export function Drawer({
     >
       <div className="flex h-full min-h-0 flex-col">
         <div className="flex shrink-0 items-center justify-between gap-4 border-b border-line px-6 py-4">
-          <h2 className="text-base font-semibold tracking-tight text-ink">{title}</h2>
+          <h2 id={titleId} className="text-base font-semibold tracking-tight text-ink">{title}</h2>
           <IconButton aria-label="Close panel" onClick={onClose} size="sm">
             <X aria-hidden="true" className="h-4 w-4" />
           </IconButton>
