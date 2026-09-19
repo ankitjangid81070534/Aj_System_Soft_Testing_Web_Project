@@ -25,7 +25,9 @@ describe("Phase 6 motion safeguards", () => {
   it("consumes entrances before running them and never rearms them on exit", () => {
     expect(reveal.indexOf('element.dataset.revealCycle = "1"', reveal.indexOf('new IntersectionObserver'))).toBeLessThan(reveal.indexOf('element.animate('));
     expect(reveal).not.toContain('delete element.dataset.revealCycle');
-    expect(reveal).toContain('const compactWord');
+    // Only the outermost revealing container animates, so nested headings/body
+    // can never sit half faded inside an already-solid card.
+    expect(reveal).toContain('const nested = element.parentElement?.closest(".reveal, [data-home-reveal], [data-reveal]")');
   });
   it("cancels moving ancestors on focus and pending work on unmount", () => {
     expect(reveal).toContain('element.contains(event.target)');

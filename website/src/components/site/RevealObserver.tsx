@@ -22,10 +22,11 @@ export function RevealObserver() {
       }
       document.querySelectorAll<HTMLElement>(".reveal, [data-home-reveal], [data-reveal]").forEach(element => {
         if (element.dataset.revealCycle || pending.has(element)) return;
-        // On phones the containing block owns the entrance; avoid dozens of
-        // simultaneous word animations inside the same fading heading.
-        const compactWord = innerWidth < 701 && element.dataset.reveal === "word" && element.parentElement?.closest(".reveal, [data-home-reveal]");
-        if (media.matches || element.dataset.reveal === "orbit" || compactWord) {
+        // The OUTERMOST revealing container owns the entrance. A nested element
+        // ran its own delayed animation, so a card could already look solid while
+        // its heading/body were still half faded. Nested content stays visible.
+        const nested = element.parentElement?.closest(".reveal, [data-home-reveal], [data-reveal]");
+        if (media.matches || element.dataset.reveal === "orbit" || nested) {
           element.dataset.revealCycle = "1";
           return;
         }
