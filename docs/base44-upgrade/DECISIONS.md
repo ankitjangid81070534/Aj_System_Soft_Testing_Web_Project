@@ -55,6 +55,14 @@
 - D36: Reuse existing native-menu cleanup/reset and restore the visible More/search counterpart on breakpoint changes. Leave auth/session/account and data handlers intact.
 - D37: Separate independent browser/visual acceptance from unavailable iframe checks. Preserve initial app-click failures and harness-only dialog-transition locator races. Final 464 tests, build/type/lint, 10 source + 10 production reusable cases, 24 responsive cases and four short-screen checks pass at scope; these do not prove hosted saves or field responsiveness.
 
+## Phase 6/7 recovery decisions (2026-09-19)
+
+- D38: Finish interrupted Phase 7 and save missing reports before advancing. Phase 6 implementation is already at `9354b3d`; recovered historical evidence must not be presented as fresh testing.
+- D39: Keep the moving edge opt-in, decorative, fixed-mask/transform-only and bounded to a short sweep. No optional admin variant, schema or ordinary-card decoration without a justified existing-backend contract.
+- D40: Keep hero copy immediately rendered and still; replace unsupported availability wording with capability wording. Preserve existing promises/routes and describe the current quote fields without inventing a wizard, price or response SLA.
+- D41: Limit short-tablet layout repair to the hero; preserve fixed navigation. Reserve desktop decoration below the copy after actual visual review demonstrated artwork crossing labels. No Home content reorder or unrelated artwork changes.
+- D42: Independent source/production gestures and screenshot review support scoped acceptance; iframe primary/anchor passes do not imply the timed-out projects retry or hidden screenshot passed. External Google report-only diagnostics and cancelled RSC prefetches remain explicit in evidence. No performance, saved-record or release certification.
+
 ## Next authorization
 
-**STOP after Phase 5.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 6 — RGB Moving-Edge Primary CTA**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.
+**STOP after Phase 7.** Await the next exact `START NEXT PHASE SAFELY` before **Phase 8 — Services / Capability Discovery**. Preserve the current live Home order unless a specific material movement ledger is separately approved. No remote-access/data-mutation/migration/content-move, PR, merge or release approval is waived. Backend gates stay deferred, not passed. If a future feature cannot persist safely through the existing backend, report the blocker.

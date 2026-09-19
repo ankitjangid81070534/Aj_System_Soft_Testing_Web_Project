@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 5 complete (2026-09-18)
+## Current checkpoint — Phase 7 complete (2026-09-19)
+
+[PHASE_STATUS](PHASE_STATUS.md) supersedes historical gates below. Interrupted Phase 7 is now finished; Phase 6 implementation was already in `9354b3d` while its report/status were missing. Both phase reports and evidence are now durable. No reset, repeat implementation or Phase 8 work.
+
+Hero copy stays server-rendered/still, capability labels remain factual, and next-step guidance describes existing quote fields. Short-tablet primary CTA clearance and desktop decoration separation are scoped to the hero. Native links, shared navigation, Home order, auth, backend and data contracts are preserved. Fresh 469 tests, type/lint/build, 33 source + 33 production browser cases and 14 independent responsive/theme cases pass. Phone/tablet/desktop images independently reviewed; iframe primary/anchor gestures passed, projects retry and iframe screenshot remain unverified. Six optional values remain absent/deferred. STOP before Phase 8 until exact continuation; no PR/merge/deployment.
+
+## Historical checkpoint — Phase 5 complete (2026-09-18)
 
 [PHASE_STATUS](PHASE_STATUS.md) is authoritative over historical continuation gates below. Phase 4 was independently accepted, then exact continuation authorized and completed [Phase 5 public-header refinement](PHASE_5_30_HEADER_NAVIGATION.md): full phone brand, >=44px masthead targets, always-visible desktop links, honest hydration-ready dialog controls and breakpoint focus recovery. Existing navigation, CMS settings, auth/session architecture, Home order and persistence remain. No RGB edge yet; STOP before Phase 6 until the next exact continuation.
 
@@ -81,4 +87,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP at Phase 4 acceptance checkpoint; do not automatically begin Phase 5.** A repeated continuation first resumes the unfinished live-preview runtime/visual gate. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **STOP after Phase 7; do not automatically begin Phase 8.** Phase 4/5 historical gates above have been superseded by documented independent acceptance and subsequent authorized phases; Phase 6/7 recovery is complete. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

@@ -1,5 +1,13 @@
 # Base44 Dev Environment
 
+## Latest Phase 7 checkpoint — system-upgrade (2026-09-19 UTC)
+- Current `PHASE_STATUS.md` and `PHASE_7_30_HERO.md` supersede all historical gates below. Resumed interrupted Phase 7; Phase 6 code was already at HEAD `9354b3d`, but both reports/status were missing. Recovered Phase 6 evidence separately, did not repeat its implementation or start Phase 8. STOP before Phase 8 until next exact continuation.
+- Hero copy is server-rendered and still: no hero-settle transform or data-hero-entrance hooks. Preserve existing destinations/capabilities and aria-describedby next-step guidance. No new client state, promises or business logic.
+- 701–1023px / <=600px hero rules keep primary CTA above dock. Desktop art needs its own reserved area below copy: visual review caught orbit crossing service labels/link; final CSS and browser clearance assertion fix that. Keep mobile/tablet/header/finale artwork untouched.
+- Fresh 469 tests/55 files, type/lint/build, 33 source + 33 production browser cases and 14 light/dark layout/CTA cases pass. Initial matrix had two Google report-only CSP diagnostics; preserved, not repaired. Final matrix has only 18 cancelled RSC prefetches and no console/page errors. No field-speed or saved-data claim.
+- Iframe primary CTA and services anchor passed at 662px; project assertion initially raced old H1 and one retry timed out. Latest runtime health clean; screenshot iframe_hidden. Independent phone/tablet/desktop images reviewed, not iframe visual sign-off. One-off scripts/PNGs/viewer stay /tmp; evidence JSON/logs are durable.
+- Existing six optional integrations remain absent/deferred; no secret/data/SQL/config/dependency/SEO changes, PR/merge/deploy. Old 0–17 phase numbering is not current. Current status is authoritative, not earlier historical stop notes.
+
 ## Latest Phase 5 checkpoint — system-upgrade (2026-09-18 UTC)
 - Read current `PHASE_STATUS.md` and `PHASE_5_30_HEADER_NAVIGATION.md`. Exact continuation authorized scoped header work after accepted Phase 4. Phase 5 is complete at public-UI scope; STOP before Phase 6 moving RGB edge until next exact `START NEXT PHASE SAFELY`. Starting HEAD `996e02810a` is not the automatic completion commit.
 - Phone full name now remains visible; masthead CTA/brand targets >=44px; phone masthead min-height 72px, tablet 76px, desktop spacer 100px. Shared Button/CMS settings remain. Desktop links no longer enter hidden/staggered; keep existing lamp, single-row links, legal links and mobile dock geometry.

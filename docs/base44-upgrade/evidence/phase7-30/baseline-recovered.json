@@ -1,0 +1,62 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "h1": {
+      "top": 152.71429443359375,
+      "bottom": 230.46429443359375,
+      "height": 77.75
+    },
+    "cta": {
+      "top": 333.63616943359375,
+      "bottom": 381.63616943359375,
+      "height": 48
+    },
+    "dock": {
+      "top": 744,
+      "bottom": 828,
+      "height": 84
+    },
+    "copyAnimation": "reference-module__vk9XEa__hero-settle"
+  },
+  {
+    "width": 919,
+    "height": 499,
+    "h1": {
+      "top": 167.26998901367188,
+      "bottom": 270.45751953125,
+      "height": 103.18753051757812
+    },
+    "cta": {
+      "top": 367.802734375,
+      "bottom": 415.802734375,
+      "height": 48
+    },
+    "dock": {
+      "top": 389.8125,
+      "bottom": 483,
+      "height": 93.1875
+    },
+    "copyAnimation": "reference-module__vk9XEa__hero-settle"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "h1": {
+      "top": 212.233642578125,
+      "bottom": 373.952392578125,
+      "height": 161.71875
+    },
+    "cta": {
+      "top": 471.4432678222656,
+      "bottom": 519.4432373046875,
+      "height": 47.999969482421875
+    },
+    "dock": {
+      "top": 16,
+      "bottom": 98,
+      "height": 82
+    },
+    "copyAnimation": "reference-module__vk9XEa__hero-settle"
+  }
+]

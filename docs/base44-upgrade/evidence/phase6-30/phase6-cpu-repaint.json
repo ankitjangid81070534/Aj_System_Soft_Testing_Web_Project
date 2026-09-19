@@ -1,0 +1,71 @@
+{
+  "scope": "Independent warm production Home, 390x844, 4x simulated CPU slowdown; 3 paired samples, no field CWV claim. Disabled mode is measurement-only CSS in isolated browser.",
+  "rows": [
+    {
+      "round": 0,
+      "mode": "edge-disabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 3167.7859999999996,
+      "layoutCount": 0,
+      "recalcStyleCount": 189,
+      "edgeAnimations": 0,
+      "overflow": false
+    },
+    {
+      "round": 0,
+      "mode": "edge-enabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 4227.396000000001,
+      "layoutCount": 0,
+      "recalcStyleCount": 199,
+      "edgeAnimations": 0,
+      "overflow": false
+    },
+    {
+      "round": 1,
+      "mode": "edge-disabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 3063.9699999999993,
+      "layoutCount": 14,
+      "recalcStyleCount": 192,
+      "edgeAnimations": 0,
+      "overflow": false
+    },
+    {
+      "round": 1,
+      "mode": "edge-enabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 4275.280000000001,
+      "layoutCount": 0,
+      "recalcStyleCount": 213,
+      "edgeAnimations": 0,
+      "overflow": false
+    },
+    {
+      "round": 2,
+      "mode": "edge-disabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 3186.0370000000007,
+      "layoutCount": 0,
+      "recalcStyleCount": 196,
+      "edgeAnimations": 0,
+      "overflow": false
+    },
+    {
+      "round": 2,
+      "mode": "edge-enabled",
+      "windowMs": 4400,
+      "cpuThrottle": 4,
+      "taskMs": 4265.192,
+      "layoutCount": 0,
+      "recalcStyleCount": 205,
+      "edgeAnimations": 0,
+      "overflow": false
+    }
+  ]
+}

@@ -13,6 +13,8 @@
   width: min(1000px, calc(100% - 48px));
   padding-top: clamp(36px, 4vw, 64px);
   color: var(--hero-ink);
+  /* First-paint copy and actions stay still; only decoration may animate. */
+  animation: none;
 }
 .hero .copy::before { opacity: .35; }
 .hero h1 {
@@ -61,7 +63,15 @@
 .points li { display: flex; align-items: center; gap: 5px; color: var(--hero-muted); font-size: 13px; line-height: 1.5; }
 .points svg { color: #047857; flex-shrink: 0; }
 .hero .services { gap: 6px 16px; max-width: 740px; margin: 22px auto 0; }
-.services li { color: var(--hero-muted); font-size: 13px; line-height: 1.5; }
+.services li {
+  color: var(--hero-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--hero-muted) 20%, transparent);
+  border-radius: var(--radius-control);
+}
+.hero .nextStep { margin: 10px auto 0; font-size: 12px; line-height: 1.5; color: var(--hero-muted); }
 .hero .explore {
   display: inline-flex;
   align-items: center;
@@ -81,6 +91,11 @@
 @media (hover: hover) and (pointer: fine) {
   .hero .primary:global(.action-control):hover { color: var(--hero-on-action); background: var(--hero-action-hover); border-color: var(--hero-action-hover); }
   .hero .secondary:global(.action-control):hover { color: #17131e; background: #f3eef8; }
+}
+/* Keep desktop decoration below the full copy, including capability chips. */
+@media (min-width: 1024px) {
+  .hero.hero { padding-bottom: 240px; }
+  .hero.hero > [aria-hidden="true"] { top: auto; bottom: 48px; height: 150px; transform: none; opacity: .7; }
 }
 @media (min-width: 701px) and (max-width: 1023px) {
   .hero.hero { padding-bottom: 220px; }
@@ -103,6 +118,15 @@
 @media (max-width: 360px) {
   .hero h1 { font-size: 2rem; }
   .hero .actions > a { width: 100%; max-width: 288px; }
+}
+/* Short tablet windows keep the first decision above the existing fixed dock.
+   Other breakpoints retain their accepted scale; the page still scrolls normally. */
+@media (min-width: 701px) and (max-width: 1023px) and (max-height: 600px) {
+  .hero .copy { padding-top: 18px; }
+  .hero .badge { margin-bottom: 12px !important; }
+  .hero h1 { font-size: 40px; }
+  .hero .description { margin-top: 12px; font-size: 14px; }
+  .hero .actions { margin-top: 16px; }
 }
 :global(.dark) .hero.hero {
   --hero-ink: #f6f1fc;

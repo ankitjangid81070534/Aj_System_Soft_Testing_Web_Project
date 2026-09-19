@@ -1,0 +1,936 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "theme": "light",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 16,
+            "y": 398.203125,
+            "w": 288,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 16,
+            "y": 456.203125,
+            "w": 288,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 69,
+            "y": 732.203125,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 14,
+        "y": 468,
+        "w": 292,
+        "h": 84
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "theme": "dark",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 16,
+            "y": 398.203125,
+            "w": 288,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 16,
+            "y": 456.203125,
+            "w": 288,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 69,
+            "y": 732.203125,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 14,
+        "y": 468,
+        "w": 292,
+        "h": 84
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 99,
+            "y": 333.421875,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 103,
+            "y": 391.421875,
+            "w": 184,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 104,
+            "y": 644.421875,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 14,
+        "y": 744,
+        "w": 362,
+        "h": 84
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 99,
+            "y": 333.421875,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 103,
+            "y": 391.421875,
+            "w": 184,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 104,
+            "y": 644.421875,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 14,
+        "y": 744,
+        "w": 362,
+        "h": 84
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [],
+    "pass": true
+  },
+  {
+    "width": 662,
+    "height": 580,
+    "theme": "light",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 138,
+            "y": 315.03125,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 340,
+            "y": 315.03125,
+            "w": 184,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 240,
+            "y": 512.03125,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 96,
+        "y": 470.8125,
+        "w": 470,
+        "h": 93.1875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [],
+    "pass": true
+  },
+  {
+    "width": 662,
+    "height": 580,
+    "theme": "dark",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 138,
+            "y": 315.03125,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 340,
+            "y": 315.03125,
+            "w": 184,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 240,
+            "y": 512.03125,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 96,
+        "y": 470.8125,
+        "w": 470,
+        "h": 93.1875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 919,
+    "height": 499,
+    "theme": "light",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 256,
+            "y": 300.5625,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 471,
+            "y": 300.5625,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 368.5,
+            "y": 477.5625,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 224.5,
+        "y": 389.8125,
+        "w": 470,
+        "h": 93.1875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 919,
+    "height": 499,
+    "theme": "dark",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 256,
+            "y": 300.5625,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 471,
+            "y": 300.5625,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 368.5,
+            "y": 477.5625,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 224.5,
+        "y": 389.8125,
+        "w": 470,
+        "h": 93.1875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=-9BrmOxZ80FCSn-e",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "theme": "light",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 308.5,
+            "y": 406.734375,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 523.5,
+            "y": 406.734375,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 421,
+            "y": 583.734375,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 16,
+        "y": 16,
+        "w": 992,
+        "h": 64.796875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/projects?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "theme": "dark",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 308.5,
+            "y": 406.734375,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 523.5,
+            "y": 406.734375,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 421,
+            "y": 583.734375,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 16,
+        "y": 16,
+        "w": 992,
+        "h": 64.796875
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/contact?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 516.5,
+            "y": 470.09375,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 731.5,
+            "y": 470.09375,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 629,
+            "y": 647.09375,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 16,
+        "y": 16,
+        "w": 1408,
+        "h": 82
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 516.5,
+            "y": 470.09375,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 731.5,
+            "y": 470.09375,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 629,
+            "y": 647.09375,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 16,
+        "y": 16,
+        "w": 1408,
+        "h": 82
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=tXyZJ52UQVBCVsD3",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 756.5,
+            "y": 496.21875,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 971.5,
+            "y": 496.21875,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 869,
+            "y": 673.21875,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 240,
+        "y": 16,
+        "w": 1440,
+        "h": 82
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [
+      {
+        "url": "http://127.0.0.1:3127/request-quote?_rsc=5CB68i4pnAekjehf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "theme": "dark",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "overflow": false,
+      "h1": {
+        "text": "Software built aroundyour requirements.",
+        "opacity": "1"
+      },
+      "copyAnimation": "none",
+      "links": [
+        {
+          "text": "Start Your Project ",
+          "rect": {
+            "x": 756.5,
+            "y": 496.21875,
+            "w": 203,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore Projects ",
+          "rect": {
+            "x": 971.5,
+            "y": 496.21875,
+            "w": 192,
+            "h": 48
+          }
+        },
+        {
+          "text": "Explore what we build ",
+          "rect": {
+            "x": 869,
+            "y": 673.21875,
+            "w": 182,
+            "h": 44
+          }
+        }
+      ],
+      "dock": {
+        "x": 240,
+        "y": 16,
+        "w": 1440,
+        "h": 82
+      },
+      "openDialogs": 0
+    },
+    "projectClick": true,
+    "externalReports": [],
+    "cancelledPrefetch": [],
+    "pass": true
+  }
+]

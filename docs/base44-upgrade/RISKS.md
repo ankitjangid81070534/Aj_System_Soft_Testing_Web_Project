@@ -1,6 +1,16 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 5 disposition (2026-09-18)
+## Current Phase 7 disposition (2026-09-19)
+
+[Current status](PHASE_STATUS.md) and [Phase 7 report](PHASE_7_30_HERO.md) supersede historical stop gates below. Missing Phase 6/7 reports were recovered; interrupted Phase 7 is complete at public-hero scope, Phase 8 not started. Existing business/persistence architecture remains unconnected and unchanged.
+
+Final 469 tests/type/lint/build, 33 source + 33 production browser cases and 14 independent responsive/theme cases pass. Desktop decorative overlap was found visually, fixed with reserved space below copy and re-reviewed; short-tablet primary CTA clears the unchanged dock. Very short windows still need scrolling and lower non-primary content can cross behind the fixed dock. No claim that every hero fits one screen or that LCP/CLS/INP improved.
+
+Iframe primary/anchor gestures and final passive health pass; projects retry timed out and screenshot was hidden. Independent visual review is not an iframe/owner-environment repair. Initial matrix retained two external Google report-only CSP messages; final matrix retained 18 cancelled RSC prefetch requests, no other failed same-origin requests and no console/page errors. No security/ads workaround. Phase 6 CPU samples were mixed, not proof of zero overhead; keep edge animation bounded, not perpetual.
+
+All prior hosted saves/RLS/auth/email/custom-CMS, native-device/zoom, content/legal/consent and release gates persist. Six optional integrations remain absent; no credentials, SQL or record mutation. STOP before Phase 8 pending exact continuation.
+
+## Historical Phase 5 disposition (2026-09-18)
 
 [Current status](PHASE_STATUS.md) supersedes historical stop gates below. Phase 4 was independently accepted; [Phase 5](PHASE_5_30_HEADER_NAVIGATION.md) is now complete at public-header scope. Its early-click risk is addressed with server-disabled dialog triggers enabled at hydration, not a claim that JavaScript-free dialogs or instant network responses exist. Native links remain usable. Breakpoint focus is restored to a visible counterpart; desktop entrance hiding is removed.
 
