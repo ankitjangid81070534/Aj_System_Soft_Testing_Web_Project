@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Eye, EyeOff, KeyRound } from "lucide-react";
 import { Field, Input, type InputProps } from "@/components/ui/Input";
 
@@ -17,10 +17,17 @@ export function PasswordField({
   leadingIcon?: boolean;
 }) {
   const [visible, setVisible] = useState(false);
+  const fieldRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const form = fieldRef.current?.closest("form");
+    const mask = () => setVisible(false);
+    form?.addEventListener("reset", mask);
+    return () => form?.removeEventListener("reset", mask);
+  }, []);
   const hintId = hint ? `${props.id}-hint` : undefined;
   return (
     <Field label={label} htmlFor={props.id} required={props.required}>
-      <div className="relative min-w-0">
+      <div ref={fieldRef} className="relative min-w-0">
         {leadingIcon ? (
           <KeyRound
             aria-hidden="true"

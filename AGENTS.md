@@ -1,6 +1,13 @@
 # Base44 Dev Environment
 
-## Latest Phase 14 auth-audit checkpoint — system-upgrade (2026-09-19 UTC)
+## Latest Phase 14 feedback checkpoint — system-upgrade (2026-09-19 UTC)
+- Owner explicitly chose Fix auth-form feedback. Read `PHASE_14_30_AUTH_FEEDBACK.md` and current status. Bounded repair implemented; full Phase 14 PARTIAL, STOP before Phase 15. Do not repeat implementation/audit/credentials.
+- Auth-only reset guard retains non-password inputs on resolved errors; names identify revealed passwords too. PasswordField masks on native reset. Pending feedback unmounts so equal-error retries refocus; genuine success retains native reset. No action/schema/session/consent/persistence change. Account forms are outside scope.
+- 578 tests/64 files, type/lint/build, 13 source + 13 production browser cases pass; three staff cases skipped per target because configured-only form is absent. Real hosted success, staff feedback and enabled recovery submission remain unverified; do not bypass guards. Failure-only POST tests require confirmed-unconfigured target plus `AUTH_UNCONFIGURED_TESTS=1`.
+- Wait for hydration readiness before failure tests. Internal 3116 already had an older build: first production checks hit stale source. Fresh isolated `/tmp/aj-phase14-feedback-production` on 3214 is verified by new error copy before tests. Initial logs retained, not app regressions. Source dev stays 3000.
+- Live login/retry retention, cleared/masked credentials and focus pass; error screenshot reviewed at actual ~919px, not claimed as 662px. Navigate helper failed then real-link recovery passed. Buffered pre-edit AdSense error remains; no new app errors/module failures. Six optional values absent/deferred, no config/dependency/SQL/data/secrets/PR/merge/deploy.
+
+## Historical Phase 14 auth-audit checkpoint — system-upgrade (2026-09-19 UTC)
 - Owner delegated safe scope after Phase 13 blockers/three choices; chosen read-only Phase 14 audit. Read `PHASE_14_30_AUTH_AUDIT.md` and current status. Full Phase 14 PARTIAL; STOP before Phase 15. Do not repeat audit/credentials or mark Phase 13/12/11/9/1 gates passed.
 - Proposed next slice is non-sensitive auth-form error recovery/feedback, with explicit password clearing, not blindly reusing the lead hook. No auth/UI implementation yet. Recovery hash/marker provenance, callback origins, agreement exact-version identity, partial writes and ignored sign-out errors require separate reviewed functional scope.
 - Eight pages HTTP 200, 567 tests/62 files/type/lint pass. Token-free callback/confirm GETs return 307 with internal `0.0.0.0` origin in direct probes; not a passing external OAuth flow. Live real Client Login link/password show-hide pass after initial navigate-helper failure, errors/failed requests/dialogs empty. No POST, fresh build/screenshot or authenticated acceptance.

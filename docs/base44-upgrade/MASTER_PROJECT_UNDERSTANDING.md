@@ -1,6 +1,12 @@
 # Master project understanding — current 30-phase baseline
 
-## Current checkpoint — Phase 14 read-only auth audit (2026-09-19)
+## Current checkpoint — Phase 14 auth feedback repair (2026-09-19)
+
+Owner explicitly selected [Fix auth-form feedback](PHASE_14_30_AUTH_FEEDBACK.md). Auth forms now retain non-password entries after resolved errors, clear/re-mask passwords, guard pending retries and focus fresh feedback. Login query errors use safe local copy. Existing actions/schemas, native validation, role/session/recovery gates, consent and backend remain unchanged; account save forms are outside scope.
+
+578 tests/64 files, type/lint/build and 13 source + 13 fresh-production browser cases pass. Three staff cases skipped per target; configured-only form is intentionally absent. Live login/retry and error-state screenshot pass at actual available width (~919px); no new app runtime errors, an older AdSense failure remains. Initial harness hydration/locator and stale production-port failures retained. Genuine hosted success, staff submission, enabled recovery and saved reload are not verified. All prior gates remain open; STOP before Phase 15. No credentials/data/SQL/config/dependency/PR/merge/deploy changes. Do not repeat implemented feedback or declined credentials.
+
+## Historical checkpoint — Phase 14 read-only auth audit (2026-09-19)
 
 After Phase 13 blocker disclosure and three next-scope choices, owner delegated safe judgment. Chosen [Phase 14 auth/portal audit](PHASE_14_30_AUTH_AUDIT.md) maps existing login/signup/Google/recovery/account/profile/logout without changing application code. First proposed bounded repair is non-sensitive auth-form error recovery/feedback; passwords need an explicit reset policy. Recovery provenance/origins, exact agreement identity, partial writes and logout outcomes remain separately reviewed functional risks. No UI polish before functionality acceptance.
 
@@ -135,4 +141,4 @@ Fresh 460 tests/53 files, typecheck/lint/build, three navigation tests, eight se
 
 ## Continuation
 
-See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 14 read-only auth audit is complete; full functional acceptance remains blocked. STOP before Phase 15. Phase 13 bounded form safety, Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their acceptance gates open.** Read the Phase 14 auth-audit report on next continuation; explicitly scope bounded feedback/recovery work or resume genuine acceptance, not another identical audit or credential request. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.
+See [route/features](ROUTE_FEATURE_MATRIX.md), [admin](ADMIN_FEATURE_MATRIX.md), [regression](REGRESSION_BASELINE.md), [SEO](SEO_BASELINE.md), [design](DESIGN_BASELINE.md), [decisions](DECISIONS.md), [risks](RISKS.md). **Phase 14 auth audit and bounded feedback repair are complete at documented scope; full functional acceptance remains blocked. STOP before Phase 15. Phase 13 bounded form safety, Phase 12 navigation-only hub and Phase 11 source-only wizard remain implemented with their acceptance gates open.** Read the Phase 14 feedback report on next continuation; review remaining functional gates or explicitly scope the next step, not another identical implementation/audit or credential request. Earlier checkpoints are historical and superseded by current status. Phase 9 remains partial; continuation did not complete hosted checks. Current live Home order remains unchanged; material moves require separate approval. No PR, merge, production mutation or deployment.

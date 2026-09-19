@@ -126,6 +126,13 @@
 - D77: Recovery provenance/hash parity, callback origins, exact agreement identity, partial writes and logout outcomes need separately reviewed functional work. Direct-container 307 internal origins are probe findings, not externally reproduced OAuth failure or a security exploit claim.
 - D78: Separate 567 passing tests/type/lint, eight page probes, two token-free handler probes and actual password show/hide from unavailable hosted auth/persistence. Initial navigate-helper failure remains; real-link recovery passes. No fresh build/visual sign-off; no secrets requested or generated.
 
+## Phase 14 bounded feedback decisions (2026-09-19)
+
+- D79: Owner explicitly selected **Fix auth-form feedback**. Implement the audit's non-password retention/error-focus slice for auth forms only; no auth architecture, account save, recovery provenance or Phase 15 work.
+- D80: Cancel resolved-error resets locally, clear passwords by name even when revealed and mask on native reset; allow genuine-success native reset. No credential/draft storage, wrapper Server Action, consent change or fake success.
+- D81: Preserve generic server messages; map known login query codes to local actionable copy and unknown values to a generic fallback. Pending feedback hides stale results and repeated errors refocus.
+- D82: Separate 578 tests/type/lint/build, 13+13 browser cases and passing live login/retry/visual check from absent hosted acceptance. Staff form is intentionally unavailable without configuration; recovery remains disabled. Initial hydration/locator and stale-production-port harness failures are retained. Full Phase 14 remains PARTIAL.
+
 ## Next authorization
 
-Read [Phase 14 auth audit](PHASE_14_30_AUTH_AUDIT.md) and current status. **Read-only audit complete; full Phase 14 PARTIAL. STOP before Phase 15.** Next continuation explicitly scopes a bounded repair or resumes actual acceptance; do not repeat the audit or declined credentials. Phase 13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 14 feedback repair](PHASE_14_30_AUTH_FEEDBACK.md), the auth audit and current status. **Bounded feedback implementation complete; full Phase 14 PARTIAL. STOP before Phase 15.** Next continuation reviews remaining functional gates or explicitly scopes the next step; do not repeat the implemented slice, audit or declined credentials. Phase 13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
