@@ -1,5 +1,13 @@
 # Base44 Dev Environment
 
+## Latest Phase 15 admin UI audit — system-upgrade (2026-09-19 UTC)
+- Owner explicitly requested Audit Phase 15. Read `PHASE_15_30_ADMIN_UI_AUDIT.md` and current status. Documentation only; full Phase 15 PARTIAL. STOP before implementation/Phase 16; prior Phase 14/13/12/11/9/1 gates remain open.
+- Actual AdminNav isolated renders reproduce missing active markers on exact non-dashboard module paths. Proposed first slice is navigation/accessibility correctness, not a redesign. Drawer lacks explicit accessible name and breakpoint open-state cleanup; private resize behavior remains source-only risk.
+- Admin uncontrolled forms lack resolved-error reset guards; do not blindly reuse auth password policy. Resource required stars do not apply native constraints, but blank slugs are intentionally server-generated. Keep full settings payload and genuine-success baseline/save semantics.
+- Bespoke modules still have label/filter/table/read-error gaps; Builder falsely describes public Home integration and has silent/non-atomic quick actions. Async media page contains native clipboard onClick in its populated Server Component branch: high source risk, not a hosted reproduction. Keep functional fixes separately scoped.
+- Fresh 578 tests/64 files/type/lint pass; twelve anonymous HTTP probes (five streamed redirects), five isolated nav renders and four independent read-only browser cases recorded. Initial incorrect staff-heading locator and extra-parenthesis presence command corrected, not app fixes. Iframe URL changed without content; staff link absent and Home click did not establish recovery. No iframe/private gesture/visual/build/save pass.
+- Six optional values absent/deferred; no secrets, data, SQL, app/config/dependency changes, PR/merge/deploy. Temporary logs/JSON in `/tmp/phase15-admin-audit-*`; source dev stays healthy on 3000. Reuse audit on continuation; do not repeat credentials or the same audit.
+
 ## Latest Phase 14 feedback checkpoint — system-upgrade (2026-09-19 UTC)
 - Owner explicitly chose Fix auth-form feedback. Read `PHASE_14_30_AUTH_FEEDBACK.md` and current status. Bounded repair implemented; full Phase 14 PARTIAL, STOP before Phase 15. Do not repeat implementation/audit/credentials.
 - Auth-only reset guard retains non-password inputs on resolved errors; names identify revealed passwords too. PasswordField masks on native reset. Pending feedback unmounts so equal-error retries refocus; genuine success retains native reset. No action/schema/session/consent/persistence change. Account forms are outside scope.

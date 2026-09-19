@@ -1,6 +1,16 @@
 # Retained risks and blockers — 30-phase program
 
-## Current Phase 14 auth-audit disposition (2026-09-19)
+## Current Phase 15 admin UI audit disposition (2026-09-19)
+
+[Admin UI audit](PHASE_15_30_ADMIN_UI_AUDIT.md) is complete at documentation-only scope. P15-01 reproduces missing current-navigation markers on exact Services/Leads routes through actual-component isolated rendering. P15-02–09 record source-only drawer naming/resize, uncontrolled admin draft reset, required-indicator parity, labels/filter/table semantics, false-empty/read outcomes, Builder copy/public-effect mismatch, populated-media Server Component event handling and publication/preview affordance gaps. No application repair or private hosted reproduction is claimed.
+
+Priority proposal: bounded navigation/accessibility correctness, followed by separately scoped admin error recovery and clipboard control. Blank slug auto-generation must survive native-validation changes; never submit partial settings or activate legacy Builder defaults. Functional read/result contracts, ordering atomicity, upload capacity and successful saved/reloaded baselines remain separate gates.
+
+Fresh 578 tests/64 files/type/lint, twelve anonymous HTTP probes and four independent read-only browser cases pass; five nav renders reproduce the exact-route defect. Live iframe navigation/recovery unverified. No screenshot/build/private UI/data-write certification. Six optional values absent/deferred; Phase 14/13/12/11/9/1 gates persist. Full Phase 15 PARTIAL; STOP before implementation/Phase 16.
+
+Phase 14 correction to historical text below: auth-form feedback and login query-message repairs were subsequently implemented in [PHASE_14_30_AUTH_FEEDBACK](PHASE_14_30_AUTH_FEEDBACK.md). Do not reopen those as still missing. Account/admin form recovery and the remaining functional/security/persistence gates were not fixed by that auth-only slice.
+
+## Historical Phase 14 auth-audit disposition (2026-09-19)
 
 [Read-only auth/portal audit](PHASE_14_30_AUTH_AUDIT.md) traces existing flows without repairs or redesign. Source findings: uncontrolled auth/account forms can reset on resolved errors; hash recovery does not establish server recovery readiness; recovery marker provenance and callback/public origin need review; account reads can hide errors; agreement acceptance compares version numbers rather than exact version identity; profile/media/evidence saves are non-atomic or lack row confirmation; sign-out ignores returned errors. These are source risks, not authenticated exploit findings or verified hosted failures.
 

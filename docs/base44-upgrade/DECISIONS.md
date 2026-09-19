@@ -133,6 +133,13 @@
 - D81: Preserve generic server messages; map known login query codes to local actionable copy and unknown values to a generic fallback. Pending feedback hides stale results and repeated errors refocus.
 - D82: Separate 578 tests/type/lint/build, 13+13 browser cases and passing live login/retry/visual check from absent hosted acceptance. Staff form is intentionally unavailable without configuration; recovery remains disabled. Initial hydration/locator and stale-production-port harness failures are retained. Full Phase 14 remains PARTIAL.
 
+## Phase 15 read-only audit decisions (2026-09-19)
+
+- D83: Owner explicitly requested **Audit Phase 15**. Authorize read-only admin UI review, not implementation or automatic Phase 16. Phase 14/13/12/11/9/1 acceptance gates remain open.
+- D84: Reuse the existing admin system. Propose navigation/accessibility correctness first; separately scope draft recovery, clipboard boundary and functional read/action-result work. No speculative redesign, global search, schema, dependency or auth bypass.
+- D85: Required-star metadata is not sufficient to add native constraints indiscriminately: blank slugs are intentionally server-generated. Preserve payloads, full settings submission, editor publication protection and genuine save/reset contracts.
+- D86: Separate reproduced isolated active-route defects and passing anonymous checks from source-only private UI risks. 578 tests/type/lint, twelve HTTP probes and four independent browser cases do not prove authenticated CRUD, populated-media rendering, visual quality or persistence. Initial harness errors and failed live iframe navigation/recovery are retained; no app repair claimed.
+
 ## Next authorization
 
-Read [Phase 14 feedback repair](PHASE_14_30_AUTH_FEEDBACK.md), the auth audit and current status. **Bounded feedback implementation complete; full Phase 14 PARTIAL. STOP before Phase 15.** Next continuation reviews remaining functional gates or explicitly scopes the next step; do not repeat the implemented slice, audit or declined credentials. Phase 13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
+Read [Phase 15 admin UI audit](PHASE_15_30_ADMIN_UI_AUDIT.md) and current status. **Audit complete; full Phase 15 PARTIAL. STOP before implementation and Phase 16.** Approve a bounded next slice; do not repeat this audit, earlier implementations or declined credentials. Phase 14/13/12/11/9/1 gates persist. Preserve Home order and existing persistence. No remote-access/data-mutation/migration/content-move, PR, merge or release gate is waived.
