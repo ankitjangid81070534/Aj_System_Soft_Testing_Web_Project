@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Latest Phase 16 admin save QA (2026-09-19)
+- Read `docs/base44-upgrade/PHASE_16_30_ADMIN_SAVE_QA.md` and current status. Module matrix produced from source; two media root causes repaired. Phase 16 remains PARTIAL at authenticated acceptance; STOP before Phase 17. Do not repeat the matrix or the media repair.
+- The media library page is an async Server Component: clipboard copy now lives in `components/admin/CopyUrlButton.tsx` (`"use client"`). Never pass an event handler from that page again. Its listing surfaces read errors instead of "No media uploaded yet".
+- 594 tests/65 files, typecheck, ESLint on changed files and anonymous HTTP 200 for `/` and `/ajadmin/media` pass. No authenticated save/upload/publish, screenshot or production build. Non-atomic reorder, Builder public-Home claim and P15-03–09 remain open.
+
 ## Latest Phase 15 navigation safety (2026-09-19)
 - Owner delegated safe judgment and requested no further questions. Read `docs/base44-upgrade/PHASE_15_30_NAVIGATION_SAFETY.md` and current status; this supersedes the audit-only stop below. Active-route matching and native drawer naming/resize/focus are implemented; full Phase 15 remains PARTIAL, Phase 16 not started.
 - Sidebar and header share exact/segment-descendant matching; Dashboard stays exact-only. Drawer is named by a unique heading ID, ignores stale native close events and closes when crossing 1024px; native close restores main focus if the opener is hidden. Preserve auth/layout/Next Links/actions and source dev 3000.

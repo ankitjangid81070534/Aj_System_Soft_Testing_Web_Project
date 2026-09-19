@@ -5,6 +5,7 @@ import { Field, Input, Select } from "@/components/ui/Input";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
 import { EmptyState } from "@/components/ui/States";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
+import { CopyUrlButton } from "@/components/admin/CopyUrlButton";
 import { getCurrentUser } from "@/lib/auth/session";
 import { can } from "@/lib/auth/permissions";
 import { isSupabaseConfigured } from "@/lib/env";
@@ -62,11 +63,14 @@ export default async function MediaLibraryPage({
   }
 
   const admin = createSupabaseAdminLooseClient();
-  const { data: assets } = await admin
+  const { data: assets, error: listError } = await admin
     .from("media_assets")
     .select("*")
     .order("created_at", { ascending: false })
     .limit(60);
+  if (listError) {
+    console.error("[admin] media library listing failed:", listError.message);
+  }
   const rows = (assets ?? []) as unknown as Record<string, unknown>[];
 
   return (
@@ -135,7 +139,15 @@ export default async function MediaLibraryPage({
       ) : null}
 
       <div className="mt-8">
-        {rows.length > 0 ? (
+        {listError ? (
+          <p
+            role="alert"
+            className="max-w-3xl rounded-xl bg-danger-soft px-4 py-3 text-sm text-danger"
+          >
+            The media library could not be loaded, so no assets are listed. Reload this page — the
+            library is not empty.
+          </p>
+        ) : rows.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {rows.map((asset) => {
               const id = String(asset.id);
@@ -169,13 +181,10 @@ export default async function MediaLibraryPage({
                     <p className="text-[10px] text-ink-muted">{bucket}</p>
                     <div className="mt-2 flex items-center justify-between gap-2">
                       {!isPrivate && url ? (
-                        <button
-                          type="button"
-                          onClick={() => navigator.clipboard?.writeText(url)}
+                        <CopyUrlButton
+                          url={url}
                           className="rounded-full border border-line px-2.5 py-1 text-[11px] font-medium text-ink-muted transition-colors hover:text-ink focus-ring"
-                        >
-                          Copy URL
-                        </button>
+                        />
                       ) : null}
                       {can(user.role, "media:write") ? (
                         <ConfirmButton
