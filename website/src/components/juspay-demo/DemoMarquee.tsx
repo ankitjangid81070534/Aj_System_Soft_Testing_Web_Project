@@ -1,19 +1,23 @@
 import styles from "./juspay-demo.module.css";
 
-/** Technologies the team builds with — shown as a continuous logo-style strip. */
+/** The live "A modern, maintainable stack" list — shown as a continuous logo-style strip. */
 const STACK = [
-  "Next.js",
   "React",
+  "Next.js",
   "TypeScript",
+  "Tailwind CSS",
+  "REST & GraphQL APIs",
+  "Android (Kotlin)",
+  "iOS (Swift)",
+  "React Native",
+  "Flutter",
   "Node.js",
   "PostgreSQL",
   "Supabase",
-  "Android",
-  "Kotlin",
-  "Flutter",
-  "Tailwind CSS",
-  "Docker",
-  "REST APIs",
+  ".NET / C#",
+  "Electron",
+  "Cloud hosting",
+  "CI/CD",
 ];
 
 export function DemoMarquee() {

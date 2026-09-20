@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import { getHomeContent } from "@/lib/data/home";
 import { getSiteSettings } from "@/lib/data/settings";
-import { FALLBACK_SERVICES } from "@/lib/data/services-fallback";
+import { getServicesIndex } from "@/lib/data/services";
+import { getLaunchBenefits } from "@/lib/data/growth";
+import { getPublicNavigation } from "@/lib/data/navigation";
 import { JuspayDemo } from "@/components/juspay-demo/JuspayDemo";
 
 /**
@@ -28,13 +30,26 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/**
+ * The demo is fed by the same readers as the live site: home content, the full
+ * services index (for the mega menu), launch benefits, CMS navigation and
+ * settings — so the owner can verify real data, not invented copy.
+ */
 export default async function JuspayDemoPage() {
-  const [content, settings] = await Promise.all([getHomeContent(), getSiteSettings()]);
+  const [content, settings, services, benefits, navigation] = await Promise.all([
+    getHomeContent(),
+    getSiteSettings(),
+    getServicesIndex(),
+    getLaunchBenefits(),
+    getPublicNavigation(),
+  ]);
   return (
     <JuspayDemo
       content={content}
       settings={settings}
-      serviceCount={FALLBACK_SERVICES.length}
+      services={services}
+      benefits={benefits}
+      navLinks={navigation.header}
       fontClassName={`${heading.variable} ${body.variable}`}
     />
   );
