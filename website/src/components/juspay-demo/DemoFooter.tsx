@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
+import { DemoCta } from "./DemoCta";
 import type { SiteSettings } from "@/lib/data/settings";
 import { FOOTER_LINK_GROUPS } from "@/lib/navigation";
 import { Reveal } from "./Reveal";
@@ -25,36 +26,7 @@ export function DemoFooter({
 }) {
   return (
     <>
-      <section id="cta" className={styles.ctaSection}>
-        <div className={styles.ctaGrid} aria-hidden />
-        <div className={`${styles.container} ${styles.ctaInner}`}>
-          <Reveal>
-            <span className={styles.eyebrowPlain}>Start a project</span>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className={styles.ctaTitle}>
-              Ready to build software around
-              <br />
-              your <span className={styles.blue}>requirements</span>?
-            </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className={styles.lead}>
-              Tell us what you need — we will propose the right platform, a clear plan and a transparent estimate.
-            </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className={styles.heroActions} style={{ justifyContent: "center" }}>
-              <Link href={ctaHref} className={`${styles.pill} ${styles.pillBlue}`}>
-                {ctaLabel} <ChevronRight size={18} aria-hidden />
-              </Link>
-              <Link href="/contact" className={styles.pill}>
-                Request a Consultation <ChevronRight size={18} aria-hidden />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
 
       <footer className={styles.footer}>
         <div className={styles.container}>

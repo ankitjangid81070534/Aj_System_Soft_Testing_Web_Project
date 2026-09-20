@@ -1337,6 +1337,101 @@
   font-size: 22px;
   margin-bottom: 8px;
 }
+.avatarPhoto {
+  position: relative;
+  overflow: hidden;
+  background: var(--jd-surface-2, #1a1b1f);
+}
+.avatarPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardCover {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  margin: 4px -4px 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--jd-surface-2, #1a1b1f);
+}
+.cardCover img {
+  object-fit: cover;
+}
+.cardResponse {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border-left: 2px solid var(--jd-blue);
+  background: rgba(48, 121, 234, 0.08);
+}
+.cardResponse span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--jd-blue);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.cardResponse p {
+  font-size: 14px;
+}
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.skillList li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 0.5px solid rgba(255, 255, 255, 0.16);
+  color: var(--jd-muted);
+  font-size: 12.5px;
+}
+.cardLinks {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.cardLinks a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(255, 255, 255, 0.16);
+  color: var(--jd-muted);
+  transition:
+    color 0.25s,
+    border-color 0.25s;
+}
+.cardLinks a:hover {
+  color: #fff;
+  border-color: var(--jd-blue);
+}
+.cardLinks svg {
+  width: 16px;
+  height: 16px;
+}
+.postMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: var(--jd-dim);
+  font-size: 13px;
+}
+.postMeta time,
+.postMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 
 /* CTA + footer ----------------------------------------------------------------- */
 .ctaSection {
