@@ -1,5 +1,12 @@
 # Base44 Dev Environment
 
+## Juspay-style design demo (2026-09-20)
+- Owner asked for a demo redesign modelled on juspay.io/in before approving any change to the live site. It lives ONLY at `/juspay-demo` (noindex, outside the `(public)` layout, not in the sitemap) — `website/src/app/juspay-demo/page.tsx` + `website/src/components/juspay-demo/*` with a scoped CSS module. The live `/` and shared header/footer are untouched.
+- Reference analysis: obsidian `#080808` canvas, `#121316` surfaces, `#3079EA` blue accent, `#00B40A` status green, muted `#B1B0B6/#777E90`; pill nav + pill 0.5px-border CTAs; grid-lined hero with a 3D core and circuit "pulse" lines; logo marquee; numbers band; stacked scroll cards; device mockup; big footer. Juspay uses General Sans (commercial) — demo loads Plus Jakarta Sans (headings) + Manrope (body) via `next/font/google`, scoped through `--font-jd-*` variables.
+- Content is real: services from `getHomeContent`, counts from `FALLBACK_SERVICES.length`, no invented clients/stats/testimonials; the tech marquee lists stack names, not customers. The section reveal reuses the shared `RevealObserver` (`data-reveal`, visible by default); hero copy is still, like the live hero. Do not use `role="tablist"` inside the demo — `surface-system.css` paints it with the light canvas colour.
+- `fetch_website` screenshots of the preview origin are cached per URL; append a fresh query string (`?v=N`, optionally `#section`) to see edits. The editor iframe was hidden this session, so animations were verified by static capture only.
+- Applying the demo to the live site is NOT authorised yet; wait for the owner's explicit approval.
+
 ## Latest Phase 19 AI support foundation (2026-09-20)
 - Read `docs/base44-upgrade/PHASE_19_30_AI_SUPPORT_FOUNDATION.md` and current status. Documentation only: the repository has NO AI provider dependency, no AI env value, no embeddings/pgvector and no conversation table, so the contract's "document setup before live execution" path applies. STOP before Phase 20; do not repeat the audit.
 - Phase 20 is BLOCKED until the owner supplies a server-only provider key. This phase deliberately did NOT request credentials (earlier deferral stands) and no placeholder would make inference work. Never put an AI credential in `NEXT_PUBLIC_*`.
