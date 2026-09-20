@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Site-wide Juspay theme layer (2026-09-21)
+- `website/src/app/juspay-site.css` (imported from `globals.css`) retunes tokens under `.juspay-site`, applied with `dark` on the `PublicSiteFrame` shell, so EVERY public/account page is obsidian `#080808` + `#3079EA`. It replaces the legacy rainbow jewel cards (`accent-surfaces.css`) with obsidian glass faces, turns white `.action-control` pills into dark capsules with blue icon beads, repaints tinted form/table panels, and adds a homepage-only 3D layer (ambient aurora, perspective card lift) under `[data-home-page]`. Selectors use doubled `.juspay-site.juspay-site` because the `.dark` token block would otherwise win on specificity.
+- Footer is deliberately excluded (`:not(footer *)`) — its white CTA band and blue field stay as-is per owner request.
+- Hero top padding in `juspay-demo.module.css` is 92px (56px on small screens) now that the header is sticky.
+
 ## Site-wide Juspay-style header (2026-09-21)
 - Every public/account route now renders `components/site/SiteHeader.tsx` (+ `site-header.module.css`) instead of `MarketingHeader`/`BottomNavigation`: a sticky dark floating pill (brand, CMS header links, services hover panel, Client Login, settings CTA) that collapses below 1024px to a compact bar with a full-screen drawer. Portal/session logic is the same code as before (account when signed in, `PortalLoginModal` otherwise). `(public)/layout.tsx` also loads `getServicesIndex()` for the panel.
 - `reference.module.css`: `.headerFrame` is now `position: sticky; top: 0` with the obsidian background, and `.footerFrame` no longer reserves bottom-dock clearance (the dock is gone). `MarketingHeader`/`BottomNavigation` remain in the repo but are unmounted on public routes.

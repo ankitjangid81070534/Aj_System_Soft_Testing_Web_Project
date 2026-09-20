@@ -23,6 +23,13 @@
   --color-brand-700: #7fb0f6;
   --color-on-brand: #ffffff;
 
+  --action-accent-primary: #1d5fc4;
+  --action-accent-primary-light: #a8ccff;
+  --action-accent-secondary: #2a6fd6;
+  --action-accent-secondary-light: #9cc4fb;
+  --action-accent-quiet: #2a2c31;
+  --action-accent-quiet-light: #c7cdd8;
+
   --aurora-a: rgb(48 121 234 / 0.22);
   --aurora-b: rgb(48 121 234 / 0.12);
   --aurora-c: rgb(0 180 10 / 0.1);
@@ -53,6 +60,72 @@
   -webkit-backdrop-filter: blur(18px);
 }
 
+/* ---- Cards: replace the legacy rainbow "jewel" faces with obsidian glass ---
+   Same markup and accent classes, only the painted surface changes.        */
+.juspay-site.juspay-site :is(.card-3d, .card-surface, .card-lift, .reference-card):not(footer *) {
+  --card-accent: #121316;
+  --card-light: rgba(48, 121, 234, 0.55);
+  --color-ink: #ffffff;
+  --color-ink-soft: #e6e5e5;
+  --color-ink-muted: #b1b0b6;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-strong: #353639;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(48, 121, 234, 0.16), transparent 58%),
+    linear-gradient(155deg, #16171b, #101114);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 40px -24px rgba(0, 0, 0, 0.9);
+  transform-style: preserve-3d;
+}
+.juspay-site.juspay-site
+  :is(.card-3d, .card-surface, .card-lift, .reference-card):not(footer *)
+  :is(h3, h4, p, small, a) {
+  text-shadow: none;
+}
+.juspay-site.juspay-site .icon-tile:not(footer *) {
+  color: #7fb0f6;
+  background: linear-gradient(145deg, rgba(48, 121, 234, 0.28), rgba(48, 121, 234, 0.08));
+  border: 1px solid rgba(48, 121, 234, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+/* Softly tinted form / table panels also become obsidian */
+.juspay-site.juspay-site main :where(.rounded-2xl, .rounded-3xl).border.bg-surface:not(footer *) {
+  background: linear-gradient(140deg, rgba(48, 121, 234, 0.07), #121316 70%);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 44px -28px rgba(0, 0, 0, 0.9);
+}
+
+/* ---- Advanced 3D depth on hover (desktop pointers only) ----------------- */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .juspay-site.juspay-site
+    :is(.card-3d, .card-lift, .reference-card):not(footer *):not(:has(form, input, textarea, select, table)):hover {
+    transform: translateY(-6px) scale(1.012);
+    border-color: rgba(48, 121, 234, 0.5);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 0 1px rgba(48, 121, 234, 0.25),
+      0 30px 70px -30px rgba(48, 121, 234, 0.45);
+  }
+}
+
+/* ---- Pills: dark Juspay capsules instead of white buttons -------------- */
+.juspay-site.juspay-site .action-control:not(footer *) {
+  --action-ink: #ffffff;
+  --action-muted: #b1b0b6;
+  --action-border: rgba(255, 255, 255, 0.14);
+  --action-face: linear-gradient(155deg, #1c1d21, #121316);
+  --action-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 24px -16px rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+.juspay-site.juspay-site .action-control.bg-brand-gradient:not(footer *) {
+  background-image: linear-gradient(160deg, #3079ea, #0561e2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 14px 30px -16px rgba(48, 121, 234, 0.75);
+}
+
 /* Light pill faces keep their dark ink, so labels stay readable */
 .juspay-site.juspay-site .action-control.action-secondary,
 .juspay-site.juspay-site .action-control.action-outline,
@@ -68,4 +141,43 @@
     background-color 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
     border-color 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
     transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ============================================================================
+   Homepage 3D depth layer — scoped to the home shell only.
+   Adds an ambient blue aurora, a perspective grid glow and true 3D card lift
+   on top of the existing homepage sections (no markup or content changes).
+   ========================================================================== */
+.juspay-site[data-home-page] {
+  perspective: 1600px;
+}
+.juspay-site[data-home-page]::before {
+  content: "";
+  position: fixed;
+  inset: -20% -10% auto -10%;
+  height: 70vh;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 22% 10%, rgba(48, 121, 234, 0.2), transparent 60%),
+    radial-gradient(ellipse at 78% 0%, rgba(5, 97, 226, 0.14), transparent 62%);
+  filter: blur(10px);
+  animation: jsAurora 18s ease-in-out infinite alternate;
+}
+.juspay-site[data-home-page] > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes jsAurora {
+  from { transform: translate3d(-2%, 0, 0) scale(1); opacity: 0.85; }
+  to { transform: translate3d(2%, 2%, 0) scale(1.08); opacity: 1; }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .juspay-site[data-home-page] :is(.card-3d, .card-lift, .reference-card):hover {
+    transform: perspective(900px) translateY(-8px) rotateX(3deg) rotateY(-3deg) scale(1.015);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .juspay-site[data-home-page]::before { animation: none; }
 }

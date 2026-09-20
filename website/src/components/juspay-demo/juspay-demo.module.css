@@ -647,8 +647,8 @@
 /* ---- Hero --------------------------------------------------------------- */
 .hero {
   position: relative;
-  padding: 200px 0 100px;
-  min-height: 100vh;
+  padding: 92px 0 100px;
+  min-height: min(100vh, 860px);
   display: flex;
   align-items: center;
 }
@@ -1613,7 +1613,7 @@
     display: none;
   }
   .hero {
-    padding-top: 140px;
+    padding-top: 56px;
   }
   .heroTitle {
     font-size: 42px;
