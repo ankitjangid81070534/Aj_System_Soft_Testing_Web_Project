@@ -1,0 +1,71 @@
+/* ============================================================================
+   Juspay-style site theme (reference: juspay.io/in).
+   Applied to every public / account page through PublicSiteFrame, together
+   with the existing `.dark` class so every component keeps its dark styling.
+   This file only retunes design tokens + a few shared surfaces — no markup,
+   content or logic changes, so every page keeps its own structure and data.
+   ========================================================================== */
+
+.juspay-site.juspay-site {
+  /* Obsidian canvas with electric-blue accent */
+  --color-canvas: #080808;
+  --color-canvas-raised: #121316;
+  --color-surface: #121316;
+  --color-ink: #ffffff;
+  --color-ink-soft: #e6e5e5;
+  --color-ink-muted: #b1b0b6;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-strong: #353639;
+
+  --color-brand-400: #5f9bf2;
+  --color-brand-500: #3079ea;
+  --color-brand-600: #4b8bf0;
+  --color-brand-700: #7fb0f6;
+  --color-on-brand: #ffffff;
+
+  --aurora-a: rgb(48 121 234 / 0.22);
+  --aurora-b: rgb(48 121 234 / 0.12);
+  --aurora-c: rgb(0 180 10 / 0.1);
+  --grid-line: rgb(255 255 255 / 0.05);
+
+  background-color: var(--color-canvas);
+  color: var(--color-ink-soft);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings: tight Juspay display rhythm */
+.juspay-site.juspay-site :where(h1, h2, h3, h4):not(footer *) {
+  color: #fff;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+/* Shared sections/cards read as obsidian glass instead of light panels */
+.juspay-site.juspay-site :where(section, header):not(footer *) {
+  border-color: var(--color-line);
+}
+.juspay-site.juspay-site :where(.card-3d, .glass):not(footer *) {
+  background: rgba(18, 19, 22, 0.86);
+  border-color: var(--color-line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Light pill faces keep their dark ink, so labels stay readable */
+.juspay-site.juspay-site .action-control.action-secondary,
+.juspay-site.juspay-site .action-control.action-outline,
+.juspay-site.juspay-site .action-control.action-secondary:hover,
+.juspay-site.juspay-site .action-control.action-outline:hover {
+  color: var(--action-ink);
+}
+
+/* Smooth, stable hover transitions across pages */
+.juspay-site.juspay-site :where(a, button) {
+  transition:
+    color 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
