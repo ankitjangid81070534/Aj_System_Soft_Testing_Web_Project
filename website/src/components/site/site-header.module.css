@@ -1,0 +1,259 @@
+/* ============================================================================
+   Site-wide header — Juspay-style floating pill (reference: juspay.io/in).
+   Self-contained dark band + pill so the same navigation looks identical on
+   every page, and collapses to a clean top bar + drawer on mobile.
+   ========================================================================== */
+
+.band {
+  --sh-bg: #080808;
+  --sh-surface: #121316;
+  --sh-line: rgba(255, 255, 255, 0.1);
+  --sh-blue: #3079ea;
+  --sh-text: #e6e5e5;
+  --sh-muted: #b1b0b6;
+
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--sh-bg);
+  padding: 14px 0;
+}
+
+.band a { text-decoration: none; color: inherit; }
+.band button { font: inherit; color: inherit; }
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(1420px, calc(100% - 32px));
+  margin-inline: auto;
+  height: 72px;
+  padding: 0 16px 0 20px;
+  border-radius: 100px;
+  border: 0.5px solid var(--sh-line);
+  background: rgba(18, 19, 22, 0.86);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: var(--sh-text);
+}
+
+/* ---- Brand ------------------------------------------------------------- */
+.brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.brandName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Desktop links ----------------------------------------------------- */
+.links { display: none; align-items: center; gap: 2px; margin-inline: auto; }
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 13px;
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--sh-muted);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+.link:hover, .linkActive { color: #fff; background: rgba(255, 255, 255, 0.06); }
+.link[aria-current="page"] { color: #fff; }
+
+.actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.login {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 0.5px solid var(--sh-line);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sh-text);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.login:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.cta {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--sh-blue);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+.cta:hover { background: #fff; color: #080808; transform: translateY(-1px); }
+.cta svg { transition: transform 0.25s ease; }
+.cta:hover svg { transform: translateX(3px); }
+
+/* ---- Mobile trigger ---------------------------------------------------- */
+.burger {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0.5px solid var(--sh-line);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---- Mega panel (desktop) --------------------------------------------- */
+.mega {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 10px);
+  width: min(1100px, calc(100vw - 48px));
+  padding: 22px;
+  border-radius: 24px;
+  border: 0.5px solid var(--sh-line);
+  background: rgba(10, 10, 11, 0.97);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.megaRow {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  transition: background-color 0.22s ease;
+}
+.megaRow:hover { background: rgba(255, 255, 255, 0.06); }
+.megaIcon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 10px;
+  background: rgba(48, 121, 234, 0.16);
+  color: var(--sh-blue);
+}
+.megaRow strong { display: block; font-size: 14.5px; font-weight: 600; color: #fff; }
+.megaRow small { display: block; margin-top: 3px; font-size: 12.5px; line-height: 1.5; color: var(--sh-muted); }
+
+/* ---- Drawer (mobile) --------------------------------------------------- */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  background: #080808;
+  color: var(--sh-text);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px 16px calc(28px + env(safe-area-inset-bottom));
+}
+.drawerHead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 999px;
+  border: 0.5px solid var(--sh-line);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  cursor: pointer;
+}
+.drawerLinks { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; }
+.drawerLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 0.5px solid var(--sh-line);
+  background: var(--sh-surface);
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.drawerLink[aria-current="page"] { border-color: var(--sh-blue); }
+.drawerLabel {
+  margin: 24px 4px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #777e90;
+}
+.drawerActions { display: grid; gap: 10px; margin-top: 24px; }
+.drawerCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  border-radius: 999px;
+  background: var(--sh-blue);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.drawerLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  border-radius: 999px;
+  border: 0.5px solid rgba(255, 255, 255, 0.85);
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---- Breakpoints ------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .band { padding: 18px 0; }
+  .bar { position: relative; height: 78px; }
+  .links, .login, .cta { display: inline-flex; }
+  .burger { display: none; }
+}
+
+@media (max-width: 400px) {
+  .bar { gap: 10px; padding-left: 14px; }
+  .brandName { font-size: 13.5px; }
+}

@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Site-wide Juspay-style header (2026-09-21)
+- Every public/account route now renders `components/site/SiteHeader.tsx` (+ `site-header.module.css`) instead of `MarketingHeader`/`BottomNavigation`: a sticky dark floating pill (brand, CMS header links, services hover panel, Client Login, settings CTA) that collapses below 1024px to a compact bar with a full-screen drawer. Portal/session logic is the same code as before (account when signed in, `PortalLoginModal` otherwise). `(public)/layout.tsx` also loads `getServicesIndex()` for the panel.
+- `reference.module.css`: `.headerFrame` is now `position: sticky; top: 0` with the obsidian background, and `.footerFrame` no longer reserves bottom-dock clearance (the dock is gone). `MarketingHeader`/`BottomNavigation` remain in the repo but are unmounted on public routes.
+- Verified: 598 tests/67 files, typecheck, `/ /services /projects /about /contact /blog` HTTP 200, desktop + 373px screenshots, real drawer open/close gesture.
+
 ## Juspay-style design demo (2026-09-20)
 - Owner asked for a demo redesign modelled on juspay.io/in before approving any change to the live site. It lives ONLY at `/juspay-demo` (noindex, outside the `(public)` layout, not in the sitemap) — `website/src/app/juspay-demo/page.tsx` + `website/src/components/juspay-demo/*` with a scoped CSS module. The live `/` and shared header/footer are untouched.
 - Reference analysis: obsidian `#080808` canvas, `#121316` surfaces, `#3079EA` blue accent, `#00B40A` status green, muted `#B1B0B6/#777E90`; pill nav + pill 0.5px-border CTAs; grid-lined hero with a 3D core and circuit "pulse" lines; logo marquee; numbers band; stacked scroll cards; device mockup; big footer. Juspay uses General Sans (commercial) — demo loads Plus Jakarta Sans (headings) + Manrope (body) via `next/font/google`, scoped through `--font-jd-*` variables.
