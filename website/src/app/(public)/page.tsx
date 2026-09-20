@@ -5,7 +5,7 @@ import { buildRouteMetadata, HOMEPAGE_TITLE } from "@/lib/seo/metadata";
 import { BRAND } from "@/lib/seo/site";
 import { getHomeContent } from "@/lib/data/home";
 import { getSiteSettings } from "@/lib/data/settings";
-import { HomeExperience } from "@/components/design-preview/HomeExperience";
+import { JuspayHome } from "@/components/juspay-demo/JuspayHome";
 import { getLaunchBenefits } from "@/lib/data/growth";
 
 export const revalidate = 300;
@@ -39,7 +39,7 @@ export default async function HomePage() {
           sameAs: settings?.socialLinks.map((link) => link.url),
         })}
       />
-      <HomeExperience content={{ services, projects, team, testimonials, posts }} benefits={benefits} />
+      <JuspayHome content={{ services, projects, team, testimonials, posts }} settings={settings} benefits={benefits} />
     </>
   );
 }
