@@ -15,6 +15,7 @@ import { DemoTriad } from "./DemoTriad";
 import { DemoServices } from "./DemoServices";
 import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
+import { DemoGallery } from "./DemoGallery";
 import { DemoProof } from "./DemoProof";
 import { DemoCta } from "./DemoCta";
 import { juspayFontClassName } from "./fonts";
@@ -64,6 +65,7 @@ export function JuspayHome({
       <DemoServices services={content.services} />
       <DemoProcess />
       <DemoIndustries />
+      <DemoGallery projects={content.projects} />
       <DemoProof content={content} />
       <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
     </div>
