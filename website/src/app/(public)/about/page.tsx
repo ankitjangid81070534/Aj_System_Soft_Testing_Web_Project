@@ -120,6 +120,8 @@ export default async function AboutPage() {
           eyebrow="About us"
           title={BRAND.primaryName}
           description={BRAND.tagline}
+          scene="stack"
+          tone="cyan"
         />
 
         <section className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 sm:py-16">

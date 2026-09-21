@@ -50,6 +50,9 @@ export default async function BlogIndexPage({
         ]}
         eyebrow="Insights"
         title="Notes from the workbench"
+        accent="workbench"
+        scene="pages"
+        tone="teal"
         description="Practical articles on planning software, choosing platforms and running business systems — written by the team that builds them."
       />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">

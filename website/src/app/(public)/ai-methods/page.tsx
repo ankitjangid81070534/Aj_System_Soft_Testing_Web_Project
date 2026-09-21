@@ -29,14 +29,19 @@ export default async function AiMethodsPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "AI Methods", href: "/ai-methods" }]}
         eyebrow="AI Methods"
         title="Explore AI methods and resources"
+        accent="AI methods"
+        scene="nodes"
+        tone="rose"
         description="Browse the resources shared by AJ System Soft Technology."
       />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
         {methods.length > 0 ? (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {methods.map(method => (
-              <article key={method.id} className="card-3d flex flex-col gap-4 rounded-2xl p-6">
-                <Sparkles aria-hidden="true" className="h-6 w-6 text-brand-600" />
+              <article key={method.id} className="group card-3d flex flex-col gap-4 rounded-2xl p-6" data-tilt>
+                <span aria-hidden="true" className="icon-tile h-12 w-12">
+                  <Sparkles className="h-5 w-5" />
+                </span>
                 <h2 className="text-lg font-semibold text-ink">{method.title}</h2>
                 {method.description ? <p className="text-sm leading-relaxed text-ink-muted">{method.description}</p> : null}
                 <a href={method.url} target="_blank" rel="noopener noreferrer"

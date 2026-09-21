@@ -106,7 +106,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <div className="flex items-center gap-3">
               <span
                 aria-hidden="true"
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-100 bg-brand-50 text-brand-600"
+                className="icon-tile h-12 w-12"
               >
                 {renderIcon(service.icon, "h-6 w-6")}
               </span>

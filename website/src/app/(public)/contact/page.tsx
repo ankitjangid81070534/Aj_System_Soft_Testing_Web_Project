@@ -58,11 +58,14 @@ export default async function ContactPage() {
         ]}
         eyebrow="Contact"
         title="Tell us what you need built"
+        accent="need built"
+        scene="card"
+        tone="green"
         description="Send a message, request a consultation, or reach us directly — every genuine enquiry gets a reply."
       />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
         <div className="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-start">
-          <div className="min-w-0 rounded-3xl border border-line bg-surface p-5 shadow-e1 sm:p-8">
+          <div className="min-w-0 rounded-3xl border border-line border-t-[3px] border-t-brand-500 bg-surface p-5 shadow-e1 sm:p-8">
             <h2 className="text-lg font-semibold tracking-tight text-ink">Send a message</h2>
             <p className="mt-1 mb-6 text-sm text-ink-muted">
               Brief is fine — we will ask the right follow-up questions.
