@@ -88,6 +88,9 @@ export default async function ReviewsPage() {
         ]}
         eyebrow="Verified Client Feedback"
         title="Real reviews from real software projects"
+        accent="real software projects"
+        scene="tiles"
+        tone="purple"
         description="All reviews on this page are submitted exclusively by verified clients of AJ System Soft Technology and moderated for authenticity."
       >
         <div className="flex flex-wrap gap-3 pt-1">

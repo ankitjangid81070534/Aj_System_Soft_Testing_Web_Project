@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Homepage journey strip (2026-09-22)
+- `components/juspay-demo/DemoJourney.tsx` (+ `demo-journey.module.css`) renders the "requirement → paid" story on `/` between DemoStack and DemoWhyUs: four steps (infrastructure server rack, client consultation with a 3D figure and chat bubbles, delivered website/mobile UI, green paid confirmation), rebuilt from an owner-supplied Juspay video as pure CSS 3D — no video, images or JS. Art is `aria-hidden`; captions carry all meaning, and no client/price/stat is invented.
+- Cards carry `data-tilt` (site-wide TiltEngine). Reduced motion stops every animation; 1023px → 2 columns, 640px → 1 column with the connector line hidden.
+- Lenis smooth scroll ignores programmatic `window.scrollTo` in the preview iframe, so this section was reviewed via a throwaway `/tmp-journey-check` route captured with `fetch_website` and then deleted — do not commit such a route.
+
 ## Premium motion layer (2026-09-21)
 - `components/motion/SmoothScroll.tsx` mounts **Lenis** (same library juspay.io uses) from `PublicSiteFrame` on every public/account route: wheel-only easing (`lerp 0.085`), native scroll stays authoritative, `anchors: {offset:-96}`; off for reduced motion and `pointer: coarse`. It adds `html.has-smooth-scroll` which forces `scroll-behavior: auto` (Lenis CSS lives in `juspay-site.css`, not imported from the package).
 - `components/motion/ScrollScene.tsx` (+ `scroll-scene.module.css`) is a scroll-progress wrapper: one shared passive scroll/resize listener writes `--sp` 0→1 on registered wrappers; CSS turns it into a perspective move per variant (`rise`, `zoom`, `swing`, `drift`). Content is settled by default (no JS / reduced motion). Homepage grids each use a different variant: Platforms/Services/Triad rise, Stack/Industries swing, WhyUs/Results zoom, Gallery drift. Pass the grid class as `className` so the wrapper *is* the grid.

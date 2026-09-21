@@ -124,6 +124,49 @@ html.lenis body {
   -webkit-backdrop-filter: blur(18px);
 }
 
+/* 3D glass icon tiles (juspay.io/in/tokenisation style): bevelled gradient
+   face, inner highlight, coloured glow, gentle lift + turn on card hover.
+   Uses the card's existing accent (`--card-accent`) so every card keeps its
+   own colour; falls back to brand blue. */
+.juspay-site.juspay-site .icon-tile:not(footer *) {
+  --tile: var(--card-accent, var(--color-brand-500));
+  position: relative;
+  color: #fff;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--tile) 55%, rgba(255, 255, 255, 0.25));
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.22), transparent 55%),
+    linear-gradient(160deg, color-mix(in srgb, var(--tile) 85%, #fff), color-mix(in srgb, var(--tile) 70%, #000));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.35),
+    0 10px 24px -10px color-mix(in srgb, var(--tile) 70%, transparent),
+    0 1px 0 rgba(0, 0, 0, 0.6);
+  transform: perspective(600px) rotateX(0) rotateY(0) translateZ(0);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.juspay-site.juspay-site .icon-tile:not(footer *) > svg {
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+}
+.juspay-site.juspay-site .group:hover .icon-tile:not(footer *),
+.juspay-site.juspay-site [data-tilt]:hover .icon-tile:not(footer *) {
+  transform: perspective(600px) rotateX(10deg) rotateY(-12deg) translateZ(14px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.35),
+    0 22px 36px -12px color-mix(in srgb, var(--tile) 85%, transparent),
+    0 0 0 6px color-mix(in srgb, var(--tile) 14%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .juspay-site.juspay-site .icon-tile:not(footer *),
+  .juspay-site.juspay-site .group:hover .icon-tile:not(footer *) {
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Light pill faces keep their dark ink, so labels stay readable */
 .juspay-site.juspay-site .action-control.action-secondary,
 .juspay-site.juspay-site .action-control.action-outline,

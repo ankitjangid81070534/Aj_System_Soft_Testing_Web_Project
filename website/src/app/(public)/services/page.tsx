@@ -39,6 +39,9 @@ export default async function ServicesPage() {
         ]}
         eyebrow="Services"
         title="Software services built around your requirements"
+        accent="built around your requirements"
+        scene="core"
+        tone="blue"
         description="Pick the closest match below — or simply tell us your problem and we will propose the right approach. Every engagement starts with your requirements, not our price list."
       >
         <Link

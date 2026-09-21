@@ -43,6 +43,9 @@ export default async function TeamPage() {
         ]}
         eyebrow="Our team"
         title="The people behind AJS Technology"
+        accent="AJS Technology"
+        scene="orbit"
+        tone="amber"
         description="The team that will understand your requirements, build your software and stay around to support it."
       />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">

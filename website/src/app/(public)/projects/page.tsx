@@ -50,6 +50,9 @@ export default async function ProjectsPage({
         ]}
         eyebrow="Portfolio"
         title="Projects & case studies"
+        accent="case studies"
+        scene="rack"
+        tone="indigo"
         description="A selection of the software we have delivered. Confidential engagements stay private by design — clients decide what is shown."
       />
     <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
