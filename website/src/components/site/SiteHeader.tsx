@@ -13,6 +13,7 @@ import { renderIcon } from "@/components/site/icons";
 import { PortalLoginModal } from "@/components/portal/PortalLoginModal";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { useSmartHeader } from "./useSmartHeader";
 import styles from "./site-header.module.css";
 
 /**
@@ -52,6 +53,8 @@ export function SiteHeader({
   const [portalOpen, setPortalOpen] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
   const closeTimer = useRef<number | null>(null);
+  // Hide on scroll down, return on scroll up; never hide while a menu is open.
+  const { hidden, scrolled } = useSmartHeader(drawerOpen || servicesOpen || portalOpen);
 
   useEffect(() => {
     let active = true;
@@ -139,7 +142,7 @@ export function SiteHeader({
       };
 
   return (
-    <header className={styles.band} data-site-nav>
+    <header className={styles.band} data-site-nav data-hidden={hidden || undefined} data-scrolled={scrolled || undefined}>
       <ScrollProgress />
       <div className={styles.bar}>
         <Link href="/" className={styles.brand} aria-label={`${safeBrandName} — home`}>

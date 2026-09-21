@@ -8,9 +8,9 @@
 
 .juspay-site.juspay-site {
   /* Obsidian canvas with electric-blue accent */
-  --color-canvas: #080808;
-  --color-canvas-raised: #121316;
-  --color-surface: #121316;
+  --color-canvas: #000000;
+  --color-canvas-raised: #0d0d10;
+  --color-surface: #0d0d10;
   --color-ink: #ffffff;
   --color-ink-soft: #e6e5e5;
   --color-ink-muted: #b1b0b6;
@@ -26,7 +26,8 @@
   --aurora-a: rgb(48 121 234 / 0.22);
   --aurora-b: rgb(48 121 234 / 0.12);
   --aurora-c: rgb(0 180 10 / 0.1);
-  --grid-line: rgb(255 255 255 / 0.05);
+  /* No small "box line" grids anywhere — depth comes from soft radial glows. */
+  --grid-line: transparent;
 
   background-color: var(--color-canvas);
   color: var(--color-ink-soft);
@@ -47,7 +48,7 @@
   border-color: var(--color-line);
 }
 .juspay-site.juspay-site :where(.card-3d, .glass):not(footer *) {
-  background: rgba(18, 19, 22, 0.86);
+  background: rgba(13, 13, 16, 0.86);
   border-color: var(--color-line);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);

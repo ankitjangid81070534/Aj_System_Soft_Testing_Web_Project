@@ -1,9 +1,6 @@
 import type { HomeContent } from "@/lib/data/home";
 import type { SiteSettings } from "@/lib/data/settings";
 import type { LaunchBenefit } from "@/lib/data/growth";
-import { PlatformsShowcase } from "@/components/site/PlatformsShowcase";
-import { TechCapabilities } from "@/components/site/TechCapabilities";
-import { WhyUs } from "@/components/site/WhyUs";
 import { DemoHero } from "./DemoHero";
 import { DemoMarquee } from "./DemoMarquee";
 import { DemoPlanet } from "./DemoPlanet";
@@ -13,6 +10,9 @@ import { DemoBuilder } from "./DemoBuilder";
 import { DemoRouting } from "./DemoRouting";
 import { DemoTriad } from "./DemoTriad";
 import { DemoServices } from "./DemoServices";
+import { DemoPlatforms } from "./DemoPlatforms";
+import { DemoStack } from "./DemoStack";
+import { DemoWhyUs } from "./DemoWhyUs";
 import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
 import { DemoGallery } from "./DemoGallery";
@@ -28,7 +28,7 @@ import styles from "./juspay-demo.module.css";
  *
  * Every unit of the previous homepage is still here, fed by the same readers:
  * hero + CTA settings, launch benefits (triad), all published services, the
- * platforms / technology / why-us sections, delivery process, industries, and
+ * platforms / technology / why-us sections (dark Juspay-style grids), delivery process, industries, and
  * the real proof blocks (projects, reviews, team, articles) that hide when
  * the CMS has no records. Nothing is invented and nothing is dropped.
  */
@@ -58,10 +58,10 @@ export function JuspayHome({
         <DemoBuilder />
         <DemoRouting />
         <DemoTriad benefits={benefits} />
-        <PlatformsShowcase />
-        <TechCapabilities />
-        <WhyUs />
       </div>
+      <DemoPlatforms />
+      <DemoStack />
+      <DemoWhyUs brandName={brandName} />
       <DemoServices services={content.services} />
       <DemoProcess />
       <DemoIndustries />
