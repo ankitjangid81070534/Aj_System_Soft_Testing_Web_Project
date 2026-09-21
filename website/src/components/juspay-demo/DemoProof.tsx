@@ -8,55 +8,18 @@ import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
 /**
- * Real proof only: public projects, verified reviews, published team members
- * and articles render when the CMS has them, and are hidden otherwise — the
+ * Real proof only: verified reviews, published team members and articles
+ * (projects live in `DemoGallery`) render when the CMS has them, and are hidden otherwise — the
  * same rule the live homepage follows. Nothing here is invented.
  */
 export function DemoProof({ content }: { content: HomeContent }) {
-  const { projects, testimonials, team, posts } = content;
-  if (projects.length === 0 && testimonials.length === 0 && team.length === 0 && posts.length === 0) {
+  const { testimonials, team, posts } = content;
+  if (testimonials.length === 0 && team.length === 0 && posts.length === 0) {
     return null;
   }
 
   return (
     <>
-      {projects.length > 0 ? (
-        <section id="projects" className={styles.section}>
-          <div className={styles.container}>
-            <div className={styles.sectionHead}>
-              <Reveal>
-                <span className={styles.eyebrowPlain}>Projects</span>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className={styles.h2}>
-                  Delivered <span className={styles.blue}>work</span>
-                </h2>
-              </Reveal>
-            </div>
-            <div className={styles.cardGrid}>
-              {projects.map((project, index) => (
-                <Reveal key={project.id} delay={index * 0.06}>
-                  <Link href={`/projects/${project.slug}`} className={styles.darkCard}>
-                    <span className={`${styles.cardStripe} ${toneFor(index)}`} aria-hidden />
-                    {project.coverUrl ? (
-                      <span className={styles.cardCover}>
-                        <Image src={project.coverUrl} alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-                      </span>
-                    ) : null}
-                    <span className={styles.cardMeta}>
-                      {[project.platformType, project.industry].filter(Boolean).join(" · ")}
-                    </span>
-                    <h3>{project.name}</h3>
-                    <p>{project.summary}</p>
-                    {project.clientName ? <small>{project.clientName}</small> : null}
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
-
       {testimonials.length > 0 ? (
         <section id="reviews" className={styles.section}>
           <div className={styles.container}>

@@ -1,5 +1,9 @@
 # Base44 Dev Environment
 
+## Homepage project gallery (2026-09-21)
+- `components/juspay-demo/DemoGallery.tsx` (+ `demo-gallery.module.css`) renders the `#projects` section on `/` between Industries and DemoProof: featured project first as a 2×2 image-led tile, remaining projects as a mosaic, `View all projects` pill → `/projects`. DemoProof no longer renders projects (reviews/team/articles only). Mobile stacks to one column.
+- Still hides with zero CMS projects (no fallback records rule). Verified the layout with a throwaway route + sample data via `fetch_website` on the public origin, then deleted it — do not commit sample projects. 598 tests + typecheck + lint pass.
+
 ## Site-wide Juspay-style header (2026-09-21)
 - Every public/account route now renders `components/site/SiteHeader.tsx` (+ `site-header.module.css`) instead of `MarketingHeader`/`BottomNavigation`: a sticky dark floating pill (brand, CMS header links, services hover panel, Client Login, settings CTA) that collapses below 1024px to a compact bar with a full-screen drawer. Portal/session logic is the same code as before (account when signed in, `PortalLoginModal` otherwise). `(public)/layout.tsx` also loads `getServicesIndex()` for the panel.
 - `reference.module.css`: `.headerFrame` is now `position: sticky; top: 0` with the obsidian background, and `.footerFrame` no longer reserves bottom-dock clearance (the dock is gone). `MarketingHeader`/`BottomNavigation` remain in the repo but are unmounted on public routes.
