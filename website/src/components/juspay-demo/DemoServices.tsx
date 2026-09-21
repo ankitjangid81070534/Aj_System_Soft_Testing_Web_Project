@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import type { ServiceTeaser } from "@/lib/data/mappers";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
@@ -31,10 +32,10 @@ export function DemoServices({ services }: { services: ServiceTeaser[] }) {
             </p>
           </Reveal>
         </div>
-        <div className={styles.cardGrid}>
+        <ScrollScene variant="rise" className={styles.cardGrid}>
           {services.map((service, index) => (
             <Reveal key={service.id} delay={index * 0.06}>
-              <Link href={`/services/${service.slug}`} className={styles.darkCard}>
+              <Link href={`/services/${service.slug}`} className={styles.darkCard} data-tilt>
                 <span className={`${styles.cardStripe} ${toneFor(index)}`} aria-hidden />
                 <span className={styles.cardMeta}>{service.category}</span>
                 <h3>{service.name}</h3>
@@ -45,7 +46,7 @@ export function DemoServices({ services }: { services: ServiceTeaser[] }) {
               </Link>
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
         <Reveal delay={0.1}>
           <div className={styles.heroActions} style={{ justifyContent: "center", marginTop: 40 }}>
             <Link href="/services" className={`${styles.pill} ${styles.pillBlue}`}>

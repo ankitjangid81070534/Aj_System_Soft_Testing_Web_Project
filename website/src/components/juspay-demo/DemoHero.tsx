@@ -20,8 +20,9 @@ const CHIPS = [
 
 /**
  * Hero: eyebrow, two-line headline with a blue lead word, the live site's own
- * description and CTAs on the left; a grid-framed 3D core that tilts with the
- * pointer on the right — mirroring the Juspay landing composition.
+ * description and CTAs on the left; a 3D core that tilts with the pointer on
+ * the right — mirroring the Juspay landing composition. The background is a
+ * smooth black canvas with one soft glow (no grid lines).
  */
 export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ctaLabel: string; brandName: string }) {
   const reduce = useReducedMotion();
@@ -45,7 +46,6 @@ export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ct
 
   return (
     <section className={styles.hero} onMouseMove={onMove} onMouseLeave={onLeave}>
-      <div className={styles.heroGrid} aria-hidden />
       <div className={styles.heroGlow} aria-hidden />
       <div className={`${styles.container} ${styles.heroInner}`}>
         <div className={styles.heroCopy}>

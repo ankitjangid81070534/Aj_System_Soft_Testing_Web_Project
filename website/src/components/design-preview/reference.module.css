@@ -33,6 +33,11 @@
 .headerFrame[data-scene-tone="dark"] { background: #0b0b0b; }
 /* Juspay homepage: the fixed pill nav needs no masthead spacer or white band above the obsidian hero. */
 .page .headerFrame, :global(.dark) .page .headerFrame { background: #080808; }
+/* Site-wide "ghost" header: the frame no longer paints a band or sticks — the
+   SiteHeader inside owns stickiness, hide-on-scroll and its frosted pill. */
+.headerFrame[data-site-header], .page .headerFrame[data-site-header], :global(.dark) .page .headerFrame[data-site-header], .headerFrame[data-site-header][data-scene-tone="dark"] { position: static; background: transparent; }
+/* Homepage canvas: pure black with a single soft crown of light behind the header + hero (no grid). */
+.page[data-home-page], :global(.dark) .page[data-home-page] { background-color: #000; background-image: radial-gradient(1200px 760px at 50% -220px, #171a3d 0%, rgba(23, 26, 61, 0.55) 30%, rgba(0, 0, 0, 0) 72%); background-repeat: no-repeat; }
 @media (min-width: 1024px) { .page .headerFrame [data-brand-header] { height: 0; min-height: 0; padding-block: 0; } }
 .headerFrame[data-scene-tone="dark"] > header { --color-ink: #f4ecff; --color-ink-muted: #c5b5d8; --color-ink-soft: #e2d3f3; }
 .headerFrame[data-scene-tone="dark"] :global(.glass-strong) { background: #0b0b0be8; transition: background-color 450ms ease; }

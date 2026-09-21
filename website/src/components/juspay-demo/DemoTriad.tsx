@@ -1,6 +1,7 @@
 import { LifeBuoy, LayoutDashboard, Search, Sliders, Smartphone, Sparkles, Zap, type LucideIcon } from "lucide-react";
 import type { LaunchBenefit } from "@/lib/data/growth";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 import light from "./demo-light.module.css";
@@ -38,12 +39,12 @@ export function DemoTriad({ benefits }: { benefits: LaunchBenefit[] }) {
             default.
           </p>
         </Reveal>
-        <div className={light.triad}>
+        <ScrollScene variant="rise" className={light.triad}>
           {benefits.map((benefit, index) => {
             const Icon = ICONS[benefit.icon ?? ""] ?? Zap;
             return (
               <Reveal key={benefit.id} delay={index * 0.08}>
-                <article className={light.triadCard}>
+                <article className={light.triadCard} data-tilt>
                   <div className={light.triadThumb}>
                     <span className={`${light.triadIcon} ${toneFor(index)}`}>
                       <Icon size={26} />
@@ -66,7 +67,7 @@ export function DemoTriad({ benefits }: { benefits: LaunchBenefit[] }) {
               </Reveal>
             );
           })}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

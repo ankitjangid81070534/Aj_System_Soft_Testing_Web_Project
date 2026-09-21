@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Briefcase, ChevronRight, Factory, GraduationCap, Hotel, Pill, Stethoscope, Store, Truck } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
@@ -33,10 +34,10 @@ export function DemoIndustries() {
             <p className={styles.lead}>Every trade has its own rules, documents and workflows. We build around them.</p>
           </Reveal>
         </div>
-        <div className={styles.industryGrid}>
+        <ScrollScene variant="swing" className={styles.industryGrid}>
           {INDUSTRIES.map(({ Icon, label, workflow }, index) => (
             <Reveal key={label} delay={index * 0.05}>
-              <div className={styles.industry}>
+              <div className={styles.industry} data-tilt>
                 <span className={`${styles.iconTile} ${toneFor(index)}`} aria-hidden>
                   <Icon size={20} />
                 </span>
@@ -45,7 +46,7 @@ export function DemoIndustries() {
               </div>
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
         <Reveal delay={0.2}>
           <div className={styles.inlineLinks}>
             <Link href="/services#service-matcher">

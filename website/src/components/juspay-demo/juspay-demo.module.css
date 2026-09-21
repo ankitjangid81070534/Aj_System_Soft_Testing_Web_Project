@@ -8,8 +8,8 @@
    ========================================================================== */
 
 .page {
-  --jd-bg: #080808;
-  --jd-surface: #121316;
+  --jd-bg: #000000;
+  --jd-surface: #0d0d10;
   --jd-surface-2: #1c1c1c;
   --jd-line: rgba(255, 255, 255, 0.1);
   --jd-line-strong: #353639;
@@ -34,6 +34,12 @@
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
+}
+/* On the live homepage the shell paints the black canvas + crown of light,
+   so the home wrapper stays transparent and the glow shows behind the header. */
+.page[data-juspay-home] {
+  background: transparent;
+  min-height: 0;
 }
 
 .page :where(h1, h2, h3) {
@@ -63,8 +69,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  max-width: 100%;
   padding: 8px 14px;
-  border-radius: 4px;
+  border-radius: 999px;
+  line-height: 1.4;
   background: var(--jd-blue-soft);
   color: var(--jd-blue);
   font-size: 13px;
@@ -647,21 +655,11 @@
 /* ---- Hero --------------------------------------------------------------- */
 .hero {
   position: relative;
-  padding: 200px 0 100px;
-  min-height: 100vh;
+  padding: 72px 0 110px;
+  min-height: calc(100svh - 120px);
   display: flex;
   align-items: center;
-}
-.heroGrid {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(60% 70% at 40% 60%, #000 20%, transparent 80%);
-  -webkit-mask-image: radial-gradient(60% 70% at 40% 60%, #000 20%, transparent 80%);
+  overflow: hidden;
 }
 .heroGlow {
   position: absolute;
@@ -754,11 +752,9 @@
 .coreFrame {
   position: absolute;
   inset: 4%;
-  border-radius: 14px;
-  border: 0.5px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px) 0 0 / 25% 25%,
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) 0 0 / 25% 25%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(circle at 50% 50%, rgba(48, 121, 234, 0.1), rgba(0, 0, 0, 0) 70%);
 }
 .circuit {
   position: absolute;
@@ -1023,7 +1019,7 @@
   position: relative;
   padding: 100px 0 0;
   background:
-    radial-gradient(120% 80% at 50% 100%, #0a1f4d 0%, #061127 45%, #080808 100%);
+    radial-gradient(120% 80% at 50% 100%, #0a1f4d 0%, #061127 45%, #000000 100%);
   overflow: hidden;
 }
 .planetStars {
@@ -1149,7 +1145,7 @@
   right: 0;
   bottom: -1px;
   height: 120px;
-  background: linear-gradient(180deg, transparent, #080808);
+  background: linear-gradient(180deg, transparent, #000000);
   pointer-events: none;
 }
 
@@ -1248,6 +1244,9 @@
   color: var(--jd-muted);
   font-size: 14.5px;
   line-height: 1.55;
+}
+.industry .heroTags {
+  margin-top: 14px;
 }
 
 /* Proof cards ----------------------------------------------------------------- */
@@ -1613,10 +1612,46 @@
     display: none;
   }
   .hero {
-    padding-top: 140px;
+    padding: 40px 0 72px;
+    min-height: 0;
   }
   .heroTitle {
-    font-size: 42px;
+    font-size: clamp(2.25rem, 11vw, 3rem);
+    max-width: none;
+  }
+  .heroLead {
+    font-size: 17px;
+  }
+  .heroActions {
+    width: 100%;
+  }
+  .heroActions .pill {
+    width: 100%;
+    justify-content: center;
+    height: 56px;
+    font-size: 16px;
+  }
+  .eyebrow {
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+  }
+  .coreStage {
+    max-width: 340px;
+  }
+  .chip {
+    display: none;
+  }
+  .sectionHead {
+    margin-bottom: 40px;
+  }
+  .h2 {
+    font-size: clamp(1.9rem, 8.5vw, 2.6rem);
+  }
+  .lead {
+    font-size: 16.5px;
+  }
+  .container {
+    width: min(1320px, calc(100% - 40px));
   }
   .section {
     padding: 96px 0;

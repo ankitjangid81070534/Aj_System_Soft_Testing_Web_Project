@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight, ChevronRight, Star } from "lucide-react";
 import type { ProjectTeaser } from "@/lib/data/mappers";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 import gallery from "./demo-gallery.module.css";
@@ -46,7 +47,7 @@ export function DemoGallery({ projects }: { projects: ProjectTeaser[] }) {
           </Reveal>
         </div>
 
-        <div className={gallery.grid}>
+        <ScrollScene variant="drift" className={gallery.grid}>
           <Reveal className={gallery.leadCell}>
             <GalleryTile project={lead} index={0} lead />
           </Reveal>
@@ -55,7 +56,7 @@ export function DemoGallery({ projects }: { projects: ProjectTeaser[] }) {
               <GalleryTile project={project} index={index + 1} />
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

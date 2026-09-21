@@ -8,9 +8,9 @@
 
 .juspay-site.juspay-site {
   /* Obsidian canvas with electric-blue accent */
-  --color-canvas: #080808;
-  --color-canvas-raised: #121316;
-  --color-surface: #121316;
+  --color-canvas: #000000;
+  --color-canvas-raised: #0d0d10;
+  --color-surface: #0d0d10;
   --color-ink: #ffffff;
   --color-ink-soft: #e6e5e5;
   --color-ink-muted: #b1b0b6;
@@ -26,7 +26,8 @@
   --aurora-a: rgb(48 121 234 / 0.22);
   --aurora-b: rgb(48 121 234 / 0.12);
   --aurora-c: rgb(0 180 10 / 0.1);
-  --grid-line: rgb(255 255 255 / 0.05);
+  /* No small "box line" grids anywhere — depth comes from soft radial glows. */
+  --grid-line: transparent;
 
   background-color: var(--color-canvas);
   color: var(--color-ink-soft);
@@ -35,11 +36,81 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Headings: tight Juspay display rhythm */
-.juspay-site.juspay-site :where(h1, h2, h3, h4):not(footer *) {
+/* Headings: tight Juspay display rhythm. Light bands ([data-light-band]) keep
+   their own dark ink — this rule must never repaint them white. */
+.juspay-site.juspay-site :where(h1, h2, h3, h4):not(footer *, [data-light-band] *) {
   color: #fff;
+}
+.juspay-site.juspay-site :where(h1, h2, h3, h4):not(footer *) {
   letter-spacing: -0.03em;
   font-weight: 600;
+  text-wrap: balance;
+}
+/* Professional text rhythm: no orphan words, calm measure for body copy */
+.juspay-site.juspay-site :where(p, li):not(footer *) {
+  text-wrap: pretty;
+}
+
+/* Smooth-scroll mode (Lenis): let the library ease the wheel, not the browser */
+html.has-smooth-scroll {
+  scroll-behavior: auto !important;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* 3D hover tilt for opt-in cards (`data-tilt`); driven by TiltEngine */
+.juspay-site.juspay-site [data-tilt] {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 50%;
+  --my: 50%;
+  --lift: 0px;
+  position: relative;
+  transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) translate3d(0, var(--lift), 0);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.35s,
+    background-color 0.35s,
+    box-shadow 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.juspay-site.juspay-site [data-tilt]:hover {
+  --lift: -6px;
+  box-shadow: 0 32px 60px -34px rgba(0, 0, 0, 0.7);
+}
+.juspay-site.juspay-site [data-tilt][data-tilting] {
+  transition-duration: 0.1s, 0.35s, 0.35s, 0.6s;
+}
+.juspay-site.juspay-site [data-tilt]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    240px circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.09),
+    transparent 70%
+  );
+  transition: opacity 0.35s;
+}
+.juspay-site.juspay-site [data-tilt][data-tilting]::after {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .juspay-site.juspay-site [data-tilt] {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Shared sections/cards read as obsidian glass instead of light panels */
@@ -47,7 +118,7 @@
   border-color: var(--color-line);
 }
 .juspay-site.juspay-site :where(.card-3d, .glass):not(footer *) {
-  background: rgba(18, 19, 22, 0.86);
+  background: rgba(13, 13, 16, 0.86);
   border-color: var(--color-line);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
