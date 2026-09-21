@@ -12,6 +12,7 @@ import { DemoTriad } from "./DemoTriad";
 import { DemoServices } from "./DemoServices";
 import { DemoPlatforms } from "./DemoPlatforms";
 import { DemoStack } from "./DemoStack";
+import { DemoJourney } from "./DemoJourney";
 import { DemoWhyUs } from "./DemoWhyUs";
 import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
@@ -61,6 +62,7 @@ export function JuspayHome({
       </div>
       <DemoPlatforms />
       <DemoStack />
+      <DemoJourney brandName={shortName} />
       <DemoWhyUs brandName={brandName} />
       <DemoServices services={content.services} />
       <DemoProcess />
