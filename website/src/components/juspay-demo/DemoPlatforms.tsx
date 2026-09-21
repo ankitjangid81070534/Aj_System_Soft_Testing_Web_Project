@@ -1,5 +1,6 @@
 import { PLATFORM_ICONS } from "@/components/site/icons";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
@@ -57,10 +58,10 @@ export function DemoPlatforms() {
             </p>
           </Reveal>
         </div>
-        <div className={styles.cardGrid}>
+        <ScrollScene variant="rise" className={styles.cardGrid}>
           {PLATFORMS.map(({ Icon, title, description }, index) => (
             <Reveal key={title} delay={index * 0.05}>
-              <article className={styles.industry}>
+              <article className={styles.industry} data-tilt>
                 <span className={`${styles.iconTile} ${toneFor(index)}`} aria-hidden>
                   <Icon size={20} />
                 </span>
@@ -69,7 +70,7 @@ export function DemoPlatforms() {
               </article>
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

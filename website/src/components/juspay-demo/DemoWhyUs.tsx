@@ -1,5 +1,6 @@
 import { ListChecks, Rocket, ShieldCheck, Wrench } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
@@ -46,10 +47,10 @@ export function DemoWhyUs({ brandName }: { brandName: string }) {
             <p className={styles.lead}>A focused development partner that treats your requirements as the specification.</p>
           </Reveal>
         </div>
-        <div className={styles.industryGrid}>
+        <ScrollScene variant="zoom" className={styles.industryGrid}>
           {REASONS.map(({ Icon, title, description }, index) => (
             <Reveal key={title} delay={index * 0.05}>
-              <article className={styles.industry}>
+              <article className={styles.industry} data-tilt>
                 <span className={`${styles.iconTile} ${toneFor(index)}`} aria-hidden>
                   <Icon size={20} />
                 </span>
@@ -58,7 +59,7 @@ export function DemoWhyUs({ brandName }: { brandName: string }) {
               </article>
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

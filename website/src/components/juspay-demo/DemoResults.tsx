@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AppWindow, Check, Cloud, Code2, FileCode2, KeyRound, LayoutDashboard, Lock, Monitor, Plus, ShieldCheck, Smartphone } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import styles from "./juspay-demo.module.css";
 import light from "./demo-light.module.css";
 
@@ -176,11 +177,11 @@ export function DemoResults({ shortName }: { shortName: string }) {
             Results that define <span className={styles.blue}>{shortName}</span>
           </h2>
         </Reveal>
-        <div className={light.resultGrid}>
+        <ScrollScene variant="zoom" className={light.resultGrid}>
           {RESULTS.map((item, index) => (
             <ResultCard key={item.title.join(" ")} item={item} index={index} />
           ))}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

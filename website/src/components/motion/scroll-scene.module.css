@@ -1,0 +1,47 @@
+/* Scroll-driven 3D scenes. `--sp` runs 0 (entering from below) → 1 (settled).
+   Without JS / with reduced motion the wrapper is untouched: no transform,
+   full opacity, no compositing layer. */
+.scene {
+  --sp: 1;
+  --amt: calc(1 - var(--sp));
+}
+.scene[data-scene-active] {
+  will-change: transform, opacity;
+  opacity: calc(0.35 + var(--sp) * 0.65);
+}
+
+/* Cards rise toward the reader, tilting flat as they settle. */
+.rise[data-scene-active] {
+  transform-origin: 50% 100%;
+  transform: perspective(1400px) translate3d(0, calc(var(--amt) * 72px), 0) rotateX(calc(var(--amt) * 12deg));
+}
+/* Content zooms in from the depth of the canvas. */
+.zoom[data-scene-active] {
+  transform-origin: 50% 60%;
+  transform: perspective(1400px) translate3d(0, calc(var(--amt) * 32px), calc(var(--amt) * -180px));
+}
+/* Grid swings in around its left edge like a turning panel. */
+.swing[data-scene-active] {
+  transform-origin: 0% 50%;
+  transform: perspective(1600px) rotateY(calc(var(--amt) * -9deg)) translate3d(calc(var(--amt) * 36px), calc(var(--amt) * 24px), 0);
+}
+/* Gentle parallax drift with a light scale-up. */
+.drift[data-scene-active] {
+  transform-origin: 50% 50%;
+  transform: translate3d(0, calc(var(--amt) * 90px), 0) scale(calc(0.95 + var(--sp) * 0.05));
+}
+
+@media (max-width: 700px) {
+  .rise[data-scene-active] {
+    transform: translate3d(0, calc(var(--amt) * 36px), 0);
+  }
+  .zoom[data-scene-active] {
+    transform: translate3d(0, calc(var(--amt) * 28px), 0) scale(calc(0.96 + var(--sp) * 0.04));
+  }
+  .swing[data-scene-active] {
+    transform: translate3d(calc(var(--amt) * 20px), calc(var(--amt) * 24px), 0);
+  }
+  .drift[data-scene-active] {
+    transform: translate3d(0, calc(var(--amt) * 40px), 0);
+  }
+}

@@ -1,5 +1,6 @@
 import { Code2, Cloud, Database, Smartphone } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 
@@ -29,10 +30,10 @@ export function DemoStack() {
             <p className={styles.lead}>We choose proven technology per project — here is what we commonly work with.</p>
           </Reveal>
         </div>
-        <div className={styles.industryGrid}>
+        <ScrollScene variant="swing" className={styles.industryGrid}>
           {GROUPS.map(({ Icon, title, items }, index) => (
             <Reveal key={title} delay={index * 0.05}>
-              <article className={styles.industry}>
+              <article className={styles.industry} data-tilt>
                 <span className={`${styles.iconTile} ${toneFor(index)}`} aria-hidden>
                   <Icon size={20} />
                 </span>
@@ -45,7 +46,7 @@ export function DemoStack() {
               </article>
             </Reveal>
           ))}
-        </div>
+        </ScrollScene>
       </div>
     </section>
   );

@@ -52,7 +52,7 @@ export function JuspayHome({
       <DemoHero ctaHref={ctaHref} ctaLabel={ctaLabel} brandName={brandName} />
       <DemoMarquee />
       <DemoPlanet serviceCount={serviceCount} benefitCount={benefits.length} />
-      <div className={styles.light}>
+      <div className={styles.light} data-light-band>
         <DemoResults shortName={shortName} />
         <DemoWorld serviceCount={serviceCount} ctaHref={ctaHref} ctaLabel={ctaLabel} />
         <DemoBuilder />
