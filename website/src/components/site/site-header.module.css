@@ -4,13 +4,16 @@
    every page, and collapses to a clean top bar + drawer on mobile.
    ========================================================================== */
 
-.band {
+.band,
+.drawer {
   --sh-bg: #000000;
   --sh-surface: #0d0d10;
   --sh-line: rgba(255, 255, 255, 0.1);
   --sh-blue: #3079ea;
   --sh-text: #e6e5e5;
   --sh-muted: #b1b0b6;
+}
+.band {
 
   /* "Ghost" navigation: transparent band over the page, floating pill inside.
      Scrolling down slides the whole header away; scrolling up brings it back
@@ -35,8 +38,8 @@
 }
 :global(html[data-motion="reduce"]) .band { transition: none; }
 
-.band a { text-decoration: none; color: inherit; }
-.band button { font: inherit; color: inherit; }
+.band a, .drawer a { text-decoration: none; color: inherit; }
+.band button, .drawer button { font: inherit; color: inherit; }
 
 .bar {
   display: flex;
@@ -263,17 +266,19 @@
 }
 
 /* ---- Breakpoints ------------------------------------------------------- */
-@media (min-width: 1024px) {
+/* Desktop row from 960px: a 1024px screen with a visible scrollbar reports
+   ~1009px, so a 1024px switch dropped small laptops into the mobile bar. */
+@media (min-width: 960px) {
   .band { padding: 18px 0; }
   .bar { position: relative; height: 78px; }
   .links, .login, .cta { display: inline-flex; }
   .burger { display: none; }
   .brand { flex: none; }
 }
-/* Small laptops (1024–1279px): the full row does not fit with the wordmark,
+/* Small laptops (960–1279px): the full row does not fit with the wordmark,
    so show the mark only (as the reference site does) and tighten the links
    instead of letting flex squeeze the name into an ellipsis. */
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .brandName { display: none; }
   .bar { gap: 14px; }
   .link { padding: 10px 10px; font-size: 14.5px; }
