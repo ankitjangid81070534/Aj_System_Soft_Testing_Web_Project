@@ -115,6 +115,19 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
       updateTag("ai-methods");
       revalidatePath("/ai-methods");
     }
+    // Sales-conversion homepage blocks (case studies, trust strip, packages).
+    if (config.key === "case-studies") {
+      updateTag("case-studies");
+      revalidatePath("/");
+    }
+    if (config.key === "trusted-clients") {
+      updateTag("trusted-clients");
+      revalidatePath("/");
+    }
+    if (config.key === "packages") {
+      updateTag("packages");
+      revalidatePath("/");
+    }
     if (config.key === "socials") {
       updateTag("social-links");
       // Footer settings also cache the composed social list.

@@ -57,6 +57,7 @@ export default async function BrandSettingsPage() {
     support_email: str("support_email"),
     phone: str("phone"),
     whatsapp: str("whatsapp"),
+    whatsapp_message: str("whatsapp_message"),
     address_line: str("address_line"),
     map_url: str("map_url"),
     global_cta_label: str("global_cta_label"),

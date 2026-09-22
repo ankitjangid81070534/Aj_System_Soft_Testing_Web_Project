@@ -11,7 +11,10 @@ import {
   FileText,
   FolderTree,
   Globe,
+  Handshake,
   ImageIcon,
+  Package,
+  Trophy,
   LayoutDashboard,
   LinkIcon,
   ListOrdered,
@@ -49,6 +52,9 @@ const NAV_GROUPS = [
   {
     title: "Growth",
     items: [
+      { href: "/ajadmin/c/case-studies", label: "Case studies", Icon: Trophy },
+      { href: "/ajadmin/c/trusted-clients", label: "Trusted clients", Icon: Handshake },
+      { href: "/ajadmin/c/packages", label: "Packages & pricing", Icon: Package },
       { href: "/ajadmin/c/offers", label: "Offers", Icon: Tag },
       { href: "/ajadmin/c/announcements", label: "Updates & announcements", Icon: Megaphone },
       { href: "/ajadmin/c/benefits", label: "Launch benefits", Icon: Gift },

@@ -57,7 +57,10 @@ export type ResourceKey =
   | "announcements"
   | "benefits"
   | "ai-methods"
-  | "socials";
+  | "socials"
+  | "case-studies"
+  | "trusted-clients"
+  | "packages";
 
 export type CapabilityBase = "content" | "settings";
 
@@ -826,6 +829,114 @@ export const RESOURCES: Record<ResourceKey, ResourceConfig> = {
       },
       { name: "to_path", label: "To path", type: "text", required: true, max: 300 },
       { name: "is_active", label: "Active", type: "boolean" },
+    ],
+  },
+
+  "case-studies": {
+    key: "case-studies",
+    label: "Case Studies",
+    singular: "Case Study",
+    table: "case_studies",
+    section: "case-studies",
+    capability: "content",
+    supports: contentSupports(true),
+    defaultOrder: { column: "sort_order", asc: true },
+    slugSource: "title",
+    actorColumns: true,
+    listColumns: [
+      { name: "title", label: "Case study" },
+      { name: "client_name", label: "Client" },
+      { name: "industry", label: "Industry" },
+      { name: "status", label: "Status", render: "status" },
+      { name: "is_active", label: "Active", render: "boolean" },
+    ],
+    searchFields: ["title", "slug", "client_name", "industry", "summary"],
+    fields: [
+      { name: "title", label: "Title", type: "text", required: true, max: 160, wide: true },
+      { name: "slug", label: "Slug", type: "slug", required: true, max: 160 },
+      { name: "client_name", label: "Client name", type: "text", max: 120 },
+      { name: "industry", label: "Industry", type: "text", max: 80 },
+      { name: "platform", label: "Platform", type: "text", max: 80, hint: "e.g. Web + Android, Windows desktop." },
+      { name: "summary", label: "Summary", type: "textarea", max: 400, wide: true, hint: "One-paragraph outcome shown on the card." },
+      { name: "challenge", label: "Challenge (before)", type: "textarea", max: 600, wide: true },
+      { name: "solution", label: "Solution (what we built)", type: "textarea", max: 600, wide: true },
+      { name: "results", label: "Results", type: "lines", wide: true, hint: "One measurable result per line." },
+      { name: "metric_1_value", label: "Metric 1 value", type: "text", max: 20, hint: "e.g. 85%" },
+      { name: "metric_1_label", label: "Metric 1 label", type: "text", max: 60, hint: "e.g. faster billing" },
+      { name: "metric_2_value", label: "Metric 2 value", type: "text", max: 20 },
+      { name: "metric_2_label", label: "Metric 2 label", type: "text", max: 60 },
+      { name: "metric_3_value", label: "Metric 3 value", type: "text", max: 20 },
+      { name: "metric_3_label", label: "Metric 3 label", type: "text", max: 60 },
+      { name: "duration_label", label: "Duration label", type: "text", max: 60, hint: "e.g. Delivered in 3 weeks" },
+      { name: "image_url", label: "Image URL", type: "image", max: 500 },
+      { name: "cta_label", label: "CTA label", type: "text", max: 60 },
+      { name: "cta_url", label: "CTA link", type: "text", max: 200 },
+      { name: "is_featured", label: "Featured", type: "boolean" },
+      { name: "is_active", label: "Active", type: "boolean" },
+      { name: "status", label: "Status", type: "select", options: STATUS_OPTIONS, required: true },
+      { name: "sort_order", label: "Sort order", type: "number" },
+    ],
+  },
+
+  "trusted-clients": {
+    key: "trusted-clients",
+    label: "Trusted Clients",
+    singular: "Trusted Client",
+    table: "trusted_clients",
+    section: "trusted-clients",
+    capability: "content",
+    supports: { activate: true, reorder: true },
+    defaultOrder: { column: "sort_order", asc: true },
+    listColumns: [
+      { name: "name", label: "Client" },
+      { name: "industry", label: "Industry" },
+      { name: "is_active", label: "Active", render: "boolean" },
+    ],
+    searchFields: ["name", "industry"],
+    fields: [
+      { name: "name", label: "Client name", type: "text", required: true, max: 120 },
+      { name: "industry", label: "Industry", type: "text", max: 80, hint: "Shown under the name in the trust strip." },
+      { name: "logo_url", label: "Logo URL", type: "image", max: 500, hint: "Optional — without a logo the name is shown as text." },
+      { name: "website_url", label: "Website", type: "text", max: 300, hint: "Optional https:// link." },
+      { name: "is_active", label: "Active", type: "boolean" },
+      { name: "sort_order", label: "Sort order", type: "number" },
+    ],
+  },
+
+  packages: {
+    key: "packages",
+    label: "Packages & Pricing",
+    singular: "Package",
+    table: "packages",
+    section: "packages",
+    capability: "content",
+    supports: contentSupports(true),
+    defaultOrder: { column: "sort_order", asc: true },
+    slugSource: "name",
+    actorColumns: true,
+    listColumns: [
+      { name: "name", label: "Package" },
+      { name: "price_label", label: "Price" },
+      { name: "status", label: "Status", render: "status" },
+      { name: "is_active", label: "Active", render: "boolean" },
+    ],
+    searchFields: ["name", "slug", "tagline", "price_label"],
+    fields: [
+      { name: "name", label: "Name", type: "text", required: true, max: 80 },
+      { name: "slug", label: "Slug", type: "slug", required: true, max: 80 },
+      { name: "tagline", label: "Tagline", type: "text", max: 160, wide: true },
+      { name: "price_label", label: "Price label", type: "text", max: 60, hint: "e.g. Starts from ₹25,000 or Custom quote" },
+      { name: "price_note", label: "Price note", type: "text", max: 120, hint: "e.g. One-time · milestone-based payment" },
+      { name: "badge_label", label: "Badge", type: "text", max: 40, hint: "e.g. Most popular" },
+      { name: "features", label: "Features", type: "lines", wide: true, hint: "One feature per line." },
+      { name: "ideal_for", label: "Ideal for", type: "text", max: 160 },
+      { name: "delivery_label", label: "Delivery time", type: "text", max: 60, hint: "e.g. 2–4 weeks" },
+      { name: "cta_label", label: "CTA label", type: "text", max: 60 },
+      { name: "cta_url", label: "CTA link", type: "text", max: 200 },
+      { name: "is_highlighted", label: "Highlight this package", type: "boolean" },
+      { name: "is_active", label: "Active", type: "boolean" },
+      { name: "status", label: "Status", type: "select", options: STATUS_OPTIONS, required: true },
+      { name: "sort_order", label: "Sort order", type: "number" },
     ],
   },
 };

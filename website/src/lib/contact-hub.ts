@@ -6,7 +6,8 @@ export type ContactHubAction = {
   label: string;
   href: string;
 };
-type ContactSettings = Pick<SiteSettings, "phone" | "whatsapp" | "contactEmail" | "globalCtaLabel" | "globalCtaHref">;
+type ContactSettings = Pick<SiteSettings, "phone" | "whatsapp" | "contactEmail" | "globalCtaLabel" | "globalCtaHref"> &
+  Partial<Pick<SiteSettings, "whatsappMessage">>;
 
 /** Scoped validation for legacy settings; does not change global CTA behavior. */
 export function safeContactDestination(value: unknown): string | null {
@@ -34,7 +35,11 @@ export function getContactHubActions(settings: ContactSettings | null): ContactH
   const whatsapp = phoneNumber(settings?.whatsapp);
   const phone = phoneNumber(settings?.phone);
   const email = settings?.contactEmail?.trim();
-  if (whatsapp) actions.push({ kind: "whatsapp", label: "WhatsApp", href: `https://wa.me/${whatsapp.replace(/^\+/, "")}` });
+  if (whatsapp) {
+    const message = settings?.whatsappMessage?.trim();
+    const query = message ? `?text=${encodeURIComponent(message)}` : "";
+    actions.push({ kind: "whatsapp", label: "WhatsApp", href: `https://wa.me/${whatsapp.replace(/^\+/, "")}${query}` });
+  }
   if (phone) actions.push({ kind: "phone", label: "Call", href: `tel:${phone}` });
   if (email && /^[a-zA-Z0-9.!#$%&'*+/=^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9.-]*[a-zA-Z0-9])?\.[a-zA-Z]{2,}$/.test(email)) {
     actions.push({ kind: "email", label: "Email", href: `mailto:${encodeURIComponent(email).replace(/%40/g, "@")}` });
