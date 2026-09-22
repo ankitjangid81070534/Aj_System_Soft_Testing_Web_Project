@@ -1,6 +1,8 @@
 .hub {
-  --hub-bottom: calc(128px + env(safe-area-inset-bottom));
-  --hub-right: max(16px, env(safe-area-inset-right));
+  /* The old mobile bottom dock is gone, so the trigger sits in the corner
+     instead of floating over hero CTAs and card content mid-screen. */
+  --hub-bottom: max(18px, env(safe-area-inset-bottom));
+  --hub-right: max(14px, env(safe-area-inset-right));
   position: fixed;
   right: var(--hub-right);
   bottom: var(--hub-bottom);
@@ -58,6 +60,9 @@
 :global(.dark) .trigger svg, :global(.dark) .action > svg:first-child { color: var(--color-accent-400); }
 @media (hover: hover) and (pointer: fine) {
   .trigger:hover, .close:hover, .action:hover { background: color-mix(in srgb, var(--color-accent-500) 8%, var(--color-surface)); }
+}
+@media (max-width: 720px) {
+  .trigger { min-height: 44px; padding: 8px 14px; font-size: 13px; }
 }
 @media (min-width: 1024px) {
   .hub { --hub-bottom: max(24px, env(safe-area-inset-bottom)); --hub-right: max(24px, env(safe-area-inset-right)); }

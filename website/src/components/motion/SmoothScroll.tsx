@@ -15,8 +15,12 @@ import { reducedMotionMedia } from "./motion-preference";
 export function SmoothScroll() {
   useEffect(() => {
     const reduce = reducedMotionMedia();
-    const coarse = window.matchMedia("(pointer: coarse)");
-    if (reduce.matches || coarse.matches) return;
+    // Only *touch-only* devices (phones/tablets) keep native scroll physics.
+    // `(pointer: coarse)` alone is also reported by Windows touchscreen laptops,
+    // all-in-one PCs and some pen/tablet drivers, which silently disabled smooth
+    // scrolling on those desktops while a mouse was in use.
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    if (reduce.matches || touchOnly.matches) return;
 
     const lenis = new Lenis({
       lerp: 0.085,

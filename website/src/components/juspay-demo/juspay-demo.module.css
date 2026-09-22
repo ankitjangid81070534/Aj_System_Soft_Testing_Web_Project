@@ -1707,10 +1707,11 @@
     width: min(1320px, calc(100% - 40px));
   }
   .section {
-    padding: 96px 0;
+    padding: 72px 0;
   }
   .numbers {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
   }
   .planetStage {
     height: 480px;

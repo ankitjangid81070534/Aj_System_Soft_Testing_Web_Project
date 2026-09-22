@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { AppWindow, Check, ChevronRight, Cloud, LayoutDashboard, Layers3, Monitor, Smartphone } from "lucide-react";
 import type { MouseEvent } from "react";
+import { useSiteReducedMotion } from "@/components/motion/motion-preference";
 import styles from "./juspay-demo.module.css";
 
 /** The live hero's delivery points and additional service families, verbatim. */
@@ -25,7 +26,7 @@ const CHIPS = [
  * smooth black canvas with one soft glow (no grid lines).
  */
 export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ctaLabel: string; brandName: string }) {
-  const reduce = useReducedMotion();
+  const reduce = useSiteReducedMotion();
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const rx = useSpring(useTransform(my, [-0.5, 0.5], [10, -10]), { stiffness: 80, damping: 18 });

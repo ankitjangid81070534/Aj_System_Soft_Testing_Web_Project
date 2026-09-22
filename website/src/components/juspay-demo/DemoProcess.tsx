@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, ClipboardList, Code2, FileSearch, ShieldCheck, Wrench, type LucideIcon } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { toneFor } from "./tones";
+import { useSiteReducedMotion } from "@/components/motion/motion-preference";
 import styles from "./juspay-demo.module.css";
 
 /** The live five-step delivery process, verbatim. */
@@ -19,7 +20,7 @@ const STEPS: { title: string; Icon: LucideIcon; description: string }[] = [
 
 function StackCard({ step, index, total }: { step: (typeof STEPS)[number]; index: number; total: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useSiteReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 30%", "end 20%"] });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, index === total - 1 ? 1 : 0.55]);

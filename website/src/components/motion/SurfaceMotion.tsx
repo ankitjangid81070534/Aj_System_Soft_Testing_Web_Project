@@ -9,7 +9,9 @@ import { prefersReducedMotion } from "./motion-preference";
  */
 export function SurfaceMotion() {
   useEffect(() => {
-    const media = matchMedia("(hover: hover) and (pointer: fine)");
+    // `hover: hover` alone: touchscreen PCs can report a coarse primary pointer
+    // while a mouse is attached; the `pointerType` check below still rejects touch.
+    const media = matchMedia("(hover: hover)");
     let card: HTMLElement | null = null;
     let frame = 0;
     let point = { x: 0, y: 0 };

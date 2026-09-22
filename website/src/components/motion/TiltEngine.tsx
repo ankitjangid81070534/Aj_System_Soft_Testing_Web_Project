@@ -14,8 +14,11 @@ const MAX_TILT = 7; // degrees
 export function TiltEngine() {
   useEffect(() => {
     const reduce = reducedMotionMedia();
-    const coarse = window.matchMedia("(pointer: coarse)");
-    if (reduce.matches || coarse.matches) return;
+    // Touch-only devices skip the tracker; `onMove` already ignores non-mouse
+    // pointers, so touchscreen laptops/all-in-ones (which report a coarse primary
+    // pointer) still get the tilt when a mouse is in use.
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    if (reduce.matches || touchOnly.matches) return;
 
     let active: HTMLElement | null = null;
     let frame = 0;

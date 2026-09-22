@@ -12,12 +12,31 @@
  * on <html> before first paint (see the boot script in `app/layout.tsx`), and
  * CSS/JS read that attribute instead of the OS media query.
  */
+import { useSyncExternalStore } from "react";
+
 export const MOTION_STORAGE_KEY = "ajs-motion";
 export const REDUCED_MOTION_ATTRIBUTE = "data-motion";
 
 export function prefersReducedMotion(): boolean {
   if (typeof document === "undefined") return false;
   return document.documentElement.getAttribute(REDUCED_MOTION_ATTRIBUTE) === "reduce";
+}
+
+function subscribeToPreference(onChange: () => void) {
+  if (typeof MutationObserver === "undefined") return () => {};
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: [REDUCED_MOTION_ATTRIBUTE] });
+  return () => observer.disconnect();
+}
+const serverSnapshot = () => false;
+
+/**
+ * React hook mirror of `prefersReducedMotion()`. Replaces framer-motion's
+ * `useReducedMotion()`, which reads the OS flag and left the hero core, planet
+ * and process scenes static on Windows PCs with "Animation effects" off.
+ */
+export function useSiteReducedMotion(): boolean {
+  return useSyncExternalStore(subscribeToPreference, prefersReducedMotion, serverSnapshot);
 }
 
 type Listener = () => void;
