@@ -15,7 +15,9 @@ describe("Phase 7 public presentation contracts", () => {
   it("keeps page titles in normal flow, without per-word reveal blocks", () => {
     const hero = read("components/site/PageHero.tsx");
     expect(hero).toContain('as="h1"');
-    expect(hero).toContain("title={<span>{title}</span>}");
+    // `heading` is `title` with the optional accent phrase painted, still one normal-flow span.
+    expect(hero).toContain("title={<span>{heading}</span>}");
+    expect(hero).not.toMatch(/split\(["'`]\s?["'`]\)\.map/);
     expect(hero).toContain("<Breadcrumbs items={crumbs}");
   });
 

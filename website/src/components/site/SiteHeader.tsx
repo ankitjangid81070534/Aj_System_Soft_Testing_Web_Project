@@ -81,11 +81,14 @@ export function SiteHeader({
     }
   }, []);
 
-  // Route change must never leave the drawer or hover panel open.
-  useEffect(() => {
+  // Route change must never leave the drawer or hover panel open. Reset during
+  // render (React's "adjust state on prop change" pattern) instead of an effect.
+  const [seenPathname, setSeenPathname] = useState(pathname);
+  if (seenPathname !== pathname) {
+    setSeenPathname(pathname);
     setDrawerOpen(false);
     setServicesOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!drawerOpen) return;
