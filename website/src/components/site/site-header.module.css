@@ -33,9 +33,7 @@
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.9);
 }
-@media (prefers-reduced-motion: reduce) {
-  .band { transition: none; }
-}
+:global(html[data-motion="reduce"]) .band { transition: none; }
 
 .band a { text-decoration: none; color: inherit; }
 .band button { font: inherit; color: inherit; }
@@ -270,6 +268,17 @@
   .bar { position: relative; height: 78px; }
   .links, .login, .cta { display: inline-flex; }
   .burger { display: none; }
+  .brand { flex: none; }
+}
+/* Small laptops (1024–1279px): the full row does not fit with the wordmark,
+   so show the mark only (as the reference site does) and tighten the links
+   instead of letting flex squeeze the name into an ellipsis. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .brandName { display: none; }
+  .bar { gap: 14px; }
+  .link { padding: 10px 10px; font-size: 14.5px; }
+  .login { padding: 10px 14px; }
+  .cta { padding: 0 16px; font-size: 14.5px; }
 }
 
 @media (max-width: 400px) {

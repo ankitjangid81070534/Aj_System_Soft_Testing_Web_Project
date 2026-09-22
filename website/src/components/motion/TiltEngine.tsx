@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { reducedMotionMedia } from "./motion-preference";
 
 const MAX_TILT = 7; // degrees
 
@@ -12,7 +13,7 @@ const MAX_TILT = 7; // degrees
  */
 export function TiltEngine() {
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const reduce = reducedMotionMedia();
     const coarse = window.matchMedia("(pointer: coarse)");
     if (reduce.matches || coarse.matches) return;
 

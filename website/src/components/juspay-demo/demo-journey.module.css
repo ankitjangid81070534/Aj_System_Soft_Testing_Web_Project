@@ -79,4 +79,4 @@
 /* ── responsive / accessibility ── */
 @media (max-width: 1023px) { .track { grid-template-columns: repeat(2, minmax(0, 1fr)); } .track::before, .track::after { display: none; } }
 @media (max-width: 640px) { .section { padding: 84px 18px 90px; } .track { grid-template-columns: 1fr; } .artWrap { height: 176px; } }
-@media (prefers-reduced-motion: reduce) { .art, .art i, .art i::after, .art i::before, .track::after { animation: none !important; } }
+:global(html[data-motion="reduce"]) .art, :global(html[data-motion="reduce"]) .art i, :global(html[data-motion="reduce"]) .art i::after, :global(html[data-motion="reduce"]) .art i::before, :global(html[data-motion="reduce"]) .track::after { animation: none !important; }

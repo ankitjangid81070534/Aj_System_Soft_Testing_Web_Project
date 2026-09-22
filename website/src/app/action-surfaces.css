@@ -42,14 +42,14 @@
   box-shadow: inset 0 1px 2px #ffffff60, inset 0 -2px 3px #0004, 0 5px 12px -8px #09162690;
   transition: transform var(--duration-control) var(--ease-soft), box-shadow var(--duration-control) var(--ease-soft);
 }
-@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+@media (hover:hover) and (pointer:fine) {
   .action-control.action-control:not(:disabled):hover { color: #101722; background: #fff; transform: translateY(-2px); border-color: color-mix(in srgb,var(--action-color),#dce4f0 45%); box-shadow: inset 0 1px 1px #fff,0 12px 26px -15px var(--action-color),0 3px 8px #14213d18; }
   .action-control.action-control.action-ghost:not(:disabled):hover { color: var(--action-ink); }
   .icon-control:not(:disabled):hover { color: #fff; transform: translateY(-2px); box-shadow: inset 0 1px 2px #ffffff70,0 7px 14px -8px #2499ddaa; }
 }
 .action-control.action-control:not(:disabled):active { transform: translateY(1px); }
 @media (max-width:700px) { .action-control.action-control, .icon-control.icon-control { min-height: var(--control-height); } .icon-control.icon-control { min-width: var(--control-height); } }
-@media (prefers-reduced-motion:reduce) { .action-control.action-control, .icon-control.icon-control { transition: none; } .action-control.action-control:active { transform: none; } }
+html[data-motion="reduce"] :is(.action-control.action-control, .icon-control.icon-control) { transition: none; } html[data-motion="reduce"] .action-control.action-control:active { transform: none; }
 /* Native high-contrast palettes replace decorative gradients, but retain crisp
    boundaries and keyboard focus when browser-forced shadows are removed. */
 @media (forced-colors: active) {

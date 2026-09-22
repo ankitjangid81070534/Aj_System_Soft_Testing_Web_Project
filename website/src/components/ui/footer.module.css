@@ -334,10 +334,6 @@
   color: #111318;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ctaButton,
-  .linkList a,
-  .socialLink {
-    transition: none;
-  }
+:global(html[data-motion="reduce"]) :is(.ctaButton, .linkList a, .socialLink) {
+  transition: none;
 }

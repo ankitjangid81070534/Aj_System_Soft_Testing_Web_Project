@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { prefersReducedMotion } from "@/components/motion/motion-preference";
 
 const VIDEO_SRC = "https://strvid.nyc3.cdn.digitaloceanspaces.com/motionsite/hero_robo_video.mp4";
 
@@ -33,7 +34,7 @@ export function HeroVideo() {
 
     // Reduced-motion visitors keep the static fallback: the video is never
     // loaded, so `state` stays "loading" and the clip stays invisible.
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (prefersReducedMotion()) return;
 
     // React does not serialise `muted`; set it before any play() attempt.
     video.muted = true;

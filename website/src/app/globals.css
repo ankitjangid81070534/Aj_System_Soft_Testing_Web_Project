@@ -280,13 +280,11 @@
 /* Hero entrance runs on every viewport (it is a one-shot, GPU-only
    transform/opacity animation). The looping float badges stay desktop-only
    to keep the mobile main thread free. */
-@media (prefers-reduced-motion: no-preference) {
-  .hero-rise {
-    animation: hero-rise 760ms var(--ease-out-expo) both;
-  }
+.hero-rise {
+  animation: hero-rise 760ms var(--ease-out-expo) both;
 }
 
-@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+@media (min-width: 768px) {
   .hero-float-a {
     animation: hero-float-a 5s ease-in-out infinite;
   }
@@ -300,16 +298,17 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+html:not([data-motion="reduce"]) {
+  scroll-behavior: smooth;
 }
 
 /* Reusable viewport-entry motion lives in RevealObserver. No pending/hidden
-   CSS state: interruption, no JS, printing and reduced motion stay readable. */
+   CSS state: interruption, no JS, printing and reduced motion stay readable.
+   Reduced motion is the in-site `html[data-motion="reduce"]` choice, not the OS
+   flag — see components/motion/motion-preference.ts. */
 .reveal { opacity: 1; transform: none; }
-@media print, (prefers-reduced-motion: reduce) {
+html[data-motion="reduce"] :is(.reveal, [data-reveal], [data-home-reveal]) { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; transition: none !important; }
+@media print {
   .reveal, [data-reveal], [data-home-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; transition: none !important; }
 }
 
@@ -826,15 +825,14 @@ dialog::backdrop {
 
 /* ---- Reduced motion: calm everything down (and skip delays, so delayed
    entrances never hold content invisible) ---- */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-delay: 0ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    transition-delay: 0ms !important;
-    scroll-behavior: auto !important;
-  }
+html[data-motion="reduce"],
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] ::before,
+html[data-motion="reduce"] ::after {
+  animation-duration: 0.01ms !important;
+  animation-delay: 0ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  transition-delay: 0ms !important;
+  scroll-behavior: auto !important;
 }

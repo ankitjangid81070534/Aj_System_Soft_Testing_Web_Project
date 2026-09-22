@@ -94,4 +94,4 @@
 /* ── responsive / accessibility ── */
 @media (max-width: 1023px) { .stage { position: absolute; right: -60px; top: 0; width: 360px; opacity: .38; pointer-events: none; } .scene { animation: none; } }
 @media (max-width: 700px) { .stage { width: 260px; right: -80px; opacity: .25; } }
-@media (prefers-reduced-motion: reduce) { .scene, .scene i, .scene i::after, .scene i::before { animation: none !important; } }
+:global(html[data-motion="reduce"]) .scene, :global(html[data-motion="reduce"]) .scene i, :global(html[data-motion="reduce"]) .scene i::after, :global(html[data-motion="reduce"]) .scene i::before { animation: none !important; }

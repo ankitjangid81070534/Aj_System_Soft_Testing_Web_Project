@@ -27,11 +27,17 @@ const siteSans = Inter_Tight({
  * Runs before first paint. Theme: LIGHT is the default; dark is applied only
  * when the visitor chose it (persisted in localStorage) — the system color
  * scheme is never auto-applied.
+ * Motion: FULL is the default on every device. Reduced motion is an explicit
+ * in-site choice (`ajs-motion` = "reduce" → `data-motion="reduce"` on <html>),
+ * not the OS flag — Windows reports `prefers-reduced-motion` whenever its
+ * "Animation effects" toggle is off, which made the whole site look static on
+ * many PCs. See `components/motion/motion-preference.ts`.
  * Reveal effects start after hydration in RevealObserver. Core content stays
  * visible when JavaScript or the observer is unavailable.
  */
 const themeBootScript = `(function(){
  try{if(localStorage.getItem("ajs-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}
+ try{if(localStorage.getItem("ajs-motion")==="reduce")document.documentElement.setAttribute("data-motion","reduce")}catch(e){}
  })();`;
 
 export default function RootLayout({

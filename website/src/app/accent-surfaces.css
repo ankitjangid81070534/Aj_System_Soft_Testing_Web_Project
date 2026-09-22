@@ -55,7 +55,7 @@
   background: linear-gradient(140deg, color-mix(in srgb, var(--card-accent) 6%, var(--color-surface)), var(--color-surface) 65%);
   box-shadow: var(--shadow-sculpted); border-radius: var(--radius-card);
 }
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media (hover: hover) and (pointer: fine) {
   :is(.card-3d, .card-lift, .reference-card):not([data-tilt="on"]):not(:has(form, input, textarea, select, table, .card-3d)):hover {
     transform: translateY(var(--surface-lift));
     border-color: var(--card-light);
@@ -63,4 +63,4 @@
   }
 }
 @media (max-width: 700px) { :is(.card-3d, .card-surface, .card-lift, .reference-card) { border-radius: var(--radius-card-compact); } }
-@media (prefers-reduced-motion: reduce) { :is(.card-3d, .card-lift, .reference-card) { transition: none !important; } }
+html[data-motion="reduce"] :is(.card-3d, .card-lift, .reference-card) { transition: none !important; }

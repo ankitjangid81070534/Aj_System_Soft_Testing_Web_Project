@@ -13,7 +13,7 @@
 }
 .card-3d::before { opacity: .55; }
 .card-3d::after { background: radial-gradient(450px circle at var(--mx,50%) var(--my,0%), #49b6c420, transparent 65%); }
-@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+@media (hover:hover) and (pointer:fine) {
   .card-3d:not([data-tilt="off"]):not(:has(form,input,textarea,select,table)):hover {
     transform: translateY(var(--surface-lift));
     box-shadow: var(--shadow-sculpted-hover); border-color: var(--color-brand-200);
@@ -41,7 +41,5 @@ dialog::backdrop { background: #130c225c; backdrop-filter: blur(7px); }
   .action-control { min-height: 42px; }
   .ui-field { font-size: 16px; } /* avoids iOS focus zoom */
 }
-@media (prefers-reduced-motion:reduce) {
-  .card-3d, [data-tilt], .motion-word, [data-reveal] { animation: none !important; transition: none !important; }
-  .card-3d:hover, .action-control:active { transform: none !important; }
-}
+html[data-motion="reduce"] :is(.card-3d, [data-tilt], .motion-word, [data-reveal]) { animation: none !important; transition: none !important; }
+html[data-motion="reduce"] :is(.card-3d:hover, .action-control:active) { transform: none !important; }

@@ -1582,6 +1582,34 @@
   .outcomes {
     grid-template-columns: 1fr;
   }
+  /* Stacked hero (tablet / small laptop): centre the copy above the 3D core
+     like the reference site instead of leaving it hugging the left edge. */
+  .hero {
+    min-height: 0;
+    padding: 56px 0 88px;
+  }
+  .heroInner {
+    gap: 40px;
+  }
+  .heroCopy {
+    align-items: center;
+    text-align: center;
+  }
+  .heroTitle {
+    max-width: 16ch;
+  }
+  .heroLead {
+    max-width: 640px;
+  }
+  .heroActions,
+  .heroPoints,
+  .heroTags {
+    justify-content: center;
+  }
+  .heroGlow {
+    right: 50%;
+    transform: translateX(50%);
+  }
   .outcomesSticky {
     position: static;
   }
@@ -1603,6 +1631,15 @@
 @media (max-width: 720px) {
   .page {
     font-size: 16px;
+  }
+  .heroCopy {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .heroActions,
+  .heroPoints,
+  .heroTags {
+    justify-content: flex-start;
   }
   .nav {
     height: 68px;
@@ -1685,12 +1722,11 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .page *,
-  .page *::before,
-  .page *::after {
-    animation-duration: 0.001s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001s !important;
-  }
+/* Reduced motion is the in-site html[data-motion="reduce"] choice, not the OS flag. */
+:global(html[data-motion="reduce"]) .page *,
+:global(html[data-motion="reduce"]) .page *::before,
+:global(html[data-motion="reduce"]) .page *::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001s !important;
 }
