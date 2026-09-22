@@ -49,8 +49,19 @@ export function DemoPackages({
                 {pack.badgeLabel ? <span className={sales.packBadge}>{pack.badgeLabel}</span> : null}
                 <span className={sales.packName}>{pack.name}</span>
                 {pack.tagline ? <p className={sales.packTagline}>{pack.tagline}</p> : null}
-                {pack.priceLabel ? <span className={sales.packPrice}>{pack.priceLabel}</span> : null}
+                {pack.priceLabel ? (
+                  <>
+                    <span className={sales.packPriceFrom}>Starting at</span>
+                    <span className={sales.packPrice}>{pack.priceLabel}</span>
+                  </>
+                ) : null}
                 {pack.priceNote ? <span className={sales.packNote}>{pack.priceNote}</span> : null}
+                {pack.priceLabel ? (
+                  <div className={sales.packTerms}>
+                    <span>Pay by milestone — part advance, rest on delivery stages.</span>
+                    <span>GST extra. Final price confirmed after the requirement call.</span>
+                  </div>
+                ) : null}
                 {pack.features.length > 0 ? (
                   <ul className={sales.packFeatures}>
                     {pack.features.map((feature) => (

@@ -4,6 +4,8 @@ import type { LaunchBenefit } from "@/lib/data/growth";
 import type { CaseStudy, Package, TrustedClient } from "@/lib/data/sales";
 import { whatsappLink } from "@/lib/data/settings";
 import { DemoHero } from "./DemoHero";
+import { DemoHeroProof } from "./DemoHeroProof";
+import { DemoStickyCta } from "./DemoStickyCta";
 import { DemoMarquee } from "./DemoMarquee";
 import { DemoPlanet } from "./DemoPlanet";
 import { DemoResults } from "./DemoResults";
@@ -58,6 +60,11 @@ export function JuspayHome({
   return (
     <div data-home-experience className={`${styles.page} ${juspayFontClassName}`} data-juspay-home>
       <DemoHero ctaHref={ctaHref} ctaLabel={ctaLabel} brandName={brandName} />
+      <DemoHeroProof
+        projectCount={content.projects.length}
+        serviceCount={serviceCount}
+        clients={sales.clients}
+      />
       <DemoMarquee />
       <DemoPlanet serviceCount={serviceCount} benefitCount={benefits.length} />
       <div className={styles.light} data-light-band>
@@ -82,6 +89,7 @@ export function JuspayHome({
       <DemoGallery projects={content.projects} />
       <DemoProof content={content} />
       <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
+      <DemoStickyCta ctaHref={ctaHref} ctaLabel={ctaLabel} whatsappHref={whatsappLink(settings)} />
     </div>
   );
 }

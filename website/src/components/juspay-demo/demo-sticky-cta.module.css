@@ -1,0 +1,48 @@
+/* Mobile sticky CTA bar (homepage only). Hidden from 960px up, where the
+   header CTA is always visible anyway. */
+.bar {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 39;
+    display: flex;
+    gap: 8px;
+    /* Keep the right corner clear for the site-wide contact trigger. */
+    padding: 10px max(84px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) 12px;
+    background: rgba(8, 8, 8, 0.92);
+    border-top: 0.5px solid var(--jd-line-strong, rgba(255, 255, 255, 0.14));
+    backdrop-filter: blur(12px);
+  }
+  .action {
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 40px;
+    border: 0.5px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .primary {
+    border-color: transparent;
+    background: var(--jd-blue, #3079ea);
+  }
+}
+
+@media (max-width: 959px) {
+  :global([data-juspay-home]) {
+    padding-bottom: 76px;
+  }
+}

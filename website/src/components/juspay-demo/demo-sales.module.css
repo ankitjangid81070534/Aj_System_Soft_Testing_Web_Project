@@ -176,6 +176,23 @@
   color: rgba(15, 23, 42, 0.65);
 }
 
+.packPriceFrom {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.packTerms {
+  display: grid;
+  gap: 3px;
+  padding-top: 2px;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: rgba(15, 23, 42, 0.6);
+}
+
 .packPrice {
   font-size: 1.35rem;
   font-weight: 700;
