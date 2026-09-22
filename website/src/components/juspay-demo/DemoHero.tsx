@@ -54,7 +54,7 @@ export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ct
             <span className={styles.eyebrow}>{brandName} — software development</span>
           </div>
           <h1 className={styles.heroTitle}>
-            <span className={styles.blue}>Software</span> built around your requirements.
+            <span className={`${styles.blue} ${styles.heroAccent}`}>Software</span> built around your requirements.
           </h1>
           <p className={styles.heroLead}>
             Custom software, web platforms, SaaS, Android &amp; iOS apps and business automation systems — engineered

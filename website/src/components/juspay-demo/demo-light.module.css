@@ -1325,7 +1325,33 @@
   box-shadow:
     0 0 0 10px rgba(255, 255, 255, 0.25),
     0 24px 40px -20px rgba(13, 15, 20, 0.6);
+  animation: lightIconFloat 5s ease-in-out infinite;
 }
+.triadCard:nth-child(2) .triadIcon { animation-delay: -1.7s; }
+.triadCard:nth-child(3) .triadIcon { animation-delay: -3.4s; }
+.triadIcon svg,
+.chipIcon svg,
+.feeIcon svg {
+  animation: lightIconIdle 4.4s ease-in-out infinite;
+}
+.triadCard:hover .triadIcon svg { animation: lightIconPop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes lightIconFloat {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.25), 0 24px 40px -20px rgba(13, 15, 20, 0.6); }
+  50% { transform: translateY(-6px); box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.32), 0 34px 48px -22px rgba(13, 15, 20, 0.65); }
+}
+@keyframes lightIconIdle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(-6deg) scale(1.08); }
+}
+@keyframes lightIconPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.22) rotate(8deg); }
+  100% { transform: scale(1.08); }
+}
+:global(html[data-motion="reduce"]) .triadIcon,
+:global(html[data-motion="reduce"]) .triadIcon svg,
+:global(html[data-motion="reduce"]) .chipIcon svg,
+:global(html[data-motion="reduce"]) .feeIcon svg { animation: none; }
 .floatTag {
   position: absolute;
   left: 18px;

@@ -31,17 +31,20 @@
   transform: translate3d(0, calc(var(--amt) * 90px), 0) scale(calc(0.95 + var(--sp) * 0.05));
 }
 
+/* Phones keep the same 3D character as desktop (perspective, tilt, depth),
+   only with a shorter travel so nothing overflows the narrow viewport. */
 @media (max-width: 700px) {
   .rise[data-scene-active] {
-    transform: translate3d(0, calc(var(--amt) * 36px), 0);
+    transform: perspective(900px) translate3d(0, calc(var(--amt) * 44px), 0) rotateX(calc(var(--amt) * 9deg));
   }
   .zoom[data-scene-active] {
-    transform: translate3d(0, calc(var(--amt) * 28px), 0) scale(calc(0.96 + var(--sp) * 0.04));
+    transform: perspective(900px) translate3d(0, calc(var(--amt) * 28px), calc(var(--amt) * -110px));
   }
   .swing[data-scene-active] {
-    transform: translate3d(calc(var(--amt) * 20px), calc(var(--amt) * 24px), 0);
+    transform-origin: 50% 0%;
+    transform: perspective(900px) rotateX(calc(var(--amt) * 8deg)) translate3d(0, calc(var(--amt) * 32px), 0);
   }
   .drift[data-scene-active] {
-    transform: translate3d(0, calc(var(--amt) * 40px), 0);
+    transform: translate3d(0, calc(var(--amt) * 48px), 0) scale(calc(0.94 + var(--sp) * 0.06));
   }
 }

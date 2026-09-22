@@ -46,6 +46,7 @@ export function DemoJourney({ brandName = "AJS Technology" }: { brandName?: stri
           <div className={styles.artWrap}>
             <div className={`${styles.art} ${styles.call}`} data-tilt aria-hidden="true">
               <i className={styles.phone} />
+              <b className={`${styles.mark} ${styles.callMark}`}>AJ</b>
               <i className={styles.avatar} />
               <i className={styles.bubbleA} />
               <i className={styles.bubbleB} />
@@ -64,7 +65,9 @@ export function DemoJourney({ brandName = "AJS Technology" }: { brandName?: stri
           <div className={styles.artWrap}>
             <div className={`${styles.art} ${styles.site}`} data-tilt aria-hidden="true">
               <i className={styles.browser} />
+              <b className={`${styles.mark} ${styles.siteMark}`}>AJ</b>
               <i className={styles.hero} />
+              <i className={styles.siteCta} />
               <i className={styles.cards} />
               <i className={styles.mobile} />
             </div>
@@ -83,6 +86,7 @@ export function DemoJourney({ brandName = "AJS Technology" }: { brandName?: stri
               <i className={styles.paidPhone} />
               <i className={styles.tick} />
               <i className={styles.receipt} />
+              <b className={styles.paidLabel}>PAID</b>
               <i className={styles.ring} />
             </div>
           </div>
