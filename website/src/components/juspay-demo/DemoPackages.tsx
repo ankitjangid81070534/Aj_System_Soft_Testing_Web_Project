@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import type { Package } from "@/lib/data/sales";
+import { CalendlyButton } from "@/components/integrations/CalendlyButton";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
 import sales from "./demo-sales.module.css";
@@ -76,6 +77,11 @@ export function DemoPackages({
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.18}>
+          <p style={{ marginTop: 26, textAlign: "center" }}>
+            <CalendlyButton className={`${styles.pill} ${styles.pillBlue}`} />
+          </p>
+        </Reveal>
         {whatsappHref ? (
           <Reveal delay={0.2}>
             <p style={{ marginTop: 26, textAlign: "center" }}>

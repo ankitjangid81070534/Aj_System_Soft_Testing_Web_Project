@@ -1,0 +1,67 @@
+/* ============================================================================
+   Mobile polish — spacing, fluid type and overflow safety (<= 720px).
+   Presentation only: no layout ownership beyond padding/size, so every section
+   keeps its own structure. Scoped to the homepage experience root.
+   ========================================================================== */
+
+/* Nothing may ever scroll the page sideways on a phone. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (max-width: 720px) {
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+  }
+
+  /* Long words / URLs used to push the viewport wider than the screen. */
+  [data-home-experience] :where(h1, h2, h3, h4, p, li, span, a) {
+    overflow-wrap: anywhere;
+  }
+  [data-home-experience] :where(pre, code, table) {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Comfortable reading rhythm: tighter bands, roomier line-height. */
+  [data-home-experience] section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  [data-home-experience] :where(h2) {
+    font-size: clamp(1.6rem, 7.6vw, 2.2rem);
+    line-height: 1.14;
+  }
+  [data-home-experience] :where(h3) {
+    font-size: clamp(1.12rem, 4.8vw, 1.3rem);
+    line-height: 1.3;
+  }
+  [data-home-experience] :where(p) {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  /* Tap targets for the pill actions. */
+  [data-home-experience] a[class*="pill"] {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  [data-home-experience] section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  [data-home-experience] :where(h2) {
+    font-size: clamp(1.45rem, 7.4vw, 1.9rem);
+  }
+  [data-home-experience] :where(p) {
+    font-size: 0.97rem;
+  }
+}
