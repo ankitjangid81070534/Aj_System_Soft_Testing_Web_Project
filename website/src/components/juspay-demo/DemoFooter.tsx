@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { DemoCta } from "./DemoCta";
 import type { SiteSettings } from "@/lib/data/settings";
 import { FOOTER_LINK_GROUPS } from "@/lib/navigation";
-import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
 
 /**

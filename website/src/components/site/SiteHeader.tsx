@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { ArrowRight, ChevronDown, ChevronRight, Menu, User, X } from "lucide-react";
 import type { PublicNavLink } from "@/lib/data/navigation";
 import type { ServiceCardModel } from "@/lib/data/services";
@@ -19,7 +20,7 @@ import styles from "./site-header.module.css";
 /**
  * Site-wide header in the approved Juspay-style presentation: a floating dark
  * pill with the CMS navigation links, a services hover panel, Client Login and
- * the settings-driven CTA. Below 1024px it becomes a compact bar with a
+ * the settings-driven CTA. Below 960px it becomes a compact bar with a
  * full-screen drawer, so mobile has one predictable navigation surface.
  *
  * Existing behaviour is unchanged: the same CMS links, the same portal/session
@@ -80,11 +81,14 @@ export function SiteHeader({
     }
   }, []);
 
-  // Route change must never leave the drawer or hover panel open.
-  useEffect(() => {
+  // Route change must never leave the drawer or hover panel open. Reset during
+  // render (React's "adjust state on prop change" pattern) instead of an effect.
+  const [seenPathname, setSeenPathname] = useState(pathname);
+  if (seenPathname !== pathname) {
+    setSeenPathname(pathname);
     setDrawerOpen(false);
     setServicesOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -93,7 +97,7 @@ export function SiteHeader({
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setDrawerOpen(false);
     };
-    const desktop = window.matchMedia("(min-width: 1024px)");
+    const desktop = window.matchMedia("(min-width: 960px)");
     const onChange = () => setDrawerOpen(false);
     window.addEventListener("keydown", onKey);
     desktop.addEventListener("change", onChange);
@@ -225,7 +229,10 @@ export function SiteHeader({
         ) : null}
       </div>
 
-      {drawerOpen ? (
+      {/* Portalled to <body>: the header animates with `transform`, which would
+          otherwise turn the fixed drawer's containing block into the header
+          itself and clip the menu to the bar's height. */}
+      {drawerOpen && typeof document !== "undefined" ? createPortal(
         <div className={styles.drawer} id="site-navigation-drawer" role="dialog" aria-modal="true" aria-label={`${safeBrandName} navigation`}>
           <div className={styles.drawerHead}>
             <Link href="/" className={styles.brand} onClick={() => setDrawerOpen(false)}>
@@ -280,7 +287,8 @@ export function SiteHeader({
               {portalLabel}
             </button>
           </div>
-        </div>
+        </div>,
+        document.body,
       ) : null}
 
       {portalOpen ? <PortalLoginModal onClose={() => setPortalOpen(false)} /> : null}
