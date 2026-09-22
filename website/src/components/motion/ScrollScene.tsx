@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 import styles from "./scroll-scene.module.css";
+import { reducedMotionMedia } from "./motion-preference";
 
 export type SceneVariant = "rise" | "zoom" | "swing" | "drift";
 
@@ -68,7 +69,7 @@ export function ScrollScene({
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const media = reducedMotionMedia();
     if (media.matches) return;
     element.dataset.sceneActive = "1";
     scenes.add(element);

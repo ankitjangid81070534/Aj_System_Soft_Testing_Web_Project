@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { prefersReducedMotion } from "@/components/motion/motion-preference";
 
 /**
  * Thin brand-gradient reading-progress bar pinned to the top of the viewport.
@@ -14,7 +15,7 @@ export function ScrollProgress() {
   useEffect(() => {
     const bar = barRef.current;
     if (!bar) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (prefersReducedMotion()) return;
 
     let frame = 0;
     const update = () => {

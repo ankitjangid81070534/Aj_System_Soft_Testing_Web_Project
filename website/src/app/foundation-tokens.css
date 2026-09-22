@@ -90,6 +90,5 @@
   .dark { --shadow-sculpted: inset 0 1px 0 #ffffff12, 0 5px 14px -9px #0009; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  :root { --duration-control: 0ms; --duration-surface: 0ms; --surface-lift: 0px; }
-}
+/* Reduced motion is the in-site html[data-motion="reduce"] choice, not the OS flag. */
+:root[data-motion="reduce"] { --duration-control: 0ms; --duration-surface: 0ms; --surface-lift: 0px; }

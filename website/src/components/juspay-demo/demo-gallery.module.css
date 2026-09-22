@@ -187,14 +187,9 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .tile,
-  .media img,
-  .titleRow svg {
-    transition: none;
-  }
-  .tile:hover,
-  .tile:hover .media img {
-    transform: none;
-  }
+:global(html[data-motion="reduce"]) :is(.tile, .media img, .titleRow svg) {
+  transition: none;
+}
+:global(html[data-motion="reduce"]) :is(.tile:hover, .tile:hover .media img) {
+  transform: none;
 }

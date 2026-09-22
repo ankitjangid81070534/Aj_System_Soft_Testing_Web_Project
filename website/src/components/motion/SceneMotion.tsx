@@ -3,13 +3,14 @@
 import { useEffect } from "react";
 import { clamp } from "./motion-utils";
 import { createFrameScheduler } from "./frame-scheduler";
+import { reducedMotionMedia } from "./motion-preference";
 
 /** Visible decorative scenes only. Batched layout reads precede style writes;
  * native scrolling and navbar geometry remain untouched. Idle when settled. */
 export function SceneMotion() {
   useEffect(() => {
     if (!("IntersectionObserver" in window)) return;
-    const media = matchMedia("(prefers-reduced-motion: reduce)");
+    const media = reducedMotionMedia();
     const scenes = new Map<HTMLElement, { visible: boolean; current: number; target: number }>();
     let header: HTMLElement | null = null;
     let darkSections: HTMLElement[] = [];

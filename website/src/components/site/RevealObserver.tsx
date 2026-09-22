@@ -3,13 +3,14 @@
 import { useEffect } from "react";
 import { revealFrames } from "@/components/motion/motion-utils";
 import { createFrameScheduler } from "@/components/motion/frame-scheduler";
+import { reducedMotionMedia } from "@/components/motion/motion-preference";
 
 /** One entrance per mounted element. Content is visible by default and never
  * hidden/rearmed on viewport exit. Decorative orbit entrances remain CSS-owned. */
 export function RevealObserver() {
   useEffect(() => {
     if (!("IntersectionObserver" in window) || !("animate" in Element.prototype)) return;
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const media = reducedMotionMedia();
     const pending = new Set<HTMLElement>();
     const animations = new Map<HTMLElement, Animation>();
     let observer: IntersectionObserver | undefined;

@@ -106,11 +106,9 @@ html.lenis body {
 .juspay-site.juspay-site [data-tilt][data-tilting]::after {
   opacity: 1;
 }
-@media (prefers-reduced-motion: reduce) {
-  .juspay-site.juspay-site [data-tilt] {
-    transform: none;
-    transition: none;
-  }
+html[data-motion="reduce"] .juspay-site.juspay-site [data-tilt] {
+  transform: none;
+  transition: none;
 }
 
 /* Shared sections/cards read as obsidian glass instead of light panels */
@@ -159,12 +157,10 @@ html.lenis body {
     0 22px 36px -12px color-mix(in srgb, var(--tile) 85%, transparent),
     0 0 0 6px color-mix(in srgb, var(--tile) 14%, transparent);
 }
-@media (prefers-reduced-motion: reduce) {
-  .juspay-site.juspay-site .icon-tile:not(footer *),
-  .juspay-site.juspay-site .group:hover .icon-tile:not(footer *) {
-    transform: none;
-    transition: none;
-  }
+html[data-motion="reduce"] .juspay-site.juspay-site .icon-tile:not(footer *),
+html[data-motion="reduce"] .juspay-site.juspay-site .group:hover .icon-tile:not(footer *) {
+  transform: none;
+  transition: none;
 }
 
 /* Light pill faces keep their dark ink, so labels stay readable */

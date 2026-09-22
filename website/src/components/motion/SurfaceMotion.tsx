@@ -2,13 +2,14 @@
 
 import { useEffect } from "react";
 import { pointerTilt } from "./motion-utils";
+import { prefersReducedMotion } from "./motion-preference";
 
 /** Fine-pointer lighting/tilt only. Forms, tables, dialogs and touch devices
  * remain level; no pointer capture or changes to clicks, focus or navigation.
  */
 export function SurfaceMotion() {
   useEffect(() => {
-    const media = matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
+    const media = matchMedia("(hover: hover) and (pointer: fine)");
     let card: HTMLElement | null = null;
     let frame = 0;
     let point = { x: 0, y: 0 };
@@ -18,7 +19,7 @@ export function SurfaceMotion() {
       card = null;
     };
     const move = (event: PointerEvent) => {
-      if (!media.matches || event.pointerType === "touch" || !(event.target instanceof Element)) return;
+      if (!media.matches || prefersReducedMotion() || event.pointerType === "touch" || !(event.target instanceof Element)) return;
       const next = event.target.closest<HTMLElement>("[data-tilt='on']");
       if (!next || next.dataset.tilt === "off" || next.closest("dialog, [data-admin-ui]") || next.querySelector("form, input, textarea, select, table")) { reset(); return; }
       if (next !== card) { reset(); card = next; }

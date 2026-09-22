@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { reducedMotionMedia } from "./motion-preference";
 
 /**
  * Juspay-style inertial scrolling (the reference site runs Lenis as well).
@@ -13,7 +14,7 @@ import Lenis from "lenis";
  */
 export function SmoothScroll() {
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const reduce = reducedMotionMedia();
     const coarse = window.matchMedia("(pointer: coarse)");
     if (reduce.matches || coarse.matches) return;
 
