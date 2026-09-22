@@ -22,6 +22,8 @@ describe("admin resource persistence schemas", () => {
       "payments",
       "ai-methods",
       "seo",
+      "case-studies",
+      "packages",
     ]);
   });
 

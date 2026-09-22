@@ -17,6 +17,7 @@ export type SiteSettings = {
   tagline: string;
   phone: string | null;
   whatsapp: string | null;
+  whatsappMessage: string | null;
   contactEmail: string | null;
   supportEmail: string | null;
   addressLine: string | null;
@@ -52,6 +53,7 @@ export const getSiteSettings = unstable_cache(
         tagline: row.tagline,
         phone: row.phone,
         whatsapp: row.whatsapp,
+        whatsappMessage: typeof row.whatsapp_message === "string" ? row.whatsapp_message : null,
         contactEmail: row.contact_email,
         supportEmail: row.support_email,
         addressLine: row.address_line,
@@ -69,10 +71,18 @@ export const getSiteSettings = unstable_cache(
   { tags: ["site-settings"], revalidate: 300 },
 );
 
-/** WhatsApp deep link, only when a number is configured. */
-export function whatsappLink(settings: SiteSettings | null): string | null {
+/**
+ * WhatsApp deep link, only when a number is configured. Carries the
+ * admin-managed pre-filled message (site_settings.whatsapp_message) when set.
+ */
+export function whatsappLink(
+  settings: Pick<SiteSettings, "whatsapp" | "whatsappMessage"> | null,
+): string | null {
   if (!settings?.whatsapp) return null;
   const digits = settings.whatsapp.replace(/[^0-9]/g, "");
   if (digits.length < 8) return null;
-  return `https://wa.me/${digits}`;
+  const message = settings.whatsappMessage?.trim();
+  return message
+    ? `https://wa.me/${digits}?text=${encodeURIComponent(message)}`
+    : `https://wa.me/${digits}`;
 }

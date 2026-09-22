@@ -190,7 +190,7 @@ describe("Phase 9 admin presentation", () => {
   it("renders an error target for every settings field association", () => {
     const source = read("components/admin/BrandSettingsForm.tsx");
     const names = [...source.matchAll(/\.\.\.inputA11y\("([^"]+)"\)/g)].map((match) => match[1]);
-    expect(names).toHaveLength(14);
+    expect(names).toHaveLength(15);
     for (const name of names) expect(source).toContain(`id="s-${name}-error"`);
   });
 

@@ -5,10 +5,12 @@ import { buildRootMetadata } from "@/lib/seo/metadata";
 import { RevealObserver } from "@/components/site/RevealObserver";
 import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
 import "./surface-system.css";
 import "./accent-surfaces.css";
 import "./action-surfaces.css";
+import "./mobile-polish.css";
 
 export const metadata: Metadata = buildRootMetadata();
 
@@ -60,6 +62,7 @@ export default function RootLayout({
         <RevealObserver />
         <SceneMotion />
         <SurfaceMotion />
+        <GoogleAnalytics />
       </body>
     </html>
   );

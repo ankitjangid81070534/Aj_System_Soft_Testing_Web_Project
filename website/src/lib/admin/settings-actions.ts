@@ -34,6 +34,7 @@ const settingsSchema = z.object({
   support_email: optionalEmail,
   phone: z.string().trim().max(20),
   whatsapp: z.string().trim().max(20),
+  whatsapp_message: z.string().trim().max(300),
   address_line: z.string().trim().max(300),
   map_url: optionalSafeUrl,
   global_cta_label: z.string().trim().max(60),

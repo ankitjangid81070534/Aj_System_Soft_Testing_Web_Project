@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Reveal } from "./Reveal";
+import { useSiteReducedMotion } from "@/components/motion/motion-preference";
 import styles from "./juspay-demo.module.css";
 
 /**
@@ -14,7 +15,7 @@ import styles from "./juspay-demo.module.css";
  */
 export function DemoPlanet({ serviceCount, benefitCount }: { serviceCount: number; benefitCount: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useSiteReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 90%", "end 60%"] });
   const scale = useSpring(useTransform(scrollYProgress, [0, 1], [0.55, 1.08]), { stiffness: 60, damping: 20 });
   const y = useSpring(useTransform(scrollYProgress, [0, 1], ["42%", "0%"]), { stiffness: 60, damping: 20 });

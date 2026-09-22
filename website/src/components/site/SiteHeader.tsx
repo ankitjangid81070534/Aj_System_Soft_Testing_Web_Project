@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { ArrowRight, ChevronDown, ChevronRight, Menu, User, X } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, User } from "lucide-react";
 import type { PublicNavLink } from "@/lib/data/navigation";
 import type { ServiceCardModel } from "@/lib/data/services";
 import { NAV_LINKS } from "@/lib/navigation";
@@ -50,6 +50,7 @@ export function SiteHeader({
   const links = navLinks.filter((link) => link.href !== "/");
 
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerServicesOpen, setDrawerServicesOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [portalOpen, setPortalOpen] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
@@ -87,8 +88,14 @@ export function SiteHeader({
   if (seenPathname !== pathname) {
     setSeenPathname(pathname);
     setDrawerOpen(false);
+    setDrawerServicesOpen(false);
     setServicesOpen(false);
   }
+
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+    setDrawerServicesOpen(false);
+  };
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -208,7 +215,7 @@ export function SiteHeader({
             aria-expanded={drawerOpen}
             aria-controls="site-navigation-drawer"
           >
-            <Menu size={20} aria-hidden="true" />
+            <BurgerIcon open={drawerOpen} />
           </button>
         </div>
 
@@ -235,50 +242,73 @@ export function SiteHeader({
       {drawerOpen && typeof document !== "undefined" ? createPortal(
         <div className={styles.drawer} id="site-navigation-drawer" role="dialog" aria-modal="true" aria-label={`${safeBrandName} navigation`}>
           <div className={styles.drawerHead}>
-            <Link href="/" className={styles.brand} onClick={() => setDrawerOpen(false)}>
+            <Link href="/" className={styles.brand} onClick={closeDrawer}>
               <span className={styles.mark} aria-hidden="true">
                 AJ
               </span>
               <span className={styles.brandName}>{safeBrandShortName}</span>
             </Link>
-            <button type="button" className={styles.close} onClick={() => setDrawerOpen(false)} aria-label="Close navigation menu" autoFocus>
-              <X size={20} aria-hidden="true" />
+            <button type="button" className={styles.close} onClick={closeDrawer} aria-label="Close navigation menu" autoFocus>
+              <BurgerIcon open />
             </button>
           </div>
 
-          <p className={styles.drawerLabel}>Pages</p>
+          <p className={styles.drawerLabel}>Menu</p>
           <div className={styles.drawerLinks}>
-            <Link href="/" className={styles.drawerLink} aria-current={pathname === "/" ? "page" : undefined} onClick={() => setDrawerOpen(false)}>
+            <Link href="/" className={styles.drawerLink} aria-current={pathname === "/" ? "page" : undefined} onClick={closeDrawer}>
               Home <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={styles.drawerLink}
-                aria-current={isNavigationActive(pathname, link.href) ? "page" : undefined}
-                onClick={() => setDrawerOpen(false)}
-              >
-                {link.label} <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            ))}
+            {links.map((link) => {
+              const current = isNavigationActive(pathname, link.href);
+              // Services is a collapsible group: only the main option shows
+              // until it is tapped, then its sub-services unfold beneath it.
+              if (link.href === "/services" && services.length > 0) {
+                return (
+                  <div key={link.href} className={styles.drawerGroup} data-open={drawerServicesOpen || undefined}>
+                    <button
+                      type="button"
+                      className={styles.drawerLink}
+                      aria-current={current ? "page" : undefined}
+                      aria-expanded={drawerServicesOpen}
+                      aria-controls="site-drawer-services"
+                      onClick={() => setDrawerServicesOpen((open) => !open)}
+                    >
+                      {link.label} <ChevronDown size={18} aria-hidden="true" className={styles.drawerChevron} />
+                    </button>
+                    <div id="site-drawer-services" className={styles.drawerSub}>
+                      <div className={styles.drawerSubInner}>
+                        {services.slice(0, 8).map((service) => (
+                          <Link key={service.id} href={`/services/${service.slug}`} className={styles.drawerSubLink} onClick={closeDrawer}>
+                            <span className={styles.drawerSubIcon} aria-hidden="true">
+                              {renderIcon(service.icon)}
+                            </span>
+                            {service.name}
+                          </Link>
+                        ))}
+                        <Link href={link.href} className={`${styles.drawerSubLink} ${styles.drawerSubAll}`} onClick={closeDrawer}>
+                          All services <ArrowRight size={15} aria-hidden="true" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={styles.drawerLink}
+                  aria-current={current ? "page" : undefined}
+                  onClick={closeDrawer}
+                >
+                  {link.label} <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              );
+            })}
           </div>
 
-          {services.length > 0 ? (
-            <>
-              <p className={styles.drawerLabel}>Services</p>
-              <div className={styles.drawerLinks}>
-                {services.slice(0, 6).map((service) => (
-                  <Link key={service.id} href={`/services/${service.slug}`} className={styles.drawerLink} onClick={() => setDrawerOpen(false)}>
-                    {service.name} <ArrowRight size={16} aria-hidden="true" />
-                  </Link>
-                ))}
-              </div>
-            </>
-          ) : null}
-
           <div className={styles.drawerActions}>
-            <Link href={safeCtaHref} className={styles.drawerCta} onClick={() => setDrawerOpen(false)}>
+            <Link href={safeCtaHref} className={styles.drawerCta} onClick={closeDrawer}>
               {safeCtaLabel}
               <ChevronRight size={18} aria-hidden="true" />
             </Link>
@@ -293,5 +323,16 @@ export function SiteHeader({
 
       {portalOpen ? <PortalLoginModal onClose={() => setPortalOpen(false)} /> : null}
     </header>
+  );
+}
+
+/** Three-line menu glyph that morphs into a cross (juspay.io-style). */
+function BurgerIcon({ open = false }: { open?: boolean }) {
+  return (
+    <span className={styles.burgerIcon} data-open={open || undefined} aria-hidden="true">
+      <i />
+      <i />
+      <i />
+    </span>
   );
 }

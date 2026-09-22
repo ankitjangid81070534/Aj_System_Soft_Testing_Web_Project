@@ -19,6 +19,7 @@ export type BrandSettingsValues = {
   support_email: string;
   phone: string;
   whatsapp: string;
+  whatsapp_message: string;
   address_line: string;
   map_url: string;
   global_cta_label: string;
@@ -158,6 +159,23 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
         />
         <ErrorText id="s-whatsapp-error" message={error("whatsapp")} />
       </Field>
+      <div className="sm:col-span-2">
+        <Field
+          label="WhatsApp pre-filled message"
+          htmlFor="s-whatsapp_message"
+          hint="Opens in the client's WhatsApp when they tap the floating WhatsApp button or the homepage WhatsApp CTA."
+        >
+          <Textarea
+            id="s-whatsapp_message"
+            name="whatsapp_message"
+            rows={2}
+            defaultValue={initial.whatsapp_message}
+            maxLength={300}
+            {...inputA11y("whatsapp_message")}
+          />
+          <ErrorText id="s-whatsapp_message-error" message={error("whatsapp_message")} />
+        </Field>
+      </div>
       <Field label="Address line" htmlFor="s-address_line">
         <Input
           id="s-address_line"

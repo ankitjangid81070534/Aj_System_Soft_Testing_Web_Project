@@ -1,7 +1,11 @@
 import type { HomeContent } from "@/lib/data/home";
 import type { SiteSettings } from "@/lib/data/settings";
 import type { LaunchBenefit } from "@/lib/data/growth";
+import type { CaseStudy, Package, TrustedClient } from "@/lib/data/sales";
+import { whatsappLink } from "@/lib/data/settings";
 import { DemoHero } from "./DemoHero";
+import { DemoHeroProof } from "./DemoHeroProof";
+import { DemoStickyCta } from "./DemoStickyCta";
 import { DemoMarquee } from "./DemoMarquee";
 import { DemoPlanet } from "./DemoPlanet";
 import { DemoResults } from "./DemoResults";
@@ -18,6 +22,9 @@ import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
 import { DemoGallery } from "./DemoGallery";
 import { DemoProof } from "./DemoProof";
+import { DemoTrust } from "./DemoTrust";
+import { DemoCaseStudies } from "./DemoCaseStudies";
+import { DemoPackages } from "./DemoPackages";
 import { DemoCta } from "./DemoCta";
 import { juspayFontClassName } from "./fonts";
 import styles from "./juspay-demo.module.css";
@@ -37,10 +44,12 @@ export function JuspayHome({
   content,
   settings,
   benefits,
+  sales,
 }: {
   content: HomeContent;
   settings: SiteSettings | null;
   benefits: LaunchBenefit[];
+  sales: { clients: TrustedClient[]; caseStudies: CaseStudy[]; packages: Package[] };
 }) {
   const brandName = settings?.brandName ?? "AJ System Soft Technology";
   const shortName = settings?.brandShortName ?? "AJS Technology";
@@ -51,6 +60,11 @@ export function JuspayHome({
   return (
     <div data-home-experience className={`${styles.page} ${juspayFontClassName}`} data-juspay-home>
       <DemoHero ctaHref={ctaHref} ctaLabel={ctaLabel} brandName={brandName} />
+      <DemoHeroProof
+        projectCount={content.projects.length}
+        serviceCount={serviceCount}
+        clients={sales.clients}
+      />
       <DemoMarquee />
       <DemoPlanet serviceCount={serviceCount} benefitCount={benefits.length} />
       <div className={styles.light} data-light-band>
@@ -59,6 +73,7 @@ export function JuspayHome({
         <DemoBuilder />
         <DemoRouting />
         <DemoTriad benefits={benefits} />
+        <DemoTrust clients={sales.clients} />
       </div>
       <DemoPlatforms />
       <DemoStack />
@@ -67,9 +82,14 @@ export function JuspayHome({
       <DemoServices services={content.services} />
       <DemoProcess />
       <DemoIndustries />
+      <DemoCaseStudies studies={sales.caseStudies} />
+      <div className={styles.light} data-light-band>
+        <DemoPackages packages={sales.packages} whatsappHref={whatsappLink(settings)} />
+      </div>
       <DemoGallery projects={content.projects} />
       <DemoProof content={content} />
       <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
+      <DemoStickyCta ctaHref={ctaHref} ctaLabel={ctaLabel} whatsappHref={whatsappLink(settings)} />
     </div>
   );
 }

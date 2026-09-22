@@ -64,6 +64,45 @@
 .blue {
   color: var(--jd-blue);
 }
+/* Hero lead word: colour only drifts softly through a multi-colour cycle
+   (blue → violet → magenta → orange → green → cyan). Layout/weight untouched. */
+.heroAccent {
+  animation: heroHue 14s ease-in-out infinite;
+  text-shadow: 0 0 32px color-mix(in srgb, currentColor 35%, transparent);
+  transition: text-shadow 0.6s;
+}
+@keyframes heroHue {
+  0%, 100% { color: #3079ea; }
+  16% { color: #7c5cff; }
+  33% { color: #ec4899; }
+  50% { color: #f97316; }
+  66% { color: #10b981; }
+  83% { color: #06b6d4; }
+}
+:global(html[data-motion="reduce"]) .heroAccent { animation: none; }
+
+/* Card icons never sit still: a slow float + tiny turn, staggered per card,
+   and a quick pop when the card is hovered/tapped. */
+.iconTile svg {
+  animation: iconIdle 4.4s ease-in-out infinite;
+  will-change: transform;
+}
+.industry:nth-child(3n + 2) .iconTile svg,
+.stackCard:nth-child(3n + 2) .iconTile svg { animation-delay: -1.5s; }
+.industry:nth-child(3n + 3) .iconTile svg,
+.stackCard:nth-child(3n + 3) .iconTile svg { animation-delay: -3s; }
+.industry:hover .iconTile svg,
+.industry:active .iconTile svg { animation: iconPop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes iconIdle {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-3px) rotate(-5deg) scale(1.07); }
+}
+@keyframes iconPop {
+  0% { transform: scale(1) rotate(0deg); }
+  40% { transform: scale(1.22) rotate(8deg); }
+  100% { transform: scale(1.08) rotate(0deg); }
+}
+:global(html[data-motion="reduce"]) .iconTile svg { animation: none; }
 
 .eyebrow {
   display: inline-flex;
@@ -1707,10 +1746,11 @@
     width: min(1320px, calc(100% - 40px));
   }
   .section {
-    padding: 96px 0;
+    padding: 72px 0;
   }
   .numbers {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
   }
   .planetStage {
     height: 480px;
