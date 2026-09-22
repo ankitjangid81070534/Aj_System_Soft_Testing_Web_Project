@@ -7,6 +7,7 @@ import { getHomeContent } from "@/lib/data/home";
 import { getSiteSettings } from "@/lib/data/settings";
 import { JuspayHome } from "@/components/juspay-demo/JuspayHome";
 import { getLaunchBenefits } from "@/lib/data/growth";
+import { getCaseStudies, getPackages, getTrustedClients } from "@/lib/data/sales";
 
 export const revalidate = 300;
 export const dynamic = "force-static";
@@ -21,11 +22,15 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [{ services, projects, team, testimonials, posts }, settings, benefits] = await Promise.all([
-    getHomeContent(),
-    getSiteSettings(),
-    getLaunchBenefits(),
-  ]);
+  const [{ services, projects, team, testimonials, posts }, settings, benefits, clients, caseStudies, packages] =
+    await Promise.all([
+      getHomeContent(),
+      getSiteSettings(),
+      getLaunchBenefits(),
+      getTrustedClients(),
+      getCaseStudies(),
+      getPackages(),
+    ]);
 
   return (
     <>
@@ -39,7 +44,12 @@ export default async function HomePage() {
           sameAs: settings?.socialLinks.map((link) => link.url),
         })}
       />
-      <JuspayHome content={{ services, projects, team, testimonials, posts }} settings={settings} benefits={benefits} />
+      <JuspayHome
+        content={{ services, projects, team, testimonials, posts }}
+        settings={settings}
+        benefits={benefits}
+        sales={{ clients, caseStudies, packages }}
+      />
     </>
   );
 }

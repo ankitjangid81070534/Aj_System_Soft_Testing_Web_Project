@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Homepage sales sections (2026-09-22)
+- `/` now renders admin-managed conversion content from migration 0017 via `lib/data/sales.ts`: `DemoTrust` (trust strip, inside the first light band), `DemoCaseStudies` (dark band, before the gallery) and `DemoPackages` (its own `styles.light` + `data-light-band` wrapper). Shared styles live in `components/juspay-demo/demo-sales.module.css`; each section returns `null` when the admin has no active/published rows.
+- The packages WhatsApp CTA uses `whatsappLink(settings)` (admin number + pre-filled message) and hides when no number is configured — no second floating button; `ContactHub` already provides the site-wide one.
+- `src/types/database.ts` gained `trusted_clients`, `case_studies`, `packages` and `site_settings.whatsapp_message`; without them the Supabase client types reject those reads. `admin-ui.test.ts` expects 15 `inputA11y` names in `BrandSettingsForm` (the new WhatsApp message field).
+
 ## Header drawer + 960px desktop switch (2026-09-22)
 - `SiteHeader` drawer is rendered with `createPortal` into `document.body`. The header `.band` animates with `transform`/`will-change`, which made it the containing block of the `position: fixed` drawer — on real devices the menu was clipped to the bar height (only brand + "PAGES" visible, hero showing through). `.drawer` now carries its own `--sh-*` tokens and link/button resets because it no longer sits inside `.band`.
 - Desktop navigation and the side-by-side hero now start at **960px** (`site-header.module.css`, the matchMedia in `SiteHeader.tsx`, `juspay-demo.module.css` `@media (max-width: 959px)` hero block). A 1024px screen with a scrollbar reports ~1009px, so the old 1024px switch put Edge/Chrome on 1024-wide Windows laptops into the mobile bar with the 3D core stacked below the copy. 960–1240px tightens the hero title/lead/eyebrow so the pill stays on one line.
