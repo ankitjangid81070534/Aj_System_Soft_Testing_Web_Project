@@ -140,7 +140,8 @@ export const getProjectCaseStudy = cache(async (slug: string): Promise<CaseStudy
         type: item.media_type === "video" ? "video" : "image",
       })),
     };
-  } catch {
+  } catch (error) {
+    console.error(`[getProjectCaseStudy] failed for slug "${slug}"`, error);
     return null;
   }
 });

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
 
@@ -53,13 +53,14 @@ export function MediaFrame({
       </div>
       <div className={cn("relative overflow-hidden bg-canvas", aspectClass[aspect])}>
         {src ? (
-          <Image
+          <SafeImage
             src={src}
             alt={alt}
             fill
             priority={priority}
             sizes="(min-width: 1280px) 60vw, (min-width: 768px) 50vw, 100vw"
             className="object-cover object-top"
+            fallback={children}
           />
         ) : (
           children

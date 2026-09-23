@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 import { StatusPill } from "@/components/ui/Badge";
+import { isSafeImageSrc } from "@/components/ui/SafeImage";
 
 function initials(name: string): string {
-  return name
+  return (name ?? "")
     .split(/\s+/)
     .slice(0, 2)
     .map((word) => word.charAt(0).toUpperCase())
@@ -43,7 +44,7 @@ export function ProjectCard({
   const body = (
     <>
       <div className="relative z-10 m-2 aspect-[16/10] overflow-hidden rounded-[1rem] bg-canvas-raised ring-1 ring-line">
-        {coverUrl ? (
+        {isSafeImageSrc(coverUrl) ? (
           <Image
             src={coverUrl}
             alt={`${name} — project preview`}

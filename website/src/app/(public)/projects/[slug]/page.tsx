@@ -31,15 +31,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = await getProjectCaseStudy(slug);
-  // Public routes render blocking (no loading.tsx boundary above), so
-  // notFound() in metadata yields a real 404 status for unknown slugs.
+  // notFound() throws a control-flow signal, so it must stay outside the
+  // try/catch below. It yields a real 404 status for unknown slugs.
   if (!project) notFound();
-  return buildMetadata({
-    title: project.name,
-    description: project.summary,
-    path: `/projects/${project.slug}`,
-    noIndex: project.status !== "published",
-  });
+  try {
+    return buildMetadata({
+      title: project.name || "Case study",
+      description: project.summary || "Project case study",
+      path: `/projects/${project.slug || slug}`,
+      noIndex: project.status !== "published",
+    });
+  } catch (error) {
+    console.error(`[projects/${slug}] metadata failed`, error);
+    return { title: project.name || "Case study", description: project.summary || "Project case study" };
+  }
 }
 
 function MetaRow({ label, value }: { label: string; value: string | null | undefined }) {
@@ -75,7 +80,16 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const project = await getProjectCaseStudy(slug);
   if (!project) notFound();
 
-  const allProjects = await getPublicProjects();
+  // Defensive defaults: a partial CMS row must never crash the render.
+  const name = project.name || "Case study";
+  const projectSlug = project.slug || slug;
+  const keyFeatures = project.keyFeatures ?? [];
+  const technologyStack = project.technologyStack ?? [];
+  const integrations = project.integrations ?? [];
+  const impactResults = project.impactResults ?? [];
+  const gallery = (project.gallery ?? []).filter((media) => Boolean(media?.url));
+
+  const allProjects = (await getPublicProjects()) ?? [];
   const relatedIds = pickRelevantProjectIds(
     allProjects.filter((item) => item.id !== project.id),
     {
@@ -88,7 +102,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const crumbs = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: project.name, path: `/projects/${project.slug}` },
+    { name: name, path: `/projects/${projectSlug}` },
   ];
 
   return (
@@ -108,7 +122,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               {project.industry ? <Badge>{project.industry}</Badge> : null}
             </div>
           }
-          title={project.name}
+          title={name}
           description={project.summary}
           aside={
             <aside className="rounded-2xl border border-line bg-canvas p-5">
@@ -146,8 +160,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <Reveal>
               <MediaFrame
                 src={project.coverUrl}
-                alt={`${project.name} — main interface preview`}
-                label={project.name}
+                alt={`${name} — main interface preview`}
+                label={name}
                 aspect="16/9"
                 priority
                 className="max-w-5xl"
@@ -162,7 +176,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <TextSection title="Our solution" text={project.solution} />
         </div>
 
-        {project.keyFeatures.length > 0 ? (
+        {keyFeatures.length > 0 ? (
           <section
             className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14"
             aria-labelledby="features"
@@ -174,7 +188,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               />
             </Reveal>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {project.keyFeatures.map((feature, index) => (
+              {keyFeatures.map((feature, index) => (
                 <Reveal key={feature} delay={index * 40} className="h-full">
                   <div className="h-full rounded-2xl border border-line bg-surface p-4 shadow-e1">
                     <p className="text-sm text-ink-soft">{feature}</p>
@@ -185,9 +199,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
         ) : null}
 
-        {project.technologyStack.length > 0 ||
+        {technologyStack.length > 0 ||
         project.databaseNote ||
-        project.integrations.length > 0 ? (
+        integrations.length > 0 ? (
           <section className="border-y border-line bg-surface" aria-labelledby="stack">
             <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
               <Reveal>
@@ -197,9 +211,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 />
               </Reveal>
               <div className="mt-6 flex flex-col gap-5">
-                {project.technologyStack.length > 0 ? (
+                {technologyStack.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
-                    {project.technologyStack.map((tech) => (
+                    {technologyStack.map((tech) => (
                       <span
                         key={tech}
                         className="rounded-full border border-line bg-canvas px-3.5 py-1.5 text-sm text-ink-soft"
@@ -215,10 +229,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                     {project.databaseNote}
                   </p>
                 ) : null}
-                {project.integrations.length > 0 ? (
+                {integrations.length > 0 ? (
                   <p className="max-w-3xl text-sm text-ink-muted">
                     <span className="font-medium text-ink">Integrations: </span>
-                    {project.integrations.join(" · ")}
+                    {integrations.join(" · ")}
                   </p>
                 ) : null}
               </div>
@@ -226,16 +240,16 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
         ) : null}
 
-        <ProjectGallery name={project.name} gallery={project.gallery} videoUrl={project.videoUrl} />
+        <ProjectGallery name={name} gallery={gallery} videoUrl={project.videoUrl} />
 
-        {project.impactResults.length > 0 ? (
+        {impactResults.length > 0 ? (
           <section className="border-y border-line bg-surface" aria-labelledby="results">
             <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
               <Reveal>
                 <SectionHeader eyebrow="Outcomes" title={<span id="results">Real results</span>} />
               </Reveal>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {project.impactResults.map((result) => (
+                {impactResults.map((result) => (
                   <li
                     key={result}
                     className="rounded-2xl border border-success/20 bg-success-soft p-4 text-sm text-ink-soft"
@@ -254,7 +268,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <figure className="mx-auto max-w-3xl rounded-3xl border border-line bg-surface p-6 shadow-e2 sm:p-8">
                 <Quote aria-hidden="true" className="h-7 w-7 text-brand-300" />
                 <blockquote className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
-                  {project.testimonial.quote}
+                  {project.testimonial.quote || null}
                 </blockquote>
                 <figcaption className="mt-4 border-t border-line pt-4 text-sm">
                   <span className="font-semibold text-ink">
