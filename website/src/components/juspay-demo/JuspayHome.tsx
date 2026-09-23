@@ -5,7 +5,6 @@ import type { CaseStudy, Package, TrustedClient } from "@/lib/data/sales";
 import { whatsappLink } from "@/lib/data/settings";
 import { DemoHero } from "./DemoHero";
 import { DemoHeroProof } from "./DemoHeroProof";
-import { DemoStickyCta } from "./DemoStickyCta";
 import { DemoMarquee } from "./DemoMarquee";
 import { DemoPlanet } from "./DemoPlanet";
 import { DemoResults } from "./DemoResults";
@@ -95,7 +94,6 @@ export function JuspayHome({
       <DemoGallery projects={content.projects} />
       <DemoProof content={content} />
       <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
-      <DemoStickyCta ctaHref={ctaHref} ctaLabel={ctaLabel} whatsappHref={whatsappLink(settings)} />
     </div>
   );
 }

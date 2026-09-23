@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Mobile sticky CTA removed (2026-09-23)
+- Owner asked to drop the black mobile-only "Start your project / WhatsApp" bar that sat beside the ContactHub bubble. `DemoStickyCta` is no longer mounted in `JuspayHome.tsx` (file kept for reference, like `DemoPlatforms`). Hero CTA, `DemoCta` band, packages WhatsApp CTA and the site-wide ContactHub are unchanged.
+
 ## Mobile "rise" scene fix (2026-09-23)
 - `scroll-scene.module.css` ≤700px `.rise` now pivots at the TOP edge (`transform-origin: 50% 0%`, `rotateX(-9deg)`). Single-column stacks (e.g. DemoTriad's 1800px "What's included" list) rotated around their bottom edge were pushed ~900px below the viewport at `--sp: 0`, so the cards looked hidden until the user scrolled well past them. Measured in the preview: layout top 606px → rendered 647px (was 1495px). Animation itself is unchanged.
 
