@@ -13,6 +13,7 @@ import "./action-surfaces.css";
 import "./mobile-polish.css";
 import "./catalogue-polish.css";
 import "./inner-pages.css";
+import "./page-transitions.css";
 
 export const metadata: Metadata = buildRootMetadata();
 

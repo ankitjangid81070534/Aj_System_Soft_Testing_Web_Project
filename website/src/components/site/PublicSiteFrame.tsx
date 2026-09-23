@@ -13,7 +13,8 @@ export function PublicSiteFrame({ children, header, footer, beforeHeader, afterF
   children: ReactNode; header: ReactNode; footer: ReactNode;
   beforeHeader: ReactNode; afterFooter: ReactNode;
 }) {
-  const isHome = usePathname() === "/";
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   return (
     <div
       className={`site-shell dark juspay-site flex min-h-svh flex-col ${isHome ? styles.page : ""}`}
@@ -23,7 +24,11 @@ export function PublicSiteFrame({ children, header, footer, beforeHeader, afterF
       <TiltEngine />
       {beforeHeader}
       <div className={styles.headerFrame} data-site-header>{header}</div>
-      <main id="main-content" className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">
+        {/* Keyed by path: every route change replays the soft page entrance
+            (page-transitions.css) while header, footer and ContactHub persist. */}
+        <div key={pathname} className="page-enter">{children}</div>
+      </main>
       <div className={styles.footerFrame}>{footer}</div>
       {afterFooter}
     </div>

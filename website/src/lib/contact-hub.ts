@@ -53,7 +53,4 @@ export function getContactHubActions(settings: ContactSettings | null): ContactH
 }
 
 /** Positive scope: never mount on forms, legal reading or private/account routes. */
-export function showsContactHub(pathname: string): boolean {
-  return ["/", "/about", "/team", "/reviews", "/ai-methods"].includes(pathname)
-    || /^\/(services|projects|blog)(\/[^/]+)?\/?$/.test(pathname);
-}
+
