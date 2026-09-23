@@ -12,6 +12,7 @@ import "./accent-surfaces.css";
 import "./action-surfaces.css";
 import "./mobile-polish.css";
 import "./catalogue-polish.css";
+import "./inner-pages.css";
 
 export const metadata: Metadata = buildRootMetadata();
 

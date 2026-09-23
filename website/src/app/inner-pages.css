@@ -1,0 +1,114 @@
+/* ============================================================================
+   Inner-page polish (2026-09-23)
+   Brings everything BELOW the hero on /services, /projects, /ai-methods,
+   /reviews, /about, /team, /contact into the same obsidian + single-blue
+   language as the homepage. Presentation only: no structure, content, links,
+   data or motion change. The rainbow jewel faces from accent-surfaces.css are
+   replaced by one calm surface; the service hue survives as a thin accent
+   (icon tile, hover ring) instead of a saturated glowing background.
+   ========================================================================== */
+
+.juspay-site,
+.site-shell {
+  --ip-surface: #101318;
+  --ip-surface-2: #0c0f14;
+  --ip-line: #ffffff1f;
+}
+
+/* ---------- Display cards: one professional surface, accent as a hint ------ */
+:is(.site-shell, .juspay-site)
+  :is(.card-3d, .card-lift, .reference-card):not(
+    :has(form, input, textarea, select, table, .card-3d)
+  ) {
+  background:
+    radial-gradient(
+      120% 90% at 0% 0%,
+      color-mix(in srgb, var(--card-light), transparent 94%),
+      transparent 60%
+    ),
+    linear-gradient(168deg, var(--ip-surface), var(--ip-surface-2));
+  border: 1px solid var(--ip-line);
+  box-shadow: inset 0 1px 0 0 #ffffff0d, 0 18px 40px -28px #000000cc;
+}
+:is(.site-shell, .juspay-site)
+  :is(.card-3d, .card-lift, .reference-card):not(
+    :has(form, input, textarea, select, table, .card-3d)
+  )
+  :is(h3, p, small) {
+  text-shadow: none;
+}
+:is(.site-shell, .juspay-site)
+  :is(.card-3d, .reference-card):not(:has(form, input, textarea, select, table, .card-3d))
+  h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(16px, 0.55vw + 14.5px, 18px);
+  color: #f7f8fa;
+}
+:is(.site-shell, .juspay-site)
+  :is(.card-3d, .reference-card):not(:has(form, input, textarea, select, table, .card-3d))
+  p {
+  color: #a9adb8;
+  opacity: 1;
+  font-size: clamp(13.5px, 0.3vw + 13px, 14.5px);
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+/* Accent stays in the small details, where it reads as brand, not as glow. */
+:is(.site-shell, .juspay-site) :is(.card-3d, .reference-card) .icon-tile {
+  background: color-mix(in srgb, var(--card-light), transparent 88%);
+  border-color: color-mix(in srgb, var(--card-light), transparent 72%);
+  color: color-mix(in srgb, var(--card-light), #ffffff 25%);
+  box-shadow: none;
+}
+:is(.site-shell, .juspay-site) .card-3d .card-corner {
+  background: #ffffff0f;
+  border-color: var(--ip-line);
+  color: #cdd2dc;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.site-shell, .juspay-site)
+    :is(.card-3d, .card-lift, .reference-card):not([data-tilt="on"]):not(
+      :has(form, input, textarea, select, table, .card-3d)
+    ):hover {
+    border-color: color-mix(in srgb, var(--card-light), transparent 58%);
+    box-shadow:
+      inset 0 1px 0 0 #ffffff14,
+      0 24px 55px -30px #000000e6,
+      0 0 0 1px color-mix(in srgb, var(--card-light), transparent 80%);
+  }
+}
+
+/* ---------- Soft tinted form/table panels become neutral, not coloured ----- */
+:is(.site-shell, [data-admin-ui]) main
+  :where(
+    .rounded-2xl.border.border-line.bg-surface,
+    .rounded-3xl.border.border-line.bg-surface
+  ):not(.card-3d, .card-lift, .card-surface) {
+  --panel-accent: #3079ea;
+}
+
+/* ---------- Section rhythm and type below the hero ------------------------- */
+.site-shell main h2 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.site-shell main h3 {
+  letter-spacing: -0.012em;
+}
+.site-shell main p {
+  text-wrap: pretty;
+}
+
+/* Category / section headings across the inner pages share one scale. */
+#service-catalogue h2,
+.site-shell main section > header h2 {
+  font-size: clamp(22px, 1.1vw + 19px, 30px);
+}
+
+/* Grids never let a long label widen a row. */
+.site-shell main [class*="grid"] > * {
+  min-width: 0;
+}

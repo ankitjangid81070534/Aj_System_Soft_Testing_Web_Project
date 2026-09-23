@@ -24,8 +24,8 @@ export function CTA({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden rounded-[2rem] px-6 py-14 text-center text-white shadow-float sm:px-12 sm:py-20",
-        "bg-[linear-gradient(135deg,#0b1220_0%,#132a6b_45%,#2557e8_100%)] dark:bg-[linear-gradient(135deg,#070b14_0%,#0f1f4a_50%,#1d45cf_100%)]",
+        "relative isolate overflow-hidden rounded-[1.75rem] border border-white/10 px-6 py-14 text-center text-white sm:px-12 sm:py-20",
+        "bg-[linear-gradient(168deg,#101318_0%,#0c0f14_100%)] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_30px_70px_-40px_rgba(0,0,0,0.9)]",
         className,
       )}
     >
@@ -34,19 +34,11 @@ export function CTA({
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent"
       />
-      {/* Grid + aurora glows */}
-      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-60" />
+      {/* Fine grid texture + one restrained brand glow */}
+      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-25" />
       <div
         aria-hidden="true"
-        className="aurora -left-20 -top-24 -z-10 h-72 w-72 bg-cyan-500/40"
-      />
-      <div
-        aria-hidden="true"
-        className="aurora -bottom-28 -right-16 -z-10 h-80 w-80 bg-accent-500/50 [animation-delay:-7s]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-56 w-[36rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-56 w-[40rem] -translate-x-1/2 rounded-full bg-[#3079ea]/20 blur-[90px]"
       />
 
       <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-4">
