@@ -96,7 +96,10 @@ const VIEWS: View[] = [
  * activity table. Pure CSS/React — no chart library, no network. Placed right
  * after the hero proof so a visitor sees a working product within seconds.
  */
-export function DemoLiveDashboard({ ctaHref }: { ctaHref: string }) {
+/** Section copy, resolved by the server from `site_copy` (admin editable). */
+export type DashboardText = { eyebrow: string; title: string; titleAccent: string; lead: string };
+
+export function DemoLiveDashboard({ ctaHref, text }: { ctaHref: string; text: DashboardText }) {
   const [active, setActive] = useState<View["id"]>("billing");
   const view = VIEWS.find((v) => v.id === active) ?? VIEWS[0];
   const max = Math.max(...view.series.map((p) => p.value));
@@ -107,18 +110,15 @@ export function DemoLiveDashboard({ ctaHref }: { ctaHref: string }) {
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Live product preview</span>
+            <span className={styles.eyebrowPlain}>{text.eyebrow}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              See your business data, <span className={styles.blue}>live</span>
+              {text.title} <span className={styles.blue}>{text.titleAccent}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className={styles.lead}>
-              This is the kind of dashboard your team opens every morning — switch between billing, inventory and
-              payments to see how real numbers turn into clear decisions.
-            </p>
+            <p className={styles.lead}>{text.lead}</p>
           </Reveal>
         </div>
 

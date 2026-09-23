@@ -3,6 +3,8 @@ import { Reveal } from "./Reveal";
 import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 
 /** The live "Why teams choose" reasons, verbatim. */
 const REASONS = [
@@ -30,21 +32,21 @@ const REASONS = [
 ];
 
 /** "Why AJS Technology" in the dark Juspay-style grid (replaces the legacy WhyUs on `/`). */
-export function DemoWhyUs({ brandName }: { brandName: string }) {
+export function DemoWhyUs({ brandName, copy }: { brandName: string; copy: SiteCopy }) {
   return (
     <section className={styles.section} data-home-section="principles">
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Why AJS Technology</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.why.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              Why teams choose <span className={styles.blue}>{brandName}</span>
+              {copy.t("home.why.title")} <span className={styles.blue}>{brandName}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className={styles.lead}>A focused development partner that treats your requirements as the specification.</p>
+            <p className={styles.lead}>{copy.t("home.why.lead")}</p>
           </Reveal>
         </div>
         <ScrollScene variant="zoom" className={styles.industryGrid}>

@@ -17,6 +17,7 @@ import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
 import { DemoProof } from "./DemoProof";
 import { DemoFooter } from "./DemoFooter";
+import { createSiteCopy } from "@/lib/data/site-copy";
 import styles from "./juspay-demo.module.css";
 
 /**
@@ -53,25 +54,39 @@ export function JuspayDemo({
   const ctaHref = settings?.globalCtaHref ?? "/request-quote";
   const ctaLabel = settings?.globalCtaLabel ?? "Start Your Project";
 
+  const copy = createSiteCopy({}, { brand: brandName, shortBrand: shortName });
+
   return (
     <div className={`${styles.page} ${fontClassName}`} data-juspay-demo>
       <DemoNav brandName={brandName} navLinks={navLinks} services={services} posts={content.posts} ctaHref={ctaHref} />
       <main>
-        <DemoHero ctaHref={ctaHref} ctaLabel={ctaLabel} brandName={brandName} />
+        <DemoHero
+          ctaHref={ctaHref}
+          ctaLabel={ctaLabel}
+          text={{
+            eyebrow: copy.t("home.hero.eyebrow"),
+            titleAccent: copy.t("home.hero.titleAccent"),
+            titleRest: copy.t("home.hero.titleRest"),
+            lead: copy.t("home.hero.lead"),
+            secondaryCta: copy.t("home.hero.secondaryCta"),
+            points: copy.list("home.hero.points"),
+            tags: copy.list("home.hero.tags"),
+          }}
+        />
         <DemoMarquee />
         <DemoPlanet serviceCount={services.length} benefitCount={benefits.length} />
         <div className={styles.light}>
           <DemoResults shortName={shortName} />
-          <DemoWorld serviceCount={services.length} ctaHref={ctaHref} ctaLabel={ctaLabel} />
+          <DemoWorld serviceCount={services.length} ctaHref={ctaHref} ctaLabel={ctaLabel} copy={copy} />
           <DemoBuilder />
-          <DemoRouting />
-          <DemoTriad benefits={benefits} />
+          <DemoRouting copy={copy} />
+          <DemoTriad benefits={benefits} copy={copy} />
         </div>
         <DemoProcess />
-        <DemoIndustries />
-        <DemoProof content={content} />
+        <DemoIndustries copy={copy} />
+        <DemoProof content={content} copy={copy} />
       </main>
-      <DemoFooter brandName={brandName} shortName={shortName} settings={settings} ctaHref={ctaHref} ctaLabel={ctaLabel} />
+      <DemoFooter brandName={brandName} shortName={shortName} settings={settings} ctaHref={ctaHref} ctaLabel={ctaLabel} copy={copy} />
       <div className={styles.demoBanner}>
         Design demo · <Link href="/">Back to live site</Link>
       </div>

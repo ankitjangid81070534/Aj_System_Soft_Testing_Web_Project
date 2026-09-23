@@ -1939,6 +1939,24 @@ export type Database = {
         };
         Relationships: [];
       };
+      site_copy: {
+        Row: {
+          key: string;
+          value: string;
+          updated_at: string;
+        };
+        Insert: {
+          key: string;
+          value?: string;
+          updated_at?: string;
+        };
+        Update: {
+          key?: string;
+          value?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       trusted_clients: {
         Row: {
           id: string;

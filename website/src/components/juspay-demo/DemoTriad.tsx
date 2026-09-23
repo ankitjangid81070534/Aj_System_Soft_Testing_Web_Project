@@ -5,6 +5,7 @@ import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
 import light from "./demo-light.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
 
 const ICONS: Record<string, LucideIcon> = {
   "life-buoy": LifeBuoy,
@@ -20,24 +21,21 @@ const ICONS: Record<string, LucideIcon> = {
  * are soft blue gradients carrying small floating UI. Here the cards are the
  * live "What's included with every project" launch benefits.
  */
-export function DemoTriad({ benefits }: { benefits: LaunchBenefit[] }) {
+export function DemoTriad({ benefits, copy }: { benefits: LaunchBenefit[]; copy: SiteCopy }) {
   if (benefits.length === 0) return null;
   return (
     <section id="included" className={light.section}>
       <div className={styles.container}>
         <Reveal>
-          <span className={light.eyebrow}>Launch benefits</span>
+          <span className={light.eyebrow}>{copy.t("home.triad.eyebrow")}</span>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className={light.h2Center}>
-            What&apos;s included with <span className={styles.blue}>every project</span>
+            {copy.t("home.triad.title")} <span className={styles.blue}>{copy.t("home.triad.titleAccent")}</span>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className={light.leadCenter}>
-            Our service goes beyond just writing code. Every custom software project includes these benefits by
-            default.
-          </p>
+          <p className={light.leadCenter}>{copy.t("home.triad.lead")}</p>
         </Reveal>
         <ScrollScene variant="rise" className={light.triad}>
           {benefits.map((benefit, index) => {

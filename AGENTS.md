@@ -1,5 +1,12 @@
 # Base44 Dev Environment
 
+## Admin-editable website text (2026-09-23)
+- Migration `website/supabase/migrations/0018_site_copy.sql` adds `public.site_copy (key, value, updated_at)`: anon read-only, admin write via the service role, additive + idempotent, NO seed rows. Run it in Supabase before using the new module.
+- `src/lib/data/site-copy.ts` is the single registry: `SITE_COPY_FIELDS` holds the key, admin label, group, default text and input `kind` (text/long/list). `getSiteCopyOverrides()` (cache tag `site-copy`) reads only saved rows; `createSiteCopy(overrides, {brand, shortBrand})` resolves a key to saved → default, substituting `{brand}`/`{shortBrand}`. A blank/missing row always falls back to the default, so the site can never render empty copy. Add new editable strings by adding a field here — never hard-code copy back into a component.
+- Admin UI: `/ajadmin/copy` (`app/ajadmin/copy/page.tsx` + `components/admin/SiteCopyForm.tsx`, nav entry "Website text" under Site setup), action `lib/admin/site-copy-actions.ts` (`settings:write`, upsert on `key`, `updateTag("site-copy")` + `revalidatePath("/", "layout")`). Only registry keys are accepted; error 42P01/PGRST204 tells the owner to run 0018.
+- Homepage wiring: `(public)/page.tsx` loads the overrides and `JuspayHome` builds ONE `copy` object it passes to every section. `DemoHero` and `DemoLiveDashboard` are client components, so they receive plain resolved strings/arrays (`text={{…}}`) — a `SiteCopy` with methods is not serializable across the boundary. `/juspay-demo` builds `createSiteCopy({})` (defaults only).
+- Navbar/footer labels were already CMS-managed (`navigation_items` → `getPublicNavigation`); brand, CTA and contact text stay in "Brand & settings". Verified: typecheck, lint (0 warnings), 598/598 tests, homepage renders with only the pre-existing AdSense/dev-timing console errors.
+
 ## Homepage duplicate merge + conversion order (2026-09-23)
 - `/` section order is now: Hero → HeroProof → Marquee → LiveDashboard → CaseStudies → light band (Trust, Routing, Triad, World) → Services → Stack → WhyUs → Journey → Industries → light band (Packages) → Gallery → Proof → Cta. 14 top-level nodes (was 18).
 - Unmounted as duplicates (files kept for reference, like `DemoPlatforms`): `DemoPlanet` (repeated the routing band), `DemoResults` (repeated `DemoWhyUs`), `DemoBuilder` (repeated `DemoLiveDashboard`), `DemoProcess` (repeated `DemoJourney`). No component, CSS, data reader or business logic changed — only the mount list in `JuspayHome.tsx`.

@@ -4,6 +4,8 @@ import { Reveal } from "./Reveal";
 import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 
 /** The live Industries tiles, verbatim (label + workflow example). */
 const INDUSTRIES = [
@@ -17,21 +19,22 @@ const INDUSTRIES = [
   { Icon: Briefcase, label: "Professional services", workflow: "Customer portals, follow-ups and internal tools" },
 ];
 
-export function DemoIndustries() {
+export function DemoIndustries({ copy }: { copy: SiteCopy }) {
   return (
     <section id="industries" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Industries</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.industries.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              Software for the way your <span className={styles.blue}>industry works</span>
+              {copy.t("home.industries.title")}{" "}
+              <span className={styles.blue}>{copy.t("home.industries.titleAccent")}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className={styles.lead}>Every trade has its own rules, documents and workflows. We build around them.</p>
+            <p className={styles.lead}>{copy.t("home.industries.lead")}</p>
           </Reveal>
         </div>
         <ScrollScene variant="swing" className={styles.industryGrid}>

@@ -6,6 +6,8 @@ import { Reveal } from "./Reveal";
 import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 import gallery from "./demo-gallery.module.css";
 
 /**
@@ -14,7 +16,7 @@ import gallery from "./demo-gallery.module.css";
  * cover images with the summary revealed on hover / focus. Only real public
  * projects from the CMS are shown — the section hides when there are none.
  */
-export function DemoGallery({ projects }: { projects: ProjectTeaser[] }) {
+export function DemoGallery({ projects, copy }: { projects: ProjectTeaser[]; copy: SiteCopy }) {
   if (projects.length === 0) return null;
 
   const ordered = [...projects].sort((a, b) => Number(b.isFeatured) - Number(a.isFeatured));
@@ -26,18 +28,15 @@ export function DemoGallery({ projects }: { projects: ProjectTeaser[] }) {
         <div className={gallery.head}>
           <div className={styles.sectionHead} style={{ marginBottom: 0 }}>
             <Reveal>
-              <span className={styles.eyebrowPlain}>Portfolio</span>
+              <span className={styles.eyebrowPlain}>{copy.t("home.gallery.eyebrow")}</span>
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className={styles.h2}>
-                Real work, <span className={styles.blue}>delivered</span>
+                {copy.t("home.gallery.title")} <span className={styles.blue}>{copy.t("home.gallery.titleAccent")}</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className={styles.lead}>
-                A selection of the platforms, apps and business systems we have shipped for clients — each one built
-                around their exact requirements.
-              </p>
+              <p className={styles.lead}>{copy.t("home.gallery.lead")}</p>
             </Reveal>
           </div>
           <Reveal delay={0.25}>

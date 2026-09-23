@@ -2,6 +2,7 @@ import { AppWindow, Cloud, LayoutDashboard, Monitor, Smartphone, Stethoscope } f
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
 import light from "./demo-light.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
 
 /** Live "A modern, maintainable stack" names, laid out like the PSP logo cloud. */
 const STACK = [
@@ -36,20 +37,17 @@ const RIGHT = [
  * cloud of stack tiles feeds a yellow line into a 3D dial, which routes out to
  * six labelled nodes. The nodes are the live "One team, every platform" cards.
  */
-export function DemoRouting() {
+export function DemoRouting({ copy }: { copy: SiteCopy }) {
   return (
     <section id="routing" className={light.section}>
       <div className={styles.container}>
         <Reveal>
           <h2 className={light.h2Center}>
-            One team, <span className={styles.blue}>every platform</span>
+            {copy.t("home.routing.title")} <span className={styles.blue}>{copy.t("home.routing.titleAccent")}</span>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className={light.leadCenter}>
-            <strong>Tell us the problem</strong> — we propose the right platform and architecture for it, not the
-            other way around.
-          </p>
+          <p className={light.leadCenter}>{copy.t("home.routing.lead")}</p>
         </Reveal>
 
         <div className={light.routing} aria-hidden>
