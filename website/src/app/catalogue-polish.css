@@ -1,0 +1,47 @@
+/* ============================================================================
+   Catalogue polish — /services rhythm, card hierarchy and overflow safety.
+   Presentation only. It never changes structure, content, destinations or
+   motion: the Reveal hooks, PageHero scene, ServiceMatcher and
+   SolutionComparison native details all behave exactly as before. Scoped to the
+   ids the services page already renders, so no other route is affected.
+   ========================================================================== */
+
+/* A single fluid gap between the matcher, the comparison and the catalogue,
+   instead of three different hard-coded margins at every screen size. */
+#service-matcher,
+#solution-comparison {
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+/* Catalogue: one rhythm between categories at every width. */
+#service-catalogue {
+  gap: clamp(48px, 6vw, 64px);
+}
+
+/* Category headings balance instead of leaving one orphan word, and the
+   numbered badge keeps its size when the label wraps. */
+#service-catalogue h2 {
+  text-wrap: balance;
+}
+#service-catalogue h2 + span,
+#service-catalogue > section > div > span:first-child {
+  flex: none;
+}
+
+/* Card grid: a track may never be narrower than its content, which is what let
+   long service names widen the row on small tablets. Cards keep their own
+   padding, radius, accent and hover motion. */
+#service-catalogue [class*="grid"] > * {
+  min-width: 0;
+}
+#service-catalogue p {
+  text-wrap: pretty;
+}
+
+/* Below the two-column split the catalogue reads better as one column with a
+   slightly tighter gap than the desktop 3-up rhythm. */
+@media (max-width: 520px) {
+  #service-catalogue {
+    gap: clamp(40px, 9vw, 48px);
+  }
+}
