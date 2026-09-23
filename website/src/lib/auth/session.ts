@@ -33,42 +33,45 @@ export const getCurrentUser = cache(async (): Promise<SessionUser | null> => {
     .eq("id", user.id)
     .maybeSingle();
 
-  if (!profile) {
-    const metadata = user.user_metadata;
-    const fullName =
-      (typeof metadata.full_name === "string" && metadata.full_name) ||
-      (typeof metadata.name === "string" && metadata.name) ||
-      null;
+  // Google (and other OAuth) sign-ins carry the name/photo in user_metadata.
+  // Use it wherever the saved profile is still blank so forms arrive
+  // pre-filled — e.g. an email account that later signed in with Google.
+  const fromProvider = providerProfile(user.user_metadata ?? {});
 
+  if (!profile) {
     // The auth.users trigger normally creates this row. If a legacy/migrated
     // user is missing it, keep the valid session and render a safe client
     // profile-completion state instead of creating a login redirect loop.
-    return {
-      id: user.id,
-      email: user.email,
-      role: "client",
-      fullName,
-      avatarUrl:
-        typeof metadata.avatar_url === "string"
-          ? metadata.avatar_url
-          : typeof metadata.picture === "string"
-            ? metadata.picture
-            : null,
-      phone: typeof metadata.phone === "string" ? metadata.phone : null,
-      company: typeof metadata.company === "string" ? metadata.company : null,
-    };
+    return { id: user.id, email: user.email, role: "client", ...fromProvider };
   }
 
   return {
     id: profile.id,
     email: profile.email,
     role: profile.role,
-    fullName: profile.full_name,
-    avatarUrl: profile.avatar_url,
-    phone: profile.phone,
-    company: profile.company,
+    fullName: profile.full_name || fromProvider.fullName,
+    avatarUrl: profile.avatar_url || fromProvider.avatarUrl,
+    phone: profile.phone || fromProvider.phone,
+    company: profile.company || fromProvider.company,
   };
 });
+
+function metadataString(metadata: Record<string, unknown>, ...keys: string[]): string | null {
+  for (const key of keys) {
+    const value = metadata[key];
+    if (typeof value === "string" && value.trim() !== "") return value.trim();
+  }
+  return null;
+}
+
+function providerProfile(metadata: Record<string, unknown>) {
+  return {
+    fullName: metadataString(metadata, "full_name", "name"),
+    avatarUrl: metadataString(metadata, "avatar_url", "picture"),
+    phone: metadataString(metadata, "phone"),
+    company: metadataString(metadata, "company"),
+  };
+}
 
 /**
  * Guard for staff-only pages/actions: unauthenticated visitors are sent to

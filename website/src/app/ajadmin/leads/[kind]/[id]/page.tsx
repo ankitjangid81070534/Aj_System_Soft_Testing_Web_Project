@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Download } from "lucide-react";
@@ -119,19 +120,13 @@ export default async function LeadDetailPage({
           <p className="mt-5 border-t border-line pt-4 text-xs text-ink-muted">
             Received{" "}
             <time dateTime={lead.created_at}>
-              {new Date(lead.created_at).toLocaleString("en-IN", {
-                dateStyle: "full",
-                timeStyle: "short",
-              })}
+              {formatDateTime(lead.created_at, { dateStyle: "full", timeStyle: "short" })}
             </time>
             {lead.updated_at && lead.updated_at !== lead.created_at ? (
               <>
                 {" · "}updated{" "}
                 <time dateTime={lead.updated_at}>
-                  {new Date(lead.updated_at).toLocaleString("en-IN", {
-                    dateStyle: "medium",
-                    timeStyle: "short",
-                  })}
+                  {formatDateTime(lead.updated_at)}
                 </time>
               </>
             ) : null}

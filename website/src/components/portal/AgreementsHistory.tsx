@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FileSignature, ScrollText } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/States";
+import { formatDateTime } from "@/lib/utils/datetime";
 
 export type AcceptanceItem = {
   id: string;
@@ -89,10 +90,7 @@ export function AgreementsHistory({
                   </td>
                   <td className="px-4 py-3 text-ink-soft">
                     <time dateTime={item.acceptedAt}>
-                      {new Date(item.acceptedAt).toLocaleString("en-IN", {
-                        dateStyle: "medium",
-                        timeStyle: "short",
-                      })}
+                      {formatDateTime(item.acceptedAt)}
                     </time>
                   </td>
                   <td className="hidden px-4 py-3 text-ink-muted sm:table-cell">

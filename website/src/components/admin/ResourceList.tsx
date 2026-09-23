@@ -14,6 +14,7 @@ import {
 } from "@/lib/admin/actions";
 import type { ResourceConfig } from "@/lib/admin/resources";
 import type { ResourceListResult } from "@/lib/admin/crud";
+import { formatDateTime } from "@/lib/utils/datetime";
 
 function cellValue(row: Record<string, unknown>, name: string, render: string | undefined) {
   const value = row[name];
@@ -21,7 +22,7 @@ function cellValue(row: Record<string, unknown>, name: string, render: string | 
     return value ? "Yes" : "No";
   }
   if (render === "datetime" && typeof value === "string" && value) {
-    return new Date(value).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
+    return formatDateTime(value);
   }
   if (value === null || value === undefined || value === "") return "—";
   return String(value);

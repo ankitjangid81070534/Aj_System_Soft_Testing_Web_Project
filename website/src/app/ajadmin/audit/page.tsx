@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { EmptyState } from "@/components/ui/States";
@@ -140,7 +141,7 @@ export default async function AuditPage({
                   <tr key={String(row.id)} className="border-b border-line last:border-b-0">
                     <td className="px-4 py-2.5 text-xs text-ink-muted">
                       <time dateTime={String(row.created_at)}>
-                        {new Date(String(row.created_at)).toLocaleString("en-IN", {
+                        {formatDateTime(String(row.created_at), {
                           dateStyle: "short",
                           timeStyle: "short",
                         })}

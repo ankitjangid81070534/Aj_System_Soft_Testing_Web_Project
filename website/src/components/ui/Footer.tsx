@@ -23,6 +23,8 @@ export function Footer({
     : FOOTER_LINK_GROUPS;
   const brandName = settings?.brandName || BRAND.primaryName;
   const brandShortName = settings?.brandShortName || BRAND.shortName;
+  // Footer wordmark shows only "Ankit Soft" — drop a trailing "Tech"/"Technology".
+  const megaBrandName = brandShortName.replace(/\s+tech(nology)?\.?$/i, "");
   const tagline = settings?.tagline || BRAND.tagline;
 
   return (
@@ -70,7 +72,7 @@ export function Footer({
             ))}
           </div>
 
-          <div className={styles.megaBrand} aria-hidden="true">{brandShortName}</div>
+          <div className={styles.megaBrand} aria-hidden="true">{megaBrandName}</div>
           <div className={styles.bottomRow}>
             <p className={styles.legalNotice}>
               © 2026 Ankit System Soft Technology. All rights reserved. | An MSME Registered Enterprise | Udyam Reg No: UDYAM-RJ-17-0685557

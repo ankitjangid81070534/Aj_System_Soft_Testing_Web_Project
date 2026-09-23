@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
-import { showsContactHub, type ContactHubAction } from "@/lib/contact-hub";
+import type { ContactHubAction } from "@/lib/contact-hub";
 import styles from "./contact-hub.module.css";
 
 const subscribe = () => () => {};
@@ -13,17 +13,22 @@ const serverSnapshot = () => false;
 const icons = { whatsapp: MessageCircle, phone: Phone, email: Mail, project: Send, quote: Send, contact: MessageCircle };
 
 export function ContactHub({ actions }: { actions: ContactHubAction[] }) {
-  const pathname = usePathname();
   const ready = useSyncExternalStore(subscribe, supported, serverSnapshot);
-  // Keyed instances cannot carry an open panel across navigation/history changes.
-  return ready && showsContactHub(pathname) ? <ContactHubControl key={pathname} actions={actions} /> : null;
+  // Shown on every public page and kept mounted across navigation so it never blinks.
+  return ready ? <ContactHubControl actions={actions} /> : null;
 }
 
 function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
   const id = useId();
+  const pathname = usePathname();
   const panel = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
+
+  // An open panel never carries over to the next page.
+  useEffect(() => {
+    if (panel.current?.matches(":popover-open")) panel.current.hidePopover();
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;

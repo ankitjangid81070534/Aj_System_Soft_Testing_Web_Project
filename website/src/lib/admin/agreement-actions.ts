@@ -8,6 +8,7 @@ import { can } from "@/lib/auth/permissions";
 import { createSupabaseAdminLooseClient } from "@/lib/supabase/admin";
 import { sha256Hex } from "@/lib/agreements/acceptance";
 import { buildPdf, markdownToBlocks } from "@/lib/pdf/simple-pdf";
+import { slugify } from "@/lib/admin/resources";
 
 /**
  * Versioned agreement management. Historical integrity is enforced by the
@@ -41,14 +42,6 @@ async function writeAudit(row: {
       message: error.message,
     });
   }
-}
-
-function slugify(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 120);
 }
 
 function refreshAgreements(): void {

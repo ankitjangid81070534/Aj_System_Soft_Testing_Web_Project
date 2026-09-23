@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
+import { PreservingForm } from "@/components/admin/PreservingForm";
 import { redirect } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
@@ -124,7 +126,7 @@ export default async function AgreementsPage({
           <summary className="cursor-pointer text-sm font-semibold text-brand-700">
             Create a new agreement
           </summary>
-          <form action={createAgreementAction} className="mt-4 grid gap-3 sm:grid-cols-3">
+          <PreservingForm resetOn={params.notice} action={createAgreementAction} className="mt-4 grid gap-3 sm:grid-cols-3">
             <input
               name="title"
               required
@@ -140,7 +142,7 @@ export default async function AgreementsPage({
               <option value="custom">Custom</option>
             </select>
             <AdminSubmitButton idleLabel="Create agreement" pendingLabel="Creating…" />
-          </form>
+          </PreservingForm>
         </details>
       ) : null}
 
@@ -228,7 +230,7 @@ export default async function AgreementsPage({
                             </td>
                             <td className="px-3 py-2 text-xs text-ink-muted">
                               {version.effective_from
-                                ? new Date(String(version.effective_from)).toLocaleDateString("en-IN", {
+                                ? formatDateTime(String(version.effective_from), {
                                     dateStyle: "medium",
                                   })
                                 : "—"}
@@ -274,7 +276,7 @@ export default async function AgreementsPage({
                   <summary className="cursor-pointer text-xs font-medium text-brand-700">
                     Add a new version
                   </summary>
-                  <form action={createAgreementVersionAction} className="mt-3 grid gap-3">
+                  <PreservingForm resetOn={params.notice} action={createAgreementVersionAction} className="mt-3 grid gap-3">
                     <input type="hidden" name="agreement_id" value={agreementId} />
                     <input
                       name="title"
@@ -303,7 +305,7 @@ export default async function AgreementsPage({
                     <div>
                       <AdminSubmitButton idleLabel="Save draft version" pendingLabel="Saving…" />
                     </div>
-                  </form>
+                  </PreservingForm>
                 </details>
               ) : null}
             </article>

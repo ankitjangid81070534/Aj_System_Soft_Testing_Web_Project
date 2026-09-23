@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Page transitions + site-wide ContactHub (2026-09-23)
+- `PublicSiteFrame` wraps page content in `<div key={pathname} className="page-enter">` (styles in `app/page-transitions.css`, `backwards` fill so no transform lingers). A `(public)/template.tsx` was NOT used: in Next 16 it only remounts on its own segment, so `/services → /services/x` would not animate.
+- `ContactHub` ("Let's talk") now shows on EVERY public route (the old `showsContactHub` allowlist and its tests were removed on owner request). It stays mounted across navigation; an effect hides an open popover on pathname change. Motion (entrance, pulse ring, icon wiggle, hover lift, `@starting-style` panel ease) lives in `contact-hub.module.css`, off under `html[data-motion="reduce"]`.
+- `CTA.tsx` buttons: dark theme remaps `--color-brand-700` to light `#7fb0f6`, so the white primary button uses a fixed `#1d5bbf`; the secondary needs `!bg-none` or the action-control gradient paints it white behind white text.
+
 ## AI tools + client chat + hidden admin 2FA (2026-09-23)
 - Migration `website/supabase/migrations/0021_ai_tools_chat_and_security.sql` adds the AI run log, `conversations`/`chat_messages` and the encrypted TOTP/recovery records (RLS: a client only ever sees its own rows; staff cross-client reads go through the service role). Run it after 0020.
 - AI tools: `src/lib/ai/providers.ts` is the one completion layer (OpenAI / Anthropic / Google, chosen per tool), `tools.ts` is the 50-tool catalogue and `app/api/ai/run` the single generic runner — add a tool by adding a catalogue entry, never a new route. UI: `/ai-tools` explorer.

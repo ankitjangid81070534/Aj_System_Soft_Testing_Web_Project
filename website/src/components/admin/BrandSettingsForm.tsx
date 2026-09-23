@@ -3,6 +3,7 @@
 import { useActionState, useEffect, useRef } from "react";
 import { Field, Input, Textarea } from "@/components/ui/Input";
 import { AdminFeedback } from "@/components/admin/AdminFeedback";
+import { useKeepFormValues } from "@/components/admin/useKeepFormValues";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
 import { useToast } from "@/components/ui/Toast";
 import { updateSettingsAction, type SettingsState } from "@/lib/admin/settings-actions";
@@ -37,6 +38,7 @@ function ErrorText({ id, message }: { id: string; message?: string }) {
 
 export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues }) {
   const [state, formAction, pending] = useActionState(updateSettingsAction, initialState);
+  const { onReset: keepValuesOnReset } = useKeepFormValues();
   const dirtyRef = useRef(false);
   const { toast } = useToast();
   const error = (name: keyof BrandSettingsValues) =>
@@ -68,6 +70,7 @@ export function BrandSettingsForm({ initial }: { initial: BrandSettingsValues })
     <form
       action={formAction}
       aria-busy={pending}
+      onReset={keepValuesOnReset}
       onChange={() => {
         dirtyRef.current = true;
       }}

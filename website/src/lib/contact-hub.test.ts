@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getContactHubActions, safeContactDestination, showsContactHub } from "./contact-hub";
+import { getContactHubActions, safeContactDestination } from "./contact-hub";
 
 const empty = { phone: null, whatsapp: null, contactEmail: null, globalCtaHref: "", globalCtaLabel: "" };
 
@@ -38,7 +38,3 @@ describe("hub URL boundary", () => {
   it.each(["/services", "/contact#consultation", "https://example.com/path"])("accepts %s", (value) => expect(safeContactDestination(value)).toBe(value));
 });
 
-describe("public discovery scope", () => {
-  it.each(["/", "/services", "/services/custom-software", "/projects", "/blog/example", "/about", "/team", "/reviews", "/ai-methods"])("allows %s", (path) => expect(showsContactHub(path)).toBe(true));
-  it.each(["/request-quote", "/contact", "/login", "/signup", "/account", "/account/profile", "/ajadmin", "/auth/callback", "/privacy", "/service-agreement", "/unknown", "/services/a/b"])("excludes %s", (path) => expect(showsContactHub(path)).toBe(false));
-});

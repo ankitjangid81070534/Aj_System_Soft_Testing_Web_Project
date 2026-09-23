@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PreservingForm } from "@/components/admin/PreservingForm";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Field, Input, Select } from "@/components/ui/Input";
@@ -97,7 +98,7 @@ export default async function MediaLibraryPage({
       ) : null}
 
       {can(user.role, "media:write") ? (
-        <form
+        <PreservingForm resetOn={feedback.notice}
           action={uploadMediaAction}
           className="mt-5 grid max-w-3xl gap-4 rounded-2xl border border-line bg-surface p-5 shadow-e1 sm:grid-cols-[1fr_1fr]"
         >
@@ -135,7 +136,7 @@ export default async function MediaLibraryPage({
           <div className="sm:col-span-2">
             <AdminSubmitButton idleLabel="Upload" pendingLabel="Uploading…" />
           </div>
-        </form>
+        </PreservingForm>
       ) : null}
 
       <div className="mt-8">

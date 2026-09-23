@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useRef, type ReactNode } from "react";
 import { useFormStatus } from "react-dom";
+import { toBusinessInputValue } from "@/lib/utils/datetime";
 import { useRouter } from "next/navigation";
 import { Eye, Save } from "lucide-react";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
@@ -9,6 +10,7 @@ import { Button, type ButtonProps } from "@/components/ui/Button";
 import { AdminFeedback } from "@/components/admin/AdminFeedback";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
 import { AdminActionForm } from "./AdminActionForm";
+import { useKeepFormValues } from "./useKeepFormValues";
 import { useToast } from "@/components/ui/Toast";
 import {
   deleteResourceAction,
@@ -46,12 +48,10 @@ function fieldValue(row: Record<string, unknown> | null, field: FieldDef): strin
   if (Array.isArray(value)) return value.join("\n");
   if (typeof value === "boolean") return value ? "on" : "";
   if (field.type === "datetime" && typeof value === "string") {
-    // Convert ISO timestamp → datetime-local input value.
-    const date = new Date(value);
-    if (!Number.isNaN(date.getTime())) {
-      const pad = (n: number) => String(n).padStart(2, "0");
-      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
-    }
+    // Convert ISO timestamp → datetime-local input value (always IST, so the
+    // server render and the browser agree and a re-save never shifts it).
+    const local = toBusinessInputValue(value);
+    if (local) return local;
   }
   return String(value);
 }
@@ -169,6 +169,7 @@ export function ResourceForm({
   const { toast } = useToast();
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
+  const { onReset: keepValuesOnReset, reset: resetForm } = useKeepFormValues();
 
   // Unsaved-change protection: warn on close/refresh while the form is dirty.
   useEffect(() => {
@@ -190,12 +191,12 @@ export function ResourceForm({
         return;
       }
       // Restore the form to its saved baseline without a remount.
-      formRef.current?.reset();
+      resetForm(formRef.current);
     }
     if (state.ok === false && state.message) {
       toast({ title: state.message, variant: "error" });
     }
-  }, [state, toast, isCreate, router, config.section]);
+  }, [state, toast, isCreate, router, config.section, resetForm]);
 
   const published = row?.status === "published";
   // Staff with content read access also see unpublished detail pages, so drafts
@@ -274,6 +275,7 @@ export function ResourceForm({
         ref={formRef}
         action={formAction}
         aria-busy={pending}
+        onReset={keepValuesOnReset}
         onChange={() => {
           dirtyRef.current = true;
         }}

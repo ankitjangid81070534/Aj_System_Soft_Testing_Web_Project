@@ -60,7 +60,7 @@ export function CTA({
           <Button
             href={primary.href}
             size="lg"
-            className="!bg-white !bg-none !text-brand-700 !shadow-[0_10px_30px_-8px_rgba(255,255,255,0.45)] hover:!bg-brand-50"
+            className="!bg-white !bg-none !text-[#1d5bbf] !shadow-[0_10px_30px_-8px_rgba(255,255,255,0.45)] hover:!bg-brand-50"
           >
             {primary.label}
           </Button>
@@ -69,7 +69,7 @@ export function CTA({
               href={secondary.href}
               variant="secondary"
               size="lg"
-              className="!border-white/30 !bg-white/10 !text-white backdrop-blur-md hover:!border-white/60 hover:!bg-white/15"
+              className="!border-white/30 !bg-white/10 !bg-none !text-white backdrop-blur-md hover:!border-white/60 hover:!bg-white/15"
             >
               {secondary.label}
             </Button>

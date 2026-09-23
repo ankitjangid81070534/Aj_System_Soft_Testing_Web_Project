@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
+import { PreservingForm } from "@/components/admin/PreservingForm";
 import { redirect } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
@@ -92,7 +94,7 @@ export default async function UsersPage({
       ) : null}
 
       {canManage ? (
-        <form
+        <PreservingForm resetOn={params.notice}
           action={createUserAction}
           className="mt-5 rounded-2xl border border-line bg-surface p-5 shadow-e1"
         >
@@ -186,7 +188,7 @@ export default async function UsersPage({
           <div className="mt-4">
             <AdminSubmitButton idleLabel="Create user" pendingLabel="Creating user…" />
           </div>
-        </form>
+        </PreservingForm>
       ) : null}
 
       <div className="mt-5 overflow-hidden rounded-2xl border border-line bg-surface shadow-e1">
@@ -229,7 +231,7 @@ export default async function UsersPage({
                           <summary className="cursor-pointer text-xs font-medium text-brand-700">
                             Set new password
                           </summary>
-                          <form
+                          <PreservingForm resetOn={params.notice}
                             action={resetUserPasswordAction}
                             className="mt-2 flex min-w-64 gap-2"
                           >
@@ -249,7 +251,7 @@ export default async function UsersPage({
                               pendingLabel="Resetting…"
                               compact
                             />
-                          </form>
+                          </PreservingForm>
                         </details>
                       ) : null}
                     </td>
@@ -280,7 +282,7 @@ export default async function UsersPage({
                     </td>
                     <td className="px-4 py-3">
                       {canManage && String(row.role) !== "client" ? (
-                        <form
+                        <PreservingForm
                           action={updateAdminUsernameAction}
                           className="flex min-w-56 items-center gap-2"
                         >
@@ -297,16 +299,14 @@ export default async function UsersPage({
                             className="h-9 min-w-0 flex-1 rounded-lg border border-line bg-surface px-2.5 text-sm text-ink focus-ring"
                           />
                           <AdminSubmitButton idleLabel="Save" pendingLabel="Saving…" compact />
-                        </form>
+                        </PreservingForm>
                       ) : (
                         <span className="text-xs text-ink-muted">{usernames.get(id) || "—"}</span>
                       )}
                     </td>
                     <td className="px-4 py-3 text-xs text-ink-muted">
                       <time dateTime={String(row.created_at)}>
-                        {new Date(String(row.created_at)).toLocaleDateString("en-IN", {
-                          dateStyle: "medium",
-                        })}
+                        {formatDateTime(String(row.created_at), { dateStyle: "medium" })}
                       </time>
                     </td>
                   </tr>

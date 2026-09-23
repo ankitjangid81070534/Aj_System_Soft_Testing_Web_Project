@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import { Field, Select, Textarea } from "@/components/ui/Input";
 import { AdminFeedback } from "@/components/admin/AdminFeedback";
+import { useKeepFormValues } from "@/components/admin/useKeepFormValues";
 import { Button } from "@/components/ui/Button";
 import { updateLeadAction, type LeadUpdateState } from "@/lib/leads/admin-actions";
 import { LEAD_STATUSES } from "@/lib/validation/leads";
@@ -35,9 +36,10 @@ export function LeadEditForm({
   staffOptions: { id: string; label: string }[];
 }) {
   const [state, formAction, pending] = useActionState(updateLeadAction, initialState);
+  const { onReset: keepValuesOnReset } = useKeepFormValues();
 
   return (
-    <form action={formAction} aria-busy={pending} className="flex min-w-0 flex-col gap-4">
+    <form action={formAction} aria-busy={pending} onReset={keepValuesOnReset} className="flex min-w-0 flex-col gap-4">
       <input type="hidden" name="kind" value={kind} />
       <input type="hidden" name="id" value={id} />
       <Field label="Status" htmlFor="lead-status">
