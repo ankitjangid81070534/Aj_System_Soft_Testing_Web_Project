@@ -70,33 +70,17 @@
    where background-clip: text is unsupported. */
 .heroAccent {
   display: inline-block;
-  color: var(--jd-blue);
-  background-image: linear-gradient(
-    100deg,
-    #3079ea 0%,
-    #7c5cff 18%,
-    #ec4899 36%,
-    #f97316 54%,
-    #10b981 72%,
-    #06b6d4 88%,
-    #3079ea 100%
-  );
-  background-size: 300% 100%;
-  background-position: 0% 50%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 14px rgba(124, 92, 255, 0.55)) drop-shadow(0 0 34px rgba(48, 121, 234, 0.35));
-  animation:
-    heroHue 12s linear infinite,
-    heroGlow 4.5s ease-in-out infinite;
+  color: #29c3c9;
+  animation: heroTint 18s ease-in-out infinite;
 }
-@keyframes heroHue {
-  to { background-position: 300% 50%; }
-}
-@keyframes heroGlow {
-  0%, 100% { filter: drop-shadow(0 0 14px rgba(124, 92, 255, 0.55)) drop-shadow(0 0 34px rgba(48, 121, 234, 0.35)); }
-  50% { filter: drop-shadow(0 0 22px rgba(236, 72, 153, 0.7)) drop-shadow(0 0 48px rgba(6, 182, 212, 0.45)); }
+/* Like the older live site: one SOLID word colour that fades slowly from one
+   brand tone to the next. No gradient slide and no glow (both read as loud). */
+@keyframes heroTint {
+  0%, 100% { color: #29c3c9; }
+  20% { color: #3079ea; }
+  40% { color: #7c5cff; }
+  60% { color: #10b981; }
+  80% { color: #f59e0b; }
 }
 :global(html[data-motion="reduce"]) .heroAccent { animation: none; }
 
