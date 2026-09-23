@@ -8,6 +8,7 @@ import { getSiteSettings } from "@/lib/data/settings";
 import { JuspayHome } from "@/components/juspay-demo/JuspayHome";
 import { getLaunchBenefits } from "@/lib/data/growth";
 import { getCaseStudies, getPackages, getTrustedClients } from "@/lib/data/sales";
+import { getSiteCopyOverrides } from "@/lib/data/site-copy";
 
 export const revalidate = 300;
 export const dynamic = "force-static";
@@ -22,15 +23,23 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [{ services, projects, team, testimonials, posts }, settings, benefits, clients, caseStudies, packages] =
-    await Promise.all([
-      getHomeContent(),
-      getSiteSettings(),
-      getLaunchBenefits(),
-      getTrustedClients(),
-      getCaseStudies(),
-      getPackages(),
-    ]);
+  const [
+    { services, projects, team, testimonials, posts },
+    settings,
+    benefits,
+    clients,
+    caseStudies,
+    packages,
+    copyOverrides,
+  ] = await Promise.all([
+    getHomeContent(),
+    getSiteSettings(),
+    getLaunchBenefits(),
+    getTrustedClients(),
+    getCaseStudies(),
+    getPackages(),
+    getSiteCopyOverrides(),
+  ]);
 
   return (
     <>
@@ -49,6 +58,7 @@ export default async function HomePage() {
         settings={settings}
         benefits={benefits}
         sales={{ clients, caseStudies, packages }}
+        copyOverrides={copyOverrides}
       />
     </>
   );

@@ -4,6 +4,8 @@ import type { Package } from "@/lib/data/sales";
 import { CalendlyButton } from "@/components/integrations/CalendlyButton";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 import sales from "./demo-sales.module.css";
 
 /**
@@ -14,9 +16,11 @@ import sales from "./demo-sales.module.css";
 export function DemoPackages({
   packages,
   whatsappHref,
+  copy,
 }: {
   packages: Package[];
   whatsappHref: string | null;
+  copy: SiteCopy;
 }) {
   if (packages.length === 0) return null;
 
@@ -25,18 +29,16 @@ export function DemoPackages({
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Packages</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.packages.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              Pick a starting point, <span className={styles.blue}>pay by milestone</span>
+              {copy.t("home.packages.title")}{" "}
+              <span className={styles.blue}>{copy.t("home.packages.titleAccent")}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className={styles.lead}>
-              Every package includes source-code ownership. Final scope and price are confirmed after a free
-              requirement call.
-            </p>
+            <p className={styles.lead}>{copy.t("home.packages.lead")}</p>
           </Reveal>
         </div>
         <div className={sales.packGrid}>

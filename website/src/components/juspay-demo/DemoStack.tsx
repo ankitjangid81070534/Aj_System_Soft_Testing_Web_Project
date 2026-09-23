@@ -3,6 +3,8 @@ import { Reveal } from "./Reveal";
 import { ScrollScene } from "@/components/motion/ScrollScene";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 
 /** The live "A modern, maintainable stack" groups, verbatim. */
 const GROUPS = [
@@ -13,21 +15,21 @@ const GROUPS = [
 ];
 
 /** "Technology" in the dark Juspay-style grid (replaces the legacy TechCapabilities on `/`). */
-export function DemoStack() {
+export function DemoStack({ copy }: { copy: SiteCopy }) {
   return (
     <section className={styles.section} data-home-section="technology">
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Technology</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.stack.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              A modern, <span className={styles.blue}>maintainable stack</span>
+              {copy.t("home.stack.title")} <span className={styles.blue}>{copy.t("home.stack.titleAccent")}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className={styles.lead}>We choose proven technology per project — here is what we commonly work with.</p>
+            <p className={styles.lead}>{copy.t("home.stack.lead")}</p>
           </Reveal>
         </div>
         <ScrollScene variant="swing" className={styles.industryGrid}>

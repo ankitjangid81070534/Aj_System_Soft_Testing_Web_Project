@@ -1,4 +1,5 @@
 import styles from "./demo-journey.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
 
 /**
  * "From requirement to payment" — a Juspay-style, pure-CSS 3D story strip:
@@ -8,19 +9,15 @@ import styles from "./demo-journey.module.css";
  * client, price or statistic. Pointer tilt comes from the site-wide
  * `TiltEngine` via `data-tilt`; reduced motion settles every scene.
  */
-export function DemoJourney({ brandName = "AJS Technology" }: { brandName?: string }) {
+export function DemoJourney({ copy }: { copy: SiteCopy }) {
   return (
     <section className={styles.section} aria-labelledby="journey-title">
       <div className={styles.head}>
-        <span className={styles.eyebrow}>How we work</span>
+        <span className={styles.eyebrow}>{copy.t("home.journey.eyebrow")}</span>
         <h2 id="journey-title" className={styles.title}>
-          From your requirement to a paid, live product
+          {copy.t("home.journey.title")}
         </h2>
-        <p className={styles.lead}>
-          {brandName} builds software exactly the way each customer needs it — secure infrastructure,
-          a real conversation about your requirement, a website or app shipped to your brand, and a
-          clean checkout your customers can trust.
-        </p>
+        <p className={styles.lead}>{copy.t("home.journey.lead")}</p>
       </div>
 
       <ol className={styles.track}>

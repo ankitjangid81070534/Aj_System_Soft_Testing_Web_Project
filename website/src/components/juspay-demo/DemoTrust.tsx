@@ -1,13 +1,15 @@
 import type { TrustedClient } from "@/lib/data/sales";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 import sales from "./demo-sales.module.css";
 
 /**
  * Trust strip — admin-managed `trusted_clients` (migration 0017). Hides itself
  * when the admin has no active rows. Rendered inside the homepage light band.
  */
-export function DemoTrust({ clients }: { clients: TrustedClient[] }) {
+export function DemoTrust({ clients, copy }: { clients: TrustedClient[]; copy: SiteCopy }) {
   if (clients.length === 0) return null;
 
   return (
@@ -15,11 +17,11 @@ export function DemoTrust({ clients }: { clients: TrustedClient[] }) {
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Trusted by</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.trust.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              Businesses already running on <span className={styles.blue}>our software</span>
+              {copy.t("home.trust.title")} <span className={styles.blue}>{copy.t("home.trust.titleAccent")}</span>
             </h2>
           </Reveal>
         </div>

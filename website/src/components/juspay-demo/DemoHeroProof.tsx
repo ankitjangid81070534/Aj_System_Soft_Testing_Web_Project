@@ -1,6 +1,8 @@
 import type { TrustedClient } from "@/lib/data/sales";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 import proof from "./demo-hero-proof.module.css";
 
 /**
@@ -13,10 +15,12 @@ export function DemoHeroProof({
   projectCount,
   serviceCount,
   clients,
+  copy,
 }: {
   projectCount: number;
   serviceCount: number;
   clients: TrustedClient[];
+  copy: SiteCopy;
 }) {
   const stats = [
     projectCount > 0 ? { value: `${projectCount}`, label: "Projects in our portfolio" } : null,
@@ -45,7 +49,7 @@ export function DemoHeroProof({
         {logos.length > 0 ? (
           <Reveal delay={0.1}>
             <div className={proof.logos}>
-              <span className={proof.logosLabel}>Trusted by</span>
+              <span className={proof.logosLabel}>{copy.t("home.heroProof.trustedLabel")}</span>
               <ul>
                 {logos.map((client) => (
                   <li key={client.id}>{client.name}</li>

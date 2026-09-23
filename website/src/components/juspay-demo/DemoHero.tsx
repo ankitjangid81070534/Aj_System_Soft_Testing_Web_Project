@@ -7,9 +7,16 @@ import type { MouseEvent } from "react";
 import { useSiteReducedMotion } from "@/components/motion/motion-preference";
 import styles from "./juspay-demo.module.css";
 
-/** The live hero's delivery points and additional service families, verbatim. */
-const DELIVERY_POINTS = ["Requirements-first delivery", "You own the source code", "Support after launch"];
-const ADDITIONAL_SERVICES = ["Websites & web apps", "Desktop software", "ERP / CRM / POS", "Industry software", "API integrations"];
+/** Hero copy, resolved by the server from `site_copy` (admin editable). */
+export type HeroText = {
+  eyebrow: string;
+  titleAccent: string;
+  titleRest: string;
+  lead: string;
+  secondaryCta: string;
+  points: string[];
+  tags: string[];
+};
 
 const CHIPS = [
   { Icon: Monitor, label: "Websites & web apps", tone: styles.toneBlue, style: { left: "4%", top: "60%" } },
@@ -25,7 +32,15 @@ const CHIPS = [
  * the right — mirroring the Juspay landing composition. The background is a
  * smooth black canvas with one soft glow (no grid lines).
  */
-export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ctaLabel: string; brandName: string }) {
+export function DemoHero({
+  ctaHref,
+  ctaLabel,
+  text,
+}: {
+  ctaHref: string;
+  ctaLabel: string;
+  text: HeroText;
+}) {
   const reduce = useSiteReducedMotion();
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -51,32 +66,29 @@ export function DemoHero({ ctaHref, ctaLabel, brandName }: { ctaHref: string; ct
       <div className={`${styles.container} ${styles.heroInner}`}>
         <div className={styles.heroCopy}>
           <div>
-            <span className={styles.eyebrow}>{brandName} — software development</span>
+            <span className={styles.eyebrow}>{text.eyebrow}</span>
           </div>
           <h1 className={styles.heroTitle}>
-            <span className={`${styles.blue} ${styles.heroAccent}`}>Software</span> built around your requirements.
+            <span className={`${styles.blue} ${styles.heroAccent}`}>{text.titleAccent}</span> {text.titleRest}
           </h1>
-          <p className={styles.heroLead}>
-            Custom software, web platforms, SaaS, Android &amp; iOS apps and business automation systems — engineered
-            around your workflows, from first mockup to launch.
-          </p>
+          <p className={styles.heroLead}>{text.lead}</p>
           <div className={styles.heroActions}>
             <Link href={ctaHref} className={`${styles.pill} ${styles.pillBlue}`}>
               {ctaLabel} <ChevronRight size={18} aria-hidden />
             </Link>
             <Link href="/projects" className={styles.pill}>
-              Explore Projects <Layers3 size={17} aria-hidden />
+              {text.secondaryCta} <Layers3 size={17} aria-hidden />
             </Link>
           </div>
           <ul className={styles.heroPoints}>
-            {DELIVERY_POINTS.map((point) => (
+            {text.points.map((point) => (
               <li key={point}>
                 <Check size={14} aria-hidden /> {point}
               </li>
             ))}
           </ul>
           <ul className={styles.heroTags} aria-label="Additional software services">
-            {ADDITIONAL_SERVICES.map((item) => (
+            {text.tags.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

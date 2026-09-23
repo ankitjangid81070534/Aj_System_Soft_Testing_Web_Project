@@ -6,13 +6,15 @@ import type { HomeContent } from "@/lib/data/home";
 import { Reveal } from "./Reveal";
 import { toneFor } from "./tones";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 
 /**
  * Real proof only: verified reviews, published team members and articles
  * (projects live in `DemoGallery`) render when the CMS has them, and are hidden otherwise — the
  * same rule the live homepage follows. Nothing here is invented.
  */
-export function DemoProof({ content }: { content: HomeContent }) {
+export function DemoProof({ content, copy }: { content: HomeContent; copy: SiteCopy }) {
   const { testimonials, team, posts } = content;
   if (testimonials.length === 0 && team.length === 0 && posts.length === 0) {
     return null;
@@ -25,11 +27,11 @@ export function DemoProof({ content }: { content: HomeContent }) {
           <div className={styles.container}>
             <div className={styles.sectionHead}>
               <Reveal>
-                <span className={styles.eyebrowPlain}>Verified reviews</span>
+                <span className={styles.eyebrowPlain}>{copy.t("home.reviews.eyebrow")}</span>
               </Reveal>
               <Reveal delay={0.1}>
                 <h2 className={styles.h2}>
-                  What clients <span className={styles.blue}>say</span>
+                  {copy.t("home.reviews.title")} <span className={styles.blue}>{copy.t("home.reviews.titleAccent")}</span>
                 </h2>
               </Reveal>
             </div>
@@ -70,11 +72,11 @@ export function DemoProof({ content }: { content: HomeContent }) {
           <div className={styles.container}>
             <div className={styles.sectionHead}>
               <Reveal>
-                <span className={styles.eyebrowPlain}>Team</span>
+                <span className={styles.eyebrowPlain}>{copy.t("home.team.eyebrow")}</span>
               </Reveal>
               <Reveal delay={0.1}>
                 <h2 className={styles.h2}>
-                  The people who <span className={styles.blue}>build it</span>
+                  {copy.t("home.team.title")} <span className={styles.blue}>{copy.t("home.team.titleAccent")}</span>
                 </h2>
               </Reveal>
             </div>
@@ -138,11 +140,11 @@ export function DemoProof({ content }: { content: HomeContent }) {
           <div className={styles.container}>
             <div className={styles.sectionHead}>
               <Reveal>
-                <span className={styles.eyebrowPlain}>Blog &amp; insights</span>
+                <span className={styles.eyebrowPlain}>{copy.t("home.blog.eyebrow")}</span>
               </Reveal>
               <Reveal delay={0.1}>
                 <h2 className={styles.h2}>
-                  Latest <span className={styles.blue}>articles</span>
+                  {copy.t("home.blog.title")} <span className={styles.blue}>{copy.t("home.blog.titleAccent")}</span>
                 </h2>
               </Reveal>
             </div>

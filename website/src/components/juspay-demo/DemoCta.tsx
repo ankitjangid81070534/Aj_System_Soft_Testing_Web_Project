@@ -2,27 +2,27 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 
 /** Final CTA band — the live homepage's "Start a project" finale copy and routes. */
-export function DemoCta({ ctaHref, ctaLabel }: { ctaHref: string; ctaLabel: string }) {
+export function DemoCta({ ctaHref, ctaLabel, copy }: { ctaHref: string; ctaLabel: string; copy: SiteCopy }) {
   return (
     <section id="cta" className={styles.ctaSection} data-home-section="enquiry">
       <div className={styles.ctaGrid} aria-hidden />
       <div className={`${styles.container} ${styles.ctaInner}`}>
         <Reveal>
-          <span className={styles.eyebrowPlain}>Start a project</span>
+          <span className={styles.eyebrowPlain}>{copy.t("home.cta.eyebrow")}</span>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className={styles.ctaTitle}>
-            Ready to build software around
+            {copy.t("home.cta.titleLine1")}
             <br />
-            your <span className={styles.blue}>requirements</span>?
+            {copy.t("home.cta.titleLine2")} <span className={styles.blue}>{copy.t("home.cta.titleAccent")}</span>?
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className={styles.lead}>
-            Tell us what you need — we will propose the right platform, a clear plan and a transparent estimate.
-          </p>
+          <p className={styles.lead}>{copy.t("home.cta.lead")}</p>
         </Reveal>
         <Reveal delay={0.3}>
           <div className={styles.heroActions} style={{ justifyContent: "center" }}>
@@ -30,7 +30,7 @@ export function DemoCta({ ctaHref, ctaLabel }: { ctaHref: string; ctaLabel: stri
               {ctaLabel} <ChevronRight size={18} aria-hidden />
             </Link>
             <Link href="/contact" className={styles.pill}>
-              Request a Consultation <ChevronRight size={18} aria-hidden />
+              {copy.t("home.cta.secondaryLabel")} <ChevronRight size={18} aria-hidden />
             </Link>
           </div>
         </Reveal>

@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { DemoCta } from "./DemoCta";
 import type { SiteSettings } from "@/lib/data/settings";
 import { FOOTER_LINK_GROUPS } from "@/lib/navigation";
+import type { SiteCopy } from "@/lib/data/site-copy";
 import styles from "./juspay-demo.module.css";
 
 /**
@@ -16,16 +17,18 @@ export function DemoFooter({
   settings,
   ctaHref,
   ctaLabel,
+  copy,
 }: {
   brandName: string;
   shortName: string;
   settings: SiteSettings | null;
   ctaHref: string;
   ctaLabel: string;
+  copy: SiteCopy;
 }) {
   return (
     <>
-      <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} />
+      <DemoCta ctaHref={ctaHref} ctaLabel={ctaLabel} copy={copy} />
 
       <footer className={styles.footer}>
         <div className={styles.container}>

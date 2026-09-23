@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
 import light from "./demo-light.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
 
 /**
  * Rough continent silhouettes (800×400 equirectangular-ish) filled with a dot
@@ -26,24 +27,30 @@ const CONTINENTS = [
   "M665 260 L725 250 L760 275 L750 315 L705 325 L670 300 Z",
 ];
 
-export function DemoWorld({ serviceCount, ctaHref, ctaLabel }: { serviceCount: number; ctaHref: string; ctaLabel: string }) {
+export function DemoWorld({
+  serviceCount,
+  ctaHref,
+  ctaLabel,
+  copy,
+}: {
+  serviceCount: number;
+  ctaHref: string;
+  ctaLabel: string;
+  copy: SiteCopy;
+}) {
   return (
     <section id="coverage" className={light.section}>
       <div className={`${styles.container} ${light.world}`}>
         <div>
           <Reveal>
             <h2 className={light.h2}>
-              You own your <span className={styles.blue}>software</span>.
+              {copy.t("home.world.title")} <span className={styles.blue}>{copy.t("home.world.titleAccent")}</span>.
               <br />
-              We help it grow.
+              {copy.t("home.world.titleLine2")}
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className={light.lead}>
-              Source code and documentation <strong>handed over with the build</strong>. Ongoing care after launch —
-              updates, fixes and improvements. Software for the way your industry works, built for{" "}
-              <strong>web, mobile and desktop</strong>.
-            </p>
+            <p className={light.lead}>{copy.t("home.world.lead")}</p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className={light.worldStats}>

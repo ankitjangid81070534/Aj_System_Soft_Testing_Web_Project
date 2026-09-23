@@ -34,8 +34,13 @@
 /* Phones keep the same 3D character as desktop (perspective, tilt, depth),
    only with a shorter travel so nothing overflows the narrow viewport. */
 @media (max-width: 700px) {
+  /* Single-column stacks are far taller than the viewport, so the pivot sits
+     on the entering (top) edge: the first card lands where layout put it and
+     the rest of the stack tilts away below it, instead of the whole block
+     being pushed off-screen by a bottom-edge rotation. */
   .rise[data-scene-active] {
-    transform: perspective(900px) translate3d(0, calc(var(--amt) * 44px), 0) rotateX(calc(var(--amt) * 9deg));
+    transform-origin: 50% 0%;
+    transform: perspective(900px) translate3d(0, calc(var(--amt) * 44px), 0) rotateX(calc(var(--amt) * -9deg));
   }
   .zoom[data-scene-active] {
     transform: perspective(900px) translate3d(0, calc(var(--amt) * 28px), calc(var(--amt) * -110px));

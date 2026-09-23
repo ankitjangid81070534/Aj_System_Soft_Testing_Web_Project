@@ -67,6 +67,7 @@ const NAV_GROUPS = [
     items: [
       { href: "/ajadmin/home", label: "Home builder", Icon: LayoutDashboard },
       { href: "/ajadmin/brand", label: "Brand & settings", Icon: Settings },
+      { href: "/ajadmin/copy", label: "Website text", Icon: FileText },
       { href: "/ajadmin/c/navigation", label: "Navigation", Icon: LinkIcon },
       { href: "/ajadmin/c/socials", label: "Social links", Icon: AtSign },
       { href: "/ajadmin/media", label: "Media library", Icon: ImageIcon },

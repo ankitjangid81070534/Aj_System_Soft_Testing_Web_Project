@@ -1,5 +1,46 @@
 # Base44 Dev Environment
 
+## Migration re-audit + 0020 hardening (2026-09-23)
+- Every file 0001 → 0019 was re-read AND actually executed against a throwaway `postgres:16` with stub `auth`/`storage` schemas (`auth.uid()`, `auth.users`, `storage.objects/buckets/foldername`, anon/authenticated/service_role roles). Fresh install + two full re-runs of the whole folder now pass with zero errors. Nothing was removed from any file.
+- ONE real non-idempotency found and fixed in `0012_portal_auth_and_admin_security.sql`: it dropped the OLD policy name `testimonials_client_insert` but created `testimonials_verified_client_insert`, so a second run died with `policy … already exists` — and everything after 0012 never applied. Added `drop policy if exists "testimonials_verified_client_insert"`; both drops are kept.
+- New `0020_schema_consistency_hardening.sql` (additive/idempotent, no data touched) fixes the admin "save error" class at the database level:
+  * `set_audit_columns` is now COLUMN-AWARE (`to_jsonb(new)` + `jsonb_populate_record`) — attaching it to a table without `created_by`/`updated_by` can no longer abort a save with `42703 record "new" has no field …`.
+  * new `public.fill_not_null_defaults()` BEFORE trigger: an admin field left blank arrives as NULL, so it fills the column's OWN default (evaluated via `pg_get_expr`, which is what makes enums like `content_status` work → `draft`) and otherwise a type-appropriate empty value. This kills the `23502 not-null violation` saves.
+  * `audit_row_change` re-asserted as best-effort (a failing audit insert never rolls back the content write).
+  * a `do $$` loop over all 32 CMS/admin tables: RLS on, the right stamping trigger per table, audit trigger, `grant select` to anon/authenticated + `grant all` to service_role, and `sort_order`/`status`/`deleted_at`/`is_active` indexes where the column exists. Ends with a self-check that raises if any admin-written table is missing.
+- Verified functionally: inserting all-NULL rows into `services`, `ai_methods`, `packages`, `testimonials`, `site_copy` and nulling `site_settings.brand_name` all SUCCEED with defaults applied, and audit rows are written.
+- Run order in Supabase: 0001 → 0020, numeric order; re-running the whole folder is safe.
+- Field/column audit: every field in `src/lib/admin/resources.ts` has a matching column in the migrations (checked programmatically) — no schema gap remains after 0019's `ai_methods`.
+
+## Migration audit + missing ai_methods table (2026-09-23)
+- Re-read every file in `website/supabase/migrations/` (0001 → 0018). All are additive and safely re-runnable in numeric order: each `create policy` / `create trigger` is preceded by `drop … if exists`, tables use `create table if not exists`, indexes `if not exists`, seeds `on conflict`. Nothing needed rewriting, and no file was changed.
+- The ONE real gap: `public.ai_methods` was referenced by the admin resource (`lib/admin/resources.ts`), the public reader (`lib/data/ai-methods.ts`) and `src/types/database.ts`, but no migration created it — so admin saves in that module failed with `42P01` and `/ai-methods` always rendered its empty state. Fixed by the new `0019_ai_methods_and_persistence_audit.sql`, which also re-asserts `site_copy` (0018), the `set_audit_columns` / `audit_row_change` / `set_updated_at` triggers and anon/service_role grants, and ends with a `do $$` self-check that raises if any admin-written table is still absent. Purely additive/idempotent: existing Supabase rows are never touched.
+- Run order in Supabase: 0001 → 0019, in numeric order. Re-running the whole folder is safe.
+
+## Admin-editable website text (2026-09-23)
+- Migration `website/supabase/migrations/0018_site_copy.sql` adds `public.site_copy (key, value, updated_at)`: anon read-only, admin write via the service role, additive + idempotent, NO seed rows. Run it in Supabase before using the new module.
+- `src/lib/data/site-copy.ts` is the single registry: `SITE_COPY_FIELDS` holds the key, admin label, group, default text and input `kind` (text/long/list). `getSiteCopyOverrides()` (cache tag `site-copy`) reads only saved rows; `createSiteCopy(overrides, {brand, shortBrand})` resolves a key to saved → default, substituting `{brand}`/`{shortBrand}`. A blank/missing row always falls back to the default, so the site can never render empty copy. Add new editable strings by adding a field here — never hard-code copy back into a component.
+- Admin UI: `/ajadmin/copy` (`app/ajadmin/copy/page.tsx` + `components/admin/SiteCopyForm.tsx`, nav entry "Website text" under Site setup), action `lib/admin/site-copy-actions.ts` (`settings:write`, upsert on `key`, `updateTag("site-copy")` + `revalidatePath("/", "layout")`). Only registry keys are accepted; error 42P01/PGRST204 tells the owner to run 0018.
+- Homepage wiring: `(public)/page.tsx` loads the overrides and `JuspayHome` builds ONE `copy` object it passes to every section. `DemoHero` and `DemoLiveDashboard` are client components, so they receive plain resolved strings/arrays (`text={{…}}`) — a `SiteCopy` with methods is not serializable across the boundary. `/juspay-demo` builds `createSiteCopy({})` (defaults only).
+- Navbar/footer labels were already CMS-managed (`navigation_items` → `getPublicNavigation`); brand, CTA and contact text stay in "Brand & settings". Verified: typecheck, lint (0 warnings), 598/598 tests, homepage renders with only the pre-existing AdSense/dev-timing console errors.
+
+## Homepage duplicate merge + conversion order (2026-09-23)
+- `/` section order is now: Hero → HeroProof → Marquee → LiveDashboard → CaseStudies → light band (Trust, Routing, Triad, World) → Services → Stack → WhyUs → Journey → Industries → light band (Packages) → Gallery → Proof → Cta. 14 top-level nodes (was 18).
+- Unmounted as duplicates (files kept for reference, like `DemoPlatforms`): `DemoPlanet` (repeated the routing band), `DemoResults` (repeated `DemoWhyUs`), `DemoBuilder` (repeated `DemoLiveDashboard`), `DemoProcess` (repeated `DemoJourney`). No component, CSS, data reader or business logic changed — only the mount list in `JuspayHome.tsx`.
+- Verified: typecheck + lint clean, homepage renders with only the pre-existing AdSense script error and no failed app requests.
+
+## Mobile sticky CTA removed (2026-09-23)
+- Owner asked to drop the black mobile-only "Start your project / WhatsApp" bar that sat beside the ContactHub bubble. `DemoStickyCta` is no longer mounted in `JuspayHome.tsx` (file kept for reference, like `DemoPlatforms`). Hero CTA, `DemoCta` band, packages WhatsApp CTA and the site-wide ContactHub are unchanged.
+
+## Mobile "rise" scene fix (2026-09-23)
+- `scroll-scene.module.css` ≤700px `.rise` now pivots at the TOP edge (`transform-origin: 50% 0%`, `rotateX(-9deg)`). Single-column stacks (e.g. DemoTriad's 1800px "What's included" list) rotated around their bottom edge were pushed ~900px below the viewport at `--sp: 0`, so the cards looked hidden until the user scrolled well past them. Measured in the preview: layout top 606px → rendered 647px (was 1495px). Animation itself is unchanged.
+
+## Conversion order + live dashboard (2026-09-23)
+- `components/juspay-demo/DemoLiveDashboard.tsx` (+ `demo-live-dashboard.module.css`) is an interactive sample dashboard (Billing / Inventory / Payments tabs via `aria-pressed` buttons, KPI cards, CSS bar chart, activity table) mounted on `/` right after `DemoMarquee`. All numbers are hard-coded **sample data and labelled as such in the UI** ("Live · sample data" + footnote) — never present them as client results. Pure React/CSS, no chart library.
+- `DemoCaseStudies` moved from before the gallery to directly after the dashboard (proof in the first two screens). `DemoPlatforms` is no longer mounted (duplicated DemoRouting's "One team, every platform" heading); the file remains for reference.
+- Hero lead word `.heroAccent` is now a sliding multi-colour `background-clip: text` gradient with a breathing `drop-shadow` glow (`heroHue` + `heroGlow`); solid `--jd-blue` is the fallback colour. `text-shadow` does not work with transparent-filled text — use `filter: drop-shadow` for glow.
+- Verified: typecheck, lint, 598/598 tests, real tab click in preview switches chart/KPIs/table.
+
 ## Homepage sales sections (2026-09-22)
 - `/` now renders admin-managed conversion content from migration 0017 via `lib/data/sales.ts`: `DemoTrust` (trust strip, inside the first light band), `DemoCaseStudies` (dark band, before the gallery) and `DemoPackages` (its own `styles.light` + `data-light-band` wrapper). Shared styles live in `components/juspay-demo/demo-sales.module.css`; each section returns `null` when the admin has no active/published rows.
 - The packages WhatsApp CTA uses `whatsappLink(settings)` (admin number + pre-filled message) and hides when no number is configured — no second floating button; `ContactHub` already provides the site-wide one.

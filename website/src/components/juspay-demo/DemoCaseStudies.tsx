@@ -4,6 +4,8 @@ import type { CaseStudy } from "@/lib/data/sales";
 import { Reveal } from "./Reveal";
 import { ScrollScene } from "@/components/motion/ScrollScene";
 import styles from "./juspay-demo.module.css";
+import type { SiteCopy } from "@/lib/data/site-copy";
+
 import sales from "./demo-sales.module.css";
 
 /**
@@ -11,7 +13,7 @@ import sales from "./demo-sales.module.css";
  * solution, measurable results. Hides itself when the admin has no published
  * rows. Dark Juspay-style band.
  */
-export function DemoCaseStudies({ studies }: { studies: CaseStudy[] }) {
+export function DemoCaseStudies({ studies, copy }: { studies: CaseStudy[]; copy: SiteCopy }) {
   if (studies.length === 0) return null;
 
   return (
@@ -19,17 +21,16 @@ export function DemoCaseStudies({ studies }: { studies: CaseStudy[] }) {
       <div className={styles.container}>
         <div className={styles.sectionHead}>
           <Reveal>
-            <span className={styles.eyebrowPlain}>Case studies</span>
+            <span className={styles.eyebrowPlain}>{copy.t("home.caseStudies.eyebrow")}</span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className={styles.h2}>
-              Real problems, <span className={styles.blue}>measured results</span>
+              {copy.t("home.caseStudies.title")}{" "}
+              <span className={styles.blue}>{copy.t("home.caseStudies.titleAccent")}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className={styles.lead}>
-              What changed for businesses after their software went live — in their numbers, not ours.
-            </p>
+            <p className={styles.lead}>{copy.t("home.caseStudies.lead")}</p>
           </Reveal>
         </div>
         <ScrollScene variant="rise" className={sales.caseGrid}>
