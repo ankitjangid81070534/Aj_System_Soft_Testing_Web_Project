@@ -6,10 +6,7 @@ import { whatsappLink } from "@/lib/data/settings";
 import { DemoHero } from "./DemoHero";
 import { DemoHeroProof } from "./DemoHeroProof";
 import { DemoMarquee } from "./DemoMarquee";
-import { DemoPlanet } from "./DemoPlanet";
-import { DemoResults } from "./DemoResults";
 import { DemoWorld } from "./DemoWorld";
-import { DemoBuilder } from "./DemoBuilder";
 import { DemoRouting } from "./DemoRouting";
 import { DemoTriad } from "./DemoTriad";
 import { DemoServices } from "./DemoServices";
@@ -17,7 +14,6 @@ import { DemoLiveDashboard } from "./DemoLiveDashboard";
 import { DemoStack } from "./DemoStack";
 import { DemoJourney } from "./DemoJourney";
 import { DemoWhyUs } from "./DemoWhyUs";
-import { DemoProcess } from "./DemoProcess";
 import { DemoIndustries } from "./DemoIndustries";
 import { DemoGallery } from "./DemoGallery";
 import { DemoProof } from "./DemoProof";
@@ -39,11 +35,13 @@ import styles from "./juspay-demo.module.css";
  * the real proof blocks (projects, reviews, team, articles) that hide when
  * the CMS has no records. Nothing is invented and nothing is dropped.
  *
- * Conversion order (2026-09-23): the interactive `DemoLiveDashboard` (clearly
- * labelled sample data) and the admin-managed case studies sit directly under
- * the hero so proof appears in the first two screens. `DemoPlatforms` is no
- * longer mounted — it repeated DemoRouting's "One team, every platform" heading
- * and the hero chips / DemoServices already list the same platforms.
+ * Conversion order (2026-09-23): hero → proof (live sample dashboard + case
+ * studies) → trust/offer → services & technology → why us / journey →
+ * industries → packages → gallery → reviews → CTA. Duplicate sections are no
+ * longer mounted (files kept for reference): `DemoPlatforms` and `DemoRouting`
+ * repeated each other, `DemoBuilder` duplicated `DemoLiveDashboard`,
+ * `DemoResults` duplicated `DemoWhyUs`, `DemoProcess` duplicated `DemoJourney`
+ * and `DemoPlanet` repeated the routing band.
  */
 export function JuspayHome({
   content,
@@ -73,20 +71,16 @@ export function JuspayHome({
       <DemoMarquee />
       <DemoLiveDashboard ctaHref={ctaHref} />
       <DemoCaseStudies studies={sales.caseStudies} />
-      <DemoPlanet serviceCount={serviceCount} benefitCount={benefits.length} />
       <div className={styles.light} data-light-band>
-        <DemoResults shortName={shortName} />
-        <DemoWorld serviceCount={serviceCount} ctaHref={ctaHref} ctaLabel={ctaLabel} />
-        <DemoBuilder />
+        <DemoTrust clients={sales.clients} />
         <DemoRouting />
         <DemoTriad benefits={benefits} />
-        <DemoTrust clients={sales.clients} />
+        <DemoWorld serviceCount={serviceCount} ctaHref={ctaHref} ctaLabel={ctaLabel} />
       </div>
-      <DemoStack />
-      <DemoJourney brandName={shortName} />
-      <DemoWhyUs brandName={brandName} />
       <DemoServices services={content.services} />
-      <DemoProcess />
+      <DemoStack />
+      <DemoWhyUs brandName={brandName} />
+      <DemoJourney brandName={shortName} />
       <DemoIndustries />
       <div className={styles.light} data-light-band>
         <DemoPackages packages={sales.packages} whatsappHref={whatsappLink(settings)} />

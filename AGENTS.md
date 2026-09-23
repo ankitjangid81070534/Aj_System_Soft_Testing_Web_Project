@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Homepage duplicate merge + conversion order (2026-09-23)
+- `/` section order is now: Hero → HeroProof → Marquee → LiveDashboard → CaseStudies → light band (Trust, Routing, Triad, World) → Services → Stack → WhyUs → Journey → Industries → light band (Packages) → Gallery → Proof → Cta. 14 top-level nodes (was 18).
+- Unmounted as duplicates (files kept for reference, like `DemoPlatforms`): `DemoPlanet` (repeated the routing band), `DemoResults` (repeated `DemoWhyUs`), `DemoBuilder` (repeated `DemoLiveDashboard`), `DemoProcess` (repeated `DemoJourney`). No component, CSS, data reader or business logic changed — only the mount list in `JuspayHome.tsx`.
+- Verified: typecheck + lint clean, homepage renders with only the pre-existing AdSense script error and no failed app requests.
+
 ## Mobile sticky CTA removed (2026-09-23)
 - Owner asked to drop the black mobile-only "Start your project / WhatsApp" bar that sat beside the ContactHub bubble. `DemoStickyCta` is no longer mounted in `JuspayHome.tsx` (file kept for reference, like `DemoPlatforms`). Hero CTA, `DemoCta` band, packages WhatsApp CTA and the site-wide ContactHub are unchanged.
 
