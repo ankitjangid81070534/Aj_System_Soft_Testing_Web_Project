@@ -4,6 +4,9 @@ import styles from "./portal-ui.module.css";
 export function AccountNavigation() {
   return (
     <nav aria-label="Your workspace" className={styles.navigation}>
+      <a href="/account/messages" className="focus-ring">
+        Messages
+      </a>
       {[
         ["profile", "Profile"],
         ["projects", "Projects & access"],

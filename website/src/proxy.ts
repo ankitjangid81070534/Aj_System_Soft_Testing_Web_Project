@@ -1,6 +1,14 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { isSupabaseConfigured, supabasePublicEnv } from "@/lib/env";
+import {
+  ADMIN_GATE_COOKIE,
+  GATE_TTL_SECONDS,
+  adminUrlSegment,
+  createGateToken,
+  gateCookieOptions,
+  verifyGateToken,
+} from "@/lib/security/admin-gate";
 
 const ADMIN_ROOT = "/ajadmin";
 const LOGIN_PATH = `${ADMIN_ROOT}/login`;
@@ -57,6 +65,36 @@ export async function proxy(request: NextRequest) {
   }
   const isAdminPath = pathname.startsWith(ADMIN_ROOT);
   const isAdminLogin = pathname.startsWith(LOGIN_PATH);
+
+  // ---------------------------------------------------------------------
+  // Hidden admin entrance. With ADMIN_URL_SEGMENT set, visiting /<segment>
+  // issues a signed gate cookie and forwards to the staff login; every
+  // /ajadmin request without that cookie answers a plain 404, so the admin
+  // area cannot be discovered by guessing. Unset = gate disabled.
+  // ---------------------------------------------------------------------
+  const segment = adminUrlSegment();
+  if (segment) {
+    if (pathname === `/${segment}` || pathname === `/${segment}/`) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = LOGIN_PATH;
+      loginUrl.search = "";
+      const unlocked = NextResponse.redirect(loginUrl);
+      const token = await createGateToken("gate", GATE_TTL_SECONDS);
+      if (token) {
+        unlocked.cookies.set(ADMIN_GATE_COOKIE, token, gateCookieOptions(GATE_TTL_SECONDS));
+      }
+      return unlocked;
+    }
+    if (
+      isAdminPath &&
+      !(await verifyGateToken(request.cookies.get(ADMIN_GATE_COOKIE)?.value, "gate"))
+    ) {
+      return new NextResponse("Not Found", {
+        status: 404,
+        headers: { "content-type": "text/plain; charset=utf-8", "x-robots-tag": "noindex" },
+      });
+    }
+  }
   const isClientPath = CLIENT_ROOTS.some(
     (root) => pathname === root || pathname.startsWith(`${root}/`),
   );

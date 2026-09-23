@@ -20,6 +20,8 @@ describe("configured redirect and session routing (mocked provider)", () => {
     mocks.getUser.mockResolvedValue({ data: { user: null } });
     mocks.client.mockReturnValue({ auth: { getUser: mocks.getUser } });
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify([]))));
+    // These cases describe routing with the hidden admin entrance disabled.
+    vi.stubEnv("ADMIN_URL_SEGMENT", "");
   });
   afterEach(() => vi.unstubAllGlobals());
   it.each(["/services/old-service", "/projects/old-project", "/blog/old-post"])("runs saved redirects for %s without session overhead", async path => {
@@ -127,6 +129,21 @@ describe("configured redirect and session routing (mocked provider)", () => {
     expect(response.status).toBe(200);
     expect(response.headers.get("location")).toBeNull();
     expect(mocks.getUser).toHaveBeenCalledOnce();
+  });
+  it("hides /ajadmin behind a 404 while the hidden entrance is configured", async () => {
+    vi.stubEnv("ADMIN_URL_SEGMENT", "unit-test-entrance");
+    const { proxy } = await import("./proxy");
+    const response = await proxy(new NextRequest("https://site.example/ajadmin/users"));
+    expect(response.status).toBe(404);
+    expect(response.headers.get("x-robots-tag")).toBe("noindex");
+    expect(mocks.client).not.toHaveBeenCalled();
+  });
+  it("forwards the hidden entrance to the staff login", async () => {
+    vi.stubEnv("ADMIN_URL_SEGMENT", "unit-test-entrance");
+    const { proxy } = await import("./proxy");
+    const response = await proxy(new NextRequest("https://site.example/unit-test-entrance"));
+    expect(response.status).toBe(307);
+    expect(new URL(response.headers.get("location")!).pathname).toBe("/ajadmin/login");
   });
   it("keeps public fallback pages available without configuration", async () => {
     mocks.configured = false;

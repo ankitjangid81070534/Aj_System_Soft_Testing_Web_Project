@@ -19,7 +19,9 @@ import {
   LinkIcon,
   ListOrdered,
   Megaphone,
+  MessagesSquare,
   Newspaper,
+  ShieldCheck,
   Quote,
   ScrollText,
   Search,
@@ -80,6 +82,8 @@ const NAV_GROUPS = [
     title: "Operations",
     items: [
       { href: "/ajadmin/leads", label: "Leads", Icon: Inbox },
+      { href: "/ajadmin/chat", label: "Client chat", Icon: MessagesSquare },
+      { href: "/ajadmin/security", label: "Security & 2FA", Icon: ShieldCheck },
       { href: "/ajadmin/users", label: "Users & roles", Icon: Users },
       { href: "/ajadmin/audit", label: "Audit logs", Icon: FileText },
     ],

@@ -51,7 +51,14 @@ export function parsePublicSupabaseEnv(
 }
 
 export const siteUrl = parseSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
-export const supabasePublicEnv = parsePublicSupabaseEnv(process.env);
+// The two names MUST be read as literal `process.env.X` expressions here: the
+// bundler only inlines NEXT_PUBLIC_* values for static property access, so
+// handing it the whole `process.env` object left the browser bundle with no
+// credentials at all ("Supabase is not configured" on Google sign-in).
+export const supabasePublicEnv = parsePublicSupabaseEnv({
+  NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+});
 export const isSupabaseConfigured = supabasePublicEnv !== null;
 
 export function requirePublicSupabaseEnv(): PublicSupabaseEnv {
