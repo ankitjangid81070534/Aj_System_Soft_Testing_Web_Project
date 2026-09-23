@@ -229,11 +229,11 @@ export async function clientSignupAction(
 }
 
 export async function googleOAuthReadyAction(): Promise<PortalActionState> {
-  if (!(await portalSchemaReady())) {
-    return idleError(
-      "Google sign-in will be available as soon as the client portal database update is complete.",
-    );
-  }
+  // Google OAuth only needs Supabase Auth: the redirect never touches the
+  // portal tables, and the profile row is provisioned later in /auth/callback.
+  // Gating this on the admin-schema probe broke sign-in whenever that
+  // service-role read was unavailable, even though the flow itself works.
+  if (!isSupabaseConfigured) return idleError("Google sign-in is not configured yet.");
   return { status: "success" };
 }
 
