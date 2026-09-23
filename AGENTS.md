@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Migration audit + missing ai_methods table (2026-09-23)
+- Re-read every file in `website/supabase/migrations/` (0001 → 0018). All are additive and safely re-runnable in numeric order: each `create policy` / `create trigger` is preceded by `drop … if exists`, tables use `create table if not exists`, indexes `if not exists`, seeds `on conflict`. Nothing needed rewriting, and no file was changed.
+- The ONE real gap: `public.ai_methods` was referenced by the admin resource (`lib/admin/resources.ts`), the public reader (`lib/data/ai-methods.ts`) and `src/types/database.ts`, but no migration created it — so admin saves in that module failed with `42P01` and `/ai-methods` always rendered its empty state. Fixed by the new `0019_ai_methods_and_persistence_audit.sql`, which also re-asserts `site_copy` (0018), the `set_audit_columns` / `audit_row_change` / `set_updated_at` triggers and anon/service_role grants, and ends with a `do $$` self-check that raises if any admin-written table is still absent. Purely additive/idempotent: existing Supabase rows are never touched.
+- Run order in Supabase: 0001 → 0019, in numeric order. Re-running the whole folder is safe.
+
 ## Admin-editable website text (2026-09-23)
 - Migration `website/supabase/migrations/0018_site_copy.sql` adds `public.site_copy (key, value, updated_at)`: anon read-only, admin write via the service role, additive + idempotent, NO seed rows. Run it in Supabase before using the new module.
 - `src/lib/data/site-copy.ts` is the single registry: `SITE_COPY_FIELDS` holds the key, admin label, group, default text and input `kind` (text/long/list). `getSiteCopyOverrides()` (cache tag `site-copy`) reads only saved rows; `createSiteCopy(overrides, {brand, shortBrand})` resolves a key to saved → default, substituting `{brand}`/`{shortBrand}`. A blank/missing row always falls back to the default, so the site can never render empty copy. Add new editable strings by adding a field here — never hard-code copy back into a component.
