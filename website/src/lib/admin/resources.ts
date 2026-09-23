@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { fromBusinessInputValue } from "@/lib/utils/datetime";
 
 /**
  * Declarative resource definitions driving the generic admin CRUD UI.
@@ -130,7 +131,7 @@ export const RESOURCES: Record<ResourceKey, ResourceConfig> = {
         type: "slug",
         required: true,
         max: 160,
-        hint: "Lowercase, hyphens — used in the public URL.",
+        hint: "Used in the public URL — type anything, it's converted automatically.",
       },
       { name: "category", label: "Category", type: "text", max: 80 },
       {
@@ -943,6 +944,21 @@ export const RESOURCES: Record<ResourceKey, ResourceConfig> = {
 
 export const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
+/**
+ * Turn anything an admin types ("My New Post!", "Café Menu", "a_b c") into a
+ * URL-safe slug instead of rejecting it. Accents are folded to plain letters.
+ */
+export function slugify(input: string, max = 120): string {
+  return input
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, max)
+    .replace(/-+$/g, "");
+}
+
 export function isSafeInternalPath(value: string): boolean {
   return (
     value.startsWith("/") &&
@@ -1039,16 +1055,12 @@ export function buildResourceSchema(config: ResourceConfig): z.ZodType<Record<st
         }
         break;
       case "slug":
-        // An empty slug is allowed here so the server action can auto-generate
-        // it from the slug source; non-empty values must still be well-formed.
+        // Any typed text is accepted and normalised ("My Post!" → "my-post");
+        // an empty result lets the server action auto-generate it.
         shape[field.name] = z
           .string()
           .trim()
-          .max(max)
-          .refine(
-            (value) => value === "" || SLUG_PATTERN.test(value),
-            "Use lowercase letters, numbers and hyphens only",
-          );
+          .transform((value) => slugify(value, max));
         break;
       case "number":
         // Non-numeric input becomes a field error instead of silently
@@ -1102,7 +1114,7 @@ export function buildResourceSchema(config: ResourceConfig): z.ZodType<Record<st
                 `${field.label} must be a valid date/time`,
               ),
           )
-          .transform((value) => (value && value !== "" ? value : null));
+          .transform((value) => (value && value !== "" ? fromBusinessInputValue(value) : null));
         break;
     }
   }

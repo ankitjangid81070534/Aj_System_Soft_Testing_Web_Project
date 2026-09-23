@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useRef, type ReactNode } from "react";
 import { useFormStatus } from "react-dom";
+import { toBusinessInputValue } from "@/lib/utils/datetime";
 import { useRouter } from "next/navigation";
 import { Eye, Save } from "lucide-react";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
@@ -47,12 +48,10 @@ function fieldValue(row: Record<string, unknown> | null, field: FieldDef): strin
   if (Array.isArray(value)) return value.join("\n");
   if (typeof value === "boolean") return value ? "on" : "";
   if (field.type === "datetime" && typeof value === "string") {
-    // Convert ISO timestamp → datetime-local input value.
-    const date = new Date(value);
-    if (!Number.isNaN(date.getTime())) {
-      const pad = (n: number) => String(n).padStart(2, "0");
-      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
-    }
+    // Convert ISO timestamp → datetime-local input value (always IST, so the
+    // server render and the browser agree and a re-save never shifts it).
+    const local = toBusinessInputValue(value);
+    if (local) return local;
   }
   return String(value);
 }

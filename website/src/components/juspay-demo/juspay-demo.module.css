@@ -1186,6 +1186,10 @@
 .light :where(h1, h2, h3) {
   color: #0d0f14;
 }
+/* The shared lead uses the dark-page muted grey, unreadable on white. */
+.light .lead {
+  color: #4a4f5c;
+}
 .light::after {
   content: "";
   position: absolute;

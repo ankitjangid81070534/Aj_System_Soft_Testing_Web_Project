@@ -4,7 +4,7 @@ import { revalidatePath, updateTag } from "next/cache";
 import { createSupabaseAdminLooseClient } from "@/lib/supabase/admin";
 import { getCurrentUser } from "@/lib/auth/session";
 import { can, type Capability } from "@/lib/auth/permissions";
-import { SLUG_PATTERN } from "@/lib/admin/resources";
+import { SLUG_PATTERN, slugify } from "@/lib/admin/resources";
 import {
   getResourceConfig,
   getResourceRow,
@@ -195,14 +195,6 @@ function databaseFailure(
     };
   }
   return databaseFailureForCode(error?.code);
-}
-
-function slugify(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 120);
 }
 
 /** Convert parsed field values into a safe DB payload (lines → arrays, "" → null). */

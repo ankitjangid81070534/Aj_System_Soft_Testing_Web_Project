@@ -76,6 +76,12 @@
     background-color 0.35s,
     box-shadow 0.35s;
 }
+/* `.page a { color: inherit }` outranks a single class and painted this dark
+   pill's label dark-on-dark; :link/:visited lift it above that rule. */
+.pillDark:link,
+.pillDark:visited {
+  color: #fff;
+}
 .pillDark:hover {
   background: #3079ea;
   transform: translateY(-2px);

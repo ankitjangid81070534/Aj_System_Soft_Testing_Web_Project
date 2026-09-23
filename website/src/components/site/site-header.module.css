@@ -410,12 +410,21 @@
 /* Small laptops (960–1279px): the full row does not fit with the wordmark,
    so show the mark only (as the reference site does) and tighten the links
    instead of letting flex squeeze the name into an ellipsis. */
-@media (min-width: 960px) and (max-width: 1279px) {
+/* The wordmark returns at 1360px: measured, brand + full row needs ~1310px,
+   so the old 1280px switch pushed the CTA out of the pill at 1280–1309px. */
+@media (min-width: 960px) and (max-width: 1359px) {
   .brandName { display: none; }
   .bar { gap: 14px; }
   .link { padding: 10px 10px; font-size: 14.5px; }
   .login { padding: 10px 14px; }
   .cta { padding: 0 16px; font-size: 14.5px; }
+}
+/* 960–1099px: the row overflowed by ~50px at 960, so tighten one step more. */
+@media (min-width: 960px) and (max-width: 1099px) {
+  .bar { gap: 8px; padding: 0 10px 0 14px; }
+  .link { padding: 10px 7px; font-size: 14px; }
+  .login { padding: 10px 11px; font-size: 13.5px; }
+  .cta { padding: 0 13px; font-size: 14px; gap: 6px; }
 }
 
 @media (max-width: 400px) {

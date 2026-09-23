@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
 import { PreservingForm } from "@/components/admin/PreservingForm";
 import { redirect } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
@@ -229,7 +230,7 @@ export default async function AgreementsPage({
                             </td>
                             <td className="px-3 py-2 text-xs text-ink-muted">
                               {version.effective_from
-                                ? new Date(String(version.effective_from)).toLocaleDateString("en-IN", {
+                                ? formatDateTime(String(version.effective_from), {
                                     dateStyle: "medium",
                                   })
                                 : "—"}

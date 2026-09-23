@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -202,9 +203,7 @@ export default async function AdminDashboardPage() {
                     className="shrink-0 text-xs text-ink-muted"
                     dateTime={String(lead.created_at)}
                   >
-                    {new Date(String(lead.created_at)).toLocaleDateString("en-IN", {
-                      dateStyle: "medium",
-                    })}
+                    {formatDateTime(String(lead.created_at), { dateStyle: "medium" })}
                   </time>
                 </li>
               ))}

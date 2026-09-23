@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { formatDateTime } from "@/lib/utils/datetime";
 import { PreservingForm } from "@/components/admin/PreservingForm";
 import { redirect } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
@@ -305,9 +306,7 @@ export default async function UsersPage({
                     </td>
                     <td className="px-4 py-3 text-xs text-ink-muted">
                       <time dateTime={String(row.created_at)}>
-                        {new Date(String(row.created_at)).toLocaleDateString("en-IN", {
-                          dateStyle: "medium",
-                        })}
+                        {formatDateTime(String(row.created_at), { dateStyle: "medium" })}
                       </time>
                     </td>
                   </tr>

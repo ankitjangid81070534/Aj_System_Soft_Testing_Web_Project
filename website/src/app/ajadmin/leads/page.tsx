@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
+import { formatDateTime } from "@/lib/utils/datetime";
 import { StatusPill } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/States";
 import { Input } from "@/components/ui/Input";
@@ -169,10 +170,7 @@ export default async function LeadsInboxPage({
                   </td>
                   <td className="hidden px-4 py-3 text-xs text-ink-muted md:table-cell">
                     <time dateTime={row.created_at}>
-                      {new Date(row.created_at).toLocaleString("en-IN", {
-                        dateStyle: "medium",
-                        timeStyle: "short",
-                      })}
+                      {formatDateTime(row.created_at)}
                     </time>
                   </td>
                   <td className="px-4 py-3 text-right">
