@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PreservingForm } from "@/components/admin/PreservingForm";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Field, Select } from "@/components/ui/Input";
@@ -77,7 +78,7 @@ export default async function NewSectionPage({
           {feedback.error}
         </p>
       ) : null}
-      <form action={createSectionAction} className="mt-6 flex max-w-md items-end gap-3">
+      <PreservingForm action={createSectionAction} className="mt-6 flex max-w-md items-end gap-3">
         <Field label="Section type" htmlFor="new-section-type">
           <Select
             id="new-section-type"
@@ -93,7 +94,7 @@ export default async function NewSectionPage({
           </Select>
         </Field>
         <AdminSubmitButton idleLabel="Add section" pendingLabel="Adding section…" />
-      </form>
+      </PreservingForm>
     </section>
   );
 }

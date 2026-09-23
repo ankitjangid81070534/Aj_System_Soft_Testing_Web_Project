@@ -3,6 +3,7 @@
 import { useActionState, useEffect, useRef } from "react";
 import { Field, Input, Textarea } from "@/components/ui/Input";
 import { AdminFeedback } from "@/components/admin/AdminFeedback";
+import { useKeepFormValues } from "@/components/admin/useKeepFormValues";
 import { AdminSubmitButton } from "@/components/admin/AdminSubmitButton";
 import { useToast } from "@/components/ui/Toast";
 import { updateSiteCopyAction, type SiteCopyState } from "@/lib/admin/site-copy-actions";
@@ -17,6 +18,7 @@ const initialState: SiteCopyState = { ok: null };
  */
 export function SiteCopyForm({ values }: { values: Record<string, string> }) {
   const [state, formAction, pending] = useActionState(updateSiteCopyAction, initialState);
+  const { onReset: keepValuesOnReset } = useKeepFormValues();
   const dirtyRef = useRef(false);
   const { toast } = useToast();
 
@@ -33,6 +35,7 @@ export function SiteCopyForm({ values }: { values: Record<string, string> }) {
     <form
       action={formAction}
       aria-busy={pending}
+      onReset={keepValuesOnReset}
       onChange={() => {
         dirtyRef.current = true;
       }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { Camera, Save, Send, Star } from "lucide-react";
 import {
   completeProfileAction,
@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/Button";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { AddressFields } from "@/components/portal/AuthForms";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
+import { useKeepFormValues } from "@/components/admin/useKeepFormValues";
 
 import { PortalFeedback as FormFeedback } from "./PortalFeedback";
 import styles from "./portal-ui.module.css";
@@ -37,8 +38,9 @@ export type CompleteProfileDefaults = {
  */
 export function CompleteProfileForm({ defaults }: { defaults: CompleteProfileDefaults }) {
   const [state, action, pending] = useActionState(completeProfileAction, initialState);
+  const { onReset: keepValuesOnReset } = useKeepFormValues();
   return (
-    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
+    <form action={action} aria-busy={pending} onReset={keepValuesOnReset} className={`${styles.form} space-y-4`}>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Full name" htmlFor="complete-name" required>
           <Input
@@ -98,8 +100,9 @@ export function ProfileForm({
   company: string;
 }) {
   const [state, action, pending] = useActionState(updateProfileAction, initialState);
+  const { onReset: keepValuesOnReset } = useKeepFormValues();
   return (
-    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
+    <form action={action} aria-busy={pending} onReset={keepValuesOnReset} className={`${styles.form} space-y-4`}>
       <Field label="Full name" htmlFor="profile-name" required>
         <Input
           id="profile-name"
@@ -169,8 +172,13 @@ export function AvatarForm() {
 
 export function ReviewForm({ projects }: { projects: { id: string; name: string }[] }) {
   const [state, action, pending] = useActionState(submitVerifiedReviewAction, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+  const { onReset: keepValuesOnReset, reset: resetForm } = useKeepFormValues();
+  useEffect(() => {
+    if (state.status === "success") resetForm(formRef.current);
+  }, [state, resetForm]);
   return (
-    <form action={action} aria-busy={pending} className={`${styles.form} space-y-4`}>
+    <form ref={formRef} action={action} aria-busy={pending} onReset={keepValuesOnReset} className={`${styles.form} space-y-4`}>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Rating" htmlFor="review-rating" required>
           <Select id="review-rating" name="rating" defaultValue="5" required>

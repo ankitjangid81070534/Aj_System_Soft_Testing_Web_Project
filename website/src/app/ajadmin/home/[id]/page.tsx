@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PreservingForm } from "@/components/admin/PreservingForm";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { z } from "zod";
@@ -128,7 +129,7 @@ export default async function SectionEditPage({
         </p>
       ) : null}
 
-      <form
+      <PreservingForm
         action={saveSectionAction}
         className="mt-5 grid max-w-4xl gap-4 rounded-2xl border border-line bg-surface p-6 shadow-e1 sm:grid-cols-2"
       >
@@ -205,7 +206,7 @@ export default async function SectionEditPage({
         <div className="sm:col-span-2">
           <AdminSubmitButton idleLabel="Save section" pendingLabel="Saving section…" />
         </div>
-      </form>
+      </PreservingForm>
       <p className="mt-3 max-w-3xl text-xs text-ink-muted">
         {`Validation: ${contentSchema.description ?? "content must parse as JSON and match the section's registered schema (e.g. gallery images)"}.`}
       </p>
