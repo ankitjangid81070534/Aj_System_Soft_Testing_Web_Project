@@ -14,7 +14,7 @@ import { DemoBuilder } from "./DemoBuilder";
 import { DemoRouting } from "./DemoRouting";
 import { DemoTriad } from "./DemoTriad";
 import { DemoServices } from "./DemoServices";
-import { DemoPlatforms } from "./DemoPlatforms";
+import { DemoLiveDashboard } from "./DemoLiveDashboard";
 import { DemoStack } from "./DemoStack";
 import { DemoJourney } from "./DemoJourney";
 import { DemoWhyUs } from "./DemoWhyUs";
@@ -36,9 +36,15 @@ import styles from "./juspay-demo.module.css";
  *
  * Every unit of the previous homepage is still here, fed by the same readers:
  * hero + CTA settings, launch benefits (triad), all published services, the
- * platforms / technology / why-us sections (dark Juspay-style grids), delivery process, industries, and
+ * technology / why-us sections (dark Juspay-style grids), delivery process, industries, and
  * the real proof blocks (projects, reviews, team, articles) that hide when
  * the CMS has no records. Nothing is invented and nothing is dropped.
+ *
+ * Conversion order (2026-09-23): the interactive `DemoLiveDashboard` (clearly
+ * labelled sample data) and the admin-managed case studies sit directly under
+ * the hero so proof appears in the first two screens. `DemoPlatforms` is no
+ * longer mounted — it repeated DemoRouting's "One team, every platform" heading
+ * and the hero chips / DemoServices already list the same platforms.
  */
 export function JuspayHome({
   content,
@@ -66,6 +72,8 @@ export function JuspayHome({
         clients={sales.clients}
       />
       <DemoMarquee />
+      <DemoLiveDashboard ctaHref={ctaHref} />
+      <DemoCaseStudies studies={sales.caseStudies} />
       <DemoPlanet serviceCount={serviceCount} benefitCount={benefits.length} />
       <div className={styles.light} data-light-band>
         <DemoResults shortName={shortName} />
@@ -75,14 +83,12 @@ export function JuspayHome({
         <DemoTriad benefits={benefits} />
         <DemoTrust clients={sales.clients} />
       </div>
-      <DemoPlatforms />
       <DemoStack />
       <DemoJourney brandName={shortName} />
       <DemoWhyUs brandName={brandName} />
       <DemoServices services={content.services} />
       <DemoProcess />
       <DemoIndustries />
-      <DemoCaseStudies studies={sales.caseStudies} />
       <div className={styles.light} data-light-band>
         <DemoPackages packages={sales.packages} whatsappHref={whatsappLink(settings)} />
       </div>

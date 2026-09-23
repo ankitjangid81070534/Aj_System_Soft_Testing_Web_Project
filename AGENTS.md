@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## Conversion order + live dashboard (2026-09-23)
+- `components/juspay-demo/DemoLiveDashboard.tsx` (+ `demo-live-dashboard.module.css`) is an interactive sample dashboard (Billing / Inventory / Payments tabs via `aria-pressed` buttons, KPI cards, CSS bar chart, activity table) mounted on `/` right after `DemoMarquee`. All numbers are hard-coded **sample data and labelled as such in the UI** ("Live · sample data" + footnote) — never present them as client results. Pure React/CSS, no chart library.
+- `DemoCaseStudies` moved from before the gallery to directly after the dashboard (proof in the first two screens). `DemoPlatforms` is no longer mounted (duplicated DemoRouting's "One team, every platform" heading); the file remains for reference.
+- Hero lead word `.heroAccent` is now a sliding multi-colour `background-clip: text` gradient with a breathing `drop-shadow` glow (`heroHue` + `heroGlow`); solid `--jd-blue` is the fallback colour. `text-shadow` does not work with transparent-filled text — use `filter: drop-shadow` for glow.
+- Verified: typecheck, lint, 598/598 tests, real tab click in preview switches chart/KPIs/table.
+
 ## Homepage sales sections (2026-09-22)
 - `/` now renders admin-managed conversion content from migration 0017 via `lib/data/sales.ts`: `DemoTrust` (trust strip, inside the first light band), `DemoCaseStudies` (dark band, before the gallery) and `DemoPackages` (its own `styles.light` + `data-light-band` wrapper). Shared styles live in `components/juspay-demo/demo-sales.module.css`; each section returns `null` when the admin has no active/published rows.
 - The packages WhatsApp CTA uses `whatsappLink(settings)` (admin number + pre-filled message) and hides when no number is configured — no second floating button; `ContactHub` already provides the site-wide one.
