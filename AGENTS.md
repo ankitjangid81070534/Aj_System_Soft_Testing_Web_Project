@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Mobile "rise" scene fix (2026-09-23)
+- `scroll-scene.module.css` ≤700px `.rise` now pivots at the TOP edge (`transform-origin: 50% 0%`, `rotateX(-9deg)`). Single-column stacks (e.g. DemoTriad's 1800px "What's included" list) rotated around their bottom edge were pushed ~900px below the viewport at `--sp: 0`, so the cards looked hidden until the user scrolled well past them. Measured in the preview: layout top 606px → rendered 647px (was 1495px). Animation itself is unchanged.
+
 ## Conversion order + live dashboard (2026-09-23)
 - `components/juspay-demo/DemoLiveDashboard.tsx` (+ `demo-live-dashboard.module.css`) is an interactive sample dashboard (Billing / Inventory / Payments tabs via `aria-pressed` buttons, KPI cards, CSS bar chart, activity table) mounted on `/` right after `DemoMarquee`. All numbers are hard-coded **sample data and labelled as such in the UI** ("Live · sample data" + footnote) — never present them as client results. Pure React/CSS, no chart library.
 - `DemoCaseStudies` moved from before the gallery to directly after the dashboard (proof in the first two screens). `DemoPlatforms` is no longer mounted (duplicated DemoRouting's "One team, every platform" heading); the file remains for reference.
