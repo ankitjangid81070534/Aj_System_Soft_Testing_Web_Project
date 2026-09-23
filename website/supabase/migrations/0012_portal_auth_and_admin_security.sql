@@ -118,6 +118,8 @@ alter table public.testimonials
   alter column is_verified set default false;
 
 drop policy if exists "testimonials_client_insert" on public.testimonials;
+-- Re-runnable: also drop this file's own policy name before creating it.
+drop policy if exists "testimonials_verified_client_insert" on public.testimonials;
 create policy "testimonials_verified_client_insert" on public.testimonials
   for insert to authenticated
   with check (

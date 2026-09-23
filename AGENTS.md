@@ -1,5 +1,17 @@
 # Base44 Dev Environment
 
+## Migration re-audit + 0020 hardening (2026-09-23)
+- Every file 0001 → 0019 was re-read AND actually executed against a throwaway `postgres:16` with stub `auth`/`storage` schemas (`auth.uid()`, `auth.users`, `storage.objects/buckets/foldername`, anon/authenticated/service_role roles). Fresh install + two full re-runs of the whole folder now pass with zero errors. Nothing was removed from any file.
+- ONE real non-idempotency found and fixed in `0012_portal_auth_and_admin_security.sql`: it dropped the OLD policy name `testimonials_client_insert` but created `testimonials_verified_client_insert`, so a second run died with `policy … already exists` — and everything after 0012 never applied. Added `drop policy if exists "testimonials_verified_client_insert"`; both drops are kept.
+- New `0020_schema_consistency_hardening.sql` (additive/idempotent, no data touched) fixes the admin "save error" class at the database level:
+  * `set_audit_columns` is now COLUMN-AWARE (`to_jsonb(new)` + `jsonb_populate_record`) — attaching it to a table without `created_by`/`updated_by` can no longer abort a save with `42703 record "new" has no field …`.
+  * new `public.fill_not_null_defaults()` BEFORE trigger: an admin field left blank arrives as NULL, so it fills the column's OWN default (evaluated via `pg_get_expr`, which is what makes enums like `content_status` work → `draft`) and otherwise a type-appropriate empty value. This kills the `23502 not-null violation` saves.
+  * `audit_row_change` re-asserted as best-effort (a failing audit insert never rolls back the content write).
+  * a `do $$` loop over all 32 CMS/admin tables: RLS on, the right stamping trigger per table, audit trigger, `grant select` to anon/authenticated + `grant all` to service_role, and `sort_order`/`status`/`deleted_at`/`is_active` indexes where the column exists. Ends with a self-check that raises if any admin-written table is missing.
+- Verified functionally: inserting all-NULL rows into `services`, `ai_methods`, `packages`, `testimonials`, `site_copy` and nulling `site_settings.brand_name` all SUCCEED with defaults applied, and audit rows are written.
+- Run order in Supabase: 0001 → 0020, numeric order; re-running the whole folder is safe.
+- Field/column audit: every field in `src/lib/admin/resources.ts` has a matching column in the migrations (checked programmatically) — no schema gap remains after 0019's `ai_methods`.
+
 ## Migration audit + missing ai_methods table (2026-09-23)
 - Re-read every file in `website/supabase/migrations/` (0001 → 0018). All are additive and safely re-runnable in numeric order: each `create policy` / `create trigger` is preceded by `drop … if exists`, tables use `create table if not exists`, indexes `if not exists`, seeds `on conflict`. Nothing needed rewriting, and no file was changed.
 - The ONE real gap: `public.ai_methods` was referenced by the admin resource (`lib/admin/resources.ts`), the public reader (`lib/data/ai-methods.ts`) and `src/types/database.ts`, but no migration created it — so admin saves in that module failed with `42P01` and `/ai-methods` always rendered its empty state. Fixed by the new `0019_ai_methods_and_persistence_audit.sql`, which also re-asserts `site_copy` (0018), the `set_audit_columns` / `audit_row_change` / `set_updated_at` triggers and anon/service_role grants, and ends with a `do $$` self-check that raises if any admin-written table is still absent. Purely additive/idempotent: existing Supabase rows are never touched.
