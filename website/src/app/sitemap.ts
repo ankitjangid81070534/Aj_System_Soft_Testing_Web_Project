@@ -25,6 +25,7 @@ const STATIC_ROUTES: readonly StaticRoute[] = [
   { path: "/contact", changeFrequency: "monthly", priority: 0.85 },
   { path: "/reviews", changeFrequency: "weekly", priority: 0.85 },
   { path: "/ai-methods", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/ai-tools", changeFrequency: "weekly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/team", changeFrequency: "monthly", priority: 0.75 },
