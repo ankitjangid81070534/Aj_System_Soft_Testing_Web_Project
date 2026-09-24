@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Smoother scroll scenes + premium cursor + grid lines removed (2026-09-24)
+- `ScrollScene` now eases raw progress (easeOutCubic over 0.7vh) and glides `--sp` toward it with frame-rate independent damping (`DAMPING 0.11`); the rAF loop runs only while a scene is settling. Variants/amplitudes unchanged. Lenis `lerp` 0.085 → 0.075.
+- `components/motion/PremiumCursor.tsx` (+ `premium-cursor.module.css`, global hide rules in `app/premium-cursor.css`) mounts from `PublicSiteFrame`: glossy 3D dot + trailing glass ring, grows over interactive elements, native I-beam over text fields/iframes. Only `(hover: hover) and (pointer: fine)`; `pointer-events: none`. Admin routes are untouched.
+- Owner asked to remove small background box-grid lines: removed from DemoJourney `.section::before`, `.ctaGrid`, PageHero `::after`, light-band `.artTraces`/`.canvas`, and the `bg-grid` utility (kept as a no-op). Dot patterns (world map etc.) were kept.
+
 ## Stale Turbopack cache → homepage 500 (2026-09-24)
 - `/` returned 500 with `Can't resolve '@vercel/turbopack-next/internal/font/google/font'` / "next/font/google queries have exactly one entry" (from `juspay-demo/fonts.ts`) even though Google Fonts was reachable. Cause: stale `website/.next` dev cache. Fix: `docker compose -f docker-compose.base44.yml stop web && rm -rf website/.next && docker compose -f docker-compose.base44.yml up -d web`. No code change needed.
 
