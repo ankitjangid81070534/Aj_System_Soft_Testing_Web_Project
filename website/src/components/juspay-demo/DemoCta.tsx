@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { CalendarCheck, ChevronRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import styles from "./juspay-demo.module.css";
 import type { SiteCopy } from "@/lib/data/site-copy";
@@ -31,6 +31,9 @@ export function DemoCta({ ctaHref, ctaLabel, copy }: { ctaHref: string; ctaLabel
             </Link>
             <Link href="/contact" className={styles.pill}>
               {copy.t("home.cta.secondaryLabel")} <ChevronRight size={18} aria-hidden />
+            </Link>
+            <Link href="/contact#consultation" className={styles.pill}>
+              <CalendarCheck size={18} aria-hidden /> Book an appointment
             </Link>
           </div>
         </Reveal>

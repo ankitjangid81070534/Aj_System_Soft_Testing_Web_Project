@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Appointment booking with slots (2026-09-25)
+- `/contact#consultation` "Book an appointment": `AppointmentForm` (LeadForms.tsx) now uses `BookingSlotPicker` (+ `booking.module.css`) — 14 upcoming dates (Mon–Sat, IST, from tomorrow) and 30-min slots from `lib/booking/slots.ts`, which the server action shares. Booked slots load via `getBookedSlotsAction` (only `date|time` keys) and reload after every attempt; `requestAppointmentAction` re-checks bookable + not-taken before insert into `appointment_requests` (stored `preferred_time` = "2:30 PM IST"). Submit stays disabled until a free slot is chosen. Homepage `DemoCta` links to it. The anchor id stays `consultation` (ContactHub/sales CTAs use it).
+- No DB unique constraint yet: two simultaneous submits for the same slot could both pass the check.
+- Browser-verified pick flow at 1308/390px without submitting (a real submit writes to the owner's Supabase). The offer popup `<dialog>` blocks clicks in fresh test browsers — close it first.
+
 ## Navbar brand name always visible (2026-09-25)
 - Owner: brand name must NEVER hide. `site-header.module.css` no longer sets `.brandName{display:none}`. Full desktop row now starts at **1200px** (CSS + the drawer-reset `matchMedia` in `SiteHeader.tsx`); below that the compact bar + drawer shows the full name. 1200–1359px the name is a two-line lockup (13.5px, `max-width: 8.4em`); ≤400px it may wrap to two lines instead of ellipsis. Measured with Playwright at 320–1920px: no bar overflow, name never clipped. The old 960px desktop row overflowed once the name was shown.
 
