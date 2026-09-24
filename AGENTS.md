@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Stale Turbopack cache → homepage 500 (2026-09-24)
+- `/` returned 500 with `Can't resolve '@vercel/turbopack-next/internal/font/google/font'` / "next/font/google queries have exactly one entry" (from `juspay-demo/fonts.ts`) even though Google Fonts was reachable. Cause: stale `website/.next` dev cache. Fix: `docker compose -f docker-compose.base44.yml stop web && rm -rf website/.next && docker compose -f docker-compose.base44.yml up -d web`. No code change needed.
+
 ## Page transitions + site-wide ContactHub (2026-09-23)
 - `PublicSiteFrame` wraps page content in `<div key={pathname} className="page-enter">` (styles in `app/page-transitions.css`, `backwards` fill so no transform lingers). A `(public)/template.tsx` was NOT used: in Next 16 it only remounts on its own segment, so `/services → /services/x` would not animate.
 - `ContactHub` ("Let's talk") now shows on EVERY public route (the old `showsContactHub` allowlist and its tests were removed on owner request). It stays mounted across navigation; an effect hides an open popover on pathname change. Motion (entrance, pulse ring, icon wiggle, hover lift, `@starting-style` panel ease) lives in `contact-hub.module.css`, off under `html[data-motion="reduce"]`.
