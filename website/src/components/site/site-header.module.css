@@ -398,36 +398,36 @@
 }
 
 /* ---- Breakpoints ------------------------------------------------------- */
-/* Desktop row from 960px: a 1024px screen with a visible scrollbar reports
-   ~1009px, so a 1024px switch dropped small laptops into the mobile bar. */
-@media (min-width: 960px) {
+/* Full desktop row from 1200px. Measured: brand name + eight links + Client
+   Login + CTA overflow the pill below ~1200px, so narrower screens (incl.
+   1024px laptops) use the compact bar + drawer, which always shows the full
+   brand name. The brand name is never hidden at any width. */
+@media (min-width: 1200px) {
   .band { padding: 18px 0; }
   .bar { position: relative; height: 78px; }
   .links, .login, .cta { display: inline-flex; }
   .burger { display: none; }
   .brand { flex: none; }
 }
-/* Small laptops (960–1279px): the full row does not fit with the wordmark,
-   so show the mark only (as the reference site does) and tighten the links
-   instead of letting flex squeeze the name into an ellipsis. */
-/* The wordmark returns at 1360px: measured, brand + full row needs ~1310px,
-   so the old 1280px switch pushed the CTA out of the pill at 1280–1309px. */
-@media (min-width: 960px) and (max-width: 1359px) {
-  .brandName { display: none; }
+/* 1200–1359px: the one-line wordmark does not fit next to the full row, so it
+   becomes a compact two-line lockup ("Ankit System Soft / Technology") and
+   the links tighten slightly. */
+@media (min-width: 1200px) and (max-width: 1359px) {
+  .brand { gap: 10px; }
+  .brandName {
+    max-width: 8.4em;
+    font-size: 13.5px;
+    line-height: 1.15;
+    white-space: normal;
+    text-wrap: balance;
+  }
   .bar { gap: 14px; }
   .link { padding: 10px 10px; font-size: 14.5px; }
   .login { padding: 10px 14px; }
   .cta { padding: 0 16px; font-size: 14.5px; }
 }
-/* 960–1099px: the row overflowed by ~50px at 960, so tighten one step more. */
-@media (min-width: 960px) and (max-width: 1099px) {
-  .bar { gap: 8px; padding: 0 10px 0 14px; }
-  .link { padding: 10px 7px; font-size: 14px; }
-  .login { padding: 10px 11px; font-size: 13.5px; }
-  .cta { padding: 0 13px; font-size: 14px; gap: 6px; }
-}
 
 @media (max-width: 400px) {
   .bar { gap: 10px; padding-left: 14px; }
-  .brandName { font-size: 13.5px; }
+  .brandName { font-size: 13.5px; line-height: 1.15; white-space: normal; text-wrap: balance; }
 }

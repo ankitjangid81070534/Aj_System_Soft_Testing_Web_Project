@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Navbar brand name always visible (2026-09-25)
+- Owner: brand name must NEVER hide. `site-header.module.css` no longer sets `.brandName{display:none}`. Full desktop row now starts at **1200px** (CSS + the drawer-reset `matchMedia` in `SiteHeader.tsx`); below that the compact bar + drawer shows the full name. 1200–1359px the name is a two-line lockup (13.5px, `max-width: 8.4em`); ≤400px it may wrap to two lines instead of ellipsis. Measured with Playwright at 320–1920px: no bar overflow, name never clipped. The old 960px desktop row overflowed once the name was shown.
+
 ## Smoother scroll scenes + premium cursor + grid lines removed (2026-09-24)
 - `ScrollScene` now eases raw progress (easeOutCubic over 0.7vh) and glides `--sp` toward it with frame-rate independent damping (`DAMPING 0.11`); the rAF loop runs only while a scene is settling. Variants/amplitudes unchanged. Lenis `lerp` 0.085 → 0.075.
 - `components/motion/PremiumCursor.tsx` (+ `premium-cursor.module.css`, global hide rules in `app/premium-cursor.css`) mounts from `PublicSiteFrame`: glossy 3D dot + trailing glass ring, grows over interactive elements, native I-beam over text fields/iframes. Only `(hover: hover) and (pointer: fine)`; `pointer-events: none`. Admin routes are untouched.
