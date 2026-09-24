@@ -3,6 +3,7 @@
 ## Smoother scroll scenes + premium cursor + grid lines removed (2026-09-24)
 - `ScrollScene` now eases raw progress (easeOutCubic over 0.7vh) and glides `--sp` toward it with frame-rate independent damping (`DAMPING 0.11`); the rAF loop runs only while a scene is settling. Variants/amplitudes unchanged. Lenis `lerp` 0.085 → 0.075.
 - `components/motion/PremiumCursor.tsx` (+ `premium-cursor.module.css`, global hide rules in `app/premium-cursor.css`) mounts from `PublicSiteFrame`: glossy 3D dot + trailing glass ring, grows over interactive elements, native I-beam over text fields/iframes. Only `(hover: hover) and (pointer: fine)`; `pointer-events: none`. Admin routes are untouched.
+- Superseded same day: owner asked for a HeyGen-style cursor instead of the round one. `PremiumCursor` is now a white arrow SVG (dark outline, shadow + blue glow) that swaps to a hand over interactive elements and tracks 1:1 (no trailing). The layer is `popover="manual"` and is re-shown whenever a `<dialog>` gains `open` (MutationObserver), because `showModal()` dialogs (e.g. OfferPopup) sit in the browser top layer above any z-index — that is why the old cursor vanished over the offer popup's close button.
 - Owner asked to remove small background box-grid lines: removed from DemoJourney `.section::before`, `.ctaGrid`, PageHero `::after`, light-band `.artTraces`/`.canvas`, and the `bg-grid` utility (kept as a no-op). Dot patterns (world map etc.) were kept.
 
 ## Stale Turbopack cache → homepage 500 (2026-09-24)
