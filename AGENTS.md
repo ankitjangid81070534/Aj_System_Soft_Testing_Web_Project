@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Gmail lead notifications (2026-09-25)
+- `lib/email/email.ts` sends via Gmail SMTP (nodemailer) when `GMAIL_USER` + `GMAIL_APP_PASSWORD` are set, otherwise falls back to Resend. Admin inbox = `adminRecipient()` → `EMAIL_ADMIN_TO` or `GMAIL_USER`. Contact, quote and appointment actions all notify the admin and send the visitor confirmation. A real test email was delivered via a /tmp script; Gmail allows ~500 mails/day.
+
 ## Appointment booking with slots (2026-09-25)
 - `/contact#consultation` "Book an appointment": `AppointmentForm` (LeadForms.tsx) now uses `BookingSlotPicker` (+ `booking.module.css`) — 14 upcoming dates (Mon–Sat, IST, from tomorrow) and 30-min slots from `lib/booking/slots.ts`, which the server action shares. Booked slots load via `getBookedSlotsAction` (only `date|time` keys) and reload after every attempt; `requestAppointmentAction` re-checks bookable + not-taken before insert into `appointment_requests` (stored `preferred_time` = "2:30 PM IST"). Submit stays disabled until a free slot is chosen. Homepage `DemoCta` links to it. The anchor id stays `consultation` (ContactHub/sales CTAs use it).
 - No DB unique constraint yet: two simultaneous submits for the same slot could both pass the check.
