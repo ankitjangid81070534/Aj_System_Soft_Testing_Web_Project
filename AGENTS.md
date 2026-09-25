@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Email redesign + deliverability (2026-09-25)
+- All emails render through `lib/email/layout.ts` (table-based `emailShell`, `detailsCard`, 3D `button`, `signature`); templates return `{subject, html, text}` so every mail is multipart. `sendOne(to, email, {replyTo, unsubscribe})`: admin mail Reply-To = visitor, visitor mail Reply-To = admin + `List-Unsubscribe` mailto. Subjects are plain (no `[AJS]` tag, no HTML-escaping). Test-sent via a temporary tsx script: both delivered.
+
 ## Gmail lead notifications (2026-09-25)
 - `lib/email/email.ts` sends via Gmail SMTP (nodemailer) when `GMAIL_USER` + `GMAIL_APP_PASSWORD` are set, otherwise falls back to Resend. Admin inbox = `adminRecipient()` → `EMAIL_ADMIN_TO` or `GMAIL_USER`. Contact, quote and appointment actions all notify the admin and send the visitor confirmation. A real test email was delivered via a /tmp script; Gmail allows ~500 mails/day.
 - Visitor confirmation (`renderVisitorConfirmation` in `templates.tsx`) is per-kind (`VISITOR_COPY`): "Dear {name}", summary table of what they submitted, "Visit our website" button (`NEXT_PUBLIC_SITE_URL`) and a signature from `BRAND.founderName`. Preview it by running a /tmp script with `npx tsx --conditions=react-server` inside the web container (plain node rejects the `server-only` import).

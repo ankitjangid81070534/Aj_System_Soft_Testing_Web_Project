@@ -1,12 +1,13 @@
 import "server-only";
 import { Resend } from "resend";
 import nodemailer, { type Transporter } from "nodemailer";
-import { escapeHtml, stripHeaderBreaks } from "@/lib/email/escape";
+import { stripHeaderBreaks } from "@/lib/email/escape";
 import {
   renderAdminNotification,
   renderPasswordRecovery,
   renderVisitorConfirmation,
   type LeadEmailContent,
+  type RenderedEmail,
 } from "@/lib/email/templates";
 
 /**
@@ -67,7 +68,7 @@ export async function sendPasswordRecoveryEmail(
   const email = renderPasswordRecovery(recoveryUrl);
   return {
     attempted: true,
-    delivered: await sendOne(to, email.subject, email.html),
+    delivered: await sendOne(to, email),
   };
 }
 
@@ -82,15 +83,32 @@ function fromAddress(): string {
   return stripHeaderBreaks(process.env.EMAIL_FROM ?? "AJS Technology <onboarding@resend.dev>");
 }
 
-async function sendOne(to: string, subject: string, html: string): Promise<boolean> {
+/**
+ * Inbox-placement basics: multipart (plain text + HTML), a real Reply-To, and
+ * a List-Unsubscribe header on visitor mail. Gmail SMTP signs with DKIM/SPF
+ * for the sending account automatically.
+ */
+async function sendOne(
+  to: string,
+  email: RenderedEmail,
+  options: { replyTo?: string | null; unsubscribe?: boolean } = {},
+): Promise<boolean> {
+  const message = {
+    from: fromAddress(),
+    to: stripHeaderBreaks(to),
+    subject: stripHeaderBreaks(email.subject),
+    html: email.html,
+    text: email.text,
+    replyTo: options.replyTo ? stripHeaderBreaks(options.replyTo) : undefined,
+  };
+  const unsubscribeTo = options.unsubscribe ? adminRecipient() : null;
+  const headers: Record<string, string> = unsubscribeTo
+    ? { "List-Unsubscribe": `<mailto:${stripHeaderBreaks(unsubscribeTo)}?subject=unsubscribe>` }
+    : {};
+
   if (isGmailConfigured()) {
     try {
-      await gmail().sendMail({
-        from: fromAddress(),
-        to: stripHeaderBreaks(to),
-        subject: stripHeaderBreaks(subject),
-        html,
-      });
+      await gmail().sendMail({ ...message, headers });
       return true;
     } catch (cause) {
       console.error("[email] gmail delivery failed:", cause instanceof Error ? cause.message : cause);
@@ -98,12 +116,7 @@ async function sendOne(to: string, subject: string, html: string): Promise<boole
     }
   }
   try {
-    const { error } = await client().emails.send({
-      from: fromAddress(),
-      to: stripHeaderBreaks(to),
-      subject: stripHeaderBreaks(subject),
-      html,
-    });
+    const { error } = await client().emails.send({ ...message, headers });
     if (error) {
       console.error(`[email] delivery rejected: ${error.message}`);
       return false;
@@ -138,15 +151,13 @@ export async function sendLeadEmails(
   const admin = renderAdminNotification(content, siteUrl);
   const visitor = renderVisitorConfirmation(content, siteUrl);
 
-  // Names/emails are header-safe; subjects never include raw visitor input
-  // beyond the escaped, newline-stripped name.
-  const safeName = stripHeaderBreaks(escapeHtml(content.fromName));
-
+  // Subjects/headers are newline-stripped in sendOne (header-injection safe).
+  // Admin replies go straight to the visitor; visitor replies reach the admin.
   const [adminNotified, confirmationSent] = await Promise.all([
     adminRecipient
-      ? sendOne(adminRecipient, admin.subject.replace(content.fromName, safeName), admin.html)
+      ? sendOne(adminRecipient, admin, { replyTo: content.fromEmail })
       : Promise.resolve(false),
-    sendOne(content.fromEmail, visitor.subject, visitor.html),
+    sendOne(content.fromEmail, visitor, { replyTo: adminRecipient, unsubscribe: true }),
   ]);
 
   return { attempted: true, adminNotified, confirmationSent };
