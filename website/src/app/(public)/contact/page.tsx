@@ -146,8 +146,8 @@ export default async function ContactPage() {
               <p className="mt-1.5 text-sm text-ink-muted">
                 Request a consultation slot and we will call you at a time that suits you.
               </p>
-              <Button href="/request-quote" variant="secondary" className="mt-3">
-                Request a quote instead
+              <Button href="#consultation" variant="secondary" className="mt-3">
+                Book an appointment
               </Button>
             </div>
           </aside>
@@ -158,10 +158,11 @@ export default async function ContactPage() {
           aria-labelledby="consultation"
         >
           <h2 id="consultation" className="text-lg font-semibold tracking-tight text-ink">
-            Request a consultation
+            Book an appointment
           </h2>
           <p className="mt-1 mb-6 text-sm text-ink-muted">
-            Free 30-minute call to discuss your requirements and the possible approaches.
+            Free 30-minute call to discuss your requirements. Pick a date and time that suits you
+            (India Standard Time, Monday–Saturday).
           </p>
           <AppointmentForm startedAt={startedAt} />
         </section>

@@ -13,9 +13,16 @@ import {
   quoteSchema,
   validateAttachment,
 } from "@/lib/validation/leads";
-import { isEmailConfigured, sendLeadEmails } from "@/lib/email/email";
+import { adminRecipient, isEmailConfigured, sendLeadEmails } from "@/lib/email/email";
 import { recordAgreementAcceptance } from "@/lib/agreements/acceptance";
 import { getCurrentServiceAgreement } from "@/lib/agreements/data";
+import {
+  describeDate,
+  isBookableSlot,
+  slotKey,
+  slotLabel,
+  upcomingBookingDates,
+} from "@/lib/booking/slots";
 
 /**
  * The agreement checkbox is mandatory whenever a published Service Agreement
@@ -156,7 +163,7 @@ export async function submitContactAction(
         message: parsed.data.message,
         adminPath: "/ajadmin/leads?tab=messages",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
     if (!delivery.adminNotified) {
       console.error("[email] admin notification not delivered for a contact submission");
@@ -283,7 +290,7 @@ export async function submitQuoteAction(
         message: null,
         adminPath: "/ajadmin/leads?tab=quotes",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
     if (!delivery.adminNotified || !delivery.confirmationSent) {
       console.error(
@@ -319,13 +326,23 @@ export async function requestAppointmentAction(
     return failure("Online bookings are not enabled yet. Please reach us directly.");
   }
 
+  const date = parsed.data.preferredDate;
+  if (!isBookableSlot(date, parsed.data.preferredTime)) {
+    return failure("Please pick an available date and time slot.");
+  }
+  const time = slotLabel(parsed.data.preferredTime);
+  const taken = await bookedSlotKeys();
+  if (taken.includes(slotKey(date, time))) {
+    return failure("Sorry — that slot was just booked. Please pick another time.");
+  }
+
   const admin = createSupabaseAdminClient();
   const { error } = await admin.from("appointment_requests").insert({
     name: parsed.data.name,
     email: parsed.data.email,
     phone: parsed.data.phone || null,
-    preferred_date: parsed.data.preferredDate || null,
-    preferred_time: parsed.data.preferredTime || null,
+    preferred_date: date,
+    preferred_time: time,
     topic: parsed.data.topic || null,
     message: parsed.data.message || "",
   });
@@ -342,16 +359,42 @@ export async function requestAppointmentAction(
         fromEmail: parsed.data.email,
         fields: [
           { label: "Phone", value: parsed.data.phone || null },
-          { label: "Preferred date", value: parsed.data.preferredDate || null },
-          { label: "Preferred time", value: parsed.data.preferredTime || null },
+          { label: "Date", value: describeDate(date).long },
+          { label: "Time", value: time },
           { label: "Topic", value: parsed.data.topic || null },
         ],
         message: parsed.data.message,
         adminPath: "/ajadmin/leads?tab=appointments",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
   }
 
-  return { status: "success", message: "Thanks — your consultation request has reached us." };
+  return {
+    status: "success",
+    message: `You're booked for ${describeDate(date).long} at ${time}.`,
+  };
+}
+
+/** Upcoming slots already requested (anything not marked lost/spam). */
+async function bookedSlotKeys(): Promise<string[]> {
+  if (!isSupabaseConfigured) return [];
+  const dates = upcomingBookingDates();
+  const { data, error } = await createSupabaseAdminClient()
+    .from("appointment_requests")
+    .select("preferred_date, preferred_time")
+    .in("preferred_date", dates)
+    .not("status", "in", "(lost,spam)");
+  if (error) {
+    console.error("booked slots read failed:", error.message);
+    return [];
+  }
+  return (data ?? [])
+    .filter((row) => row.preferred_date && row.preferred_time)
+    .map((row) => slotKey(String(row.preferred_date), String(row.preferred_time)));
+}
+
+/** Public read for the slot picker: only "date|time" keys, never who booked. */
+export async function getBookedSlotsAction(): Promise<string[]> {
+  return bookedSlotKeys();
 }

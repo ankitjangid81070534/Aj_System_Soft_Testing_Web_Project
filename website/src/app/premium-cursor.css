@@ -1,0 +1,10 @@
+/* Native arrow is hidden only while PremiumCursor is mounted (mouse/trackpad
+   devices on public routes); text-entry fields keep the native I-beam. */
+html.has-premium-cursor,
+html.has-premium-cursor *,
+html.has-premium-cursor ::backdrop {
+  cursor: none !important;
+}
+html.has-premium-cursor :is(input:not([type="checkbox"], [type="radio"], [type="submit"], [type="button"], [type="range"], [type="color"], [type="file"]), textarea, [contenteditable="true"]) {
+  cursor: text !important;
+}

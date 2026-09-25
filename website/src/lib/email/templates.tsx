@@ -1,11 +1,22 @@
 import "server-only";
 import { escapeHtml } from "@/lib/email/escape";
+import {
+  button,
+  detailsCard,
+  emailShell,
+  filledRows,
+  paragraph,
+  signature,
+  textLink,
+  textRows,
+} from "@/lib/email/layout";
 import { BRAND } from "@/lib/seo/site";
 
 /**
- * Branded, email-client-safe templates. Inline styles only, no external
- * images, every dynamic value HTML-escaped — values come from public form
- * submissions and must never be able to inject markup.
+ * Branded, email-client-safe templates. Every dynamic value is HTML-escaped —
+ * values come from public form submissions and must never inject markup.
+ * Each template returns a plain-text twin so mail is multipart (better
+ * inbox placement than HTML-only).
  */
 
 export type LeadEmailContent = {
@@ -17,91 +28,158 @@ export type LeadEmailContent = {
   adminPath: string;
 };
 
+export type RenderedEmail = { subject: string; html: string; text: string };
+
+const KIND_LABEL: Record<LeadEmailContent["kind"], string> = {
+  contact: "Contact message",
+  quote: "Quote request",
+  appointment: "Consultation booking",
+};
+
 export function renderAdminNotification(
   content: LeadEmailContent,
   siteUrl: string,
-): { subject: string; html: string } {
-  const kindLabel =
-    content.kind === "quote"
-      ? "Quote request"
-      : content.kind === "appointment"
-        ? "Consultation request"
-        : "Contact message";
+): RenderedEmail {
+  const kindLabel = KIND_LABEL[content.kind];
+  const rows = filledRows([
+    { label: "Name", value: content.fromName },
+    { label: "Email", value: content.fromEmail },
+    ...content.fields,
+    { label: "Message", value: content.message },
+  ]);
+  const inboxUrl = siteUrl ? `${siteUrl}${content.adminPath}` : "";
 
-  const rows = [
-    ...content.fields.filter(
-      (field): field is { label: string; value: string } =>
-        typeof field.value === "string" && field.value !== "",
+  const bodyHtml = [
+    paragraph(
+      `You have a new <strong>${escapeHtml(kindLabel.toLowerCase())}</strong> from <strong>${escapeHtml(content.fromName)}</strong>. Reply to this email to respond directly to them.`,
     ),
-    { label: "Reply to", value: content.fromEmail },
-    ...(content.message ? [{ label: "Message", value: content.message }] : []),
-  ]
-    .map(
-      ({ label, value }) => `<tr>
-        <td style="padding:8px 12px;border:1px solid #e4e7ee;font-weight:600;color:#0b1220;background:#f5f6f8;">${escapeHtml(label)}</td>
-        <td style="padding:8px 12px;border:1px solid #e4e7ee;color:#2a3447;white-space:pre-wrap;">${escapeHtml(value)}</td>
-      </tr>`,
-    )
-    .join("");
+    detailsCard("Lead details", rows),
+    inboxUrl ? `<p style="margin:0;">${button(inboxUrl, "Open in lead inbox")}</p>` : "",
+  ].join("");
 
   return {
-    subject: `[AJS] ${kindLabel} from ${content.fromName}`,
-    html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:0 auto;background:#ffffff;">
-      <div style="background:#2347dd;padding:20px 24px;">
-        <span style="color:#ffffff;font-size:18px;font-weight:700;">AJ System Soft Technology</span>
-        <span style="color:#dbe6ff;font-size:13px;float:right;">Admin notification</span>
-      </div>
-      <div style="padding:24px;">
-        <p style="color:#0b1220;font-size:16px;margin:0 0 12px;"><strong>${escapeHtml(kindLabel)}</strong> received from ${escapeHtml(content.fromName)} (${escapeHtml(content.fromEmail)}).</p>
-        <table style="border-collapse:collapse;width:100%;">${rows}</table>
-        <p style="margin:20px 0 0;">
-          <a href="${siteUrl}${content.adminPath}" style="background:#2347dd;color:#ffffff;padding:10px 18px;border-radius:9999px;text-decoration:none;font-size:14px;">Open in lead inbox</a>
-        </p>
-      </div>
-    </div>`,
+    subject: `New ${kindLabel.toLowerCase()} from ${content.fromName}`,
+    html: emailShell({
+      preheader: `${kindLabel} from ${content.fromName} (${content.fromEmail})`,
+      badge: `New ${kindLabel}`,
+      heading: `${kindLabel} received`,
+      bodyHtml,
+      siteUrl,
+      footerNote: "Internal notification from your website lead inbox.",
+    }),
+    text: [
+      `New ${kindLabel.toLowerCase()} from ${content.fromName}`,
+      "",
+      textRows(rows),
+      "",
+      inboxUrl ? `Open in lead inbox: ${inboxUrl}` : "",
+      "Reply to this email to respond directly to the sender.",
+    ].join("\n"),
   };
 }
+
+const VISITOR_COPY: Record<
+  LeadEmailContent["kind"],
+  { subject: string; badge: string; heading: string; intro: string; summary: string; next: string }
+> = {
+  contact: {
+    subject: "We received your message",
+    badge: "Message received",
+    heading: "Thank you for getting in touch",
+    intro:
+      "We have received your message and our team is already reviewing it. A member of our team will personally get back to you within one business day.",
+    summary: "Your message",
+    next: "If you would like to add anything, simply reply to this email. It comes straight to our team.",
+  },
+  quote: {
+    subject: "Your quote request has been received",
+    badge: "Request received",
+    heading: "Thank you for your quote request",
+    intro:
+      "We have received your project requirements. Our team will study them carefully and share a tailored proposal with scope, timeline and pricing, usually within one business day.",
+    summary: "Your request summary",
+    next: "Have more details, documents or references to share? Just reply to this email.",
+  },
+  appointment: {
+    subject: "Your consultation is confirmed",
+    badge: "Booking confirmed",
+    heading: "Your consultation is confirmed",
+    intro:
+      "Thank you for booking a consultation with us. Your slot is reserved and we look forward to speaking with you. We will reach out before the meeting with the call details.",
+    summary: "Appointment details",
+    next: "Need to reschedule or add an agenda point? Simply reply to this email.",
+  },
+};
 
 export function renderVisitorConfirmation(
   content: LeadEmailContent,
   siteUrl: string,
-): { subject: string; html: string } {
+): RenderedEmail {
+  const copy = VISITOR_COPY[content.kind];
+  const rows = filledRows([...content.fields, { label: "Message", value: content.message }]);
+
+  const bodyHtml = [
+    paragraph(`Dear ${escapeHtml(content.fromName)},`),
+    paragraph(escapeHtml(copy.intro)),
+    detailsCard(copy.summary, rows),
+    paragraph(escapeHtml(copy.next)),
+    siteUrl
+      ? `<p style="margin:6px 0 26px;">${button(siteUrl, "Visit our website")}${textLink(`${siteUrl}/services`, "Explore our services")}</p>`
+      : "",
+    signature(siteUrl),
+  ].join("");
+
   return {
-    subject: `We received your ${content.kind === "quote" ? "quote request" : "message"} — ${BRAND.primaryName}`,
-    html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:0 auto;background:#ffffff;">
-      <div style="background:#2347dd;padding:24px;">
-        <span style="color:#ffffff;font-size:18px;font-weight:700;">${escapeHtml(BRAND.primaryName)}</span>
-      </div>
-      <div style="padding:24px;color:#2a3447;">
-        <p style="font-size:16px;margin:0 0 12px;">Hi ${escapeHtml(content.fromName)},</p>
-        <p style="margin:0 0 12px;">Thank you for reaching out. Your ${content.kind === "quote" ? "quote request" : "message"} has reached us — a real person will reply, usually within one business day.</p>
-        <p style="margin:0 0 12px;">Meanwhile, if anything changes about your requirements, just reply to this email.</p>
-        <p style="margin:24px 0 0;">
-          <a href="${siteUrl}/services" style="background:#2347dd;color:#ffffff;padding:10px 18px;border-radius:9999px;text-decoration:none;font-size:14px;">Explore our services</a>
-        </p>
-        <p style="margin:24px 0 0;font-size:12px;color:#5b6478;">${escapeHtml(BRAND.tagline)}<br />You are receiving this because you submitted a form on ${siteUrl.replace(/^https?:\/\//, "")}.</p>
-      </div>
-    </div>`,
+    subject: `${copy.subject} - ${BRAND.shortName}`,
+    html: emailShell({
+      preheader: copy.intro,
+      badge: copy.badge,
+      heading: copy.heading,
+      bodyHtml,
+      siteUrl,
+      footerNote: "You are receiving this email because you submitted a form on our website.",
+    }),
+    text: [
+      `Dear ${content.fromName},`,
+      "",
+      copy.intro,
+      "",
+      rows.length ? `${copy.summary}:\n${textRows(rows)}\n` : "",
+      copy.next,
+      "",
+      siteUrl ? `Website: ${siteUrl}\nServices: ${siteUrl}/services\n` : "",
+      "Warm regards,",
+      BRAND.founderName,
+      `Founder, ${BRAND.primaryName}`,
+    ].join("\n"),
   };
 }
 
-export function renderPasswordRecovery(recoveryUrl: string): { subject: string; html: string } {
-  const safeUrl = escapeHtml(recoveryUrl);
+export function renderPasswordRecovery(recoveryUrl: string): RenderedEmail {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/+$/, "");
+  const bodyHtml = [
+    paragraph("We received a request to set a new password for your secure client portal account."),
+    `<p style="margin:6px 0 22px;">${button(recoveryUrl, "Choose a new password")}</p>`,
+    paragraph(
+      "This secure link can be used once. If you did not request it, you can safely ignore this email.",
+    ),
+  ].join("");
   return {
     subject: `Reset your ${BRAND.shortName} password`,
-    html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #e4e7ee;border-radius:20px;overflow:hidden;">
-      <div style="background:#0a6fd6;padding:24px;">
-        <span style="color:#ffffff;font-size:20px;font-weight:700;">${escapeHtml(BRAND.primaryName)}</span>
-      </div>
-      <div style="padding:28px;color:#2a3447;">
-        <h1 style="color:#16181c;font-size:24px;margin:0 0 14px;">Reset your password</h1>
-        <p style="margin:0 0 18px;line-height:1.6;">We received a request to set a new password for your secure client portal account.</p>
-        <p style="margin:0 0 22px;">
-          <a href="${safeUrl}" style="display:inline-block;background:#0a6fd6;color:#ffffff;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;">Choose a new password</a>
-        </p>
-        <p style="margin:0 0 10px;font-size:13px;color:#626872;line-height:1.6;">This secure link can be used once. If you did not request it, you can safely ignore this email.</p>
-        <p style="margin:22px 0 0;font-size:12px;color:#626872;">${escapeHtml(BRAND.tagline)}</p>
-      </div>
-    </div>`,
+    html: emailShell({
+      preheader: "Use this secure link to choose a new password.",
+      badge: "Account security",
+      heading: "Reset your password",
+      bodyHtml,
+      siteUrl,
+      footerNote: "You are receiving this email because a password reset was requested.",
+    }),
+    text: [
+      "We received a request to set a new password for your client portal account.",
+      "",
+      `Choose a new password: ${recoveryUrl}`,
+      "",
+      "This link can be used once. If you did not request it, you can ignore this email.",
+    ].join("\n"),
   };
 }

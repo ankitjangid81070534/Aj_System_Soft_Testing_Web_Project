@@ -23,8 +23,9 @@ export function SmoothScroll() {
     if (reduce.matches || touchOnly.matches) return;
 
     const lenis = new Lenis({
-      lerp: 0.085,
-      wheelMultiplier: 0.95,
+      // Slightly heavier glide than before: softer deceleration, same speed.
+      lerp: 0.075,
+      wheelMultiplier: 1,
       smoothWheel: true,
       syncTouch: false,
       anchors: { offset: -96 },

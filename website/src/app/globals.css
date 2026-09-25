@@ -659,11 +659,10 @@ body {
 }
 
 /* Subtle engineering grid + radial fade — section background texture */
+/* Grid lines removed on owner request; the utility is kept (now plain) so
+   existing markup using it stays valid. */
 @utility bg-grid {
-  background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 44px 44px;
+  background-image: none;
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 100%);
   mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 100%);
 }

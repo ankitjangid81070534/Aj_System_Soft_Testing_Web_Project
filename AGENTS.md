@@ -1,5 +1,30 @@
 # Base44 Dev Environment
 
+## Email redesign + deliverability (2026-09-25)
+- All emails render through `lib/email/layout.ts` (table-based `emailShell`, `detailsCard`, 3D `button`, `signature`); templates return `{subject, html, text}` so every mail is multipart. `sendOne(to, email, {replyTo, unsubscribe})`: admin mail Reply-To = visitor, visitor mail Reply-To = admin + `List-Unsubscribe` mailto. Subjects are plain (no `[AJS]` tag, no HTML-escaping). Test-sent via a temporary tsx script: both delivered.
+
+## Gmail lead notifications (2026-09-25)
+- `lib/email/email.ts` sends via Gmail SMTP (nodemailer) when `GMAIL_USER` + `GMAIL_APP_PASSWORD` are set, otherwise falls back to Resend. Admin inbox = `adminRecipient()` → `EMAIL_ADMIN_TO` or `GMAIL_USER`. Contact, quote and appointment actions all notify the admin and send the visitor confirmation. A real test email was delivered via a /tmp script; Gmail allows ~500 mails/day.
+- Visitor confirmation (`renderVisitorConfirmation` in `templates.tsx`) is per-kind (`VISITOR_COPY`): "Dear {name}", summary table of what they submitted, "Visit our website" button (`NEXT_PUBLIC_SITE_URL`) and a signature from `BRAND.founderName`. Preview it by running a /tmp script with `npx tsx --conditions=react-server` inside the web container (plain node rejects the `server-only` import).
+
+## Appointment booking with slots (2026-09-25)
+- `/contact#consultation` "Book an appointment": `AppointmentForm` (LeadForms.tsx) now uses `BookingSlotPicker` (+ `booking.module.css`) — 14 upcoming dates (Mon–Sat, IST, from tomorrow) and 30-min slots from `lib/booking/slots.ts`, which the server action shares. Booked slots load via `getBookedSlotsAction` (only `date|time` keys) and reload after every attempt; `requestAppointmentAction` re-checks bookable + not-taken before insert into `appointment_requests` (stored `preferred_time` = "2:30 PM IST"). Submit stays disabled until a free slot is chosen. Homepage `DemoCta` links to it. The anchor id stays `consultation` (ContactHub/sales CTAs use it).
+- No DB unique constraint yet: two simultaneous submits for the same slot could both pass the check.
+- Browser-verified pick flow at 1308/390px without submitting (a real submit writes to the owner's Supabase). The offer popup `<dialog>` blocks clicks in fresh test browsers — close it first.
+
+## Navbar brand name always visible (2026-09-25)
+- Owner: brand name must NEVER hide. `site-header.module.css` no longer sets `.brandName{display:none}`. Full desktop row now starts at **1200px** (CSS + the drawer-reset `matchMedia` in `SiteHeader.tsx`); below that the compact bar + drawer shows the full name. 1200–1359px the name is a two-line lockup (13.5px, `max-width: 8.4em`); ≤400px it may wrap to two lines instead of ellipsis. Measured with Playwright at 320–1920px: no bar overflow, name never clipped. The old 960px desktop row overflowed once the name was shown.
+
+## Smoother scroll scenes + premium cursor + grid lines removed (2026-09-24)
+- `ScrollScene` now eases raw progress (easeOutCubic over 0.7vh) and glides `--sp` toward it with frame-rate independent damping (`DAMPING 0.11`); the rAF loop runs only while a scene is settling. Variants/amplitudes unchanged. Lenis `lerp` 0.085 → 0.075.
+- `components/motion/PremiumCursor.tsx` (+ `premium-cursor.module.css`, global hide rules in `app/premium-cursor.css`) mounts from `PublicSiteFrame`: glossy 3D dot + trailing glass ring, grows over interactive elements, native I-beam over text fields/iframes. Only `(hover: hover) and (pointer: fine)`; `pointer-events: none`. Admin routes are untouched.
+- Superseded same day: owner asked for a HeyGen-style cursor instead of the round one. `PremiumCursor` is now a white arrow SVG (dark outline, shadow + blue glow) that swaps to a hand over interactive elements and tracks 1:1 (no trailing). The layer is `popover="manual"` and is re-shown whenever a `<dialog>` gains `open` (MutationObserver), because `showModal()` dialogs (e.g. OfferPopup) sit in the browser top layer above any z-index — that is why the old cursor vanished over the offer popup's close button.
+- Later upgrade: arrow/hand now use a shared blue→violet `#pc-fill` gradient with white rim + glossy `#pc-shine` highlight, a trailing blurred "aura" glow (damped rAF, breathing animation), a speed-based 3D tilt (`--tilt`) and a click ripple span appended to the layer. The arrow still tracks 1:1. After editing the CSS module, HMR may hand stale class names to the running component (new classes read `undefined`) — reload the preview.
+- Owner asked to remove small background box-grid lines: removed from DemoJourney `.section::before`, `.ctaGrid`, PageHero `::after`, light-band `.artTraces`/`.canvas`, and the `bg-grid` utility (kept as a no-op). Dot patterns (world map etc.) were kept.
+
+## Stale Turbopack cache → homepage 500 (2026-09-24)
+- `/` returned 500 with `Can't resolve '@vercel/turbopack-next/internal/font/google/font'` / "next/font/google queries have exactly one entry" (from `juspay-demo/fonts.ts`) even though Google Fonts was reachable. Cause: stale `website/.next` dev cache. Fix: `docker compose -f docker-compose.base44.yml stop web && rm -rf website/.next && docker compose -f docker-compose.base44.yml up -d web`. No code change needed.
+
 ## Page transitions + site-wide ContactHub (2026-09-23)
 - `PublicSiteFrame` wraps page content in `<div key={pathname} className="page-enter">` (styles in `app/page-transitions.css`, `backwards` fill so no transform lingers). A `(public)/template.tsx` was NOT used: in Next 16 it only remounts on its own segment, so `/services → /services/x` would not animate.
 - `ContactHub` ("Let's talk") now shows on EVERY public route (the old `showsContactHub` allowlist and its tests were removed on owner request). It stays mounted across navigation; an effect hides an open popover on pathname change. Motion (entrance, pulse ring, icon wiggle, hover lift, `@starting-style` panel ease) lives in `contact-hub.module.css`, off under `html[data-motion="reduce"]`.

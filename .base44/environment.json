@@ -19,6 +19,16 @@
       "requiredAtBoot": false
     },
     {
+      "name": "GMAIL_USER",
+      "description": "Gmail address that sends lead notifications (and receives them unless EMAIL_ADMIN_TO is set). Preferred over Resend when set.",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "GMAIL_APP_PASSWORD",
+      "description": "16-char Google App Password for GMAIL_USER (myaccount.google.com/apppasswords; needs 2-Step Verification).",
+      "requiredAtBoot": false
+    },
+    {
       "name": "RESEND_API_KEY",
       "description": "Resend API key for transactional email (Resend dashboard → API Keys). Optional — only needed for lead notification emails.",
       "requiredAtBoot": false
