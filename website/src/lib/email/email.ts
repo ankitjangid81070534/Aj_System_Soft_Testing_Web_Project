@@ -1,5 +1,6 @@
 import "server-only";
 import { Resend } from "resend";
+import nodemailer, { type Transporter } from "nodemailer";
 import { escapeHtml, stripHeaderBreaks } from "@/lib/email/escape";
 import {
   renderAdminNotification,
@@ -22,12 +23,40 @@ import {
  */
 
 let cachedClient: Resend | null = null;
+let cachedGmail: Transporter | null = null;
 
 function client(): Resend {
   if (!cachedClient) {
     cachedClient = new Resend(process.env.RESEND_API_KEY);
   }
   return cachedClient;
+}
+
+/**
+ * Gmail SMTP (free, preferred when set):
+ *   GMAIL_USER          — the Gmail address that sends (and, by default, receives) notifications
+ *   GMAIL_APP_PASSWORD  — 16-char Google App Password (Google Account → Security → App passwords)
+ */
+function isGmailConfigured(): boolean {
+  return Boolean(process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD);
+}
+
+function gmail(): Transporter {
+  if (!cachedGmail) {
+    cachedGmail = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: (process.env.GMAIL_APP_PASSWORD ?? "").replace(/\s+/g, ""),
+      },
+    });
+  }
+  return cachedGmail;
+}
+
+/** Admin inbox: EMAIL_ADMIN_TO, else the sending Gmail account itself. */
+export function adminRecipient(): string | null {
+  return process.env.EMAIL_ADMIN_TO || process.env.GMAIL_USER || null;
 }
 
 export async function sendPasswordRecoveryEmail(
@@ -43,14 +72,31 @@ export async function sendPasswordRecoveryEmail(
 }
 
 export function isEmailConfigured(): boolean {
-  return Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
+  return isGmailConfigured() || Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
 }
 
 function fromAddress(): string {
+  if (isGmailConfigured()) {
+    return stripHeaderBreaks(`AJS Technology <${process.env.GMAIL_USER}>`);
+  }
   return stripHeaderBreaks(process.env.EMAIL_FROM ?? "AJS Technology <onboarding@resend.dev>");
 }
 
 async function sendOne(to: string, subject: string, html: string): Promise<boolean> {
+  if (isGmailConfigured()) {
+    try {
+      await gmail().sendMail({
+        from: fromAddress(),
+        to: stripHeaderBreaks(to),
+        subject: stripHeaderBreaks(subject),
+        html,
+      });
+      return true;
+    } catch (cause) {
+      console.error("[email] gmail delivery failed:", cause instanceof Error ? cause.message : cause);
+      return false;
+    }
+  }
   try {
     const { error } = await client().emails.send({
       from: fromAddress(),

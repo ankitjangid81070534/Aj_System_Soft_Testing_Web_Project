@@ -13,7 +13,7 @@ import {
   quoteSchema,
   validateAttachment,
 } from "@/lib/validation/leads";
-import { isEmailConfigured, sendLeadEmails } from "@/lib/email/email";
+import { adminRecipient, isEmailConfigured, sendLeadEmails } from "@/lib/email/email";
 import { recordAgreementAcceptance } from "@/lib/agreements/acceptance";
 import { getCurrentServiceAgreement } from "@/lib/agreements/data";
 import {
@@ -163,7 +163,7 @@ export async function submitContactAction(
         message: parsed.data.message,
         adminPath: "/ajadmin/leads?tab=messages",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
     if (!delivery.adminNotified) {
       console.error("[email] admin notification not delivered for a contact submission");
@@ -290,7 +290,7 @@ export async function submitQuoteAction(
         message: null,
         adminPath: "/ajadmin/leads?tab=quotes",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
     if (!delivery.adminNotified || !delivery.confirmationSent) {
       console.error(
@@ -366,7 +366,7 @@ export async function requestAppointmentAction(
         message: parsed.data.message,
         adminPath: "/ajadmin/leads?tab=appointments",
       },
-      process.env.EMAIL_ADMIN_TO ?? null,
+      adminRecipient(),
     );
   }
 
