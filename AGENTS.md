@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Resend primary sender (2026-09-27)
+- `lib/email/email.ts` now prefers Resend when `RESEND_API_KEY` + `EMAIL_FROM` are set (sender on verified domain `ajsystemsoft.in`); Gmail SMTP is only the fallback. Admin inbox = `EMAIL_ADMIN_TO`. Test send via Resend API returned 200.
+
 ## Email redesign + deliverability (2026-09-25)
 - All emails render through `lib/email/layout.ts` (table-based `emailShell`, `detailsCard`, 3D `button`, `signature`); templates return `{subject, html, text}` so every mail is multipart. `sendOne(to, email, {replyTo, unsubscribe})`: admin mail Reply-To = visitor, visitor mail Reply-To = admin + `List-Unsubscribe` mailto. Subjects are plain (no `[AJS]` tag, no HTML-escaping). Test-sent via a temporary tsx script: both delivered.
 
