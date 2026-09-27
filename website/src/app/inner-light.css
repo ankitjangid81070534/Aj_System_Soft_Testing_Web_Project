@@ -20,7 +20,7 @@
   --color-brand-500: #3079ea;
   --color-brand-600: #1d5bbf;
   --color-brand-700: #1e40af;
-  --color-brand-800: #bfdbfe;
+  --color-brand-800: #1e3a8a;
   --color-brand-900: #dbeafe;
   --color-brand-950: #eff6ff;
   --color-accent-50: #f3efff;
@@ -78,7 +78,7 @@
 }
 
 /* Headings: the site-wide rule paints them white — restore dark ink here. */
-.juspay-site.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * :where(h1, h2, h3, h4) {
+.juspay-site.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * :where(h1, h2, h3, h4):not(.text-white) {
   color: var(--color-ink);
 }
 
@@ -122,7 +122,13 @@
 }
 .juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
   :is(.card-3d, .reference-card) .icon-tile {
-  color: color-mix(in srgb, var(--card-light, #3079ea), #0f172a 30%);
+  /* Same vivid 3D glass tile as the homepage: bright accent face, white glyph. */
+  --tile: var(--card-light, var(--card-accent, #3079ea));
+  color: #fff;
+  border-color: color-mix(in srgb, var(--tile) 60%, #fff);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.28), transparent 55%),
+    linear-gradient(160deg, color-mix(in srgb, var(--tile) 90%, #fff), var(--tile));
 }
 .juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .card-3d .card-corner {
   background: #f1f5f9;
@@ -131,8 +137,10 @@
 .juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .card-3d::before {
   opacity: 0.35;
 }
-.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .icon-tile {
-  box-shadow: none;
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .icon-tile:not(footer *) {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 8px 18px -8px color-mix(in srgb, var(--tile, #3079ea) 65%, transparent);
 }
 .juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .glass {
   background: rgb(255 255 255 / 0.9);
