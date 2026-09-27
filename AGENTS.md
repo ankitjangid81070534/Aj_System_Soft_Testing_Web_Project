@@ -1,5 +1,32 @@
 # Base44 Dev Environment
 
+## Client password change while signed in (2026-09-27)
+- `/account` Profile card → "Change password" (`components/portal/ChangePasswordForm.tsx`, actions `lib/portal/password-actions.ts`): tab 1 = current password (checked on a throw-away non-persisting anon client so the visitor's cookies are untouched), tab 2 = 6-digit email code (cookie `ajs_account_pw_otp`, `createGateToken("reset", …, "client:<userId>:<code>")`) — works for Google-only accounts. Both set the password via service role `updateUserById`; rate-limited per user. Email template `renderPasswordOtp(code, "admin"|"client")` is shared with the admin reset.
+- Dev-only quirk: `/auth/callback` error redirects use `request.url` origin, which is `0.0.0.0:3000` inside the container; production is unaffected.
+
+## Admin forgot-password (email OTP) + OAuth error redirect (2026-09-27)
+- `/ajadmin/login/forgot` ("Forgot password?" on admin login): `lib/auth/admin-reset-actions.ts` emails a 6-digit code (10 min) to editor+ accounts only; same reply for unknown accounts. Stateless httpOnly cookie `ajs_admin_reset` = `userId|token` (`createGateToken("reset", …, "userId:code")`, needs `ADMIN_GATE_SECRET`). Verify rate-limited 5/15min (in-memory), strong 12+ password, role re-checked before `updateUserById`. TOTP 2FA still applies at next login. Staff lookup lives in `lib/auth/staff-email.ts`.
+- Supabase sends failed OAuth (`bad_oauth_state`, expired/reused Google sign-in) to the site root; `proxy.ts` redirects `/?error_code=…` to `/login?error=oauth_callback`.
+- Fixed: hidden `/<ADMIN_URL_SEGMENT>` entrance was missing from `config.matcher` (404). Matcher has a `/:slug(...)` entry; `proxy()` returns `next()` at once for top-level paths that are not the segment (`isCorePath`).
+
+## White content below inner-page heroes (2026-09-27)
+- Owner: every public page EXCEPT `/` keeps its dark PageHero, everything after it is white. Pure CSS in `app/inner-light.css` (imported after `inner-pages.css`): zone = siblings after `:is(.page-enter, .page-enter > article) > header[data-scroll-scene]`, re-declaring the light token set. Cards need their own token reset because `accent-surfaces.css` sets white ink vars on each card. Pages without PageHero stay dark. Homepage untouched (`[data-home-page]`).
+
+## Admin AI providers & keys (2026-09-27)
+- `/ajadmin/ai-providers` (nav "AI providers & keys", `settings:write`): add any OpenAI-compatible endpoint (OpenRouter, AgentRouter, Groq, Gemini-openai, DeepSeek…) with base URL + model + key; keys AES-GCM encrypted (`DATA_ENCRYPTION_KEY`) in `ai_provider_keys` (migration `0023_ai_provider_keys.sql`, must be run manually in Supabase). Test/Pause/Delete/priority actions in `lib/admin/ai-provider-actions.ts`.
+- `runCompletion` (`lib/ai/providers.ts`) tries active custom providers first by priority (30s cache, 90s cooldown after a failure, 35s timeout each — `lib/ai/custom-providers.ts`), then the env OpenAI/Anthropic/Google keys.
+
+## Website analytics (2026-09-27)
+- First-party, real-visitor analytics: `components/analytics/VisitTracker.tsx` (mounted in `PublicSiteFrame`) beacons `/api/track` once per page per tab per 30 min; skips `navigator.webdriver` and staff browsers (`AdminShell` sets `localStorage["ajs-staff"]="1"`). The route drops bot UAs, `/ajadmin|/api|/auth` paths and floods, stores only a salted SHA-256 of the visitor id (salt = `DATA_ENCRYPTION_KEY`).
+- Storage: migration `0022_site_analytics.sql` (`page_views` + `analytics_report(from,to)` RPC, IST day buckets, service-role only). Verified on throwaway postgres:16 incl. re-run. NOT yet applied to the owner's Supabase (REST returned PGRST205) — until it is, `/api/track` silently no-ops and `/ajadmin/analytics` shows a "run migration 0022" notice.
+- Admin UI: `/ajadmin/analytics` (nav "Website analytics", `audit:read` = admins): presets today/yesterday/7d/30d/90d/12m + custom dates, KPI cards, daily (monthly when >62 days) chart, most/least viewed pages, referrers, devices, full page table. Logic in `lib/analytics/report.ts`.
+
+## AI Tools launcher + per-tool SEO pages (2026-09-27)
+- `components/site/AiToolsLauncher.tsx` (+ `ai-launcher.module.css`) renders a gradient "AI Tools" button stacked above "Let's talk" inside `ContactHub`'s aside. It is now a plain Link to `/ai-tools` (popover removed on owner request). `/ai-tools` `ToolsExplorer` = sticky category sidebar (icon, hint, count; horizontal chips ≤900px) + search + "Use it to:" cards.
+- New route `(public)/ai-tools/[toolId]/page.tsx`: per-tool metadata, BreadcrumbList + SoftwareApplication JSON-LD, runner via `ToolPageRunner`. `/ai-tools` cards are now crawlable Links (no in-place runner). Sitemap includes all tool URLs; `sitemap.test.ts` maps them to `[toolId]`.
+- Running a tool still requires sign-in (`/api/ai/run`); all three provider keys are present.
+- `juspay-demo/fonts.ts` no longer passes `weight` arrays (variable fonts) — that avoided the Turbopack "next/font/google queries have exactly one entry" error that cache clears did not fix.
+
 ## Resend primary sender (2026-09-27)
 - `lib/email/email.ts` now prefers Resend when `RESEND_API_KEY` + `EMAIL_FROM` are set (sender on verified domain `ajsystemsoft.in`); Gmail SMTP is only the fallback. Admin inbox = `EMAIL_ADMIN_TO`. Test send via Resend API returned 200.
 

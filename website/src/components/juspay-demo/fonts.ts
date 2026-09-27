@@ -8,13 +8,11 @@ import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
  */
 const heading = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
   display: "swap",
   variable: "--font-jd-heading",
 });
 const body = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-jd-body",
 });

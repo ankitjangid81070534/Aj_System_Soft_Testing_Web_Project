@@ -7,6 +7,10 @@
   right: var(--hub-right);
   bottom: var(--hub-bottom);
   z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
   font-family: var(--font-geist-sans), Arial, sans-serif;
 }
 /* Native dialogs own attention. Existing forms/private pages never mount the hub. */
@@ -30,6 +34,7 @@
   padding: 10px 16px;
   border-radius: 999px;
   font-weight: 600;
+  white-space: nowrap;
   box-shadow: 0 5px 20px color-mix(in srgb, var(--color-ink) 12%, transparent);
 }
 .trigger svg, .action > svg:first-child { color: var(--color-accent-600); flex-shrink: 0; }
@@ -122,3 +127,86 @@
 @media (forced-colors: active) {
   .trigger, .panel, .action, .close { border-color: ButtonText; }
 }
+
+/* ---- White premium panel (owner request 2026-09-27) --------------------------
+   Always a white glass card with dark, readable ink — on dark and light pages. */
+.hub .panel {
+  --color-surface: #ffffff;
+  --color-ink: #0f172a;
+  --color-line: #e5e9f2;
+  --color-muted: #5b6475;
+  border-color: #e5e9f2;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+  color: #0f172a;
+  box-shadow: 0 1px 0 #fff inset, 0 24px 60px -18px rgba(15, 23, 42, .35), 0 6px 18px -8px rgba(48, 121, 234, .25);
+}
+.hub .panel .heading h2 { color: #0f172a; }
+.hub .panel .intro { color: #5b6475; }
+.hub .panel .close { background: #f1f5f9; border-color: #e5e9f2; color: #334155; transition: transform .3s ease, background-color .2s ease; }
+.hub .panel .close:hover { background: #e2e8f0; transform: rotate(90deg); }
+.hub .panel .action {
+  border-color: #e8ecf4;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 550;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .25s ease, background-color .25s ease;
+}
+.hub .panel .action > svg:last-child { color: #94a3b8; transition: transform .3s cubic-bezier(.2,.8,.2,1), color .25s ease; }
+.hub .panel .action:hover {
+  background: #f8faff;
+  border-color: #c7d7f5;
+  transform: translateX(3px);
+  box-shadow: 0 10px 22px -14px rgba(48, 121, 234, .55);
+}
+.hub .panel .action:hover > svg:last-child { color: #3079ea; transform: translate(2px, -2px); }
+.hub .panel .action:active { transform: scale(.98); }
+
+/* 3D coloured icon tiles */
+.actionIcon {
+  --tone-a: #3b82f6; --tone-b: #1d4ed8; --glow: rgba(37, 99, 235, .45);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(145deg, rgba(255,255,255,.35), transparent 55%), linear-gradient(150deg, var(--tone-a), var(--tone-b));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55), inset 0 -2px 4px rgba(0,0,0,.2), 0 8px 16px -8px var(--glow);
+  transform: perspective(400px) rotateX(0) rotateY(0);
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+}
+.actionIcon svg { filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.3)); }
+.tone_whatsapp { --tone-a: #4ade80; --tone-b: #1ebe5b; --glow: rgba(37, 211, 102, .5); }
+.hub .panel .action { padding: 9px 12px; min-height: 42px; font-size: 13.5px; }
+@media (max-width: 480px) {
+  .actionIcon { width: 26px; height: 26px; border-radius: 8px; }
+  .hub .panel .action { padding: 8px 10px; min-height: 40px; font-size: 13px; }
+}
+.tone_phone { --tone-a: #38bdf8; --tone-b: #0284c7; --glow: rgba(14, 165, 233, .5); }
+.tone_email { --tone-a: #fb923c; --tone-b: #ea580c; --glow: rgba(249, 115, 22, .5); }
+.tone_project, .tone_quote { --tone-a: #a78bfa; --tone-b: #6d28d9; --glow: rgba(124, 58, 237, .5); }
+.tone_contact { --tone-a: #f472b6; --tone-b: #db2777; --glow: rgba(236, 72, 153, .5); }
+.hub .panel .action:hover .actionIcon {
+  transform: perspective(400px) rotateX(12deg) rotateY(-14deg) translateZ(6px) scale(1.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -2px 4px rgba(0,0,0,.2), 0 14px 22px -8px var(--glow);
+}
+.hub .panel .action:hover .actionIcon svg { animation: hub-icon-pop .6s cubic-bezier(.2,.8,.2,1); }
+@keyframes hub-icon-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.2) rotate(-8deg); }
+  100% { transform: scale(1); }
+}
+/* Staggered soft entrance for each option when the panel opens */
+.panel:popover-open .actions > li { animation: hub-item-in .45s cubic-bezier(.2,.8,.2,1) backwards; }
+.panel:popover-open .actions > li:nth-child(2) { animation-delay: .05s; }
+.panel:popover-open .actions > li:nth-child(3) { animation-delay: .1s; }
+.panel:popover-open .actions > li:nth-child(4) { animation-delay: .15s; }
+.panel:popover-open .actions > li:nth-child(5) { animation-delay: .2s; }
+@keyframes hub-item-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+:global(html[data-motion="reduce"]) .actionIcon,
+:global(html[data-motion="reduce"]) .actionIcon svg,
+:global(html[data-motion="reduce"]) .panel .actions > li { animation: none; transition: none; }

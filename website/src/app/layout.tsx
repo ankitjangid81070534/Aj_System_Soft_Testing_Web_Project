@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Inter_Tight } from "next/font/google";
 import { buildRootMetadata } from "@/lib/seo/metadata";
 import { RevealObserver } from "@/components/site/RevealObserver";
+import { SectionScrollFx } from "@/components/motion/SectionScrollFx";
 import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
@@ -13,6 +14,7 @@ import "./action-surfaces.css";
 import "./mobile-polish.css";
 import "./catalogue-polish.css";
 import "./inner-pages.css";
+import "./inner-light.css";
 import "./page-transitions.css";
 import "./premium-cursor.css";
 
@@ -44,6 +46,7 @@ const siteSans = Inter_Tight({
 const themeBootScript = `(function(){
  try{if(localStorage.getItem("ajs-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}
  try{if(localStorage.getItem("ajs-motion")==="reduce")document.documentElement.setAttribute("data-motion","reduce")}catch(e){}
+ try{var n=performance.getEntriesByType("navigation")[0];if(n&&n.type==="reload"&&!location.hash){history.scrollRestoration="manual";var t=function(){window.scrollTo(0,0)};t();addEventListener("DOMContentLoaded",t);addEventListener("load",function(){t();history.scrollRestoration="auto"})}}catch(e){}
  })();`;
 
 export default function RootLayout({
@@ -64,6 +67,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         {children}
         <RevealObserver />
+        <SectionScrollFx />
         <SceneMotion />
         <SurfaceMotion />
         <GoogleAnalytics />

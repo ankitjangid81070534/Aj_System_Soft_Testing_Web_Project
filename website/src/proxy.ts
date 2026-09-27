@@ -51,8 +51,30 @@ async function getRedirects(): Promise<RedirectMap> {
  * Auth gate for the admin application. The middleware redirect is a UX layer —
  * real authorization is enforced by Supabase RLS and server-side role checks.
  */
+/** Paths this proxy always handles; mirrors `config.matcher` except the "/:slug" entry. */
+const CORE_ROOTS = [
+  "/account", "/portal", "/profile", "/ajadmin", "/services", "/projects", "/blog",
+];
+const CORE_PAGES = ["/", "/login", "/signup", "/forgot-password", "/reset-password", "/update-password"];
+
+function isCorePath(pathname: string): boolean {
+  return (
+    CORE_PAGES.includes(pathname) ||
+    CORE_ROOTS.some((root) => pathname === root || pathname.startsWith(`${root}/`))
+  );
+}
+
 export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+
+  // "/:slug" is matched only so the hidden admin entrance can be served;
+  // every other top-level page passes through untouched.
+  if (!isCorePath(pathname)) {
+    const hidden = adminUrlSegment();
+    if (!hidden || (pathname !== `/${hidden}` && pathname !== `/${hidden}/`)) {
+      return NextResponse.next();
+    }
+  }
 
   // Some older Supabase recovery templates returned the PKCE code to the
   // site root. Recover that flow without exposing or logging the code.
@@ -62,6 +84,16 @@ export async function proxy(request: NextRequest) {
     recoveryUrl.searchParams.set("next", "/update-password");
     recoveryUrl.searchParams.set("flow", "recovery");
     return NextResponse.redirect(recoveryUrl, 307);
+  }
+  // Supabase sends failed OAuth attempts (e.g. bad_oauth_state after an
+  // expired/reused Google sign-in) back to the site root with error params.
+  // Show the friendly login message instead of a raw error URL.
+  if (pathname === "/" && request.nextUrl.searchParams.has("error_code")) {
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/login";
+    loginUrl.search = "";
+    loginUrl.searchParams.set("error", "oauth_callback");
+    return NextResponse.redirect(loginUrl, 307);
   }
   const isAdminPath = pathname.startsWith(ADMIN_ROOT);
   const isAdminLogin = pathname.startsWith(LOGIN_PATH);
@@ -188,5 +220,7 @@ export const config = {
     "/services/:path*",
     "/projects/:path*",
     "/blog/:path*",
+    // Hidden admin entrance (ADMIN_URL_SEGMENT); filtered inside proxy().
+    "/:slug((?!icon$|apple-icon$|opengraph-image$|twitter-image$|manifest$)[A-Za-z0-9][A-Za-z0-9-]{2,63})",
   ],
 };

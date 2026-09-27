@@ -46,6 +46,7 @@ export function PortalLoginModal({ onClose }: { onClose: () => void }) {
         if (event.target instanceof HTMLDialogElement) onClose();
         if (event.target instanceof Element && event.target.closest("a")) onClose();
       }}
+      data-lenis-prevent
       className={styles.modal}
     >
       <div className={styles.close}>

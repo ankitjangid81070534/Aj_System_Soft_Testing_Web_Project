@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
 import { serviceAccent } from "./service-accent";
@@ -65,8 +65,14 @@ export function ServiceCard({
           Explore service
           <span
             aria-hidden="true"
-            className="block h-px w-0 bg-current transition-[width] duration-300 ease-soft group-hover:w-5"
-          />
+            className="inline-flex h-5 w-5 items-center justify-center overflow-hidden rounded-full transition-all duration-300 ease-soft group-hover:bg-brand-600 group-hover:text-white"
+          >
+            <ArrowRight
+              size={13}
+              strokeWidth={2.4}
+              className="-translate-x-1 opacity-60 transition-all duration-300 ease-soft group-hover:translate-x-0 group-hover:opacity-100 motion-safe:group-hover:animate-[arrow-nudge_1.1s_ease-in-out_infinite]"
+            />
+          </span>
         </span>
       </div>
     </Link>

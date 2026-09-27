@@ -22,9 +22,8 @@ export function Footer({
       ]
     : FOOTER_LINK_GROUPS;
   const brandName = settings?.brandName || BRAND.primaryName;
-  const brandShortName = settings?.brandShortName || BRAND.shortName;
-  // Footer wordmark shows only "Ankit Soft" — drop a trailing "Tech"/"Technology".
-  const megaBrandName = brandShortName.replace(/\s+tech(nology)?\.?$/i, "");
+  // Footer wordmark: owner-requested fixed name.
+  const megaBrandName = "Ankit System";
   const tagline = settings?.tagline || BRAND.tagline;
 
   return (

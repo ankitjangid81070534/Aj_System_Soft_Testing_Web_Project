@@ -4,6 +4,7 @@ import { getServiceSitemapEntries } from "@/lib/data/services";
 import { getProjectSitemapEntries } from "@/lib/data/projects";
 import { getPostSitemapEntries } from "@/lib/data/blog";
 import { getSeoOverride } from "@/lib/seo/overrides";
+import { AI_TOOLS } from "@/lib/ai/tools";
 
 export const revalidate = 3600;
 
@@ -85,6 +86,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route.priority,
       };
     }),
+    ...AI_TOOLS.map((tool) => ({
+      url: new URL(`/ai-tools/${tool.id}`, siteUrl).toString(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     ...serviceEntries.map((entry) => ({
       url: new URL(`/services/${entry.slug}`, siteUrl).toString(),
       ...(latest([entry.updatedAt]) ? { lastModified: latest([entry.updatedAt]) } : {}),

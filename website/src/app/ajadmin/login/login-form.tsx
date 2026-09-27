@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import Link from "next/link";
 import { signInAction, type SignInState } from "@/lib/auth/actions";
 import { User, KeyRound, Loader2, ArrowRight } from "lucide-react";
 import { PortalFeedback } from "@/components/portal/PortalFeedback";
@@ -79,6 +80,13 @@ export function LoginForm({ nextPath }: { nextPath: string }) {
         pending={pending}
         focusOnError
       />
+
+      <Link
+        href="/ajadmin/login/forgot"
+        className="-mt-1 self-end text-xs font-medium text-brand-600 hover:underline focus-ring rounded"
+      >
+        Forgot password?
+      </Link>
 
       <button
         type="submit"

@@ -4,8 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   AtSign,
+  BarChart3,
   Gift,
   Inbox,
+  KeyRound,
   BriefcaseBusiness,
   Building2,
   FileText,
@@ -36,7 +38,10 @@ import { cn } from "@/lib/utils/cn";
 const NAV_GROUPS = [
   {
     title: "Overview",
-    items: [{ href: "/ajadmin", label: "Dashboard", Icon: LayoutDashboard }],
+    items: [
+      { href: "/ajadmin", label: "Dashboard", Icon: LayoutDashboard },
+      { href: "/ajadmin/analytics", label: "Website analytics", Icon: BarChart3 },
+    ],
   },
   {
     title: "Content",
@@ -61,6 +66,7 @@ const NAV_GROUPS = [
       { href: "/ajadmin/c/announcements", label: "Updates & announcements", Icon: Megaphone },
       { href: "/ajadmin/c/benefits", label: "Launch benefits", Icon: Gift },
       { href: "/ajadmin/c/ai-methods", label: "AI Methods", Icon: Sparkles },
+      { href: "/ajadmin/ai-providers", label: "AI providers & keys", Icon: KeyRound },
       { href: "/ajadmin/agreements", label: "Agreements", Icon: ScrollText },
     ],
   },

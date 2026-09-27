@@ -49,6 +49,11 @@ export const SITE_KEYWORDS = [
   "business automation software",
   "Next.js development company",
   "Supabase development",
+  "AI development company India",
+  "AI software development",
+  "AI chatbot development India",
+  "free AI tools online",
+  "AI writing and SEO tools",
 ] as const;
 
 /** Service catalogue used for structured data (mirrors public service pages). */

@@ -20,6 +20,7 @@ import {
   ProfileForm,
   ReviewForm,
 } from "@/components/portal/AccountForms";
+import { ChangePasswordForm } from "@/components/portal/ChangePasswordForm";
 import { AccountNavigation } from "@/components/portal/AccountNavigation";
 import styles from "@/components/portal/portal-ui.module.css";
 import { AgreementsHistory } from "@/components/portal/AgreementsHistory";
@@ -82,6 +83,36 @@ export default async function ClientAccountPage() {
   if (!user) redirect("/login?next=/account");
 
   const supabase = await createSupabaseServerClient();
+  // Extended profile (0016): username + primary address + agreement history.
+  // Queried through the loose admin client scoped to this user because the
+  // typed Database schema predates the migration; failures degrade to "not
+  // yet collected" instead of breaking the account page.
+  const loose = createSupabaseAdminLooseClient();
+  const extendedData = Promise.all([
+    loose
+      .from("profiles")
+      .select("username, profile_completed, auth_provider")
+      .eq("id", user.id)
+      .limit(1)
+      .then(({ data, error }) => (error ? null : (data?.[0] ?? null))),
+    loose
+      .from("user_addresses")
+      .select("address_line_1, address_line_2, city, state, postal_code, country")
+      .eq("user_id", user.id)
+      .eq("is_primary", true)
+      .limit(1)
+      .then(({ data, error }) => (error ? null : (data?.[0] ?? null))),
+    loose
+      .from("agreement_acceptances")
+      .select(
+        "id, accepted_at, context, evidence_pdf_path, agreement_versions(version_number, title, effective_from), agreements(title, slug)",
+      )
+      .eq("user_id", user.id)
+      .order("accepted_at", { ascending: false })
+      .limit(50)
+      .then(({ data, error }) => (error ? [] : (data ?? []))),
+    getCurrentServiceAgreement(),
+  ]);
   const [{ data: client }, { data: contacts }, { data: quotes }, { data: reviews }] =
     await Promise.all([
     supabase
@@ -109,36 +140,8 @@ export default async function ClientAccountPage() {
       .limit(50),
     ]);
 
-  // Extended profile (0016): username + primary address + agreement history.
-  // Queried through the loose admin client scoped to this user because the
-  // typed Database schema predates the migration; failures degrade to "not
-  // yet collected" instead of breaking the account page.
-  const loose = createSupabaseAdminLooseClient();
-  const [extendedProfile, primaryAddress, acceptances, currentAgreement] = await Promise.all([
-    loose
-      .from("profiles")
-      .select("username, profile_completed, auth_provider")
-      .eq("id", user.id)
-      .limit(1)
-      .then(({ data, error }) => (error ? null : (data?.[0] ?? null))),
-    loose
-      .from("user_addresses")
-      .select("address_line_1, address_line_2, city, state, postal_code, country")
-      .eq("user_id", user.id)
-      .eq("is_primary", true)
-      .limit(1)
-      .then(({ data, error }) => (error ? null : (data?.[0] ?? null))),
-    loose
-      .from("agreement_acceptances")
-      .select(
-        "id, accepted_at, context, evidence_pdf_path, agreement_versions(version_number, title, effective_from), agreements(title, slug)",
-      )
-      .eq("user_id", user.id)
-      .order("accepted_at", { ascending: false })
-      .limit(50)
-      .then(({ data, error }) => (error ? [] : (data ?? []))),
-    getCurrentServiceAgreement(),
-  ]);
+  const [extendedProfile, primaryAddress, acceptances, currentAgreement] = await extendedData;
+
 
   const acceptedCurrent = currentAgreement
     ? (acceptances as Record<string, unknown>[]).some((row) => {
@@ -345,6 +348,13 @@ export default async function ClientAccountPage() {
             </div>
             <div className="mt-6 border-t border-line pt-5">
               <AvatarForm />
+            </div>
+            <div id="security" className="mt-6 border-t border-line pt-5">
+              <h3 className="text-sm font-semibold text-ink">Change password</h3>
+              <p className="mb-4 mt-1 text-xs text-ink-muted">
+                Use your current password, or a one-time code sent to your email.
+              </p>
+              <ChangePasswordForm />
             </div>
           </section>
 

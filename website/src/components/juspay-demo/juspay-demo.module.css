@@ -813,26 +813,23 @@
   stroke-width: 1;
 }
 .circuit .pulse {
-  stroke: var(--jd-blue);
+  --c: #3079ea;
+  stroke: var(--c);
   stroke-width: 1.5;
-  stroke-dasharray: 40 400;
+  stroke-dasharray: 22 100;
+  stroke-dashoffset: 22;
   stroke-linecap: round;
   animation: pulse 4s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(48, 121, 234, 0.9));
+  filter: drop-shadow(0 0 6px var(--c));
 }
-.circuit .pulseDelay {
-  animation-delay: -2s;
-}
-.circuit .pulseDelay2 {
-  animation-delay: -1s;
-  stroke: var(--jd-green);
-  filter: drop-shadow(0 0 6px rgba(0, 180, 10, 0.9));
-}
+.circuit .pBlue { --c: #3079ea; }
+.circuit .pCyan { --c: #22d3ee; }
+.circuit .pViolet { --c: #a78bfa; }
+.circuit .pGreen { --c: #00b40a; }
 @keyframes pulse {
-  to {
-    stroke-dashoffset: -440;
-  }
+  to { stroke-dashoffset: -100; }
 }
+:global(html[data-motion="reduce"]) .circuit .pulse { animation: none; }
 .core {
   position: absolute;
   left: 50%;
