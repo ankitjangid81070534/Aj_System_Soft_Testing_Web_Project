@@ -1,91 +1,19 @@
 .stage {
   position: relative;
-  perspective: 1400px;
-  padding: 12px 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.plate {
-  position: relative;
-  border-radius: 28px;
-  padding: 22px;
-  background: linear-gradient(160deg, #f7f9fd, #eef2f9);
-  border: 1px solid #e3e8f1;
-  box-shadow:
-    0 50px 80px -50px rgba(19, 40, 90, 0.45),
-    inset 0 1px 0 #fff;
-  transform: rotateX(18deg) rotateZ(-2deg);
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.stage:hover .plate {
-  transform: rotateX(8deg) rotateZ(0deg);
-}
-.svg {
+.globe {
   display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-.depth {
-  fill: #c6d0e2;
-}
-.land {
-  stroke: #d5dcea;
-  stroke-width: 1;
-  stroke-linejoin: round;
-}
-.halo {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: halo 3.2s ease-in-out infinite;
-}
-.arc {
-  fill: none;
-  stroke: #3079ea;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-dasharray: 4 5;
-  opacity: 0.75;
-  animation: flow 1.6s linear infinite;
-}
-.ring {
-  fill: none;
-  stroke: #3079ea;
-  stroke-width: 1.5;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: ping 2.4s ease-out infinite;
-  animation-delay: inherit;
-}
-.dot {
-  fill: #3079ea;
-  stroke: #fff;
-  stroke-width: 1.5;
-}
-.hqDot {
-  fill: #0d0f14;
-  stroke: #fff;
-  stroke-width: 2;
-}
-.pinGroup {
-  filter: drop-shadow(0 3px 3px rgba(19, 40, 90, 0.35));
-}
-.label {
-  position: absolute;
-  translate: -50% calc(-100% - 16px);
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #0d0f14;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  box-shadow: 0 10px 20px -10px rgba(13, 15, 20, 0.6);
-  pointer-events: none;
+  width: min(100%, 460px);
+  aspect-ratio: 1;
 }
 .legend {
   display: flex;
   justify-content: center;
   gap: 22px;
-  margin-top: 22px;
+  margin-top: 8px;
   color: #4a4f5c;
   font-size: 13px;
 }
@@ -100,28 +28,5 @@
   height: 10px;
   border-radius: 50%;
 }
-.legendHq {
-  background: #0d0f14;
-}
-.legendClient {
-  background: #3079ea;
-}
-@keyframes ping {
-  0% { scale: 1; opacity: 0.9; }
-  100% { scale: 3; opacity: 0; }
-}
-@keyframes halo {
-  0%, 100% { opacity: 0.5; scale: 0.9; }
-  50% { opacity: 1; scale: 1.1; }
-}
-@keyframes flow {
-  to { stroke-dashoffset: -18; }
-}
-:global(html[data-motion="reduce"]) .halo,
-:global(html[data-motion="reduce"]) .arc,
-:global(html[data-motion="reduce"]) .ring {
-  animation: none;
-}
-@media (max-width: 700px) {
-  .plate { padding: 12px; border-radius: 20px; transform: rotateX(12deg); }
-}
+.legendHq { background: #0d0f14; }
+.legendClient { background: #3079ea; }
