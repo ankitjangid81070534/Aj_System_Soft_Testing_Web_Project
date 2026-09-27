@@ -51,3 +51,21 @@
 .modal .panel button[type="submit"]:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 12px 28px -12px #4e83ee88; }
 @media (max-width:700px) { .modal { width: calc(100vw - 20px); max-height: 94dvh; } .modal .card::before { left: 20%; right: 20%; } }
 @media (prefers-reduced-motion:reduce) { .modal[open], .modal::backdrop, .modal .panel > * { animation: none; } .modal .art img, .modal .panel button[type="submit"] { transition: none; transform: none; } }
+
+/* Fit the whole dialog in the viewport on desktop — no scrolling needed */
+@media (min-width:701px) {
+  .modal { max-height: 94dvh; }
+  .modal .card { padding: 16px; gap: 16px; align-items: stretch; }
+  .modal .art { min-height: 0; height: auto; }
+  .modal .panel { padding: 8px clamp(16px,2.4vw,36px) 10px; }
+  .modal .heading { margin: 14px 0 16px; }
+  .modal .heading h2 { font-size: clamp(24px,3.6dvh,30px); }
+  .modal .panel :global([data-client-login]) { gap: 12px; }
+  .modal .panel :global([data-client-login]) > p { margin-top: 6px; }
+  .modal .panel button[type="submit"] { min-height: 42px; }
+}
+@media (min-width:701px) and (max-height:700px) {
+  .modal .heading { margin: 8px 0 10px; }
+  .modal .heading > span { display: none; }
+  .modal .panel :global([data-client-login]) { gap: 9px; }
+}
