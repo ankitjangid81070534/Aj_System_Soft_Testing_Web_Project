@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## White content below inner-page heroes (2026-09-27)
+- Owner: every public page EXCEPT `/` keeps its dark PageHero, everything after it is white. Pure CSS in `app/inner-light.css` (imported after `inner-pages.css`): zone = siblings after `:is(.page-enter, .page-enter > article) > header[data-scroll-scene]`, re-declaring the light token set. Cards need their own token reset because `accent-surfaces.css` sets white ink vars on each card. Pages without PageHero stay dark. Homepage untouched (`[data-home-page]`).
+
 ## Admin AI providers & keys (2026-09-27)
 - `/ajadmin/ai-providers` (nav "AI providers & keys", `settings:write`): add any OpenAI-compatible endpoint (OpenRouter, AgentRouter, Groq, Gemini-openai, DeepSeek…) with base URL + model + key; keys AES-GCM encrypted (`DATA_ENCRYPTION_KEY`) in `ai_provider_keys` (migration `0023_ai_provider_keys.sql`, must be run manually in Supabase). Test/Pause/Delete/priority actions in `lib/admin/ai-provider-actions.ts`.
 - `runCompletion` (`lib/ai/providers.ts`) tries active custom providers first by priority (30s cache, 90s cooldown after a failure, 35s timeout each — `lib/ai/custom-providers.ts`), then the env OpenAI/Anthropic/Google keys.

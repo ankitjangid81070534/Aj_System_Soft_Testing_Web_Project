@@ -1,0 +1,141 @@
+/* ============================================================================
+   Inner pages: white content below the hero (2026-09-27, owner request)
+   Every public route EXCEPT the homepage keeps its dark PageHero untouched;
+   everything rendered after the hero switches to the light token set, so all
+   existing components re-theme through the same variables. Presentation only.
+   Zone = siblings after `.page-enter > header[data-scroll-scene]` (PageHero).
+   ========================================================================== */
+
+.juspay-site:not([data-home-page]) main:has(> .page-enter > header[data-scroll-scene], > .page-enter > article > header[data-scroll-scene]) {
+  background: #ffffff;
+}
+
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * {
+  color-scheme: light;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #2563eb;
+  --color-brand-400: #2563eb;
+  --color-brand-500: #3079ea;
+  --color-brand-600: #1d5bbf;
+  --color-brand-700: #1e40af;
+  --color-brand-800: #bfdbfe;
+  --color-brand-900: #dbeafe;
+  --color-brand-950: #eff6ff;
+  --color-accent-50: #f3efff;
+  --color-accent-100: #e7dfff;
+  --color-accent-300: #c0a9ff;
+  --color-accent-500: #7c3aed;
+  --color-accent-600: #6d28d9;
+  --color-accent-700: #5b21b6;
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-warm-50: #fff7ed;
+  --color-warm-100: #ffedd5;
+  --color-warm-300: #fdba74;
+  --color-warm-500: #f97316;
+  --color-warm-700: #c2410c;
+  --color-sage-50: #ecfdf5;
+  --color-sage-100: #d1fae5;
+  --color-sage-500: #10b981;
+  --color-sage-700: #047857;
+  --color-on-brand: #ffffff;
+  --color-on-danger: #ffffff;
+
+  --color-canvas: #ffffff;
+  --color-canvas-raised: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-ink: #0f172a;
+  --color-ink-soft: #334155;
+  --color-ink-muted: #5b6475;
+  --color-line: #e3e8f0;
+  --color-line-strong: #cbd3df;
+
+  --color-success: #047857;
+  --color-success-soft: #ecfdf5;
+  --color-warning: #b45309;
+  --color-warning-soft: #fffbeb;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fef2f2;
+  --color-info: #1d5bbf;
+  --color-info-soft: #eff6ff;
+
+  --shadow-e1: 0 1px 2px rgb(15 23 42 / 0.06), 0 2px 6px rgb(15 23 42 / 0.05);
+  --shadow-e2: 0 2px 4px rgb(15 23 42 / 0.06), 0 10px 24px rgb(15 23 42 / 0.08);
+  --shadow-e3: 0 4px 8px rgb(15 23 42 / 0.07), 0 16px 36px rgb(15 23 42 / 0.1);
+
+  --ip-surface: #ffffff;
+  --ip-surface-2: #f8fafc;
+  --ip-line: #e3e8f0;
+
+  background-color: #ffffff;
+  color: var(--color-ink-soft);
+}
+
+/* Headings: the site-wide rule paints them white — restore dark ink here. */
+.juspay-site.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * :where(h1, h2, h3, h4) {
+  color: var(--color-ink);
+}
+
+/* Cards: accent-surfaces.css re-declares white ink tokens on every card —
+   restore the light set so titles, text and links stay readable. */
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  :is(.card-3d, .card-lift, .reference-card):not(:has(form, input, textarea, select, table, .card-3d)) {
+  --color-ink: #0f172a;
+  --color-ink-soft: #334155;
+  --color-ink-muted: #5b6475;
+  --color-line: #e3e8f0;
+  --color-line-strong: #cbd3df;
+  --color-canvas: #f5f7fb;
+  --color-canvas-raised: #eef2f7;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-400: #2563eb;
+  --color-brand-600: #1d5bbf;
+  --color-brand-700: #1e40af;
+  color: var(--color-ink-soft);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.05), 0 12px 30px -18px rgb(15 23 42 / 0.18);
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  :is(.card-3d, .card-lift, .reference-card):not(:has(form, input, textarea, select, table, .card-3d))
+  :is(h3, p, small) {
+  text-shadow: none;
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  .reference-card:not(:has(form, input, textarea, select, table, .card-3d)) > a {
+  color: var(--color-brand-600);
+  text-shadow: none;
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  :is(.card-3d, .reference-card) h3 {
+  color: var(--color-ink);
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  :is(.card-3d, .reference-card) p {
+  color: var(--color-ink-muted);
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ *
+  :is(.card-3d, .reference-card) .icon-tile {
+  color: color-mix(in srgb, var(--card-light, #3079ea), #0f172a 30%);
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .card-3d .card-corner {
+  background: #f1f5f9;
+  color: #334155;
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .card-3d::before {
+  opacity: 0.35;
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .icon-tile {
+  box-shadow: none;
+}
+.juspay-site:not([data-home-page]) :is(.page-enter, .page-enter > article) > header[data-scroll-scene] ~ * .glass {
+  background: rgb(255 255 255 / 0.9);
+  border-color: var(--color-line);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.06), 0 12px 32px rgb(15 23 42 / 0.08);
+}

@@ -14,6 +14,7 @@ import "./action-surfaces.css";
 import "./mobile-polish.css";
 import "./catalogue-polish.css";
 import "./inner-pages.css";
+import "./inner-light.css";
 import "./page-transitions.css";
 import "./premium-cursor.css";
 
