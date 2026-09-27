@@ -27,6 +27,11 @@ const CATEGORY_META: Record<string, { icon: LucideIcon; hint: string }> = {
 
 const metaFor = (name: string) => CATEGORY_META[name] ?? { icon: Sparkles, hint: "" };
 
+/** Same six colour tones as the homepage "Launch benefits" icons, one per category. */
+const TONES = ["toneBlue", "toneViolet", "toneEmerald", "toneCyan", "toneAmber", "toneRose"] as const;
+const toneFor = (category: string) =>
+  TONES[Math.max(0, AI_TOOL_CATEGORIES.indexOf(category as (typeof AI_TOOL_CATEGORIES)[number])) % TONES.length];
+
 /** Searchable, filterable catalogue of every AI tool. */
 export function ToolsExplorer() {
   const [query, setQuery] = useState("");
@@ -45,7 +50,7 @@ export function ToolsExplorer() {
     <div className={styles.layout}>
       <aside className={styles.sidebar} aria-label="Filter by category">
         <p className={styles.sideTitle}>Categories</p>
-        <div className={styles.filters} role="group">
+        <div className={styles.filters} role="group" data-lenis-prevent>
           {["All", ...AI_TOOL_CATEGORIES].map((name) => {
             const { icon: Icon, hint } = metaFor(name);
             return (
@@ -90,8 +95,8 @@ export function ToolsExplorer() {
               return (
                 <li key={tool.id}>
                   <Link href={`/ai-tools/${tool.id}`} className={styles.card}>
-                    <span className={styles.cardTop}>
-                      <span aria-hidden="true" className={styles.cardIcon}><Icon className="h-4 w-4" /></span>
+                    <span className={styles.cardThumb} aria-hidden="true">
+                      <span className={`${styles.cardIcon} ${styles[toneFor(tool.category)]}`}><Icon className="h-5 w-5" /></span>
                       <span className={styles.cardCategory}>{tool.category}</span>
                     </span>
                     <span className={styles.cardTitle}>{tool.name}</span>

@@ -66,7 +66,7 @@ function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
         <ul className={styles.actions}>
           {actions.map((action) => {
             const Icon = icons[action.kind];
-            const content = <><Icon size={19} aria-hidden="true" /><span>{action.label}</span><ArrowUpRight size={16} aria-hidden="true" /></>;
+            const content = <><span className={`${styles.actionIcon} ${styles[`tone_${action.kind}`] ?? ""}`} aria-hidden="true"><Icon size={17} /></span><span>{action.label}</span><ArrowUpRight size={16} aria-hidden="true" /></>;
             return <li key={action.kind}>{action.href.startsWith("/")
               ? <Link href={action.href} className={styles.action} onClick={() => close()}>{content}</Link>
               : <a href={action.href} className={styles.action} onClick={() => close()}>{content}</a>}
