@@ -21,6 +21,37 @@ function cardGroups(section: Element) {
   return groups.filter(g => !groups.some(o => o !== g && g.some(k => o.some(c => k !== c && k.contains(c)))));
 }
 
+/** Wipe a heading in line by line (line 1 fully, then line 2...), no blur. */
+function typeLines(el: HTMLElement, compact: boolean) {
+  const box = el.getBoundingClientRect();
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const rows: { top: number; bottom: number }[] = [];
+  for (const r of Array.from(range.getClientRects())) {
+    if (r.width < 1) continue;
+    const row = rows.find(x => Math.abs(x.top - r.top) < r.height / 2);
+    if (row) row.bottom = Math.max(row.bottom, r.bottom);
+    else rows.push({ top: r.top, bottom: r.bottom });
+  }
+  rows.sort((a, b) => a.top - b.top);
+  if (!rows.length) return;
+  const pad = 12, W = box.width + pad;
+  const ys = rows.map((r, i) => (i === 0 ? -pad : r.top - box.top));
+  ys.push(box.height + pad);
+  const poly = (k: number, x: number) =>
+    `polygon(${-pad}px ${-pad}px, ${W}px ${-pad}px, ${W}px ${ys[k]}px, ${x}px ${ys[k]}px, ${x}px ${ys[k + 1]}px, ${-pad}px ${ys[k + 1]}px)`;
+  const frames: Keyframe[] = [];
+  rows.forEach((_, k) => {
+    frames.push({ clipPath: poly(k, -pad), offset: k / rows.length });
+    frames.push({ clipPath: poly(k, W), offset: (k + 1) / rows.length });
+  });
+  frames[0].translate = "0 .12em";
+  frames[frames.length - 1].translate = "0 0";
+  const per = compact ? 520 : 700;
+  el.animate(frames, { duration: per * rows.length, easing: "linear", fill: "backwards" })
+    .finished.then(() => {}, () => {});
+}
+
 export function SectionScrollFx() {
   useEffect(() => {
     if (!("IntersectionObserver" in window) || !("animate" in Element.prototype)) return;
@@ -34,15 +65,12 @@ export function SectionScrollFx() {
         observer.unobserve(el);
         if (el.contains(document.activeElement)) continue;
         if (el.dataset.sfx === "heading") {
-          el.animate([
-            { clipPath: "inset(-0.3em 100% -0.4em -0.1em)", filter: "blur(6px)", translate: "0 .18em" },
-            { clipPath: "inset(-0.3em -0.1em -0.4em -0.1em)", filter: "blur(0)", translate: "0 0" },
-          ], { duration: compact ? 750 : 1050, easing: "cubic-bezier(.65,0,.35,1)", fill: "backwards" });
+          typeLines(el, compact);
         } else {
           const i = Number(el.dataset.sfxIndex) || 0;
           el.animate([
-            { translate: `0 ${compact ? 26 : 46}px`, scale: "0.94", filter: "blur(8px)" },
-            { translate: "0 0", scale: "1", filter: "blur(0)" },
+            { translate: `0 ${compact ? 26 : 46}px`, scale: "0.96" },
+            { translate: "0 0", scale: "1" },
           ], { duration: compact ? 600 : 850, delay: Math.min(i, 6) * (compact ? 70 : 110), easing: "cubic-bezier(.16,1,.3,1)", fill: "backwards" });
         }
       }
