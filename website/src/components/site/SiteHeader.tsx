@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { ArrowRight, ChevronDown, ChevronRight, User } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, FolderKanban, User } from "lucide-react";
 import type { PublicNavLink } from "@/lib/data/navigation";
 import type { ServiceCardModel } from "@/lib/data/services";
+import type { ProjectTeaser } from "@/lib/data/mappers";
 import { NAV_LINKS } from "@/lib/navigation";
 import { BRAND } from "@/lib/seo/site";
 import { isNavigationActive } from "@/lib/bottom-navigation";
@@ -29,6 +30,7 @@ import styles from "./site-header.module.css";
 export function SiteHeader({
   navLinks = NAV_LINKS,
   services = [],
+  projects = [],
   brandName = BRAND.primaryName,
   brandShortName = BRAND.shortName,
   ctaLabel = "Start Project",
@@ -36,6 +38,7 @@ export function SiteHeader({
 }: {
   navLinks?: readonly PublicNavLink[];
   services?: ServiceCardModel[];
+  projects?: Pick<ProjectTeaser, "id" | "slug" | "name" | "summary" | "coverUrl">[];
   brandName?: string;
   brandShortName?: string;
   ctaLabel?: string;
@@ -49,14 +52,44 @@ export function SiteHeader({
   const safeBrandShortName = brandShortName?.trim() ? brandShortName.trim() : BRAND.shortName;
   const links = navLinks.filter((link) => link.href !== "/");
 
+  // Nav links that open a hover list (desktop) / collapsible group (drawer).
+  const menus: Record<string, { allLabel: string; items: MenuItem[] }> = {
+    "/services": {
+      allLabel: "All services",
+      items: services.slice(0, 8).map((service) => ({
+        id: service.id,
+        href: `/services/${service.slug}`,
+        title: service.name,
+        subtitle: service.shortDescription,
+        icon: renderIcon(service.icon),
+      })),
+    },
+    "/projects": {
+      allLabel: "All projects",
+      items: projects.slice(0, 8).map((project) => ({
+        id: project.id,
+        href: `/projects/${project.slug}`,
+        title: project.name,
+        subtitle: project.summary,
+        icon: project.coverUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={project.coverUrl} alt="" className={styles.megaThumb} loading="lazy" />
+        ) : (
+          <FolderKanban size={18} />
+        ),
+      })),
+    },
+  };
+  const menuFor = (href: string) => (menus[href]?.items.length ? menus[href] : null);
+
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [drawerServicesOpen, setDrawerServicesOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [drawerMenu, setDrawerMenu] = useState<string | null>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [portalOpen, setPortalOpen] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
   const closeTimer = useRef<number | null>(null);
   // Hide on scroll down, return on scroll up; never hide while a menu is open.
-  const { hidden, scrolled } = useSmartHeader(drawerOpen || servicesOpen || portalOpen);
+  const { hidden, scrolled } = useSmartHeader(drawerOpen || openMenu !== null || portalOpen);
 
   useEffect(() => {
     let active = true;
@@ -88,13 +121,13 @@ export function SiteHeader({
   if (seenPathname !== pathname) {
     setSeenPathname(pathname);
     setDrawerOpen(false);
-    setDrawerServicesOpen(false);
-    setServicesOpen(false);
+    setDrawerMenu(null);
+    setOpenMenu(null);
   }
 
   const closeDrawer = () => {
     setDrawerOpen(false);
-    setDrawerServicesOpen(false);
+    setDrawerMenu(null);
   };
 
   useEffect(() => {
@@ -134,14 +167,15 @@ export function SiteHeader({
     window.setTimeout(() => setPortalOpen(true), 0);
   }
 
-  const showServices = () => {
+  const showMenu = (href: string) => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
-    setServicesOpen(true);
+    setOpenMenu(href);
   };
-  const hideServices = () => {
+  const hideMenu = () => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
-    closeTimer.current = window.setTimeout(() => setServicesOpen(false), 140);
+    closeTimer.current = window.setTimeout(() => setOpenMenu(null), 140);
   };
+  const activeMenu = openMenu ? menuFor(openMenu) : null;
 
   const portalLabel = authenticated ? "Open Account" : "Client Login";
   const portalDisclosure = authenticated
@@ -166,18 +200,19 @@ export function SiteHeader({
         <nav className={styles.links} aria-label="Main">
           {links.map((link) => {
             const current = isNavigationActive(pathname, link.href);
-            if (link.href === "/services" && services.length > 0) {
+            if (menuFor(link.href)) {
+              const open = openMenu === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`${styles.link} ${servicesOpen ? styles.linkActive : ""}`}
+                  className={`${styles.link} ${open ? styles.linkActive : ""}`}
                   aria-current={current ? "page" : undefined}
-                  aria-expanded={servicesOpen}
-                  onMouseEnter={showServices}
-                  onFocus={showServices}
-                  onMouseLeave={hideServices}
-                  onBlur={hideServices}
+                  aria-expanded={open}
+                  onMouseEnter={() => showMenu(link.href)}
+                  onFocus={() => showMenu(link.href)}
+                  onMouseLeave={hideMenu}
+                  onBlur={hideMenu}
                 >
                   {link.label}
                   <ChevronDown size={15} aria-hidden="true" />
@@ -190,7 +225,7 @@ export function SiteHeader({
                 href={link.href}
                 className={styles.link}
                 aria-current={current ? "page" : undefined}
-                onMouseEnter={hideServices}
+                onMouseEnter={hideMenu}
               >
                 {link.label}
               </Link>
@@ -219,16 +254,16 @@ export function SiteHeader({
           </button>
         </div>
 
-        {servicesOpen && services.length > 0 ? (
-          <div className={styles.mega} onMouseEnter={showServices} onMouseLeave={hideServices}>
-            {services.slice(0, 8).map((service) => (
-              <Link key={service.id} href={`/services/${service.slug}`} className={styles.megaRow}>
+        {openMenu && activeMenu ? (
+          <div className={styles.mega} onMouseEnter={() => showMenu(openMenu)} onMouseLeave={hideMenu}>
+            {activeMenu.items.map((item) => (
+              <Link key={item.id} href={item.href} className={styles.megaRow}>
                 <span className={styles.megaIcon} aria-hidden="true">
-                  {renderIcon(service.icon)}
+                  {item.icon}
                 </span>
                 <span>
-                  <strong>{service.name}</strong>
-                  <small>{service.shortDescription}</small>
+                  <strong>{item.title}</strong>
+                  <small>{item.subtitle}</small>
                 </span>
               </Link>
             ))}
@@ -260,33 +295,36 @@ export function SiteHeader({
             </Link>
             {links.map((link) => {
               const current = isNavigationActive(pathname, link.href);
-              // Services is a collapsible group: only the main option shows
-              // until it is tapped, then its sub-services unfold beneath it.
-              if (link.href === "/services" && services.length > 0) {
+              // Services / Projects are collapsible groups: only the main option
+              // shows until it is tapped, then its items unfold beneath it.
+              const menu = menuFor(link.href);
+              if (menu) {
+                const open = drawerMenu === link.href;
+                const subId = `site-drawer-${link.href.slice(1)}`;
                 return (
-                  <div key={link.href} className={styles.drawerGroup} data-open={drawerServicesOpen || undefined}>
+                  <div key={link.href} className={styles.drawerGroup} data-open={open || undefined}>
                     <button
                       type="button"
                       className={styles.drawerLink}
                       aria-current={current ? "page" : undefined}
-                      aria-expanded={drawerServicesOpen}
-                      aria-controls="site-drawer-services"
-                      onClick={() => setDrawerServicesOpen((open) => !open)}
+                      aria-expanded={open}
+                      aria-controls={subId}
+                      onClick={() => setDrawerMenu(open ? null : link.href)}
                     >
                       {link.label} <ChevronDown size={18} aria-hidden="true" className={styles.drawerChevron} />
                     </button>
-                    <div id="site-drawer-services" className={styles.drawerSub}>
+                    <div id={subId} className={styles.drawerSub}>
                       <div className={styles.drawerSubInner}>
-                        {services.slice(0, 8).map((service) => (
-                          <Link key={service.id} href={`/services/${service.slug}`} className={styles.drawerSubLink} onClick={closeDrawer}>
+                        {menu.items.map((item) => (
+                          <Link key={item.id} href={item.href} className={styles.drawerSubLink} onClick={closeDrawer}>
                             <span className={styles.drawerSubIcon} aria-hidden="true">
-                              {renderIcon(service.icon)}
+                              {item.icon}
                             </span>
-                            {service.name}
+                            {item.title}
                           </Link>
                         ))}
                         <Link href={link.href} className={`${styles.drawerSubLink} ${styles.drawerSubAll}`} onClick={closeDrawer}>
-                          All services <ArrowRight size={15} aria-hidden="true" />
+                          {menu.allLabel} <ArrowRight size={15} aria-hidden="true" />
                         </Link>
                       </div>
                     </div>
@@ -325,6 +363,8 @@ export function SiteHeader({
     </header>
   );
 }
+
+type MenuItem = { id: string; href: string; title: string; subtitle: string; icon: ReactNode };
 
 /** Three-line menu glyph that morphs into a cross (juspay.io-style). */
 function BurgerIcon({ open = false }: { open?: boolean }) {

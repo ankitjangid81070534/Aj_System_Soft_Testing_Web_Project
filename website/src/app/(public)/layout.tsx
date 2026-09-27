@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd, webSiteJsonLd } from "@/lib/seo/jsonld";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { getServicesIndex } from "@/lib/data/services";
+import { getPublicProjects } from "@/lib/data/projects";
 import { Footer } from "@/components/ui/Footer";
 import { getSiteSettings } from "@/lib/data/settings";
 import { getPublicNavigation } from "@/lib/data/navigation";
@@ -14,12 +15,13 @@ import { ContactHub } from "@/components/site/ContactHub";
 import { getContactHubActions } from "@/lib/contact-hub";
 
 export default async function PublicLayout({ children }: { children: ReactNode }) {
-  const [settings, navigation, topBarAnnouncement, popupOffer, services] = await Promise.all([
+  const [settings, navigation, topBarAnnouncement, popupOffer, services, projects] = await Promise.all([
     getSiteSettings(),
     getPublicNavigation(),
     getTopBarAnnouncement(),
     getPopupOffer(),
     getServicesIndex(),
+    getPublicProjects(),
   ]);
 
   return (
@@ -37,6 +39,7 @@ export default async function PublicLayout({ children }: { children: ReactNode }
       header={<SiteHeader
         navLinks={navigation.header}
         services={services}
+        projects={projects.map(({ id, slug, name, summary, coverUrl }) => ({ id, slug, name, summary, coverUrl }))}
         brandName={settings?.brandName}
         brandShortName={settings?.brandShortName}
         ctaLabel={settings?.globalCtaLabel}
