@@ -14,6 +14,7 @@ import "./mobile-polish.css";
 import "./catalogue-polish.css";
 import "./inner-pages.css";
 import "./page-transitions.css";
+import "./premium-cursor.css";
 
 export const metadata: Metadata = buildRootMetadata();
 

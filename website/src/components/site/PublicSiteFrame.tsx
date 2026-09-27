@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import styles from "@/components/design-preview/reference.module.css";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { TiltEngine } from "@/components/motion/TiltEngine";
+import { PremiumCursor } from "@/components/motion/PremiumCursor";
 
 /** Keeps existing server-rendered navigation, offers, footer and auth controls.
  * Shared navigation/footer presentation covers every public and account route.
@@ -22,6 +23,7 @@ export function PublicSiteFrame({ children, header, footer, beforeHeader, afterF
     >
       <SmoothScroll />
       <TiltEngine />
+      <PremiumCursor />
       {beforeHeader}
       <div className={styles.headerFrame} data-site-header>{header}</div>
       <main id="main-content" className="flex-1">

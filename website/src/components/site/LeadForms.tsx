@@ -1,12 +1,16 @@
 "use client";
 
-import { useActionState, useId, useState, type Ref } from "react";
+import { useActionState, useEffect, useId, useState, type Ref } from "react";
 import { useLeadForm } from "./useLeadForm";
-import { CheckCircle2, Send } from "lucide-react";
+import { CalendarCheck, CheckCircle2, Send } from "lucide-react";
+import { BookingSlotPicker } from "./BookingSlotPicker";
+import bookingStyles from "./booking.module.css";
+import { describeDate, slotKey, slotLabel, upcomingBookingDates } from "@/lib/booking/slots";
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { QuoteWizard } from "./QuoteWizard";
 import {
+  getBookedSlotsAction,
   requestAppointmentAction,
   submitContactAction,
   submitQuoteAction,
@@ -479,6 +483,30 @@ export function AppointmentForm({ startedAt }: { startedAt: number }) {
 
 function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
   const { state, formAction, pending, errorRef, formProps } = useLeadForm(requestAppointmentAction);
+  const [dates] = useState(() => upcomingBookingDates());
+  const [date, setDate] = useState(() => dates[0] ?? "");
+  const [time, setTime] = useState("");
+  const [taken, setTaken] = useState<ReadonlySet<string>>(() => new Set());
+
+  // Load booked slots on mount and again after a failed attempt (e.g. a slot
+  // taken moments earlier) so the grid never offers an already booked time.
+  useEffect(() => {
+    let active = true;
+    getBookedSlotsAction()
+      .then((keys) => {
+        if (active) setTaken(new Set(keys));
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [state]);
+
+  const chooseDate = (value: string) => {
+    setDate(value);
+    if (time && taken.has(slotKey(value, slotLabel(time)))) setTime("");
+  };
+  const ready = Boolean(date && time) && !taken.has(slotKey(date, slotLabel(time)));
 
   if (state.status === "success") {
     return (
@@ -508,18 +536,7 @@ function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onR
           />
         </Field>
         <Field label="Phone (optional)" htmlFor="a-phone">
-          <Input id="a-phone" name="phone" type="tel" minLength={6} maxLength={20} />
-        </Field>
-        <Field label="Preferred date (optional)" htmlFor="a-date">
-          <Input id="a-date" name="preferredDate" type="date" />
-        </Field>
-        <Field label="Preferred time (optional)" htmlFor="a-time">
-          <Select id="a-time" name="preferredTime" defaultValue="">
-            <option value="">Any time</option>
-            <option value="Morning (9–12)">Morning (9–12)</option>
-            <option value="Afternoon (12–5)">Afternoon (12–5)</option>
-            <option value="Evening (5–8)">Evening (5–8)</option>
-          </Select>
+          <Input id="a-phone" name="phone" type="tel" autoComplete="tel" minLength={6} maxLength={20} />
         </Field>
         <Field label="Topic (optional)" htmlFor="a-topic">
           <Input
@@ -533,10 +550,26 @@ function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onR
       <Field label="Anything to prepare? (optional)" htmlFor="a-message">
         <Textarea id="a-message" name="message" rows={3} maxLength={2000} />
       </Field>
+      <BookingSlotPicker
+        dates={dates}
+        taken={taken}
+        date={date}
+        time={time}
+        disabled={pending}
+        onDateChange={chooseDate}
+        onTimeChange={setTime}
+      />
+      <p className={bookingStyles.summary} data-ready={ready || undefined} aria-live="polite">
+        <CalendarCheck aria-hidden="true" size={18} />
+        {ready
+          ? `Your slot: ${describeDate(date).long} at ${slotLabel(time)} · 30 min`
+          : "Pick a date and a time slot to continue."}
+      </p>
       <ErrorNote message={state.message} errorRef={errorRef} />
       <div>
-        <Button type="submit" loading={pending} variant="secondary">
-          {pending ? "Requesting…" : "Request a consultation"}
+        <Button type="submit" loading={pending} disabled={!ready}>
+          <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+          {pending ? "Booking…" : "Book appointment"}
         </Button>
       </div>
     </form>

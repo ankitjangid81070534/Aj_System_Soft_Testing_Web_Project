@@ -3,7 +3,6 @@
    pose under reduced motion. Palette follows the Juspay-style home tokens. */
 
 .section { position: relative; padding: 120px 24px 130px; background: radial-gradient(120% 80% at 50% -10%, #12141a, #080808 60%); overflow: clip; }
-.section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 88px 100%, linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 100% 88px; -webkit-mask: radial-gradient(70% 60% at 50% 25%, #000, transparent 75%); mask: radial-gradient(70% 60% at 50% 25%, #000, transparent 75%); pointer-events: none; }
 
 .head { position: relative; max-width: 780px; margin: 0 auto 72px; text-align: center; }
 .eyebrow { display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); color: #b1b0b6; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }

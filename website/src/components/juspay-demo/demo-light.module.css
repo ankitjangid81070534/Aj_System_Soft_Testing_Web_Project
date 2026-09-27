@@ -278,11 +278,7 @@
   }
 }
 .artTraces {
-  background-image:
-    linear-gradient(rgba(48, 121, 234, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(48, 121, 234, 0.08) 1px, transparent 1px);
-  background-size: 80px 80px;
-  background-position: 40px 20px;
+  /* Grid lines removed on owner request: plain surface. */
 }
 .artPlain {
   padding: 30px 40px 0;
@@ -654,10 +650,7 @@
 .canvas {
   position: relative;
   height: 720px;
-  background:
-    linear-gradient(rgba(48, 121, 234, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(90deg, rgba(48, 121, 234, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
-    #f4f5f8;
+  background: #f4f5f8;
 }
 .regionPill {
   position: absolute;

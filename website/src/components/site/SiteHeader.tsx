@@ -20,7 +20,7 @@ import styles from "./site-header.module.css";
 /**
  * Site-wide header in the approved Juspay-style presentation: a floating dark
  * pill with the CMS navigation links, a services hover panel, Client Login and
- * the settings-driven CTA. Below 960px it becomes a compact bar with a
+ * the settings-driven CTA. Below 1200px it becomes a compact bar with a
  * full-screen drawer, so mobile has one predictable navigation surface.
  *
  * Existing behaviour is unchanged: the same CMS links, the same portal/session
@@ -104,7 +104,7 @@ export function SiteHeader({
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setDrawerOpen(false);
     };
-    const desktop = window.matchMedia("(min-width: 960px)");
+    const desktop = window.matchMedia("(min-width: 1200px)");
     const onChange = () => setDrawerOpen(false);
     window.addEventListener("keydown", onKey);
     desktop.addEventListener("change", onChange);

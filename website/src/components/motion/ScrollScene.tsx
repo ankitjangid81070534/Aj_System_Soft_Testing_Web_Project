@@ -6,31 +6,57 @@ import { reducedMotionMedia } from "./motion-preference";
 
 export type SceneVariant = "rise" | "zoom" | "swing" | "drift";
 
-/* One shared scroll/resize subscription drives every mounted scene; each frame
- * measures the registered wrappers once and writes a 0→1 progress variable
- * that the CSS module turns into a perspective transform. */
+/* One shared scroll/resize subscription drives every mounted scene. Each frame
+ * measures the registered wrappers once, eases the raw 0→1 position with a
+ * soft ease-out curve, then glides the written `--sp` toward it with
+ * frame-rate independent damping. The loop runs only while a scene is still
+ * settling, so wheel steps and fast flicks become one weighted, soft motion. */
 const scenes = new Set<HTMLElement>();
+const current = new WeakMap<HTMLElement, number>();
 let frame = 0;
+let last = 0;
 let listening = false;
+/* Fraction of the remaining distance covered per 60fps frame. Lower = softer. */
+const DAMPING = 0.11;
 
-function measure() {
+function easeOutCubic(t: number) {
+  return 1 - Math.pow(1 - t, 3);
+}
+function targetProgress(element: HTMLElement, vh: number) {
+  const top = element.getBoundingClientRect().top;
+  const raw = Math.min(1, Math.max(0, (vh - top) / (vh * 0.7)));
+  return easeOutCubic(raw);
+}
+function write(element: HTMLElement, value: number) {
+  current.set(element, value);
+  element.style.setProperty("--sp", value.toFixed(4));
+}
+function tick(now: number) {
   frame = 0;
+  const dt = last ? Math.min(64, now - last) : 16.67;
+  last = now;
+  const k = 1 - Math.pow(1 - DAMPING, dt / 16.67);
   const vh = window.innerHeight || 1;
-  const travel = vh * 0.62;
+  let moving = false;
   for (const element of scenes) {
-    const top = element.getBoundingClientRect().top;
-    const progress = Math.min(1, Math.max(0, (vh - top) / travel));
-    element.style.setProperty("--sp", progress.toFixed(3));
+    const target = targetProgress(element, vh);
+    const from = current.get(element) ?? target;
+    let next = from + (target - from) * k;
+    if (Math.abs(target - next) < 0.0008) next = target;
+    else moving = true;
+    if (next !== from) write(element, next);
   }
+  if (moving) frame = requestAnimationFrame(tick);
+  else last = 0;
 }
 function schedule() {
-  if (!frame) frame = requestAnimationFrame(measure);
+  if (!frame) frame = requestAnimationFrame(tick);
 }
-/* Synchronous measure for mount: the wrapper gets its true progress before the
- * first paint instead of waiting a frame (and hidden tabs throttle rAF). */
-function measureNow() {
-  if (frame) cancelAnimationFrame(frame);
-  measure();
+/* Synchronous placement on mount: the wrapper starts at its true progress
+ * before the first paint instead of animating in from 0 (and hidden tabs
+ * throttle rAF). */
+function measureNow(element: HTMLElement) {
+  write(element, targetProgress(element, window.innerHeight || 1));
 }
 function listen() {
   if (listening) return;
@@ -45,6 +71,7 @@ function unlisten() {
   window.removeEventListener("resize", schedule);
   if (frame) cancelAnimationFrame(frame);
   frame = 0;
+  last = 0;
 }
 
 /**
@@ -74,9 +101,10 @@ export function ScrollScene({
     element.dataset.sceneActive = "1";
     scenes.add(element);
     listen();
-    measureNow();
+    measureNow(element);
     const disable = () => {
       scenes.delete(element);
+      current.delete(element);
       delete element.dataset.sceneActive;
       element.style.removeProperty("--sp");
       unlisten();

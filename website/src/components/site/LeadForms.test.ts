@@ -6,6 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 vi.mock("@/lib/leads/actions", () => ({
   submitContactAction: vi.fn(),
   requestAppointmentAction: vi.fn(),
+  getBookedSlotsAction: vi.fn(async () => []),
   submitQuoteAction: vi.fn(),
 }));
 
