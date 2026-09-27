@@ -44,6 +44,7 @@ const siteSans = Inter_Tight({
 const themeBootScript = `(function(){
  try{if(localStorage.getItem("ajs-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}
  try{if(localStorage.getItem("ajs-motion")==="reduce")document.documentElement.setAttribute("data-motion","reduce")}catch(e){}
+ try{var n=performance.getEntriesByType("navigation")[0];if(n&&n.type==="reload"&&!location.hash){history.scrollRestoration="manual";var t=function(){window.scrollTo(0,0)};t();addEventListener("DOMContentLoaded",t);addEventListener("load",function(){t();history.scrollRestoration="auto"})}}catch(e){}
  })();`;
 
 export default function RootLayout({
