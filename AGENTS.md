@@ -1,5 +1,9 @@
 # Base44 Dev Environment
 
+## Admin AI providers & keys (2026-09-27)
+- `/ajadmin/ai-providers` (nav "AI providers & keys", `settings:write`): add any OpenAI-compatible endpoint (OpenRouter, AgentRouter, Groq, Gemini-openai, DeepSeek…) with base URL + model + key; keys AES-GCM encrypted (`DATA_ENCRYPTION_KEY`) in `ai_provider_keys` (migration `0023_ai_provider_keys.sql`, must be run manually in Supabase). Test/Pause/Delete/priority actions in `lib/admin/ai-provider-actions.ts`.
+- `runCompletion` (`lib/ai/providers.ts`) tries active custom providers first by priority (30s cache, 90s cooldown after a failure, 35s timeout each — `lib/ai/custom-providers.ts`), then the env OpenAI/Anthropic/Google keys.
+
 ## Website analytics (2026-09-27)
 - First-party, real-visitor analytics: `components/analytics/VisitTracker.tsx` (mounted in `PublicSiteFrame`) beacons `/api/track` once per page per tab per 30 min; skips `navigator.webdriver` and staff browsers (`AdminShell` sets `localStorage["ajs-staff"]="1"`). The route drops bot UAs, `/ajadmin|/api|/auth` paths and floods, stores only a salted SHA-256 of the visitor id (salt = `DATA_ENCRYPTION_KEY`).
 - Storage: migration `0022_site_analytics.sql` (`page_views` + `analytics_report(from,to)` RPC, IST day buckets, service-role only). Verified on throwaway postgres:16 incl. re-run. NOT yet applied to the owner's Supabase (REST returned PGRST205) — until it is, `/api/track` silently no-ops and `/ajadmin/analytics` shows a "run migration 0022" notice.

@@ -11,6 +11,11 @@ import "server-only";
  */
 
 import { AI_PROVIDERS, type AiProvider } from "@/lib/ai/providers.shared";
+import {
+  activeCustomProviders,
+  markCustomProviderFailed,
+  markCustomProviderOk,
+} from "@/lib/ai/custom-providers";
 
 export { AI_PROVIDERS };
 export type { AiProvider };
@@ -64,12 +69,12 @@ export function isAnyProviderConfigured(): boolean {
 
 const TIMEOUT_MS = 60_000;
 
-async function postJson(url: string, headers: HeadersInit, body: unknown) {
+async function postJson(url: string, headers: HeadersInit, body: unknown, timeoutMs = TIMEOUT_MS) {
   const response = await fetch(url, {
     method: "POST",
     headers: { "content-type": "application/json", ...headers },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(TIMEOUT_MS),
+    signal: AbortSignal.timeout(timeoutMs),
     cache: "no-store",
   });
   if (!response.ok) {
@@ -96,6 +101,39 @@ async function runOpenai(request: CompletionRequest, key: string): Promise<strin
         { role: "user", content: request.prompt },
       ],
     },
+  );
+  const choices = data.choices as { message?: { content?: string } }[] | undefined;
+  return choices?.[0]?.message?.content?.trim() ?? "";
+}
+
+/**
+ * Any OpenAI-compatible endpoint (OpenRouter, AgentRouter, Groq, Together,
+ * DeepSeek, Mistral, local gateways…) added from the admin panel.
+ */
+export async function runOpenaiCompatible(
+  baseUrl: string,
+  key: string,
+  model: string,
+  request: Pick<CompletionRequest, "system" | "prompt" | "maxTokens" | "temperature">,
+  timeoutMs = 35_000,
+): Promise<string> {
+  const data = await postJson(
+    `${baseUrl}/chat/completions`,
+    {
+      authorization: `Bearer ${key}`,
+      "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ajsystemsoft.in",
+      "X-Title": "AJ System Soft AI Tools",
+    },
+    {
+      model,
+      max_tokens: request.maxTokens ?? 1400,
+      temperature: request.temperature ?? 0.4,
+      messages: [
+        { role: "system", content: request.system },
+        { role: "user", content: request.prompt },
+      ],
+    },
+    timeoutMs,
   );
   const choices = data.choices as { message?: { content?: string } }[] | undefined;
   return choices?.[0]?.message?.content?.trim() ?? "";
@@ -150,9 +188,31 @@ async function runGoogle(request: CompletionRequest, key: string): Promise<strin
  */
 export async function runCompletion(
   request: CompletionRequest,
-): Promise<{ text: string; provider: AiProvider; model: string }> {
+): Promise<{ text: string; provider: string; model: string }> {
+  // Admin-managed keys first (priority order, recently failed ones last), then
+  // the built-in env keys — the customer only ever sees a working answer.
+  let lastError = new AiProviderError("provider_error", "The AI provider could not complete this request.");
+  const customs = await activeCustomProviders();
+  for (const custom of customs) {
+    try {
+      const text = await runOpenaiCompatible(custom.baseUrl, custom.key, custom.model, request);
+      if (text) {
+        markCustomProviderOk(custom.id);
+        return { text, provider: custom.label, model: custom.model };
+      }
+      lastError = new AiProviderError("empty_result", "The AI provider returned an empty result.");
+    } catch (error) {
+      lastError =
+        error instanceof AiProviderError
+          ? error
+          : new AiProviderError("provider_unreachable", "Could not reach the AI provider.");
+    }
+    markCustomProviderFailed(custom.id);
+  }
+
   const available = configuredProviders();
   if (available.length === 0) {
+    if (customs.length > 0) throw lastError;
     throw new AiProviderError(
       "not_configured",
       "AI tools are not configured yet. Add an AI provider API key to enable them.",
@@ -165,7 +225,6 @@ export async function runCompletion(
     ...available.filter((p) => p === request.provider),
     ...available.filter((p) => p !== request.provider),
   ];
-  let lastError = new AiProviderError("provider_error", "The AI provider could not complete this request.");
   for (const provider of order) {
     const key = readKey(provider);
     if (!key) continue;
