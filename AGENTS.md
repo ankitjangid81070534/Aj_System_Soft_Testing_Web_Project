@@ -10,7 +10,7 @@
 - Admin UI: `/ajadmin/analytics` (nav "Website analytics", `audit:read` = admins): presets today/yesterday/7d/30d/90d/12m + custom dates, KPI cards, daily (monthly when >62 days) chart, most/least viewed pages, referrers, devices, full page table. Logic in `lib/analytics/report.ts`.
 
 ## AI Tools launcher + per-tool SEO pages (2026-09-27)
-- `components/site/AiToolsLauncher.tsx` (+ `ai-launcher.module.css`) renders a gradient "AI Tools" popover button stacked above "Let's talk" inside `ContactHub`'s aside (now a flex column). The panel lists every tool name grouped by category with search; each links to `/ai-tools/<id>`.
+- `components/site/AiToolsLauncher.tsx` (+ `ai-launcher.module.css`) renders a gradient "AI Tools" button stacked above "Let's talk" inside `ContactHub`'s aside. It is now a plain Link to `/ai-tools` (popover removed on owner request). `/ai-tools` `ToolsExplorer` = sticky category sidebar (icon, hint, count; horizontal chips ≤900px) + search + "Use it to:" cards.
 - New route `(public)/ai-tools/[toolId]/page.tsx`: per-tool metadata, BreadcrumbList + SoftwareApplication JSON-LD, runner via `ToolPageRunner`. `/ai-tools` cards are now crawlable Links (no in-place runner). Sitemap includes all tool URLs; `sitemap.test.ts` maps them to `[toolId]`.
 - Running a tool still requires sign-in (`/api/ai/run`); all three provider keys are present.
 - `juspay-demo/fonts.ts` no longer passes `weight` arrays (variable fonts) — that avoided the Turbopack "next/font/google queries have exactly one entry" error that cache clears did not fix.
