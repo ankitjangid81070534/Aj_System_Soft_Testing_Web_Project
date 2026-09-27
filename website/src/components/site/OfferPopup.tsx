@@ -79,6 +79,7 @@ export function OfferPopup({ offer }: { offer: Offer }) {
         ) : null
       }
     >
+      {offer.imageUrl || offer.fullDescription ? (
       <div className="space-y-4">
         {offer.imageUrl && (
           /* eslint-disable-next-line @next/next/no-img-element */
@@ -92,6 +93,7 @@ export function OfferPopup({ offer }: { offer: Offer }) {
           <p className="text-sm text-ink-muted">{offer.fullDescription}</p>
         )}
       </div>
+      ) : null}
     </Dialog>
   );
 }
