@@ -1,5 +1,11 @@
 # Base44 Dev Environment
 
+## AI Tools launcher + per-tool SEO pages (2026-09-27)
+- `components/site/AiToolsLauncher.tsx` (+ `ai-launcher.module.css`) renders a gradient "AI Tools" popover button stacked above "Let's talk" inside `ContactHub`'s aside (now a flex column). The panel lists every tool name grouped by category with search; each links to `/ai-tools/<id>`.
+- New route `(public)/ai-tools/[toolId]/page.tsx`: per-tool metadata, BreadcrumbList + SoftwareApplication JSON-LD, runner via `ToolPageRunner`. `/ai-tools` cards are now crawlable Links (no in-place runner). Sitemap includes all tool URLs; `sitemap.test.ts` maps them to `[toolId]`.
+- Running a tool still requires sign-in (`/api/ai/run`); all three provider keys are present.
+- `juspay-demo/fonts.ts` no longer passes `weight` arrays (variable fonts) — that avoided the Turbopack "next/font/google queries have exactly one entry" error that cache clears did not fix.
+
 ## Resend primary sender (2026-09-27)
 - `lib/email/email.ts` now prefers Resend when `RESEND_API_KEY` + `EMAIL_FROM` are set (sender on verified domain `ajsystemsoft.in`); Gmail SMTP is only the fallback. Admin inbox = `EMAIL_ADMIN_TO`. Test send via Resend API returned 200.
 

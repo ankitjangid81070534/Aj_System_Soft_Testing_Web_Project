@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
 import type { ContactHubAction } from "@/lib/contact-hub";
+import { AiToolsLauncher } from "./AiToolsLauncher";
 import styles from "./contact-hub.module.css";
 
 const subscribe = () => () => {};
@@ -49,6 +50,7 @@ function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
 
   return (
     <aside className={styles.hub} aria-label="Quick contact" data-contact-hub>
+      <AiToolsLauncher />
       <button ref={trigger} type="button" className={styles.trigger} popoverTarget={id}
         aria-expanded={open} aria-controls={id}>
         <MessageCircle size={20} aria-hidden="true" /><span>Let’s talk</span>

@@ -1,0 +1,92 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 7px 16px 7px 7px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #6d4aff 0%, #3b82f6 55%, #06b6d4 100%);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgb(109 74 255 / 35%);
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), box-shadow 220ms ease;
+  animation: ai-enter 520ms cubic-bezier(.22, 1, .36, 1) 150ms backwards;
+}
+.badge {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 22%);
+}
+.badge svg { animation: ai-spark 2.8s ease-in-out infinite; }
+.trigger:active { transform: scale(.97); }
+@keyframes ai-enter { from { opacity: 0; transform: translateY(16px) scale(.92); } }
+@keyframes ai-spark { 0%, 100% { transform: rotate(0) scale(1); } 50% { transform: rotate(18deg) scale(1.15); } }
+
+.panel {
+  position: fixed;
+  inset: auto var(--hub-right) calc(var(--hub-bottom) + 116px) auto;
+  width: min(380px, calc(100vw - 32px));
+  max-height: min(560px, calc(100dvh - var(--hub-bottom) - 236px));
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 20px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 18px 50px color-mix(in srgb, var(--color-ink) 20%, transparent);
+  opacity: 0;
+  transform: translateY(10px) scale(.97);
+  transform-origin: bottom right;
+  transition: opacity 200ms ease, transform 240ms cubic-bezier(.22, 1, .36, 1),
+    overlay 240ms allow-discrete, display 240ms allow-discrete;
+}
+.panel:popover-open { display: flex; opacity: 1; transform: none; }
+@starting-style { .panel:popover-open { opacity: 0; transform: translateY(10px) scale(.97); } }
+
+.head { padding: 16px 16px 14px; color: #fff; background: linear-gradient(135deg, #6d4aff, #3b82f6); }
+.headRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.head h2 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 17px; font-weight: 700; color: #fff; }
+.head p { margin: 4px 0 12px; font-size: 13px; line-height: 1.45; color: rgb(255 255 255 / 90%); }
+.close {
+  display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0;
+  border: 0; border-radius: 50%; color: inherit; background: rgb(255 255 255 / 18%); cursor: pointer;
+}
+.search {
+  width: 100%; min-height: 40px; padding: 8px 12px;
+  border: 0; border-radius: 10px; color: #1e1b4b; background: #fff;
+  font: inherit; font-size: 14px;
+}
+.list { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 8px 12px; }
+.group { margin: 12px 8px 4px; color: var(--color-muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.list ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.item {
+  display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px;
+  color: var(--color-ink); font-size: 14px; font-weight: 550; text-decoration: none;
+}
+.item svg { flex-shrink: 0; color: #6d4aff; }
+.item span { flex: 1; min-width: 0; }
+.empty { margin: 16px; color: var(--color-muted); font-size: 14px; text-align: center; }
+.all {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  margin: 0 12px 12px; padding: 10px; border-radius: 12px;
+  color: #fff; background: #6d4aff; font-size: 14px; font-weight: 650; text-decoration: none;
+}
+.trigger:focus-visible, .close:focus-visible, .item:focus-visible, .all:focus-visible { outline: 2px solid #6d4aff; outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgb(109 74 255 / 45%); }
+  .item:hover { background: color-mix(in srgb, #6d4aff 9%, var(--color-surface)); }
+}
+@media (max-width: 720px) { .trigger { min-height: 42px; font-size: 13px; } }
+:global(html[data-motion="reduce"]) .trigger,
+:global(html[data-motion="reduce"]) .badge svg,
+:global(html[data-motion="reduce"]) .panel { animation: none; transition: none; }

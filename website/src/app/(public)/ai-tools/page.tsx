@@ -3,8 +3,6 @@ import { PageHero } from "@/components/site/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ToolsExplorer } from "@/components/ai/ToolsExplorer";
 import { AI_TOOLS, AI_TOOL_CATEGORIES } from "@/lib/ai/tools";
-import { getCurrentUser } from "@/lib/auth/session";
-import { isSupabaseConfigured } from "@/lib/env";
 import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
 import { buildRouteMetadata } from "@/lib/seo/metadata";
 
@@ -19,8 +17,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AiToolsPage() {
-  const user = isSupabaseConfigured ? await getCurrentUser() : null;
-
   return (
     <>
       <JsonLd
@@ -36,10 +32,10 @@ export default async function AiToolsPage() {
         accent="AI tools"
         scene="nodes"
         tone="purple"
-        description={`Writing, marketing, SEO, business documents, code, data, support, career and learning tools across ${AI_TOOL_CATEGORIES.length} categories. Each one runs inside your account — results are private to you.`}
+        description={`Writing, marketing, SEO, business documents, code, data, support, career and learning tools across ${AI_TOOL_CATEGORIES.length} categories. Free AI tools by AJ System Soft Technology — sign in to run any tool, results stay private to you.`}
       />
       <div className="mx-auto w-full max-w-content px-4 py-10 sm:px-6 sm:py-14">
-        <ToolsExplorer signedIn={Boolean(user)} />
+        <ToolsExplorer />
       </div>
     </>
   );
