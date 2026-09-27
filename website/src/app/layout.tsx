@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Inter_Tight } from "next/font/google";
 import { buildRootMetadata } from "@/lib/seo/metadata";
 import { RevealObserver } from "@/components/site/RevealObserver";
+import { SectionScrollFx } from "@/components/motion/SectionScrollFx";
 import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
@@ -65,6 +66,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         {children}
         <RevealObserver />
+        <SectionScrollFx />
         <SceneMotion />
         <SurfaceMotion />
         <GoogleAnalytics />
