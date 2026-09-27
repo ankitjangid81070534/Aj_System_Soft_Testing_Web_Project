@@ -809,36 +809,28 @@
 }
 .circuit path {
   fill: none;
-  vector-effect: non-scaling-stroke;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.circuit .track {
-  stroke: rgba(255, 255, 255, 0.1);
-  stroke-width: 1.25;
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 1;
 }
 .circuit .pulse {
-  --c: #3b82f6;
+  --c: #3079ea;
   stroke: var(--c);
-  stroke-width: 2;
-  stroke-dasharray: 22 78;
-  stroke-dashoffset: 100;
-  opacity: 0.95;
-  animation: pulse 4.2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
-  filter: drop-shadow(0 0 4px var(--c)) drop-shadow(0 0 10px var(--c));
+  stroke-width: 1.5;
+  stroke-dasharray: 22 100;
+  stroke-dashoffset: 22;
+  stroke-linecap: round;
+  animation: pulse 4s linear infinite;
+  filter: drop-shadow(0 0 6px var(--c));
 }
-.circuit .pBlue { --c: #3b82f6; }
+.circuit .pBlue { --c: #3079ea; }
 .circuit .pCyan { --c: #22d3ee; }
 .circuit .pViolet { --c: #a78bfa; }
-.circuit .pGreen { --c: #34d399; }
+.circuit .pGreen { --c: #00b40a; }
 @keyframes pulse {
-  0% { stroke-dashoffset: 100; opacity: 0; }
-  10% { opacity: 0.95; }
-  85% { opacity: 0.95; }
-  100% { stroke-dashoffset: -22; opacity: 0; }
+  to { stroke-dashoffset: -100; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .circuit .pulse { animation: none; opacity: 0.5; }
+  .circuit .pulse { animation: none; }
 }
 .core {
   position: absolute;
