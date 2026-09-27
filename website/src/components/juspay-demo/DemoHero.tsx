@@ -97,15 +97,18 @@ export function DemoHero({
         <div className={styles.coreStage} aria-hidden>
           <div className={styles.coreFrame} />
           <svg className={styles.circuit} viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M8 40 H30 V22 H50 V40" />
-            <path d="M92 60 H70 V78 H50 V60" />
-            <path d="M50 8 V26" />
-            <path d="M50 92 V74" />
-            <path d="M8 66 H26 V54" />
-            <path d="M92 34 H74 V46" />
-            <path className={styles.pulse} d="M8 40 H30 V22 H50 V40" />
-            <path className={`${styles.pulse} ${styles.pulseDelay}`} d="M92 60 H70 V78 H50 V60" />
-            <path className={`${styles.pulse} ${styles.pulseDelay2}`} d="M50 92 V74" />
+            <path className={styles.track} pathLength={100} d="M8 40 H30 V22 H50 V40" />
+            <path className={styles.track} pathLength={100} d="M92 60 H70 V78 H50 V60" />
+            <path className={styles.track} pathLength={100} d="M50 8 V26" />
+            <path className={styles.track} pathLength={100} d="M50 92 V74" />
+            <path className={styles.track} pathLength={100} d="M8 66 H26 V54" />
+            <path className={styles.track} pathLength={100} d="M92 34 H74 V46" />
+            <path className={`${styles.pulse} ${styles.pBlue}`} style={{ animationDelay: "-0.0s" }} pathLength={100} d="M8 40 H30 V22 H50 V40" />
+            <path className={`${styles.pulse} ${styles.pCyan}`} style={{ animationDelay: "-0.7s" }} pathLength={100} d="M92 60 H70 V78 H50 V60" />
+            <path className={`${styles.pulse} ${styles.pViolet}`} style={{ animationDelay: "-1.4s" }} pathLength={100} d="M50 8 V26" />
+            <path className={`${styles.pulse} ${styles.pGreen}`} style={{ animationDelay: "-2.1s" }} pathLength={100} d="M50 92 V74" />
+            <path className={`${styles.pulse} ${styles.pCyan}`} style={{ animationDelay: "-2.8s" }} pathLength={100} d="M8 66 H26 V54" />
+            <path className={`${styles.pulse} ${styles.pViolet}`} style={{ animationDelay: "-3.5s" }} pathLength={100} d="M92 34 H74 V46" />
           </svg>
 
           <motion.div className={styles.core} style={{ rotateX: rx, rotateY: ry }}>
