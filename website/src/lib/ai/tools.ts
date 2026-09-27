@@ -61,9 +61,9 @@ export const AI_TOOL_CATEGORIES: AiToolCategory[] = [
 ];
 
 /** Long-form / reasoning work goes to Claude, fast structured work to GPT, translation + multilingual to Gemini. */
-const GPT = { provider: "openai" as AiProvider, model: "gpt-4o-mini" };
-const CLAUDE = { provider: "anthropic" as AiProvider, model: "claude-3-5-haiku-latest" };
-const GEMINI = { provider: "google" as AiProvider, model: "gemini-2.0-flash" };
+const GPT = { provider: "openai" as AiProvider, model: "gpt-4.1-mini" };
+const CLAUDE = { provider: "anthropic" as AiProvider, model: "claude-haiku-4-5" };
+const GEMINI = { provider: "google" as AiProvider, model: "gemini-flash-latest" };
 
 const TEXT = (name: string, label: string, placeholder?: string): ToolField => ({
   name,

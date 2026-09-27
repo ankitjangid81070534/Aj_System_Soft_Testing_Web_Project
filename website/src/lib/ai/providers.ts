@@ -40,9 +40,9 @@ const KEY_ENV: Record<AiProvider, string> = {
 
 /** Model used when a tool's preferred provider has no key configured. */
 export const FALLBACK_MODEL: Record<AiProvider, string> = {
-  openai: "gpt-4o-mini",
-  anthropic: "claude-3-5-haiku-latest",
-  google: "gemini-2.0-flash",
+  openai: "gpt-4.1-mini",
+  anthropic: "claude-haiku-4-5",
+  google: "gemini-flash-latest",
 };
 
 const PLACEHOLDER_MARKER = "REPLACE_WITH";
@@ -159,26 +159,33 @@ export async function runCompletion(
     );
   }
 
-  const provider = available.includes(request.provider) ? request.provider : available[0];
-  const model = provider === request.provider ? request.model : FALLBACK_MODEL[provider];
-  const key = readKey(provider);
-  if (!key) {
-    throw new AiProviderError("not_configured", "AI tools are not configured yet.");
+  // Requested provider first, then every other configured one — a revoked key,
+  // retired model or outage on one provider never takes the tool down.
+  const order = [
+    ...available.filter((p) => p === request.provider),
+    ...available.filter((p) => p !== request.provider),
+  ];
+  let lastError = new AiProviderError("provider_error", "The AI provider could not complete this request.");
+  for (const provider of order) {
+    const key = readKey(provider);
+    if (!key) continue;
+    const model = provider === request.provider ? request.model : FALLBACK_MODEL[provider];
+    const effective: CompletionRequest = { ...request, provider, model };
+    try {
+      const text =
+        provider === "openai"
+          ? await runOpenai(effective, key)
+          : provider === "anthropic"
+            ? await runAnthropic(effective, key)
+            : await runGoogle(effective, key);
+      if (text) return { text, provider, model };
+      lastError = new AiProviderError("empty_result", "The AI provider returned an empty result.");
+    } catch (error) {
+      lastError =
+        error instanceof AiProviderError
+          ? error
+          : new AiProviderError("provider_unreachable", "Could not reach the AI provider.");
+    }
   }
-
-  const effective: CompletionRequest = { ...request, provider, model };
-  let text = "";
-  try {
-    if (provider === "openai") text = await runOpenai(effective, key);
-    else if (provider === "anthropic") text = await runAnthropic(effective, key);
-    else text = await runGoogle(effective, key);
-  } catch (error) {
-    if (error instanceof AiProviderError) throw error;
-    throw new AiProviderError("provider_unreachable", "Could not reach the AI provider.");
-  }
-
-  if (!text) {
-    throw new AiProviderError("empty_result", "The AI provider returned an empty result.");
-  }
-  return { text, provider, model };
+  throw lastError;
 }
