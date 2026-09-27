@@ -29,3 +29,25 @@
 .modal .heading h2 { font-size: 32px; line-height: 1.15; letter-spacing: -.055em; font-weight: 650; }
 .close { position: sticky; top: 12px; height: 0; z-index: 3; display: flex; justify-content: flex-end; padding-right: 12px; }
 @media(max-width:700px) { .modal { border-radius: 25px; }.modal .art { min-height: 0; height: 150px; }.modal .panel { padding-top: 24px; }.modal .heading h2 { font-size: 28px; } }
+
+/* Premium dialog polish — glass backdrop, soft rise, brand accent */
+@keyframes loginRise { from { opacity: 0; transform: translateY(18px) scale(.975); } to { opacity: 1; transform: none; } }
+@keyframes loginFade { from { opacity: 0; } to { opacity: 1; } }
+.modal { overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--color-line-strong) transparent; box-shadow: 0 40px 120px -30px #0b1a3a66, 0 0 0 1px #ffffff10 inset; }
+.modal[open] { animation: loginRise 480ms cubic-bezier(.22,1,.36,1) both; }
+.modal::backdrop { background: radial-gradient(ellipse at 30% 20%, #3c6fd033, transparent 55%), #070d1acc; backdrop-filter: blur(10px) saturate(1.2); animation: loginFade 360ms ease both; }
+.modal .card { position: relative; background: radial-gradient(ellipse at 100% 0, #5b8def14, transparent 50%), var(--color-surface); }
+.modal .card::before { content: ""; position: absolute; top: 0; left: 58%; right: 8%; height: 3px; border-radius: 0 0 8px 8px; background: linear-gradient(90deg,#4e83ee,#42b9b0,#e4b669); }
+.modal .art { box-shadow: inset 0 0 0 1px #ffffff14; }
+.modal .art img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+.modal .art:hover img { transform: scale(1.03); }
+.modal .panel > * { animation: loginRise 560ms cubic-bezier(.22,1,.36,1) both; }
+.modal .panel > *:nth-child(2) { animation-delay: 70ms; }
+.modal .panel > *:nth-child(3) { animation-delay: 140ms; }
+.modal .heading h2 { background: linear-gradient(100deg, var(--color-ink) 40%, var(--color-brand-600)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.modal .panel :global(.ui-field) { transition: border-color 220ms ease, box-shadow 220ms ease; }
+.modal .panel :global(.ui-field):focus-within { box-shadow: 0 0 0 4px #4e83ee22; }
+.modal .panel button[type="submit"] { transition: transform 220ms ease, box-shadow 220ms ease; }
+.modal .panel button[type="submit"]:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 12px 28px -12px #4e83ee88; }
+@media (max-width:700px) { .modal { width: calc(100vw - 20px); max-height: 94dvh; } .modal .card::before { left: 20%; right: 20%; } }
+@media (prefers-reduced-motion:reduce) { .modal[open], .modal::backdrop, .modal .panel > * { animation: none; } .modal .art img, .modal .panel button[type="submit"] { transition: none; transform: none; } }
