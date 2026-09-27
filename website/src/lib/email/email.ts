@@ -72,15 +72,18 @@ export async function sendPasswordRecoveryEmail(
   };
 }
 
+/** Resend (verified company domain) is preferred; Gmail SMTP is the fallback. */
+function isResendConfigured(): boolean {
+  return Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
+}
+
 export function isEmailConfigured(): boolean {
-  return isGmailConfigured() || Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
+  return isResendConfigured() || isGmailConfigured();
 }
 
 function fromAddress(): string {
-  if (isGmailConfigured()) {
-    return stripHeaderBreaks(`AJS Technology <${process.env.GMAIL_USER}>`);
-  }
-  return stripHeaderBreaks(process.env.EMAIL_FROM ?? "AJS Technology <onboarding@resend.dev>");
+  if (isResendConfigured()) return stripHeaderBreaks(process.env.EMAIL_FROM as string);
+  return stripHeaderBreaks(`AJS Technology <${process.env.GMAIL_USER}>`);
 }
 
 /**
@@ -106,7 +109,7 @@ async function sendOne(
     ? { "List-Unsubscribe": `<mailto:${stripHeaderBreaks(unsubscribeTo)}?subject=unsubscribe>` }
     : {};
 
-  if (isGmailConfigured()) {
+  if (!isResendConfigured()) {
     try {
       await gmail().sendMail({ ...message, headers });
       return true;

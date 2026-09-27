@@ -5,17 +5,17 @@
   "secrets": [
     {
       "name": "NEXT_PUBLIC_SUPABASE_URL",
-      "description": "Supabase project URL (Supabase dashboard → Project Settings → API → Project URL). Required for database, auth, and admin CMS.",
+      "description": "Supabase project URL (Supabase dashboard \u2192 Project Settings \u2192 API \u2192 Project URL). Required for database, auth, and admin CMS.",
       "requiredAtBoot": false
     },
     {
       "name": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-      "description": "Supabase anon/public key (Supabase dashboard → Project Settings → API → anon key). Paired with NEXT_PUBLIC_SUPABASE_URL.",
+      "description": "Supabase anon/public key (Supabase dashboard \u2192 Project Settings \u2192 API \u2192 anon key). Paired with NEXT_PUBLIC_SUPABASE_URL.",
       "requiredAtBoot": false
     },
     {
       "name": "SUPABASE_SERVICE_ROLE_KEY",
-      "description": "Supabase service_role key (Supabase dashboard → Project Settings → API → service_role key). Server-only; needed for admin CMS operations.",
+      "description": "Supabase service_role key (Supabase dashboard \u2192 Project Settings \u2192 API \u2192 service_role key). Server-only; needed for admin CMS operations.",
       "requiredAtBoot": false
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "name": "RESEND_API_KEY",
-      "description": "Resend API key for transactional email (Resend dashboard → API Keys). Optional — only needed for lead notification emails.",
+      "description": "Resend API key for transactional email (Resend dashboard \u2192 API Keys). Optional \u2014 only needed for lead notification emails.",
       "requiredAtBoot": false
     },
     {
