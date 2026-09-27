@@ -829,9 +829,7 @@
 @keyframes pulse {
   to { stroke-dashoffset: -100; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .circuit .pulse { animation: none; }
-}
+:global(html[data-motion="reduce"]) .circuit .pulse { animation: none; }
 .core {
   position: absolute;
   left: 50%;

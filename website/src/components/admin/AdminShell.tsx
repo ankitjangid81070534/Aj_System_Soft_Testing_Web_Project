@@ -10,6 +10,7 @@ import { IconButton } from "@/components/ui/IconButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import styles from "./admin-surface.module.css";
 import { signOutAction } from "@/lib/auth/actions";
+import { STAFF_FLAG_KEY } from "@/components/analytics/VisitTracker";
 
 function AccountBlock({ email, roleLabel }: { email: string; roleLabel: string }) {
   return (
@@ -54,6 +55,11 @@ export function AdminShell({
   const mainRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
   const pageLabel = adminPageLabel(pathname);
+
+  // Staff browsing the public site must not inflate visitor analytics.
+  useEffect(() => {
+    try { localStorage.setItem(STAFF_FLAG_KEY, "1"); } catch {}
+  }, []);
 
   useEffect(() => {
     // Match the existing lg sidebar breakpoint. CSS hiding a native modal

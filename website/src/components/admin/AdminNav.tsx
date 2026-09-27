@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   AtSign,
+  BarChart3,
   Gift,
   Inbox,
   BriefcaseBusiness,
@@ -36,7 +37,10 @@ import { cn } from "@/lib/utils/cn";
 const NAV_GROUPS = [
   {
     title: "Overview",
-    items: [{ href: "/ajadmin", label: "Dashboard", Icon: LayoutDashboard }],
+    items: [
+      { href: "/ajadmin", label: "Dashboard", Icon: LayoutDashboard },
+      { href: "/ajadmin/analytics", label: "Website analytics", Icon: BarChart3 },
+    ],
   },
   {
     title: "Content",

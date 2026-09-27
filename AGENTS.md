@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Website analytics (2026-09-27)
+- First-party, real-visitor analytics: `components/analytics/VisitTracker.tsx` (mounted in `PublicSiteFrame`) beacons `/api/track` once per page per tab per 30 min; skips `navigator.webdriver` and staff browsers (`AdminShell` sets `localStorage["ajs-staff"]="1"`). The route drops bot UAs, `/ajadmin|/api|/auth` paths and floods, stores only a salted SHA-256 of the visitor id (salt = `DATA_ENCRYPTION_KEY`).
+- Storage: migration `0022_site_analytics.sql` (`page_views` + `analytics_report(from,to)` RPC, IST day buckets, service-role only). Verified on throwaway postgres:16 incl. re-run. NOT yet applied to the owner's Supabase (REST returned PGRST205) — until it is, `/api/track` silently no-ops and `/ajadmin/analytics` shows a "run migration 0022" notice.
+- Admin UI: `/ajadmin/analytics` (nav "Website analytics", `audit:read` = admins): presets today/yesterday/7d/30d/90d/12m + custom dates, KPI cards, daily (monthly when >62 days) chart, most/least viewed pages, referrers, devices, full page table. Logic in `lib/analytics/report.ts`.
+
 ## AI Tools launcher + per-tool SEO pages (2026-09-27)
 - `components/site/AiToolsLauncher.tsx` (+ `ai-launcher.module.css`) renders a gradient "AI Tools" popover button stacked above "Let's talk" inside `ContactHub`'s aside (now a flex column). The panel lists every tool name grouped by category with search; each links to `/ai-tools/<id>`.
 - New route `(public)/ai-tools/[toolId]/page.tsx`: per-tool metadata, BreadcrumbList + SoftwareApplication JSON-LD, runner via `ToolPageRunner`. `/ai-tools` cards are now crawlable Links (no in-place runner). Sitemap includes all tool URLs; `sitemap.test.ts` maps them to `[toolId]`.
