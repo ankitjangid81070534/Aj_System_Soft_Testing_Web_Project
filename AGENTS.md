@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## Admin forgot-password (email OTP) + OAuth error redirect (2026-09-27)
+- `/ajadmin/login/forgot` ("Forgot password?" on admin login): `lib/auth/admin-reset-actions.ts` emails a 6-digit code (10 min) to editor+ accounts only; same reply for unknown accounts. Stateless httpOnly cookie `ajs_admin_reset` = `userId|token` (`createGateToken("reset", …, "userId:code")`, needs `ADMIN_GATE_SECRET`). Verify rate-limited 5/15min (in-memory), strong 12+ password, role re-checked before `updateUserById`. TOTP 2FA still applies at next login. Staff lookup lives in `lib/auth/staff-email.ts`.
+- Supabase sends failed OAuth (`bad_oauth_state`, expired/reused Google sign-in) to the site root; `proxy.ts` redirects `/?error_code=…` to `/login?error=oauth_callback`.
+- Fixed: hidden `/<ADMIN_URL_SEGMENT>` entrance was missing from `config.matcher` (404). Matcher has a `/:slug(...)` entry; `proxy()` returns `next()` at once for top-level paths that are not the segment (`isCorePath`).
+
 ## White content below inner-page heroes (2026-09-27)
 - Owner: every public page EXCEPT `/` keeps its dark PageHero, everything after it is white. Pure CSS in `app/inner-light.css` (imported after `inner-pages.css`): zone = siblings after `:is(.page-enter, .page-enter > article) > header[data-scroll-scene]`, re-declaring the light token set. Cards need their own token reset because `accent-surfaces.css` sets white ink vars on each card. Pages without PageHero stay dark. Homepage untouched (`[data-home-page]`).
 

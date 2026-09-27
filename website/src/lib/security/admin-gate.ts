@@ -63,7 +63,7 @@ function safeEqual(a: string, b: string): boolean {
 
 /** Create a signed, expiring token for one purpose (+ optional subject). */
 export async function createGateToken(
-  purpose: "gate" | "2fa",
+  purpose: "gate" | "2fa" | "reset",
   ttlSeconds: number,
   subject = "",
 ): Promise<string | null> {
@@ -76,7 +76,7 @@ export async function createGateToken(
 
 export async function verifyGateToken(
   token: string | undefined,
-  purpose: "gate" | "2fa",
+  purpose: "gate" | "2fa" | "reset",
   subject = "",
 ): Promise<boolean> {
   const key = secret();

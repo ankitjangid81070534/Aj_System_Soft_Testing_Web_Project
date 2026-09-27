@@ -183,3 +183,30 @@ export function renderPasswordRecovery(recoveryUrl: string): RenderedEmail {
     ].join("\n"),
   };
 }
+
+export function renderAdminResetOtp(code: string): RenderedEmail {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/+$/, "");
+  const bodyHtml = [
+    paragraph("Use this code to set a new password for your staff admin account."),
+    `<p style="margin:10px 0 22px;font-size:30px;font-weight:700;letter-spacing:8px;">${code}</p>`,
+    paragraph(
+      "The code expires in 10 minutes. If you did not request it, ignore this email — your password stays unchanged.",
+    ),
+  ].join("");
+  return {
+    subject: `Your ${BRAND.shortName} admin reset code`,
+    html: emailShell({
+      preheader: "Your one-time admin password reset code.",
+      badge: "Account security",
+      heading: "Admin password reset",
+      bodyHtml,
+      siteUrl,
+      footerNote: "You are receiving this email because an admin password reset was requested.",
+    }),
+    text: [
+      `Your admin password reset code: ${code}`,
+      "",
+      "It expires in 10 minutes. If you did not request it, ignore this email.",
+    ].join("\n"),
+  };
+}
