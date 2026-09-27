@@ -47,6 +47,11 @@ export function PremiumCursor() {
       if (records.some((r) => r.target instanceof HTMLDialogElement && r.target.open)) raise();
     });
     observer.observe(document.body, { subtree: true, attributes: true, attributeFilter: ["open"] });
+    // Popovers (e.g. the "Let's talk" panel) also enter the top layer; re-raise after them too.
+    const onToggle = (event: Event) => {
+      if (event.target !== layer && (event as ToggleEvent).newState === "open") raise();
+    };
+    document.addEventListener("toggle", onToggle, true);
 
     let x = -100, y = -100, ax = -100, ay = -100, lastX = -100, tilt = 0, targetTilt = 0;
     let frame = 0;
@@ -100,6 +105,7 @@ export function PremiumCursor() {
 
     return () => {
       observer.disconnect();
+      document.removeEventListener("toggle", onToggle, true);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);
