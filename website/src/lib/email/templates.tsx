@@ -184,27 +184,28 @@ export function renderPasswordRecovery(recoveryUrl: string): RenderedEmail {
   };
 }
 
-export function renderAdminResetOtp(code: string): RenderedEmail {
+export function renderPasswordOtp(code: string, kind: "admin" | "client"): RenderedEmail {
+  const account = kind === "admin" ? "staff admin account" : "client account";
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/+$/, "");
   const bodyHtml = [
-    paragraph("Use this code to set a new password for your staff admin account."),
+    paragraph(`Use this code to set a new password for your ${account}.`),
     `<p style="margin:10px 0 22px;font-size:30px;font-weight:700;letter-spacing:8px;">${code}</p>`,
     paragraph(
       "The code expires in 10 minutes. If you did not request it, ignore this email — your password stays unchanged.",
     ),
   ].join("");
   return {
-    subject: `Your ${BRAND.shortName} admin reset code`,
+    subject: `Your ${BRAND.shortName} password code: ${code}`,
     html: emailShell({
-      preheader: "Your one-time admin password reset code.",
+      preheader: "Your one-time password reset code.",
       badge: "Account security",
-      heading: "Admin password reset",
+      heading: kind === "admin" ? "Admin password reset" : "Change your password",
       bodyHtml,
       siteUrl,
-      footerNote: "You are receiving this email because an admin password reset was requested.",
+      footerNote: "You are receiving this email because a password change was requested.",
     }),
     text: [
-      `Your admin password reset code: ${code}`,
+      `Your password code: ${code}`,
       "",
       "It expires in 10 minutes. If you did not request it, ignore this email.",
     ].join("\n"),

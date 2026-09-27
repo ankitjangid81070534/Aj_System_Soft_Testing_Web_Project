@@ -6,7 +6,7 @@ import { z } from "zod";
 import { resolveStaffAccount } from "@/lib/auth/staff-email";
 import { clientIpFrom, isRateLimited } from "@/lib/rate-limit";
 import { createGateToken, gateCookieOptions, verifyGateToken } from "@/lib/security/admin-gate";
-import { sendAdminResetOtpEmail } from "@/lib/email/email";
+import { sendPasswordOtpEmail } from "@/lib/email/email";
 import { roleAtLeast } from "@/lib/auth/permissions";
 
 export type AdminResetState = {
@@ -50,7 +50,7 @@ export async function requestAdminResetAction(
     const code = String(randomInt(0, 1_000_000)).padStart(6, "0");
     const token = await createGateToken("reset", OTP_TTL_SECONDS, `${id}:${code}`);
     if (!token) return { step: "request", error: "Password reset is not configured on this server." };
-    const sent = await sendAdminResetOtpEmail(email, code);
+    const sent = await sendPasswordOtpEmail(email, code, "admin");
     if (!sent) return { step: "request", error: "The code email could not be sent. Please try again later." };
     (await cookies()).set(RESET_COOKIE, `${id}|${token}`, {
       ...gateCookieOptions(OTP_TTL_SECONDS),

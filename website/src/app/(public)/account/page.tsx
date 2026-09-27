@@ -20,6 +20,7 @@ import {
   ProfileForm,
   ReviewForm,
 } from "@/components/portal/AccountForms";
+import { ChangePasswordForm } from "@/components/portal/ChangePasswordForm";
 import { AccountNavigation } from "@/components/portal/AccountNavigation";
 import styles from "@/components/portal/portal-ui.module.css";
 import { AgreementsHistory } from "@/components/portal/AgreementsHistory";
@@ -347,6 +348,13 @@ export default async function ClientAccountPage() {
             </div>
             <div className="mt-6 border-t border-line pt-5">
               <AvatarForm />
+            </div>
+            <div id="security" className="mt-6 border-t border-line pt-5">
+              <h3 className="text-sm font-semibold text-ink">Change password</h3>
+              <p className="mb-4 mt-1 text-xs text-ink-muted">
+                Use your current password, or a one-time code sent to your email.
+              </p>
+              <ChangePasswordForm />
             </div>
           </section>
 

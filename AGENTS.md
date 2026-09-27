@@ -1,5 +1,9 @@
 # Base44 Dev Environment
 
+## Client password change while signed in (2026-09-27)
+- `/account` Profile card → "Change password" (`components/portal/ChangePasswordForm.tsx`, actions `lib/portal/password-actions.ts`): tab 1 = current password (checked on a throw-away non-persisting anon client so the visitor's cookies are untouched), tab 2 = 6-digit email code (cookie `ajs_account_pw_otp`, `createGateToken("reset", …, "client:<userId>:<code>")`) — works for Google-only accounts. Both set the password via service role `updateUserById`; rate-limited per user. Email template `renderPasswordOtp(code, "admin"|"client")` is shared with the admin reset.
+- Dev-only quirk: `/auth/callback` error redirects use `request.url` origin, which is `0.0.0.0:3000` inside the container; production is unaffected.
+
 ## Admin forgot-password (email OTP) + OAuth error redirect (2026-09-27)
 - `/ajadmin/login/forgot` ("Forgot password?" on admin login): `lib/auth/admin-reset-actions.ts` emails a 6-digit code (10 min) to editor+ accounts only; same reply for unknown accounts. Stateless httpOnly cookie `ajs_admin_reset` = `userId|token` (`createGateToken("reset", …, "userId:code")`, needs `ADMIN_GATE_SECRET`). Verify rate-limited 5/15min (in-memory), strong 12+ password, role re-checked before `updateUserById`. TOTP 2FA still applies at next login. Staff lookup lives in `lib/auth/staff-email.ts`.
 - Supabase sends failed OAuth (`bad_oauth_state`, expired/reused Google sign-in) to the site root; `proxy.ts` redirects `/?error_code=…` to `/login?error=oauth_callback`.

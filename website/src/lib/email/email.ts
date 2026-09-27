@@ -4,7 +4,7 @@ import nodemailer, { type Transporter } from "nodemailer";
 import { stripHeaderBreaks } from "@/lib/email/escape";
 import {
   renderAdminNotification,
-  renderAdminResetOtp,
+  renderPasswordOtp,
   renderPasswordRecovery,
   renderVisitorConfirmation,
   type LeadEmailContent,
@@ -73,9 +73,13 @@ export async function sendPasswordRecoveryEmail(
   };
 }
 
-export async function sendAdminResetOtpEmail(to: string, code: string): Promise<boolean> {
+export async function sendPasswordOtpEmail(
+  to: string,
+  code: string,
+  kind: "admin" | "client",
+): Promise<boolean> {
   if (!isEmailConfigured()) return false;
-  return sendOne(to, renderAdminResetOtp(code));
+  return sendOne(to, renderPasswordOtp(code, kind));
 }
 
 /** Resend (verified company domain) is preferred; Gmail SMTP is the fallback. */
