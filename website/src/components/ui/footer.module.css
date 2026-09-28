@@ -93,8 +93,8 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: minmax(230px, 1.25fr) repeat(3, minmax(130px, .75fr));
-  gap: 44px;
+  grid-template-columns: minmax(230px, 1.25fr) repeat(4, minmax(120px, .75fr));
+  gap: 36px;
   align-items: start;
 }
 
