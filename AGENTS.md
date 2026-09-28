@@ -13,6 +13,9 @@
 - Admin top bar (and mobile drawer) has `ajsystemsoft_in_AdminModuleSearch.tsx` (Ctrl/⌘+K, ↑/↓, Enter) over `ADMIN_NAV_ITEMS` from `AdminNav.tsx`.
 - 2026-09-29: the old `LeadForms.test.ts` source-contract failure is fixed (test used an exact signature string that broke when `ContactFormAttempt` gained `service`; now a regex). Full suite 583/583. Static imports of cached readers (`getSiteSettings`) into `actions.ts` break the `next/cache` mocks in admin tests — use dynamic import.
 
+## Sentry error monitoring (2026-09-29)
+- `@sentry/nextjs` via `src/instrumentation.ts` (server/edge + `onRequestError`) and `src/instrumentation-client.ts` (browser + router transitions). Inactive unless `NEXT_PUBLIC_SENTRY_DSN` (browser+server) / `SENTRY_DSN` (server) is set — no DSN = zero behaviour change. `next.config.ts` is NOT wrapped with `withSentryConfig` (no source-map upload / auth token). CSP connect-src allows `*.ingest(.us|.de).sentry.io`. No PII sent, 10% trace sampling.
+
 ## GitHub Actions CI (2026-09-29)
 - `.github/workflows/ajsystemsoft_in_ci.yml` runs on every push/PR in `website/`: `npm ci` → typecheck → lint → tests (Node 22). No secrets needed; build is not run (it needs env). Lint must stay at 0 errors — `Date.now()` directly in JSX trips `react-hooks/purity`; wrap it in a helper (`formStartedAt`).
 

@@ -66,6 +66,8 @@ const adsenseConnectOrigins = [
 ].join(" ");
 // Cloudflare Turnstile (lead-form bot check) — see components/site/TurnstileWidget.tsx
 const turnstileOrigin = "https://challenges.cloudflare.com";
+// Sentry error monitoring (browser event ingest) — see src/instrumentation-client.ts
+const sentryOrigins = "https://*.ingest.sentry.io https://*.ingest.us.sentry.io https://*.ingest.de.sentry.io";
 const isDevelopment = process.env.NODE_ENV !== "production";
 // Only the sandbox's development server may be embedded in the preview.
 // Production and ordinary local development retain clickjacking protection.
@@ -78,7 +80,7 @@ const csp = [
   `img-src 'self' data: blob: ${supabaseOrigins.split(" ")[0]} ${adsenseImgOrigins}`,
   `font-src 'self' data: https://fonts.gstatic.com`,
   `media-src 'self' ${heroVideoOrigin}`,
-  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins} ${turnstileOrigin}`,
+  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins} ${turnstileOrigin} ${sentryOrigins}`,
   `frame-src ${adsenseFrameOrigins} ${turnstileOrigin}`,
   // Funding Choices / consent messaging and ad iframes register a child
   // frame via 'child-src'; older engines fall back to it from frame-src.
