@@ -324,6 +324,17 @@ export async function upsertResourceAction(
 
   const payload = buildPayload(config, values, auth.user.id, isCreate);
 
+  // The first custom "Let's talk" link would otherwise hide the built-in
+  // entries; copy them in first so they stay visible and editable.
+  if (isCreate && config.key === "hub-links") {
+    try {
+      const { seedHubLinksIfEmpty } = await import("@/lib/admin/ajsystemsoft_in_website-defaults");
+      await seedHubLinksIfEmpty(admin);
+    } catch (error) {
+      console.error("[admin] seed hub links", error);
+    }
+  }
+
   if (isCreate) {
     const { data, error } = await admin.from(config.table).insert(payload).select("id").limit(1);
     if (error || !data || data.length === 0) {

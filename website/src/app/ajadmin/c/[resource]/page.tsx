@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ResourceList } from "@/components/admin/ResourceList";
 import { getResourceConfig, isResourceKey, listResourceRows } from "@/lib/admin/crud";
 import { SetupNotice } from "@/components/admin/SetupNotice";
+import { ImportWebsiteContent } from "@/components/admin/ajsystemsoft_in_ImportWebsiteContent";
 import { isSupabaseConfigured } from "@/lib/env";
 import { getCurrentUser } from "@/lib/auth/session";
 import { can } from "@/lib/auth/permissions";
@@ -64,6 +65,9 @@ export default async function ResourceListPage({
       <p className="mt-1 text-sm text-ink-muted">
         Create, edit, publish and organise {config.label.toLowerCase()}.
       </p>
+      {can(user.role, `${config.capability}:write` as Parameters<typeof can>[1]) ? (
+        <ImportWebsiteContent resource={config.key} />
+      ) : null}
       <div className="mt-5">
         <ResourceList
           config={config}

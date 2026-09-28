@@ -97,6 +97,11 @@ const NAV_GROUPS = [
   },
 ] as const;
 
+/** Flat list of every admin module (label, group, link) for the module search. */
+export const ADMIN_NAV_ITEMS = NAV_GROUPS.flatMap((group) =>
+  group.items.map((item) => ({ ...item, group: group.title })),
+);
+
 function isActiveRoute(pathname: string, href: string): boolean {
   return pathname === href || (href !== "/ajadmin" && pathname.startsWith(`${href}/`));
 }

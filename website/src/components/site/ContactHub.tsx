@@ -50,13 +50,14 @@ const HUB_ICONS: Record<HubLinkIcon, { Icon: IconComponent; tone: string }> = {
   support: { Icon: LifeBuoy, tone: "email" },
 };
 
-export function ContactHub({ actions, links = [] }: { actions: ContactHubAction[]; links?: HubLink[] }) {
+export function ContactHub({ actions, links = [], showBuiltIns = true }: { actions: ContactHubAction[]; links?: HubLink[]; showBuiltIns?: boolean }) {
   const ready = useSyncExternalStore(subscribe, supported, serverSnapshot);
   // Shown on every public page and kept mounted across navigation so it never blinks.
-  return ready ? <ContactHubControl actions={actions} links={links} /> : null;
+  // Once the admin manages the list, its rows replace the built-in entries.
+  return ready ? <ContactHubControl actions={showBuiltIns ? actions : []} links={links} showReview={showBuiltIns} /> : null;
 }
 
-function ContactHubControl({ actions, links }: { actions: ContactHubAction[]; links: HubLink[] }) {
+function ContactHubControl({ actions, links, showReview }: { actions: ContactHubAction[]; links: HubLink[]; showReview: boolean }) {
   const id = useId();
   const pathname = usePathname();
   const panel = useRef<HTMLDivElement>(null);
@@ -108,7 +109,7 @@ function ContactHubControl({ actions, links }: { actions: ContactHubAction[]; li
               <a href={action.href} {...NEW_TAB} className={styles.action} onClick={() => close()}>{content}</a>
             </li>;
           })}
-          {GOOGLE_REVIEW_URL && <li>
+          {showReview && GOOGLE_REVIEW_URL && <li>
             <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className={styles.action} onClick={() => close()}>
               <span className={`${styles.actionIcon} ${styles.tone_star}`} aria-hidden="true"><Star size={13} className="fill-current" /></span>
               <span>Write a Google review</span><ArrowUpRight size={14} aria-hidden="true" />

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ExternalLink, LogOut, Menu, ShieldCheck } from "lucide-react";
 import { AdminNav, adminPageLabel } from "@/components/admin/AdminNav";
 import { Drawer } from "@/components/ui/Drawer";
+import { AdminModuleSearch } from "@/components/admin/ajsystemsoft_in_AdminModuleSearch";
 import { IconButton } from "@/components/ui/IconButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import styles from "./admin-surface.module.css";
@@ -139,6 +140,7 @@ export function AdminShell({
             </p>
             <p className="mt-0.5 text-sm font-semibold text-ink">{pageLabel}</p>
           </div>
+          <AdminModuleSearch className="mx-6 w-full max-w-md" />
           <Link
             href="/"
             target="_blank"
@@ -196,6 +198,7 @@ export function AdminShell({
           </div>
         }
       >
+        <AdminModuleSearch className="mb-5" onNavigate={() => setOpen(false)} />
         <AdminNav onNavigate={() => setOpen(false)} />
       </Drawer>
     </div>
