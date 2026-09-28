@@ -6,8 +6,10 @@ import { MapPin, Star } from "lucide-react";
  * the visitor taps the stars and posts directly.
  */
 const PLACE_NAME = "Ankit jangid software engineer ( AJS )";
-const REVIEW_URL =
+const MAPS_URL =
   "https://www.google.com/maps/place/Ankit+jangid+software+engineer+(+AJS+)/@26.862318,75.9017122,17z/data=!4m8!3m7!1s0x396db97e41e9448b:0xf03fd987e7c5524d!8m2!3d26.8623132!4d75.9042871!9m1!1b1!16s%2Fg%2F11y89dlr97";
+// Direct star-box link from Google Business Profile → "Ask for reviews" (g.page/r/...).
+const REVIEW_URL = process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL || MAPS_URL;
 const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(PLACE_NAME)}&ll=26.8623132,75.9042871&z=16&output=embed`;
 
 export function GoogleReviewCard() {
@@ -45,7 +47,7 @@ export function GoogleReviewCard() {
               Write a Google review
             </a>
             <a
-              href={REVIEW_URL}
+              href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="focus-ring inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-brand-50"
