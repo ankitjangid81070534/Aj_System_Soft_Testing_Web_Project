@@ -7,6 +7,7 @@ import type { PublicNavLink } from "@/lib/data/navigation";
 import styles from "./footer.module.css";
 import { SocialLinks } from "./SocialLinks";
 import { Button } from "./Button";
+import { CookieSettingsButton } from "@/components/site/CookieSettingsButton";
 
 export function Footer({
   settings,
@@ -76,7 +77,10 @@ export function Footer({
             <p className={styles.legalNotice}>
               © 2026 Ankit System Soft Technology. All rights reserved. | An MSME Registered Enterprise | Udyam Reg No: UDYAM-RJ-17-0685557
             </p>
-            <p>{tagline}</p>
+            <p>
+              {tagline}{" "}·{" "}
+              <CookieSettingsButton className="underline underline-offset-2 hover:opacity-80" />
+            </p>
           </div>
         </div>
       </div>

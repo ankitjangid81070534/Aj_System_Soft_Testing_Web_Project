@@ -7,6 +7,7 @@ import { SectionScrollFx } from "@/components/motion/SectionScrollFx";
 import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { consentBootScript } from "@/lib/consent";
 import "./globals.css";
 import "./surface-system.css";
 import "./accent-surfaces.css";
@@ -57,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={siteSans.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: consentBootScript }} />
         <script
           async
           crossOrigin="anonymous"

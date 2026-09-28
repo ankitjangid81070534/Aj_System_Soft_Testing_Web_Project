@@ -1,5 +1,9 @@
 # Base44 Dev Environment
 
+## Cookie consent (2026-09-28)
+- `lib/consent.ts` = Google Consent Mode v2. `consentBootScript` runs first in `<head>` (before AdSense/GA): defaults ad/analytics to denied, restores `localStorage["ajs_cookie_consent"]`. `components/site/CookieConsent.tsx` = bottom-right card (Accept / Reject / Customize), mounted in `(public)/layout.tsx`; footer "Cookie settings" reopens it via the `ajs:open-cookie-settings` event.
+- `OfferPopup` (modal `<dialog>`) waits for `ajs:cookie-consent-saved` when no choice exists; otherwise the modal made the cookie card unclickable.
+
 ## Exit-intent callback popup (2026-09-28)
 - `components/site/ExitIntentPopup.tsx` (mounted in `(public)/layout.tsx`): desktop (`pointer: fine`) only, opens when the pointer leaves through the top edge after 8s on page, max once per 7 days (`localStorage["ajs_exit_intent_seen"]`), skipped on contact/quote/auth/account/legal pages or when another `<dialog>` is open. Renders `ExitIntentForm` (LeadForms.tsx) → same `submitContactAction` (Turnstile, agreement, emails) with hidden company "Not provided" and message "Exit-intent callback request from <path>". No schema change.
 
