@@ -28,7 +28,9 @@ describe("sitemap matches public route and metadata contracts (mocked records)",
     for (const path of paths) {
       expect(path).not.toMatch(/^\/(ajadmin|account|login|signup|auth|api|design-preview)/);
       const route = path.replace(/^(\/(services|projects|blog))\/[^/]+$/, "$1/[slug]")
-        .replace(/^\/ai-tools\/[^/]+$/, "/ai-tools/[toolId]");
+        .replace(/^\/ai-tools\/[^/]+$/, "/ai-tools/[toolId]")
+        .replace(/^\/ai-integrations\/compare\/[^/]+$/, "/ai-integrations/compare/[slug]")
+        .replace(/^\/ai-integrations\/(?!compare\/)[^/]+$/, "/ai-integrations/[slug]");
       expect(existsSync(resolve("src/app/(public)", `.${route}`, "page.tsx"))).toBe(true);
     }
   });
