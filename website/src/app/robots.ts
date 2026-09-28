@@ -16,6 +16,7 @@ const PRIVATE_PATHS = [
   "/auth/",
   "/api/",
   "/design-preview",
+  "/juspay-demo",
 ];
 
 export default function robots(): MetadataRoute.Robots {
