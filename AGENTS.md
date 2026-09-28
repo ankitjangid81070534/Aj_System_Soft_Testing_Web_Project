@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Cloudflare Turnstile on lead forms (2026-09-28)
+- Contact, quote and appointment forms render `components/site/TurnstileWidget.tsx` (explicit render, inside `GuardFields`, reset on every action state change). Server check `lib/security/turnstile.ts` runs in `spamAndRateLimitGuard` after the rate limit. Enforced ONLY when both `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set; otherwise forms behave exactly as before. CSP allows `https://challenges.cloudflare.com` (script/connect/frame/child).
+
 ## "Let's talk" admin links + FAQ page (2026-09-28)
 - `/ajadmin/c/hub-links` (generic resource `hub-links`, `settings:write`, nav "Let's talk links"): title, link (https / site path / tel: / mailto:), icon select (`HUB_LINK_ICON_OPTIONS` in `lib/admin/resources.ts`), new-tab, active, sort order. Table `contact_hub_links` from migration `0024_contact_hub_links.sql` — MUST be run manually in Supabase (REST returned 404 until then; the panel just shows no extra links). Reader `lib/data/contact-hub-links.ts` (tag `contact-hub-links`), rendered after the built-in actions in `ContactHub`.
 - ContactHub icon tiles are 24px (22px ≤480px). `.action span { flex: 1 }` used to stretch the tile into a ~120px pill; `.action .actionIcon { flex: 0 0 auto }` fixes it.

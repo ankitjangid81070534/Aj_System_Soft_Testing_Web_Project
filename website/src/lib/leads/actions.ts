@@ -5,6 +5,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/env";
 import { clientIpFrom, isRateLimited } from "@/lib/rate-limit";
+import { verifyTurnstile } from "@/lib/security/turnstile";
 import {
   AGREEMENT_REQUIRED_MESSAGE,
   appointmentSchema,
@@ -48,6 +49,7 @@ async function spamAndRateLimitGuard(
   guard: { website: string; startedAt: number },
   routeKey: string,
   email: string,
+  turnstileToken: string | undefined,
 ): Promise<string | null> {
   const spamMessage = assertNotSpam(guard);
   if (spamMessage) return spamMessage;
@@ -57,6 +59,8 @@ async function spamAndRateLimitGuard(
   if (isRateLimited(`${routeKey}:${ip}`)) {
     return "Too many submissions from your network. Please try again later.";
   }
+  const turnstileError = await verifyTurnstile(turnstileToken, ip);
+  if (turnstileError) return turnstileError;
   if (
     email &&
     isRateLimited(`${routeKey}:email:${email.toLowerCase()}`, { windowMs: 60 * 60 * 1000, max: 3 })
@@ -109,7 +113,7 @@ export async function submitContactAction(
   }
   const agreementError = await agreementGate(parsed.data.agreementAccepted);
   if (agreementError) return failure(agreementError);
-  const spam = await spamAndRateLimitGuard(parsed.data, "contact", parsed.data.email);
+  const spam = await spamAndRateLimitGuard(parsed.data, "contact", parsed.data.email, formString(formData, "cf-turnstile-response"));
   if (spam) return failure(spam);
   if (!isSupabaseConfigured) {
     return failure("Online submissions are not enabled yet. Please reach us directly.");
@@ -209,7 +213,7 @@ export async function submitQuoteAction(
   const attachmentError = validateAttachment(attachmentFile);
   if (attachmentError) return failure(attachmentError);
 
-  const spam = await spamAndRateLimitGuard(parsed.data, "quote", parsed.data.email);
+  const spam = await spamAndRateLimitGuard(parsed.data, "quote", parsed.data.email, formString(formData, "cf-turnstile-response"));
   if (spam) return failure(spam);
   if (!isSupabaseConfigured) {
     return failure("Online submissions are not enabled yet. Please reach us directly.");
@@ -320,7 +324,7 @@ export async function requestAppointmentAction(
   if (!parsed.success) {
     return failure(parsed.error.issues[0]?.message ?? "Please check the highlighted fields.");
   }
-  const spam = await spamAndRateLimitGuard(parsed.data, "appointment", parsed.data.email);
+  const spam = await spamAndRateLimitGuard(parsed.data, "appointment", parsed.data.email, formString(formData, "cf-turnstile-response"));
   if (spam) return failure(spam);
   if (!isSupabaseConfigured) {
     return failure("Online bookings are not enabled yet. Please reach us directly.");

@@ -9,6 +9,7 @@ import { describeDate, slotKey, slotLabel, upcomingBookingDates } from "@/lib/bo
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { QuoteWizard } from "./QuoteWizard";
+import { TurnstileWidget } from "./TurnstileWidget";
 import {
   getBookedSlotsAction,
   requestAppointmentAction,
@@ -61,7 +62,7 @@ export function AgreementCheckbox({ id, className }: { id: string; className?: s
  * Hidden spam guards: a honeypot field bots love to fill, plus the render
  * timestamp used as a minimum fill-time check on the server.
  */
-function GuardFields({ startedAt }: { startedAt: number }) {
+function GuardFields({ startedAt, resetKey }: { startedAt: number; resetKey?: unknown }) {
   const honeypotId = useId();
   return (
     <>
@@ -73,6 +74,7 @@ function GuardFields({ startedAt }: { startedAt: number }) {
         <input id={honeypotId} type="text" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <input type="hidden" name="startedAt" value={startedAt} />
+      <TurnstileWidget resetKey={resetKey} />
     </>
   );
 }
@@ -197,7 +199,7 @@ function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset
 
   return (
     <form action={formAction} {...formProps} className="flex flex-col gap-4">
-      <GuardFields startedAt={startedAt} />
+      <GuardFields startedAt={startedAt} resetKey={state} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="c-name" required>
           <Input
@@ -290,7 +292,7 @@ function QuoteFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: 
       action={formAction}
       pending={pending}
       message={state.message}
-      guards={<GuardFields startedAt={startedAt} />}
+      guards={<GuardFields startedAt={startedAt} resetKey={state} />}
       project={
         <fieldset className="flex flex-col gap-4" disabled={pending}>
           <legend className="text-sm font-semibold text-ink">1 · Project</legend>
@@ -520,7 +522,7 @@ function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onR
 
   return (
     <form action={formAction} {...formProps} className="flex flex-col gap-4">
-      <GuardFields startedAt={startedAt} />
+      <GuardFields startedAt={startedAt} resetKey={state} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="a-name" required>
           <Input id="a-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />
