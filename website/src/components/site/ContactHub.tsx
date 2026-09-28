@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowUpRight, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
+import { ArrowUpRight, Mail, MessageCircle, Phone, Send, Star, X } from "lucide-react";
+
+// Direct Google "Ask for reviews" link (star box); hidden when not configured.
+const GOOGLE_REVIEW_URL = process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL;
 import type { ContactHubAction } from "@/lib/contact-hub";
 import { AiToolsLauncher } from "./AiToolsLauncher";
 import styles from "./contact-hub.module.css";
@@ -78,6 +81,12 @@ function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
               : <a href={action.href} className={styles.action} onClick={() => close()}>{content}</a>}
             </li>;
           })}
+          {GOOGLE_REVIEW_URL && <li>
+            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className={styles.action} onClick={() => close()}>
+              <span className={styles.actionIcon} style={{ background: "#fbbf24", color: "#fff" }} aria-hidden="true"><Star size={15} className="fill-current" /></span>
+              <span>Write a Google review</span><ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          </li>}
         </ul>
       </div>
     </aside>
