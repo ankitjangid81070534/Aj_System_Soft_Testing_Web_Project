@@ -1957,6 +1957,42 @@ export type Database = {
         };
         Relationships: [];
       };
+      contact_hub_links: {
+        Row: {
+          id: string;
+          label: string;
+          url: string;
+          icon: string;
+          open_new_tab: boolean;
+          is_active: boolean;
+          sort_order: number;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          label: string;
+          url: string;
+          icon?: string;
+          open_new_tab?: boolean;
+          is_active?: boolean;
+          sort_order?: number;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          label?: string;
+          url?: string;
+          icon?: string;
+          open_new_tab?: boolean;
+          is_active?: boolean;
+          sort_order?: number;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       trusted_clients: {
         Row: {
           id: string;

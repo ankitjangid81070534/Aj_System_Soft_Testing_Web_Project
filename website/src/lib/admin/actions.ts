@@ -128,6 +128,10 @@ function refreshResource(config: ResourceConfig, ...slugs: (string | undefined)[
       updateTag("packages");
       revalidatePath("/");
     }
+    if (config.key === "hub-links") {
+      updateTag("contact-hub-links");
+      revalidatePath("/", "layout");
+    }
     if (config.key === "socials") {
       updateTag("social-links");
       // Footer settings also cache the composed social list.

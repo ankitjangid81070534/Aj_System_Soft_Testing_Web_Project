@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## "Let's talk" admin links + FAQ page (2026-09-28)
+- `/ajadmin/c/hub-links` (generic resource `hub-links`, `settings:write`, nav "Let's talk links"): title, link (https / site path / tel: / mailto:), icon select (`HUB_LINK_ICON_OPTIONS` in `lib/admin/resources.ts`), new-tab, active, sort order. Table `contact_hub_links` from migration `0024_contact_hub_links.sql` — MUST be run manually in Supabase (REST returned 404 until then; the panel just shows no extra links). Reader `lib/data/contact-hub-links.ts` (tag `contact-hub-links`), rendered after the built-in actions in `ContactHub`.
+- ContactHub icon tiles are 24px (22px ≤480px). `.action span { flex: 1 }` used to stretch the tile into a ~120px pill; `.action .actionIcon { flex: 0 0 auto }` fixes it.
+- `/faq` page: static `faq-content.ts` + FAQPage/Breadcrumb JSON-LD, in sitemap and footer "Company" group.
+
 ## Client password change while signed in (2026-09-27)
 - `/account` Profile card → "Change password" (`components/portal/ChangePasswordForm.tsx`, actions `lib/portal/password-actions.ts`): tab 1 = current password (checked on a throw-away non-persisting anon client so the visitor's cookies are untouched), tab 2 = 6-digit email code (cookie `ajs_account_pw_otp`, `createGateToken("reset", …, "client:<userId>:<code>")`) — works for Google-only accounts. Both set the password via service role `updateUserById`; rate-limited per user. Email template `renderPasswordOtp(code, "admin"|"client")` is shared with the admin reset.
 - Dev-only quirk: `/auth/callback` error redirects use `request.url` origin, which is `0.0.0.0:3000` inside the container; production is unaffected.

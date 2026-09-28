@@ -78,6 +78,7 @@ const NAV_GROUPS = [
       { href: "/ajadmin/copy", label: "Website text", Icon: FileText },
       { href: "/ajadmin/c/navigation", label: "Navigation", Icon: LinkIcon },
       { href: "/ajadmin/c/socials", label: "Social links", Icon: AtSign },
+      { href: "/ajadmin/c/hub-links", label: "Let's talk links", Icon: MessagesSquare },
       { href: "/ajadmin/media", label: "Media library", Icon: ImageIcon },
       { href: "/ajadmin/c/seo", label: "SEO manager", Icon: Search },
       { href: "/ajadmin/c/redirects", label: "Redirects", Icon: Share2 },

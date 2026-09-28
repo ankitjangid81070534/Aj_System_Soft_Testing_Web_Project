@@ -61,7 +61,27 @@ export type ResourceKey =
   | "socials"
   | "case-studies"
   | "trusted-clients"
-  | "packages";
+  | "packages"
+  | "hub-links";
+
+/** Icons an admin can pick for a "Let's talk" link (rendered by ContactHub). */
+export const HUB_LINK_ICON_OPTIONS = [
+  { value: "link", label: "Link" },
+  { value: "globe", label: "Website" },
+  { value: "calendar", label: "Calendar / booking" },
+  { value: "file", label: "Document / brochure" },
+  { value: "star", label: "Review / star" },
+  { value: "map", label: "Location / map" },
+  { value: "video", label: "Video / meeting" },
+  { value: "whatsapp", label: "WhatsApp" },
+  { value: "phone", label: "Phone" },
+  { value: "mail", label: "Email" },
+  { value: "instagram", label: "Instagram" },
+  { value: "linkedin", label: "LinkedIn" },
+  { value: "youtube", label: "YouTube" },
+  { value: "payment", label: "Payment" },
+  { value: "support", label: "Support / help" },
+] as const;
 
 export type CapabilityBase = "content" | "settings";
 
@@ -940,6 +960,38 @@ export const RESOURCES: Record<ResourceKey, ResourceConfig> = {
       { name: "sort_order", label: "Sort order", type: "number" },
     ],
   },
+
+  "hub-links": {
+    key: "hub-links",
+    label: "Let's talk links",
+    singular: "Let's talk link",
+    table: "contact_hub_links",
+    section: "hub-links",
+    capability: "settings",
+    supports: { activate: true, reorder: true },
+    defaultOrder: { column: "sort_order", asc: true },
+    listColumns: [
+      { name: "label", label: "Title" },
+      { name: "url", label: "Link" },
+      { name: "is_active", label: "Active", render: "boolean" },
+    ],
+    searchFields: ["label", "url"],
+    fields: [
+      { name: "label", label: "Title", type: "text", required: true, max: 60, hint: "Shown in the Let's talk panel, e.g. Book a free call." },
+      {
+        name: "url",
+        label: "Link",
+        type: "text",
+        required: true,
+        max: 500,
+        hint: "https://… , a site path like /services, tel:+91… or mailto:…",
+      },
+      { name: "icon", label: "Icon", type: "select", options: HUB_LINK_ICON_OPTIONS, required: true },
+      { name: "open_new_tab", label: "Open in a new tab", type: "boolean" },
+      { name: "is_active", label: "Active", type: "boolean" },
+      { name: "sort_order", label: "Sort order", type: "number", hint: "Lower numbers show first." },
+    ],
+  },
 };
 
 export const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -1033,6 +1085,17 @@ export function buildResourceSchema(config: ResourceConfig): z.ZodType<Record<st
             .min(1, "URL is required")
             .max(max)
             .refine(isHttpsUrl, "AI method links must use https://");
+        }
+        if (config.key === "hub-links" && field.name === "url") {
+          shape[field.name] = z
+            .string()
+            .trim()
+            .min(1, "Link is required")
+            .max(max)
+            .refine(
+              (value) => isSafeNavigationTarget(value) || /^(tel|mailto):[^\s<>"']+$/i.test(value),
+              "Use https://, a site path, tel: or mailto:",
+            );
         }
         if (config.key === "seo" && field.name === "path") {
           shape[field.name] = z
