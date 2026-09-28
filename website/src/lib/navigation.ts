@@ -44,6 +44,7 @@ export const FOOTER_LINK_GROUPS = [
       { label: "About Us", href: "/about" },
       { label: "Team", href: "/team" },
       { label: "Verified Reviews", href: "/reviews" },
+      { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
     ],
   },
