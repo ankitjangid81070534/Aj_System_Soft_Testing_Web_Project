@@ -1,5 +1,10 @@
 # Base44 Dev Environment
 
+## MANDATORY naming rule for NEW files/folders (owner, 2026-09-28)
+- Before any new work, check whether a new file or folder is needed. Every NEW file and NEW folder must start with the prefix `ajsystemsoft_in_` (e.g. `ajsystemsoft_in_PricingCard.tsx`, `ajsystemsoft_in_helpers/`). Update imports to match.
+- Never rename existing files/folders to add the prefix — that would break imports/routes. Rule applies to new ones only.
+- Exceptions where the framework forces a name (the prefix would break it): Next.js reserved files (`page.tsx`, `layout.tsx`, `route.ts`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `template.tsx`, `sitemap.ts`, `robots.ts`, `opengraph-image.*`, `icon.*`), route-segment folders under `src/app` (folder name = public URL), and config files (`package.json`, `*.config.*`). Supabase migrations keep the number first: `0025_ajsystemsoft_in_<name>.sql`. Tests follow the source file: `ajsystemsoft_in_<name>.test.ts`.
+
 ## Cookie consent (2026-09-28)
 - `lib/consent.ts` = Google Consent Mode v2. `consentBootScript` runs first in `<head>` (before AdSense/GA): defaults ad/analytics to denied, restores `localStorage["ajs_cookie_consent"]`. `components/site/CookieConsent.tsx` = bottom-right card (Accept / Reject / Customize), mounted in `(public)/layout.tsx`; footer "Cookie settings" reopens it via the `ajs:open-cookie-settings` event.
 - `OfferPopup` (modal `<dialog>`) waits for `ajs:cookie-consent-saved` when no choice exists; otherwise the modal made the cookie card unclickable.
