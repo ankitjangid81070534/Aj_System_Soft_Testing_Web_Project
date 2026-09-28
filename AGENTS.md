@@ -1,5 +1,29 @@
 # Base44 Dev Environment
 
+## MANDATORY naming rule for NEW files/folders (owner, 2026-09-28)
+- Before any new work, check whether a new file or folder is needed. Every NEW file and NEW folder must start with the prefix `ajsystemsoft_in_` (e.g. `ajsystemsoft_in_PricingCard.tsx`, `ajsystemsoft_in_helpers/`). Update imports to match.
+- Never rename existing files/folders to add the prefix — that would break imports/routes. Rule applies to new ones only.
+- Exceptions where the framework forces a name (the prefix would break it): Next.js reserved files (`page.tsx`, `layout.tsx`, `route.ts`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `template.tsx`, `sitemap.ts`, `robots.ts`, `opengraph-image.*`, `icon.*`), route-segment folders under `src/app` (folder name = public URL), and config files (`package.json`, `*.config.*`). Supabase migrations keep the number first: `0025_ajsystemsoft_in_<name>.sql`. Tests follow the source file: `ajsystemsoft_in_<name>.test.ts`.
+- Supabase database objects: every NEW table created in a migration must be named `ajsystemsoft_in_<name>` (e.g. `create table if not exists public.ajsystemsoft_in_invoices`). Same prefix for new views, functions/RPCs, enums/types, triggers, indexes and policies created for new tables. Never rename existing tables/columns (app code queries them by name) — only new objects get the prefix. Adding columns to an existing table keeps that table's name. Keep migrations additive/idempotent as before.
+
+## Cookie consent (2026-09-28)
+- `lib/consent.ts` = Google Consent Mode v2. `consentBootScript` runs first in `<head>` (before AdSense/GA): defaults ad/analytics to denied, restores `localStorage["ajs_cookie_consent"]`. `components/site/CookieConsent.tsx` = bottom-right card (Accept / Reject / Customize), mounted in `(public)/layout.tsx`; footer "Cookie settings" reopens it via the `ajs:open-cookie-settings` event.
+- `OfferPopup` (modal `<dialog>`) waits for `ajs:cookie-consent-saved` when no choice exists; otherwise the modal made the cookie card unclickable.
+
+## Exit-intent callback popup (2026-09-28)
+- `components/site/ExitIntentPopup.tsx` (mounted in `(public)/layout.tsx`): desktop (`pointer: fine`) only, opens when the pointer leaves through the top edge after 8s on page, max once per 7 days (`localStorage["ajs_exit_intent_seen"]`), skipped on contact/quote/auth/account/legal pages or when another `<dialog>` is open. Renders `ExitIntentForm` (LeadForms.tsx) → same `submitContactAction` (Turnstile, agreement, emails) with hidden company "Not provided" and message "Exit-intent callback request from <path>". No schema change.
+
+## Inline service inquiry form (2026-09-28)
+- `/services/[slug]` has an `#ask` section ("Ask about {service}") before the final CTA, rendering the existing `ContactForm` with `service={service.name}`: the message textarea is prefilled `Service: <name>` so the lead arrives tagged. Same `submitContactAction`, Turnstile, rate limit and emails — no schema change.
+
+## Cloudflare Turnstile on lead forms (2026-09-28)
+- Contact, quote and appointment forms render `components/site/TurnstileWidget.tsx` (explicit render, inside `GuardFields`, reset on every action state change). Server check `lib/security/turnstile.ts` runs in `spamAndRateLimitGuard` after the rate limit. Enforced ONLY when both `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set; otherwise forms behave exactly as before. CSP allows `https://challenges.cloudflare.com` (script/connect/frame/child).
+
+## "Let's talk" admin links + FAQ page (2026-09-28)
+- `/ajadmin/c/hub-links` (generic resource `hub-links`, `settings:write`, nav "Let's talk links"): title, link (https / site path / tel: / mailto:), icon select (`HUB_LINK_ICON_OPTIONS` in `lib/admin/resources.ts`), new-tab, active, sort order. Table `contact_hub_links` from migration `0024_contact_hub_links.sql` — MUST be run manually in Supabase (REST returned 404 until then; the panel just shows no extra links). Reader `lib/data/contact-hub-links.ts` (tag `contact-hub-links`), rendered after the built-in actions in `ContactHub`.
+- ContactHub icon tiles are 24px (22px ≤480px). `.action span { flex: 1 }` used to stretch the tile into a ~120px pill; `.action .actionIcon { flex: 0 0 auto }` fixes it.
+- `/faq` page: static `faq-content.ts` + FAQPage/Breadcrumb JSON-LD, in sitemap and footer "Company" group.
+
 ## Client password change while signed in (2026-09-27)
 - `/account` Profile card → "Change password" (`components/portal/ChangePasswordForm.tsx`, actions `lib/portal/password-actions.ts`): tab 1 = current password (checked on a throw-away non-persisting anon client so the visitor's cookies are untouched), tab 2 = 6-digit email code (cookie `ajs_account_pw_otp`, `createGateToken("reset", …, "client:<userId>:<code>")`) — works for Google-only accounts. Both set the password via service role `updateUserById`; rate-limited per user. Email template `renderPasswordOtp(code, "admin"|"client")` is shared with the admin reset.
 - Dev-only quirk: `/auth/callback` error redirects use `request.url` origin, which is `0.0.0.0:3000` inside the container; production is unaffected.

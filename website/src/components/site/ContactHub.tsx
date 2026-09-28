@@ -1,13 +1,22 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowUpRight, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
+import { useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import {
+  ArrowUpRight, CalendarDays, Camera, CreditCard, FileText, Globe, LifeBuoy, Link2, Mail, MapPin,
+  MessageCircle, Phone, Play, Send, Star, Video, X,
+} from "lucide-react";
+import type { HubLink, HubLinkIcon } from "@/lib/data/contact-hub-links";
+import { LinkedInIcon } from "@/components/ui/BrandIcons";
+
+// Direct Google "Ask for reviews" link (star box); hidden when not configured.
+const GOOGLE_REVIEW_URL = process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL;
 import type { ContactHubAction } from "@/lib/contact-hub";
 import { AiToolsLauncher } from "./AiToolsLauncher";
 import styles from "./contact-hub.module.css";
 
+// Owner: every "Let's talk" link opens in a new tab so the visitor keeps the site open.
+const NEW_TAB = { target: "_blank", rel: "noopener noreferrer" } as const;
 const subscribe = () => () => {};
 const supported = () => typeof HTMLElement.prototype.showPopover === "function";
 const serverSnapshot = () => false;
@@ -19,13 +28,35 @@ function WhatsAppIcon({ size = 16 }: { size?: number }) {
 
 const icons = { whatsapp: WhatsAppIcon, phone: Phone, email: Mail, project: Send, quote: Send, contact: MessageCircle };
 
-export function ContactHub({ actions }: { actions: ContactHubAction[] }) {
+type IconComponent = (props: { size?: number }) => ReactNode;
+const LinkedIn: IconComponent = ({ size = 13 }) => <span style={{ width: size, height: size, display: "inline-flex" }}><LinkedInIcon className="h-full w-full" /></span>;
+
+/** Admin-picked icon key → icon + colour tone for "Let's talk" links. */
+const HUB_ICONS: Record<HubLinkIcon, { Icon: IconComponent; tone: string }> = {
+  link: { Icon: Link2, tone: "project" },
+  globe: { Icon: Globe, tone: "phone" },
+  calendar: { Icon: CalendarDays, tone: "contact" },
+  file: { Icon: FileText, tone: "email" },
+  star: { Icon: Star, tone: "star" },
+  map: { Icon: MapPin, tone: "red" },
+  video: { Icon: Video, tone: "project" },
+  whatsapp: { Icon: WhatsAppIcon, tone: "whatsapp" },
+  phone: { Icon: Phone, tone: "phone" },
+  mail: { Icon: Mail, tone: "email" },
+  instagram: { Icon: Camera, tone: "contact" },
+  linkedin: { Icon: LinkedIn, tone: "phone" },
+  youtube: { Icon: Play, tone: "red" },
+  payment: { Icon: CreditCard, tone: "whatsapp" },
+  support: { Icon: LifeBuoy, tone: "email" },
+};
+
+export function ContactHub({ actions, links = [] }: { actions: ContactHubAction[]; links?: HubLink[] }) {
   const ready = useSyncExternalStore(subscribe, supported, serverSnapshot);
   // Shown on every public page and kept mounted across navigation so it never blinks.
-  return ready ? <ContactHubControl actions={actions} /> : null;
+  return ready ? <ContactHubControl actions={actions} links={links} /> : null;
 }
 
-function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
+function ContactHubControl({ actions, links }: { actions: ContactHubAction[]; links: HubLink[] }) {
   const id = useId();
   const pathname = usePathname();
   const panel = useRef<HTMLDivElement>(null);
@@ -72,10 +103,22 @@ function ContactHubControl({ actions }: { actions: ContactHubAction[] }) {
         <ul className={styles.actions}>
           {actions.map((action) => {
             const Icon = icons[action.kind];
-            const content = <><span className={`${styles.actionIcon} ${styles[`tone_${action.kind}`] ?? ""}`} aria-hidden="true"><Icon size={15} /></span><span>{action.label}</span><ArrowUpRight size={14} aria-hidden="true" /></>;
-            return <li key={action.kind}>{action.href.startsWith("/")
-              ? <Link href={action.href} className={styles.action} onClick={() => close()}>{content}</Link>
-              : <a href={action.href} className={styles.action} onClick={() => close()}>{content}</a>}
+            const content = <><span className={`${styles.actionIcon} ${styles[`tone_${action.kind}`] ?? ""}`} aria-hidden="true"><Icon size={13} /></span><span>{action.label}</span><ArrowUpRight size={14} aria-hidden="true" /></>;
+            return <li key={action.kind}>
+              <a href={action.href} {...NEW_TAB} className={styles.action} onClick={() => close()}>{content}</a>
+            </li>;
+          })}
+          {GOOGLE_REVIEW_URL && <li>
+            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className={styles.action} onClick={() => close()}>
+              <span className={`${styles.actionIcon} ${styles.tone_star}`} aria-hidden="true"><Star size={13} className="fill-current" /></span>
+              <span>Write a Google review</span><ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          </li>}
+          {links.map((link) => {
+            const { Icon, tone } = HUB_ICONS[link.icon] ?? HUB_ICONS.link;
+            const content = <><span className={`${styles.actionIcon} ${styles[`tone_${tone}`] ?? ""}`} aria-hidden="true"><Icon size={13} /></span><span>{link.label}</span><ArrowUpRight size={14} aria-hidden="true" /></>;
+            return <li key={link.id}>
+              <a href={link.href} {...NEW_TAB} className={styles.action} onClick={() => close()}>{content}</a>
             </li>;
           })}
         </ul>

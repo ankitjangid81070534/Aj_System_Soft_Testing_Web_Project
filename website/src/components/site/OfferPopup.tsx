@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { Offer } from "@/lib/data/growth";
 import { Dialog } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
+import { CONSENT_SAVED_EVENT, readConsent } from "@/lib/consent";
 import styles from "./offer-popup.module.css";
 
 function recordShown(offer: Offer) {
@@ -48,15 +49,21 @@ export function OfferPopup({ offer }: { offer: Offer }) {
     };
 
     if (shouldShow()) {
+      let timer: ReturnType<typeof setTimeout> | undefined;
       // Delay opening slightly so it isn't jarring on page load
-      const timer = setTimeout(() => {
-        setOpen(true);
-        // Record the view as soon as it is shown. Recording it only on close
-        // let the popup reappear on every navigation when the visitor ignored
-        // it instead of dismissing it.
-        recordShown(offer);
-      }, 2000);
-      return () => clearTimeout(timer);
+      const start = () => {
+        timer = setTimeout(() => {
+          setOpen(true);
+          // Record the view as soon as it is shown. Recording it only on close
+          // let the popup reappear on every navigation when the visitor ignored
+          // it instead of dismissing it.
+          recordShown(offer);
+        }, 2000);
+      };
+      // The modal popup would block the cookie card, so wait for a cookie choice first.
+      if (readConsent()) start();
+      else window.addEventListener(CONSENT_SAVED_EVENT, start, { once: true });
+      return () => { clearTimeout(timer); window.removeEventListener(CONSENT_SAVED_EVENT, start); };
     }
   }, [offer]);
 

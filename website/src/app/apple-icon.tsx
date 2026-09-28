@@ -1,22 +1,22 @@
 import { ImageResponse } from "next/og";
 
-export const size = { width: 192, height: 192 };
+export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-/** Branded favicon: white "AJ" on the brand-blue roundel. */
-export default function Icon() {
+/** Branded Apple touch icon: white "AJ" on the brand-blue roundel. */
+export default function AppleIcon() {
   return new ImageResponse(
     <div
       style={{
         width: "100%",
         height: "100%",
-        borderRadius: "9999px",
+        borderRadius: "36px",
         backgroundColor: "#2347dd",
         color: "#ffffff",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        fontSize: "84px",
+        fontSize: "80px",
         fontWeight: 700,
       }}
     >

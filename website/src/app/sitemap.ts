@@ -5,6 +5,8 @@ import { getProjectSitemapEntries } from "@/lib/data/projects";
 import { getPostSitemapEntries } from "@/lib/data/blog";
 import { getSeoOverride } from "@/lib/seo/overrides";
 import { AI_TOOLS } from "@/lib/ai/tools";
+import { AI_INTEGRATION_SERVICES } from "@/lib/ai-integrations/services";
+import { COMPARISONS } from "@/lib/ai-integrations/comparisons";
 
 export const revalidate = 3600;
 
@@ -30,6 +32,7 @@ const STATIC_ROUTES: readonly StaticRoute[] = [
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/team", changeFrequency: "monthly", priority: 0.75 },
+  { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
   { path: "/disclaimer", changeFrequency: "yearly", priority: 0.3 },
@@ -86,6 +89,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route.priority,
       };
     }),
+    ...[
+      "/ai-integrations",
+      ...AI_INTEGRATION_SERVICES.map((s) => `/ai-integrations/${s.slug}`),
+      ...COMPARISONS.map((c) => `/ai-integrations/compare/${c.slug}`),
+    ].map((path) => ({
+      url: new URL(path, siteUrl).toString(),
+      changeFrequency: "monthly" as const,
+      priority: path === "/ai-integrations" ? 0.8 : 0.7,
+    })),
     ...AI_TOOLS.map((tool) => ({
       url: new URL(`/ai-tools/${tool.id}`, siteUrl).toString(),
       changeFrequency: "monthly" as const,

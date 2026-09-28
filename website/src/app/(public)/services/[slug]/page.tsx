@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
 import { CTA } from "@/components/ui/CTA";
+import { ContactForm } from "@/components/site/LeadForms";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -330,6 +331,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
           </section>
         ) : null}
+
+        <section id="ask" className="border-t border-line" aria-labelledby="ask-heading">
+          <div className="mx-auto grid w-full max-w-content gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
+            <SectionHeader
+              eyebrow="Quick question?"
+              title={<span id="ask-heading">Ask about {service.name}</span>}
+              description="Send a short message — we usually reply within one business day, by email or WhatsApp."
+            />
+            <ContactForm startedAt={Date.now()} service={service.name} />
+          </div>
+        </section>
 
         <div className="mx-auto w-full max-w-content px-4 py-14 sm:px-6 sm:py-20">
           <CTA

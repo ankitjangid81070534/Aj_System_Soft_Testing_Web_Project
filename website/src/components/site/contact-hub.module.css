@@ -166,10 +166,10 @@
   --tone-a: #3b82f6; --tone-b: #1d4ed8; --glow: rgba(37, 99, 235, .45);
   display: grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
-  border-radius: 9px;
+  border-radius: 7px;
   color: #fff;
   background: linear-gradient(145deg, rgba(255,255,255,.35), transparent 55%), linear-gradient(150deg, var(--tone-a), var(--tone-b));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.55), inset 0 -2px 4px rgba(0,0,0,.2), 0 8px 16px -8px var(--glow);
@@ -177,16 +177,22 @@
   transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
 }
 .actionIcon svg { filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.3)); }
+/* `.action span { flex: 1 }` must not stretch the icon tile into a wide pill. */
+.action .actionIcon { flex: 0 0 auto; }
 .tone_whatsapp { --tone-a: #4ade80; --tone-b: #1ebe5b; --glow: rgba(37, 211, 102, .5); }
 .hub .panel .action { padding: 9px 12px; min-height: 42px; font-size: 13.5px; }
 @media (max-width: 480px) {
-  .actionIcon { width: 26px; height: 26px; border-radius: 8px; }
+  .actionIcon { width: 22px; height: 22px; border-radius: 6px; }
   .hub .panel .action { padding: 8px 10px; min-height: 40px; font-size: 13px; }
 }
 .tone_phone { --tone-a: #38bdf8; --tone-b: #0284c7; --glow: rgba(14, 165, 233, .5); }
 .tone_email { --tone-a: #fb923c; --tone-b: #ea580c; --glow: rgba(249, 115, 22, .5); }
 .tone_project, .tone_quote { --tone-a: #a78bfa; --tone-b: #6d28d9; --glow: rgba(124, 58, 237, .5); }
 .tone_contact { --tone-a: #f472b6; --tone-b: #db2777; --glow: rgba(236, 72, 153, .5); }
+.tone_star { --tone-a: #fcd34d; --tone-b: #f59e0b; --glow: rgba(245, 158, 11, .5); }
+.tone_red { --tone-a: #f87171; --tone-b: #dc2626; --glow: rgba(220, 38, 38, .45); }
+/* Admin can add many links: keep the panel compact and stagger up to 12 rows */
+.panel:popover-open .actions > li:nth-child(n+6) { animation-delay: .25s; }
 .hub .panel .action:hover .actionIcon {
   transform: perspective(400px) rotateX(12deg) rotateY(-14deg) translateZ(6px) scale(1.06);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -2px 4px rgba(0,0,0,.2), 0 14px 22px -8px var(--glow);

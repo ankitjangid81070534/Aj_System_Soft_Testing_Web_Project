@@ -39,11 +39,20 @@ export const FOOTER_LINK_GROUPS = [
     ],
   },
   {
+    title: "AI Solutions",
+    links: [
+      { label: "AI Integrations", href: "/ai-integrations" },
+      { label: "AI Tools", href: "/ai-tools" },
+      { label: "AI Methods", href: "/ai-methods" },
+    ],
+  },
+  {
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
       { label: "Team", href: "/team" },
       { label: "Verified Reviews", href: "/reviews" },
+      { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -51,6 +60,7 @@ export const FOOTER_LINK_GROUPS = [
     title: "Portal & Legal",
     links: [
       { label: "Client Login", href: "/login" },
+      { label: "Create Account", href: "/signup" },
       { label: "Service Agreement", href: "/service-agreement" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },

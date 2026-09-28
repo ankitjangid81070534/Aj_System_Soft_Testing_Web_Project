@@ -64,6 +64,8 @@ const adsenseConnectOrigins = [
   "https://ep1.adtrafficquality.google",
   "https://*.adtrafficquality.google",
 ].join(" ");
+// Cloudflare Turnstile (lead-form bot check) — see components/site/TurnstileWidget.tsx
+const turnstileOrigin = "https://challenges.cloudflare.com";
 const isDevelopment = process.env.NODE_ENV !== "production";
 // Only the sandbox's development server may be embedded in the preview.
 // Production and ordinary local development retain clickjacking protection.
@@ -71,16 +73,16 @@ const isBase44Preview = isDevelopment && Boolean(process.env.BASE44_PUBLIC_HOST_
 
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' ${adsenseScriptOrigins}${isDevelopment ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' ${adsenseScriptOrigins} ${turnstileOrigin}${isDevelopment ? " 'unsafe-eval'" : ""}`,
   `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
   `img-src 'self' data: blob: ${supabaseOrigins.split(" ")[0]} ${adsenseImgOrigins}`,
   `font-src 'self' data: https://fonts.gstatic.com`,
   `media-src 'self' ${heroVideoOrigin}`,
-  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins}`,
-  `frame-src ${adsenseFrameOrigins}`,
+  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins} ${turnstileOrigin}`,
+  `frame-src ${adsenseFrameOrigins} ${turnstileOrigin}`,
   // Funding Choices / consent messaging and ad iframes register a child
   // frame via 'child-src'; older engines fall back to it from frame-src.
-  `child-src ${adsenseFrameOrigins}`,
+  `child-src ${adsenseFrameOrigins} ${turnstileOrigin}`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -107,6 +109,8 @@ const nextConfig: NextConfig = {
   ...(process.env.BASE44_PUBLIC_HOST_SUFFIX
     ? { allowedDevOrigins: [`3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`] }
     : {}),
+  // Don't advertise the framework in response headers.
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**.supabase.co" },

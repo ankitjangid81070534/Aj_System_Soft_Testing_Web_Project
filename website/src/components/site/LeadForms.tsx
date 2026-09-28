@@ -9,9 +9,11 @@ import { describeDate, slotKey, slotLabel, upcomingBookingDates } from "@/lib/bo
 import { Field, Input, Select, Textarea } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { QuoteWizard } from "./QuoteWizard";
+import { TurnstileWidget } from "./TurnstileWidget";
 import {
   getBookedSlotsAction,
   requestAppointmentAction,
+  submitCallbackAction,
   submitContactAction,
   submitQuoteAction,
   type LeadFormState,
@@ -61,7 +63,7 @@ export function AgreementCheckbox({ id, className }: { id: string; className?: s
  * Hidden spam guards: a honeypot field bots love to fill, plus the render
  * timestamp used as a minimum fill-time check on the server.
  */
-function GuardFields({ startedAt }: { startedAt: number }) {
+function GuardFields({ startedAt, resetKey }: { startedAt: number; resetKey?: unknown }) {
   const honeypotId = useId();
   return (
     <>
@@ -73,6 +75,7 @@ function GuardFields({ startedAt }: { startedAt: number }) {
         <input id={honeypotId} type="text" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <input type="hidden" name="startedAt" value={startedAt} />
+      <TurnstileWidget resetKey={resetKey} />
     </>
   );
 }
@@ -171,18 +174,28 @@ const TIMELINE_OPTIONS = [
   "Just exploring",
 ] as const;
 
-export function ContactForm({ startedAt }: { startedAt: number }) {
+/** `service` prefills the message so inquiries from a service page arrive tagged. */
+export function ContactForm({ startedAt, service }: { startedAt: number; service?: string }) {
   const [attempt, setAttempt] = useState(0);
   return (
     <ContactFormAttempt
       key={attempt}
       startedAt={startedAt}
+      service={service}
       onReset={() => setAttempt((value) => value + 1)}
     />
   );
 }
 
-function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+function ContactFormAttempt({
+  startedAt,
+  service,
+  onReset,
+}: {
+  startedAt: number;
+  service?: string;
+  onReset: () => void;
+}) {
   const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
 
   if (state.status === "success") {
@@ -197,7 +210,7 @@ function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset
 
   return (
     <form action={formAction} {...formProps} className="flex flex-col gap-4">
-      <GuardFields startedAt={startedAt} />
+      <GuardFields startedAt={startedAt} resetKey={state} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="c-name" required>
           <Input
@@ -247,7 +260,15 @@ function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset
         required
         hint="A couple of sentences about what you need built or fixed."
       >
-        <Textarea id="c-message" name="message" required minLength={10} rows={5} maxLength={4000} />
+        <Textarea
+          id="c-message"
+          name="message"
+          required
+          minLength={10}
+          rows={5}
+          maxLength={4000}
+          defaultValue={service ? `Service: ${service}\n\n` : undefined}
+        />
       </Field>
       <AgreementCheckbox id="c-agreement" />
       <ErrorNote message={state.message} errorRef={errorRef} />
@@ -257,6 +278,111 @@ function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset
           {pending ? "Sending…" : "Send message"}
         </Button>
       </div>
+    </form>
+  );
+}
+
+/**
+ * Compact callback request used by the exit-intent popup. Submits through the
+ * same contact action (Turnstile, agreement, emails); company and message are
+ * filled with neutral defaults so the visitor only types what we need.
+ */
+type CallbackDetails = { name: string; email: string; phone: string };
+
+function callbackWhatsAppUrl(number: string, details: CallbackDetails, sourcePath: string) {
+  const text = [
+    "Hello, I just requested a free callback on your website.",
+    `Name: ${details.name}`,
+    `Email: ${details.email}`,
+    `Phone: ${details.phone}`,
+    `Page: ${sourcePath}`,
+  ].join("\n");
+  return `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+}
+
+/**
+ * Exit-intent callback form. Saves + emails like the contact form (without the
+ * Service Agreement), then hands the visitor to the owner's WhatsApp chat with
+ * their details pre-filled so they can send it immediately.
+ */
+export function ExitIntentForm({
+  startedAt,
+  sourcePath,
+  whatsappNumber,
+}: {
+  startedAt: number;
+  sourcePath: string;
+  whatsappNumber?: string | null;
+}) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitCallbackAction);
+  const [details, setDetails] = useState<CallbackDetails | null>(null);
+  const waUrl = whatsappNumber && details ? callbackWhatsAppUrl(whatsappNumber, details, sourcePath) : null;
+
+  useEffect(() => {
+    if (state.status !== "success" || !waUrl) return;
+    // New tab keeps the site open; if the browser blocks it, redirect this tab.
+    if (!window.open(waUrl, "_blank", "noopener,noreferrer")) window.location.href = waUrl;
+  }, [state.status, waUrl]);
+
+  if (state.status === "success") {
+    return (
+      <div role="status" className="flex flex-col items-center gap-3 py-5 text-center">
+        <CheckCircle2 aria-hidden="true" className="h-10 w-10 text-success" />
+        <p className="font-semibold text-ink">Thanks{details ? `, ${details.name}` : ""} — request received.</p>
+        <p className="text-sm text-ink-muted">
+          {waUrl ? "We are opening WhatsApp so you can send us your details directly." : "Our team will call you back within one business day."}
+        </p>
+        {waUrl && (
+          <a href={waUrl} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90">
+            <Send aria-hidden="true" className="h-4 w-4" /> Open WhatsApp chat
+          </a>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <form
+      action={formAction}
+      {...formProps}
+      onSubmitCapture={(event) => {
+        const data = new FormData(event.currentTarget);
+        setDetails({
+          name: String(data.get("name") ?? "").trim(),
+          email: String(data.get("email") ?? "").trim(),
+          phone: String(data.get("phone") ?? "").trim(),
+        });
+      }}
+      className="flex flex-col gap-3"
+    >
+      <GuardFields startedAt={startedAt} resetKey={state} />
+      <input type="hidden" name="company" value="Not provided" />
+      <input type="hidden" name="message" value={`Free callback request (exit popup) from ${sourcePath}`} />
+      <Field label="Your name" htmlFor="x-name" required>
+        <Input id="x-name" name="name" autoComplete="name" required minLength={2} maxLength={120} placeholder="Full name" />
+      </Field>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <Field label="Email" htmlFor="x-email" required>
+          <Input id="x-email" name="email" type="email" autoComplete="email" required maxLength={200} placeholder="you@company.com" />
+        </Field>
+        <Field label="Phone / WhatsApp" htmlFor="x-phone" required>
+          <Input id="x-phone" name="phone" type="tel" autoComplete="tel" required minLength={6} maxLength={20} placeholder="+91 98765 43210" />
+        </Field>
+      </div>
+      <label htmlFor="x-consent" className="flex items-start gap-2.5 text-xs leading-relaxed text-ink-muted">
+        <input id="x-consent" name="contactConsent" type="checkbox" required className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-brand-600)]" />
+        <span>
+          I agree to be contacted by phone, WhatsApp or email about my enquiry. See our{" "}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer" className="font-medium text-brand-600 underline underline-offset-2">Privacy Policy</a>.
+        </span>
+      </label>
+      <ErrorNote message={state.message} errorRef={errorRef} />
+      <Button type="submit" loading={pending}>
+        <Send aria-hidden="true" className="h-4 w-4" />
+        {pending ? "Sending…" : "Request a free callback"}
+      </Button>
+      <p className="text-center text-[11px] text-ink-muted">No spam. Your details are only used to reply to you.</p>
     </form>
   );
 }
@@ -290,7 +416,7 @@ function QuoteFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: 
       action={formAction}
       pending={pending}
       message={state.message}
-      guards={<GuardFields startedAt={startedAt} />}
+      guards={<GuardFields startedAt={startedAt} resetKey={state} />}
       project={
         <fieldset className="flex flex-col gap-4" disabled={pending}>
           <legend className="text-sm font-semibold text-ink">1 · Project</legend>
@@ -520,7 +646,7 @@ function AppointmentFormAttempt({ startedAt, onReset }: { startedAt: number; onR
 
   return (
     <form action={formAction} {...formProps} className="flex flex-col gap-4">
-      <GuardFields startedAt={startedAt} />
+      <GuardFields startedAt={startedAt} resetKey={state} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Your name" htmlFor="a-name" required>
           <Input id="a-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />

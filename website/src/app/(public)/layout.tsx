@@ -10,18 +10,22 @@ import { getPublicNavigation } from "@/lib/data/navigation";
 import { getTopBarAnnouncement, getPopupOffer } from "@/lib/data/growth";
 import { AnnouncementBar } from "@/components/site/AnnouncementBar";
 import { OfferPopup } from "@/components/site/OfferPopup";
+import { ExitIntentPopup } from "@/components/site/ExitIntentPopup";
+import { CookieConsent } from "@/components/site/CookieConsent";
 import { PublicSiteFrame } from "@/components/site/PublicSiteFrame";
 import { ContactHub } from "@/components/site/ContactHub";
 import { getContactHubActions } from "@/lib/contact-hub";
+import { getContactHubLinks } from "@/lib/data/contact-hub-links";
 
 export default async function PublicLayout({ children }: { children: ReactNode }) {
-  const [settings, navigation, topBarAnnouncement, popupOffer, services, projects] = await Promise.all([
+  const [settings, navigation, topBarAnnouncement, popupOffer, services, projects, hubLinks] = await Promise.all([
     getSiteSettings(),
     getPublicNavigation(),
     getTopBarAnnouncement(),
     getPopupOffer(),
     getServicesIndex(),
     getPublicProjects(),
+    getContactHubLinks(),
   ]);
 
   return (
@@ -47,8 +51,10 @@ export default async function PublicLayout({ children }: { children: ReactNode }
       />}
       footer={<Footer settings={settings} managedLinks={navigation.footer} />}
       afterFooter={<>
-        <ContactHub actions={getContactHubActions(settings)} />
+        <ContactHub actions={getContactHubActions(settings)} links={hubLinks} />
         {popupOffer && <OfferPopup offer={popupOffer} />}
+        <ExitIntentPopup whatsappNumber={settings?.whatsapp?.replace(/[^0-9]/g, "") || null} />
+        <CookieConsent />
       </>}
     >
       {children}

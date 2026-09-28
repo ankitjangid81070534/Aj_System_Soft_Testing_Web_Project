@@ -3,6 +3,7 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Button } from "@/components/ui/Button";
 import { ContactForm, AppointmentForm } from "@/components/site/LeadForms";
+import { GoogleReviewCard } from "@/components/site/GoogleReviewCard";
 import { buildRouteMetadata } from "@/lib/seo/metadata";
 import { getSiteSettings, whatsappLink } from "@/lib/data/settings";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -166,6 +167,8 @@ export default async function ContactPage() {
           </p>
           <AppointmentForm startedAt={startedAt} />
         </section>
+
+        <GoogleReviewCard />
       </div>
     </>
   );
