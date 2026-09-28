@@ -173,18 +173,28 @@ const TIMELINE_OPTIONS = [
   "Just exploring",
 ] as const;
 
-export function ContactForm({ startedAt }: { startedAt: number }) {
+/** `service` prefills the message so inquiries from a service page arrive tagged. */
+export function ContactForm({ startedAt, service }: { startedAt: number; service?: string }) {
   const [attempt, setAttempt] = useState(0);
   return (
     <ContactFormAttempt
       key={attempt}
       startedAt={startedAt}
+      service={service}
       onReset={() => setAttempt((value) => value + 1)}
     />
   );
 }
 
-function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset: () => void }) {
+function ContactFormAttempt({
+  startedAt,
+  service,
+  onReset,
+}: {
+  startedAt: number;
+  service?: string;
+  onReset: () => void;
+}) {
   const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
 
   if (state.status === "success") {
@@ -249,7 +259,15 @@ function ContactFormAttempt({ startedAt, onReset }: { startedAt: number; onReset
         required
         hint="A couple of sentences about what you need built or fixed."
       >
-        <Textarea id="c-message" name="message" required minLength={10} rows={5} maxLength={4000} />
+        <Textarea
+          id="c-message"
+          name="message"
+          required
+          minLength={10}
+          rows={5}
+          maxLength={4000}
+          defaultValue={service ? `Service: ${service}\n\n` : undefined}
+        />
       </Field>
       <AgreementCheckbox id="c-agreement" />
       <ErrorNote message={state.message} errorRef={errorRef} />

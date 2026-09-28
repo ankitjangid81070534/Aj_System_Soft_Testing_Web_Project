@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Inline service inquiry form (2026-09-28)
+- `/services/[slug]` has an `#ask` section ("Ask about {service}") before the final CTA, rendering the existing `ContactForm` with `service={service.name}`: the message textarea is prefilled `Service: <name>` so the lead arrives tagged. Same `submitContactAction`, Turnstile, rate limit and emails — no schema change.
+
 ## Cloudflare Turnstile on lead forms (2026-09-28)
 - Contact, quote and appointment forms render `components/site/TurnstileWidget.tsx` (explicit render, inside `GuardFields`, reset on every action state change). Server check `lib/security/turnstile.ts` runs in `spamAndRateLimitGuard` after the rate limit. Enforced ONLY when both `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are set; otherwise forms behave exactly as before. CSP allows `https://challenges.cloudflare.com` (script/connect/frame/child).
 
