@@ -13,6 +13,7 @@ import { TurnstileWidget } from "./TurnstileWidget";
 import {
   getBookedSlotsAction,
   requestAppointmentAction,
+  submitCallbackAction,
   submitContactAction,
   submitQuoteAction,
   type LeadFormState,
@@ -286,38 +287,102 @@ function ContactFormAttempt({
  * same contact action (Turnstile, agreement, emails); company and message are
  * filled with neutral defaults so the visitor only types what we need.
  */
-export function ExitIntentForm({ startedAt, sourcePath }: { startedAt: number; sourcePath: string }) {
-  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
+type CallbackDetails = { name: string; email: string; phone: string };
+
+function callbackWhatsAppUrl(number: string, details: CallbackDetails, sourcePath: string) {
+  const text = [
+    "Hello, I just requested a free callback on your website.",
+    `Name: ${details.name}`,
+    `Email: ${details.email}`,
+    `Phone: ${details.phone}`,
+    `Page: ${sourcePath}`,
+  ].join("\n");
+  return `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+}
+
+/**
+ * Exit-intent callback form. Saves + emails like the contact form (without the
+ * Service Agreement), then hands the visitor to the owner's WhatsApp chat with
+ * their details pre-filled so they can send it immediately.
+ */
+export function ExitIntentForm({
+  startedAt,
+  sourcePath,
+  whatsappNumber,
+}: {
+  startedAt: number;
+  sourcePath: string;
+  whatsappNumber?: string | null;
+}) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitCallbackAction);
+  const [details, setDetails] = useState<CallbackDetails | null>(null);
+  const waUrl = whatsappNumber && details ? callbackWhatsAppUrl(whatsappNumber, details, sourcePath) : null;
+
+  useEffect(() => {
+    if (state.status !== "success" || !waUrl) return;
+    // New tab keeps the site open; if the browser blocks it, redirect this tab.
+    if (!window.open(waUrl, "_blank", "noopener,noreferrer")) window.location.href = waUrl;
+  }, [state.status, waUrl]);
 
   if (state.status === "success") {
     return (
-      <div role="status" className="flex flex-col items-center gap-2 py-6 text-center">
-        <CheckCircle2 aria-hidden="true" className="h-9 w-9 text-success" />
-        <p className="font-semibold text-ink">{state.message ?? "Thanks — we'll call you back."}</p>
+      <div role="status" className="flex flex-col items-center gap-3 py-5 text-center">
+        <CheckCircle2 aria-hidden="true" className="h-10 w-10 text-success" />
+        <p className="font-semibold text-ink">Thanks{details ? `, ${details.name}` : ""} — request received.</p>
+        <p className="text-sm text-ink-muted">
+          {waUrl ? "We are opening WhatsApp so you can send us your details directly." : "Our team will call you back within one business day."}
+        </p>
+        {waUrl && (
+          <a href={waUrl} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90">
+            <Send aria-hidden="true" className="h-4 w-4" /> Open WhatsApp chat
+          </a>
+        )}
       </div>
     );
   }
 
   return (
-    <form action={formAction} {...formProps} className="flex flex-col gap-3">
+    <form
+      action={formAction}
+      {...formProps}
+      onSubmitCapture={(event) => {
+        const data = new FormData(event.currentTarget);
+        setDetails({
+          name: String(data.get("name") ?? "").trim(),
+          email: String(data.get("email") ?? "").trim(),
+          phone: String(data.get("phone") ?? "").trim(),
+        });
+      }}
+      className="flex flex-col gap-3"
+    >
       <GuardFields startedAt={startedAt} resetKey={state} />
       <input type="hidden" name="company" value="Not provided" />
-      <input type="hidden" name="message" value={`Exit-intent callback request from ${sourcePath}`} />
+      <input type="hidden" name="message" value={`Free callback request (exit popup) from ${sourcePath}`} />
       <Field label="Your name" htmlFor="x-name" required>
-        <Input id="x-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />
+        <Input id="x-name" name="name" autoComplete="name" required minLength={2} maxLength={120} placeholder="Full name" />
       </Field>
-      <Field label="Email" htmlFor="x-email" required>
-        <Input id="x-email" name="email" type="email" autoComplete="email" required maxLength={200} />
-      </Field>
-      <Field label="Phone / WhatsApp" htmlFor="x-phone" required>
-        <Input id="x-phone" name="phone" type="tel" autoComplete="tel" required minLength={6} maxLength={20} />
-      </Field>
-      <AgreementCheckbox id="x-agreement" />
+      <div className="grid gap-3 sm:grid-cols-2">
+        <Field label="Email" htmlFor="x-email" required>
+          <Input id="x-email" name="email" type="email" autoComplete="email" required maxLength={200} placeholder="you@company.com" />
+        </Field>
+        <Field label="Phone / WhatsApp" htmlFor="x-phone" required>
+          <Input id="x-phone" name="phone" type="tel" autoComplete="tel" required minLength={6} maxLength={20} placeholder="+91 98765 43210" />
+        </Field>
+      </div>
+      <label htmlFor="x-consent" className="flex items-start gap-2.5 text-xs leading-relaxed text-ink-muted">
+        <input id="x-consent" name="contactConsent" type="checkbox" required className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-brand-600)]" />
+        <span>
+          I agree to be contacted by phone, WhatsApp or email about my enquiry. See our{" "}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer" className="font-medium text-brand-600 underline underline-offset-2">Privacy Policy</a>.
+        </span>
+      </label>
       <ErrorNote message={state.message} errorRef={errorRef} />
       <Button type="submit" loading={pending}>
         <Send aria-hidden="true" className="h-4 w-4" />
         {pending ? "Sending…" : "Request a free callback"}
       </Button>
+      <p className="text-center text-[11px] text-ink-muted">No spam. Your details are only used to reply to you.</p>
     </form>
   );
 }

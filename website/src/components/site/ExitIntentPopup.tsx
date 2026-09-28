@@ -16,7 +16,7 @@ function recentlySeen() {
 }
 
 /** Desktop-only: opens once per week when the pointer leaves through the top of the window. */
-export function ExitIntentPopup() {
+export function ExitIntentPopup({ whatsappNumber }: { whatsappNumber?: string | null }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [startedAt, setStartedAt] = useState(0);
@@ -40,10 +40,12 @@ export function ExitIntentPopup() {
     <Dialog
       open={open}
       onClose={() => setOpen(false)}
+      // Scroll inside the dialog on short screens instead of cutting off the bottom.
+      className="max-h-[calc(100dvh-2rem)] overflow-y-auto"
       title="Before you go — want a free callback?"
       description="Leave your details and our team will reach out within one business day to discuss your project."
     >
-      {open && <ExitIntentForm startedAt={startedAt} sourcePath={pathname} />}
+      {open && <ExitIntentForm startedAt={startedAt} sourcePath={pathname} whatsappNumber={whatsappNumber} />}
     </Dialog>
   );
 }

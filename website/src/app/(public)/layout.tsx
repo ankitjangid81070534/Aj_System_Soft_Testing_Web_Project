@@ -53,7 +53,7 @@ export default async function PublicLayout({ children }: { children: ReactNode }
       afterFooter={<>
         <ContactHub actions={getContactHubActions(settings)} links={hubLinks} />
         {popupOffer && <OfferPopup offer={popupOffer} />}
-        <ExitIntentPopup />
+        <ExitIntentPopup whatsappNumber={settings?.whatsapp?.replace(/[^0-9]/g, "") || null} />
         <CookieConsent />
       </>}
     >

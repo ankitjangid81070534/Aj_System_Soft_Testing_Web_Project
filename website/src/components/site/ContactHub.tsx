@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import {
@@ -16,6 +15,8 @@ import type { ContactHubAction } from "@/lib/contact-hub";
 import { AiToolsLauncher } from "./AiToolsLauncher";
 import styles from "./contact-hub.module.css";
 
+// Owner: every "Let's talk" link opens in a new tab so the visitor keeps the site open.
+const NEW_TAB = { target: "_blank", rel: "noopener noreferrer" } as const;
 const subscribe = () => () => {};
 const supported = () => typeof HTMLElement.prototype.showPopover === "function";
 const serverSnapshot = () => false;
@@ -103,9 +104,8 @@ function ContactHubControl({ actions, links }: { actions: ContactHubAction[]; li
           {actions.map((action) => {
             const Icon = icons[action.kind];
             const content = <><span className={`${styles.actionIcon} ${styles[`tone_${action.kind}`] ?? ""}`} aria-hidden="true"><Icon size={13} /></span><span>{action.label}</span><ArrowUpRight size={14} aria-hidden="true" /></>;
-            return <li key={action.kind}>{action.href.startsWith("/")
-              ? <Link href={action.href} className={styles.action} onClick={() => close()}>{content}</Link>
-              : <a href={action.href} className={styles.action} onClick={() => close()}>{content}</a>}
+            return <li key={action.kind}>
+              <a href={action.href} {...NEW_TAB} className={styles.action} onClick={() => close()}>{content}</a>
             </li>;
           })}
           {GOOGLE_REVIEW_URL && <li>
@@ -117,11 +117,8 @@ function ContactHubControl({ actions, links }: { actions: ContactHubAction[]; li
           {links.map((link) => {
             const { Icon, tone } = HUB_ICONS[link.icon] ?? HUB_ICONS.link;
             const content = <><span className={`${styles.actionIcon} ${styles[`tone_${tone}`] ?? ""}`} aria-hidden="true"><Icon size={13} /></span><span>{link.label}</span><ArrowUpRight size={14} aria-hidden="true" /></>;
-            const external = !link.href.startsWith("/");
-            return <li key={link.id}>{external
-              ? <a href={link.href} className={styles.action} onClick={() => close()}
-                  {...(link.newTab && link.href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{content}</a>
-              : <Link href={link.href} className={styles.action} onClick={() => close()}>{content}</Link>}
+            return <li key={link.id}>
+              <a href={link.href} {...NEW_TAB} className={styles.action} onClick={() => close()}>{content}</a>
             </li>;
           })}
         </ul>

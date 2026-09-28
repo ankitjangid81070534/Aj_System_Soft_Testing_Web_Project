@@ -98,6 +98,25 @@ export async function submitContactAction(
   _prev: LeadFormState,
   formData: FormData,
 ): Promise<LeadFormState> {
+  return saveContact(formData, true);
+}
+
+/**
+ * Exit-intent "free callback" popup: same validation, Turnstile, rate limit,
+ * storage and admin/visitor emails as the contact form, but uses a simple
+ * contact-consent checkbox instead of the Service Agreement.
+ */
+export async function submitCallbackAction(
+  _prev: LeadFormState,
+  formData: FormData,
+): Promise<LeadFormState> {
+  if (formString(formData, "contactConsent") !== "on") {
+    return failure("Please confirm we may contact you by phone, WhatsApp or email.");
+  }
+  return saveContact(formData, false);
+}
+
+async function saveContact(formData: FormData, requireAgreement: boolean): Promise<LeadFormState> {
   const parsed = contactSchema.safeParse({
     website: formString(formData, "website") ?? "",
     startedAt: formString(formData, "startedAt") ?? "0",
@@ -111,7 +130,7 @@ export async function submitContactAction(
   if (!parsed.success) {
     return failure(parsed.error.issues[0]?.message ?? "Please check the highlighted fields.");
   }
-  const agreementError = await agreementGate(parsed.data.agreementAccepted);
+  const agreementError = requireAgreement ? await agreementGate(parsed.data.agreementAccepted) : null;
   if (agreementError) return failure(agreementError);
   const spam = await spamAndRateLimitGuard(parsed.data, "contact", parsed.data.email, formString(formData, "cf-turnstile-response"));
   if (spam) return failure(spam);
