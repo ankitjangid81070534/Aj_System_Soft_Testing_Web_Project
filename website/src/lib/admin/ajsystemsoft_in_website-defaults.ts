@@ -133,9 +133,24 @@ export async function seedHubLinksIfEmpty(admin: Admin): Promise<number> {
   return (await insertAll(admin, "contact_hub_links", await builtInHubLinkRows())).length;
 }
 
+async function isEmpty(admin: Admin, table: string): Promise<boolean> {
+  const { count, error } = await admin.from(table).select("id", { count: "exact", head: true });
+  if (error) throw error;
+  return (count ?? 0) === 0;
+}
+
+/**
+ * Runs automatically when an admin opens the module. Only seeds while the
+ * table is still empty, so rows the admin later deletes never come back.
+ */
+const syncPosts = async (admin: Admin, userId: string) =>
+  (await isEmpty(admin, "blog_posts")) ? importPosts(admin, userId) : 0;
+
 export const WEBSITE_IMPORTERS: Record<string, (admin: Admin, userId: string) => Promise<number>> = {
-  services: importServices,
-  posts: importPosts,
+  services: async (admin, userId) => ((await isEmpty(admin, "services")) ? importServices(admin, userId) : 0),
+  posts: syncPosts,
+  categories: syncPosts,
+  tags: syncPosts,
   navigation: (admin) => importNavigation(admin),
   "hub-links": (admin) => seedHubLinksIfEmpty(admin),
 };
