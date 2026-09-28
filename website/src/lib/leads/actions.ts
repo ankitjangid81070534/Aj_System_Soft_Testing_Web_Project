@@ -4,7 +4,8 @@ import { headers } from "next/headers";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/env";
-import { clientIpFrom, isRateLimited } from "@/lib/rate-limit";
+import { clientIpFrom } from "@/lib/rate-limit";
+import { isRateLimitedShared } from "@/lib/ajsystemsoft_in_shared-rate-limit";
 import { verifyTurnstile } from "@/lib/security/turnstile";
 import {
   AGREEMENT_REQUIRED_MESSAGE,
@@ -56,14 +57,14 @@ async function spamAndRateLimitGuard(
 
   const requestHeaders = await headers();
   const ip = clientIpFrom(requestHeaders);
-  if (isRateLimited(`${routeKey}:${ip}`)) {
+  if (await isRateLimitedShared(`${routeKey}:${ip}`)) {
     return "Too many submissions from your network. Please try again later.";
   }
   const turnstileError = await verifyTurnstile(turnstileToken, ip);
   if (turnstileError) return turnstileError;
   if (
     email &&
-    isRateLimited(`${routeKey}:email:${email.toLowerCase()}`, { windowMs: 60 * 60 * 1000, max: 3 })
+    (await isRateLimitedShared(`${routeKey}:email:${email.toLowerCase()}`, { windowMs: 60 * 60 * 1000, max: 3 }))
   ) {
     return "This address has submitted several times already. Please try again later.";
   }

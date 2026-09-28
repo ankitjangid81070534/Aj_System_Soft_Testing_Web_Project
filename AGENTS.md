@@ -13,6 +13,10 @@
 - Admin top bar (and mobile drawer) has `ajsystemsoft_in_AdminModuleSearch.tsx` (Ctrl/⌘+K, ↑/↓, Enter) over `ADMIN_NAV_ITEMS` from `AdminNav.tsx`.
 - 2026-09-29: the old `LeadForms.test.ts` source-contract failure is fixed (test used an exact signature string that broke when `ContactFormAttempt` gained `service`; now a regex). Full suite 583/583. Static imports of cached readers (`getSiteSettings`) into `actions.ts` break the `next/cache` mocks in admin tests — use dynamic import.
 
+## Shared rate limit + demo routes hidden (2026-09-29)
+- `/design-preview` and `/juspay-demo` call `notFound()` when `NODE_ENV === "production"`; they still render in dev.
+- Lead forms (`spamAndRateLimitGuard` in `lib/leads/actions.ts`) use `isRateLimitedShared` (`lib/ajsystemsoft_in_shared-rate-limit.ts`): the old in-memory check runs first, then Supabase RPC `ajsystemsoft_in_rate_limit_hit` (migration `0026_ajsystemsoft_in_shared_rate_limit.sql`, service role only). Any RPC error falls back to in-memory only, so nothing changes until 0026 is run manually in Supabase. Other callers (login, AI, track…) still use the in-memory `isRateLimited`. Migration tested on throwaway postgres:16 (re-runnable; limit 3 → 4th hit blocked).
+
 ## Cookie consent (2026-09-28)
 - `lib/consent.ts` = Google Consent Mode v2. `consentBootScript` runs first in `<head>` (before AdSense/GA): defaults ad/analytics to denied, restores `localStorage["ajs_cookie_consent"]`. `components/site/CookieConsent.tsx` = bottom-right card (Accept / Reject / Customize), mounted in `(public)/layout.tsx`; footer "Cookie settings" reopens it via the `ajs:open-cookie-settings` event.
 - `OfferPopup` (modal `<dialog>`) waits for `ajs:cookie-consent-saved` when no choice exists; otherwise the modal made the cookie card unclickable.
