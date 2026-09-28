@@ -1,5 +1,8 @@
 # Base44 Dev Environment
 
+## Exit-intent callback popup (2026-09-28)
+- `components/site/ExitIntentPopup.tsx` (mounted in `(public)/layout.tsx`): desktop (`pointer: fine`) only, opens when the pointer leaves through the top edge after 8s on page, max once per 7 days (`localStorage["ajs_exit_intent_seen"]`), skipped on contact/quote/auth/account/legal pages or when another `<dialog>` is open. Renders `ExitIntentForm` (LeadForms.tsx) → same `submitContactAction` (Turnstile, agreement, emails) with hidden company "Not provided" and message "Exit-intent callback request from <path>". No schema change.
+
 ## Inline service inquiry form (2026-09-28)
 - `/services/[slug]` has an `#ask` section ("Ask about {service}") before the final CTA, rendering the existing `ContactForm` with `service={service.name}`: the message textarea is prefilled `Service: <name>` so the lead arrives tagged. Same `submitContactAction`, Turnstile, rate limit and emails — no schema change.
 

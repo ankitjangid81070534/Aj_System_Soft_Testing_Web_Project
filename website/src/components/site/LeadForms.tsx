@@ -281,6 +281,47 @@ function ContactFormAttempt({
   );
 }
 
+/**
+ * Compact callback request used by the exit-intent popup. Submits through the
+ * same contact action (Turnstile, agreement, emails); company and message are
+ * filled with neutral defaults so the visitor only types what we need.
+ */
+export function ExitIntentForm({ startedAt, sourcePath }: { startedAt: number; sourcePath: string }) {
+  const { state, formAction, pending, errorRef, formProps } = useLeadForm(submitContactAction);
+
+  if (state.status === "success") {
+    return (
+      <div role="status" className="flex flex-col items-center gap-2 py-6 text-center">
+        <CheckCircle2 aria-hidden="true" className="h-9 w-9 text-success" />
+        <p className="font-semibold text-ink">{state.message ?? "Thanks — we'll call you back."}</p>
+      </div>
+    );
+  }
+
+  return (
+    <form action={formAction} {...formProps} className="flex flex-col gap-3">
+      <GuardFields startedAt={startedAt} resetKey={state} />
+      <input type="hidden" name="company" value="Not provided" />
+      <input type="hidden" name="message" value={`Exit-intent callback request from ${sourcePath}`} />
+      <Field label="Your name" htmlFor="x-name" required>
+        <Input id="x-name" name="name" autoComplete="name" required minLength={2} maxLength={120} />
+      </Field>
+      <Field label="Email" htmlFor="x-email" required>
+        <Input id="x-email" name="email" type="email" autoComplete="email" required maxLength={200} />
+      </Field>
+      <Field label="Phone / WhatsApp" htmlFor="x-phone" required>
+        <Input id="x-phone" name="phone" type="tel" autoComplete="tel" required minLength={6} maxLength={20} />
+      </Field>
+      <AgreementCheckbox id="x-agreement" />
+      <ErrorNote message={state.message} errorRef={errorRef} />
+      <Button type="submit" loading={pending}>
+        <Send aria-hidden="true" className="h-4 w-4" />
+        {pending ? "Sending…" : "Request a free callback"}
+      </Button>
+    </form>
+  );
+}
+
 export function QuoteForm({ startedAt }: { startedAt: number }) {
   const [attempt, setAttempt] = useState(0);
   return (

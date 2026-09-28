@@ -10,6 +10,7 @@ import { getPublicNavigation } from "@/lib/data/navigation";
 import { getTopBarAnnouncement, getPopupOffer } from "@/lib/data/growth";
 import { AnnouncementBar } from "@/components/site/AnnouncementBar";
 import { OfferPopup } from "@/components/site/OfferPopup";
+import { ExitIntentPopup } from "@/components/site/ExitIntentPopup";
 import { PublicSiteFrame } from "@/components/site/PublicSiteFrame";
 import { ContactHub } from "@/components/site/ContactHub";
 import { getContactHubActions } from "@/lib/contact-hub";
@@ -51,6 +52,7 @@ export default async function PublicLayout({ children }: { children: ReactNode }
       afterFooter={<>
         <ContactHub actions={getContactHubActions(settings)} links={hubLinks} />
         {popupOffer && <OfferPopup offer={popupOffer} />}
+        <ExitIntentPopup />
       </>}
     >
       {children}
