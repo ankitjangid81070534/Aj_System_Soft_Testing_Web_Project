@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ResourceList } from "@/components/admin/ResourceList";
 import { getResourceConfig, isResourceKey, listResourceRows } from "@/lib/admin/crud";
 import { SetupNotice } from "@/components/admin/SetupNotice";
+import { autoSyncWebsiteContent } from "@/lib/admin/ajsystemsoft_in_import-actions";
 import { isSupabaseConfigured } from "@/lib/env";
 import { getCurrentUser } from "@/lib/auth/session";
 import { can } from "@/lib/auth/permissions";
@@ -50,6 +51,9 @@ export default async function ResourceListPage({
   }
 
   const query = await searchParams;
+  if (can(user.role, `${config.capability}:write` as Parameters<typeof can>[1])) {
+    await autoSyncWebsiteContent(config.key, user.id);
+  }
   const page = Number.parseInt(query.page ?? "1", 10) || 1;
   const result = await listResourceRows(config, {
     page,

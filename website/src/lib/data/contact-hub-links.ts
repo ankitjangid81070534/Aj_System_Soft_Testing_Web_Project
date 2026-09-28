@@ -44,3 +44,26 @@ export const getContactHubLinks = unstable_cache(
   ["contact-hub-links"],
   { tags: ["contact-hub-links"], revalidate: 300 },
 );
+
+/**
+ * True once the admin table holds any row (active or paused). From then on the
+ * admin list fully controls the panel, so the built-in entries are not added
+ * again (they were copied into the table as editable rows).
+ */
+export const hasManagedContactHubLinks = unstable_cache(
+  async (): Promise<boolean> => {
+    if (!isSupabaseConfigured) return false;
+    try {
+      // Service role: paused rows are hidden from anon by RLS but still count.
+      const { createSupabaseAdminLooseClient } = await import("@/lib/supabase/admin");
+      const { count, error } = await createSupabaseAdminLooseClient()
+        .from("contact_hub_links")
+        .select("id", { count: "exact", head: true });
+      return !error && (count ?? 0) > 0;
+    } catch {
+      return false;
+    }
+  },
+  ["contact-hub-links-managed"],
+  { tags: ["contact-hub-links"], revalidate: 300 },
+);
