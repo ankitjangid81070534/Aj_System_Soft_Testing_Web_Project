@@ -369,6 +369,9 @@ export async function requestAppointmentAction(
     topic: parsed.data.topic || null,
     message: parsed.data.message || "",
   });
+  if (error?.code === "23505") {
+    return failure("Sorry — that slot was just booked. Please pick another time.");
+  }
   if (error) {
     console.error("appointment insert failed:", error.message);
     return failure("Your request could not be saved right now. Please try again in a moment.");
