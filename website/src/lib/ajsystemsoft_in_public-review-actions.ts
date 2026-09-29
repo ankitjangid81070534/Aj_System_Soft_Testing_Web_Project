@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { isSupabaseConfigured } from "@/lib/env";
+import { getCurrentUser } from "@/lib/auth/session";
 import { clientIpFrom } from "@/lib/rate-limit";
 import { isRateLimitedShared } from "@/lib/ajsystemsoft_in_shared-rate-limit";
 import { verifyTurnstile } from "@/lib/security/turnstile";
@@ -62,7 +63,11 @@ export async function submitPublicReviewAction(
     return { status: "error", message: "Reviews cannot be saved right now. Please try again later." };
   }
 
+  // Link to the signed-in client (if any) so it shows under /account → Reviews.
+  const user = await getCurrentUser().catch(() => null);
+
   const { error } = await createSupabaseAdminClient().from("testimonials").insert({
+    submitted_by: user?.id ?? null,
     author_name: data.name,
     author_company: data.company || null,
     author_role: data.role || null,

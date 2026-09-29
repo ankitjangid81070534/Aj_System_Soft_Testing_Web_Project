@@ -110,7 +110,8 @@ export function LocationCombobox({
           <ul
             id={listId}
             role="listbox"
-            className="absolute z-30 mt-1 max-h-60 w-full overflow-auto rounded-xl border border-line bg-surface py-1 text-sm text-ink shadow-e2"
+            data-lenis-prevent
+            className="absolute z-30 mt-1 max-h-60 w-full overflow-auto overscroll-contain rounded-xl border border-line bg-surface py-1 text-sm text-ink shadow-e2"
           >
             {matches.map((option, index) => (
               <li
