@@ -13,6 +13,10 @@
 - Admin top bar (and mobile drawer) has `ajsystemsoft_in_AdminModuleSearch.tsx` (Ctrl/⌘+K, ↑/↓, Enter) over `ADMIN_NAV_ITEMS` from `AdminNav.tsx`.
 - 2026-09-29: the old `LeadForms.test.ts` source-contract failure is fixed (test used an exact signature string that broke when `ContactFormAttempt` gained `service`; now a regex). Full suite 583/583. Static imports of cached readers (`getSiteSettings`) into `actions.ts` break the `next/cache` mocks in admin tests — use dynamic import.
 
+## Signup address dropdowns + post-signup sign-in (2026-09-29)
+- `AddressFields` (AuthForms.tsx) = Country → State → City → PIN, each a searchable `ajsystemsoft_in_LocationCombobox` with a "Use custom" option (input carries `name`, so any typed value submits). Data from `country-state-city` served by `/api/geo` (server only; the browser gets one list at a time). India 6-digit PIN auto-fills state/city via `/api/geo?pincode=` (India Post API, spellings normalised to dataset names).
+- After signup success the form `router.push`es to `/login`; email+password are handed over ONLY in JS memory (`ajsystemsoft_in_signupHandoff.ts`, cleared after mount / on error), never storage/URL. Login maps Supabase `email_not_confirmed` to a "verify your email first" message.
+
 ## Sentry error monitoring (2026-09-29)
 - `@sentry/nextjs` via `src/instrumentation.ts` (server/edge + `onRequestError`) and `src/instrumentation-client.ts` (browser + router transitions). Inactive unless `NEXT_PUBLIC_SENTRY_DSN` (browser+server) / `SENTRY_DSN` (server) is set — no DSN = zero behaviour change. `next.config.ts` is NOT wrapped with `withSentryConfig` (no source-map upload / auth token). CSP connect-src allows `*.ingest(.us|.de).sentry.io`. No PII sent, 10% trace sampling.
 

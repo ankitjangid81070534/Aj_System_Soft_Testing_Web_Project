@@ -135,7 +135,14 @@ export async function clientLoginAction(
 
   const supabase = await createSupabaseServerClient();
   const { error } = await supabase.auth.signInWithPassword(parsed.data);
-  if (error) return idleError("Invalid email or password.");
+  if (error) {
+    if (error.code === "email_not_confirmed") {
+      return idleError(
+        "Your email is not verified yet. Open the verification link we emailed you, then sign in.",
+      );
+    }
+    return idleError("Invalid email or password.");
+  }
 
   redirect(safePortalPath(formData.get("next")));
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect, useState, type FormEvent } from "react";
 import { ArrowRight, Loader2, Mail, UserRound } from "lucide-react";
 import {
   clientLoginAction,
@@ -21,6 +21,14 @@ import { PortalFeedback as Feedback } from "./PortalFeedback";
 import styles from "./portal-ui.module.css";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
 import { useAuthFormFeedback } from "./useAuthFormFeedback";
+import { useRouter } from "next/navigation";
+import { LocationCombobox, type LocationOption } from "./ajsystemsoft_in_LocationCombobox";
+import { useGeoOptions } from "./ajsystemsoft_in_useGeoOptions";
+import {
+  clearSignupHandoff,
+  peekSignupHandoff,
+  setSignupHandoff,
+} from "./ajsystemsoft_in_signupHandoff";
 
 const initialState: PortalActionState = { status: "idle" };
 
@@ -57,51 +65,119 @@ export function AddressFields({
           defaultValue={defaults?.addressLine2 ?? ""}
         />
       </Field>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="City" htmlFor={`${prefix}-city`} required>
-          <Input
-            id={`${prefix}-city`}
-            name="city"
-            autoComplete="address-level2"
-            required
-            maxLength={80}
-            defaultValue={defaults?.city ?? ""}
-          />
-        </Field>
-        <Field label="State" htmlFor={`${prefix}-state`} required>
-          <Input
-            id={`${prefix}-state`}
-            name="state"
-            autoComplete="address-level1"
-            required
-            maxLength={80}
-            defaultValue={defaults?.state ?? ""}
-          />
-        </Field>
-        <Field label="PIN / Postal code" htmlFor={`${prefix}-postal`} required>
-          <Input
-            id={`${prefix}-postal`}
-            name="postalCode"
-            autoComplete="postal-code"
-            inputMode="numeric"
-            required
-            minLength={4}
-            maxLength={12}
-            defaultValue={defaults?.postalCode ?? ""}
-          />
-        </Field>
-        <Field label="Country" htmlFor={`${prefix}-country`} required>
-          <Input
-            id={`${prefix}-country`}
-            name="country"
-            autoComplete="country-name"
-            required
-            maxLength={80}
-            defaultValue={defaults?.country ?? "India"}
-          />
-        </Field>
-      </div>
+      <LocationFields prefix={prefix} defaults={defaults} />
     </fieldset>
+  );
+}
+
+function findByName(options: LocationOption[], name: string) {
+  const key = name.trim().toLowerCase();
+  return key ? options.find((o) => o.name.toLowerCase() === key) : undefined;
+}
+
+/** Country → State → City → PIN. Lists are searchable and every field accepts a custom value. */
+function LocationFields({
+  prefix,
+  defaults,
+}: {
+  prefix: string;
+  defaults?: Partial<Record<"city" | "state" | "postalCode" | "country", string>>;
+}) {
+  const [country, setCountry] = useState(defaults?.country ?? "India");
+  const [state, setState] = useState(defaults?.state ?? "");
+  const [city, setCity] = useState(defaults?.city ?? "");
+  const [postal, setPostal] = useState(defaults?.postalCode ?? "");
+  const [pinStatus, setPinStatus] = useState<string | null>(null);
+
+  const countries = useGeoOptions("");
+  const countryCode = findByName(countries.items, country)?.code;
+  const states = useGeoOptions(countryCode ? `?country=${countryCode}` : null);
+  const stateCode = findByName(states.items, state)?.code;
+  const cities = useGeoOptions(
+    countryCode && stateCode ? `?country=${countryCode}&state=${stateCode}` : null,
+  );
+
+  async function lookupPin(pin: string) {
+    if (countryCode !== "IN" || !/^\d{6}$/.test(pin)) return;
+    setPinStatus("Finding your city…");
+    try {
+      const res = await fetch(`/api/geo?pincode=${pin}`);
+      const body = (await res.json()) as { found: boolean; city?: string; state?: string };
+      if (!body.found) {
+        setPinStatus(null);
+        return;
+      }
+      if (body.state) setState(findByName(states.items, body.state)?.name ?? body.state);
+      if (body.city) setCity(body.city);
+      setPinStatus(`Filled from PIN: ${body.city}, ${body.state}`);
+    } catch {
+      setPinStatus(null);
+    }
+  }
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      <LocationCombobox
+        id={`${prefix}-country`}
+        name="country"
+        label="Country"
+        autoComplete="country-name"
+        value={country}
+        options={countries.items}
+        loading={countries.loading}
+        onChange={(next) => {
+          if (next !== country) {
+            setState("");
+            setCity("");
+          }
+          setCountry(next);
+        }}
+      />
+      <LocationCombobox
+        id={`${prefix}-state`}
+        name="state"
+        label="State"
+        autoComplete="address-level1"
+        value={state}
+        options={states.items}
+        loading={states.loading}
+        onChange={(next) => {
+          if (next !== state) setCity("");
+          setState(next);
+        }}
+      />
+      <LocationCombobox
+        id={`${prefix}-city`}
+        name="city"
+        label="City"
+        autoComplete="address-level2"
+        value={city}
+        options={cities.items}
+        loading={cities.loading}
+        onChange={(next) => setCity(next)}
+      />
+      <Field
+        label="PIN / Postal code"
+        htmlFor={`${prefix}-postal`}
+        required
+        hint={pinStatus ?? (countryCode === "IN" ? "Enter a 6-digit PIN to auto-fill state and city." : undefined)}
+      >
+        <Input
+          id={`${prefix}-postal`}
+          name="postalCode"
+          autoComplete="postal-code"
+          inputMode="numeric"
+          required
+          minLength={4}
+          maxLength={12}
+          value={postal}
+          onChange={(e) => {
+            setPostal(e.target.value);
+            void lookupPin(e.target.value.trim());
+          }}
+        />
+      </Field>
+    </div>
   );
 }
 
@@ -214,6 +290,12 @@ export function ClientLoginForm({
 }) {
   const [state, action, pending] = useActionState(clientLoginAction, initialState);
   const formFeedback = useAuthFormFeedback(state.status, pending);
+  // Credentials from a just-completed sign-up (memory only, cleared after mount).
+  const [handoff] = useState(peekSignupHandoff);
+  useEffect(() => clearSignupHandoff(), []);
+  const signupNotice = handoff
+    ? "Account created. Verify your email using the link we sent, then sign in here."
+    : undefined;
 
   return (
     <div className={`${styles.form} space-y-5`} data-client-login>
@@ -229,14 +311,15 @@ export function ClientLoginForm({
               id="client-email"
               name="email"
               type="email"
-              autoComplete="email"
+              autoComplete={handoff ? "off" : "email"}
               required
               autoFocus
+              defaultValue={handoff?.email}
               className="pl-10"
             />
           </div>
         </Field>
-        <LoginPasswordField />
+        <LoginPasswordField defaultValue={handoff?.password} />
         <div className="flex justify-end">
           <Link
             href="/forgot-password"
@@ -245,6 +328,7 @@ export function ClientLoginForm({
             Forgot password?
           </Link>
         </div>
+        {signupNotice ? <Feedback state={{ status: "success", message: signupNotice }} /> : null}
         {notice ? <Feedback state={{ status: "success", message: notice }} /> : null}
         {error ? <Feedback state={{ status: "error", message: error }} /> : null}
         <Feedback state={state} pending={pending} focusOnError />
@@ -268,12 +352,35 @@ export function ClientLoginForm({
 export function ClientSignupForm() {
   const [state, action, pending] = useActionState(clientSignupAction, initialState);
   const formFeedback = useAuthFormFeedback(state.status, pending);
+  const router = useRouter();
+
+  // After "check your email", hand the credentials (memory only) to sign-in.
+  useEffect(() => {
+    if (state.status === "success") router.push("/login?next=/account");
+    else if (state.status === "error") clearSignupHandoff();
+  }, [state, router]);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    formFeedback.onSubmit(event);
+    if (event.defaultPrevented) return;
+    const data = new FormData(event.currentTarget);
+    setSignupHandoff({
+      email: String(data.get("email") ?? ""),
+      password: String(data.get("password") ?? ""),
+    });
+  }
 
   return (
     <div className={`${styles.form} space-y-5`}>
       <GoogleButton label="Sign up with Google" />
       <Divider />
-      <form action={action} {...formFeedback} aria-busy={pending} className="space-y-4">
+      <form
+        action={action}
+        {...formFeedback}
+        onSubmit={handleSubmit}
+        aria-busy={pending}
+        className="space-y-4"
+      >
         <div className="grid gap-4 sm:grid-cols-2">
           <Field label="Full name" htmlFor="signup-name" required>
             <div className="relative">
