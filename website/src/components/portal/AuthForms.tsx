@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/Button";
 import { Field, Input } from "@/components/ui/Input";
 import { LoginPasswordField } from "./LoginPasswordField";
 import { PasswordField } from "./PasswordField";
+import { SignupPasswordFields } from "./ajsystemsoft_in_SignupPasswordFields";
 import { PortalFeedback as Feedback } from "./PortalFeedback";
 import styles from "./portal-ui.module.css";
 import { AgreementCheckbox } from "@/components/site/LeadForms";
@@ -443,27 +444,7 @@ export function ClientSignupForm() {
         <Field label="Company (optional)" htmlFor="signup-company">
           <Input id="signup-company" name="company" autoComplete="organization" maxLength={160} />
         </Field>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <PasswordField
-            label="Password"
-            hint="8+ characters with a letter and number."
-            id="signup-password"
-            name="password"
-            autoComplete="new-password"
-            required
-            minLength={8}
-            maxLength={128}
-          />
-          <PasswordField
-            label="Confirm password"
-            id="signup-confirm"
-            name="confirmPassword"
-            autoComplete="new-password"
-            required
-            minLength={8}
-            maxLength={128}
-          />
-        </div>
+        <SignupPasswordFields />
         <AddressFields prefix="signup" />
         <label className="flex items-start gap-2.5 text-xs leading-5 text-ink-muted">
           <input
