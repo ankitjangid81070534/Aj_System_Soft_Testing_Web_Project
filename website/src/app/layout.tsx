@@ -7,6 +7,7 @@ import { SectionScrollFx } from "@/components/motion/SectionScrollFx";
 import { SceneMotion } from "@/components/motion/SceneMotion";
 import { SurfaceMotion } from "@/components/motion/SurfaceMotion";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MicrosoftClarity } from "@/components/analytics/ajsystemsoft_in_MicrosoftClarity";
 import { consentBootScript } from "@/lib/consent";
 import "./globals.css";
 import "./surface-system.css";
@@ -73,6 +74,7 @@ export default function RootLayout({
         <SceneMotion />
         <SurfaceMotion />
         <GoogleAnalytics />
+        <MicrosoftClarity />
       </body>
     </html>
   );
