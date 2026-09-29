@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import {
   ArrowUpRight,
@@ -528,8 +529,14 @@ export default async function ClientAccountPage() {
                 <ShieldCheck aria-hidden="true" className="mx-auto h-7 w-7 text-ink-muted" />
                 <p className="mt-3 font-medium text-ink">Client verification required</p>
                 <p className="mt-1 text-sm text-ink-muted">
-                  A registered account alone cannot submit a public review.
+                  A registered account alone cannot submit a verified review.
                 </p>
+                <Link
+                  href="/reviews#write-review"
+                  className="mt-4 inline-flex min-h-11 items-center rounded-full border border-line px-4 py-2 text-sm font-medium text-ink hover:bg-canvas-raised focus-ring"
+                >
+                  Write a review on the Reviews page
+                </Link>
               </div>
             )}
           </div>
