@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import type { ReactNode } from "react";
 import { Inter_Tight } from "next/font/google";
 import { buildRootMetadata } from "@/lib/seo/metadata";
@@ -59,12 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={siteSans.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: consentBootScript }} />
-        <script
-          async
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453930363427434"
-        />
+        <script id="ajs-consent-boot" dangerouslySetInnerHTML={{ __html: consentBootScript }} />
       </head>
       <body className="font-sans antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
@@ -73,6 +69,14 @@ export default function RootLayout({
         <SectionScrollFx />
         <SceneMotion />
         <SurfaceMotion />
+        {/* AdSense injects managed scripts into head; load only after hydration. */}
+        <Script
+          id="ajs-adsense"
+          strategy="afterInteractive"
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453930363427434"
+        />
         <GoogleAnalytics />
         <MicrosoftClarity />
       </body>

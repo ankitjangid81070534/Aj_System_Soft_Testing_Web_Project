@@ -1,5 +1,9 @@
 # Base44 Dev Environment
 
+## AdSense hydration repair (2026-09-30)
+- Root layout loads AdSense via `next/script` with `afterInteractive`, not a raw async head script: AdSense's managed head scripts could be injected before React hydrated and matched against the inline consent script. Consent boot stays synchronous in head with stable ID `ajs-consent-boot`; publisher ID and consent behavior are unchanged.
+- Regression: `npm test -- src/app/ajsystemsoft_in_script-hydration.test.ts`; typecheck and targeted lint pass. Live preview verification was unavailable (no browser tab); HTTP `/` returned 200.
+
 ## MANDATORY naming rule for NEW files/folders (owner, 2026-09-28)
 - Before any new work, check whether a new file or folder is needed. Every NEW file and NEW folder must start with the prefix `ajsystemsoft_in_` (e.g. `ajsystemsoft_in_PricingCard.tsx`, `ajsystemsoft_in_helpers/`). Update imports to match.
 - Never rename existing files/folders to add the prefix — that would break imports/routes. Rule applies to new ones only.
