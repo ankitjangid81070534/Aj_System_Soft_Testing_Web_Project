@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getHomeContent } from "@/lib/data/home";
 import { getSiteSettings } from "@/lib/data/settings";
 import { getServicesIndex } from "@/lib/data/services";
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
  * settings — so the owner can verify real data, not invented copy.
  */
 export default async function JuspayDemoPage() {
+  // Internal design sandbox: never public on the live site.
+  if (process.env.NODE_ENV === "production") notFound();
   const [content, settings, services, benefits, navigation] = await Promise.all([
     getHomeContent(),
     getSiteSettings(),

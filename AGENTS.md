@@ -1,17 +1,39 @@
 # Base44 Dev Environment
 
+## AdSense hydration repair (2026-09-30)
+- Root layout mounts `components/analytics/ajsystemsoft_in_AdSense.tsx`: its client effect appends a plain script to head AFTER hydration. Do not use `next/script` for AdSense: it adds `data-nscript`, which Google's loader rejects. The script ID prevents duplicate loads during Strict Mode and navigation. Consent boot stays synchronous in head with stable ID `ajs-consent-boot`; publisher ID and consent behavior are unchanged.
+- Regression: `npm test -- src/app/ajsystemsoft_in_script-hydration.test.ts` checks delayed insertion, duplicate prevention and exact supported attributes; typecheck and targeted lint pass. Live preview confirmed one AdSense script without `data-nscript`, no browser errors/failed requests, and development HMR chunks returning 200. Earlier ChunkLoadError entries predate the development-cache rebuild.
+
 ## MANDATORY naming rule for NEW files/folders (owner, 2026-09-28)
 - Before any new work, check whether a new file or folder is needed. Every NEW file and NEW folder must start with the prefix `ajsystemsoft_in_` (e.g. `ajsystemsoft_in_PricingCard.tsx`, `ajsystemsoft_in_helpers/`). Update imports to match.
 - Never rename existing files/folders to add the prefix — that would break imports/routes. Rule applies to new ones only.
 - Exceptions where the framework forces a name (the prefix would break it): Next.js reserved files (`page.tsx`, `layout.tsx`, `route.ts`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `template.tsx`, `sitemap.ts`, `robots.ts`, `opengraph-image.*`, `icon.*`), route-segment folders under `src/app` (folder name = public URL), and config files (`package.json`, `*.config.*`). Supabase migrations keep the number first: `0025_ajsystemsoft_in_<name>.sql`. Tests follow the source file: `ajsystemsoft_in_<name>.test.ts`.
 - Supabase database objects: every NEW table created in a migration must be named `ajsystemsoft_in_<name>` (e.g. `create table if not exists public.ajsystemsoft_in_invoices`). Same prefix for new views, functions/RPCs, enums/types, triggers, indexes and policies created for new tables. Never rename existing tables/columns (app code queries them by name) — only new objects get the prefix. Adding columns to an existing table keeps that table's name. Keep migrations additive/idempotent as before.
 
+## GA4 + Microsoft Clarity + Search Console (2026-09-29)
+- SEO basics already existed (sitemap.ts, robots.ts, JSON-LD, `GOOGLE_SITE_VERIFICATION` meta in `buildRootMetadata`). Added `components/analytics/ajsystemsoft_in_MicrosoftClarity.tsx` (client, mounted in root layout): loads `clarity.ms/tag/<NEXT_PUBLIC_CLARITY_PROJECT_ID>` ONLY after analytics consent (`readConsent()` / `ajs:cookie-consent-saved`). No ID = nothing.
+- CSP in `next.config.ts` previously did NOT allow googletagmanager/google-analytics, so GA was blocked; `analytics*Origins` now cover GA4 + Clarity (script/connect/img). All three IDs are set as secrets; verified GA + Clarity scripts load in preview.
+
 ## Admin "Import from website" + module search (2026-09-28)
 - Audit (live Supabase row counts): services, blog posts/categories/tags, header navigation and Let's talk links were EMPTY in admin while the site showed built-in fallbacks. Other modules (benefits, trusted clients, case studies, packages, team, socials, offers, settings) already hold real rows.
 - Owner rejected the import button: NO buttons. `/ajadmin/c/[resource]` auto-runs `autoSyncWebsiteContent` (`lib/admin/ajsystemsoft_in_import-actions.ts` → `WEBSITE_IMPORTERS` in `ajsystemsoft_in_website-defaults.ts`) for services, posts/categories/tags, navigation (header) and hub-links — ONLY while the table is empty, so admin deletions never come back. Services also get service_faqs, posts get categories/tags/blog_post_tags. 2026-09-28: services (15), posts (3), categories, tags and header nav (8) were seeded into the live DB; hub-links seeds on first open of that module (its settings reader needs the Next runtime).
 - Let's talk: once `contact_hub_links` has ANY row (service-role count, `hasManagedContactHubLinks`), `ContactHub showBuiltIns=false` and the table fully controls the panel. Creating the first link auto-seeds the built-ins first (`actions.ts`) so they never vanish. After import, WhatsApp/phone/email links no longer follow Brand settings changes — edit them in the list.
 - Admin top bar (and mobile drawer) has `ajsystemsoft_in_AdminModuleSearch.tsx` (Ctrl/⌘+K, ↑/↓, Enter) over `ADMIN_NAV_ITEMS` from `AdminNav.tsx`.
-- Baseline has 1 pre-existing failing test (`LeadForms.test.ts` source contract). Static imports of cached readers (`getSiteSettings`) into `actions.ts` break the `next/cache` mocks in admin tests — use dynamic import.
+- 2026-09-29: the old `LeadForms.test.ts` source-contract failure is fixed (test used an exact signature string that broke when `ContactFormAttempt` gained `service`; now a regex). Full suite 583/583. Static imports of cached readers (`getSiteSettings`) into `actions.ts` break the `next/cache` mocks in admin tests — use dynamic import.
+
+## Signup address dropdowns + post-signup sign-in (2026-09-29)
+- `AddressFields` (AuthForms.tsx) = Country → State → City → PIN, each a searchable `ajsystemsoft_in_LocationCombobox` with a "Use custom" option (input carries `name`, so any typed value submits). Data from `country-state-city` served by `/api/geo` (server only; the browser gets one list at a time). India 6-digit PIN auto-fills state/city via `/api/geo?pincode=` (India Post API, spellings normalised to dataset names).
+- After signup success the form `router.push`es to `/login`; email+password are handed over ONLY in JS memory (`ajsystemsoft_in_signupHandoff.ts`, cleared after mount / on error), never storage/URL. Login maps Supabase `email_not_confirmed` to a "verify your email first" message.
+
+## Sentry error monitoring (2026-09-29)
+- `@sentry/nextjs` via `src/instrumentation.ts` (server/edge + `onRequestError`) and `src/instrumentation-client.ts` (browser + router transitions). Inactive unless `NEXT_PUBLIC_SENTRY_DSN` (browser+server) / `SENTRY_DSN` (server) is set — no DSN = zero behaviour change. `next.config.ts` is NOT wrapped with `withSentryConfig` (no source-map upload / auth token). CSP connect-src allows `*.ingest(.us|.de).sentry.io`. No PII sent, 10% trace sampling.
+
+## GitHub Actions CI (2026-09-29)
+- `.github/workflows/ajsystemsoft_in_ci.yml` runs on every push/PR in `website/`: `npm ci` → typecheck → lint → tests (Node 22). No secrets needed; build is not run (it needs env). Lint must stay at 0 errors — `Date.now()` directly in JSX trips `react-hooks/purity`; wrap it in a helper (`formStartedAt`).
+
+## Shared rate limit + demo routes hidden (2026-09-29)
+- `/design-preview` and `/juspay-demo` call `notFound()` when `NODE_ENV === "production"`; they still render in dev.
+- Lead forms (`spamAndRateLimitGuard` in `lib/leads/actions.ts`) use `isRateLimitedShared` (`lib/ajsystemsoft_in_shared-rate-limit.ts`): the old in-memory check runs first, then Supabase RPC `ajsystemsoft_in_rate_limit_hit` (migration `0026_ajsystemsoft_in_shared_rate_limit.sql`, service role only). Any RPC error falls back to in-memory only, so nothing changes until 0026 is run manually in Supabase. Other callers (login, AI, track…) still use the in-memory `isRateLimited`. Migration tested on throwaway postgres:16 (re-runnable; limit 3 → 4th hit blocked).
 
 ## Cookie consent (2026-09-28)
 - `lib/consent.ts` = Google Consent Mode v2. `consentBootScript` runs first in `<head>` (before AdSense/GA): defaults ad/analytics to denied, restores `localStorage["ajs_cookie_consent"]`. `components/site/CookieConsent.tsx` = bottom-right card (Accept / Reject / Customize), mounted in `(public)/layout.tsx`; footer "Cookie settings" reopens it via the `ajs:open-cookie-settings` event.
@@ -70,7 +92,7 @@
 
 ## Appointment booking with slots (2026-09-25)
 - `/contact#consultation` "Book an appointment": `AppointmentForm` (LeadForms.tsx) now uses `BookingSlotPicker` (+ `booking.module.css`) — 14 upcoming dates (Mon–Sat, IST, from tomorrow) and 30-min slots from `lib/booking/slots.ts`, which the server action shares. Booked slots load via `getBookedSlotsAction` (only `date|time` keys) and reload after every attempt; `requestAppointmentAction` re-checks bookable + not-taken before insert into `appointment_requests` (stored `preferred_time` = "2:30 PM IST"). Submit stays disabled until a free slot is chosen. Homepage `DemoCta` links to it. The anchor id stays `consultation` (ContactHub/sales CTAs use it).
-- No DB unique constraint yet: two simultaneous submits for the same slot could both pass the check.
+- 2026-09-29: migration `0025_ajsystemsoft_in_appointment_slot_unique.sql` adds partial unique index `ajsystemsoft_in_appointment_active_slot_uidx` (date+time, excluding lost/spam); `requestAppointmentAction` maps `23505` to the "slot was just booked" message. Tested on throwaway postgres:16 (re-runnable, duplicate blocked, spam row allowed). MUST be run manually in Supabase; until then behaviour is unchanged.
 - Browser-verified pick flow at 1308/390px without submitting (a real submit writes to the owner's Supabase). The offer popup `<dialog>` blocks clicks in fresh test browsers — close it first.
 
 ## Navbar brand name always visible (2026-09-25)

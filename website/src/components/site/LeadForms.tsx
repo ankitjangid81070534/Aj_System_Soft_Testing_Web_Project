@@ -63,7 +63,7 @@ export function AgreementCheckbox({ id, className }: { id: string; className?: s
  * Hidden spam guards: a honeypot field bots love to fill, plus the render
  * timestamp used as a minimum fill-time check on the server.
  */
-function GuardFields({ startedAt, resetKey }: { startedAt: number; resetKey?: unknown }) {
+export function GuardFields({ startedAt, resetKey }: { startedAt: number; resetKey?: unknown }) {
   const honeypotId = useId();
   return (
     <>

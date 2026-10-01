@@ -46,7 +46,9 @@ describe("contact and consultation form contracts", () => {
     const source = readFileSync(new URL("./LeadForms.tsx", import.meta.url), "utf8");
     for (const name of ["Contact", "Appointment"]) {
       expect(source).toContain(`<${name}FormAttempt\n      key={attempt}`);
-      expect(source).toContain(`function ${name}FormAttempt({ startedAt, onReset }`);
+      expect(source).toMatch(
+        new RegExp(`function ${name}FormAttempt\\(\\{\\s*startedAt,[^}]*onReset,?\\s*\\}`),
+      );
     }
     expect(source).not.toContain("formKey");
     expect(source).not.toContain("onReset={reset}");

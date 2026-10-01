@@ -6,6 +6,7 @@ import { ReviewCard } from "@/components/ui/ReviewCard";
 import { Button } from "@/components/ui/Button";
 import { CTA } from "@/components/ui/CTA";
 import { Reveal } from "@/components/site/Reveal";
+import { PublicReviewForm } from "@/components/site/ajsystemsoft_in_PublicReviewForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
 import { buildRouteMetadata } from "@/lib/seo/metadata";
@@ -95,7 +96,7 @@ export default async function ReviewsPage() {
       >
         <div className="flex flex-wrap gap-3 pt-1">
           <Link
-            href="/login"
+            href="#write-review"
             className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-canvas-raised focus-ring"
           >
             <MessageSquarePlus aria-hidden="true" className="h-4 w-4 text-brand-600" />
@@ -110,7 +111,7 @@ export default async function ReviewsPage() {
             <ShieldCheck aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-600" />
             <span>
               <strong>Authenticity Guarantee:</strong> We do not purchase, fabricate, or incentivize
-              reviews. Only registered, verified project clients may submit.
+              reviews. Every submission is checked by our team before it is published.
             </span>
           </div>
           <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 dark:text-brand-400">
@@ -160,6 +161,20 @@ export default async function ReviewsPage() {
             </div>
           </div>
         )}
+
+        <section
+          id="write-review"
+          aria-labelledby="write-review-heading"
+          className="mt-12 scroll-mt-28 rounded-3xl border border-line bg-surface p-6 shadow-e1 sm:p-8"
+        >
+          <h2 id="write-review-heading" className="text-xl font-semibold tracking-tight text-ink">
+            Share your experience
+          </h2>
+          <p className="mt-1 mb-6 text-sm text-ink-muted">
+            Worked with us? Tell others how it went. Your review appears here after verification.
+          </p>
+          <PublicReviewForm />
+        </section>
 
         <div className="mt-16">
           <CTA

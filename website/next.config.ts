@@ -66,6 +66,13 @@ const adsenseConnectOrigins = [
 ].join(" ");
 // Cloudflare Turnstile (lead-form bot check) — see components/site/TurnstileWidget.tsx
 const turnstileOrigin = "https://challenges.cloudflare.com";
+// Sentry error monitoring (browser event ingest) — see src/instrumentation-client.ts
+const sentryOrigins = "https://*.ingest.sentry.io https://*.ingest.us.sentry.io https://*.ingest.de.sentry.io";
+// Google Analytics 4 + Microsoft Clarity — see components/analytics/
+const analyticsScriptOrigins = "https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms";
+const analyticsConnectOrigins =
+  "https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com";
+const analyticsImgOrigins = "https://*.google-analytics.com https://*.clarity.ms https://c.bing.com";
 const isDevelopment = process.env.NODE_ENV !== "production";
 // Only the sandbox's development server may be embedded in the preview.
 // Production and ordinary local development retain clickjacking protection.
@@ -73,12 +80,12 @@ const isBase44Preview = isDevelopment && Boolean(process.env.BASE44_PUBLIC_HOST_
 
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' ${adsenseScriptOrigins} ${turnstileOrigin}${isDevelopment ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' ${adsenseScriptOrigins} ${turnstileOrigin} ${analyticsScriptOrigins}${isDevelopment ? " 'unsafe-eval'" : ""}`,
   `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
-  `img-src 'self' data: blob: ${supabaseOrigins.split(" ")[0]} ${adsenseImgOrigins}`,
+  `img-src 'self' data: blob: ${supabaseOrigins.split(" ")[0]} ${adsenseImgOrigins} ${analyticsImgOrigins}`,
   `font-src 'self' data: https://fonts.gstatic.com`,
   `media-src 'self' ${heroVideoOrigin}`,
-  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins} ${turnstileOrigin}`,
+  `connect-src 'self' ${supabaseOrigins} ${adsenseConnectOrigins} ${turnstileOrigin} ${sentryOrigins} ${analyticsConnectOrigins}`,
   `frame-src ${adsenseFrameOrigins} ${turnstileOrigin}`,
   // Funding Choices / consent messaging and ad iframes register a child
   // frame via 'child-src'; older engines fall back to it from frame-src.

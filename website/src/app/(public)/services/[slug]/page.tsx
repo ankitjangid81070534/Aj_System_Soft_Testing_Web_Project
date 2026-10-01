@@ -50,6 +50,11 @@ export async function generateMetadata({
   });
 }
 
+/** Spam-guard timestamp for the inline form (per request). */
+function formStartedAt() {
+  return Date.now();
+}
+
 function Checklist({ items }: { items: string[] }) {
   return (
     <ul className="grid gap-2.5 sm:grid-cols-2">
@@ -339,7 +344,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               title={<span id="ask-heading">Ask about {service.name}</span>}
               description="Send a short message — we usually reply within one business day, by email or WhatsApp."
             />
-            <ContactForm startedAt={Date.now()} service={service.name} />
+            <ContactForm startedAt={formStartedAt()} service={service.name} />
           </div>
         </section>
 

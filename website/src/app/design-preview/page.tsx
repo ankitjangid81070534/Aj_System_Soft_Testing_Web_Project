@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { MarketingHeader } from "@/components/ui/MarketingHeader";
 import { Footer } from "@/components/ui/Footer";
 import { getHomeContent } from "@/lib/data/home";
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 };
 
 export default async function DesignPreviewPage() {
+  // Internal design sandbox: never public on the live site.
+  if (process.env.NODE_ENV === "production") notFound();
   const [content, settings, navigation, benefits] = await Promise.all([
     getHomeContent(), getSiteSettings(), getPublicNavigation(), getLaunchBenefits(),
   ]);
